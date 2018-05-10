@@ -1,6 +1,6 @@
 ---
-title: "Översikt över Azure PowerShell Service Management-modulen | Microsoft Docs"
-description: "En översikt över Azure PowerShell med länkar till installation och konfiguration."
+title: Översikt över Azure PowerShell Service Management-modulen | Microsoft Docs
+description: En översikt över Azure PowerShell med länkar till installation och konfiguration.
 author: sdwheeler
 manager: carmonm
 ms.product: azure
@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.author: sewhee
 ms.manager: carmonm
 ms.openlocfilehash: d9a99d05eb2a1ca269f94cfbe6df4b64cec8a2f6
-ms.sourcegitcommit: b256bf48e15ee98865de0fae50e7b81878b03a54
+ms.sourcegitcommit: 37bfbf11fd0967a8e7977c692ab829d286baf88a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="overview-of-the-azure-powershell-service-management-module"></a>Översikt över Azure PowerShell Service Management-modulen
 

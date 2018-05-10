@@ -1,6 +1,6 @@
 ---
-title: "Ändringslogg för Azure PowerShell | Microsoft Docs"
-description: "Det här är en historik över de ändringar som gjorts i den senaste versionen av Azure PowerShell."
+title: Ändringslogg för Azure PowerShell | Microsoft Docs
+description: Det här är en historik över de ändringar som gjorts i den senaste versionen av Azure PowerShell.
 services: azure
 author: sdwheeler
 ms.author: sewhee
@@ -9,13 +9,13 @@ ms.service: azure-powershell
 ms.product: azure
 ms.devlang: powershell
 ms.topic: conceptual
-ms.workload: 
+ms.workload: ''
 ms.date: 05/18/2017
 ms.openlocfilehash: 0a3f152751fee569d3ac5fba6bcff8c1737f7b8c
-ms.sourcegitcommit: 226527be7cb647acfe2ea9ab151185053ab3c6db
+ms.sourcegitcommit: 37bfbf11fd0967a8e7977c692ab829d286baf88a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/29/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="release-notes"></a>Viktig information
 
