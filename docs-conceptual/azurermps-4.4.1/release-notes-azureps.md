@@ -1,6 +1,6 @@
 ---
-title: "Ändringslogg för Azure PowerShell | Microsoft Docs"
-description: "Det här är en historik över de ändringar som gjorts i den senaste versionen av Azure PowerShell."
+title: Ändringslogg för Azure PowerShell | Microsoft Docs
+description: Det här är en historik över de ändringar som gjorts i den senaste versionen av Azure PowerShell.
 services: azure
 author: sdwheeler
 ms.author: sewhee
@@ -9,13 +9,13 @@ ms.service: azure-powershell
 ms.product: azure
 ms.devlang: powershell
 ms.topic: conceptual
-ms.workload: 
+ms.workload: ''
 ms.date: 07/26/2017
 ms.openlocfilehash: d8a891673df343551cbd805016c2d25ee4e31c8c
-ms.sourcegitcommit: 9d2d35944106bdb6758853b050089bc804e6b9d2
+ms.sourcegitcommit: 37bfbf11fd0967a8e7977c692ab829d286baf88a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="release-notes"></a>Viktig information
 
@@ -288,7 +288,7 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
       - Remove-AzureRmSqlDatabaseAuditing
       - Remove-AzureRmSqlServerAuditing
     * Parsning av schemafil för Update-AzureRmSqlSyncGroup är nu skiftlägeskänslig.
-* Lagring
+* Storage
     * Lägg till NetworkRule-stöd för cmdletar för lagringskontot i resursläget
       - New-AzureRmStorageAccount
       - Set-AzureRmStorageAccount
@@ -305,9 +305,9 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
       - Update-AzureRmDisk
       - Update-AzureRmSnapshot
 * Profil
-    - Åtgärda problemet med icke-interaktiv användarautentisering i RDFE (länk)[https://github.com/Azure/azure-powershell/issues/4299]
+    - Åtgärda problemet med icke-interaktiv användarautentisering i RDFE (länk) [https://github.com/Azure/azure-powershell/issues/4299]
 * ServiceManagement
-    - Åtgärda problemet med icke-interaktiv användarautentisering (länk)[https://github.com/Azure/azure-powershell/issues/4299]
+    - Åtgärda problemet med icke-interaktiv användarautentisering (länk) [https://github.com/Azure/azure-powershell/issues/4299]
 
 ## <a name="2017711---version-420"></a>2017.7.11 – version 4.2.0
 * AnalysisServices
@@ -315,7 +315,7 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
         - API för att hämta AS-serverloggen har introducerats, Export-AzureAnalysisServicesInstanceLog
 * Automation
     * Korrekt inställning av värdet TimeZone för vecko- och månadsscheman för New-AzureRmAutomationSchedule
-        - Mer information finns här: https://github.com/Azure/azure-powershell/issues/3043
+        - Mer information finns i det här problemet: https://github.com/Azure/azure-powershell/issues/3043
 * AzureBatch
     - Ny cmdlet, Get-AzureBatchJobPreparationAndReleaseTaskStatus, har lagts till.
     - Start och slut för byteintervall har lagts till i parametrarna för Get-AzureBatchNodeFileContent.
@@ -437,7 +437,7 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
         - Get-AzureRmVirtualNetworkUsageList
 * Profil
     * Åtgärdat fel när Import-AzureRmContext eller Save-AzureRmContext används
-        - Mer information finns här: https://github.com/Azure/azure-powershell/issues/3954
+        - Mer information finns i det här problemet: https://github.com/Azure/azure-powershell/issues/3954
 * RecoveryServices.SiteRecovery
     * Introducerar en ny modul för Azure Site Recovery-åtgärder.
         - Alla cmdletar börjar med AzureRmRecoveryServicesAsr*
@@ -447,7 +447,7 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
     * Föråldrade cmdletar för serveruppgradering eftersom den gamla serverversionen (2.0) inte längre finns.
     * Lägg till en ny valfri växlingsparameter "AssignIdentity" i cmdletarna New-AzureRmSqlServer och Set-AzureRmSqlServer för att ge stöd för etablering av en resursidentitet för SQL server-resursen
     * Parametern ResourceGroupName är nu valfri för Get-AzureRmSqlServer
-        - Mer information finns här: https://github.com/Azure/azure-powershell/issues/635
+        - Mer information finns i följande problem: https://github.com/Azure/azure-powershell/issues/635
 * ServiceManagement för ExpressRoute:
     * Cmdleten New-AzureBgpPeering har uppdaterats för att lägga till följande nya alternativ:
         - PeerAddressType: Värdena för "IPv4" eller "IPv6" kan specificeras för att skapa en BGP-peering av motsvarande adressfamiljtyp
@@ -533,7 +533,7 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
       * Parameteralias `-EnvironmentName` har lagts till för bakåtkompatibilitet med 2.x-versioner av AzureRM.profile
 
 ## <a name="20170512---version-401"></a>2017.05.12 – version 4.0.1
- * Åtgärda problem med New-AzureStorageContext i offlinescenarier: https://github.com/Azure/azure-powershell/issues/3939
+ * Åtgärda problemet med New-AzureStorageContext i offline-scenarier: https://github.com/Azure/azure-powershell/issues/3939
 
 ## <a name="20170510---version-400"></a>2017.05.10 – version 4.0.0
 
@@ -554,7 +554,7 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
   - Duplicerade egenskaper för DataDiskNames och NetworkInterfaceIDs har tagits bort från PS VM-objekt.
   - Parametrarna DataDiskNames och NetworkInterfaceIDs har gjorts valfria i Remove-AzureRmVMDataDisk och Remove-AzureRmVMNetworkInterface.
   - Rörledningsproblemet vid Get cmdlets när Get cmdlets returnerar ett listobjekt.
-  - Cmdletar som är i konflikt med RDFE-cmdletar har bytt namn. Se problemet https://github.com/Azure/azure-powershell/issues/2917 för ytterligare information
+  - Cmdletar som är i konflikt med RDFE-cmdletar har bytt namn. Mer information finns i problemet https://github.com/Azure/azure-powershell/issues/2917
     + `New-AzureVMSqlServerAutoBackupConfig` har bytt namn till `New-AzureRmVMSqlServerAutoBackupConfig`
     + `New-AzureVMSqlServerAutoPatchingConfig` har bytt namn till `New-AzureRmVMSqlServerAutoPatchingConfig`
     + `New-AzureVMSqlServerKeyVaultCredentialConfig` har bytt namn till `New-AzureRmVMSqlServerKeyVaultCredentialConfig`

@@ -1,6 +1,6 @@
 ---
-title: "Ändringslogg för Azure PowerShell | Microsoft Docs"
-description: "Det här är en historik över de ändringar som gjorts i den senaste versionen av Azure PowerShell."
+title: Ändringslogg för Azure PowerShell | Microsoft Docs
+description: Det här är en historik över de ändringar som gjorts i den senaste versionen av Azure PowerShell.
 services: azure
 author: sdwheeler
 ms.author: sewhee
@@ -9,13 +9,13 @@ ms.service: azure-powershell
 ms.product: azure
 ms.devlang: powershell
 ms.topic: conceptual
-ms.workload: 
+ms.workload: ''
 ms.date: 05/18/2017
 ms.openlocfilehash: 04f89e8d47d0825d46cb1b8817efbcc0cafa0acd
-ms.sourcegitcommit: b256bf48e15ee98865de0fae50e7b81878b03a54
+ms.sourcegitcommit: 37bfbf11fd0967a8e7977c692ab829d286baf88a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="release-notes"></a>Viktig information
 
@@ -48,7 +48,7 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
   - *Föråldrad*: Select-AzureRmProfile har bytt namn till Import-AzureRmContext. Det finns ett alias till det gamla cmdletnamnet och det kommer att tas bort i nästa version.
   - Utdatatyperna PSAzureContext och PSAzureProfile för profil-cmdletar kommer att ändras i nästa version.
   - Cmdleten Save-AzureRmContext kommer inte att ha någon OutputType i nästa version.
-  - Ett fel har åtgärdats i gemensam cmdlet-kod för att använda en FIPS-kompatibel algoritm för datahashvärden: https://github.com/Azure/azure-powershell/issues/3651
+  - Ett fel har åtgärdats i en gemensam cmdlet-kod för att använda en FIPS-kompatibel algoritm för datahashvärden: https://github.com/Azure/azure-powershell/issues/3651
 * SQL
   - Fel har åtgärdats för cmdletar för Azure-redundansgrupper
   - Korrigering för åtgärdsavsökning
