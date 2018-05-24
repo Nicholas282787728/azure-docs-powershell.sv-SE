@@ -2,67 +2,67 @@
 title: Komma igång med Azure PowerShell | Microsoft Docs
 description: ''
 services: azure
-author: sdwheeler
-ms.author: sewhee
+author: sptramer
+ms.author: sttramer
 manager: carmonm
 ms.product: azure
 ms.service: azure-powershell
 ms.devlang: powershell
 ms.topic: get-started-article
 ms.date: 11/15/2017
-ms.openlocfilehash: c561d0ba231922eb62c3cab592cc8e730b49c6ed
-ms.sourcegitcommit: 37bfbf11fd0967a8e7977c692ab829d286baf88a
+ms.openlocfilehash: 9b94d402ea4b10a3d20529408d7628a8aa6d0f51
+ms.sourcegitcommit: 5971c92cb023bdd1d71fa2ad0a3b378abfbd092a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/23/2018
 ---
-# <a name="getting-started-with-azure-powershell"></a><span data-ttu-id="a5a8a-102">Komma igång med Azure PowerShell</span><span class="sxs-lookup"><span data-stu-id="a5a8a-102">Getting started with Azure PowerShell</span></span>
+# <a name="getting-started-with-azure-powershell"></a><span data-ttu-id="fffc3-102">Komma igång med Azure PowerShell</span><span class="sxs-lookup"><span data-stu-id="fffc3-102">Getting started with Azure PowerShell</span></span>
 
-<span data-ttu-id="a5a8a-103">Azure PowerShell har utformats för att hantera och administrera Azure-resurser från kommandoraden och för att skapa automatiseringsskript som fungerar mot Azure Resource Manager.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-103">Azure PowerShell is designed for managing and administering Azure resources from the command line, and for building automation scripts that work against the Azure Resource Manager.</span></span> <span data-ttu-id="a5a8a-104">Du kan använda det i webbläsaren med [Azure Cloud Shell](/azure/cloud-shell/overview) eller installera det på din lokala dator och använda det i PowerShell-sessioner.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-104">You can use it in your browser with [Azure Cloud Shell](/azure/cloud-shell/overview), or you can install it on your local machine and use it in any PowerShell session.</span></span> <span data-ttu-id="a5a8a-105">Den här artikeln hjälper dig att komma igång med att använda det och lär dig grundbegreppen bakom.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-105">This article helps get you started using it, and teaches you the core concepts behind it.</span></span>
+<span data-ttu-id="fffc3-103">Azure PowerShell har utformats för att hantera och administrera Azure-resurser från kommandoraden och för att skapa automatiseringsskript som fungerar mot Azure Resource Manager.</span><span class="sxs-lookup"><span data-stu-id="fffc3-103">Azure PowerShell is designed for managing and administering Azure resources from the command line, and for building automation scripts that work against the Azure Resource Manager.</span></span> <span data-ttu-id="fffc3-104">Du kan använda det i webbläsaren med [Azure Cloud Shell](/azure/cloud-shell/overview) eller installera det på din lokala dator och använda det i PowerShell-sessioner.</span><span class="sxs-lookup"><span data-stu-id="fffc3-104">You can use it in your browser with [Azure Cloud Shell](/azure/cloud-shell/overview), or you can install it on your local machine and use it in any PowerShell session.</span></span> <span data-ttu-id="fffc3-105">Den här artikeln hjälper dig att komma igång med att använda det och lär dig grundbegreppen bakom.</span><span class="sxs-lookup"><span data-stu-id="fffc3-105">This article helps get you started using it, and teaches you the core concepts behind it.</span></span>
 
-## <a name="connect"></a><span data-ttu-id="a5a8a-106">Anslut</span><span class="sxs-lookup"><span data-stu-id="a5a8a-106">Connect</span></span>
+## <a name="connect"></a><span data-ttu-id="fffc3-106">Anslut</span><span class="sxs-lookup"><span data-stu-id="fffc3-106">Connect</span></span>
 
-<span data-ttu-id="a5a8a-107">Det enklaste sättet att komma igång är att [starta Cloud Shell](/azure/cloud-shell/quickstart).</span><span class="sxs-lookup"><span data-stu-id="a5a8a-107">The simplest way to get started is to [launch Cloud Shell](/azure/cloud-shell/quickstart).</span></span>
+<span data-ttu-id="fffc3-107">Det enklaste sättet att komma igång är att [starta Cloud Shell](/azure/cloud-shell/quickstart).</span><span class="sxs-lookup"><span data-stu-id="fffc3-107">The simplest way to get started is to [launch Cloud Shell](/azure/cloud-shell/quickstart).</span></span>
 
-1. <span data-ttu-id="a5a8a-108">Starta Cloud Shell från det övre navigeringsfältet i Azure Portal.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-108">Launch Cloud Shell from the top navigation of the Azure portal.</span></span>
+1. <span data-ttu-id="fffc3-108">Starta Cloud Shell från det övre navigeringsfältet i Azure Portal.</span><span class="sxs-lookup"><span data-stu-id="fffc3-108">Launch Cloud Shell from the top navigation of the Azure portal.</span></span>
 
    ![Shell-ikon](~/media/get-started-azureps/shell-icon.png)
 
-2. <span data-ttu-id="a5a8a-110">Välj den prenumeration du vill använda och skapa ett lagringskonto.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-110">Choose the subscription you want to use and create a storage account.</span></span>
+2. <span data-ttu-id="fffc3-110">Välj den prenumeration du vill använda och skapa ett lagringskonto.</span><span class="sxs-lookup"><span data-stu-id="fffc3-110">Choose the subscription you want to use and create a storage account.</span></span>
 
    ![skapar ett lagringskonto](~/media/get-started-azureps/storage-prompt.png)
 
-<span data-ttu-id="a5a8a-112">När du har skapat din lagring öppnar Cloud Shell en PowerShell-session i webbläsaren.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-112">Once your storage has been created, the Cloud Shell will open a PowerShell session in the browser.</span></span>
+<span data-ttu-id="fffc3-112">När du har skapat din lagring öppnar Cloud Shell en PowerShell-session i webbläsaren.</span><span class="sxs-lookup"><span data-stu-id="fffc3-112">Once your storage has been created, the Cloud Shell will open a PowerShell session in the browser.</span></span>
 
 ![Cloud Shell för PowerShell](~/media/get-started-azureps/cloud-powershell.png)
 
-<span data-ttu-id="a5a8a-114">Du kan även installera Azure PowerShell och använda det lokalt i en PowerShell-session.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-114">You can also install Azure PowerShell and use it locally in a PowerShell session.</span></span>
+<span data-ttu-id="fffc3-114">Du kan även installera Azure PowerShell och använda det lokalt i en PowerShell-session.</span><span class="sxs-lookup"><span data-stu-id="fffc3-114">You can also install Azure PowerShell and use it locally in a PowerShell session.</span></span>
 
-## <a name="install-azure-powershell"></a><span data-ttu-id="a5a8a-115">Installera Azure PowerShell</span><span class="sxs-lookup"><span data-stu-id="a5a8a-115">Install Azure PowerShell</span></span>
+## <a name="install-azure-powershell"></a><span data-ttu-id="fffc3-115">Installera Azure PowerShell</span><span class="sxs-lookup"><span data-stu-id="fffc3-115">Install Azure PowerShell</span></span>
 
-<span data-ttu-id="a5a8a-116">Det första steget är att kontrollera att du har den senaste versionen av Azure PowerShell installerad.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-116">The first step is to make sure you have the latest version of the Azure PowerShell installed.</span></span> <span data-ttu-id="a5a8a-117">Information om den senaste versionen finns i [viktig information](./release-notes-azureps.md).</span><span class="sxs-lookup"><span data-stu-id="a5a8a-117">For information about the latest release, see the [release notes](./release-notes-azureps.md).</span></span>
+<span data-ttu-id="fffc3-116">Det första steget är att kontrollera att du har den senaste versionen av Azure PowerShell installerad.</span><span class="sxs-lookup"><span data-stu-id="fffc3-116">The first step is to make sure you have the latest version of the Azure PowerShell installed.</span></span> <span data-ttu-id="fffc3-117">Information om den senaste versionen finns i [viktig information](./release-notes-azureps.md).</span><span class="sxs-lookup"><span data-stu-id="fffc3-117">For information about the latest release, see the [release notes](./release-notes-azureps.md).</span></span>
 
-1. <span data-ttu-id="a5a8a-118">[Installera Azure PowerShell](install-azurerm-ps.md).</span><span class="sxs-lookup"><span data-stu-id="a5a8a-118">[Install Azure PowerShell](install-azurerm-ps.md).</span></span>
+1. <span data-ttu-id="fffc3-118">[Installera Azure PowerShell](install-azurerm-ps.md).</span><span class="sxs-lookup"><span data-stu-id="fffc3-118">[Install Azure PowerShell](install-azurerm-ps.md).</span></span>
 
-2. <span data-ttu-id="a5a8a-119">Kontrollera att installationen lyckades genom att köra `Get-Module AzureRM -ListAvailable` från kommandoraden.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-119">To verify the installation was successful, run `Get-Module AzureRM -ListAvailable` from your command line.</span></span>
+2. <span data-ttu-id="fffc3-119">Kontrollera att installationen lyckades genom att köra `Get-Module AzureRM -ListAvailable` från kommandoraden.</span><span class="sxs-lookup"><span data-stu-id="fffc3-119">To verify the installation was successful, run `Get-Module AzureRM -ListAvailable` from your command line.</span></span>
 
-## <a name="log-in-to-azure"></a><span data-ttu-id="a5a8a-120">Logga in på Azure</span><span class="sxs-lookup"><span data-stu-id="a5a8a-120">Log in to Azure</span></span>
+## <a name="log-in-to-azure"></a><span data-ttu-id="fffc3-120">Logga in på Azure</span><span class="sxs-lookup"><span data-stu-id="fffc3-120">Log in to Azure</span></span>
 
-<span data-ttu-id="a5a8a-121">Logga in interaktivt:</span><span class="sxs-lookup"><span data-stu-id="a5a8a-121">Sign on interactively:</span></span>
+<span data-ttu-id="fffc3-121">Logga in interaktivt:</span><span class="sxs-lookup"><span data-stu-id="fffc3-121">Sign on interactively:</span></span>
 
-1. <span data-ttu-id="a5a8a-122">Skriv `Connect-AzureRmAccount`.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-122">Type `Connect-AzureRmAccount`.</span></span> <span data-ttu-id="a5a8a-123">En dialogruta som frågar efter dina Azure-autentiseringsuppgifter visas.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-123">You will get dialog box asking for your Azure credentials.</span></span> <span data-ttu-id="a5a8a-124">Med alternativet "-Environment" kan du tillåtas att logga in i Azure Kina eller Azure Tyskland.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-124">Option '-Environment' can let you login in Azure China or Azure Germany.</span></span>
+1. <span data-ttu-id="fffc3-122">Skriv `Connect-AzureRmAccount`.</span><span class="sxs-lookup"><span data-stu-id="fffc3-122">Type `Connect-AzureRmAccount`.</span></span> <span data-ttu-id="fffc3-123">En dialogruta som frågar efter dina Azure-autentiseringsuppgifter visas.</span><span class="sxs-lookup"><span data-stu-id="fffc3-123">You will get dialog box asking for your Azure credentials.</span></span> <span data-ttu-id="fffc3-124">Med alternativet "-Environment" kan du tillåtas att logga in i Azure Kina eller Azure Tyskland.</span><span class="sxs-lookup"><span data-stu-id="fffc3-124">Option '-Environment' can let you login in Azure China or Azure Germany.</span></span>
 
-   <span data-ttu-id="a5a8a-125">t.ex. Connect-AzureRmAccount -Environment AzureChinaCloud</span><span class="sxs-lookup"><span data-stu-id="a5a8a-125">e.g. Connect-AzureRmAccount -Environment AzureChinaCloud</span></span>
+   <span data-ttu-id="fffc3-125">t.ex. Connect-AzureRmAccount -Environment AzureChinaCloud</span><span class="sxs-lookup"><span data-stu-id="fffc3-125">e.g. Connect-AzureRmAccount -Environment AzureChinaCloud</span></span>
 
-2. <span data-ttu-id="a5a8a-126">Ange e-postadressen och lösenordet som är kopplade till ditt konto.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-126">Type the email address and password associated with your account.</span></span> <span data-ttu-id="a5a8a-127">Azure autentiserar och sparar autentiseringsuppgifterna och stänger sedan fönstret.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-127">Azure authenticates and saves the credential information, and then closes the window.</span></span>
+2. <span data-ttu-id="fffc3-126">Ange e-postadressen och lösenordet som är kopplade till ditt konto.</span><span class="sxs-lookup"><span data-stu-id="fffc3-126">Type the email address and password associated with your account.</span></span> <span data-ttu-id="fffc3-127">Azure autentiserar och sparar autentiseringsuppgifterna och stänger sedan fönstret.</span><span class="sxs-lookup"><span data-stu-id="fffc3-127">Azure authenticates and saves the credential information, and then closes the window.</span></span>
 
-<span data-ttu-id="a5a8a-128">När du har loggat in på ett Azure-konto kan du använda Azure PowerShell-cmdletar för att komma åt och hantera resurserna i prenumerationen.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-128">Once you have signed in to an Azure account, you can use the Azure PowerShell cmdlets to access and manager the resources in your subscription.</span></span>
+<span data-ttu-id="fffc3-128">När du har loggat in på ett Azure-konto kan du använda Azure PowerShell-cmdletar för att komma åt och hantera resurserna i prenumerationen.</span><span class="sxs-lookup"><span data-stu-id="fffc3-128">Once you have signed in to an Azure account, you can use the Azure PowerShell cmdlets to access and manager the resources in your subscription.</span></span>
 
-## <a name="create-a-windows-virtual-machine-using-simple-defaults"></a><span data-ttu-id="a5a8a-129">Skapa en virtuell Windows-dator med enkla standardinställningar</span><span class="sxs-lookup"><span data-stu-id="a5a8a-129">Create a Windows virtual machine using simple defaults</span></span>
+## <a name="create-a-windows-virtual-machine-using-simple-defaults"></a><span data-ttu-id="fffc3-129">Skapa en virtuell Windows-dator med enkla standardinställningar</span><span class="sxs-lookup"><span data-stu-id="fffc3-129">Create a Windows virtual machine using simple defaults</span></span>
 
-<span data-ttu-id="a5a8a-130">Cmdleten `New-AzureRmVM` tillhandahåller en förenklad syntax som gör det enkelt att skapa en ny virtuell dator.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-130">The `New-AzureRmVM` cmdlet provides a simplified syntax making it easy to create a new virtual machine.</span></span> <span data-ttu-id="a5a8a-131">Det är bara två parametervärden du måste ange: namnet på den virtuella datorn och en uppsättning autentiseringsuppgifter för det lokala administratörskontot på den virtuella datorn.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-131">There are only two parameter values you must provide: the name of the VM and a set of credentials for the local administrator account on the VM.</span></span>
+<span data-ttu-id="fffc3-130">Cmdleten `New-AzureRmVM` tillhandahåller en förenklad syntax som gör det enkelt att skapa en ny virtuell dator.</span><span class="sxs-lookup"><span data-stu-id="fffc3-130">The `New-AzureRmVM` cmdlet provides a simplified syntax making it easy to create a new virtual machine.</span></span> <span data-ttu-id="fffc3-131">Det är bara två parametervärden du måste ange: namnet på den virtuella datorn och en uppsättning autentiseringsuppgifter för det lokala administratörskontot på den virtuella datorn.</span><span class="sxs-lookup"><span data-stu-id="fffc3-131">There are only two parameter values you must provide: the name of the VM and a set of credentials for the local administrator account on the VM.</span></span>
 
-<span data-ttu-id="a5a8a-132">Först skapar du autentiseringsobjektet.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-132">First, create the credential object.</span></span>
+<span data-ttu-id="fffc3-132">Först skapar du autentiseringsobjektet.</span><span class="sxs-lookup"><span data-stu-id="fffc3-132">First, create the credential object.</span></span>
 
 ```powershell
 $cred = Get-Credential -Message "Enter a username and password for the virtual machine."
@@ -74,7 +74,7 @@ Enter a username and password for the virtual machine.
 User: localAdmin
 Password for user localAdmin: *********
 ```
-<span data-ttu-id="a5a8a-133">Sedan skapar du den virtuella datorn.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-133">Next, create the VM.</span></span>
+<span data-ttu-id="fffc3-133">Sedan skapar du den virtuella datorn.</span><span class="sxs-lookup"><span data-stu-id="fffc3-133">Next, create the VM.</span></span>
 
 ```powershell
 New-AzureRmVM -Name SampleVM -Credential $cred
@@ -96,7 +96,7 @@ StorageProfile           : {ImageReference, OsDisk, DataDisks}
 FullyQualifiedDomainName : samplevm-2c0867.eastus.cloudapp.azure.com
 ```
 
-<span data-ttu-id="a5a8a-134">Det var enkelt.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-134">That was easy.</span></span> <span data-ttu-id="a5a8a-135">Men du kanske undrar vad det är mer som skapas och hur den virtuella datorn konfigureras.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-135">But, you may wonder what else is created and how is the VM configured.</span></span> <span data-ttu-id="a5a8a-136">Vi kan först titta på våra resursgrupper.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-136">First, let's look at our resource groups.</span></span>
+<span data-ttu-id="fffc3-134">Det var enkelt.</span><span class="sxs-lookup"><span data-stu-id="fffc3-134">That was easy.</span></span> <span data-ttu-id="fffc3-135">Men du kanske undrar vad det är mer som skapas och hur den virtuella datorn konfigureras.</span><span class="sxs-lookup"><span data-stu-id="fffc3-135">But, you may wonder what else is created and how is the VM configured.</span></span> <span data-ttu-id="fffc3-136">Vi kan först titta på våra resursgrupper.</span><span class="sxs-lookup"><span data-stu-id="fffc3-136">First, let's look at our resource groups.</span></span>
 
 ```powershell
 Get-AzureRmResourceGroup | Select-Object ResourceGroupName,Location
@@ -109,9 +109,9 @@ cloud-shell-storage-westus westus
 SampleVM                   eastus
 ```
 
-<span data-ttu-id="a5a8a-137">Resursgruppen **cloud-shell-storage-westus** skapas första gången du använder Cloud Shell.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-137">The **cloud-shell-storage-westus** resource group is created the first time you use the Cloud Shell.</span></span> <span data-ttu-id="a5a8a-138">Resursgruppen **SampleVM** skapades av cmdleten `New-AzureRmVM`.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-138">The **SampleVM** resource group was created by the `New-AzureRmVM` cmdlet.</span></span>
+<span data-ttu-id="fffc3-137">Resursgruppen **cloud-shell-storage-westus** skapas första gången du använder Cloud Shell.</span><span class="sxs-lookup"><span data-stu-id="fffc3-137">The **cloud-shell-storage-westus** resource group is created the first time you use the Cloud Shell.</span></span> <span data-ttu-id="fffc3-138">Resursgruppen **SampleVM** skapades av cmdleten `New-AzureRmVM`.</span><span class="sxs-lookup"><span data-stu-id="fffc3-138">The **SampleVM** resource group was created by the `New-AzureRmVM` cmdlet.</span></span>
 
-<span data-ttu-id="a5a8a-139">Vilka andra resurser skapades i den här nya resursgruppen?</span><span class="sxs-lookup"><span data-stu-id="a5a8a-139">Now, what other resources were created in this new resource group?</span></span>
+<span data-ttu-id="fffc3-139">Vilka andra resurser skapades i den här nya resursgruppen?</span><span class="sxs-lookup"><span data-stu-id="fffc3-139">Now, what other resources were created in this new resource group?</span></span>
 
 ```powershell
 Get-AzureRmResource |
@@ -130,7 +130,7 @@ SampleVM                   eastus   Microsoft.Network/publicIPAddresses     Samp
 SampleVM                   eastus   Microsoft.Network/virtualNetworks       SampleVM
 ```
 
-<span data-ttu-id="a5a8a-140">Låt oss ta reda på lite mer om den virtuella datorn.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-140">Let's get some more details about the VM.</span></span> <span data-ttu-id="a5a8a-141">De här exemplen visar hur du hämtar information om operativsystemavbildningen som används för att skapa den virtuella datorn.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-141">This examples shows how to retrieve information about the OS Image used to create the VM.</span></span>
+<span data-ttu-id="fffc3-140">Låt oss ta reda på lite mer om den virtuella datorn.</span><span class="sxs-lookup"><span data-stu-id="fffc3-140">Let's get some more details about the VM.</span></span> <span data-ttu-id="fffc3-141">De här exemplen visar hur du hämtar information om operativsystemavbildningen som används för att skapa den virtuella datorn.</span><span class="sxs-lookup"><span data-stu-id="fffc3-141">This examples shows how to retrieve information about the OS Image used to create the VM.</span></span>
 
 ```powershell
 Get-AzureRmVM -Name SampleVM -ResourceGroupName SampleVM |
@@ -146,15 +146,15 @@ Version   : latest
 Id        :
 ```
 
-## <a name="create-a-fully-configured-linux-virtual-machine"></a><span data-ttu-id="a5a8a-142">Skapa en fullständigt konfigurerad virtuell Linux-dator</span><span class="sxs-lookup"><span data-stu-id="a5a8a-142">Create a fully configured Linux Virtual Machine</span></span>
+## <a name="create-a-fully-configured-linux-virtual-machine"></a><span data-ttu-id="fffc3-142">Skapa en fullständigt konfigurerad virtuell Linux-dator</span><span class="sxs-lookup"><span data-stu-id="fffc3-142">Create a fully configured Linux Virtual Machine</span></span>
 
-<span data-ttu-id="a5a8a-143">I det föregående exemplet användes ett förenklat syntax och parametervärdena som är standard för att skapa en virtuell Windows-dator.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-143">The previous example used the simplified syntax and default parameter values to create a Windows virtual machine.</span></span> <span data-ttu-id="a5a8a-144">I det här exemplet anger vi värden för alla alternativ för den virtuella datorn.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-144">In this example, we provide values for all options of the virtual machine.</span></span>
+<span data-ttu-id="fffc3-143">I det föregående exemplet användes ett förenklat syntax och parametervärdena som är standard för att skapa en virtuell Windows-dator.</span><span class="sxs-lookup"><span data-stu-id="fffc3-143">The previous example used the simplified syntax and default parameter values to create a Windows virtual machine.</span></span> <span data-ttu-id="fffc3-144">I det här exemplet anger vi värden för alla alternativ för den virtuella datorn.</span><span class="sxs-lookup"><span data-stu-id="fffc3-144">In this example, we provide values for all options of the virtual machine.</span></span>
 
-### <a name="create-a-resource-group"></a><span data-ttu-id="a5a8a-145">Skapa en resursgrupp</span><span class="sxs-lookup"><span data-stu-id="a5a8a-145">Create a resource group</span></span>
+### <a name="create-a-resource-group"></a><span data-ttu-id="fffc3-145">Skapa en resursgrupp</span><span class="sxs-lookup"><span data-stu-id="fffc3-145">Create a resource group</span></span>
 
-<span data-ttu-id="a5a8a-146">I det här exemplet vill vi skapa en resursgrupp.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-146">For this example we want to create a Resource Group.</span></span> <span data-ttu-id="a5a8a-147">Resursgrupper i Azure ger ett sätt att hantera flera resurser som du vill gruppera logiskt.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-147">Resource Groups in Azure provide a way to manage multiple resources that you want to logically group together.</span></span> <span data-ttu-id="a5a8a-148">Du kan till exempel skapa en resursgrupp för ett program eller projekt och lägga till en virtuell dator, en databas och en CDN-tjänst inom den.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-148">For example, you might create a Resource Group for an application or project and add a virtual machine, a database and a CDN service within it.</span></span>
+<span data-ttu-id="fffc3-146">I det här exemplet vill vi skapa en resursgrupp.</span><span class="sxs-lookup"><span data-stu-id="fffc3-146">For this example we want to create a Resource Group.</span></span> <span data-ttu-id="fffc3-147">Resursgrupper i Azure ger ett sätt att hantera flera resurser som du vill gruppera logiskt.</span><span class="sxs-lookup"><span data-stu-id="fffc3-147">Resource Groups in Azure provide a way to manage multiple resources that you want to logically group together.</span></span> <span data-ttu-id="fffc3-148">Du kan till exempel skapa en resursgrupp för ett program eller projekt och lägga till en virtuell dator, en databas och en CDN-tjänst inom den.</span><span class="sxs-lookup"><span data-stu-id="fffc3-148">For example, you might create a Resource Group for an application or project and add a virtual machine, a database and a CDN service within it.</span></span>
 
-<span data-ttu-id="a5a8a-149">Vi ska skapa en resursgrupp med namnet "MyResourceGroup" i den västeuropeiska regionen för Azure.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-149">Let's create a resource group named "MyResourceGroup" in the westeurope region of Azure.</span></span> <span data-ttu-id="a5a8a-150">Ange följande kommando:</span><span class="sxs-lookup"><span data-stu-id="a5a8a-150">To do so type the following command:</span></span>
+<span data-ttu-id="fffc3-149">Vi ska skapa en resursgrupp med namnet "MyResourceGroup" i den västeuropeiska regionen för Azure.</span><span class="sxs-lookup"><span data-stu-id="fffc3-149">Let's create a resource group named "MyResourceGroup" in the westeurope region of Azure.</span></span> <span data-ttu-id="fffc3-150">Ange följande kommando:</span><span class="sxs-lookup"><span data-stu-id="fffc3-150">To do so type the following command:</span></span>
 
 ```powershell
 New-AzureRmResourceGroup -Name 'myResourceGroup' -Location 'westeurope'
@@ -168,11 +168,11 @@ Tags              :
 ResourceId        : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/myResourceGroup
 ```
 
-<span data-ttu-id="a5a8a-151">Den här nya resursgruppen används för att lagra alla resurser som behövs för den nya virtuella datorn som vi skapar.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-151">This new resource group will be used to contain all of the resources needed for the new VM we create.</span></span> <span data-ttu-id="a5a8a-152">För att kunna skapa en ny virtuell Linux-dator måste vi först skapa de övriga resurser som krävs och tilldela dem till en konfiguration.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-152">To create a new Linux VM we must first create the other required resources and assign them to a configuration.</span></span> <span data-ttu-id="a5a8a-153">Vi kan sedan använda den konfigurationen för att skapa den virtuella datorn.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-153">Then we can use that configuration to create the VM.</span></span> <span data-ttu-id="a5a8a-154">Du behöver även ha en offentlig SSH-nyckel med namnet `id_rsa.pub` i .ssh-katalogen för din användarprofil.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-154">Also, you will need to have an SSH public key named `id_rsa.pub` in the .ssh directory of your user profile.</span></span>
+<span data-ttu-id="fffc3-151">Den här nya resursgruppen används för att lagra alla resurser som behövs för den nya virtuella datorn som vi skapar.</span><span class="sxs-lookup"><span data-stu-id="fffc3-151">This new resource group will be used to contain all of the resources needed for the new VM we create.</span></span> <span data-ttu-id="fffc3-152">För att kunna skapa en ny virtuell Linux-dator måste vi först skapa de övriga resurser som krävs och tilldela dem till en konfiguration.</span><span class="sxs-lookup"><span data-stu-id="fffc3-152">To create a new Linux VM we must first create the other required resources and assign them to a configuration.</span></span> <span data-ttu-id="fffc3-153">Vi kan sedan använda den konfigurationen för att skapa den virtuella datorn.</span><span class="sxs-lookup"><span data-stu-id="fffc3-153">Then we can use that configuration to create the VM.</span></span> <span data-ttu-id="fffc3-154">Du behöver även ha en offentlig SSH-nyckel med namnet `id_rsa.pub` i .ssh-katalogen för din användarprofil.</span><span class="sxs-lookup"><span data-stu-id="fffc3-154">Also, you will need to have an SSH public key named `id_rsa.pub` in the .ssh directory of your user profile.</span></span>
 
-#### <a name="create-the-required-network-resources"></a><span data-ttu-id="a5a8a-155">Skapa nätverksresurser som krävs</span><span class="sxs-lookup"><span data-stu-id="a5a8a-155">Create the required network resources</span></span>
+#### <a name="create-the-required-network-resources"></a><span data-ttu-id="fffc3-155">Skapa nätverksresurser som krävs</span><span class="sxs-lookup"><span data-stu-id="fffc3-155">Create the required network resources</span></span>
 
-<span data-ttu-id="a5a8a-156">Vi måste först skapa en undernätskonfiguration som ska användas med processen för att skapa virtuella nätverk.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-156">First we need to create a subnet configuration to be used with the virtual network creation process.</span></span> <span data-ttu-id="a5a8a-157">Vi skapar också en offentlig IP-adress så att vi kan ansluta till denna virtuella dator.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-157">We also create a public IP address so that we can connect to this VM.</span></span> <span data-ttu-id="a5a8a-158">Vi skapar en nätverkssäkerhetsgrupp för att säkra åtkomst till den offentliga adressen.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-158">We create a network security group to secure access to the public address.</span></span> <span data-ttu-id="a5a8a-159">Slutligen skapar vi ett virtuellt nätverkskort med alla föregående resurser.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-159">Finally we create the virtual NIC using all of the previous resources.</span></span>
+<span data-ttu-id="fffc3-156">Vi måste först skapa en undernätskonfiguration som ska användas med processen för att skapa virtuella nätverk.</span><span class="sxs-lookup"><span data-stu-id="fffc3-156">First we need to create a subnet configuration to be used with the virtual network creation process.</span></span> <span data-ttu-id="fffc3-157">Vi skapar också en offentlig IP-adress så att vi kan ansluta till denna virtuella dator.</span><span class="sxs-lookup"><span data-stu-id="fffc3-157">We also create a public IP address so that we can connect to this VM.</span></span> <span data-ttu-id="fffc3-158">Vi skapar en nätverkssäkerhetsgrupp för att säkra åtkomst till den offentliga adressen.</span><span class="sxs-lookup"><span data-stu-id="fffc3-158">We create a network security group to secure access to the public address.</span></span> <span data-ttu-id="fffc3-159">Slutligen skapar vi ett virtuellt nätverkskort med alla föregående resurser.</span><span class="sxs-lookup"><span data-stu-id="fffc3-159">Finally we create the virtual NIC using all of the previous resources.</span></span>
 
 ```powershell
 # Variables for common values
@@ -210,9 +210,9 @@ $nic = New-AzureRmNetworkInterface -Name myNic2 -ResourceGroupName $resourceGrou
   -SubnetId $vnet.Subnets[0].Id -PublicIpAddressId $publicIp.Id -NetworkSecurityGroupId $nsg.Id
 ```
 
-### <a name="create-the-vm-configuration"></a><span data-ttu-id="a5a8a-160">Skapa VM-konfigurationen</span><span class="sxs-lookup"><span data-stu-id="a5a8a-160">Create the VM configuration</span></span>
+### <a name="create-the-vm-configuration"></a><span data-ttu-id="fffc3-160">Skapa VM-konfigurationen</span><span class="sxs-lookup"><span data-stu-id="fffc3-160">Create the VM configuration</span></span>
 
-<span data-ttu-id="a5a8a-161">Nu när vi har de nödvändiga resurserna kan vi skapa VM-konfigurationsobjektet.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-161">Now that we have the required resources we can create the VM configuration object.</span></span>
+<span data-ttu-id="fffc3-161">Nu när vi har de nödvändiga resurserna kan vi skapa VM-konfigurationsobjektet.</span><span class="sxs-lookup"><span data-stu-id="fffc3-161">Now that we have the required resources we can create the VM configuration object.</span></span>
 
 ```powershell
 # Create a virtual machine configuration
@@ -226,15 +226,15 @@ $sshPublicKey = Get-Content "$env:USERPROFILE\.ssh\id_rsa.pub"
 Add-AzureRmVMSshPublicKey -VM $vmConfig -KeyData $sshPublicKey -Path "/home/azureuser/.ssh/authorized_keys"
 ```
 
-### <a name="create-the-virtual-machine"></a><span data-ttu-id="a5a8a-162">Skapa den virtuella datorn</span><span class="sxs-lookup"><span data-stu-id="a5a8a-162">Create the virtual machine</span></span>
+### <a name="create-the-virtual-machine"></a><span data-ttu-id="fffc3-162">Skapa den virtuella datorn</span><span class="sxs-lookup"><span data-stu-id="fffc3-162">Create the virtual machine</span></span>
 
-<span data-ttu-id="a5a8a-163">Vi kan nu skapa den virtuella datorn med VM-konfigurationsobjektet.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-163">Now we can create the VM using the VM configuration object.</span></span>
+<span data-ttu-id="fffc3-163">Vi kan nu skapa den virtuella datorn med VM-konfigurationsobjektet.</span><span class="sxs-lookup"><span data-stu-id="fffc3-163">Now we can create the VM using the VM configuration object.</span></span>
 
 ```powershell
 New-AzureRmVM -ResourceGroupName $resourceGroup -Location $location -VM $vmConfig
 ```
 
-<span data-ttu-id="a5a8a-164">Nu när den virtuella datorn har skapats kan du logga in på den nya virtuella Linux-datorn med hjälp av SSH med den offentliga IP-adressen för den virtuella dator du skapade:</span><span class="sxs-lookup"><span data-stu-id="a5a8a-164">Now that the VM has been created, you can log on to your new Linux VM using SSH with the public IP address of the VM you created:</span></span>
+<span data-ttu-id="fffc3-164">Nu när den virtuella datorn har skapats kan du logga in på den nya virtuella Linux-datorn med hjälp av SSH med den offentliga IP-adressen för den virtuella dator du skapade:</span><span class="sxs-lookup"><span data-stu-id="fffc3-164">Now that the VM has been created, you can log on to your new Linux VM using SSH with the public IP address of the VM you created:</span></span>
 
 ```bash
 ssh xx.xxx.xxx.xxx
@@ -271,17 +271,17 @@ applicable law.
 my-login@MyLinuxVM:../../..$
 ```
 
-## <a name="creating-other-resources-in-azure"></a><span data-ttu-id="a5a8a-165">Skapa andra resurser i Azure</span><span class="sxs-lookup"><span data-stu-id="a5a8a-165">Creating other resources in Azure</span></span>
+## <a name="creating-other-resources-in-azure"></a><span data-ttu-id="fffc3-165">Skapa andra resurser i Azure</span><span class="sxs-lookup"><span data-stu-id="fffc3-165">Creating other resources in Azure</span></span>
 
-<span data-ttu-id="a5a8a-166">Vi har nu gått igenom hur du skapar en resursgrupp, en virtuell Linux-dator och en virtuell Windows Server-dator.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-166">We've now walked through how to create a Resource Group, a Linux VM, and a Windows Server VM.</span></span> <span data-ttu-id="a5a8a-167">Du kan även skapa många andra typer av Azure-resurser.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-167">You can create many other types of Azure resources as well.</span></span>
+<span data-ttu-id="fffc3-166">Vi har nu gått igenom hur du skapar en resursgrupp, en virtuell Linux-dator och en virtuell Windows Server-dator.</span><span class="sxs-lookup"><span data-stu-id="fffc3-166">We've now walked through how to create a Resource Group, a Linux VM, and a Windows Server VM.</span></span> <span data-ttu-id="fffc3-167">Du kan även skapa många andra typer av Azure-resurser.</span><span class="sxs-lookup"><span data-stu-id="fffc3-167">You can create many other types of Azure resources as well.</span></span>
 
-<span data-ttu-id="a5a8a-168">Om du till exempel vill skapa en belastningsutjämnare för Azure-nätverk som vi sedan kan koppla till de virtuella datorer vi precis har skapat kan vi använda följande kommando för att skapa:</span><span class="sxs-lookup"><span data-stu-id="a5a8a-168">For example, to create an Azure Network Load Balancer that we could then associate with our newly created VMs, we can use the following create command:</span></span>
+<span data-ttu-id="fffc3-168">Om du till exempel vill skapa en belastningsutjämnare för Azure-nätverk som vi sedan kan koppla till de virtuella datorer vi precis har skapat kan vi använda följande kommando för att skapa:</span><span class="sxs-lookup"><span data-stu-id="fffc3-168">For example, to create an Azure Network Load Balancer that we could then associate with our newly created VMs, we can use the following create command:</span></span>
 
 ```powershell
 New-AzureRmLoadBalancer -Name MyLoadBalancer -ResourceGroupName myResourceGroup -Location westeurope
 ```
 
-<span data-ttu-id="a5a8a-169">Vi kan också skapa ett nytt privat virtuellt nätverk (som ofta kallas ett "VNet" i Azure) för infrastrukturen med följande kommando:</span><span class="sxs-lookup"><span data-stu-id="a5a8a-169">We could also create a new private Virtual Network (commonly referred to as a "VNet" within Azure) for our infrastructure using the following command:</span></span>
+<span data-ttu-id="fffc3-169">Vi kan också skapa ett nytt privat virtuellt nätverk (som ofta kallas ett "VNet" i Azure) för infrastrukturen med följande kommando:</span><span class="sxs-lookup"><span data-stu-id="fffc3-169">We could also create a new private Virtual Network (commonly referred to as a "VNet" within Azure) for our infrastructure using the following command:</span></span>
 
 ```powershell
 $subnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name mySubnet2 -AddressPrefix 10.0.0.0/16
@@ -289,9 +289,9 @@ $vnet = New-AzureRmVirtualNetwork -ResourceGroupName myResourceGroup -Location w
   -Name MYvNET3 -AddressPrefix 10.0.0.0/16 -Subnet $subnetConfig
 ```
 
-<span data-ttu-id="a5a8a-170">Det som gör Azure och Azure PowerShell så kraftfulla är att vi kan använda dem inte bara för att få molnbaserad infrastruktur, utan också för att skapa hanterade plattformstjänster.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-170">What makes Azure and the Azure PowerShell powerful is that we can use it not just to get cloud-based infrastructure but also to create managed platform services.</span></span> <span data-ttu-id="a5a8a-171">De hanterade plattformstjänsterna kan också kombineras med infrastruktur för att skapa ännu mer kraftfulla lösningar.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-171">The managed platform services can also be combined with infrastructure to build even more powerful solutions.</span></span>
+<span data-ttu-id="fffc3-170">Det som gör Azure och Azure PowerShell så kraftfulla är att vi kan använda dem inte bara för att få molnbaserad infrastruktur, utan också för att skapa hanterade plattformstjänster.</span><span class="sxs-lookup"><span data-stu-id="fffc3-170">What makes Azure and the Azure PowerShell powerful is that we can use it not just to get cloud-based infrastructure but also to create managed platform services.</span></span> <span data-ttu-id="fffc3-171">De hanterade plattformstjänsterna kan också kombineras med infrastruktur för att skapa ännu mer kraftfulla lösningar.</span><span class="sxs-lookup"><span data-stu-id="fffc3-171">The managed platform services can also be combined with infrastructure to build even more powerful solutions.</span></span>
 
-<span data-ttu-id="a5a8a-172">Du kan till exempel använda Azure PowerShell för att skapa en Azure AppService.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-172">For example, you can use the Azure PowerShell to create an Azure AppService.</span></span> <span data-ttu-id="a5a8a-173">Azure AppService är en hanterad plattformstjänst som ger ett utmärkt sätt att agera värd för webbappar utan att behöva bekymra sig över infrastruktur.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-173">Azure AppService is a managed platform service that provides a great way to host web apps without having to worry about infrastructure.</span></span> <span data-ttu-id="a5a8a-174">När du har skapat Azure AppService kan du skapa två nya Azure-webbappar i AppService med hjälp av följande kommandon:</span><span class="sxs-lookup"><span data-stu-id="a5a8a-174">After creating the Azure AppService, you can create two new Azure Web Apps within the AppService using the following commands:</span></span>
+<span data-ttu-id="fffc3-172">Du kan till exempel använda Azure PowerShell för att skapa en Azure AppService.</span><span class="sxs-lookup"><span data-stu-id="fffc3-172">For example, you can use the Azure PowerShell to create an Azure AppService.</span></span> <span data-ttu-id="fffc3-173">Azure AppService är en hanterad plattformstjänst som ger ett utmärkt sätt att agera värd för webbappar utan att behöva bekymra sig över infrastruktur.</span><span class="sxs-lookup"><span data-stu-id="fffc3-173">Azure AppService is a managed platform service that provides a great way to host web apps without having to worry about infrastructure.</span></span> <span data-ttu-id="fffc3-174">När du har skapat Azure AppService kan du skapa två nya Azure-webbappar i AppService med hjälp av följande kommandon:</span><span class="sxs-lookup"><span data-stu-id="fffc3-174">After creating the Azure AppService, you can create two new Azure Web Apps within the AppService using the following commands:</span></span>
 
 ```powershell
 # Create an Azure AppService that we can host any number of web apps within
@@ -302,9 +302,9 @@ New-AzureRmWebApp -Name MyWebApp43432 -AppServicePlan MyAppServicePlan -Resource
 New-AzureRmWebApp -Name MyWebApp43433 -AppServicePlan MyAppServicePlan -ResourceGroupName myResourceGroup -Location westeurope
 ```
 
-## <a name="listing-deployed-resources"></a><span data-ttu-id="a5a8a-175">Skapa en lista över distribuerade resurser</span><span class="sxs-lookup"><span data-stu-id="a5a8a-175">Listing deployed resources</span></span>
+## <a name="listing-deployed-resources"></a><span data-ttu-id="fffc3-175">Skapa en lista över distribuerade resurser</span><span class="sxs-lookup"><span data-stu-id="fffc3-175">Listing deployed resources</span></span>
 
-<span data-ttu-id="a5a8a-176">Du kan använda cmdleten `Get-AzureRmResource` för att få fram en lista över de resurser som körs i Azure.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-176">You can use the `Get-AzureRmResource` cmdlet to list the resources running in Azure.</span></span> <span data-ttu-id="a5a8a-177">I följande exempel visas resurserna som vi nyss skapade i den nya resursgruppen.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-177">The following example shows the resources we just created in the new resource group.</span></span>
+<span data-ttu-id="fffc3-176">Du kan använda cmdleten `Get-AzureRmResource` för att få fram en lista över de resurser som körs i Azure.</span><span class="sxs-lookup"><span data-stu-id="fffc3-176">You can use the `Get-AzureRmResource` cmdlet to list the resources running in Azure.</span></span> <span data-ttu-id="fffc3-177">I följande exempel visas resurserna som vi nyss skapade i den nya resursgruppen.</span><span class="sxs-lookup"><span data-stu-id="fffc3-177">The following example shows the resources we just created in the new resource group.</span></span>
 
 ```powershell
 Get-AzureRmResource |
@@ -331,15 +331,15 @@ MYvNET2                                               westeurope Microsoft.Netwo
 micromyresomywi032907510                              westeurope Microsoft.Storage/storageAccounts
 ```
 
-## <a name="deleting-resources"></a><span data-ttu-id="a5a8a-178">Ta bort resurser</span><span class="sxs-lookup"><span data-stu-id="a5a8a-178">Deleting resources</span></span>
+## <a name="deleting-resources"></a><span data-ttu-id="fffc3-178">Ta bort resurser</span><span class="sxs-lookup"><span data-stu-id="fffc3-178">Deleting resources</span></span>
 
-<span data-ttu-id="a5a8a-179">Om du vill rensa i Azure-kontot kan du ta bort de resurser vi skapade i detta exempel.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-179">To clean up your Azure account, you want to remove the resources we created in this example.</span></span> <span data-ttu-id="a5a8a-180">Du kan använda cmdletarna `Remove-AzureRm*` för att ta bort de resurser du inte längre behöver.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-180">You can use the `Remove-AzureRm*` cmdlets to delete the resources you no longer need.</span></span> <span data-ttu-id="a5a8a-181">Använd följande kommando om du vill ta bort den virtuella Windows-dator vi skapade:</span><span class="sxs-lookup"><span data-stu-id="a5a8a-181">To remove the Windows VM we created, using the following command:</span></span>
+<span data-ttu-id="fffc3-179">Om du vill rensa i Azure-kontot kan du ta bort de resurser vi skapade i detta exempel.</span><span class="sxs-lookup"><span data-stu-id="fffc3-179">To clean up your Azure account, you want to remove the resources we created in this example.</span></span> <span data-ttu-id="fffc3-180">Du kan använda cmdletarna `Remove-AzureRm*` för att ta bort de resurser du inte längre behöver.</span><span class="sxs-lookup"><span data-stu-id="fffc3-180">You can use the `Remove-AzureRm*` cmdlets to delete the resources you no longer need.</span></span> <span data-ttu-id="fffc3-181">Använd följande kommando om du vill ta bort den virtuella Windows-dator vi skapade:</span><span class="sxs-lookup"><span data-stu-id="fffc3-181">To remove the Windows VM we created, using the following command:</span></span>
 
 ```powershell
 Remove-AzureRmVM -Name myWindowsVM -ResourceGroupName myResourceGroup
 ```
 
-<span data-ttu-id="a5a8a-182">Du uppmanas att bekräfta att du vill ta bort resursen.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-182">You will be prompted to confirm that you want to remove the resource.</span></span>
+<span data-ttu-id="fffc3-182">Du uppmanas att bekräfta att du vill ta bort resursen.</span><span class="sxs-lookup"><span data-stu-id="fffc3-182">You will be prompted to confirm that you want to remove the resource.</span></span>
 
 ```Output
 Confirm
@@ -347,7 +347,7 @@ Are you sure you want to remove resource group 'myResourceGroup'
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
 ```
 
-<span data-ttu-id="a5a8a-183">Du kan också ta bort många resurser i taget.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-183">You can also use the delete many resources at one time.</span></span> <span data-ttu-id="a5a8a-184">Följande kommando tar till exempel bort hela resursgruppen "MyResourceGroup" som vi har använt för alla exempel i denna handledning.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-184">For example, the following command deletes all the resource group "MyResourceGroup" that we've used for all the samples in this Get Started tutorial.</span></span> <span data-ttu-id="a5a8a-185">Detta tar bort resursgruppen och alla resurser i den.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-185">This removes the resource group and all of the resources in it.</span></span>
+<span data-ttu-id="fffc3-183">Du kan också ta bort många resurser i taget.</span><span class="sxs-lookup"><span data-stu-id="fffc3-183">You can also use the delete many resources at one time.</span></span> <span data-ttu-id="fffc3-184">Följande kommando tar till exempel bort hela resursgruppen "MyResourceGroup" som vi har använt för alla exempel i denna handledning.</span><span class="sxs-lookup"><span data-stu-id="fffc3-184">For example, the following command deletes all the resource group "MyResourceGroup" that we've used for all the samples in this Get Started tutorial.</span></span> <span data-ttu-id="fffc3-185">Detta tar bort resursgruppen och alla resurser i den.</span><span class="sxs-lookup"><span data-stu-id="fffc3-185">This removes the resource group and all of the resources in it.</span></span>
 
 ```powershell
 Remove-AzureRmResourceGroup -Name myResourceGroup
@@ -359,18 +359,18 @@ Are you sure you want to remove resource group 'myResourceGroup'
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
 ```
 
-<span data-ttu-id="a5a8a-186">Det kan ta flera minuter att slutföra.</span><span class="sxs-lookup"><span data-stu-id="a5a8a-186">This can take several minutes to complete.</span></span>
+<span data-ttu-id="fffc3-186">Det kan ta flera minuter att slutföra.</span><span class="sxs-lookup"><span data-stu-id="fffc3-186">This can take several minutes to complete.</span></span>
 
-## <a name="get-samples"></a><span data-ttu-id="a5a8a-187">Hämta exempel</span><span class="sxs-lookup"><span data-stu-id="a5a8a-187">Get samples</span></span>
+## <a name="get-samples"></a><span data-ttu-id="fffc3-187">Hämta exempel</span><span class="sxs-lookup"><span data-stu-id="fffc3-187">Get samples</span></span>
 
-<span data-ttu-id="a5a8a-188">Om du vill lära dig mer om att använda Azure PowerShell kan du ta en titt på våra vanligaste skript för [virtuella Linux-datorer](/azure/virtual-machines/virtual-machines-linux-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json), [virtuella Windows-datorer](/azure/virtual-machines/virtual-machines-windows-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json), [webbappar](/azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json) och [SQL-databaser](/azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json).</span><span class="sxs-lookup"><span data-stu-id="a5a8a-188">To learn more about ways to use the Azure PowerShell, check out our most common scripts for [Linux VMs](/azure/virtual-machines/virtual-machines-linux-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json), [Windows VMs](/azure/virtual-machines/virtual-machines-windows-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json), [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json), and [SQL Databases](/azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json).</span></span>
+<span data-ttu-id="fffc3-188">Om du vill lära dig mer om att använda Azure PowerShell kan du ta en titt på våra vanligaste skript för [virtuella Linux-datorer](/azure/virtual-machines/virtual-machines-linux-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json), [virtuella Windows-datorer](/azure/virtual-machines/virtual-machines-windows-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json), [webbappar](/azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json) och [SQL-databaser](/azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json).</span><span class="sxs-lookup"><span data-stu-id="fffc3-188">To learn more about ways to use the Azure PowerShell, check out our most common scripts for [Linux VMs](/azure/virtual-machines/virtual-machines-linux-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json), [Windows VMs](/azure/virtual-machines/virtual-machines-windows-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json), [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json), and [SQL Databases](/azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fazure%%2ftoc.json).</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="a5a8a-189">Nästa steg</span><span class="sxs-lookup"><span data-stu-id="a5a8a-189">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="fffc3-189">Nästa steg</span><span class="sxs-lookup"><span data-stu-id="fffc3-189">Next steps</span></span>
 
-* [<span data-ttu-id="a5a8a-190">Logga in med Azure PowerShell</span><span class="sxs-lookup"><span data-stu-id="a5a8a-190">Login with Azure PowerShell</span></span>](authenticate-azureps.md)
-* [<span data-ttu-id="a5a8a-191">Hantera Azure-prenumerationer med Azure PowerShell</span><span class="sxs-lookup"><span data-stu-id="a5a8a-191">Manage Azure subscriptions with Azure PowerShell</span></span>](manage-subscriptions-azureps.md)
-* [<span data-ttu-id="a5a8a-192">Skapa tjänstens huvudnamn i Azure med Azure PowerShell</span><span class="sxs-lookup"><span data-stu-id="a5a8a-192">Create service principals in Azure using Azure PowerShell</span></span>](create-azure-service-principal-azureps.md)
-* <span data-ttu-id="a5a8a-193">Läs den viktiga informationen om hur du migrerar från en äldre version: [ https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes ](https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes).</span><span class="sxs-lookup"><span data-stu-id="a5a8a-193">Read the Release notes about migrating from an older release: [https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes](https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes).</span></span>
-* <span data-ttu-id="a5a8a-194">Få hjälp från communityn:</span><span class="sxs-lookup"><span data-stu-id="a5a8a-194">Get help from the community:</span></span>
-  * [<span data-ttu-id="a5a8a-195">Azure-forumet på MSDN</span><span class="sxs-lookup"><span data-stu-id="a5a8a-195">Azure forum on MSDN</span></span>](http://go.microsoft.com/fwlink/p/?LinkId=320212)
-  * [<span data-ttu-id="a5a8a-196">stackoverflow</span><span class="sxs-lookup"><span data-stu-id="a5a8a-196">stackoverflow</span></span>](http://go.microsoft.com/fwlink/?LinkId=320213)
+* [<span data-ttu-id="fffc3-190">Logga in med Azure PowerShell</span><span class="sxs-lookup"><span data-stu-id="fffc3-190">Login with Azure PowerShell</span></span>](authenticate-azureps.md)
+* [<span data-ttu-id="fffc3-191">Hantera Azure-prenumerationer med Azure PowerShell</span><span class="sxs-lookup"><span data-stu-id="fffc3-191">Manage Azure subscriptions with Azure PowerShell</span></span>](manage-subscriptions-azureps.md)
+* [<span data-ttu-id="fffc3-192">Skapa tjänstens huvudnamn i Azure med Azure PowerShell</span><span class="sxs-lookup"><span data-stu-id="fffc3-192">Create service principals in Azure using Azure PowerShell</span></span>](create-azure-service-principal-azureps.md)
+* <span data-ttu-id="fffc3-193">Läs den viktiga informationen om hur du migrerar från en äldre version: [ https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes ](https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes).</span><span class="sxs-lookup"><span data-stu-id="fffc3-193">Read the Release notes about migrating from an older release: [https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes](https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes).</span></span>
+* <span data-ttu-id="fffc3-194">Få hjälp från communityn:</span><span class="sxs-lookup"><span data-stu-id="fffc3-194">Get help from the community:</span></span>
+  * [<span data-ttu-id="fffc3-195">Azure-forumet på MSDN</span><span class="sxs-lookup"><span data-stu-id="fffc3-195">Azure forum on MSDN</span></span>](http://go.microsoft.com/fwlink/p/?LinkId=320212)
+  * [<span data-ttu-id="fffc3-196">stackoverflow</span><span class="sxs-lookup"><span data-stu-id="fffc3-196">stackoverflow</span></span>](http://go.microsoft.com/fwlink/?LinkId=320213)
