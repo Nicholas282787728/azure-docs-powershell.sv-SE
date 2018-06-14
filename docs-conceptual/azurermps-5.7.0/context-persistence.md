@@ -1,19 +1,18 @@
 ---
 title: Bevara användarinloggningar mellan PowerShell-sessioner
 description: Den här artikeln beskriver nya funktioner i Azure PowerShell som gör att du kan återanvända autentiseringsuppgifter och annan användarinformation mellan flera olika PowerShell-sessioner.
-services: azure
 author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 08/31/2017
-ms.openlocfilehash: 678d08c24cf254cd904850071872eea18c6bf6cf
-ms.sourcegitcommit: 2eea03b7ac19ad6d7c8097743d33c7ddb9c4df77
+ms.openlocfilehash: 5ae4f03207b74df06a2cb81ea1cd0516a4abd2dd
+ms.sourcegitcommit: bcf80dfd7fbe17e82e7ad029802cfe8a2f02b15c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34821606"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35323126"
 ---
 # <a name="persisting-user-logins-across-powershell-sessions"></a>Bevara användarinloggningar mellan PowerShell-sessioner
 
@@ -76,7 +75,7 @@ Om du vill skapa en kontext måste du vara inloggad i Azure. Med cmdleten `Conne
 
 Om du vill lägga till en ny kontext efter inloggningen ska du använda `Set-AzureRmContext` (eller dess alias `Select-AzureRmSubscription`).
 
-```powershell
+```azurepowershell-interactive
 PS C:\> Set-AzureRMContext -Subscription "Contoso Subscription 1" -Name "Contoso1"
 ```
 
@@ -84,7 +83,7 @@ I exemplet ovan läggs en ny kontext till med målet ”Contoso Subscription 1�
 
 Byt namn på en befintlig kontext genom att använda cmdlet `Rename-AzureRmContext`. Till exempel:
 
-```powershell
+```azurepowershell-interactive
 PS C:\> Rename-AzureRmContext '[user1@contoso.org; 123456-7890-1234-564321]` 'Contoso2'
 ```
 
@@ -92,7 +91,7 @@ Det här exemplet byter namn på kontexten med det automatiska namnet `[user1@co
 
 Slutligen, för att ta bort en kontext använder du cmdlet `Remove-AzureRmContext`.  Till exempel:
 
-```powershell
+```azurepowershell-interactive
 PS C:\> Remove-AzureRmContext Contoso2
 ```
 
@@ -102,7 +101,7 @@ Glömmer kontexten med namnet ”Contoso2”. Du kan återskapa den här kontext
 
 Du kan ta bort alla autentiseringsuppgifter och associerade kontexter för en användare eller en tjänsts huvudnamn med hjälp av `Disconnect-AzureRmAccount` (kallas även `Logout-AzureRmAccount`). När den körs utan parametrar tar cmdleten `Disconnect-AzureRmAccount` bort alla autentiseringsuppgifter och kontexter som är associerade med användaren eller tjänstens huvudnamn i den aktuella kontexten. Du kan skicka användarnamn, tjänstens huvudnamn eller kontext med ett visst huvudkonto som mål.
 
-```powershell
+```azurepowershell-interactive
 Disconnect-AzureRmAccount user1@contoso.org
 ```
 
@@ -112,7 +111,7 @@ Ibland kan vilja du markera, ändra eller ta bort en kontext i en PowerShell-ses
 
 Om du till exempel vill ändra standardkontexten i den aktuella PowerShell-sessionen utan att påverka andra fönster eller den kontext som används nästa gång en session öppnas, ska du använda:
 
-```powershell
+```azurepowershell-interactive
 PS C:\> Select-AzureRmContext Contoso1 -Scope Process
 ```
 
@@ -120,7 +119,7 @@ PS C:\> Select-AzureRmContext Contoso1 -Scope Process
 
 Inställningen för att spara kontext automatiskt sparas i användarens Azure PowerShell-katalog (`%AppData%\Roaming\Windows Azure PowerShell`). Vissa typer av datorkonton kanske inte har åtkomst till den här katalogen. I sådana scenarier kan du använda miljövariabeln
 
-```powershell
+```azurepowershell-interactive
 $env:AzureRmContextAutoSave="true" | "false"
 ```
 

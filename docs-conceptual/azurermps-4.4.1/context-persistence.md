@@ -1,19 +1,18 @@
 ---
 title: Bevara användarinloggningar mellan PowerShell-sessioner
 description: Den här artikeln beskriver nya funktioner i Azure PowerShell som gör att du kan återanvända autentiseringsuppgifter och annan användarinformation mellan flera olika PowerShell-sessioner.
-services: azure
 author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 08/31/2017
-ms.openlocfilehash: 75eaa1f04e4274e1028e950ad9a98520db2b94de
-ms.sourcegitcommit: 2eea03b7ac19ad6d7c8097743d33c7ddb9c4df77
+ms.openlocfilehash: d650cfaae580acd10b3ddb06edec9883f1a32844
+ms.sourcegitcommit: c98e3a21037ebd82936828bcb544eed902b24212
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34822048"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "34853975"
 ---
 # <a name="persisting-user-logins-across-powershell-sessions"></a>Bevara användarinloggningar mellan PowerShell-sessioner
 

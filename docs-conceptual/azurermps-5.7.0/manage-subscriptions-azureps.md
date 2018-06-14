@@ -1,19 +1,18 @@
 ---
-title: Hantera Azure-prenumerationer med Azure PowerShell | Microsoft Docs
+title: Hantera Azure-prenumerationer med Azure PowerShell
 description: Hantera Azure-prenumerationer med Azure PowerShell
-keywords: Azure PowerShell, prenumeration
 author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/30/2017
-ms.openlocfilehash: d28da700efbc2927cb3f73ae696759fb1e0c0cd6
-ms.sourcegitcommit: 2eea03b7ac19ad6d7c8097743d33c7ddb9c4df77
+ms.openlocfilehash: fbd2fe315efbdfb2147218229d51e983e2b61361
+ms.sourcegitcommit: bcf80dfd7fbe17e82e7ad029802cfe8a2f02b15c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34821963"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35323364"
 ---
 # <a name="manage-multiple-azure-subscriptions"></a>Hantera flera Azure-prenumerationer
 
@@ -21,11 +20,11 @@ Om du är nybörjare på Azure har du förmodligen bara en enda prenumeration. M
 
 1. Hämta en lista över alla prenumerationer i ditt konto.
 
-    ```powershell
+    ```azurepowershell-interactive
     Get-AzureRmSubscription
     ```
 
-    ```
+    ```output
     Environment           : AzureCloud
     Account               : username@contoso.com
     TenantId              : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
@@ -50,17 +49,17 @@ Om du är nybörjare på Azure har du förmodligen bara en enda prenumeration. M
 
 2. Ange standard.
 
-    ```powershell
+    ```azurepowershell-interactive
     Select-AzureRmSubscription -SubscriptionName "My Demos"
     ```
 
 3. Verifiera ändringen genom att köra `Get-AzureRmContext`-cmdleten.
 
-    ```powershell
+    ```azurepowershell-interactive
     Get-AzureRmContext
     ```
 
-    ```
+    ```output
     Environment           : AzureCloud
     Account               : username@contoso.com
     TenantId              : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX

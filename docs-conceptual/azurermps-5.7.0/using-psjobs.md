@@ -1,19 +1,18 @@
 ---
 title: Kör cmdletar parallellt med hjälp av PowerShell-jobb
 description: Så här kör du cmdletar parallellt med parametern -AsJob.
-services: azure
 author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 12/11/2017
-ms.openlocfilehash: df64fabe95b927551c10196d7b6b26a8f400335d
-ms.sourcegitcommit: 2eea03b7ac19ad6d7c8097743d33c7ddb9c4df77
+ms.openlocfilehash: a986824d952ccf6cd52dc86418899f3805a38973
+ms.sourcegitcommit: bcf80dfd7fbe17e82e7ad029802cfe8a2f02b15c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34820280"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35323500"
 ---
 # <a name="running-cmdlets-in-parallel-using-powershell-jobs"></a>Kör cmdletar parallellt med hjälp av PowerShell-jobb
 
@@ -24,14 +23,14 @@ Azure PowerShell är kraftigt beroende av att utföra och vänta på nätverksan
 
 PSJobs körs i separata processer, vilket innebär att information om Azure-anslutningen måste delas korrekt med de jobb som du skapar. Vid anslutning av ditt Azure-konto till PowerShell-sessionen med `Connect-AzureRmAccount` kan du överföra sammanhanget till ett jobb.
 
-```powershell
+```azurepowershell-interactive
 $creds = Get-Credential
 $job = Start-Job { param($context,$vmadmin) New-AzureRmVM -Name MyVm -AzureRmContext $context -Credential $vmadmin} -Arguments (Get-AzureRmContext),$creds
 ```
 
 Men om du har valt att sammanhanget ska sparas automatiskt med `Enable-AzureRmContextAutosave` delas sammanhanget automatiskt med alla jobb som du skapar.
 
-```powershell
+```azurepowershell-interactive
 Enable-AzureRmContextAutosave
 $creds = Get-Credential
 $job = Start-Job { param($vmadmin) New-AzureRmVM -Name MyVm -Credential $vmadmin} -Arguments $creds
@@ -42,19 +41,19 @@ $job = Start-Job { param($vmadmin) New-AzureRmVM -Name MyVm -Credential $vmadmin
 För att förenkla processen tillhandahåller Azure PowerShell även en `-AsJob`-växel på vissa tidskrävande-cmdletar.
 `-AsJob`-växeln gör det enklare att skapa PSJobs.
 
-```powershell
+```azurepowershell-interactive
 $creds = Get-Credential
 $job = New-AzureRmVM -Name MyVm -Credential $creds -AsJob
 ```
 
 Du kan inspektera jobb och förlopp när som helst med `Get-Job` och `Get-AzureRmVM`.
 
-```powershell
+```azurepowershell-interactive
 Get-Job $job
 Get-AzureRmVM MyVm
 ```
 
-```Output
+```output
 Id Name                                       PSJobTypeName         State   HasMoreData Location  Command
 -- ----                                       -------------         -----   ----------- --------  -------
 1  Long Running Operation for 'New-AzureRmVM' AzureLongRunningJob`1 Running True        localhost New-AzureRmVM
@@ -70,12 +69,12 @@ Därefter kan du hämta resultatet av jobbet med `Receive-Job` vid slutförande.
 > `Receive-Job` returnerar resultatet från cmdleten som om flaggan `-AsJob` inte fanns.
 > Till exempel, resultatet `Receive-Job` av `Do-Action -AsJob` är av samma typ som ett resultat av `Do-Action`.
 
-```powershell
+```azurepowershell-interactive
 $vm = Receive-Job $job
 $vm
 ```
 
-```Output
+```output
 ResourceGroupName        : MyVm
 Id                       : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyVm/providers/Microsoft.Compute/virtualMachines/MyVm
 VmId                     : dff1f79e-a8f7-4664-ab72-0ec28b9fbb5b
@@ -95,7 +94,7 @@ FullyQualifiedDomainName : myvmmyvm.eastus.cloudapp.azure.com
 
 Skapa flera virtuella datorer samtidigt.
 
-```powershell
+```azurepowershell-interactive
 $creds = Get-Credential
 # Create 10 jobs.
 for($k = 0; $k -lt 10; $k++) {
@@ -110,7 +109,7 @@ Get-AzureRmVM
 
 I det här exemplet gör cmdleten `Wait-Job` att skriptet pausas medan jobben fortfarande körs. Skriptet fortsätter att köras när alla jobb har slutförts. På så sätt kan du skapa flera jobb som körs parallellt och sedan vänta på att de slutförs innan du fortsätter.
 
-```Output
+```output
 Id     Name            PSJobTypeName   State         HasMoreData     Location             Command
 --     ----            -------------   -----         -----------     --------             -------
 2      Long Running... AzureLongRun... Running       True            localhost            New-AzureRmVM
