@@ -17,27 +17,27 @@
       items:
         - name: Skapa ett huvudnamn för tjänsten
           href: create-azure-service-principal-azureps.md
-        - name: Använda beständiga autentiseringsuppgifter
+        - name: Beständiga autentiseringsuppgifter
           href: context-persistence.md
     - name: Frågor
       href: queries-azureps.md
-    - name: Formatering
+    - name: Formatera utdata
       href: formatting-output.md
-    - name: Prenumerationer
+    - name: Hantera prenumerationer
       href: manage-subscriptions-azureps.md
     - name: Distribuera
       items:
-        - name: Distribuera med Resource Manager-mallar
+        - name: Distribuera Resource Manager-mallar
           href: /azure/azure-resource-manager/resource-group-template-deploy
         - name: Exportera Resource Manager-mallar
           href: /azure/azure-resource-manager/resource-manager-export-template-powershell
-        - name: Distribuera en privat Resource Manager-mall med SAS-token
+        - name: Distribuera privata Resource Manager-mallar
           href: /azure/azure-resource-manager/resource-manager-powershell-sas-token
     - name: Begrepp
       items:
-        - name: Använda experimentella moduler
+        - name: Experimentella moduler
           href: using-experimental-modules.md
-        - name: Använda PowerShell-jobb
+        - name: PowerShell-jobb
           href: using-psjobs.md
     - name: Viktig information
       href: release-notes-azureps.md
