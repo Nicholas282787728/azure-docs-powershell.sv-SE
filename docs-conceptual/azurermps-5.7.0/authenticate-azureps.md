@@ -1,91 +1,74 @@
 ---
 title: Logga in med Azure PowerShell
-description: Logga in med Azure PowerShell
-services: azure
+description: Så här loggar du in med Azure PowerShell som användare, med tjänstens huvudnamn eller med en hanterad tjänstidentitet.
 author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
-ms.openlocfilehash: 7ed9d53e905b5ac16432700b39a70fd07c4f16da
-ms.sourcegitcommit: 2eea03b7ac19ad6d7c8097743d33c7ddb9c4df77
+ms.openlocfilehash: e2eb6767d16dd15529b35b7a4134f4dcdd257d60
+ms.sourcegitcommit: bcf80dfd7fbe17e82e7ad029802cfe8a2f02b15c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34822133"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35323347"
 ---
-# <a name="log-in-with-azure-powershell"></a>Logga in med Azure PowerShell
+# <a name="sign-in-with-azure-powershell"></a>Logga in med Azure PowerShell
 
 Azure PowerShell har stöd för flera inloggningsmetoder. Det är enklast att komma igång genom att logga in interaktivt via kommandoraden.
 
-## <a name="interactive-log-in"></a>Interaktiv inloggning
+## <a name="sign-in-interactively"></a>Logga in interaktivt
 
-1. Skriv `Connect-AzureRmAccount`. En dialogruta som frågar efter dina Azure-autentiseringsuppgifter visas.
+Använd cmdleten [Connect-AzureRmAccount](/powershell/module/azurerm.profile/connect-azurermaccount) för att logga in interaktivt.
 
-2. Ange e-postadressen och lösenordet som är kopplade till ditt konto. Azure autentiserar och sparar autentiseringsuppgifterna och stänger sedan fönstret.
+```azurepowershell
+Connect-AzureRmAccount
+```
 
-## <a name="log-in-with-a-service-principal"></a>Logga in med ett huvudnamn för tjänsten
+Den här cmdleten visar en dialogruta där du anger den e-postadress och det lösenord som är associerade med ditt Azure-konto. När du autentiserar sparas informationen för den aktuella PowerShell-sessionen, dialogrutan stängs och du får åtkomst till alla Azure PowerShell-cmdletar.
+
+> [!IMPORTANT]
+> Den här inloggningen är _endast_ för den aktuella PowerShell-sessionen. Om du vill bevara inloggningen över flera sessioner kan du läsa artikeln om [beständiga autentiseringsuppgifter](context-persistence.md).
+
+## <a name="sign-in-with-a-service-principal"></a>Logga in med ett huvudnamn för tjänsten
 
 Tjänstens huvudnamn ger dig ett sätt att skapa icke-interaktiva konton som du sedan kan använda för att manipulera resurser. Huvudnamn för tjänsten liknar användarkonton som du kan tillämpa regler på med Azure Active Directory. Du kan säkerställa att dina automatiseringsskript är ännu säkrare genom att tilldela dem den lägsta behörigheten som krävs för ett huvudnamn för tjänsten.
 
-1. Om du inte redan har ett huvudnamn för tjänsten kan du [skapa ett](create-azure-service-principal-azureps.md).
+Läs informationen i [Skapa tjänstens huvudnamn för Azure med Azure PowerShell](create-azure-service-principal-azureps.md) om du behöver skapa ett huvudnamn för tjänsten som ska användas med Azure PowerShell.
 
-2. Logga in med huvudnamnet för tjänsten.
+Använd argumentet `-ServicePrincipal` med cmdleten `Connect-AzureRmAccount` för att logga in med ett huvudnamn för tjänsten. Du behöver även program-ID:t för tjänstens huvudnamn, inloggningsuppgifter och det klient-ID som är associerat med tjänstens huvudnamn. Använd cmdleten [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) för att hämta autentiseringsuppgifterna för tjänstens huvudnamn. Den här cmdleten visar en dialogruta där du anger användar-ID för tjänstens huvudnamn och lösenord.
 
-    ```powershell
-    Connect-AzureRmAccount -ServicePrincipal -ApplicationId  "http://my-app" -Credential $pscredential -TenantId $tenantid
-    ```
+```azurepowershell-interactive
+$pscredential = Get-Credential
+Connect-AzureRmAccount -ServicePrincipal -ApplicationId  "http://my-app" -Credential $pscredential -TenantId $tenantid
+```
 
-    För att få ditt TenantId loggar du in interaktivt och hämtar sedan ditt TenantId från prenumerationen.
+## <a name="sign-in-using-an-azure-vm-managed-service-identity"></a>Logga in med en hanterad tjänstidentitet för en virtuell Azure-dator
 
-    ```powershell
-    Get-AzureRmSubscription
-    ```
-
-    ```
-    Environment           : AzureCloud
-    Account               : username@contoso.com
-    TenantId              : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-    SubscriptionId        : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-    SubscriptionName      : My Production Subscription
-    CurrentStorageAccount :
-    ```
-
-### <a name="log-in-using-an-azure-vm-managed-service-identity"></a>Logga in med en hanterad tjänstidentitet för Azure VM
-
-Hanterad tjänstidentitet är en funktion i förhandsversionen av Azure Active Directory. Du kan använda en hanterad tjänstidentitet som tjänstens huvudnamn för att logga in och få en app-begränsad åtkomsttoken för att komma åt andra resurser.
+Hanterad tjänstidentitet är en funktion i förhandsversionen av Azure Active Directory. Du kan använda en hanterad tjänstidentitet som tjänstens huvudnamn för att logga in och få en app-begränsad åtkomsttoken för att komma åt andra resurser. Hanterad tjänstidentitet är endast tillgänglig på virtuella datorer som körs i ett Azure-moln.
 
 Läs mer om [hur du använder en hanterad tjänstidentitet för Azure VM för att logga in och få en token](/azure/active-directory/msi-how-to-get-access-token-using-msi).
 
-## <a name="log-in-to-another-cloud"></a>Logga in på ett annat moln
+## <a name="sign-in-to-another-cloud"></a>Logga in på ett annat moln
 
-Azure-molntjänster erbjuder olika miljöer som följer olika myndigheters regler för datahantering. Om ditt Azure-konto finns i ett myndighetsmoln, behöver du specificera miljön när du loggar in. Om ditt konto till exempel befinner sig i Kina-molnet, loggar du in med följande kommando:
+Azure-molntjänster erbjuder olika miljöer som följer olika regioners regler för datahantering. Om ditt Azure-konto finns i ett moln som är associerat med en av de här regionerna behöver du specificera miljön när du loggar in. Om ditt konto till exempel befinner sig i Kina-molnet, loggar du in med följande kommando:
 
-```powershell
+```azurepowershell-interactive
 Connect-AzureRmAccount -Environment AzureChinaCloud
 ```
 
 Använd följande kommando för att få en lista över tillgängliga miljöer:
 
-```powershell
+```azurepowershell-interactive
 Get-AzureRmEnvironment | Select-Object Name
-```
-
-```
-Name
-----
-AzureCloud
-AzureChinaCloud
-AzureUSGovernment
-AzureGermanCloud
 ```
 
 ## <a name="learn-more-about-managing-azure-role-based-access"></a>Lär dig mer om att hantera rollbaserad åtkomstkontroll i Azure
 
 Mer information om hantering av autentisering och prenumerationer i Azure finns i [Hantera konton, prenumerationer och administrativa roller](/azure/active-directory/role-based-access-control-configure).
 
-Azure PowerShell-cmdletar för rollhantering
+Azure PowerShell-cmdletar för rollhantering:
 
 * [Get-AzureRmRoleAssignment](/powershell/module/AzureRM.Resources/Get-AzureRmRoleAssignment)
 * [Get-AzureRmRoleDefinition](/powershell/module/AzureRM.Resources/Get-AzureRmRoleDefinition)
