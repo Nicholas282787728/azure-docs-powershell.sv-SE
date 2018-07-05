@@ -7,74 +7,94 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/06/2018
-ms.openlocfilehash: 17912c155255b6fdfd3cfb9242163b67d405dc03
-ms.sourcegitcommit: bcf80dfd7fbe17e82e7ad029802cfe8a2f02b15c
+ms.openlocfilehash: a779f402fb2b3fccc8269aa30a6fe98a949251d6
+ms.sourcegitcommit: 4c775721461210431bd913f28d1f1e6f1976880a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35323262"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37091511"
 ---
-# <a name="install-azure-powershell-on-macos-or-linux"></a><span data-ttu-id="d9709-103">Installera Azure PowerShell på macOS eller Linux</span><span class="sxs-lookup"><span data-stu-id="d9709-103">Install Azure PowerShell on macOS or Linux</span></span>
+# <a name="install-azure-powershell-on-macos-or-linux"></a><span data-ttu-id="9cb68-103">Installera Azure PowerShell på macOS eller Linux</span><span class="sxs-lookup"><span data-stu-id="9cb68-103">Install Azure PowerShell on macOS or Linux</span></span>
 
-<span data-ttu-id="d9709-104">På plattformar som inte använder Windows är det möjligt att både köra Azure PowerShell och PowerShell Core v6.</span><span class="sxs-lookup"><span data-stu-id="d9709-104">For non-Windows platforms, it's possible to run Azure PowerShell on top of PowerShell Core v6.</span></span> <span data-ttu-id="d9709-105">Den här produkten är utformad på .NET Core i stället för det vanliga Azure PowerShell som är skapat på .NET Framework för Windows. Den kan köras på alla plattformar som har stöd för körning på .NET Core.</span><span class="sxs-lookup"><span data-stu-id="d9709-105">Rather than the standard Azure PowerShell built on .NET Framework for Windows, this product is built for .NET Core and can run on any platform which supports the .Net Core runtime.</span></span>
+<span data-ttu-id="9cb68-104">På plattformar som inte använder Windows är det möjligt att köra Azure PowerShell i PowerShell Core v6.</span><span class="sxs-lookup"><span data-stu-id="9cb68-104">For non-Windows platforms, it's possible to run Azure PowerShell in PowerShell Core v6.</span></span> <span data-ttu-id="9cb68-105">Den här versionen av PowerShell har skapats för användning på alla plattformar som har stöd för .NET Core.</span><span class="sxs-lookup"><span data-stu-id="9cb68-105">This version of PowerShell is built for use on any platform that supports .NET Core.</span></span> <span data-ttu-id="9cb68-106">En speciell .NET Core-version av Azure PowerShell finns tillgänglig för att arbeta med de här plattformarna.</span><span class="sxs-lookup"><span data-stu-id="9cb68-106">To work with these platforms, there's a special .NET Core version of Azure PowerShell available.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="d9709-106">För tillfället är både PowerShell Core v6 och Azure PowerShell för .NET Core fortfarande i betaversioner.</span><span class="sxs-lookup"><span data-stu-id="d9709-106">At this time, both PowerShell Core v6 and Azure PowerShell for .NET Core are still in beta.</span></span>
-> <span data-ttu-id="d9709-107">De här produkterna har begränsad support.</span><span class="sxs-lookup"><span data-stu-id="d9709-107">Support for these products is limited.</span></span> <span data-ttu-id="d9709-108">Skicka gärna in ett ärende till GitHub om du har problem eller upptäcker buggar.</span><span class="sxs-lookup"><span data-stu-id="d9709-108">If you have problems or discover bugs, please file an issue on GitHub.</span></span>
+> <span data-ttu-id="9cb68-107">För tillfället är både PowerShell Core v6 och Azure PowerShell för .NET Core fortfarande i betaversioner.</span><span class="sxs-lookup"><span data-stu-id="9cb68-107">At this time, both PowerShell Core v6 and Azure PowerShell for .NET Core are still in beta.</span></span>
+> <span data-ttu-id="9cb68-108">De här produkterna har begränsad support.</span><span class="sxs-lookup"><span data-stu-id="9cb68-108">Support for these products is limited.</span></span> <span data-ttu-id="9cb68-109">Skicka gärna in ett ärende till GitHub om du har problem eller upptäcker buggar.</span><span class="sxs-lookup"><span data-stu-id="9cb68-109">If you have problems or discover bugs, please file an issue on GitHub.</span></span>
 >
-> * [<span data-ttu-id="d9709-109">Problem med PowerShell Core v6</span><span class="sxs-lookup"><span data-stu-id="d9709-109">Issues for PowerShell Core v6</span></span>](https://github.com/PowerShell/PowerShell/issues)
-> * [<span data-ttu-id="d9709-110">Problem med Azure PowerShell</span><span class="sxs-lookup"><span data-stu-id="d9709-110">Issues for Azure PowerShell</span></span>](https://github.com/azure/azure-docs-powershell/issues)
+> * [<span data-ttu-id="9cb68-110">Problem med PowerShell Core v6</span><span class="sxs-lookup"><span data-stu-id="9cb68-110">Issues for PowerShell Core v6</span></span>](https://github.com/PowerShell/PowerShell/issues)
+> * [<span data-ttu-id="9cb68-111">Problem med Azure PowerShell</span><span class="sxs-lookup"><span data-stu-id="9cb68-111">Issues for Azure PowerShell</span></span>](https://github.com/azure/azure-docs-powershell/issues)
 
-## <a name="install-powershell-core-v6"></a><span data-ttu-id="d9709-111">Installera PowerShell Core v6</span><span class="sxs-lookup"><span data-stu-id="d9709-111">Install PowerShell Core v6</span></span>
+## <a name="install-powershell-core"></a><span data-ttu-id="9cb68-112">Installera PowerShell Core</span><span class="sxs-lookup"><span data-stu-id="9cb68-112">Install PowerShell Core</span></span>
 
-<span data-ttu-id="d9709-112">Processen för att installera PowerShell Core v6 på Linux och macOS varierar beroende på Linux-distribution och operativsystemsversion.</span><span class="sxs-lookup"><span data-stu-id="d9709-112">Installing PowerShell Core v6 on Linux or macOS varies depending on the Linux distribution and OS version.</span></span>
-<span data-ttu-id="d9709-113">Detaljerade anvisningar finns i följande artikel:</span><span class="sxs-lookup"><span data-stu-id="d9709-113">Detailed instructions can be found in the following articles:</span></span>
+<span data-ttu-id="9cb68-113">Installationsanvisningarna för PowerShell Core är annorlunda för macOS och de flesta Linux-distributioner.</span><span class="sxs-lookup"><span data-stu-id="9cb68-113">The installation instructions for PowerShell Core are different for macOS and most Linux distributions.</span></span>
+<span data-ttu-id="9cb68-114">Detaljerade anvisningar finns i följande artikel:</span><span class="sxs-lookup"><span data-stu-id="9cb68-114">Detailed instructions can be found in the following articles:</span></span>
 
-- [<span data-ttu-id="d9709-114">Installera PowerShell Core på macOS</span><span class="sxs-lookup"><span data-stu-id="d9709-114">Install PowerShell Core on macOS</span></span>](/powershell/scripting/setup/installing-powershell-core-on-macos)
-- [<span data-ttu-id="d9709-115">Installera PowerShell Core på Linux</span><span class="sxs-lookup"><span data-stu-id="d9709-115">Install PowerShell Core on Linux</span></span>](/powershell/scripting/setup/installing-powershell-core-on-linux)
+- [<span data-ttu-id="9cb68-115">Installera PowerShell Core på macOS</span><span class="sxs-lookup"><span data-stu-id="9cb68-115">Install PowerShell Core on macOS</span></span>](/powershell/scripting/setup/installing-powershell-core-on-macos)
+- [<span data-ttu-id="9cb68-116">Installera PowerShell Core på Linux</span><span class="sxs-lookup"><span data-stu-id="9cb68-116">Install PowerShell Core on Linux</span></span>](/powershell/scripting/setup/installing-powershell-core-on-linux)
 
-## <a name="install-azure-powershell-for-net-core"></a><span data-ttu-id="d9709-116">Installera Azure PowerShell för .NET Core</span><span class="sxs-lookup"><span data-stu-id="d9709-116">Install Azure PowerShell for .NET Core</span></span>
+## <a name="install-azure-powershell-for-net-core"></a><span data-ttu-id="9cb68-117">Installera Azure PowerShell för .NET Core</span><span class="sxs-lookup"><span data-stu-id="9cb68-117">Install Azure PowerShell for .NET Core</span></span>
 
-<span data-ttu-id="d9709-117">I PowerShell Core v6 är modulen PowerShellGet redan installerad.</span><span class="sxs-lookup"><span data-stu-id="d9709-117">PowerShell Core v6 comes with the PowerShellGet module already installed.</span></span> <span data-ttu-id="d9709-118">Det gör det enkelt att installera alla moduler som har publicerats i PowerShell-galleriet.</span><span class="sxs-lookup"><span data-stu-id="d9709-118">This makes it easy to install any module that is published to the PowerShell Gallery.</span></span> <span data-ttu-id="d9709-119">Öppna en ny PowerShell-session och kör följande kommando för att installera Azure PowerShell:</span><span class="sxs-lookup"><span data-stu-id="d9709-119">To install Azure PowerShell, open a new PowerShell session and run the following command:</span></span>
+<span data-ttu-id="9cb68-118">I PowerShell Core är modulen PowerShellGet redan installerad.</span><span class="sxs-lookup"><span data-stu-id="9cb68-118">PowerShell Core comes with the PowerShellGet module already installed.</span></span> <span data-ttu-id="9cb68-119">Du måste ha utökade privilegier för att installera moduler i PowerShell, så du måste starta din session som en superanvändare:</span><span class="sxs-lookup"><span data-stu-id="9cb68-119">Installation of modules in PowerShell requires elevated privileges, so you'll need to start your session as superuser:</span></span>
+
+```bash
+sudo pwsh
+```
+
+<span data-ttu-id="9cb68-120">Kör följande kommando för att installera Azure PowerShell:</span><span class="sxs-lookup"><span data-stu-id="9cb68-120">To install Azure PowerShell, run the following command:</span></span>
 
 ```powershell
 Install-Module AzureRM.NetCore
 ```
 
-## <a name="load-the-azurermnetcore-module"></a><span data-ttu-id="d9709-120">Läs in modulen AzureRM.Netcore</span><span class="sxs-lookup"><span data-stu-id="d9709-120">Load the AzureRM.Netcore module</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="9cb68-121">Modulen `AzureRM` som beskrivs i andra artiklar är inte byggd för .NET Core och fungerar inte med PowerShell Core.</span><span class="sxs-lookup"><span data-stu-id="9cb68-121">The `AzureRM` module detailed in other articles is not built for .NET Core and will not work with PowerShell Core.</span></span> <span data-ttu-id="9cb68-122">Både `AzureRM` och `AzureRM.NetCore` använder samma cmdlet-namn, så den enda skillnaden är namnet på den samlade modulen och vilken .NET-version de är skapade för att användas med.</span><span class="sxs-lookup"><span data-stu-id="9cb68-122">Both `AzureRM` and `AzureRM.NetCore` use the same cmdlet names, so the only difference is the name of the rollup module and which .NET version they are built against.</span></span>
 
-<span data-ttu-id="d9709-121">När modulen har installerats måste du läsa in modulen i din PowerShell-session.</span><span class="sxs-lookup"><span data-stu-id="d9709-121">Once the module is installed, you need to load the module into your PowerShell session.</span></span> <span data-ttu-id="d9709-122">Moduler läses in med `Import-Module`-cmdleten enligt följande:</span><span class="sxs-lookup"><span data-stu-id="d9709-122">Modules are loaded using the `Import-Module` cmdlet, as follows:</span></span>
+<span data-ttu-id="9cb68-123">Som standard konfigureras inte PowerShell-galleriet som en betrodd lagringsplats för PowerShellGet.</span><span class="sxs-lookup"><span data-stu-id="9cb68-123">By default, the PowerShell gallery isn't configured as a trusted repository for PowerShellGet.</span></span> <span data-ttu-id="9cb68-124">Första gången du använder PSGallery visas följande meddelande:</span><span class="sxs-lookup"><span data-stu-id="9cb68-124">The first time you use the PSGallery you see the following prompt:</span></span>
 
-```powershell
-Import-Module AzureRM.Netcore
-Import-Module AzureRM.Profile.Netcore
+```output
+Untrusted repository
+
+You are installing the modules from an untrusted repository. If you trust this repository, change
+its InstallationPolicy value by running the Set-PSRepository cmdlet.
+
+Are you sure you want to install the modules from 'PSGallery'?
+[Y] Yes� [A] Yes to All� [N] No� [L] No to All� [S] Suspend� [?] Help (default is "N"):
 ```
 
-<span data-ttu-id="d9709-123">När importen är färdig kan du testa din nya installation och modulen genom att försöka logga in på Azure med hjälp av följande kommando:</span><span class="sxs-lookup"><span data-stu-id="d9709-123">After the import completes, you can test your newly installed and module by attempting to sign into Azure using the following command:</span></span>
+<span data-ttu-id="9cb68-125">Svara `Yes` eller `Yes to All` för att fortsätta med installationen.</span><span class="sxs-lookup"><span data-stu-id="9cb68-125">Answer `Yes` or `Yes to All` to continue with the installation.</span></span>
+
+## <a name="sign-in"></a><span data-ttu-id="9cb68-126">Logga in</span><span class="sxs-lookup"><span data-stu-id="9cb68-126">Sign in</span></span>
+
+<span data-ttu-id="9cb68-127">Du måste läsa in `AzureRM.Netcore` till din PowerShell-session med cmdleten [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) och sedan logga in med dina autentiseringsuppgifter för Azure för att börja arbeta med Azure PowerShell.</span><span class="sxs-lookup"><span data-stu-id="9cb68-127">To start working with Azure PowerShell, you need to load `AzureRM.Netcore` into your PowerShell session with the [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) cmdlet, and then sign in with your Azure credentials.</span></span> <span data-ttu-id="9cb68-128">Du behöver __inte__ ha några utökade privilegier för att importera en modul.</span><span class="sxs-lookup"><span data-stu-id="9cb68-128">Importing a module does __not__ require elevated privileges.</span></span>
 
 ```powershell
+# Import the module into the PowerShell session
+Import-Module AzureRM.Netcore
+# Connect to Azure with an interactive dialog for sign-in
 Connect-AzureRmAccount
 ```
 
-<span data-ttu-id="d9709-124">När du har angivit kommandot ovan visas en dialogruta som ber dig att gå till `https://aka.ms/devicelogin` och ange koden som tillhandahålls.</span><span class="sxs-lookup"><span data-stu-id="d9709-124">The above command should prompt you to go to `https://aka.ms/devicelogin` and enter the provided code.</span></span>
+<span data-ttu-id="9cb68-129">Du måste upprepa de här stegen för varje ny PowerShell-session du startar.</span><span class="sxs-lookup"><span data-stu-id="9cb68-129">You'll need to repeat these steps for every new PowerShell session you start.</span></span> <span data-ttu-id="9cb68-130">Om du vill importera modulen `AzureRM` automatiskt måste du konfigurera en PowerShell-profil, som du kan läsa om i [Om profiler](/powershell/module/microsoft.powershell.core/about/about_profiles).</span><span class="sxs-lookup"><span data-stu-id="9cb68-130">Automatically importing the `AzureRM` module requires setting up a PowerShell profile, which you can learn about in [About Profiles](/powershell/module/microsoft.powershell.core/about/about_profiles).</span></span>
+<span data-ttu-id="9cb68-131">Du bör arbeta med din profil genom miljövariabeln `$Profile` på macOS och Linux.</span><span class="sxs-lookup"><span data-stu-id="9cb68-131">On macOS and Linux, you should work with your profile through the `$Profile` environment variable.</span></span> <span data-ttu-id="9cb68-132">Om du vill lära dig hur du sparar din Azure-inloggning mellan olika sessioner kan du läsa informationen om att [spara autentiseringsuppgifter för användare mellan olika PowerShell-sessioner](context-persistence.md).</span><span class="sxs-lookup"><span data-stu-id="9cb68-132">To learn how to persist your Azure sign in across sessions, see [Persist user credentials across PowerShell sessions](context-persistence.md).</span></span>
 
-## <a name="available-cmdlets"></a><span data-ttu-id="d9709-125">Tillgängliga cmdlet:ar</span><span class="sxs-lookup"><span data-stu-id="d9709-125">Available cmdlets</span></span>
+## <a name="available-cmdlets"></a><span data-ttu-id="9cb68-133">Tillgängliga cmdlet:ar</span><span class="sxs-lookup"><span data-stu-id="9cb68-133">Available cmdlets</span></span>
 
-<span data-ttu-id="d9709-126">Azure PowerShell-moduler för .NET Standard är fortfarande under utveckling.</span><span class="sxs-lookup"><span data-stu-id="d9709-126">The Azure PowerShell modules for .NET Standard are still in development.</span></span> <span data-ttu-id="d9709-127">De här modulerna tillhandahåller inte den fullständiga uppsättningen cmdlet:ar som är tillgängliga för Windows-versionen av modulerna.</span><span class="sxs-lookup"><span data-stu-id="d9709-127">These modules do not provide the full set of cmdlets that are available for the Windows version of the modules.</span></span> <span data-ttu-id="d9709-128">Följande funktioner är implementerade i AzureRM.Netcore-moduler:</span><span class="sxs-lookup"><span data-stu-id="d9709-128">The following functions are implemented in AzureRM.Netcore modules:</span></span>
+<span data-ttu-id="9cb68-134">Azure PowerShell-moduler för .NET Core håller fortfarande på att utvecklas.</span><span class="sxs-lookup"><span data-stu-id="9cb68-134">The Azure PowerShell modules for .NET Core are still in development.</span></span> <span data-ttu-id="9cb68-135">De här modulerna tillhandahåller inte den fullständiga uppsättningen cmdlet:ar som är tillgängliga för Windows-versionen av modulerna.</span><span class="sxs-lookup"><span data-stu-id="9cb68-135">These modules do not provide the full set of cmdlets that are available for the Windows version of the modules.</span></span> <span data-ttu-id="9cb68-136">Följande funktioner är implementerade i AzureRM.Netcore-moduler:</span><span class="sxs-lookup"><span data-stu-id="9cb68-136">The following functions are implemented in AzureRM.Netcore modules:</span></span>
 
-* <span data-ttu-id="d9709-129">Kontohantering</span><span class="sxs-lookup"><span data-stu-id="d9709-129">Account management</span></span>
-  - <span data-ttu-id="d9709-130">Logga in med ett Microsoft-konto, organisationskonto eller tjänstens huvudnamn via Microsoft Azure Active Directory</span><span class="sxs-lookup"><span data-stu-id="d9709-130">Login with Microsoft account, Organizational account, or Service Principal through Microsoft Azure Active Directory</span></span>
-  - <span data-ttu-id="d9709-131">Spara autentiseringsuppgifterna till disken med Save-AzureRmContext och läs in sparade autentiseringsuppgifter med Import-AzureRmContext</span><span class="sxs-lookup"><span data-stu-id="d9709-131">Save Credentials to disk with Save-AzureRmContext and load saved credentials using Import-AzureRmContext</span></span>
-* <span data-ttu-id="d9709-132">Miljö</span><span class="sxs-lookup"><span data-stu-id="d9709-132">Environment</span></span>
-  - <span data-ttu-id="d9709-133">Hämta andra Microsoft Azure-miljöer</span><span class="sxs-lookup"><span data-stu-id="d9709-133">Get the different out-of-box Microsoft Azure environments</span></span>
-  - <span data-ttu-id="d9709-134">Lägg till/Ange/Ta bort anpassade miljöer (t.ex. Azure Stack eller Windows Azure Pack-miljöer)</span><span class="sxs-lookup"><span data-stu-id="d9709-134">Add/Set/Remove customized environments (like your Azure Stack or Windows Azure Pack environments)</span></span>
-* <span data-ttu-id="d9709-135">Cmdlet:ar på hanteringsnivå för Azure-tjänster med Resource Manager- och Service Management-gränssnitt.</span><span class="sxs-lookup"><span data-stu-id="d9709-135">Management plane cmdlets for Azure services using Resource Manager and Service Management interfaces.</span></span>
-  - <span data-ttu-id="d9709-136">Virtuell dator</span><span class="sxs-lookup"><span data-stu-id="d9709-136">Virtual Machine</span></span>
-  - <span data-ttu-id="d9709-137">App Service (Websites)</span><span class="sxs-lookup"><span data-stu-id="d9709-137">App Service (Websites)</span></span>
-  - <span data-ttu-id="d9709-138">SQL Database</span><span class="sxs-lookup"><span data-stu-id="d9709-138">SQL Database</span></span>
-  - <span data-ttu-id="d9709-139">Storage</span><span class="sxs-lookup"><span data-stu-id="d9709-139">Storage</span></span>
-  - <span data-ttu-id="d9709-140">Nätverk</span><span class="sxs-lookup"><span data-stu-id="d9709-140">Network</span></span>
+* <span data-ttu-id="9cb68-137">Kontohantering</span><span class="sxs-lookup"><span data-stu-id="9cb68-137">Account management</span></span>
+  - <span data-ttu-id="9cb68-138">Logga in med ett Microsoft-konto, organisationskonto eller tjänstens huvudnamn via Microsoft Azure Active Directory</span><span class="sxs-lookup"><span data-stu-id="9cb68-138">Sign in with Microsoft account, Organizational account, or Service Principal through Microsoft Azure Active Directory</span></span>
+  - <span data-ttu-id="9cb68-139">Spara autentiseringsuppgifterna till disken med Save-AzureRmContext och läs in sparade autentiseringsuppgifter med Import-AzureRmContext</span><span class="sxs-lookup"><span data-stu-id="9cb68-139">Save Credentials to disk with Save-AzureRmContext and load saved credentials using Import-AzureRmContext</span></span>
+* <span data-ttu-id="9cb68-140">Miljö</span><span class="sxs-lookup"><span data-stu-id="9cb68-140">Environment</span></span>
+  - <span data-ttu-id="9cb68-141">Hämta andra Microsoft Azure-miljöer</span><span class="sxs-lookup"><span data-stu-id="9cb68-141">Get the different out-of-box Microsoft Azure environments</span></span>
+  - <span data-ttu-id="9cb68-142">Lägg till/Ange/Ta bort anpassade miljöer (t.ex. Azure Stack eller Windows Azure Pack-miljöer)</span><span class="sxs-lookup"><span data-stu-id="9cb68-142">Add/Set/Remove customized environments (like your Azure Stack or Windows Azure Pack environments)</span></span>
+* <span data-ttu-id="9cb68-143">Cmdlet:ar på hanteringsnivå för Azure-tjänster med Resource Manager- och Service Management-gränssnitt.</span><span class="sxs-lookup"><span data-stu-id="9cb68-143">Management plane cmdlets for Azure services using Resource Manager and Service Management interfaces.</span></span>
+  - <span data-ttu-id="9cb68-144">Virtuell dator</span><span class="sxs-lookup"><span data-stu-id="9cb68-144">Virtual Machine</span></span>
+  - <span data-ttu-id="9cb68-145">App Service (Websites)</span><span class="sxs-lookup"><span data-stu-id="9cb68-145">App Service (Websites)</span></span>
+  - <span data-ttu-id="9cb68-146">SQL Database</span><span class="sxs-lookup"><span data-stu-id="9cb68-146">SQL Database</span></span>
+  - <span data-ttu-id="9cb68-147">Storage</span><span class="sxs-lookup"><span data-stu-id="9cb68-147">Storage</span></span>
+  - <span data-ttu-id="9cb68-148">Nätverk</span><span class="sxs-lookup"><span data-stu-id="9cb68-148">Network</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="d9709-141">Nästa steg</span><span class="sxs-lookup"><span data-stu-id="d9709-141">Next Steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="9cb68-149">Nästa steg</span><span class="sxs-lookup"><span data-stu-id="9cb68-149">Next Steps</span></span>
 
-<span data-ttu-id="d9709-142">Mer information om användning av Azure PowerShell finns i artikeln [Kom igång med Azure PowerShell](get-started-azureps.md).</span><span class="sxs-lookup"><span data-stu-id="d9709-142">For more information about using Azure PowerShell, see the [Get started with Azure PowerShell](get-started-azureps.md) article.</span></span>
+<span data-ttu-id="9cb68-150">Mer information om användning av Azure PowerShell finns i artikeln [Kom igång med Azure PowerShell](get-started-azureps.md).</span><span class="sxs-lookup"><span data-stu-id="9cb68-150">For more information about using Azure PowerShell, see the [Get started with Azure PowerShell](get-started-azureps.md) article.</span></span>
