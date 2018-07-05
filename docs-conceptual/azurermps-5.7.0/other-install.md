@@ -1,86 +1,62 @@
 ---
 title: Andra sätt att installera Azure PowerShell
-description: Så här installerar du Azure PowerShell med hjälp av MSI-paketet eller installationsprogrammet för webbplattformen.
+description: Så här installerar du Azure PowerShell utan PowerShellGet
 author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 06/06/2018
-ms.openlocfilehash: 0919583d9cb05a75fae3b812eed84109be8b28aa
-ms.sourcegitcommit: bcf80dfd7fbe17e82e7ad029802cfe8a2f02b15c
+ms.date: 06/20/2018
+ms.openlocfilehash: f6c52b413aa2981dc24c7e60fe832e37dcbc8baa
+ms.sourcegitcommit: 4c775721461210431bd913f28d1f1e6f1976880a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35323279"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37091460"
 ---
-# <a name="other-installation-methods"></a>Andra installationsmetoder
+# <a name="install-azure-powershell-on-windows-with-msi-or-web-platform-installer"></a>Installera Azure PowerShell på Windows med MSI eller installationsprogrammet för webbplattformen
 
-Den här artikeln förklarar hur du installerar Azure PowerShell med hjälp av en hanterad tjänstidentitet eller installationsprogrammet för webbplattformen (WebPI). Du kan även köra Azure PowerShell från en Docker-behållare. Använd endast dessa installationsmetoder om de är nödvändiga för ditt system. Det kanoniska sättet att installera Azure PowerShell är med PowerShellGet. Anvisningar om hur du använder PowerShellGet för att installera Azure PowerShell finns i [Installera Azure PowerShell med PowerShellGet](install-azurerm-ps.md).
+Den här artikeln beskriver hur du installerar Azure PowerShell på Windows med hjälp av en hanterad tjänstidentitet eller installationsprogrammet för webbplattformen (WebPI).  
+Använd endast dessa installationsmetoder om de är nödvändiga för ditt system. PowerShellGet är det rekommenderade sättet att installera Azure PowerShell på Windows. Anvisningar om hur du använder PowerShellGet för att installera Azure PowerShell finns i [Installera Azure PowerShell med PowerShellGet](install-azurerm-ps.md).
+
+Om du vill lära dig hur du kör Azure PowerShell i en Docker-behållare kan du läsa informationen i [Köra Azure PowerShell i Docker](azurerm-ps-in-docker.md).
 
 Information om hur du installerar i Linux- eller macOS-miljöer finns i [Installera Azure PowerShell på macOS eller Linux](install-azurermps-maclinux.md).
 
-## <a name="install-or-update-on-windows-using-the-web-platform-installer"></a>Installera eller uppdatera på Windows med hjälp av installationsprogrammet för webbplattformen
-
-Att installera den senaste versionen av Azure PowerShell från WebPI går till på samma sätt som det gjorde för tidigare versioner.
-Hämta [Azure PowerShell WebPI-paketet](http://aka.ms/webpi-azps) och starta installationen.
-
-> [!NOTE]
-> Om du tidigare har installerat Azure-moduler från PowerShell-galleriet så kommer installationsprogrammet automatiskt att ta bort dem. Detta förenklar din miljö genom att se till att endast en version av Azure PowerShell är installerad. Det finns dock scenarier där du kan behöva flera versioner installerade på samma gång.
->
-> PowerShell-galleriets moduler installerar moduler i `$env:ProgramFiles\WindowsPowerShell\Modules`. WebPI-installationsprogrammet däremot installerar Azure moduler i `$env:ProgramFiles(x86)\Microsoft SDKs\Azure\PowerShell\`.
->
-> Om ett fel inträffar under installationen kan du ta bort `Azure*`-mapparna manuellt i din `$env:ProgramFiles\WindowsPowerShell\Modules`-mapp och försöka installera igen.
-
-När installationen är färdig bör din `$env:PSModulePath`-inställning inkludera de kataloger som innehåller Azure PowerShell-cmdletarna. Följande kommando kan användas för att kontrollera att Azure PowerShell är korrekt installerat:
-
-```powershell
-# To make sure the Azure PowerShell module is available after you install
-Get-Module -ListAvailable Azure* | Select-Object Name, Version, Path
-```
-
-> [!NOTE]
-> Det finns ett känt problem som kan uppstå när du installerar från WebPI. Om datorn kräver en omstart på grund av systemuppdateringar eller andra installationer kan det göra att uppdateringarna för `$env:PSModulePath` inte inkluderar sökvägen där Azure PowerShell är installerat.
-
-När du försöker läsa in eller köra cmdletar efter installationen kan du få följande felmeddelande:
-
-```
-PS C:\> Connect-AzureRmAccount
-Connect-AzureRmAccount : The term 'Connect-AzureRmAccount' is not recognized as the name of a cmdlet,
-function, script file, or operable program. Check the spelling of the name, or if a path was
-included, verify that the path is correct and try again.
-At line:1 char:1
-+ Connect-AzureRmAccount
-+ ~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : ObjectNotFound: (Connect-AzureRmAccount:String) [], CommandNotFoundException
-    + FullyQualifiedErrorId : CommandNotFoundException
-```
-
-Det här felet kan korrigeras genom att starta om datorn eller importera modulen med den fullständigt kvalificerade sökvägen.
-
-```powershell
-Import-Module "$env:ProgramFiles(x86)\Microsoft SDKs\Azure\PowerShell\AzureRM.psd1"
-```
-
 ## <a name="install-or-update-on-windows-using-the-msi-package"></a>Installera eller uppdatera på Windows med hjälp av MSI-paketet
 
-Azure PowerShell kan installeras med hjälp av MSI-filen som är tillgänglig från [GitHub](https://aka.ms/azps-release). Om du har installerat tidigare versioner av Azure-moduler så kommer installationsprogrammet automatiskt att ta bort dem. MSI-paketet installerar moduler i `$env:ProgramFiles\WindowsPowerShell\Modules` men skapar inte versionsspecifika mappar.
-
-## <a name="run-in-a-docker-container"></a>Kör i en Docker-behållare
-
-Vi underhåller en uppsättning Docker-avbildningar som är förkonfigurerad med Azure PowerShell. Det finns två typer av behållare: de som kör traditionella PowerShell på Windows och en behållare som kör PowerShell Core på antingen Windows eller Linux.
-
-| Miljö | Docker-avbildning |
-|-------------|--------------|
-| PowerShell på Windows | [azuresdk/azure-powershell](https://hub.docker.com/r/azuresdk/azure-powershell/) |
-| PowerShell Core på Windows | [azuresdk/azure-powershell-core:nanoserver](https://hub.docker.com/r/azuresdk/azure-powershell-core/) |
-| PowerShell Core på Linux | [azuresdk/azure-powershell-core:latest](https://hub.docker.com/r/azuresdk/azure-powershell-core/) |
-
-Använd `docker run -it $ImageName` för att hämta en interaktiv terminal och köra någon av dessa behållare. Om du till exempel vill köra PowerShell Core på Linux-behållare använder du:
-
-```powershell
-docker run -it azuresdk/azure-powershell-core:latest
-```
+Azure PowerShell kan installeras med hjälp av MSI-filen som är tillgänglig från [GitHub](https://github.com/Azure/azure-powershell/releases/tag/v5.7.0-April2018). Om du har installerat tidigare versioner av Azure-moduler som MSI så tar installationsprogrammet automatiskt bort dem. MSI-paketet installerar moduler i `${env:ProgramFiles}\WindowsPowerShell\Modules`. Både modulerna `AzureRM` och `Azure` installeras.
 
 > [!NOTE]
-> Om du vill köra en Windows-behållare i Docker måste OS-värden vara Windows och Docker måste konfigureras för att köra Windows-behållare. Mer information om att växla mellan Windows- och Linux-miljöer i Docker finns i Docker-dokumentationen [Växla mellan Windows- och Linux-behållare](https://docs.docker.com/docker-for-windows/#switch-between-windows-and-linux-containers).
+> Använd endast modulen `Azure` om du arbetar med den klassiska Azure-distributionsmodellen.
+
+Du måste läsa in `AzureRM` till din nuvarande PowerShell-session med cmdleten [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) och sedan logga in med dina autentiseringsuppgifter för Azure för att börja arbeta med Azure PowerShell.
+
+```powershell
+# Import the module into the PowerShell session
+Import-Module AzureRM
+# Connect to Azure with an interactive dialog for sign-in
+Connect-AzureRmAccount
+```
+
+Du måste upprepa de här stegen för varje ny PowerShell-session du startar. Om du vill importera modulen `AzureRM` automatiskt måste du konfigurera en PowerShell-profil, som du kan läsa om i [Om profiler](/powershell/module/microsoft.powershell.core/about/about_profiles).
+Om du vill lära dig hur du sparar din Azure-inloggning mellan olika sessioner kan du läsa informationen om att [spara autentiseringsuppgifter för användare mellan olika PowerShell-sessioner](context-persistence.md).
+
+## <a name="install-or-update-on-windows-using-the-web-platform-installer"></a>Installera eller uppdatera på Windows med hjälp av installationsprogrammet för webbplattformen
+
+Hämta [Azure PowerShell WebPI-paketet](http://aka.ms/webpi-azps) och starta installationen. Om du har installerat tidigare versioner av Azure-moduler från MSI eller med installationsprogrammet för webbplattformen så tar installationsprogrammet automatiskt bort dem. Moduler installeras till `${env:ProgramFiles}\WindowsPowerShell\Modules`. Både modulerna `AzureRM` och `Azure` installeras.
+
+> [!NOTE]
+> Använd endast modulen `Azure` om du arbetar med den klassiska Azure-distributionsmodellen.
+
+Du måste läsa in `AzureRM` till din nuvarande PowerShell-session med cmdleten [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) och sedan logga in med dina autentiseringsuppgifter för Azure för att börja arbeta med Azure PowerShell.
+
+```powershell
+# Import the module into the PowerShell session
+Import-Module AzureRM
+# Connect to Azure with an interactive dialog for sign-in
+Connect-AzureRmAccount
+```
+
+Du måste upprepa de här stegen för varje ny PowerShell-session du startar. Om du vill importera modulen `AzureRM` automatiskt måste du konfigurera en PowerShell-profil, som du kan läsa om i [Om profiler](/powershell/module/microsoft.powershell.core/about/about_profiles).
+Om du vill lära dig hur du sparar din Azure-inloggning mellan olika sessioner kan du läsa informationen om att [spara autentiseringsuppgifter för användare mellan olika PowerShell-sessioner](context-persistence.md).
