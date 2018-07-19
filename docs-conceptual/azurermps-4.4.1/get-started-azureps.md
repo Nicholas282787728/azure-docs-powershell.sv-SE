@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: get-started-article
 ms.date: 11/15/2017
-ms.openlocfilehash: 2f37df114b620566a663eb12c7e739975bc1f8bf
-ms.sourcegitcommit: c98e3a21037ebd82936828bcb544eed902b24212
+ms.openlocfilehash: 0897e8fc3a50a58ac8945bd95722736526f63e19
+ms.sourcegitcommit: 990f82648b0aa2e970f96c02466a7134077c8c56
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "34854587"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38100162"
 ---
 # <a name="getting-started-with-azure-powershell"></a>Komma igång med Azure PowerShell
 
@@ -44,11 +44,11 @@ Det första steget är att kontrollera att du har den senaste versionen av Azure
 
 2. Kontrollera att installationen lyckades genom att köra `Get-Module AzureRM -ListAvailable` från kommandoraden.
 
-## <a name="log-in-to-azure"></a>Logga in på Azure
+## <a name="sign-in-to-azure"></a>Logga in på Azure
 
 Logga in interaktivt:
 
-1. Skriv `Login-AzureRmAccount`. En dialogruta som frågar efter dina Azure-autentiseringsuppgifter visas. Med alternativet ”-EnvironmentName” kan du logga in Azure Kina eller Azure Tyskland.
+1. Skriv `Login-AzureRmAccount`. En dialogruta som frågar efter dina Azure-autentiseringsuppgifter visas. Med alternativet "-EnvironmentName" kan du autentisera dig i Azure Kina eller Azure Tyskland.
 
    t.ex. Login-AzureRmAccount -EnvironmentName AzureChinaCloud
 

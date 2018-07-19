@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 08/31/2017
-ms.openlocfilehash: 12a57f9aaf445fe95f731e09a6dcd174b97aa3fe
+ms.openlocfilehash: 76e08c462bb34bd2b16a11f70f14c4584b72795a
 ms.sourcegitcommit: 990f82648b0aa2e970f96c02466a7134077c8c56
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 07/11/2018
-ms.locfileid: "38100196"
+ms.locfileid: "38100366"
 ---
 # <a name="persisting-user-credentials-across-powershell-sessions"></a>Spara autentiseringsuppgifter för användare mellan olika PowerShell-sessioner
 
@@ -38,12 +38,10 @@ I tidigare versioner måste Azure-kontexten skapas varje gång du öppnade en ny
 
 ## <a name="automatically-saving-the-context-for-the-next-sign-in"></a>Spara automatiskt kontexten för nästa inloggning
 
-Som standard tar Azure PowerShell bort din kontextinformation när du stänger PowerShell-sessionen.
+Från och med version 6.3.0 behåller Azure PowerShell din kontextinformation mellan sessioner automatiskt. Om du vill ange att PowerShell ska glömma kontexten och autentiseringsuppgifterna ska du använda `Disable-AzureRmContextAutoSave`. Du måste logga in på Azure varje gång du öppnar en PowerShell-session.
 
 Om du vill tillåta Azure PowerShell att komma ihåg kontexten när PowerShell-sessionen avslutas ska du använda `Enable-AzureRmContextAutosave`. Information om kontext och autentiseringsuppgifter sparas automatiskt i en särskild dold mapp i användarkatalogen (`%AppData%\Roaming\Windows Azure PowerShell`).
 I varje ny PowerShell-session därefter används kontexten i den senaste sessionen som mål.
-
-Om du vill ange att PowerShell ska glömma kontexten och autentiseringsuppgifterna ska du använda `Disable-AzureRmContextAutoSave`. Du måste logga in på Azure varje gång du öppnar en PowerShell-session.
 
 Med de cmdletar du kan använda för att hantera Azure-kontexter kan du också göra mer detaljerade inställningar. Om du vill att ändringarna ska tillämpas endast på den aktuella PowerShell-sessionen (omfånget `Process`) eller alla PowerShell-sessioner (omfånget `CurrentUser`). Dessa alternativ beskrivs mer detaljerat i [Använda kontextomfång](#Using-Context-Scopes).
 
@@ -71,7 +69,7 @@ När du behöver veta resultatet av en bakgrundsaktivitet kan du använda `Get-J
 
 ## <a name="creating-selecting-renaming-and-removing-contexts"></a>Skapa, välja, byta namn på och ta bort kontexter
 
-Om du vill skapa en kontext måste du vara inloggad i Azure. Med cmdleten `Add-AzureRmAccount` (eller dess alias `Login-AzureRmAccount`) anger du standardkontexten som används av efterföljande Azure PowerShell-cmdletar och kan komma åt alla klienter eller prenumerationer som tillåts med dina autentiseringsuppgifter.
+Om du vill skapa en kontext måste du vara inloggad i Azure. Med cmdleten `Connect-AzureRmAccount` (eller dess alias `Login-AzureRmAccount`) anger du standardkontexten som används av efterföljande Azure PowerShell-cmdletar och kan komma åt alla klienter eller prenumerationer som tillåts med dina autentiseringsuppgifter.
 
 Om du vill lägga till en ny kontext efter inloggningen använder du `Set-AzureRmContext` (eller dess alias `Select-AzureRmSubscription`).
 
@@ -99,10 +97,10 @@ Glömmer kontexten med namnet ”Contoso2”. Du kan återskapa den här kontext
 
 ## <a name="removing-credentials"></a>Ta bort autentiseringsuppgifter
 
-Du kan ta bort alla autentiseringsuppgifter och associerade kontexter för en användare eller en tjänsts huvudnamn med hjälp av `Remove-AzureRmAccount` (kallas även `Logout-AzureRmAccount`). När den körs utan parametrar tar cmdleten `Remove-AzureRmAccount` bort alla autentiseringsuppgifter och kontexter som är associerade med användaren eller tjänstens huvudnamn i den aktuella kontexten. Du kan skicka användarnamn, tjänstens huvudnamn eller kontext med ett visst huvudkonto som mål.
+Du kan ta bort alla autentiseringsuppgifter och associerade kontexter för en användare eller en tjänsts huvudnamn med hjälp av `Disconnect-AzureRmAccount` (kallas även `Logout-AzureRmAccount`). När den körs utan parametrar tar cmdleten `Disconnect-AzureRmAccount` bort alla autentiseringsuppgifter och kontexter som är associerade med användaren eller tjänstens huvudnamn i den aktuella kontexten. Du kan skicka användarnamn, tjänstens huvudnamn eller kontext med ett visst huvudkonto som mål.
 
 ```azurepowershell-interactive
-Remove-AzureRmAccount user1@contoso.org
+Disconnect-AzureRmAccount user1@contoso.org
 ```
 
 ## <a name="using-context-scopes"></a>Använda kontextomfång
@@ -133,7 +131,7 @@ Nya cmdletar för att hantera kontext
   Eventuella ändringar ändrar den globala kontexten.
 - [Disable-AzureRmContextAutosave][disable] – Inaktivera automatiskt sparande av kontexten. Inloggning krävs för varje ny PowerShell-session.
 - [Select-AzureRmContext][select] – Välj en kontext som standard. Alla efterföljande cmdletar använder autentiseringsuppgifterna i den här kontexten för autentisering.
-- [Remove-AzureRmAccount][remove-cred] – Ta bort alla autentiseringsuppgifter och kontexter som är kopplade till ett konto.
+- [Disconnect-AzureRmAccount][remove-cred] – Ta bort alla autentiseringsuppgifter och kontexter som är kopplade till ett konto.
 - [Remove-AzureRmContext][remove-context] – Ta bort en namngiven kontext.
 - [Rename-AzureRmContext][rename] – Byt namn på en befintlig kontext.
 
@@ -148,11 +146,11 @@ Nya cmdletar för att hantera kontext
 [enable]: /powershell/module/azurerm.profile/Enable-AzureRmContextAutosave
 [disable]: /powershell/module/azurerm.profile/Disable-AzureRmContextAutosave
 [select]: /powershell/module/azurerm.profile/Select-AzureRmContext
-[remove-cred]: /powershell/module/azurerm.profile/Remove-AzureRmAccount
+[remove-cred]: /powershell/module/azurerm.profile/Disconnect-AzureRmAccount
 [remove-context]: /powershell/module/azurerm.profile/Remove-AzureRmContext
 [rename]: /powershell/module/azurerm.profile/Rename-AzureRmContext
 
 <!-- Updated cmdlets -->
-[login]: /powershell/module/azurerm.profile/Add-AzureRmAccount
+[login]: /powershell/module/azurerm.profile/Connect-AzureRmAccount
 [import]: /powershell/module/azurerm.profile/Import-AzureRmAccount
 [set-context]: /powershell/module/azurerm.profile/Import-AzureRmContext

@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/15/2018
-ms.openlocfilehash: c0bb020fc8cc77b96dc7fe6839911a4d80974d9e
+ms.openlocfilehash: 99c102340e430dbca94538f3bd0e810c79266cd9
 ms.sourcegitcommit: f08f501b75a97ceef59c21f42158bf135a354eaa
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 07/09/2018
-ms.locfileid: "37926254"
+ms.locfileid: "37926169"
 ---
 # <a name="install-azure-powershell-on-windows-with-powershellget"></a>Installera Azure PowerShell på Windows med PowerShellGet
 
@@ -24,39 +24,13 @@ Den klassiska Azure-distributionsmodellen har inte stöd på den här versionen 
 
 ## <a name="requirements"></a>Krav
 
-Du behöver PowerShellGet version 1.1.2.0 eller senare för att installera Azure PowerShell. Kör följande kommando för att kontrollera om det är tillgängligt på ditt system:
+Från och med PowerShell version 6.0 kräver Azure PowerShell version 5.0. Kör följande kommando för att kontrollera vilken version av PowerShell som körs på din dator:
 
 ```powershell
-Get-Module -Name PowerShellGet -ListAvailable | Select-Object -Property Name,Version,Path
+$PSVersionTable.PSVersion
 ```
 
-Nu bör du se utdata som ser ut ungefär så här:
-
-```output
-Name          Version Path
-----          ------- ----
-Name          Version Path
-----          ------- ----
-PowerShellGet 1.6.0   C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.6.0\PowerShellGet.psd1
-PowerShellGet 1.0.0.1 C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PowerShellGet.psd1
-```
-
-Kör följande kommando om du behöver uppdatera din installation av PowerShellGet:
-
-```powershell
-Install-Module PowerShellGet -Force
-```
-
-Följ anvisningarna i tabellen nedan för ditt system om du inte har PowerShellGet installerat.
-
-|Scenario|Installationsinstruktioner|
-|---|---|
-|Windows 10<br/>Windows Server 2016|Inbyggt i Windows Management Framework (WMF) 5.0 som ingår i operativsystemet|
-|Uppgradera till PowerShell 5| <ol><li>[Installera den senaste versionen av WMF](https://www.microsoft.com/en-us/download/details.aspx?id=54616)</li><li>Kör följande kommando:<br/>```Install-Module PowerShellGet -Force```</li></ol>|
-|Windows med PowerShell 3 eller PowerShell 4|<ol><il>[Hämta PackageManagement-modulerna](http://go.microsoft.com/fwlink/?LinkID=746217)</il><li>Kör följande kommando:<br/>```Install-Module PowerShellGet -Force```</li></ol>|
-
-> [!NOTE]
-> För att kunna använda PowerShellGet, krävs en körningsprincip som låter dig köra skript. Mer information om PowerShell-körningsprincipen finns i [Om körningsprinciper](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+Läs informationen om att [uppgradera befintliga Windows PowerShell](/powershell/scripting/setup/installing-windows-powershell?view=powershell-6#upgrading-existing-windows-powershell) om du har en inaktuell version.
 
 > [!IMPORTANT]
 > Modulen AzureRM, som beskrivs i det här dokumentet, använder .NET Framework. Det här gör att den inte är kompatibel med PowerShell 6.0, som använder .NET Core. Om du använder PowerShell 6.0 följer du [anvisningarna för installation för Mac OS och Linux](install-azurermps-maclinux.md). 

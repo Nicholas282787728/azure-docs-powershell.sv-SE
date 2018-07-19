@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: get-started-article
 ms.date: 11/15/2017
-ms.openlocfilehash: a036bb78ddb084dceb3668ab5751951dedd85e15
+ms.openlocfilehash: 5aa3b3fdeff20ea4c6f830f834e61f37d81da07d
 ms.sourcegitcommit: 990f82648b0aa2e970f96c02466a7134077c8c56
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 07/11/2018
-ms.locfileid: "38100478"
+ms.locfileid: "38100383"
 ---
 # <a name="get-started-with-azure-powershell"></a>Komma igång med Azure PowerShell
 
@@ -48,7 +48,7 @@ Du kan även installera Azure PowerShell och använda det lokalt i en PowerShell
 
 Logga in interaktivt:
 
-1. Skriv `Connect-AzureRmAccount`. En dialogruta som frågar efter dina Azure-autentiseringsuppgifter visas. Med alternativet "-Environment" kan du tillåtas att logga in i Azure Kina eller Azure Tyskland.
+1. Skriv `Connect-AzureRmAccount`. En dialogruta som frågar efter dina Azure-autentiseringsuppgifter visas. Med alternativet "-Environment" kan du autentisera dig i Azure Kina eller Azure Tyskland.
 
    t.ex. Connect-AzureRmAccount -Environment AzureChinaCloud
 

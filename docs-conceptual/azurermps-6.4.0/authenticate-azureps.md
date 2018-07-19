@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
-ms.openlocfilehash: af39fec226492c9ccf251c996b57e274de783178
+ms.openlocfilehash: 20194ac2282d602ba61bf130791edac9f4ffae6c
 ms.sourcegitcommit: 990f82648b0aa2e970f96c02466a7134077c8c56
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 07/11/2018
-ms.locfileid: "38100281"
+ms.locfileid: "38100230"
 ---
 # <a name="sign-in-with-azure-powershell"></a>Logga in med Azure PowerShell
 
@@ -29,7 +29,7 @@ Connect-AzureRmAccount
 Den här cmdleten visar en dialogruta där du anger den e-postadress och det lösenord som är associerade med ditt Azure-konto. När du autentiserar sparas informationen för den aktuella PowerShell-sessionen, dialogrutan stängs och du får åtkomst till alla Azure PowerShell-cmdletar.
 
 > [!IMPORTANT]
-> Den här inloggningen är _endast_ för den aktuella PowerShell-sessionen. Om du vill bevara autentisering över flera sessioner kan du läsa artikeln om [Beständiga autentiseringsuppgifter](context-persistence.md).
+> Från och med Azure PowerShell 6.3.0 delas dina autentiseringsuppgifter mellan flera PowerShell-sessioner så länge du förblir inloggad i Windows. Mer information finns i artikeln om [Beständiga autentiseringsuppgifter](context-persistence.md).
 
 ## <a name="sign-in-with-a-service-principal"></a>Logga in med ett huvudnamn för tjänsten
 

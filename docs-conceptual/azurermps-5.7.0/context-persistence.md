@@ -1,22 +1,22 @@
 ---
-title: Bevara användarinloggningar mellan PowerShell-sessioner
-description: Den här artikeln beskriver nya funktioner i Azure PowerShell som gör att du kan återanvända autentiseringsuppgifter och annan användarinformation mellan flera olika PowerShell-sessioner.
+title: Bevara autentiseringsuppgifter för användare mellan PowerShell-sessioner
+description: Lär dig hur du återanvänder Azure-autentiseringsuppgifter och annan information över flera PowerShell-sessioner.
 author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 08/31/2017
-ms.openlocfilehash: 5ae4f03207b74df06a2cb81ea1cd0516a4abd2dd
-ms.sourcegitcommit: bcf80dfd7fbe17e82e7ad029802cfe8a2f02b15c
+ms.openlocfilehash: 3107f77987745faa7ec57ea4811c62a38a7b2aa2
+ms.sourcegitcommit: 990f82648b0aa2e970f96c02466a7134077c8c56
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35323126"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38100264"
 ---
-# <a name="persisting-user-logins-across-powershell-sessions"></a>Bevara användarinloggningar mellan PowerShell-sessioner
+# <a name="persisting-user-credentials-across-powershell-sessions"></a>Spara autentiseringsuppgifter för användare mellan olika PowerShell-sessioner
 
-I versionen från september 2017 av Azure PowerShell introducerar Azure Resource Manager-cmdletar en ny funktion, **Azure Context Autosave**. Den här funktionen möjliggör flera nya användarscenarier, inklusive:
+Azure PowerShell erbjuder en funktion som kallas **Azure Context Autosave**, som ger följande funktioner:
 
 - Bevara inloggningsinformation för återanvändning nya PowerShell-sessioner.
 - Enklare användning av bakgrundsaktiviteter för att köra tidskrävande cmdletar.
@@ -36,7 +36,7 @@ En *Azure-kontext* är en informationsuppsättning som definierar målet för Az
 
 I tidigare versioner måste Azure-kontexten skapas varje gång du öppnade en ny PowerShell-session. Från och med Azure PowerShell v4.4.0 kan du aktivera funktionen att spara automatiskt och återanvända Azure-kontexter varje gång du öppnar en ny PowerShell-session.
 
-## <a name="automatically-saving-the-context-for-the-next-login"></a>Spara automatiskt kontexten för nästa inloggning
+## <a name="automatically-saving-the-context-for-the-next-sign-in"></a>Spara automatiskt kontexten för nästa inloggning
 
 Som standard tar Azure PowerShell bort din kontextinformation när du stänger PowerShell-sessionen.
 
@@ -71,9 +71,9 @@ När du behöver veta resultatet av en bakgrundsaktivitet kan du använda `Get-J
 
 ## <a name="creating-selecting-renaming-and-removing-contexts"></a>Skapa, välja, byta namn på och ta bort kontexter
 
-Om du vill skapa en kontext måste du vara inloggad i Azure. Med cmdleten `Connect-AzureRmAccount` (eller dess alias `Login-AzureRmAccount`) anger du standardkontexten som används av efterföljande Azure PowerShell-cmdletar och kan komma åt alla klienter eller prenumerationer som tillåts med dina inloggningsuppgifter.
+Om du vill skapa en kontext måste du vara inloggad i Azure. Med cmdleten `Connect-AzureRmAccount` (eller dess alias `Login-AzureRmAccount`) anger du standardkontexten som används av efterföljande Azure PowerShell-cmdletar och kan komma åt alla klienter eller prenumerationer som tillåts med dina autentiseringsuppgifter.
 
-Om du vill lägga till en ny kontext efter inloggningen ska du använda `Set-AzureRmContext` (eller dess alias `Select-AzureRmSubscription`).
+Om du vill lägga till en ny kontext efter inloggningen använder du `Set-AzureRmContext` (eller dess alias `Select-AzureRmSubscription`).
 
 ```azurepowershell-interactive
 PS C:\> Set-AzureRMContext -Subscription "Contoso Subscription 1" -Name "Contoso1"
@@ -140,7 +140,7 @@ Nya cmdletar för att hantera kontext
 Ändringar av befintliga profil-cmdletar
 
 - [Add-AzureRmAccount][login] – Gör det möjligt att ange omfång för inloggningen till processen eller till den aktuella användaren.
-  Gör det möjligt att ge standardkontexten ett namn efter inloggning.
+  Gör det möjligt att ge standardkontexten ett namn efter autentisering.
 - [Import-AzureRmContext][import] – Gör det möjligt att ange omfång för inloggningen till processen eller till den aktuella användaren.
 - [Set-AzureRmContext][set-context] – Gör det möjligt att välja befintliga, namngivna kontexter och ändra omfång till processen eller till den aktuella användaren.
 
