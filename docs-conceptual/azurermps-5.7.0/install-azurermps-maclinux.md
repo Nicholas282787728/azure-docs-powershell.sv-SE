@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/06/2018
-ms.openlocfilehash: a779f402fb2b3fccc8269aa30a6fe98a949251d6
-ms.sourcegitcommit: 4c775721461210431bd913f28d1f1e6f1976880a
+ms.openlocfilehash: 6e7d447ea9672c174e3f1d103bc56c11a7f37192
+ms.sourcegitcommit: cb1fd248920d7efca67bd6c738a3b47206df7890
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37091511"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39024927"
 ---
 # <a name="install-azure-powershell-on-macos-or-linux"></a>Installera Azure PowerShell på macOS eller Linux
 
@@ -30,8 +30,8 @@ På plattformar som inte använder Windows är det möjligt att köra Azure Powe
 Installationsanvisningarna för PowerShell Core är annorlunda för macOS och de flesta Linux-distributioner.
 Detaljerade anvisningar finns i följande artikel:
 
-- [Installera PowerShell Core på macOS](/powershell/scripting/setup/installing-powershell-core-on-macos)
-- [Installera PowerShell Core på Linux](/powershell/scripting/setup/installing-powershell-core-on-linux)
+* [Installera PowerShell Core på macOS](/powershell/scripting/setup/installing-powershell-core-on-macos)
+* [Installera PowerShell Core på Linux](/powershell/scripting/setup/installing-powershell-core-on-linux)
 
 ## <a name="install-azure-powershell-for-net-core"></a>Installera Azure PowerShell för .NET Core
 
@@ -59,7 +59,7 @@ You are installing the modules from an untrusted repository. If you trust this r
 its InstallationPolicy value by running the Set-PSRepository cmdlet.
 
 Are you sure you want to install the modules from 'PSGallery'?
-[Y] Yes� [A] Yes to All� [N] No� [L] No to All� [S] Suspend� [?] Help (default is "N"):
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"):
 ```
 
 Svara `Yes` eller `Yes to All` för att fortsätta med installationen.
@@ -83,17 +83,17 @@ Du bör arbeta med din profil genom miljövariabeln `$Profile` på macOS och Lin
 Azure PowerShell-moduler för .NET Core håller fortfarande på att utvecklas. De här modulerna tillhandahåller inte den fullständiga uppsättningen cmdlet:ar som är tillgängliga för Windows-versionen av modulerna. Följande funktioner är implementerade i AzureRM.Netcore-moduler:
 
 * Kontohantering
-  - Logga in med ett Microsoft-konto, organisationskonto eller tjänstens huvudnamn via Microsoft Azure Active Directory
-  - Spara autentiseringsuppgifterna till disken med Save-AzureRmContext och läs in sparade autentiseringsuppgifter med Import-AzureRmContext
+  * Logga in med ett Microsoft-konto, organisationskonto eller tjänstens huvudnamn via Microsoft Azure Active Directory
+  * Spara autentiseringsuppgifterna till disken med Save-AzureRmContext och läs in sparade autentiseringsuppgifter med Import-AzureRmContext
 * Miljö
-  - Hämta andra Microsoft Azure-miljöer
-  - Lägg till/Ange/Ta bort anpassade miljöer (t.ex. Azure Stack eller Windows Azure Pack-miljöer)
+  * Hämta andra Microsoft Azure-miljöer
+  * Lägg till/Ange/Ta bort anpassade miljöer (t.ex. Azure Stack eller Windows Azure Pack-miljöer)
 * Cmdlet:ar på hanteringsnivå för Azure-tjänster med Resource Manager- och Service Management-gränssnitt.
-  - Virtuell dator
-  - App Service (Websites)
-  - SQL Database
-  - Storage
-  - Nätverk
+  * Virtuell dator
+  * App Service (Websites)
+  * SQL Database
+  * Storage
+  * Nätverk
 
 ## <a name="next-steps"></a>Nästa steg
 

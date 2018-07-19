@@ -7,17 +7,16 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/30/2017
-ms.openlocfilehash: 1584c8166078b7d7d24ce8748307fde0f565b662
-ms.sourcegitcommit: c98e3a21037ebd82936828bcb544eed902b24212
+ms.openlocfilehash: eb359710efde6b5969ac721e395725a0ce87fddd
+ms.sourcegitcommit: cb1fd248920d7efca67bd6c738a3b47206df7890
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "34854077"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39024604"
 ---
 # <a name="querying-for-azure-resources"></a>Fråga efter Azure-resurser
 
 Frågor i PowerShell kan utföras med hjälp av inbyggda cmdletar. I PowerShell har cmdlet formen **_Verb-substantiv_**. Cmdletar med verbet **_Get_** är fråge-cmdletar. Cmdletarnas substantiv är de typer av Azure-resurser som cmdletens verb agerar på.
-
 
 ## <a name="selecting-simple-properties"></a>Välja enkla egenskaper
 
@@ -31,7 +30,7 @@ Get-AzureRmVM
 
 Standardutdata formateras automatiskt som en tabell.
 
-```
+```output
 ResourceGroupName          Name   Location          VmSize  OsType              NIC ProvisioningState
 -----------------          ----   --------          ------  ------              --- -----------------
 MYWESTEURG        MyUnbuntu1610 westeurope Standard_DS1_v2   Linux myunbuntu1610980         Succeeded
@@ -44,7 +43,7 @@ Cmdleten `Select-Object` kan användas för att välja specifika egenskaper som 
 Get-AzureRmVM | Select Name,ResourceGroupName,Location
 ```
 
-```
+```output
 Name          ResourceGroupName Location
 ----          ----------------- --------
 MyUnbuntu1610 MYWESTEURG        westeurope
@@ -59,7 +58,7 @@ Om den egenskap du vill välja ligger djupt kapslad i JSON-utdata måste du ange
 Get-AzureRmVM | Select Name,@{Name='OSType'; Expression={$_.StorageProfile.OSDisk.OSType}}
 ```
 
-```
+```output
 Name           OSType
 ----           ------
 MyUnbuntu1610   Linux
@@ -74,7 +73,7 @@ Med cmdleten `Where-Object` kan du filtrera resultatet baserat på valfritt egen
 Get-AzureRmVM | Where ResourceGroupName -like RGD* | Select ResourceGroupName,Name
 ```
 
-```
+```output
 ResourceGroupName  Name
 -----------------  ----
 RGDEMO001          KBDemo001VM
@@ -87,7 +86,7 @@ Med nästa exempel visar resultaten de virtuella datorer som har vmSize ”Stand
 Get-AzureRmVM | Where vmSize -eq Standard_DS1_V2
 ```
 
-```
+```output
 ResourceGroupName          Name     Location          VmSize  OsType              NIC ProvisioningState
 -----------------          ----     --------          ------  ------              --- -----------------
 MYWESTEURG        MyUnbuntu1610   westeurope Standard_DS1_v2   Linux myunbuntu1610980         Succeeded

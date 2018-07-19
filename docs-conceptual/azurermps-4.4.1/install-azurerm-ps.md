@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/27/2018
-ms.openlocfilehash: 2444abc6f6f2280645c77c3effcd02db74f4f997
-ms.sourcegitcommit: 990f82648b0aa2e970f96c02466a7134077c8c56
+ms.openlocfilehash: 3cb6497dd053c7ae5d256ae4b562001ddecaa128
+ms.sourcegitcommit: cb1fd248920d7efca67bd6c738a3b47206df7890
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38100247"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025250"
 ---
 # <a name="install-and-configure-azure-powershell"></a>Installera och konfigurera Azure PowerShell
 
@@ -50,9 +50,9 @@ Om du inte har installerat PowerShellGet kan du läsa avsnittet [Hämta PowerShe
 
 > [!NOTE]
 > För att kunna använda PowerShellGet, krävs en körningsprincip som låter dig köra skript. Mer information om PowerShell-körningsprincipen finns i [Om körningsprinciper](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
-
+>
 > [!IMPORTANT]
-> Modulen AzureRM, som beskrivs i det här dokumentet, använder .NET Framework. Det här gör att den inte är kompatibel med PowerShell 6.0, som använder .NET Core. Om du använder PowerShell 6.0 följer du [anvisningarna för installation för Mac OS och Linux](install-azurermps-maclinux.md). 
+> Modulen AzureRM, som beskrivs i det här dokumentet, använder .NET Framework. Det här gör att den inte är kompatibel med PowerShell 6.0, som använder .NET Core. Om du använder PowerShell 6.0 följer du [anvisningarna för installation för Mac OS och Linux](install-azurermps-maclinux.md).
 
 ## <a name="step-2-install-azure-powershell"></a>Steg 2: Installera Azure PowerShell
 
@@ -85,6 +85,7 @@ Modulen AzureRM är en sammanslagen modul för Azure Resource Manager-cmdletar. 
 Om du har en tidigare version av Azure PowerShell installerad så kan du få ett felmeddelande. För att lösa problemet kan du se avsnittet [uppdatera till en ny version av Azure PowerShell](#update-azps) i den här artikeln.
 
 ## <a name="step-3-load-the-azurerm-module"></a>Steg 3: Läs in AzureRM-modulen
+
 När modulen har installerats måste du läsa in modulen i din PowerShell-session. Du bör göra det här i en normal (icke-förhöjd) PowerShell-session. Moduler läses in med `Import-Module`-cmdleten enligt följande:
 
 ```powershell
@@ -111,8 +112,7 @@ Om du stöter på några buggar med verktyget kan du rapportera problemet i [pro
 |Jag vill uppgradera till PowerShell 5|[Installera den senaste versionen av WMF](https://www.microsoft.com/en-us/download/details.aspx?id=54616)|
 |Jag använder en Windows-version med PowerShell 3 eller PowerShell 4|[Hämta PackageManagement-moduler](http://go.microsoft.com/fwlink/?LinkID=746217)|
 
-<a id="helpmechoose"></a>
-### <a name="checking-the-version-of-azure-powershell"></a>Kontrollera Azure PowerShell-versionen
+### <a name="div-idhelpmechoosechecking-the-version-of-azure-powershell"></a><div id="helpmechoose"/>Kontrollera Azure PowerShell-versionen
 
 Det finns stöd för flera versioner av Azure PowerShell, men vi rekommenderar att du uppgraderar till den senaste versionen så snart som möjligt. Om du vill kontrollera vilken version av Azure PowerShell som du har installerat kör du `Get-Module AzureRM` från kommandoraden.
 
@@ -124,7 +124,7 @@ Get-Module AzureRM -ListAvailable | Select-Object -Property Name,Version,Path
 
 Om du har distributioner som använder den klassiska distributionsmodellen så kan du installera Service Management-versionen av Azure PowerShell. Läs mer i informationen om hur du [installerar Azure PowerShell Service Management-modulen](/powershell/azure/servicemanagement/install-azure-ps). Azure- och AzureRM-moduler delar gemensamma beroenden. Om du använder både Azure- och AzureRM-moduler, bör du installera samma version av varje paket.
 
-### <a id="update-azps"></a>Uppdatera till en ny version av Azure PowerShell
+### <a name="div-idupdate-azpsupdating-to-a-new-version-of-azure-powershell"></a><div id="update-azps"/>Uppdatera till en ny version av Azure PowerShell
 
 Om du har en tidigare version av Azure PowerShell installerad som innehåller tjänsthanteringsmodulen, kan följande felmeddelande komma upp:
 
