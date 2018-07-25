@@ -8,12 +8,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: carmonm
 ms.date: 08/31/2017
-ms.openlocfilehash: d36952b38a36a5196ee5b38ed048366da5416f0b
-ms.sourcegitcommit: 2eea03b7ac19ad6d7c8097743d33c7ddb9c4df77
+ms.openlocfilehash: ff5ee02b11b6f0649e20b056c14fc8a9b3ba6276
+ms.sourcegitcommit: cb1fd248920d7efca67bd6c738a3b47206df7890
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34821419"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39024706"
 ---
 # <a name="overview-of-azure-powershell"></a>Översikt över Azure PowerShell
 
@@ -31,8 +31,7 @@ Med hjälp av följande exempel kan du lära dig hur du utför vanliga scenarier
 > [!NOTE]
 > Om du har distributioner som använder sig av den klassiska distributionsmodellen och som inte kan konverteras, kan du installera Service Management-versionen av Azure PowerShell. Läs mer i informationen om hur du [installerar Azure PowerShell Service Management-modulen](/powershell/azure/servicemanagement/install-azure-ps).
 
-
-### <a name="need-help-with-powershell"></a>Behöver du hjälp med PowerShell?
+## <a name="learn-powershell-basics"></a>Lär dig grunderna i PowerShell
 
 Om du inte känner till PowerShell, kan du ta hjälp av en introduktion till PowerShell.
 
