@@ -8,27 +8,27 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 12/11/2017
 ms.openlocfilehash: a986824d952ccf6cd52dc86418899f3805a38973
-ms.sourcegitcommit: dca906e73e943aac207cee23b79915773419c673
+ms.sourcegitcommit: 971f19181b2cd68b7845bbebdb22858c06541c8c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43250430"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43383608"
 ---
-# <a name="running-cmdlets-in-parallel-using-powershell-jobs"></a><span data-ttu-id="bbccb-103">Kör cmdletar parallellt med hjälp av PowerShell-jobb</span><span class="sxs-lookup"><span data-stu-id="bbccb-103">Running cmdlets in parallel using PowerShell jobs</span></span>
+# <a name="running-cmdlets-in-parallel-using-powershell-jobs"></a><span data-ttu-id="0a634-103">Kör cmdletar parallellt med hjälp av PowerShell-jobb</span><span class="sxs-lookup"><span data-stu-id="0a634-103">Running cmdlets in parallel using PowerShell jobs</span></span>
 
-<span data-ttu-id="bbccb-104">PowerShell har stöd för asynkrona åtgärder med [PowerShell-jobb](/powershell/module/microsoft.powershell.core/about/about_jobs).</span><span class="sxs-lookup"><span data-stu-id="bbccb-104">PowerShell supports asynchronous action with [PowerShell Jobs](/powershell/module/microsoft.powershell.core/about/about_jobs).</span></span>
-<span data-ttu-id="bbccb-105">Azure PowerShell är kraftigt beroende av att utföra och vänta på nätverksanrop till Azure.</span><span class="sxs-lookup"><span data-stu-id="bbccb-105">Azure PowerShell is heavily dependent on making, and waiting for, network calls to Azure.</span></span> <span data-ttu-id="bbccb-106">Som utvecklare vill du ofta utföra flera icke-blockerande anrop till Azure i ett skript. Det kan även hända att du vill skapa Azure-resurser i REPL utan att blockera den pågående sessionen.</span><span class="sxs-lookup"><span data-stu-id="bbccb-106">As a developer, you may often find yourself looking to make multiple non-blocking calls to Azure in a script, or you may find that you want to create Azure resources in the REPL without blocking the current session.</span></span> <span data-ttu-id="bbccb-107">För att uppfylla dessa behov tillhandahåller Azure PowerShell förstklassigt [PSJob](/powershell/module/microsoft.powershell.core/about/about_jobs)-stöd.</span><span class="sxs-lookup"><span data-stu-id="bbccb-107">To address these needs, Azure PowerShell provides first-class [PSJob](/powershell/module/microsoft.powershell.core/about/about_jobs) support.</span></span>
+<span data-ttu-id="0a634-104">PowerShell har stöd för asynkrona åtgärder med [PowerShell-jobb](/powershell/module/microsoft.powershell.core/about/about_jobs).</span><span class="sxs-lookup"><span data-stu-id="0a634-104">PowerShell supports asynchronous action with [PowerShell Jobs](/powershell/module/microsoft.powershell.core/about/about_jobs).</span></span>
+<span data-ttu-id="0a634-105">Azure PowerShell är kraftigt beroende av att utföra och vänta på nätverksanrop till Azure.</span><span class="sxs-lookup"><span data-stu-id="0a634-105">Azure PowerShell is heavily dependent on making, and waiting for, network calls to Azure.</span></span> <span data-ttu-id="0a634-106">Som utvecklare vill du ofta utföra flera icke-blockerande anrop till Azure i ett skript. Det kan även hända att du vill skapa Azure-resurser i REPL utan att blockera den pågående sessionen.</span><span class="sxs-lookup"><span data-stu-id="0a634-106">As a developer, you may often find yourself looking to make multiple non-blocking calls to Azure in a script, or you may find that you want to create Azure resources in the REPL without blocking the current session.</span></span> <span data-ttu-id="0a634-107">För att uppfylla dessa behov tillhandahåller Azure PowerShell förstklassigt [PSJob](/powershell/module/microsoft.powershell.core/about/about_jobs)-stöd.</span><span class="sxs-lookup"><span data-stu-id="0a634-107">To address these needs, Azure PowerShell provides first-class [PSJob](/powershell/module/microsoft.powershell.core/about/about_jobs) support.</span></span>
 
-## <a name="context-persistence-and-psjobs"></a><span data-ttu-id="bbccb-108">Sammanhangsbeständighet och PSJobs</span><span class="sxs-lookup"><span data-stu-id="bbccb-108">Context Persistence and PSJobs</span></span>
+## <a name="context-persistence-and-psjobs"></a><span data-ttu-id="0a634-108">Sammanhangsbeständighet och PSJobs</span><span class="sxs-lookup"><span data-stu-id="0a634-108">Context Persistence and PSJobs</span></span>
 
-<span data-ttu-id="bbccb-109">PSJobs körs i separata processer, vilket innebär att information om Azure-anslutningen måste delas korrekt med de jobb som du skapar.</span><span class="sxs-lookup"><span data-stu-id="bbccb-109">PSJobs are run in separate processes, which means that information about your Azure connection must be properly shared with the jobs you create.</span></span> <span data-ttu-id="bbccb-110">Vid anslutning av ditt Azure-konto till PowerShell-sessionen med `Connect-AzureRmAccount` kan du överföra sammanhanget till ett jobb.</span><span class="sxs-lookup"><span data-stu-id="bbccb-110">Upon connecting your Azure account to your PowerShell session with `Connect-AzureRmAccount`, you can pass the context to a job.</span></span>
+<span data-ttu-id="0a634-109">PSJobs körs i separata processer, vilket innebär att information om Azure-anslutningen måste delas korrekt med de jobb som du skapar.</span><span class="sxs-lookup"><span data-stu-id="0a634-109">PSJobs are run in separate processes, which means that information about your Azure connection must be properly shared with the jobs you create.</span></span> <span data-ttu-id="0a634-110">Vid anslutning av ditt Azure-konto till PowerShell-sessionen med `Connect-AzureRmAccount` kan du överföra sammanhanget till ett jobb.</span><span class="sxs-lookup"><span data-stu-id="0a634-110">Upon connecting your Azure account to your PowerShell session with `Connect-AzureRmAccount`, you can pass the context to a job.</span></span>
 
 ```azurepowershell-interactive
 $creds = Get-Credential
 $job = Start-Job { param($context,$vmadmin) New-AzureRmVM -Name MyVm -AzureRmContext $context -Credential $vmadmin} -Arguments (Get-AzureRmContext),$creds
 ```
 
-<span data-ttu-id="bbccb-111">Men om du har valt att sammanhanget ska sparas automatiskt med `Enable-AzureRmContextAutosave` delas sammanhanget automatiskt med alla jobb som du skapar.</span><span class="sxs-lookup"><span data-stu-id="bbccb-111">However, if you have chosen to have your context automatically saved with `Enable-AzureRmContextAutosave`, the context is automatically shared with any jobs you create.</span></span>
+<span data-ttu-id="0a634-111">Men om du har valt att sammanhanget ska sparas automatiskt med `Enable-AzureRmContextAutosave` delas sammanhanget automatiskt med alla jobb som du skapar.</span><span class="sxs-lookup"><span data-stu-id="0a634-111">However, if you have chosen to have your context automatically saved with `Enable-AzureRmContextAutosave`, the context is automatically shared with any jobs you create.</span></span>
 
 ```azurepowershell-interactive
 Enable-AzureRmContextAutosave
@@ -36,17 +36,17 @@ $creds = Get-Credential
 $job = Start-Job { param($vmadmin) New-AzureRmVM -Name MyVm -Credential $vmadmin} -Arguments $creds
 ```
 
-## <a name="automatic-jobs-with--asjob"></a><span data-ttu-id="bbccb-112">Automatiska jobb med `-AsJob`</span><span class="sxs-lookup"><span data-stu-id="bbccb-112">Automatic Jobs with `-AsJob`</span></span>
+## <a name="automatic-jobs-with--asjob"></a><span data-ttu-id="0a634-112">Automatiska jobb med `-AsJob`</span><span class="sxs-lookup"><span data-stu-id="0a634-112">Automatic Jobs with `-AsJob`</span></span>
 
-<span data-ttu-id="bbccb-113">För att förenkla processen tillhandahåller Azure PowerShell även en `-AsJob`-växel på vissa tidskrävande-cmdletar.</span><span class="sxs-lookup"><span data-stu-id="bbccb-113">As a convenience, Azure PowerShell also provides an `-AsJob` switch on some long-running cmdlets.</span></span>
-<span data-ttu-id="bbccb-114">`-AsJob`-växeln gör det enklare att skapa PSJobs.</span><span class="sxs-lookup"><span data-stu-id="bbccb-114">The `-AsJob` switch makes creating PSJobs even easier.</span></span>
+<span data-ttu-id="0a634-113">För att förenkla processen tillhandahåller Azure PowerShell även en `-AsJob`-växel på vissa tidskrävande-cmdletar.</span><span class="sxs-lookup"><span data-stu-id="0a634-113">As a convenience, Azure PowerShell also provides an `-AsJob` switch on some long-running cmdlets.</span></span>
+<span data-ttu-id="0a634-114">`-AsJob`-växeln gör det enklare att skapa PSJobs.</span><span class="sxs-lookup"><span data-stu-id="0a634-114">The `-AsJob` switch makes creating PSJobs even easier.</span></span>
 
 ```azurepowershell-interactive
 $creds = Get-Credential
 $job = New-AzureRmVM -Name MyVm -Credential $creds -AsJob
 ```
 
-<span data-ttu-id="bbccb-115">Du kan inspektera jobb och förlopp när som helst med `Get-Job` och `Get-AzureRmVM`.</span><span class="sxs-lookup"><span data-stu-id="bbccb-115">You can inspect the job and progress at any time with `Get-Job` and `Get-AzureRmVM`.</span></span>
+<span data-ttu-id="0a634-115">Du kan inspektera jobb och förlopp när som helst med `Get-Job` och `Get-AzureRmVM`.</span><span class="sxs-lookup"><span data-stu-id="0a634-115">You can inspect the job and progress at any time with `Get-Job` and `Get-AzureRmVM`.</span></span>
 
 ```azurepowershell-interactive
 Get-Job $job
@@ -63,11 +63,11 @@ ResourceGroupName    Name Location          VmSize  OsType     NIC ProvisioningS
 MyVm                 MyVm   eastus Standard_DS1_v2 Windows    MyVm          Creating
 ```
 
-<span data-ttu-id="bbccb-116">Därefter kan du hämta resultatet av jobbet med `Receive-Job` vid slutförande.</span><span class="sxs-lookup"><span data-stu-id="bbccb-116">Subsequently, upon completion, you can obtain the result of the job with `Receive-Job`.</span></span>
+<span data-ttu-id="0a634-116">Därefter kan du hämta resultatet av jobbet med `Receive-Job` vid slutförande.</span><span class="sxs-lookup"><span data-stu-id="0a634-116">Subsequently, upon completion, you can obtain the result of the job with `Receive-Job`.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="bbccb-117">`Receive-Job` returnerar resultatet från cmdleten som om flaggan `-AsJob` inte fanns.</span><span class="sxs-lookup"><span data-stu-id="bbccb-117">`Receive-Job` returns the result from the cmdlet as if the `-AsJob` flag were not present.</span></span>
-> <span data-ttu-id="bbccb-118">Till exempel, resultatet `Receive-Job` av `Do-Action -AsJob` är av samma typ som ett resultat av `Do-Action`.</span><span class="sxs-lookup"><span data-stu-id="bbccb-118">For example, the `Receive-Job` result of `Do-Action -AsJob` is of the same type as the result of `Do-Action`.</span></span>
+> <span data-ttu-id="0a634-117">`Receive-Job` returnerar resultatet från cmdleten som om flaggan `-AsJob` inte fanns.</span><span class="sxs-lookup"><span data-stu-id="0a634-117">`Receive-Job` returns the result from the cmdlet as if the `-AsJob` flag were not present.</span></span>
+> <span data-ttu-id="0a634-118">Till exempel, resultatet `Receive-Job` av `Do-Action -AsJob` är av samma typ som ett resultat av `Do-Action`.</span><span class="sxs-lookup"><span data-stu-id="0a634-118">For example, the `Receive-Job` result of `Do-Action -AsJob` is of the same type as the result of `Do-Action`.</span></span>
 
 ```azurepowershell-interactive
 $vm = Receive-Job $job
@@ -90,9 +90,9 @@ StorageProfile           : {ImageReference, OsDisk, DataDisks}
 FullyQualifiedDomainName : myvmmyvm.eastus.cloudapp.azure.com
 ```
 
-## <a name="example-scenarios"></a><span data-ttu-id="bbccb-119">Exempelscenarier</span><span class="sxs-lookup"><span data-stu-id="bbccb-119">Example Scenarios</span></span>
+## <a name="example-scenarios"></a><span data-ttu-id="0a634-119">Exempelscenarier</span><span class="sxs-lookup"><span data-stu-id="0a634-119">Example Scenarios</span></span>
 
-<span data-ttu-id="bbccb-120">Skapa flera virtuella datorer samtidigt.</span><span class="sxs-lookup"><span data-stu-id="bbccb-120">Create multiple VMs at once.</span></span>
+<span data-ttu-id="0a634-120">Skapa flera virtuella datorer samtidigt.</span><span class="sxs-lookup"><span data-stu-id="0a634-120">Create multiple VMs at once.</span></span>
 
 ```azurepowershell-interactive
 $creds = Get-Credential
@@ -107,7 +107,7 @@ Get-Job | Wait-Job
 Get-AzureRmVM
 ```
 
-<span data-ttu-id="bbccb-121">I det här exemplet gör cmdleten `Wait-Job` att skriptet pausas medan jobben fortfarande körs.</span><span class="sxs-lookup"><span data-stu-id="bbccb-121">In this example, the `Wait-Job` cmdlet causes the script to pause while jobs run.</span></span> <span data-ttu-id="bbccb-122">Skriptet fortsätter att köras när alla jobb har slutförts.</span><span class="sxs-lookup"><span data-stu-id="bbccb-122">The script continues executing once all of the jobs have completed.</span></span> <span data-ttu-id="bbccb-123">På så sätt kan du skapa flera jobb som körs parallellt och sedan vänta på att de slutförs innan du fortsätter.</span><span class="sxs-lookup"><span data-stu-id="bbccb-123">This allows you to create several jobs running in parallel then wait for completion before continuing.</span></span>
+<span data-ttu-id="0a634-121">I det här exemplet gör cmdleten `Wait-Job` att skriptet pausas medan jobben fortfarande körs.</span><span class="sxs-lookup"><span data-stu-id="0a634-121">In this example, the `Wait-Job` cmdlet causes the script to pause while jobs run.</span></span> <span data-ttu-id="0a634-122">Skriptet fortsätter att köras när alla jobb har slutförts.</span><span class="sxs-lookup"><span data-stu-id="0a634-122">The script continues executing once all of the jobs have completed.</span></span> <span data-ttu-id="0a634-123">På så sätt kan du skapa flera jobb som körs parallellt och sedan vänta på att de slutförs innan du fortsätter.</span><span class="sxs-lookup"><span data-stu-id="0a634-123">This allows you to create several jobs running in parallel then wait for completion before continuing.</span></span>
 
 ```output
 Id     Name            PSJobTypeName   State         HasMoreData     Location             Command

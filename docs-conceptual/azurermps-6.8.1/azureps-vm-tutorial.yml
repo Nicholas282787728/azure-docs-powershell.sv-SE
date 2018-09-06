@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: <span data-ttu-id="12a6d-101">Skapa virtuella datorer med Azure PowerShell</span><span class="sxs-lookup"><span data-stu-id="12a6d-101">Create virtual machines with the Azure PowerShell</span></span>
+title: <span data-ttu-id="1b6d8-101">Skapa virtuella datorer med Azure PowerShell</span><span class="sxs-lookup"><span data-stu-id="1b6d8-101">Create virtual machines with the Azure PowerShell</span></span>
 metadata:
   title: Skapa virtuella datorer med Azure PowerShell
   description: Kom igång med Azure PowerShell genom att skapa virtuella datorer.
@@ -8,34 +8,34 @@ metadata:
   displayType: two-column
   interactive: azurepowershell
   ms.date: 02/08/2018
-  ms.author: sewhee
-  author: sdwheeler
+  ms.author: sttramer
+  author: sptramer
   manager: carmonm
   ms.devlang: azure-powershell
   ms.prod: powershell
   ms.technology: azure-powershell
-  ms.service: virtual-machines
+  ms.topic: tutorial
   clicktale: true
-  ms.openlocfilehash: e6d585d76f507a7959e6e6227aff1effad8fa336
-  ms.sourcegitcommit: dca906e73e943aac207cee23b79915773419c673
+  ms.openlocfilehash: 902613ab544472932affed980b7e602925544a8b
+  ms.sourcegitcommit: 971f19181b2cd68b7845bbebdb22858c06541c8c
   ms.translationtype: HT
   ms.contentlocale: sv-SE
-  ms.lasthandoff: 08/30/2018
-  ms.locfileid: "43250220"
+  ms.lasthandoff: 09/06/2018
+  ms.locfileid: "43383540"
 items:
 - durationInMinutes: 1
   content: >-
-    <span data-ttu-id="12a6d-104">I den här självstudien får du lära dig allt du behöver veta för att konfigurera en virtuell dator med Azure PowerShell.</span><span class="sxs-lookup"><span data-stu-id="12a6d-104">In this tutorial, you learn all of the steps involved in setting up a virtual machine with Azure PowerShell.</span></span> <span data-ttu-id="12a6d-105">Självstudien omfattar även ämnen som rör utdatafrågor, återanvändning av Azure-resurser och rensning av resurser.</span><span class="sxs-lookup"><span data-stu-id="12a6d-105">The tutorial also covers output queries, Azure resource reuse, and resource cleanup.</span></span>
+    <span data-ttu-id="1b6d8-104">I den här självstudien får du lära dig allt du behöver veta för att konfigurera en virtuell dator med Azure PowerShell.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-104">In this tutorial, you learn all of the steps involved in setting up a virtual machine with Azure PowerShell.</span></span> <span data-ttu-id="1b6d8-105">Självstudien omfattar även ämnen som rör utdatafrågor, återanvändning av Azure-resurser och rensning av resurser.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-105">The tutorial also covers output queries, Azure resource reuse, and resource cleanup.</span></span>
 
 
-    <span data-ttu-id="12a6d-106">Den här självstudien kan utföras med de interaktiva funktionerna som erbjuds genom Azure Cloud Shell. Du kan även [installera Azure PowerShell](install-azurerm-ps.md) lokalt.</span><span class="sxs-lookup"><span data-stu-id="12a6d-106">This tutorial can be completed with the interactive experience offered through Azure Cloud Shell, or you may [install Azure PowerShell](install-azurerm-ps.md) locally.</span></span>
+    <span data-ttu-id="1b6d8-106">Den här självstudien kan utföras med de interaktiva funktionerna som erbjuds genom Azure Cloud Shell. Du kan även [installera Azure PowerShell](install-azurerm-ps.md) lokalt.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-106">This tutorial can be completed with the interactive experience offered through Azure Cloud Shell, or you may [install Azure PowerShell](install-azurerm-ps.md) locally.</span></span>
 
 
-    <span data-ttu-id="12a6d-107">Använd __ctrl + skift + v__ (__cmd + skift + v__ på macOS) för att klistra in självstudietexten i Azure Cloud Shell.</span><span class="sxs-lookup"><span data-stu-id="12a6d-107">Use __ctrl-shift-v__ (__cmd-shift-v__ on macOS) to paste tutorial text into Azure Cloud Shell.</span></span>
+    <span data-ttu-id="1b6d8-107">Använd __ctrl + skift + v__ (__cmd + skift + v__ på macOS) för att klistra in självstudietexten i Azure Cloud Shell.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-107">Use __ctrl-shift-v__ (__cmd-shift-v__ on macOS) to paste tutorial text into Azure Cloud Shell.</span></span>
 - durationInMinutes: 1
-  title: <span data-ttu-id="12a6d-108">Logga in</span><span class="sxs-lookup"><span data-stu-id="12a6d-108">Sign in</span></span>
+  title: <span data-ttu-id="1b6d8-108">Logga in</span><span class="sxs-lookup"><span data-stu-id="1b6d8-108">Sign in</span></span>
   content: >-
-    <span data-ttu-id="12a6d-109">Om du använder en lokal installation av Azure PowerShell måste du logga in innan du utför ytterligare steg.</span><span class="sxs-lookup"><span data-stu-id="12a6d-109">If you're using a local install of the Azure PowerShell, you need to sign in before performing any other steps.</span></span>
+    <span data-ttu-id="1b6d8-109">Om du använder en lokal installation av Azure PowerShell måste du logga in innan du utför ytterligare steg.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-109">If you're using a local install of the Azure PowerShell, you need to sign in before performing any other steps.</span></span>
 
 
     ```powershell
@@ -45,13 +45,13 @@ items:
     ```
 
 
-    <span data-ttu-id="12a6d-110">Slutför inloggningsprocessen genom att följa stegen som visas i terminalen.</span><span class="sxs-lookup"><span data-stu-id="12a6d-110">Complete the sign in process by following the steps displayed in your terminal.</span></span>
+    <span data-ttu-id="1b6d8-110">Slutför inloggningsprocessen genom att följa stegen som visas i terminalen.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-110">Complete the sign in process by following the steps displayed in your terminal.</span></span>
 - durationInMinutes: 1
-  title: <span data-ttu-id="12a6d-111">Skapa en resursgrupp</span><span class="sxs-lookup"><span data-stu-id="12a6d-111">Create a resource group</span></span>
+  title: <span data-ttu-id="1b6d8-111">Skapa en resursgrupp</span><span class="sxs-lookup"><span data-stu-id="1b6d8-111">Create a resource group</span></span>
   content: >-
-    <span data-ttu-id="12a6d-112">I Azure allokeras alla resurser i en resurshanteringsgrupp.</span><span class="sxs-lookup"><span data-stu-id="12a6d-112">In Azure, all resources are allocated in a resource management group.</span></span> <span data-ttu-id="12a6d-113">Med resursgrupperna får du logiska grupperingar av resurserna som gör det lättare att arbeta med dem som en samling.</span><span class="sxs-lookup"><span data-stu-id="12a6d-113">Resource groups provide logical groupings of resources that make them easier to work with as a collection.</span></span>
+    <span data-ttu-id="1b6d8-112">I Azure allokeras alla resurser i en resurshanteringsgrupp.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-112">In Azure, all resources are allocated in a resource management group.</span></span> <span data-ttu-id="1b6d8-113">Med resursgrupperna får du logiska grupperingar av resurserna som gör det lättare att arbeta med dem som en samling.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-113">Resource groups provide logical groupings of resources that make them easier to work with as a collection.</span></span>
 
-    <span data-ttu-id="12a6d-114">I den här självstudiekursen finns alla skapade resurser i en grupp med namnet `TutorialResources`.</span><span class="sxs-lookup"><span data-stu-id="12a6d-114">For this tutorial, all of the created resources go into a single group named `TutorialResources`.</span></span>
+    <span data-ttu-id="1b6d8-114">I den här självstudiekursen finns alla skapade resurser i en grupp med namnet `TutorialResources`.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-114">For this tutorial, all of the created resources go into a single group named `TutorialResources`.</span></span>
 
 
     ```powershell
@@ -75,9 +75,9 @@ items:
 
     ```
 - durationInMinutes: 1
-  title: <span data-ttu-id="12a6d-115">Skapa autentiseringsuppgifter för administratören för den virtuella datorn</span><span class="sxs-lookup"><span data-stu-id="12a6d-115">Create admin credentials for the VM</span></span>
+  title: <span data-ttu-id="1b6d8-115">Skapa autentiseringsuppgifter för administratören för den virtuella datorn</span><span class="sxs-lookup"><span data-stu-id="1b6d8-115">Create admin credentials for the VM</span></span>
   content: >-
-    <span data-ttu-id="12a6d-116">Innan du kan skapa en ny virtuell dator måste du skapa ett autentiseringsuppgiftsobjekt som innehåller användarnamn och lösenord för administratörskontot för den virtuella Windows-datorn.</span><span class="sxs-lookup"><span data-stu-id="12a6d-116">Before you can create a new virtual machine, you must create a credential object containing the username and password for the administrator account of the Windows VM.</span></span>
+    <span data-ttu-id="1b6d8-116">Innan du kan skapa en ny virtuell dator måste du skapa ett autentiseringsuppgiftsobjekt som innehåller användarnamn och lösenord för administratörskontot för den virtuella Windows-datorn.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-116">Before you can create a new virtual machine, you must create a credential object containing the username and password for the administrator account of the Windows VM.</span></span>
 
 
     ```powershell
@@ -87,7 +87,7 @@ items:
     ```
 
 
-    <span data-ttu-id="12a6d-117">Ange användarnamn och lösenord när du uppmanas att göra det.</span><span class="sxs-lookup"><span data-stu-id="12a6d-117">Enter the username and password when prompted.</span></span> <span data-ttu-id="12a6d-118">Autentiseringsuppgiftsobjektet som skapas skickas som en parameter i nästa steg.</span><span class="sxs-lookup"><span data-stu-id="12a6d-118">The resulting credential object is passed as a parameter in the next step.</span></span>
+    <span data-ttu-id="1b6d8-117">Ange användarnamn och lösenord när du uppmanas att göra det.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-117">Enter the username and password when prompted.</span></span> <span data-ttu-id="1b6d8-118">Autentiseringsuppgiftsobjektet som skapas skickas som en parameter i nästa steg.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-118">The resulting credential object is passed as a parameter in the next step.</span></span>
 
 
     ```Output
@@ -102,12 +102,12 @@ items:
 
     ```
 - durationInMinutes: 4
-  title: <span data-ttu-id="12a6d-119">Skapa en virtuell dator</span><span class="sxs-lookup"><span data-stu-id="12a6d-119">Create a virtual machine</span></span>
+  title: <span data-ttu-id="1b6d8-119">Skapa en virtuell dator</span><span class="sxs-lookup"><span data-stu-id="1b6d8-119">Create a virtual machine</span></span>
   content: >-
-    <span data-ttu-id="12a6d-120">Virtuella datorer i Azure har ett stort antal beroenden.</span><span class="sxs-lookup"><span data-stu-id="12a6d-120">Virtual machines in Azure have a large number of dependencies.</span></span> <span data-ttu-id="12a6d-121">Azure PowerShell skapar de här resurserna utifrån de kommandoradsargument som du anger.</span><span class="sxs-lookup"><span data-stu-id="12a6d-121">The Azure PowerShell creates these resources for you based on the command-line arguments you specify.</span></span> <span data-ttu-id="12a6d-122">För att göra det enklare att läsa använder vi [PowerShell-ihopbuntning](/powershell/module/microsoft.powershell.core/about/about_splatting) för att överföra parametrar till Azure PowerShell-cmdletar.</span><span class="sxs-lookup"><span data-stu-id="12a6d-122">For readability, we are using [PowerShell splatting](/powershell/module/microsoft.powershell.core/about/about_splatting) to pass parameters to the Azure PowerShell cmdlets.</span></span>
+    <span data-ttu-id="1b6d8-120">Virtuella datorer i Azure har ett stort antal beroenden.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-120">Virtual machines in Azure have a large number of dependencies.</span></span> <span data-ttu-id="1b6d8-121">Azure PowerShell skapar de här resurserna utifrån de kommandoradsargument som du anger.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-121">The Azure PowerShell creates these resources for you based on the command-line arguments you specify.</span></span> <span data-ttu-id="1b6d8-122">För att göra det enklare att läsa använder vi [PowerShell-ihopbuntning](/powershell/module/microsoft.powershell.core/about/about_splatting) för att överföra parametrar till Azure PowerShell-cmdletar.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-122">For readability, we are using [PowerShell splatting](/powershell/module/microsoft.powershell.core/about/about_splatting) to pass parameters to the Azure PowerShell cmdlets.</span></span>
 
 
-    <span data-ttu-id="12a6d-123">Skapa en ny virtuell dator som kör Windows.</span><span class="sxs-lookup"><span data-stu-id="12a6d-123">Create a new virtual machine running Windows.</span></span>
+    <span data-ttu-id="1b6d8-123">Skapa en ny virtuell dator som kör Windows.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-123">Create a new virtual machine running Windows.</span></span>
 
 
     ```powershell
@@ -126,9 +126,9 @@ items:
 
     ```
 
-    <span data-ttu-id="12a6d-124">När den virtuella datorn skapas visas de parametervärden som används och de Azure-resurser som skapas.</span><span class="sxs-lookup"><span data-stu-id="12a6d-124">As the VM is created, you see the parameter values used and Azure resources being created.</span></span>
+    <span data-ttu-id="1b6d8-124">När den virtuella datorn skapas visas de parametervärden som används och de Azure-resurser som skapas.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-124">As the VM is created, you see the parameter values used and Azure resources being created.</span></span>
 
-    <span data-ttu-id="12a6d-125">PowerShell visar en förloppsindikator som visas här nedanför.</span><span class="sxs-lookup"><span data-stu-id="12a6d-125">PowerShell will displace a progress bar as shown below.</span></span>
+    <span data-ttu-id="1b6d8-125">PowerShell visar en förloppsindikator som visas här nedanför.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-125">PowerShell will displace a progress bar as shown below.</span></span>
 
 
     ```Output
@@ -140,7 +140,7 @@ items:
     ```
 
 
-    <span data-ttu-id="12a6d-126">När den virtuella datorn är redo kan vi se resultaten i Azure Portal eller genom att granska variabeln \$newVM1.</span><span class="sxs-lookup"><span data-stu-id="12a6d-126">Once the VM is ready, we can view the results in the Azure Portal or by inspecting the \$newVM1 variable.</span></span>
+    <span data-ttu-id="1b6d8-126">När den virtuella datorn är redo kan vi se resultaten i Azure Portal eller genom att granska variabeln \$newVM1.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-126">Once the VM is ready, we can view the results in the Azure Portal or by inspecting the \$newVM1 variable.</span></span>
 
 
     ```powershell
@@ -179,11 +179,11 @@ items:
     ```
 
 
-    <span data-ttu-id="12a6d-127">Egenskapsvärden som visas inuti klammerparenteser är kapslade objekt.</span><span class="sxs-lookup"><span data-stu-id="12a6d-127">Property values listed inside of braces are nested objects.</span></span> <span data-ttu-id="12a6d-128">I nästa steg visar vi hur du visar specifika värden i de här kapslade objekten.</span><span class="sxs-lookup"><span data-stu-id="12a6d-128">In the next step we will show you how to view specific values in these nested objects.</span></span>
+    <span data-ttu-id="1b6d8-127">Egenskapsvärden som visas inuti klammerparenteser är kapslade objekt.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-127">Property values listed inside of braces are nested objects.</span></span> <span data-ttu-id="1b6d8-128">I nästa steg visar vi hur du visar specifika värden i de här kapslade objekten.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-128">In the next step we will show you how to view specific values in these nested objects.</span></span>
 - durationInMinutes: 5
-  title: <span data-ttu-id="12a6d-129">Få information om virtuella datorer med frågor</span><span class="sxs-lookup"><span data-stu-id="12a6d-129">Get VM information with queries</span></span>
+  title: <span data-ttu-id="1b6d8-129">Få information om virtuella datorer med frågor</span><span class="sxs-lookup"><span data-stu-id="1b6d8-129">Get VM information with queries</span></span>
   content: >-
-    <span data-ttu-id="12a6d-130">Du kan få fram mer detaljerad information från den virtuella dator som vi just skapade.</span><span class="sxs-lookup"><span data-stu-id="12a6d-130">Let's get some more detailed information from the VM we just created.</span></span> <span data-ttu-id="12a6d-131">I det här exemplet verifierar vi namnet på den virtuella datorn och administratörskontot som vi skapade.</span><span class="sxs-lookup"><span data-stu-id="12a6d-131">In this example, we verify the Name of the VM and the admin account we created.</span></span>
+    <span data-ttu-id="1b6d8-130">Du kan få fram mer detaljerad information från den virtuella dator som vi just skapade.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-130">Let's get some more detailed information from the VM we just created.</span></span> <span data-ttu-id="1b6d8-131">I det här exemplet verifierar vi namnet på den virtuella datorn och administratörskontot som vi skapade.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-131">In this example, we verify the Name of the VM and the admin account we created.</span></span>
 
 
     ```powershell
@@ -204,7 +204,7 @@ items:
     ```
 
 
-    <span data-ttu-id="12a6d-132">Vi kan använda andra Azure PowerShell-kommandon för att hämta specifik information om nätverkskonfigurationen.</span><span class="sxs-lookup"><span data-stu-id="12a6d-132">We can use other Azure PowerShell commands to get specific information about the network configuration.</span></span>
+    <span data-ttu-id="1b6d8-132">Vi kan använda andra Azure PowerShell-kommandon för att hämta specifik information om nätverkskonfigurationen.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-132">We can use other Azure PowerShell commands to get specific information about the network configuration.</span></span>
 
 
     ```powershell
@@ -215,7 +215,7 @@ items:
     ```
 
 
-    <span data-ttu-id="12a6d-133">I det här exemplet använder vi PowerShell-pipelinen för att skicka \$newVM1-objektet till cmdleten `Get-AzureRmNetworkInterface`.</span><span class="sxs-lookup"><span data-stu-id="12a6d-133">In this example we are using the PowerShell pipeline to send the \$newVM1 object to the `Get-AzureRmNetworkInterface` cmdlet.</span></span> <span data-ttu-id="12a6d-134">Från nätverksgränssnittobjektet som skapas väljer vi det kapslade objektet IpConfigurations.</span><span class="sxs-lookup"><span data-stu-id="12a6d-134">From the resulting network interface object we are selecting the nested IpConfigurations object.</span></span> <span data-ttu-id="12a6d-135">Från objektet IpConfigurations väljer vi egenskaperna Name och PrivateIpAddress.</span><span class="sxs-lookup"><span data-stu-id="12a6d-135">From the IpConfigurations object we are selecting the Name and PrivateIpAddress properties.</span></span>
+    <span data-ttu-id="1b6d8-133">I det här exemplet använder vi PowerShell-pipelinen för att skicka \$newVM1-objektet till cmdleten `Get-AzureRmNetworkInterface`.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-133">In this example we are using the PowerShell pipeline to send the \$newVM1 object to the `Get-AzureRmNetworkInterface` cmdlet.</span></span> <span data-ttu-id="1b6d8-134">Från nätverksgränssnittobjektet som skapas väljer vi det kapslade objektet IpConfigurations.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-134">From the resulting network interface object we are selecting the nested IpConfigurations object.</span></span> <span data-ttu-id="1b6d8-135">Från objektet IpConfigurations väljer vi egenskaperna Name och PrivateIpAddress.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-135">From the IpConfigurations object we are selecting the Name and PrivateIpAddress properties.</span></span>
 
 
     ```Output
@@ -229,7 +229,7 @@ items:
     ```
 
 
-    <span data-ttu-id="12a6d-136">Vi måste ansluta via fjärrskrivbordet för att bekräfta att den virtuella datorn körs.</span><span class="sxs-lookup"><span data-stu-id="12a6d-136">To confirm that the VM is running, we need to connect via Remote Desktop.</span></span> <span data-ttu-id="12a6d-137">Då måste vi känna till den offentliga IP-adressen.</span><span class="sxs-lookup"><span data-stu-id="12a6d-137">For that, we need to know the Public IP address.</span></span>
+    <span data-ttu-id="1b6d8-136">Vi måste ansluta via fjärrskrivbordet för att bekräfta att den virtuella datorn körs.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-136">To confirm that the VM is running, we need to connect via Remote Desktop.</span></span> <span data-ttu-id="1b6d8-137">Då måste vi känna till den offentliga IP-adressen.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-137">For that, we need to know the Public IP address.</span></span>
 
 
     ```powershell
@@ -242,7 +242,7 @@ items:
     ```
 
 
-    <span data-ttu-id="12a6d-138">I det här exemplet använder vi `Get-AzureRmPublicIpAddress` för att spara resultaten i variabeln \$publicIp.</span><span class="sxs-lookup"><span data-stu-id="12a6d-138">In this example, we use the `Get-AzureRmPublicIpAddress` and store the results in the \$publicIp variable.</span></span> <span data-ttu-id="12a6d-139">Från den här variabeln väljer vi egenskaper och använder ett uttryck för att hämta den kapslade Fqdn-egenskapen.</span><span class="sxs-lookup"><span data-stu-id="12a6d-139">From this variable we are selecting properties and using an expression to retrieve the nested Fqdn property.</span></span>
+    <span data-ttu-id="1b6d8-138">I det här exemplet använder vi `Get-AzureRmPublicIpAddress` för att spara resultaten i variabeln \$publicIp.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-138">In this example, we use the `Get-AzureRmPublicIpAddress` and store the results in the \$publicIp variable.</span></span> <span data-ttu-id="1b6d8-139">Från den här variabeln väljer vi egenskaper och använder ett uttryck för att hämta den kapslade Fqdn-egenskapen.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-139">From this variable we are selecting properties and using an expression to retrieve the nested Fqdn property.</span></span>
 
 
     ```Output
@@ -256,7 +256,7 @@ items:
     ```
 
 
-    <span data-ttu-id="12a6d-140">Du kan köra följande kommando för att ansluta till den virtuella datorn via fjärrskrivbordet från din lokala dator.</span><span class="sxs-lookup"><span data-stu-id="12a6d-140">From your local machine you can run the following command to connect to the VM over Remote Desktop.</span></span>
+    <span data-ttu-id="1b6d8-140">Du kan köra följande kommando för att ansluta till den virtuella datorn via fjärrskrivbordet från din lokala dator.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-140">From your local machine you can run the following command to connect to the VM over Remote Desktop.</span></span>
 
 
     ```powershell
@@ -266,11 +266,11 @@ items:
     ```
 
 
-    <span data-ttu-id="12a6d-141">Mer information om frågor för objektegenskaper finns i [Fråga efter Azure-resurser](./queries-azureps.md).</span><span class="sxs-lookup"><span data-stu-id="12a6d-141">For more information about querying for object properties, see [Querying for Azure resources](./queries-azureps.md).</span></span>
+    <span data-ttu-id="1b6d8-141">Mer information om frågor för objektegenskaper finns i [Fråga efter Azure-resurser](./queries-azureps.md).</span><span class="sxs-lookup"><span data-stu-id="1b6d8-141">For more information about querying for object properties, see [Querying for Azure resources](./queries-azureps.md).</span></span>
 - durationInMinutes: 4
-  title: <span data-ttu-id="12a6d-142">Skapa en ny virtuell dator i det befintliga undernätet</span><span class="sxs-lookup"><span data-stu-id="12a6d-142">Creating a new VM on the existing subnet</span></span>
+  title: <span data-ttu-id="1b6d8-142">Skapa en ny virtuell dator i det befintliga undernätet</span><span class="sxs-lookup"><span data-stu-id="1b6d8-142">Creating a new VM on the existing subnet</span></span>
   content: >-
-    <span data-ttu-id="12a6d-143">Den andra virtuella datorn använder det befintliga undernätet.</span><span class="sxs-lookup"><span data-stu-id="12a6d-143">The second VM uses the existing subnet.</span></span>
+    <span data-ttu-id="1b6d8-143">Den andra virtuella datorn använder det befintliga undernätet.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-143">The second VM uses the existing subnet.</span></span>
 
 
     ```powershell
@@ -325,7 +325,7 @@ items:
     ```
 
 
-    <span data-ttu-id="12a6d-144">Du kan hoppa över några steg för att få den offentliga IP-adressen för den nya virtuella datorn eftersom den returneras i egenskapen FullyQualifiedDomainName för objektet \$newVM2.</span><span class="sxs-lookup"><span data-stu-id="12a6d-144">You can skip a few steps to get the public IP address of the new VM since it's returned in the FullyQualifiedDomainName property of the \$newVM2 object.</span></span> <span data-ttu-id="12a6d-145">Använd följande kommando för att ansluta med hjälp av fjärrskrivbordet.</span><span class="sxs-lookup"><span data-stu-id="12a6d-145">Use the following command to connect using Remote Desktop.</span></span>
+    <span data-ttu-id="1b6d8-144">Du kan hoppa över några steg för att få den offentliga IP-adressen för den nya virtuella datorn eftersom den returneras i egenskapen FullyQualifiedDomainName för objektet \$newVM2.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-144">You can skip a few steps to get the public IP address of the new VM since it's returned in the FullyQualifiedDomainName property of the \$newVM2 object.</span></span> <span data-ttu-id="1b6d8-145">Använd följande kommando för att ansluta med hjälp av fjärrskrivbordet.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-145">Use the following command to connect using Remote Desktop.</span></span>
 
 
     ```powershell
@@ -334,9 +334,9 @@ items:
 
     ```
 - durationInMinutes: 4
-  title: <span data-ttu-id="12a6d-146">Rensa</span><span class="sxs-lookup"><span data-stu-id="12a6d-146">Cleanup</span></span>
+  title: <span data-ttu-id="1b6d8-146">Rensa</span><span class="sxs-lookup"><span data-stu-id="1b6d8-146">Cleanup</span></span>
   content: >-
-    <span data-ttu-id="12a6d-147">Nu när självstudien har slutförts är det dags att rensa de skapade resurserna.</span><span class="sxs-lookup"><span data-stu-id="12a6d-147">Now that the tutorial is complete, it's time to clean up the created resources.</span></span> <span data-ttu-id="12a6d-148">Du kan ta bort enskilda resurser med kommandot `Remove-AzureRmResource`, men det säkraste sättet att ta bort alla resurser i en resursgrupp är att ta bort gruppen med kommandot `Remove-AzureRmResourceGroup`.</span><span class="sxs-lookup"><span data-stu-id="12a6d-148">You can delete individual resources with the `Remove-AzureRmResource` command, but the safest way to remove all resources in a resource group is delete the group using the `Remove-AzureRmResourceGroup` command.</span></span>
+    <span data-ttu-id="1b6d8-147">Nu när självstudien har slutförts är det dags att rensa de skapade resurserna.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-147">Now that the tutorial is complete, it's time to clean up the created resources.</span></span> <span data-ttu-id="1b6d8-148">Du kan ta bort enskilda resurser med kommandot `Remove-AzureRmResource`, men det säkraste sättet att ta bort alla resurser i en resursgrupp är att ta bort gruppen med kommandot `Remove-AzureRmResourceGroup`.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-148">You can delete individual resources with the `Remove-AzureRmResource` command, but the safest way to remove all resources in a resource group is delete the group using the `Remove-AzureRmResourceGroup` command.</span></span>
 
 
     ```powershell
@@ -360,7 +360,7 @@ items:
     ```
 
 
-    <span data-ttu-id="12a6d-149">Det här kommandot tar bort de resurser som skapades med självstudien och garanterar att de frigörs i rätt ordning.</span><span class="sxs-lookup"><span data-stu-id="12a6d-149">This command deletes the resources created during the tutorial, and is guaranteed to deallocate them in the correct order.</span></span> <span data-ttu-id="12a6d-150">Parametern `-AsJob` ser till att PowerShell inte blockerar under tiden som borttagningen utförs.</span><span class="sxs-lookup"><span data-stu-id="12a6d-150">The `-AsJob` parameter keeps PowerShell from blocking while the deletion takes place.</span></span> <span data-ttu-id="12a6d-151">Använd följande kommando för att vänta tills borttagningen har slutförts:</span><span class="sxs-lookup"><span data-stu-id="12a6d-151">To wait until the deletion is complete, use the following command:</span></span>
+    <span data-ttu-id="1b6d8-149">Det här kommandot tar bort de resurser som skapades med självstudien och garanterar att de frigörs i rätt ordning.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-149">This command deletes the resources created during the tutorial, and is guaranteed to deallocate them in the correct order.</span></span> <span data-ttu-id="1b6d8-150">Parametern `-AsJob` ser till att PowerShell inte blockerar under tiden som borttagningen utförs.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-150">The `-AsJob` parameter keeps PowerShell from blocking while the deletion takes place.</span></span> <span data-ttu-id="1b6d8-151">Använd följande kommando för att vänta tills borttagningen har slutförts:</span><span class="sxs-lookup"><span data-stu-id="1b6d8-151">To wait until the deletion is complete, use the following command:</span></span>
 
 
     ```powershell
@@ -370,7 +370,7 @@ items:
     ```
 
 
-    <span data-ttu-id="12a6d-152">När rensningen är slutförd är självstudien klar.</span><span class="sxs-lookup"><span data-stu-id="12a6d-152">With cleanup completed, the tutorial is finished.</span></span> <span data-ttu-id="12a6d-153">Fortsätt om du vill se en sammanfattning av allt du har lärt dig och få länkar till resurser som hjälper dig med nästa steg.</span><span class="sxs-lookup"><span data-stu-id="12a6d-153">Continue on for a summary of everything you learned and links to resources that will help you with your next steps.</span></span>
+    <span data-ttu-id="1b6d8-152">När rensningen är slutförd är självstudien klar.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-152">With cleanup completed, the tutorial is finished.</span></span> <span data-ttu-id="1b6d8-153">Fortsätt om du vill se en sammanfattning av allt du har lärt dig och få länkar till resurser som hjälper dig med nästa steg.</span><span class="sxs-lookup"><span data-stu-id="1b6d8-153">Continue on for a summary of everything you learned and links to resources that will help you with your next steps.</span></span>
 - durationInMinutes: 1
-  title: <span data-ttu-id="12a6d-154">Sammanfattning</span><span class="sxs-lookup"><span data-stu-id="12a6d-154">Summary</span></span>
-  content: "\n<span data-ttu-id=\"12a6d-155\">Grattis!</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-155\">Congratulations!</span></span> <span data-ttu-id=\"12a6d-156\">Du har lärt dig hur du skapar virtuella datorer med nya eller befintliga resurser, använt uttryck och andra Azure PowerShell-kommandon för att samla in data som ska lagras i gränssnittsvariabler och tittat på vissa av de resurser som skapas för virtuella Azure-datorer.</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-156\">You learned how to create VMs with new or existing resources, used expressions and other Azure PowerShell commands to to capture data to be stored in shell variables, and looked at some of the resources that get created for Azure VMs.</span></span>\n\n<span data-ttu-id=\"12a6d-157\">Hur du nu går vidare beror på hur du har tänkt att använda Azure PowerShell.</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-157\">Where you go from here depends on how you plan to use Azure PowerShell.</span></span> <span data-ttu-id=\"12a6d-158\">Det finns en mängd olika material som gör en djupdykning i funktionerna som beskrivs i den här kursen.</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-158\">There are a variety of materials that go further in depth on the features covered in this tutorial.</span></span>\n\n### <a name=\"in-depth-azure-powershell-documentation\"></a><span data-ttu-id=\"12a6d-159\">Djupgående Azure PowerShell-dokumentation</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-159\">In-depth Azure PowerShell documentation</span></span>\n\n<span data-ttu-id=\"12a6d-160\">Lägg gärna lite tid på att utforska hela uppsättningen med [Azure PowerShell-dokumentation](overview.md).</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-160\">You might want to take time to explore the complete [Azure PowerShell documentation](overview.md) set.</span></span>\n\n<span data-ttu-id=\"12a6d-161\">Mer information om de kommandon som används i den här självstudien finns i följande artiklar.</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-161\">For more information about the commands used in this tutorial, see the following articles.</span></span>\n\n- [<span data-ttu-id=\"12a6d-162\">New-AzureRmResourceGroup</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-162\">New-AzureRmResourceGroup</span></span>](/powershell/module/azurerm.resources/new-azurermresourcegroup)\n- [<span data-ttu-id=\"12a6d-163\">Get-Credential</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-163\">Get-Credential</span></span>](/powershell/module/microsoft.powershell.security/get-credential)\n- [<span data-ttu-id=\"12a6d-164\">New-AzureRmVM</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-164\">New-AzureRmVM</span></span>](/powershell/module/azurerm.compute/new-azurermvm)\n- [<span data-ttu-id=\"12a6d-165\">Select-Object</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-165\">Select-Object</span></span>](/powershell/module/microsoft.powershell.utility/select-object)\n- [<span data-ttu-id=\"12a6d-166\">Get-AzureRmPublicIpAddress</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-166\">Get-AzureRmPublicIpAddress</span></span>](/powershell/module/azurerm.network/get-AzureRmPublicIpAddress)\n- [<span data-ttu-id=\"12a6d-167\">Remove-AzureRmResourceGroup</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-167\">Remove-AzureRmResourceGroup</span></span>](/powershell/module/azurerm.resources/Remove-AzureRmResourceGroup)\n- [<span data-ttu-id=\"12a6d-168\">Wait-Job</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-168\">Wait-Job</span></span>](/powershell/module/microsoft.powershell.core/wait-job)\n\n<span data-ttu-id=\"12a6d-169\">Det finns även artiklar som mer ingående beskriver de funktioner som visades i självstudiekursen.</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-169\">There are also articles that go deeper into the features that were shown in the tutorial.</span></span>\n\n- [<span data-ttu-id=\"12a6d-170\">PowerShell-ihopbuntning</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-170\">PowerShell splatting</span></span>](/powershell/module/microsoft.powershell.core/about/about_splatting)\n- [<span data-ttu-id=\"12a6d-171\">Frågor</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-171\">Queries</span></span>](queries-azureps.md)\n- [<span data-ttu-id=\"12a6d-172\">Formatering</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-172\">Formatting</span></span>](formatting-output.md)\n- [<span data-ttu-id=\"12a6d-173\">Använda PowerShell-jobb</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-173\">Using PowerShell jobs</span></span>](using-psjobs.md)\n\n### <a name=\"sample-scripts\"></a><span data-ttu-id=\"12a6d-174\">Exempelskript</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-174\">Sample scripts</span></span>\n\n<span data-ttu-id=\"12a6d-175\">Om du vill komma igång direkt med specifika uppgifter kan du titta på några exempel på skript.</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-175\">If you want to get started right away with specific tasks, look at some sample scripts.</span></span>\n\n- [<span data-ttu-id=\"12a6d-176\">Virtuella Linux-datorer</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-176\">Linux Virtual Machines</span></span>](/azure/virtual-machines/linux/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [<span data-ttu-id=\"12a6d-177\">Virtuella Windows-datorer</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-177\">Windows Virtual Machines</span></span>](/azure/virtual-machines/windows/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [<span data-ttu-id=\"12a6d-178\">Web Apps</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-178\">Web Apps</span></span>](/azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [<span data-ttu-id=\"12a6d-179\">SQL-databaser</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-179\">SQL Databases</span></span>](/azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [<span data-ttu-id=\"12a6d-180\">Cosmos DB</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-180\">Cosmos DB</span></span>](/azure/cosmos-db/powershell-samples?toc=%2fpowershell%2fmodules%2ftoc.json)\n\n### <a name=\"feedback\"></a><span data-ttu-id=\"12a6d-181\">Feedback</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-181\">Feedback</span></span>\n\n<span data-ttu-id=\"12a6d-182\">Om du vill ge feedback, komma med förslag eller ställa frågor så kan du kontakta oss på en rad olika sätt.</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-182\">If you'd like to give feedback, suggestions, or ask questions, there are a number of ways for you to get in touch.</span></span>\n\n* <span data-ttu-id=\"12a6d-183\">`Send-Feedback` är ett inbyggt kommando för Azure PowerShell som gör det möjligt för dig att ge egen feedback till teamet.</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-183\">`Send-Feedback` is a built-in command for Azure PowerShell that allows you to provide free-form feedback to the team.</span></span>\n* <span data-ttu-id=\"12a6d-184\">Skicka in ett funktionsförslag eller en felrapport på [Azure PowerShell-lagringsplatsen](https://github.com/Azure/azure-powershell/issues).</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-184\">File a feature request or a bug report in the [Azure PowerShell repository](https://github.com/Azure/azure-powershell/issues).</span></span>\n* <span data-ttu-id=\"12a6d-185\">Ställ en fråga eller få hjälp genom att skicka in ett problem på [Azure PowerShell-dokumentationslagringsplatsen](https://github.com/Azure/azure-docs-powershell/issues).</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-185\">Ask a question or get clarification by filing an issue in the [Azure PowerShell documentation repository](https://github.com/Azure/azure-docs-powershell/issues).</span></span>\n\n<span data-ttu-id=\"12a6d-186\">Vi hoppas att du är nöjd med Azure PowerShell!</span><span class=\"sxs-lookup\"><span data-stu-id=\"12a6d-186\">We hope that you enjoy using the Azure PowerShell!</span></span>"
+  title: <span data-ttu-id="1b6d8-154">Sammanfattning</span><span class="sxs-lookup"><span data-stu-id="1b6d8-154">Summary</span></span>
+  content: "\n<span data-ttu-id=\"1b6d8-155\">Grattis!</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-155\">Congratulations!</span></span> <span data-ttu-id=\"1b6d8-156\">Du har lärt dig hur du skapar virtuella datorer med nya eller befintliga resurser, använt uttryck och andra Azure PowerShell-kommandon för att samla in data som ska lagras i gränssnittsvariabler och tittat på vissa av de resurser som skapas för virtuella Azure-datorer.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-156\">You learned how to create VMs with new or existing resources, used expressions and other Azure PowerShell commands to to capture data to be stored in shell variables, and looked at some of the resources that get created for Azure VMs.</span></span>\n\n<span data-ttu-id=\"1b6d8-157\">Hur du nu går vidare beror på hur du har tänkt att använda Azure PowerShell.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-157\">Where you go from here depends on how you plan to use Azure PowerShell.</span></span> <span data-ttu-id=\"1b6d8-158\">Det finns en mängd olika material som gör en djupdykning i funktionerna som beskrivs i den här kursen.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-158\">There are a variety of materials that go further in depth on the features covered in this tutorial.</span></span>\n\n### <a name=\"in-depth-azure-powershell-documentation\"></a><span data-ttu-id=\"1b6d8-159\">Djupgående Azure PowerShell-dokumentation</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-159\">In-depth Azure PowerShell documentation</span></span>\n\n<span data-ttu-id=\"1b6d8-160\">Lägg gärna lite tid på att utforska hela uppsättningen med [Azure PowerShell-dokumentation](overview.md).</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-160\">You might want to take time to explore the complete [Azure PowerShell documentation](overview.md) set.</span></span>\n\n<span data-ttu-id=\"1b6d8-161\">Mer information om de kommandon som används i den här självstudien finns i följande artiklar.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-161\">For more information about the commands used in this tutorial, see the following articles.</span></span>\n\n- [<span data-ttu-id=\"1b6d8-162\">New-AzureRmResourceGroup</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-162\">New-AzureRmResourceGroup</span></span>](/powershell/module/azurerm.resources/new-azurermresourcegroup)\n- [<span data-ttu-id=\"1b6d8-163\">Get-Credential</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-163\">Get-Credential</span></span>](/powershell/module/microsoft.powershell.security/get-credential)\n- [<span data-ttu-id=\"1b6d8-164\">New-AzureRmVM</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-164\">New-AzureRmVM</span></span>](/powershell/module/azurerm.compute/new-azurermvm)\n- [<span data-ttu-id=\"1b6d8-165\">Select-Object</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-165\">Select-Object</span></span>](/powershell/module/microsoft.powershell.utility/select-object)\n- [<span data-ttu-id=\"1b6d8-166\">Get-AzureRmPublicIpAddress</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-166\">Get-AzureRmPublicIpAddress</span></span>](/powershell/module/azurerm.network/get-AzureRmPublicIpAddress)\n- [<span data-ttu-id=\"1b6d8-167\">Remove-AzureRmResourceGroup</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-167\">Remove-AzureRmResourceGroup</span></span>](/powershell/module/azurerm.resources/Remove-AzureRmResourceGroup)\n- [<span data-ttu-id=\"1b6d8-168\">Wait-Job</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-168\">Wait-Job</span></span>](/powershell/module/microsoft.powershell.core/wait-job)\n\n<span data-ttu-id=\"1b6d8-169\">Det finns även artiklar som mer ingående beskriver de funktioner som visades i självstudiekursen.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-169\">There are also articles that go deeper into the features that were shown in the tutorial.</span></span>\n\n- [<span data-ttu-id=\"1b6d8-170\">PowerShell-ihopbuntning</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-170\">PowerShell splatting</span></span>](/powershell/module/microsoft.powershell.core/about/about_splatting)\n- [<span data-ttu-id=\"1b6d8-171\">Frågor</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-171\">Queries</span></span>](queries-azureps.md)\n- [<span data-ttu-id=\"1b6d8-172\">Formatering</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-172\">Formatting</span></span>](formatting-output.md)\n- [<span data-ttu-id=\"1b6d8-173\">Använda PowerShell-jobb</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-173\">Using PowerShell jobs</span></span>](using-psjobs.md)\n\n### <a name=\"sample-scripts\"></a><span data-ttu-id=\"1b6d8-174\">Exempelskript</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-174\">Sample scripts</span></span>\n\n<span data-ttu-id=\"1b6d8-175\">Om du vill komma igång direkt med specifika uppgifter kan du titta på några exempel på skript.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-175\">If you want to get started right away with specific tasks, look at some sample scripts.</span></span>\n\n- [<span data-ttu-id=\"1b6d8-176\">Virtuella Linux-datorer</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-176\">Linux Virtual Machines</span></span>](/azure/virtual-machines/linux/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [<span data-ttu-id=\"1b6d8-177\">Virtuella Windows-datorer</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-177\">Windows Virtual Machines</span></span>](/azure/virtual-machines/windows/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [<span data-ttu-id=\"1b6d8-178\">Web Apps</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-178\">Web Apps</span></span>](/azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [<span data-ttu-id=\"1b6d8-179\">SQL-databaser</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-179\">SQL Databases</span></span>](/azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [<span data-ttu-id=\"1b6d8-180\">Cosmos DB</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-180\">Cosmos DB</span></span>](/azure/cosmos-db/powershell-samples?toc=%2fpowershell%2fmodules%2ftoc.json)\n\n### <a name=\"feedback\"></a><span data-ttu-id=\"1b6d8-181\">Feedback</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-181\">Feedback</span></span>\n\n<span data-ttu-id=\"1b6d8-182\">Om du vill ge feedback, komma med förslag eller ställa frågor så kan du kontakta oss på en rad olika sätt.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-182\">If you'd like to give feedback, suggestions, or ask questions, there are a number of ways for you to get in touch.</span></span>\n\n* <span data-ttu-id=\"1b6d8-183\">`Send-Feedback` är ett inbyggt kommando för Azure PowerShell som gör det möjligt för dig att ge egen feedback till teamet.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-183\">`Send-Feedback` is a built-in command for Azure PowerShell that allows you to provide free-form feedback to the team.</span></span>\n* <span data-ttu-id=\"1b6d8-184\">Skicka in ett funktionsförslag eller en felrapport på [Azure PowerShell-lagringsplatsen](https://github.com/Azure/azure-powershell/issues).</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-184\">File a feature request or a bug report in the [Azure PowerShell repository](https://github.com/Azure/azure-powershell/issues).</span></span>\n* <span data-ttu-id=\"1b6d8-185\">Ställ en fråga eller få hjälp genom att skicka in ett problem på [Azure PowerShell-dokumentationslagringsplatsen](https://github.com/Azure/azure-docs-powershell/issues).</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-185\">Ask a question or get clarification by filing an issue in the [Azure PowerShell documentation repository](https://github.com/Azure/azure-docs-powershell/issues).</span></span>\n\n<span data-ttu-id=\"1b6d8-186\">Vi hoppas att du är nöjd med Azure PowerShell!</span><span class=\"sxs-lookup\"><span data-stu-id=\"1b6d8-186\">We hope that you enjoy using the Azure PowerShell!</span></span>"
