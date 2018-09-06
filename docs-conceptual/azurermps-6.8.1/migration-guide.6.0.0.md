@@ -6,13 +6,13 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 5/1/2018
-ms.openlocfilehash: 4f9c99152fd6ddc23aec005c8e8957e545e65246
-ms.sourcegitcommit: dca906e73e943aac207cee23b79915773419c673
+ms.date: 05/01/2018
+ms.openlocfilehash: 72a0e9ca8562dc06a1fe2718658172ce9ee20f0e
+ms.sourcegitcommit: 971f19181b2cd68b7845bbebdb22858c06541c8c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43250474"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43383948"
 ---
 # <a name="breaking-changes-for-microsoft-azure-powershell-600"></a>Icke-bakåtkompatibla ändringar för Microsoft Azure PowerShell 6.0.0
 
@@ -22,7 +22,7 @@ Det här dokumentet fungerar både som ett meddelande om större ändringar och 
 
 - [Allmänna icke-bakåtkompatibla ändringar](#general-breaking-changes)
     - [Lägsta version av PowerShell som krävs har höjts till 5.0](#minimum-powershell-version-required-bumped-to-50)
-    - [Funktionen för att automatiskt spara kontext har aktiverats som standard](#context-autosaved-enabled-by-default)
+    - [Funktionen för att automatiskt spara kontext har aktiverats som standard](#context-autosave-enabled-by-default)
     - [Borttagning av alias för taggar](#removal-of-tags-alias)
 - [Icke-bakåtkompatibla ändringar i AzureRM.Compute-cmdletar](#breaking-changes-to-azurermcompute-cmdlets)
 - [Icke-bakåtkompatibla ändringar i AzureRM.DataLakeStore-cmdletar](#breaking-changes-to-azurermdatalakestore-cmdlets)
