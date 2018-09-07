@@ -7,19 +7,68 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.workload: ''
-ms.date: 5/1/2018
-ms.openlocfilehash: 6043d17df1b5e91521bad31e65372c10ee6a5c6a
-ms.sourcegitcommit: dca906e73e943aac207cee23b79915773419c673
+ms.date: 08/28/2018
+ms.openlocfilehash: f4f3141998be14f0b5b223aed1af283534bf061d
+ms.sourcegitcommit: 971f19181b2cd68b7845bbebdb22858c06541c8c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43250644"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43383846"
 ---
 # <a name="release-notes"></a>Viktig information
 
 Det här är en lista över ändringar som har gjorts i Azure PowerShell i den här versionen.
 
 ---
+## <a name="681---august-2018"></a>6.8.1 – augusti 2018
+#### <a name="general"></a>Allmänt
+* Problem med standardresursgrupp som inte har konfigurerats har åtgärdats.
+* Uppdaterade Common Runtime-sammansättningar
+
+#### <a name="azurermapimanagement"></a>AzureRM.ApiManagement
+* Problem med standardresursgrupp som inte har konfigurerats har åtgärdats.
+* Åtgärdat problem https://github.com/Azure/azure-powershell/issues/6603
+    - Import-AzureRmApiManagementApi- och *-AzureRmApiManagementCertificate-cmdletar kan nu hantera relativa sökvägar
+* Åtgärdat problem https://github.com/Azure/azure-powershell/issues/6879
+    - CertificateInformation är en inställbar egenskap som gör att Set-AzureRmApiManagement-cmdleten fungerar ordentligt. Åtgärdat genom uppgradering till NuGet för 4.0.4-preview
+* Åtgärdat problem https://github.com/Azure/azure-powershell/issues/6853
+    - Odata-filtret för sökning efter namn på produkt har åtgärdats
+* Åtgärdat problem https://github.com/Azure/azure-powershell/issues/6814
+    - Odata-filtret för sökning efter namn på API har åtgärdats
+* Stöd har lagts till för AzureMonitor-loggare
+
+
+#### <a name="azurermcompute"></a>AzureRM.Compute
+* Ett problem med att mål saknas i felutdata har åtgärdats.
+* Problem med lagringskontotyper för virtuell dator med en hanterad disk har åtgärdats
+* Problem med standardresursgrupp som inte har konfigurerats har åtgärdats.
+* Åtgärda cmdletar för AEM-tillägg för andra miljöer, till exempel Azure Kina
+
+#### <a name="azurermnetwork"></a>AzureRM.Network
+* Standardvisning av cmdlet-utdata har ändrats för att visas i tabellvy
+
+#### <a name="azurermpowerbiembedded"></a>AzureRM.PowerBIEmbedded
+* Åtgärda fel i Update-AzureRmPowerBIEmbeddedCapacity vid försök att skala pausad kapacitet
+
+
+#### <a name="azurermresources"></a>AzureRM.Resources
+* Ett problem med att skapa hanterade program från MarketPlace har åtgärdats.
+
+#### <a name="azurermservicebus"></a>AzureRM.ServiceBus
+* Åtgärdade problem
+    - https://github.com/Azure/azure-powershell/issues/5058
+    - https://github.com/Azure/azure-powershell/issues/5055
+    - https://github.com/Azure/azure-powershell/issues/6891
+
+#### <a name="azurermtrafficmanager"></a>AzureRM.TrafficManager
+* Stöd har lagts till för trafikroutningsmetoden MultiValue
+    - Ny parameter, ”MaxReturn”, för MultiValue-routning
+* Stöd har lagts till för trafikroutningsmetod för undernät
+    - Stöd för IP-adressintervall (undernät) i slutpunkter
+* Stöd har lagts till för anpassade rubriker i profiler
+* Stöd har lagts till för förväntade statuskodintervall i profiler
+* Stöd har lagts till för anpassade rubriker i slutpunkter
+
 ## <a name="680---august-2018"></a>6.8.0 – augusti 2018
 #### <a name="general"></a>Allmänt
 * Problem med standardresursgrupp som inte har konfigurerats har åtgärdats.
