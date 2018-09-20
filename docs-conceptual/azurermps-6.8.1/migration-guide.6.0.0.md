@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/01/2018
-ms.openlocfilehash: 72a0e9ca8562dc06a1fe2718658172ce9ee20f0e
-ms.sourcegitcommit: 971f19181b2cd68b7845bbebdb22858c06541c8c
+ms.openlocfilehash: 227bec0f7eb24b0941e9e21d37524b290c4b83a5
+ms.sourcegitcommit: bc88e64c494337821274d6a66c1edad656c119c5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43383948"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46304173"
 ---
 # <a name="breaking-changes-for-microsoft-azure-powershell-600"></a>Icke-bakåtkompatibla ändringar för Microsoft Azure PowerShell 6.0.0
 
@@ -41,11 +41,11 @@ Det här dokumentet fungerar både som ett meddelande om större ändringar och 
 
 ### <a name="minimum-powershell-version-required-bumped-to-50"></a>Lägsta version av PowerShell som krävs har höjts till 5.0
 
-Tidigare krävde Azure PowerShell _minst_ version 3.0 av PowerShell för att köra en cmdlet. Det här kravet kommer att höjas till version 5.0 av PowerShell framöver. Information om hur du uppgraderar till PowerShell 5.0 finns i [den här tabellen](https://docs.microsoft.com/en-us/powershell/scripting/setup/installing-windows-powershell?view=powershell-6#upgrading-existing-windows-powershell).
+Tidigare krävde Azure PowerShell _minst_ version 3.0 av PowerShell för att köra en cmdlet. Det här kravet kommer att höjas till version 5.0 av PowerShell framöver. Information om hur du uppgraderar till PowerShell 5.0 finns i [den här tabellen](https://docs.microsoft.com/powershell/scripting/setup/installing-windows-powershell?view=powershell-6#upgrading-existing-windows-powershell).
 
 ### <a name="context-autosave-enabled-by-default"></a>Funktionen för att automatiskt spara kontext har aktiverats som standard
 
-Automatiskt sparande av kontext är lagring av inloggningsinformation för Azure som kan användas mellan nya och olika PowerShell-sessioner. Mer information om att spara kontext automatiskt finns i [det här dokumentet](https://docs.microsoft.com/en-us/powershell/azure/context-persistence).
+Automatiskt sparande av kontext är lagring av inloggningsinformation för Azure som kan användas mellan nya och olika PowerShell-sessioner. Mer information om att spara kontext automatiskt finns i [det här dokumentet](https://docs.microsoft.com/powershell/azure/context-persistence).
 
 Tidigare var funktionen för att automatiskt spara kontext inaktiverad som standard, vilket innebar att användarnas autentiseringsinformation inte lagrades mellan sessioner förrän de körde cmdleten `Enable-AzureRmContextAutosave` för att aktivera kontextpersistens. Funktionen för att automatiskt spara kontext kommer att vara aktiverad som standard hädanefter, vilket innebär att kontexten kommer att sparas automatiskt för användare _som inte har sparat några inställningar för automatiskt sparande av kontext_ nästa gång de loggar in. Användarna kan välja bort den här funktionen med hjälp av cmdleten `Disable-AzureRmContextAutosave`.
 
@@ -255,8 +255,8 @@ Remove-AzureRmDataLakeStoreItem -Account "ContosoADL" -path /myFolder -Recurse
 - Cmdleten accepterar inte längre enskilda parametrar som utgör åtkomst-token. I stället ersätter cmdleten explicita tokenparametrar, som t. ex. `Service` eller `Permissions` med en allmän `TemplateUri`-parameter som motsvarar en exempel-åtkomsttoken och som definierats någon annanstans (förmodligen med Storage PowerShell-cmdletar eller sammanställts manuellt enligt Storage-dokumentationen.) Cmdleten behåller parametern `ValidityPeriod`.
 
 Mer information om att sammanställa token för delad åtkomst för Azure Storage hittar du på följande dokumentationssidor:
-- [Skapa en tjänst-SAS] (https://docs.microsoft.com/en-us/rest/api/storageservices/Constructing-a-Service-SAS)
-- [Skapa en konto-SAS] (https://docs.microsoft.com/en-us/rest/api/storageservices/constructing-an-account-sas)
+- [Skapa en tjänst-SAS] (https://docs.microsoft.com/rest/api/storageservices/Constructing-a-Service-SAS)
+- [Skapa en konto-SAS] (https://docs.microsoft.com/rest/api/storageservices/constructing-an-account-sas)
 
 ```powershell
 # Old
