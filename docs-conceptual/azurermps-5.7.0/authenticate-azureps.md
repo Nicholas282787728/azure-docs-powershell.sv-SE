@@ -1,18 +1,18 @@
 ---
 title: Logga in med Azure PowerShell
-description: Så här loggar du in med Azure PowerShell som användare, med tjänstens huvudnamn eller med en hanterad tjänstidentitet.
+description: Så här loggar du in med Azure PowerShell som användare, med tjänstens huvudnamn eller med hanterade identiteter för Azure-resurser.
 author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
-ms.openlocfilehash: af39fec226492c9ccf251c996b57e274de783178
-ms.sourcegitcommit: 990f82648b0aa2e970f96c02466a7134077c8c56
+ms.openlocfilehash: 530eafcd0d14dbfd790a22d80c5922f304f4e0b2
+ms.sourcegitcommit: bc88e64c494337821274d6a66c1edad656c119c5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38100281"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46300705"
 ---
 # <a name="sign-in-with-azure-powershell"></a>Logga in med Azure PowerShell
 
@@ -44,11 +44,11 @@ $pscredential = Get-Credential
 Connect-AzureRmAccount -ServicePrincipal -ApplicationId  "http://my-app" -Credential $pscredential -TenantId $tenantid
 ```
 
-## <a name="sign-in-using-an-azure-vm-managed-service-identity"></a>Logga in med en hanterad tjänstidentitet för en virtuell Azure-dator
+## <a name="sign-in-using-managed-identities-for-azure-resources"></a>Logga in med hanterade identiteter för Azure-resurser
 
-Hanterad tjänstidentitet är en funktion i förhandsversionen av Azure Active Directory. Du kan använda en hanterad tjänstidentitet som tjänstens huvudnamn för att logga in och få en app-begränsad åtkomsttoken för att komma åt andra resurser. Hanterad tjänstidentitet är endast tillgänglig på virtuella datorer som körs i ett Azure-moln.
+Hanterade identiteter för Azure-resurser är en funktion i Azure Active Directory. Du kan använda en hanterad identitet som tjänstens huvudnamn för att logga in och få en app-begränsad åtkomsttoken för att komma åt andra resurser. Hanterade identiteter är endast tillgängliga på virtuella datorer som körs i ett Azure-moln.
 
-Läs mer om [hur du använder en hanterad tjänstidentitet för Azure VM för att logga in och få en token](/azure/active-directory/msi-how-to-get-access-token-using-msi).
+Mer information om hanterade identiteter för Azure-resurser finns i [Använda hanterade identiteter för Azure-resurser på en virtuell Azure-dator för att hämta en åtkomsttoken](/azure/active-directory/managed-identities-azure-resources/how-to-use-vm-token).
 
 ## <a name="sign-in-to-another-cloud"></a>Logga in på ett annat moln
 
