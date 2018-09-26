@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
-ms.openlocfilehash: caacf32af78b98e8d9d455a8c4dd0bbb698d355f
-ms.sourcegitcommit: cb1fd248920d7efca67bd6c738a3b47206df7890
+ms.openlocfilehash: 71a2554052f5a25ea86fe44b6dcf5d9343c81f3e
+ms.sourcegitcommit: bc88e64c494337821274d6a66c1edad656c119c5
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39024587"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46301113"
 ---
 # <a name="log-in-with-azure-powershell"></a>Logga in med Azure PowerShell
 
@@ -51,11 +51,11 @@ Tjänstens huvudnamn ger dig ett sätt att skapa icke-interaktiva konton som du 
     CurrentStorageAccount :
     ```
 
-### <a name="log-in-using-an-azure-vm-managed-service-identity"></a>Logga in med en hanterad tjänstidentitet för Azure VM
+### <a name="log-in-using-managed-identities-for-azure-resources"></a>Logga in med hanterade identiteter för Azure-resurser
 
-Hanterad tjänstidentitet är en funktion i förhandsversionen av Azure Active Directory. Du kan använda en hanterad tjänstidentitet som tjänstens huvudnamn för att logga in och få en app-begränsad åtkomsttoken för att komma åt andra resurser.
+Hanterade identiteter för Azure-resurser är en funktion i Azure Active Directory. Du kan använda en hanterad identitet som tjänstens huvudnamn för att logga in och få en app-begränsad åtkomsttoken för att komma åt andra resurser.
 
-Läs mer om [hur du använder en hanterad tjänstidentitet för Azure VM för att logga in och få en token](/azure/active-directory/msi-how-to-get-access-token-using-msi).
+Mer information om hanterade identiteter för Azure-resurser finns i [Använda hanterade identiteter för Azure-resurser på en virtuell Azure-dator för att hämta en åtkomsttoken](/azure/active-directory/managed-identities-azure-resources/how-to-use-vm-token).
 
 ## <a name="log-in-to-another-cloud"></a>Logga in på ett annat moln
 
