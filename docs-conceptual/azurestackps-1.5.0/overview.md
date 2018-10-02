@@ -8,28 +8,24 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: knithinc
 ms.date: 09/21/2018
-ms.openlocfilehash: 72d147f5bc9c882083dda6b33b1c89663fd2eb34
+ms.openlocfilehash: 18861f0e5232e0b505767aa9609099afe88f9477
 ms.sourcegitcommit: 19dffee617477001f98d43e39a50ce1fad087b74
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 09/27/2018
-ms.locfileid: "47178807"
+ms.locfileid: "47178637"
 ---
-# <a name="azure-stack-module-140"></a>Modulen Azure Stack 1.4.0
+# <a name="azure-stack-module-150"></a>Modulen Azure Stack 1.5.0
 
 ## <a name="requirements"></a>Krav:
-Lägsta version av Azure Stack som stöds är 1804.
+Den lägsta versionen av Azure Stack som stöds är 1808.
 
-Obs! Om du använder en tidigare version måste du installera version 1.2.11
+Obs! Om du använder en tidigare version så måste du installera version 1.4.0
 
 ## <a name="known-issues"></a>Kända problem:
 
-- Stäng avisering kräver Azure Stack version 1803
 - Med New-AzsOffer kan du inte skapa ett erbjudande med tillståndet Offentlig. Cmdleten Set-AzsOffer måste anropas efteråt om du vill ändra tillståndet.
 - För att en IP-pool ska kunna tas bort krävs en omdistribution
-
-## <a name="breaking-changes"></a>Icke-bakåtkompatibla ändringar
-Det är inga nya ändringar från version 1.3.0. Alla icke-bakåtkompatibla ändringar för migrering från 1.2.11 dokumenteras här https://aka.ms/azspowershellmigration
 
 ## <a name="install"></a>Installera
 ```
@@ -44,39 +40,30 @@ Get-Module Azs.* -ListAvailable | Uninstall-Module -Force
 Install-Module -Name AzureRm.BootStrapper
 
 # Install and import the API Version Profile required by Azure Stack into the current PowerShell session.
-Use-AzureRmProfile -Profile 2017-03-09-profile -Force
+Use-AzureRmProfile -Profile 2018-03-01-hybrid -Force
 
 # Install Azure Stack Admin Module
-Install-Module -Name AzureStack -RequiredVersion 1.4.0
+Install-Module -Name AzureStack -RequiredVersion 1.5.0
 ```
-## <a name="release-notes"></a>Viktig information
-    * Azurestack 1.4.0 har inga nya ändringar från den tidigare versionen 1.3.0
-    * Azs.AzureBridge.Admin
-        - Korrigering för felet som returnerade en enda sida i sidnumrerade resultat
-    * Azs.Backup.Admin
-        - Nya parametrar BackupFrequencyInHours, IsBackupSchedulerEnabled, BackupRetentionPeriodInDays har lagts till i cmdlet:en Set-AzsBackupShare
-        - En cmdlet, New-EncyptionKeyBase64, har lagts till för att göra det möjligt att skapa en krypteringsnyckel
-        - Korrigering för felet som returnerade en enda sida i sidnumrerade resultat
-    * Azs.Commerce.Admin
-        - Korrigering för felet som returnerade en enda sida i sidnumrerade resultat
-    * Azs.Fabric.Admin
-        - Korrigering för felet som returnerade en enda sida i sidnumrerade resultat
-        - En cmdlet, Add-AzsScaleUnitNode, har lagts till för att administratörer ska kunna lägga till nya skalningsenhetsnoder till azurestack-stämpeln
-        - En ny cmdlet, New-AzsScaleUnitNodeObject, har lagts till för att göra det möjligt att skapa parameterobjekt för skalningsenhet
-    * Azs.Gallery.Admin
-        - Korrigering för felet som returnerade en enda sida i sidnumrerade resultat
-    * Azs.InfrastructureInsights.Admin
-        - Korrigering för felet som returnerade en enda sida i sidnumrerade resultat
-    * Azs.Network.Admin
-        - Korrigering för felet som returnerade en enda sida i sidnumrerade resultat
-    * Azs.Update.Admin
-        - Korrigering för felet som returnerade en enda sida i sidnumrerade resultat
-    * Azs.Subscriptions
-        - Korrigering för felet som returnerade en enda sida i sidnumrerade resultat
-    * Azs.Subscriptions.Admin
-        - En cmdlet, Move-AzsSubscription, har lagts till för flytt av prenumerationer mellan delegerade providererbjudanden
-        - En cmdlet, Test-AzsMoveSubscription, har lagts till för att validera att användarprenumerationer kan flyttas mellan delegerade providererbjudanden
-        - Korrigering för felet som returnerade en enda sida i sidnumrerade resultat
+
+##<a name="release-notes"></a>Viktig information
+* Alla administratörsmoduler i Azure Stack har uppdaterats för större eller lika stort beroende på modulen AzureRm.Profile
+* Stöd för hantering av kapslade resursnamn i alla moduler
+* Ett fel i alla moduler där ErrorActionPreference har åsidosattes för att bli Stop har korrigerats
+* Administratörsmodul för Azs.Compute
+    * Nya kvotegenskaper har lagts till för att stödja hanterade diskar
+    * Cmdletar som rör diskmigrering har lagts till
+    * Ytterligare egenskaper i objekt för plattformsavbildningen och VM-tilläggen
+* Azs.Fabric.Admin 
+    * Ny cmdlet för att lägga till nod för skalningsenhet
+* Azs.Backup.Admin
+    * Set-AzsBackupShare är nu ett alias till cmdleten Set-AzsBackupConfiguration
+    * Get-AzsBackupLocation är nu ett alias till cmdleten Get-AzsBackupConfiguration
+    * Set-AzsBackupConfiguration, parametern BackupShare är nu ett alias för parametersökvägen
+* Azs.Subscriptions
+    * Get-AzsDelegatedProviderOffer, parametern OfferName är nu ett alias för Offer
+* Azs.Subscriptions.Admin
+    * Get-AzsDelegatedProviderOffer, parametern OfferName är nu ett alias för Offer
 
 ## <a name="content"></a>Innehåll:
 ### <a name="azure-bridge"></a>Azure Bridge
@@ -92,7 +79,7 @@ Förhandsversionen av administratörsmodulen Backup som gör att administratöre
 Förhandsversionen av administratörsmodulen Azure Stack Commerce som innehåller funktioner för att visa sammanställd dataanvändning i hela ditt Azure Stack-system.
 
 ### <a name="compute"></a>Compute
-Förhandsversionen av administratörsmodulen Azure Stack Compute som innehåller funktioner för att hantera beräkningskvoter, plattformsbilder och tillägg för virtuella datorer.
+Förhandsversionen av administratörsmodulen Azure Stack Compute som innehåller funktioner för att hantera beräkningskvoter, plattformsbilder, hanterade diskar och tillägg för virtuella datorer.
 
 ### <a name="fabric"></a>Fabric
 Förhandsversionen av administratörsmodulen Azure Stack Fabric där administratörer kan visa och hantera infrastrukturskomponenter:
@@ -102,6 +89,7 @@ Förhandsversionen av administratörsmodulen Azure Stack Fabric där administrat
 - Omstart av infrastrukturrollen
 - Stoppa, starta och stänga ned instanser av infrastrukturroller
 - Skapa nya IP-pooler
+
 
 ### <a name="gallery"></a>Galleri
 Förhandsversionen av administratörsmodulen Azure Stack Gallery som innehåller funktioner för att hantera galleriobjekt på Azure Stack Marketplace.

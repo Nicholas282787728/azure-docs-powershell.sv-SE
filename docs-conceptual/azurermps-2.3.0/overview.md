@@ -1,6 +1,6 @@
 ---
-title: Översikt över Azure Stack PowerShell för administratörer | Microsoft Docs
-description: En översikt över Azure Stack PowerShell för administratörer med anvisningar för installation och konfiguration.
+title: Översikt över Azure Stack PowerShell | Microsoft Docs
+description: En översikt över Azure Stack PowerShell med anvisningar för installation och konfiguration.
 author: bganapa
 ms.author: bganapa
 manager: knithinc
@@ -8,75 +8,52 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: knithinc
 ms.date: 09/21/2018
-ms.openlocfilehash: 72d147f5bc9c882083dda6b33b1c89663fd2eb34
+ms.openlocfilehash: d514e43d82bcb51f65831dc506e58e8747db0381
 ms.sourcegitcommit: 19dffee617477001f98d43e39a50ce1fad087b74
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 09/27/2018
-ms.locfileid: "47178807"
+ms.locfileid: "47178467"
 ---
-# <a name="azure-stack-module-140"></a>Modulen Azure Stack 1.4.0
+# <a name="azurerm-module-230"></a>AzureRM-modul 2.3.0
 
 ## <a name="requirements"></a>Krav:
-Lägsta version av Azure Stack som stöds är 1804.
+Den lägsta versionen av Azure Stack som stöds är 1808.
 
 Obs! Om du använder en tidigare version måste du installera version 1.2.11
 
-## <a name="known-issues"></a>Kända problem:
-
-- Stäng avisering kräver Azure Stack version 1803
-- Med New-AzsOffer kan du inte skapa ett erbjudande med tillståndet Offentlig. Cmdleten Set-AzsOffer måste anropas efteråt om du vill ändra tillståndet.
-- För att en IP-pool ska kunna tas bort krävs en omdistribution
-
-## <a name="breaking-changes"></a>Icke-bakåtkompatibla ändringar
-Det är inga nya ändringar från version 1.3.0. Alla icke-bakåtkompatibla ändringar för migrering från 1.2.11 dokumenteras här https://aka.ms/azspowershellmigration
 
 ## <a name="install"></a>Installera
-```
+```powershell
 # Remove previous versions of AzureStack modules
 Uninstall-Module -Name AzureStack -Force 
-Uninstall-Module AzureRM.AzureStackAdmin -Force
-Uninstall-Module AzureRM.AzureStackStorage -Force
+Uninstall-Module -Name AzureRM -Force 
+Uninstall-Module AzureRM.AzureStackAdmin -Force -ErrorAction Continue
+Uninstall-Module AzureRM.AzureStackStorage -Force -ErrorAction Continue
 Get-Module Azs.* -ListAvailable | Uninstall-Module -Force
+Get-Module Azure.* -ListAvailable | Uninstall-Module -Force
 
 
 # Install the AzureRM.Bootstrapper module. Select Yes when prompted to install NuGet
 Install-Module -Name AzureRm.BootStrapper
 
 # Install and import the API Version Profile required by Azure Stack into the current PowerShell session.
-Use-AzureRmProfile -Profile 2017-03-09-profile -Force
+Use-AzureRmProfile -Profile 2018-03-01-hybrid -Force
 
-# Install Azure Stack Admin Module
-Install-Module -Name AzureStack -RequiredVersion 1.4.0
 ```
-## <a name="release-notes"></a>Viktig information
-    * Azurestack 1.4.0 har inga nya ändringar från den tidigare versionen 1.3.0
-    * Azs.AzureBridge.Admin
-        - Korrigering för felet som returnerade en enda sida i sidnumrerade resultat
-    * Azs.Backup.Admin
-        - Nya parametrar BackupFrequencyInHours, IsBackupSchedulerEnabled, BackupRetentionPeriodInDays har lagts till i cmdlet:en Set-AzsBackupShare
-        - En cmdlet, New-EncyptionKeyBase64, har lagts till för att göra det möjligt att skapa en krypteringsnyckel
-        - Korrigering för felet som returnerade en enda sida i sidnumrerade resultat
-    * Azs.Commerce.Admin
-        - Korrigering för felet som returnerade en enda sida i sidnumrerade resultat
-    * Azs.Fabric.Admin
-        - Korrigering för felet som returnerade en enda sida i sidnumrerade resultat
-        - En cmdlet, Add-AzsScaleUnitNode, har lagts till för att administratörer ska kunna lägga till nya skalningsenhetsnoder till azurestack-stämpeln
-        - En ny cmdlet, New-AzsScaleUnitNodeObject, har lagts till för att göra det möjligt att skapa parameterobjekt för skalningsenhet
-    * Azs.Gallery.Admin
-        - Korrigering för felet som returnerade en enda sida i sidnumrerade resultat
-    * Azs.InfrastructureInsights.Admin
-        - Korrigering för felet som returnerade en enda sida i sidnumrerade resultat
-    * Azs.Network.Admin
-        - Korrigering för felet som returnerade en enda sida i sidnumrerade resultat
-    * Azs.Update.Admin
-        - Korrigering för felet som returnerade en enda sida i sidnumrerade resultat
-    * Azs.Subscriptions
-        - Korrigering för felet som returnerade en enda sida i sidnumrerade resultat
-    * Azs.Subscriptions.Admin
-        - En cmdlet, Move-AzsSubscription, har lagts till för flytt av prenumerationer mellan delegerade providererbjudanden
-        - En cmdlet, Test-AzsMoveSubscription, har lagts till för att validera att användarprenumerationer kan flyttas mellan delegerade providererbjudanden
-        - Korrigering för felet som returnerade en enda sida i sidnumrerade resultat
+
+##<a name="release-notes"></a>Viktig information
+* Version 2.3.0 omfattar en lista över icke-bakåtkompatibla ändringar. Om du vill uppgradera från version 1.2.11 har vi skapat en migreringsguide här: https://aka.ms/azspowershellmigration
+* Den här versionen motsvarar den azurestack-specifika API-profilen 2018-03-01-hybrid
+* Alla moduler använder större eller lika stort beroende på modulen AzureRm.Profile.
+* API-versionen som stöds av alla moduler har uppdaterats. 
+    * Compute – 2017-03-30
+    * Nätverk – 2017-10-01
+    * Storage – 2016-01-01
+    * Resurser – 2018-02-01
+    * KeyVault – 2016-10-01
+    * DNS – 2016-04-01
+* Den fullständiga kartan över API-versioner för var och en av resurstyperna finns på https://github.com/Azure/azure-rest-api-specs/blob/master/profile/2018-03-01-hybrid.json
 
 ## <a name="content"></a>Innehåll:
 ### <a name="azure-bridge"></a>Azure Bridge
@@ -92,7 +69,7 @@ Förhandsversionen av administratörsmodulen Backup som gör att administratöre
 Förhandsversionen av administratörsmodulen Azure Stack Commerce som innehåller funktioner för att visa sammanställd dataanvändning i hela ditt Azure Stack-system.
 
 ### <a name="compute"></a>Compute
-Förhandsversionen av administratörsmodulen Azure Stack Compute som innehåller funktioner för att hantera beräkningskvoter, plattformsbilder och tillägg för virtuella datorer.
+Förhandsversionen av administratörsmodulen Azure Stack Compute som innehåller funktioner för att hantera beräkningskvoter, plattformsbilder, hanterade diskar och tillägg för virtuella datorer.
 
 ### <a name="fabric"></a>Fabric
 Förhandsversionen av administratörsmodulen Azure Stack Fabric där administratörer kan visa och hantera infrastrukturskomponenter:
@@ -102,6 +79,7 @@ Förhandsversionen av administratörsmodulen Azure Stack Fabric där administrat
 - Omstart av infrastrukturrollen
 - Stoppa, starta och stänga ned instanser av infrastrukturroller
 - Skapa nya IP-pooler
+
 
 ### <a name="gallery"></a>Galleri
 Förhandsversionen av administratörsmodulen Azure Stack Gallery som innehåller funktioner för att hantera galleriobjekt på Azure Stack Marketplace.
