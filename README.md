@@ -1,3 +1,3 @@
-# microsoft.docs
+## <a name="microsoft-open-source-code-of-conduct"></a>Microsofts uppförandekod för öppen källkod
 
-TODO: Create a file called LICENSE (not LICENSE.TXT, LICENSE.md, etc.)…
+Det här projektet använder sig av [Microsofts uppförandekod för öppen källkod](https://opensource.microsoft.com/codeofconduct/). Du hittar mer information i [Vanliga frågor om uppförandekod](https://opensource.microsoft.com/codeofconduct/faq/) eller kontakta [opencode@microsoft.com](mailto:opencode@microsoft.com) för ytterligare frågor eller kommentarer.
