@@ -1,0 +1,376 @@
+### YamlMime:Tutorial
+title: Skapa virtuella datorer med Azure PowerShell
+metadata:
+  title: Skapa virtuella datorer med Azure PowerShell
+  description: Kom igång med Azure PowerShell genom att skapa virtuella datorer.
+  audience: Developer
+  level: Beginner
+  displayType: two-column
+  interactive: azurepowershell
+  ms.date: 02/08/2018
+  ms.author: sttramer
+  author: sptramer
+  manager: carmonm
+  ms.devlang: azure-powershell
+  ms.prod: powershell
+  ms.technology: azure-powershell
+  ms.topic: tutorial
+  clicktale: true
+  ms.openlocfilehash: 44fc35219e108b47cfa1fac35b1444e20d0cc1a3
+  ms.sourcegitcommit: 5f946a535eccca0b3ddf3db8f617b32564a88938
+  ms.translationtype: HT
+  ms.contentlocale: sv-SE
+  ms.lasthandoff: 10/25/2018
+  ms.locfileid: "50001753"
+items:
+- durationInMinutes: 1
+  content: >-
+    I den här självstudien får du lära dig allt du behöver veta för att konfigurera en virtuell dator med Azure PowerShell. Självstudien omfattar även ämnen som rör utdatafrågor, återanvändning av Azure-resurser och rensning av resurser.
+
+
+    Den här självstudien kan utföras med de interaktiva funktionerna som erbjuds genom Azure Cloud Shell. Du kan även [installera Azure PowerShell](install-azurerm-ps.md) lokalt.
+
+
+    Använd __ctrl + skift + v__ (__cmd + skift + v__ på macOS) för att klistra in självstudietexten i Azure Cloud Shell.
+- durationInMinutes: 1
+  title: Logga in
+  content: >-
+    Om du använder en lokal installation av Azure PowerShell måste du logga in innan du utför ytterligare steg.
+
+
+    ```powershell
+
+    Connect-AzureRmAccount
+
+    ```
+
+
+    Slutför inloggningsprocessen genom att följa stegen som visas i terminalen.
+- durationInMinutes: 1
+  title: Skapa en resursgrupp
+  content: >-
+    I Azure allokeras alla resurser i en resurshanteringsgrupp. Med resursgrupperna får du logiska grupperingar av resurserna som gör det lättare att arbeta med dem som en samling.
+
+    I den här självstudiekursen finns alla skapade resurser i en grupp med namnet `TutorialResources`.
+
+
+    ```powershell
+
+    New-AzureRmResourceGroup -Name TutorialResources -Location eastus
+
+    ```
+
+
+    ```Output
+
+    ResourceGroupName : TutorialResources
+
+    Location          : eastus
+
+    ProvisioningState : Succeeded
+
+    Tags              :
+
+    ResourceId        : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/TutorialResources
+
+    ```
+- durationInMinutes: 1
+  title: Skapa autentiseringsuppgifter för administratören för den virtuella datorn
+  content: >-
+    Innan du kan skapa en ny virtuell dator måste du skapa ett autentiseringsuppgiftsobjekt som innehåller användarnamn och lösenord för administratörskontot för den virtuella Windows-datorn.
+
+
+    ```powershell
+
+    $cred = Get-Credential -Message "Enter a username and password for the virtual machine."
+
+    ```
+
+
+    Ange användarnamn och lösenord när du uppmanas att göra det. Autentiseringsuppgiftsobjektet som skapas skickas som en parameter i nästa steg.
+
+
+    ```Output
+
+    Windows PowerShell credential request.
+
+    Enter a username and password for the virtual machine.
+
+    User: tutorAdmin
+
+    Password for user tutorAdmin: *********
+
+    ```
+- durationInMinutes: 4
+  title: Skapa en virtuell dator
+  content: >-
+    Virtuella datorer i Azure har ett stort antal beroenden. Azure PowerShell skapar de här resurserna utifrån de kommandoradsargument som du anger. För att göra det enklare att läsa använder vi [PowerShell-ihopbuntning](/powershell/module/microsoft.powershell.core/about/about_splatting) för att överföra parametrar till Azure PowerShell-cmdletar.
+
+
+    Skapa en ny virtuell dator som kör Windows.
+
+
+    ```powershell
+
+    $vmParams = @{
+      ResourceGroupName = 'TutorialResources'
+      Name = 'TutorialVM1'
+      Location = 'eastus'
+      ImageName = 'Win2016Datacenter'
+      PublicIpAddressName = 'tutorialPublicIp'
+      Credential = $cred
+      OpenPorts = 3389
+    }
+
+    $newVM1 = New-AzureRmVM @vmParams
+
+    ```
+
+    När den virtuella datorn skapas visas de parametervärden som används och de Azure-resurser som skapas.
+
+    PowerShell visar en förloppsindikator som visas här nedanför.
+
+
+    ```Output
+     Creating Azure resources
+      39% \
+      [ooooooooooooooooooooooooooooooooooo                                                                 ]
+
+      Creating TutorialVM1 virtual machine.
+    ```
+
+
+    När den virtuella datorn är redo kan vi se resultaten i Azure Portal eller genom att granska variabeln \$newVM1.
+
+
+    ```powershell
+
+    $newVM1
+
+    ```
+
+
+    ```Output
+
+    ResourceGroupName : TutorialResources
+
+    Id                : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/TutorialResources/providers/Microsoft.Compute/virtualMachines/TutorialVM1
+
+    VmId              : 12345678-9abc-def0-1234-56789abcedf0
+
+    Name              : TutorialVM1
+
+    Type              : Microsoft.Compute/virtualMachines
+
+    Location          : eastus
+
+    Tags              : {}
+
+    HardwareProfile   : {VmSize}
+
+    NetworkProfile    : {NetworkInterfaces}
+
+    OSProfile         : {ComputerName, AdminUsername, WindowsConfiguration, Secrets}
+
+    ProvisioningState : Succeeded
+
+    StorageProfile    : {ImageReference, OsDisk, DataDisks}
+
+    ```
+
+
+    Egenskapsvärden som visas inuti klammerparenteser är kapslade objekt. I nästa steg visar vi hur du visar specifika värden i de här kapslade objekten.
+- durationInMinutes: 5
+  title: Få information om virtuella datorer med frågor
+  content: >-
+    Du kan få fram mer detaljerad information från den virtuella dator som vi just skapade. I det här exemplet verifierar vi namnet på den virtuella datorn och administratörskontot som vi skapade.
+
+
+    ```powershell
+
+    $newVM1.OSProfile | Select-Object ComputerName,AdminUserName
+
+    ```
+
+
+    ```Output
+
+    ComputerName AdminUsername
+
+    ------------ -------------
+
+    TutorialVM1  tutorialAdmin
+
+    ```
+
+
+    Vi kan använda andra Azure PowerShell-kommandon för att hämta specifik information om nätverkskonfigurationen.
+
+
+    ```powershell
+
+    $newVM1 | Get-AzureRmNetworkInterface |
+      Select-Object -ExpandProperty IpConfigurations |
+        Select-Object Name,PrivateIpAddress
+    ```
+
+
+    I det här exemplet använder vi PowerShell-pipelinen för att skicka \$newVM1-objektet till cmdleten `Get-AzureRmNetworkInterface`. Från nätverksgränssnittobjektet som skapas väljer vi det kapslade objektet IpConfigurations. Från objektet IpConfigurations väljer vi egenskaperna Name och PrivateIpAddress.
+
+
+    ```Output
+
+    Name        PrivateIpAddress
+
+    ----        ----------------
+
+    TutorialVM1 192.168.1.4
+
+    ```
+
+
+    Vi måste ansluta via fjärrskrivbordet för att bekräfta att den virtuella datorn körs. Då måste vi känna till den offentliga IP-adressen.
+
+
+    ```powershell
+
+    $publicIp = Get-AzureRmPublicIpAddress -Name tutorialPublicIp -ResourceGroupName TutorialResources
+
+
+    $publicIp | Select-Object Name,IpAddress,@{label='FQDN';expression={$_.DnsSettings.Fqdn}}
+
+    ```
+
+
+    I det här exemplet använder vi `Get-AzureRmPublicIpAddress` för att spara resultaten i variabeln \$publicIp. Från den här variabeln väljer vi egenskaper och använder ett uttryck för att hämta den kapslade Fqdn-egenskapen.
+
+
+    ```Output
+
+    Name             IpAddress           FQDN
+
+    ----             ---------           ----
+
+    tutorialPublicIp <PUBLIC_IP_ADDRESS> tutorialvm1-8a0999.eastus.cloudapp.azure.com
+
+    ```
+
+
+    Du kan köra följande kommando för att ansluta till den virtuella datorn via fjärrskrivbordet från din lokala dator.
+
+
+    ```powershell
+
+    mstsc.exe /v <PUBLIC_IP_ADDRESS>
+
+    ```
+
+
+    Mer information om frågor för objektegenskaper finns i [Fråga efter Azure-resurser](./queries-azureps.md).
+- durationInMinutes: 4
+  title: Skapa en ny virtuell dator i det befintliga undernätet
+  content: >-
+    Den andra virtuella datorn använder det befintliga undernätet.
+
+
+    ```powershell
+
+    $vm2Params = @{
+      ResourceGroupName = 'TutorialResources'
+      Name = 'TutorialVM2'
+      ImageName = 'Win2016Datacenter'
+      VirtualNetworkName = 'TutorialVM1'
+      SubnetName = 'TutorialVM1'
+      PublicIpAddressName = 'tutorialPublicIp2'
+      Credential = $cred
+      OpenPorts = 3389
+    }
+
+    $newVM2 = New-AzureRmVM @vm2Params
+
+
+    $newVM2
+
+    ```
+
+
+    ```Output
+
+    ResourceGroupName        : TutorialResources
+
+    Id                       : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/TutorialResources/providers/Microsoft.Compute/virtualMachines/TutorialVM2
+
+    VmId                     : 12345678-9abc-def0-1234-56789abcedf1
+
+    Name                     : TutorialVM2
+
+    Type                     : Microsoft.Compute/virtualMachines
+
+    Location                 : eastus
+
+    Tags                     : {}
+
+    HardwareProfile          : {VmSize}
+
+    NetworkProfile           : {NetworkInterfaces}
+
+    OSProfile                : {ComputerName, AdminUsername, WindowsConfiguration, Secrets}
+
+    ProvisioningState        : Succeeded
+
+    StorageProfile           : {ImageReference, OsDisk, DataDisks}
+
+    FullyQualifiedDomainName : tutorialvm2-dfa5af.eastus.cloudapp.azure.com
+
+    ```
+
+
+    Du kan hoppa över några steg för att få den offentliga IP-adressen för den nya virtuella datorn eftersom den returneras i egenskapen FullyQualifiedDomainName för objektet \$newVM2. Använd följande kommando för att ansluta med hjälp av fjärrskrivbordet.
+
+
+    ```powershell
+
+    mstsc.exe /v $newVM2.FullyQualifiedDomainName
+
+    ```
+- durationInMinutes: 4
+  title: Rensa
+  content: >-
+    Nu när självstudien har slutförts är det dags att rensa de skapade resurserna. Du kan ta bort enskilda resurser med kommandot `Remove-AzureRmResource`, men det säkraste sättet att ta bort alla resurser i en resursgrupp är att ta bort gruppen med kommandot `Remove-AzureRmResourceGroup`.
+
+
+    ```powershell
+
+    $job = Remove-AzureRmResourceGroup -Name TutorialResources -Force -AsJob
+
+
+    $job
+
+    ```
+
+
+    ```Output
+
+    Id     Name            PSJobTypeName   State         HasMoreData     Location             Command
+
+    --     ----            -------------   -----         -----------     --------             -------
+
+    1      Long Running... AzureLongRun... Running       True            localhost            Remove-AzureRmResource...
+
+    ```
+
+
+    Det här kommandot tar bort de resurser som skapades med självstudien och garanterar att de frigörs i rätt ordning. Parametern `-AsJob` ser till att PowerShell inte blockerar under tiden som borttagningen utförs. Använd följande kommando för att vänta tills borttagningen har slutförts:
+
+
+    ```powershell
+
+    Wait-Job -Id $job.Id
+
+    ```
+
+
+    När rensningen är slutförd är självstudien klar. Fortsätt om du vill se en sammanfattning av allt du har lärt dig och få länkar till resurser som hjälper dig med nästa steg.
+- durationInMinutes: 1
+  title: Sammanfattning
+  content: "\nGrattis! Du har lärt dig hur du skapar virtuella datorer med nya eller befintliga resurser, använt uttryck och andra Azure PowerShell-kommandon för att samla in data som ska lagras i gränssnittsvariabler och tittat på vissa av de resurser som skapas för virtuella Azure-datorer.\n\nHur du nu går vidare beror på hur du har tänkt att använda Azure PowerShell. Det finns en mängd olika material som gör en djupdykning i funktionerna som beskrivs i den här kursen.\n\n### <a name=\"in-depth-azure-powershell-documentation\"></a>Djupgående Azure PowerShell-dokumentation\n\nLägg gärna lite tid på att utforska hela uppsättningen med [Azure PowerShell-dokumentation](overview.md).\n\nMer information om de kommandon som används i den här självstudien finns i följande artiklar.\n\n- [New-AzureRmResourceGroup](/powershell/module/azurerm.resources/new-azurermresourcegroup)\n- [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential)\n- [New-AzureRmVM](/powershell/module/azurerm.compute/new-azurermvm)\n- [Select-Object](/powershell/module/microsoft.powershell.utility/select-object)\n- [Get-AzureRmPublicIpAddress](/powershell/module/azurerm.network/get-AzureRmPublicIpAddress)\n- [Remove-AzureRmResourceGroup](/powershell/module/azurerm.resources/Remove-AzureRmResourceGroup)\n- [Wait-Job](/powershell/module/microsoft.powershell.core/wait-job)\n\nDet finns även artiklar som mer ingående beskriver de funktioner som visades i självstudiekursen.\n\n- [PowerShell-ihopbuntning](/powershell/module/microsoft.powershell.core/about/about_splatting)\n- [Frågor](queries-azureps.md)\n- [Formatering](formatting-output.md)\n- [Använda PowerShell-jobb](using-psjobs.md)\n\n### <a name=\"sample-scripts\"></a>Exempelskript\n\nOm du vill komma igång direkt med specifika uppgifter kan du titta på några exempel på skript.\n\n- [Virtuella Linux-datorer](/azure/virtual-machines/linux/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [Virtuella Windows-datorer](/azure/virtual-machines/windows/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [SQL-databaser](/azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json)\n- [Cosmos DB](/azure/cosmos-db/powershell-samples?toc=%2fpowershell%2fmodules%2ftoc.json)\n\n### <a name=\"feedback\"></a>Feedback\n\nOm du vill ge feedback, komma med förslag eller ställa frågor så kan du kontakta oss på en rad olika sätt.\n\n* `Send-Feedback` är ett inbyggt kommando för Azure PowerShell som gör det möjligt för dig att ge egen feedback till teamet.\n* Skicka in ett funktionsförslag eller en felrapport på [Azure PowerShell-lagringsplatsen](https://github.com/Azure/azure-powershell/issues).\n* Ställ en fråga eller få hjälp genom att skicka in ett problem på [Azure PowerShell-dokumentationslagringsplatsen](https://github.com/Azure/azure-docs-powershell/issues).\n\nVi hoppas att du är nöjd med Azure PowerShell!"
