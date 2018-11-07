@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/30/2017
-ms.openlocfilehash: 73aa50b75366bc1e095c00c3d25429afdde21835
-ms.sourcegitcommit: cb1fd248920d7efca67bd6c738a3b47206df7890
+ms.openlocfilehash: 9ae0d661630bf4e080b3bbaa7f357c384ef68cc4
+ms.sourcegitcommit: 06f9206e025afa7207d4657c8f57c94ddb74817a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39024655"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51211510"
 ---
 # <a name="formatting-query-results"></a>Formatera frågeresultat
 
@@ -29,7 +29,7 @@ Som standard har varje PowerShell-cmdlet fördefinierad formatering av utdata, v
 
 I det här exemplet får vi en lista över virtuella Azure-datorer i standardprenumerationen.  Kommandot Get-AzureRmVM formaterar som standard utdata i tabellformat.
 
-```powershell
+```powershell-interactive
 Get-AzureRmVM
 ```
 
@@ -42,7 +42,7 @@ MYWESTEURG          MyWin2016VM westeurope Standard_DS1_v2 Windows   mywin2016vm
 
 Om du vill begränsa de kolumner som returneras kan du använda cmdleten `Format-Table`. I följande exempel har vi samma lista över virtuella datorer men begränsar utdata till endast den virtuella datorns namn, resursgrupp och den virtuella datorns plats.  Parametern `-Autosize` ändrar storleken på kolumner enligt storleken på data.
 
-```powershell
+```powershell-interactive
 Get-AzureRmVM | Format-Table Name,ResourceGroupName,Location -AutoSize
 ```
 
@@ -55,7 +55,7 @@ MyWin2016VM   MYWESTEURG        westeurope
 
 Om du så önskar kan du kan se information i ett listformat. I följande exempel ser du detta med cmdleten `Format-List`.
 
-```powershell
+```powershell-interactive
 Get-AzureRmVM | Format-List Name,VmId,Location,ResourceGroupName
 ```
 
@@ -75,7 +75,7 @@ ResourceGroupName : MYWESTEURG
 
 PowerShell erbjuder även flera utdataformat som du kan använda för att fylla dina behov.  I följande exempel använder vi cmdleten `Select-Object` för att hämta attributen för de virtuella datorerna i vår prenumeration och konvertera utdata till ett CSV-format för enkel import till en databas eller ett kalkylblad.
 
-```powershell
+```powershell-interactive
 Get-AzureRmVM | Select-Object ResourceGroupName,Id,VmId,Name,Location,ProvisioningState | ConvertTo-Csv -NoTypeInformation
 ```
 
@@ -87,7 +87,7 @@ Get-AzureRmVM | Select-Object ResourceGroupName,Id,VmId,Name,Location,Provisioni
 
 Du kan även konvertera utdata till JSON-format.  Följande exempel skapar samma lista över virtuella datorer, men ändrar formatet för utdata till JSON.
 
-```powershell
+```powershell-interactive
 Get-AzureRmVM | Select-Object ResourceGroupName,Id,VmId,Name,Location,ProvisioningState | ConvertTo-Json
 ```
 

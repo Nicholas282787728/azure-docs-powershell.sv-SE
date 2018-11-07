@@ -8,12 +8,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.workload: ''
 ms.date: 2/20/2018
-ms.openlocfilehash: f69a0b79ac17c3a6502abfa9bbc5370693ad508e
-ms.sourcegitcommit: c98e3a21037ebd82936828bcb544eed902b24212
+ms.openlocfilehash: 1a9d38cd60ba596c085e5ee9f8d815e238362b1f
+ms.sourcegitcommit: 06f9206e025afa7207d4657c8f57c94ddb74817a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "34854281"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51211952"
 ---
 # <a name="release-notes"></a>Viktig information
 
@@ -29,13 +29,13 @@ Gallerimodul för ARM-cmdletar: [länk](https://www.powershellgallery.com/packag
 
 Om du vill installera `AzureRM` från PowerShell-galleriet kör du följande kommando:
 
-```powershell
+```powershell-interactive
 Install-Module -Name AzureRM -Repository PSGallery -Force
 ```
 
 Om du vill uppdatera från en äldre version av `AzureRM` kör du följande kommando:
 
-```powershell
+```powershell-interactive
 Update-Module -Name AzureRM
 ```
 
@@ -120,7 +120,7 @@ Update-Module -Name AzureRM
     - "Export-AzureRmLogAnalyticThrottledRequests"-cmdlet har lagts till
 
 #### <a name="azurermcontainerinstance"></a>AzureRM.ContainerInstance
-* Åtgärda parameteruppsättningsproblem för behållarregister och Azure-filvolymmontering
+* Åtgärda parameteruppsättningsproblem för containerregister och Azure-filvolymmontering
 
 #### <a name="azurermdatafactoryv2"></a>AzureRM.DataFactoryV2
 * SDK:n för ADF .Net har uppdaterats till version 0.6.0-preview som innehåller följande ändringar:
@@ -627,7 +627,7 @@ Update-Module -Name AzureRM
     - En förenklad parameteruppsättning till New-AzureRmVM, som skapar en virtuell dator och alla nödvändiga resurser med hjälp av smarta standardinställningar, har lagts till
 * ContainerInstance
   - Tillämpa SDK för Azure Container-instans, 2017-10-01
-    - Stöd för att slutföra körning av behållare
+    - Stöd för att slutföra körning av container
     - Stöd för Azure File-volymmontering
     - Stöd för att öppna flera portar för offentlig IP-adress
 * ContainerRegistry
@@ -671,7 +671,7 @@ Update-Module -Name AzureRM
     - Stöd har lagts till för -AsJob för cmdletar, vilket gör det möjligt att köra valda cmdletar i bakgrunden och returnera ett jobb som spårar och kontrollerar förloppet
     - Parametern -AsJob har lagts till för cmdleten Get-AzureRmSubscription
 * RecoveryServices.Backup
-  - Åtgärdat fel – Get-AzureRmRecoveryServicesBackupItem bör göra skiftlägesokänsliga jämförelser för filtret för behållarnamnet.
+  - Åtgärdat fel – Get-AzureRmRecoveryServicesBackupItem bör göra skiftlägesokänsliga jämförelser för filtret för containernamnet.
   - Åtgärdat fel – AzureVmItem har nu en egenskap som visar det senaste tillfället då en säkerhetskopiering genomförts – LastBackupTime.
 * Resurser
   - Ett problem har åtgärdats med att Get-AzureRMRoleAssignment skapade en tilldelning utan rolldefinitionsnamn för anpassade roller
@@ -759,7 +759,7 @@ Update-Module -Name AzureRM
       - $userIdentity = New-Object Microsoft.Azure.Commands.Batch.Models.PSUserIdentity $autoUser
     - Parametern `AuthenticationTokenSettings` har lagts till. Med den här parametern kan du begära att Batch-tjänsten tillhandahåller ett autentiseringstoken till uppgiften när den körs för att undvika behovet av att skicka Batch-kontonycklar till uppgiften för att utfärda begäran för Batch-tjänsten.
     - Parametern `ContainerSettings` har lagts till.
-      - Med den här parametern kan du begära att Batch-tjänsten kör uppgiften i en behållare.
+      - Med den här parametern kan du begära att Batch-tjänsten kör uppgiften i en container.
     - Parametern `OutputFiles` har lagts till.
       - Med den här parametern kan du konfigurera uppgiften för att ladda upp filer till Azure Storage när den har avslutats.
   * Parametrar för `New-AzureBatchPool` har uppdaterats.

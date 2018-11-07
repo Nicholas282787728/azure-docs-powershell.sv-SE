@@ -1,30 +1,30 @@
 ---
-title: Fråga efter Azure-resurser och formatera resultat | Microsoft Docs
+title: Fråga utdata från Azure PowerShell-cmdletar
 description: Så här frågar du efter resurser i Azure och formaterar resultaten.
 author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 03/30/2017
-ms.openlocfilehash: 9a7627a25f9bbd196b1d615229e45a6e1ce7a7d9
+ms.date: 09/11/2018
+ms.openlocfilehash: 6bd1bea43303e9f5a2b46d63a3ac51b4c4031b9f
 ms.sourcegitcommit: 06f9206e025afa7207d4657c8f57c94ddb74817a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 11/07/2018
-ms.locfileid: "51213181"
+ms.locfileid: "51213126"
 ---
-# <a name="querying-for-azure-resources"></a>Fråga efter Azure-resurser
+# <a name="query-output-of-azure-powershell-cmdlets"></a>Fråga utdata från Azure PowerShell-cmdletar
 
 Frågor i PowerShell kan utföras med hjälp av inbyggda cmdletar. I PowerShell har cmdlet formen **_Verb-substantiv_**. Cmdletar med verbet **_Get_** är fråge-cmdletar. Cmdletarnas substantiv är de typer av Azure-resurser som cmdletens verb agerar på.
 
-## <a name="selecting-simple-properties"></a>Välja enkla egenskaper
+## <a name="select-simple-properties"></a>Välja enkla egenskaper
 
 Azure PowerShell har standardformat som definierats för varje cmdlet. De vanligaste egenskaperna för varje resurstyp visas automatiskt i tabell- eller listformat. Mer information om att formatera utdata finns i [Formatera frågeresultat](formatting-output.md).
 
 Använd cmdleten `Get-AzureRmVM` för att fråga efter en lista över virtuella datorer i kontot.
 
-```powershell-interactive
+```azurepowershell-interactive
 Get-AzureRmVM
 ```
 
@@ -39,7 +39,7 @@ MYWESTEURG          MyWin2016VM westeurope Standard_DS1_v2 Windows   mywin2016vm
 
 Cmdleten `Select-Object` kan användas för att välja specifika egenskaper som är intressanta för dig.
 
-```powershell-interactive
+```azurepowershell-interactive
 Get-AzureRmVM | Select Name,ResourceGroupName,Location
 ```
 
@@ -50,11 +50,11 @@ MyUnbuntu1610 MYWESTEURG        westeurope
 MyWin2016VM   MYWESTEURG        westeurope
 ```
 
-## <a name="selecting-complex-nested-properties"></a>Välja komplexa kapslade egenskaper
+## <a name="select-complex-nested-properties"></a>Välja komplexa kapslade egenskaper
 
-Om den egenskap du vill välja ligger djupt kapslad i JSON-utdata måste du ange den fullständiga sökvägen till den kapslade egenskapen. Följande exempel visar hur du väljer den virtuella datorns namn och operativsystemtyp i cmdleten `Get-AzureRmVM`.
+Om den egenskap du vill använda ligger kapslad i JSON-utdata måste du ange den fullständiga sökvägen till egenskapen. Följande exempel visar hur du väljer den virtuella datorns namn och operativsystemtyp i cmdleten `Get-AzureRmVM`.
 
-```powershell-interactive
+```azurepowershell-interactive
 Get-AzureRmVM | Select Name,@{Name='OSType'; Expression={$_.StorageProfile.OSDisk.OSType}}
 ```
 
@@ -65,11 +65,11 @@ MyUnbuntu1610   Linux
 MyWin2016VM   Windows
 ```
 
-## <a name="filter-result-using-the-where-object-cmdlet"></a>Filtrera resultatet med hjälp av cmdleten Where-Object
+## <a name="filter-results-with-the-where-object-cmdlet"></a>Filtrera resultat med hjälp av cmdleten Where-Object
 
 Med cmdleten `Where-Object` kan du filtrera resultatet baserat på valfritt egenskapsvärde. I följande exempel väljer filtret endast virtuella datorer som har texten "RGD" i sina namn.
 
-```powershell-interactive
+```azurepowershell-interactive
 Get-AzureRmVM | Where ResourceGroupName -like RGD* | Select ResourceGroupName,Name
 ```
 
@@ -82,7 +82,7 @@ RGDEMO001          KBDemo020
 
 Med nästa exempel visar resultaten de virtuella datorer som har vmSize ”Standard_DS1_V2”.
 
-```powershell-interactive
+```azurepowershell-interactive
 Get-AzureRmVM | Where vmSize -eq Standard_DS1_V2
 ```
 

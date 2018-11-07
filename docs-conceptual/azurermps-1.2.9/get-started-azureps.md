@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: get-started-article
 ms.date: 11/15/2017
-ms.openlocfilehash: 3a0d3d1d970f4458e66167fb55c840598ce59e13
-ms.sourcegitcommit: 990f82648b0aa2e970f96c02466a7134077c8c56
+ms.openlocfilehash: 3114f9e9b36dc374f9fb2d402c448cff7fef0aa3
+ms.sourcegitcommit: 06f9206e025afa7207d4657c8f57c94ddb74817a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38100434"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51211459"
 ---
 # <a name="getting-started-with-azure-powershell"></a>Komma igång med Azure PowerShell
 
@@ -64,7 +64,7 @@ Skapa först en resursgrupp. Resursgrupper i Azure ger ett sätt att hantera fle
 
 Vi ska skapa en resursgrupp med namnet "MyResourceGroup" i den västeuropeiska regionen för Azure. Ange följande kommando:
 
-```powershell
+```powershell-interactive
 New-AzureRmResourceGroup -Name 'myResourceGroup' -Location 'westeurope'
 ```
 
@@ -84,7 +84,7 @@ Nu när vi har en resursgrupp kan vi skapa en virtuell Windows-dator i den. För
 
 Vi måste först skapa en undernätskonfiguration som ska användas med processen för att skapa virtuella nätverk. Vi skapar också en offentlig IP-adress så att vi kan ansluta till denna virtuella dator. Vi skapar en nätverkssäkerhetsgrupp för att säkra åtkomst till den offentliga adressen. Slutligen skapar vi ett virtuellt nätverkskort med alla föregående resurser.
 
-```powershell
+```powershell-interactive
 # Variables for common values
 $resourceGroup = "myResourceGroup"
 $location = "westeurope"
@@ -120,14 +120,14 @@ $nic = New-AzureRmNetworkInterface -Name myNic1 -ResourceGroupName $resourceGrou
 
 Vi måste först ha en uppsättning autentiseringsuppgifter för operativsystemet.
 
-```powershell
+```powershell-interactive
 # Create user object
 $cred = Get-Credential -Message "Enter a username and password for the virtual machine."
 ```
 
 Nu när vi har de nödvändiga resurserna kan vi skapa den virtuella datorn. För detta steg skapar vi ett VM-konfigurationsobjekt och sedan använder vi konfigurationen för att skapa den virtuella datorn.
 
-```powershell
+```powershell-interactive
 # Create a virtual machine configuration
 $vmConfig = New-AzureRmVMConfig -VMName $vmName -VMSize Standard_D1 |
   Set-AzureRmVMOperatingSystem -Windows -ComputerName $vmName -Credential $cred |
@@ -148,7 +148,7 @@ RequestId IsSuccessStatusCode StatusCode ReasonPhrase
 
 Logga nu in på den virtuella Windows Server-dator som har skapats med hjälp av Fjärrskrivbord och den virtuella datorns offentliga IP-adress. Följande kommando visar den offentliga IP-adress som skapades i föregående skript.
 
-```powershell
+```powershell-interactive
 $publicIp | Select-Object Name,IpAddress
 ```
 
@@ -160,7 +160,7 @@ mypublicdns1400512543 xx.xx.xx.xx
 
 Om du använder ett Windows-baserat system kan du göra detta från kommandoraden med mstsc-kommandot:
 
-```powershell
+```powershell-interactive
 mstsc /v:xx.xxx.xx.xxx
 ```
 
@@ -174,7 +174,7 @@ För att kunna skapa en ny virtuell Linux-dator måste vi först skapa de övrig
 
 Vi måste först skapa en undernätskonfiguration som ska användas med processen för att skapa virtuella nätverk. Vi skapar också en offentlig IP-adress så att vi kan ansluta till denna virtuella dator. Vi skapar en nätverkssäkerhetsgrupp för att säkra åtkomst till den offentliga adressen. Slutligen skapar vi ett virtuellt nätverkskort med alla föregående resurser.
 
-```powershell
+```powershell-interactive
 # Variables for common values
 $resourceGroup = "myResourceGroup"
 $location = "westeurope"
@@ -214,7 +214,7 @@ $nic = New-AzureRmNetworkInterface -Name myNic2 -ResourceGroupName $resourceGrou
 
 Nu när vi har de nödvändiga resurserna kan vi skapa den virtuella datorn. För detta steg skapar vi ett VM-konfigurationsobjekt och sedan använder vi konfigurationen för att skapa den virtuella datorn.
 
-```powershell
+```powershell-interactive
 # Create a virtual machine configuration
 $vmConfig = New-AzureRmVMConfig -VMName $vmName -VMSize Standard_D1 |
   Set-AzureRmVMOperatingSystem -Linux -ComputerName $vmName -Credential $cred -DisablePasswordAuthentication |
@@ -270,15 +270,15 @@ my-login@MyLinuxVM:../../..$
 
 Vi har nu gått igenom hur du skapar en resursgrupp, en virtuell Linux-dator och en virtuell Windows Server-dator. Du kan även skapa många andra typer av Azure-resurser.
 
-Om du till exempel vill skapa en belastningsutjämnare för Azure-nätverk som vi sedan kan koppla till de virtuella datorer vi precis har skapat kan vi använda följande kommando för att skapa:
+Om du till exempel vill skapa en lastbalanserare för Azure-nätverk som vi sedan kan koppla till de virtuella datorer vi precis har skapat kan vi använda följande kommando för att skapa:
 
-```powershell
+```powershell-interactive
 New-AzureRmLoadBalancer -Name MyLoadBalancer -ResourceGroupName myResourceGroup -Location westeurope
 ```
 
 Vi kan också skapa ett nytt privat virtuellt nätverk (som ofta kallas ett "VNet" i Azure) för infrastrukturen med följande kommando:
 
-```powershell
+```powershell-interactive
 $subnetConfig = New-AzureRmVirtualNetworkSubnetConfig -Name mySubnet2 -AddressPrefix 10.0.0.0/16
 $vnet = New-AzureRmVirtualNetwork -ResourceGroupName myResourceGroup -Location westeurope `
   -Name MYvNET3 -AddressPrefix 10.0.0.0/16 -Subnet $subnetConfig
@@ -288,7 +288,7 @@ Det som gör Azure och Azure PowerShell så kraftfulla är att vi kan använda d
 
 Du kan till exempel använda Azure PowerShell för att skapa en Azure AppService. Azure AppService är en hanterad plattformstjänst som ger ett utmärkt sätt att agera värd för webbappar utan att behöva bekymra sig över infrastruktur. När du har skapat Azure AppService kan du skapa två nya Azure-webbappar i AppService med hjälp av följande kommandon:
 
-```powershell
+```powershell-interactive
 # Create an Azure AppService that we can host any number of web apps within
 New-AzureRmAppServicePlan -Name MyAppServicePlan -Tier Basic -NumberofWorkers 2 -WorkerSize Small -ResourceGroupName myResourceGroup -Location westeurope
 
@@ -301,7 +301,7 @@ New-AzureRmWebApp -Name MyWebApp43433 -AppServicePlan MyAppServicePlan -Resource
 
 Du kan använda cmdleten `Get-AzureRmResource` för att få fram en lista över de resurser som körs i Azure. I följande exempel visas resurserna som vi nyss skapade i den nya resursgruppen.
 
-```powershell
+```powershell-interactive
 Get-AzureRmResource |
   Where-Object ResourceGroupName -eq myResourceGroup |
     Select-Object Name,Location,ResourceType
@@ -330,7 +330,7 @@ micromyresomywi032907510                              westeurope Microsoft.Stora
 
 Om du vill rensa i Azure-kontot kan du ta bort de resurser vi skapade i detta exempel. Du kan använda cmdletarna `Remove-AzureRm*` för att ta bort de resurser du inte längre behöver. Använd följande kommando om du vill ta bort den virtuella Windows-dator vi skapade:
 
-```powershell
+```powershell-interactive
 Remove-AzureRmVM -Name myWindowsVM -ResourceGroupName myResourceGroup
 ```
 
@@ -344,7 +344,7 @@ Are you sure you want to remove resource group 'myResourceGroup'
 
 Du kan också ta bort många resurser i taget. Följande kommando tar till exempel bort hela resursgruppen "MyResourceGroup" som vi har använt för alla exempel i denna handledning. Detta tar bort resursgruppen och alla resurser i den.
 
-```powershell
+```powershell-interactive
 Remove-AzureRmResourceGroup -Name myResourceGroup
 ```
 

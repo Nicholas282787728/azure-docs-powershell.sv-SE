@@ -8,11 +8,11 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/11/2018
 ms.openlocfilehash: a93461af1dafbf8f2c85ef127ecaefadf3be2f52
-ms.sourcegitcommit: 1f699b72bf544d92459da9d888cc0091f9415b65
+ms.sourcegitcommit: 06f9206e025afa7207d4657c8f57c94ddb74817a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "50971524"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51213139"
 ---
 # <a name="manage-multiple-azure-subscriptions"></a>Hantera flera Azure-prenumerationer
 

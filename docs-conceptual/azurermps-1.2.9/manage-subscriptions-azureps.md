@@ -8,12 +8,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/30/2017
-ms.openlocfilehash: 00f346c2e90fb6615dd9eac96e13f4cfc243d204
-ms.sourcegitcommit: cb1fd248920d7efca67bd6c738a3b47206df7890
+ms.openlocfilehash: 8869b700e513d6fc07e69de1dbfe852bd2a52df1
+ms.sourcegitcommit: 06f9206e025afa7207d4657c8f57c94ddb74817a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39024485"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51211068"
 ---
 # <a name="manage-multiple-azure-subscriptions"></a>Hantera flera Azure-prenumerationer
 
@@ -21,7 +21,7 @@ Om du är nybörjare på Azure har du förmodligen bara en enda prenumeration. M
 
 1. Hämta en lista över alla prenumerationer i ditt konto.
 
-    ```powershell
+    ```powershell-interactive
     Get-AzureRmSubscription
     ```
 
@@ -50,13 +50,13 @@ Om du är nybörjare på Azure har du förmodligen bara en enda prenumeration. M
 
 2. Ange standard.
 
-    ```powershell
+    ```powershell-interactive
     Select-AzureRmSubscription -SubscriptionName "My Demos"
     ```
 
 3. Verifiera ändringen genom att köra `Get-AzureRmContext`-cmdleten.
 
-    ```powershell
+    ```powershell-interactive
     Get-AzureRmContext
     ```
 

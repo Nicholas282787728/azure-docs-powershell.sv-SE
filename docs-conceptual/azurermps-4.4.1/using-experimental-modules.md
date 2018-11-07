@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/05/2017
-ms.openlocfilehash: f3fcfb84a4c0e775653fb65dc33e30d84cca5646
-ms.sourcegitcommit: c98e3a21037ebd82936828bcb544eed902b24212
+ms.openlocfilehash: 09858da9981c1136e2a39a079962c5b8fc39bde9
+ms.sourcegitcommit: 06f9206e025afa7207d4657c8f57c94ddb74817a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "34854672"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51211918"
 ---
 # <a name="using-experimental-azure-powershell-modules"></a>Använda experimentella Azure PowerShell-moduler
 
@@ -30,7 +30,7 @@ De experimentella modulerna använder följande namngivningskonvention: `AzureRM
 
 Experimentella moduler publiceras i PowerShell-galleriet precis som de befintliga Azure PowerShell-modulerna. Om du vill se en lista med experimentella moduler kör du följande kommando:
 
-```powershell
+```powershell-interactive
 Find-Module AzureRM.*.Experiments
 ```
 
@@ -43,7 +43,7 @@ Version Name                         Repository Description
 
 Om du vill installera den experimentella modulen ska du använda följande kommandon från en upphöjd PowerShell-session:
 
-```powershell
+```powershell-interactive
 Install-Module AzureRM.Compute.Experiments
 Install-Module AzureRM.Websites.Experiments
 ```
@@ -67,7 +67,7 @@ Grundläggande förbättringar räknas som ”sunt förnuft” och lite experime
 
 - Kortare namn – Omfattar namnen på cmdletar (till exempel `New-AzureRmVM` => `New-AzVm`) och parameternamnen (till exempel `-ResourceGroupName` => `-Rg`). Använd alias för kompatibilitet med ”gamla” cmdletar. Tillhandahåll _bakåtkompatibla_ parameteruppsättningar.
 
-- Smarta standardvärden – Skapa smarta standardvärden för att fylla i ”obligatorisk” information. Till exempel:
+- Smarta standardvärden – Skapa smarta standardvärden för att fylla i ”obligatorisk” information. Exempel:
   - Resursgrupp
   - Plats
   - Beroende resurser

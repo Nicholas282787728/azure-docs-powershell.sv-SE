@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
-ms.openlocfilehash: 71a2554052f5a25ea86fe44b6dcf5d9343c81f3e
-ms.sourcegitcommit: ff44dec6418a449757bded3c6ebe0a7d4c05ee6e
+ms.openlocfilehash: edbf17141cac4ea6e41282c8e1dd07c5b738351c
+ms.sourcegitcommit: 06f9206e025afa7207d4657c8f57c94ddb74817a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50737942"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51211612"
 ---
 # <a name="log-in-with-azure-powershell"></a>Logga in med Azure PowerShell
 
@@ -32,13 +32,13 @@ Tjänstens huvudnamn ger dig ett sätt att skapa icke-interaktiva konton som du 
 
 2. Logga in med huvudnamnet för tjänsten.
 
-    ```powershell
+    ```powershell-interactive
     Login-AzureRmAccount -ServicePrincipal -ApplicationId  "http://my-app" -Credential $pscredential -TenantId $tenantid
     ```
 
     För att få ditt TenantId loggar du in interaktivt och hämtar sedan ditt TenantId från prenumerationen.
 
-    ```powershell
+    ```powershell-interactive
     Get-AzureRmSubscription
     ```
 
@@ -61,13 +61,13 @@ Mer information om hanterade identiteter för Azure-resurser finns i [Använda h
 
 Azure-molntjänster erbjuder olika miljöer som följer olika myndigheters regler för datahantering. Om ditt Azure-konto finns i ett myndighetsmoln, behöver du specificera miljön när du loggar in. Om ditt konto till exempel befinner sig i Kina-molnet, loggar du in med följande kommando:
 
-```powershell
+```powershell-interactive
 Login-AzureRmAccount -EnvironmentName AzureChinaCloud
 ```
 
 Använd följande kommando för att få en lista över tillgängliga miljöer:
 
-```powershell
+```powershell-interactive
 Get-AzureRmEnvironment | Select-Object Name
 ```
 

@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 08/31/2017
-ms.openlocfilehash: 12a57f9aaf445fe95f731e09a6dcd174b97aa3fe
-ms.sourcegitcommit: 990f82648b0aa2e970f96c02466a7134077c8c56
+ms.openlocfilehash: 85de158cd2a4c3a38f653a530db8e6fae50cb37f
+ms.sourcegitcommit: 06f9206e025afa7207d4657c8f57c94ddb74817a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38100196"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51211136"
 ---
 # <a name="persisting-user-credentials-across-powershell-sessions"></a>Spara autentiseringsuppgifter för användare mellan olika PowerShell-sessioner
 
@@ -55,7 +55,7 @@ Med funktionen **Azure Context Autosave** kan du också dela din kontext med Pow
 
   Med de flesta AzureRM-cmdletar kan du skicka kontexten som en parameter till cmdleten. Du kan skicka en kontext till ett bakgrundsjobb enligt följande exempel:
 
-  ```powershell
+  ```powershell-interactive
   PS C:\> $job = Start-Job { param ($ctx) New-AzureRmVm -AzureRmContext $ctx [... Additional parameters ...]} -ArgumentList (Get-AzureRmContext)
   ```
 
@@ -63,7 +63,7 @@ Med funktionen **Azure Context Autosave** kan du också dela din kontext med Pow
 
   Om du har aktiverat **Context Autosave** (Spara automatiskt kontext) använder bakgrundsjobben automatiskt den sparade standardkontexten.
 
-  ```powershell
+  ```powershell-interactive
   PS C:\> $job = Start-Job { New-AzureRmVm [... Additional parameters ...]}
   ```
 
@@ -81,7 +81,7 @@ PS C:\> Set-AzureRMContext -Subscription "Contoso Subscription 1" -Name "Contoso
 
 I exemplet ovan läggs en ny kontext till med målet ”Contoso Subscription 1” med hjälp av dina aktuella autentiseringsuppgifter. Den nya kontexten har namnet ”Contoso1”. Om du inte anger ett namn för kontexten används ett standardnamn med konto-ID och prenumerations-ID.
 
-Byt namn på en befintlig kontext genom att använda cmdlet `Rename-AzureRmContext`. Till exempel:
+Byt namn på en befintlig kontext genom att använda cmdlet `Rename-AzureRmContext`. Exempel:
 
 ```azurepowershell-interactive
 PS C:\> Rename-AzureRmContext '[user1@contoso.org; 123456-7890-1234-564321]` 'Contoso2'
@@ -89,7 +89,7 @@ PS C:\> Rename-AzureRmContext '[user1@contoso.org; 123456-7890-1234-564321]` 'Co
 
 Det här exemplet byter namn på kontexten med det automatiska namnet `[user1@contoso.org; 123456-7890-1234-564321]` till ”Contoso2”. Cmdletar som hanterar kontexter använder också tabbifyllning, så att du snabbt kan välja kontexten.
 
-Slutligen, för att ta bort en kontext använder du cmdlet `Remove-AzureRmContext`.  Till exempel:
+Slutligen, för att ta bort en kontext använder du cmdlet `Remove-AzureRmContext`.  Exempel:
 
 ```azurepowershell-interactive
 PS C:\> Remove-AzureRmContext Contoso2
