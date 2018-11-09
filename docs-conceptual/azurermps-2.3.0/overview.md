@@ -8,12 +8,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: knithinc
 ms.date: 09/21/2018
-ms.openlocfilehash: cd415e862bfaa2b767cce108689ebaf34ef74305
-ms.sourcegitcommit: ac4b53bb42a25aae013a9d8cd9ae98ada9397274
+ms.openlocfilehash: 0cb2fe38ef43657fb02627f9b5bc728eacb3062a
+ms.sourcegitcommit: 06f9206e025afa7207d4657c8f57c94ddb74817a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51274406"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51211703"
 ---
 # <a name="azurerm-module-230"></a>AzureRM-modul 2.3.0
 
@@ -42,7 +42,7 @@ Use-AzureRmProfile -Profile 2018-03-01-hybrid -Force
 
 ```
 
-## <a name="release-notes"></a>Viktig information
+##<a name="release-notes"></a>Viktig information
 * Version 2.3.0 omfattar en lista över icke-bakåtkompatibla ändringar. Om du vill uppgradera från version 1.2.11 har vi skapat en migreringsguide här: https://aka.ms/azspowershellmigration
 * Den här versionen motsvarar den azurestack-specifika API-profilen 2018-03-01-hybrid
 * Alla moduler använder större eller lika stort beroende på modulen AzureRm.Profile.
