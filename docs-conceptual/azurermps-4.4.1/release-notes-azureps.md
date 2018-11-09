@@ -8,12 +8,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.workload: ''
 ms.date: 07/26/2017
-ms.openlocfilehash: 6f0e304c499fc8bf4909e2825d52cd63b1fcbf5d
-ms.sourcegitcommit: 990f82648b0aa2e970f96c02466a7134077c8c56
+ms.openlocfilehash: 563f84c3af98de066611dd80102e552b31f12883
+ms.sourcegitcommit: ac4b53bb42a25aae013a9d8cd9ae98ada9397274
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38100499"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51274933"
 ---
 # <a name="release-notes"></a>Viktig information
 
@@ -106,7 +106,7 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
   * Cmdlet har lagts till för att tillåta generering av VpnProfiles för extern radius-baserad P2S
     - New-AzureRmVpnClientConfiguration
     - Get-AzureRmVpnClientConfiguration
-  * Stöd för SKU-parametern har lagts till i offentliga IP-adresser och belastningsutjämnare
+  * Stöd för SKU-parametern har lagts till i offentliga IP-adresser och lastbalanserare
     - Uppdaterat New-AzureRMLoadBalancer: Valfria parametern -Sku har lagts till
     - Uppdaterat New-AzureRMPublicIpAddress: Valfria parametern -Sku har lagts till
   * Stöd för DisableOutboundSNAT har lagts till i Load Balancer-regler
@@ -127,7 +127,7 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
   * Stöd för DDOS-skydd för virtuella nätverk har lagts till
     - Uppdaterat New-AzureRmVirtualNetwork: Switchparametrarna EnableDDoSProtection och EnableVmProtection har lagts till
     - Egenskaperna EnableDDoSProtection och EnableVmProtection har lagts till i PSVirtualNetwork-objektet
-  * Stöd för intern belastningsutjämnare med hög tillgänglighet har lagts till
+  * Stöd för intern lastbalanserare med hög tillgänglighet har lagts till
     - Uppdaterat Add-AzureRmLoadBalancerRuleConfig: Lade till Alla som ett giltigt värde för parametern Protocol
     - Uppdaterat New-AzureRmLoadBalancerRuleConfig: Lade till Alla som ett giltigt värde för parametern Protocol
     - Uppdaterat Set-AzureRmLoadBalancerRuleConfig: Lade till Alla som ett giltigt värde för parametern Protocol
@@ -209,7 +209,7 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
   * Programfel i Set-AzureRmAnalysisServciesServer har åtgärdats
     - Om ingen admin angetts så tas admin bort.
   * BackupBlobContainerUri in New-AzureRmAnalysisServicesServer och Set-AzureRmAnalysisServicesServer har lagts till
-    - Inställning/inaktivering av säkerhetskopia av blobbehållare för säkerhetskopiering/återställning av Azure Analysis Services Server har aktiverats
+    - Inställning/inaktivering av säkerhetskopia av blobcontainer för säkerhetskopiering/återställning av Azure Analysis Services Server har aktiverats
   * SKU-sökning i New-AzureRmAnalysisServicesServer och Set-AzureRmAnalysisServicesServer har uppdaterats
     - Hårdkodad SKU i dynamisk sökning har ändrats.
   * Add-AzureAnalysisServicesAccount som stöd för inloggning med tjänstens huvudnamn
@@ -262,14 +262,15 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
       - Remove-AzureRMRoleDefinition
       - Set-AzureRMRoleDefinition
 * ServiceBus
-    * Följande nya kommandon för AuthorizationRules för NameSpace, Queue och Topic har lagts till. i enlighet med parameterinställningen har auktoriseringsreglerna utförts.
-     - New-AzureRmServiceBusAuthorizationRule – Lägger till en ny AuthorizationRule i befintlig ServiceBus NameSpace/Queue/Topic.
-     - Get-AzureRmServiceBusAuthorizationRule – Hämtar AuthorizationRule/lista över AuthorizationRules för befintlig ServiceBus NameSpace/Queue/Topic.
-     - Set-AzureRmServiceBusAuthorizationRule – Uppdaterar egenskaperna för befintlig AuthorizationRule för Servicebus NameSpace/Queue/Topic.
-     - New-AzureRmServiceBusKey – Skapar en ny primär/sekundär nyckel för AuthorizationRule för befintlig ServiceBus NameSpace/Queue/Topic.
-     - Get-AzureRmServiceBusKey – Hämtar primär/sekundär nyckel för AuthorizationRule för befintlig ServiceBus NameSpace/Queue/Topic.
-     - Remove-AzureRmServiceBusNamespaceAuthorizationRule – Tar bort befintlig AuthorizationRule för ServiceBus NameSpace/Queue/Topic.
-    * Egenskap för resursgrupp har lagts till i NamespceAttributes
+  * Följande nya kommandon för AuthorizationRules för NameSpace, Queue och Topic har lagts till. i enlighet med parameterinställningen har auktoriseringsreglerna utförts.
+    - New-AzureRmServiceBusAuthorizationRule – Lägger till en ny AuthorizationRule i befintlig ServiceBus NameSpace/Queue/Topic.
+    - Get-AzureRmServiceBusAuthorizationRule – Hämtar AuthorizationRule/lista över AuthorizationRules för befintlig ServiceBus NameSpace/Queue/Topic.
+    - Set-AzureRmServiceBusAuthorizationRule – Uppdaterar egenskaperna för befintlig AuthorizationRule för Servicebus NameSpace/Queue/Topic.
+    - New-AzureRmServiceBusKey – Skapar en ny primär/sekundär nyckel för AuthorizationRule för befintlig ServiceBus NameSpace/Queue/Topic.
+    - Get-AzureRmServiceBusKey – Hämtar primär/sekundär nyckel för AuthorizationRule för befintlig ServiceBus NameSpace/Queue/Topic.
+    - Remove-AzureRmServiceBusNamespaceAuthorizationRule – Tar bort befintlig AuthorizationRule för ServiceBus NameSpace/Queue/Topic.
+  * Egenskap för resursgrupp har lagts till i NamespceAttributes
+
 * SQL
     * Uppdaterar Set-AzureRmSqlServerTransparentDataEncryptionProtector så att en varning visas och bekräftelse krävs om krypteringsskyddstypen är AzureKeyVault
     * Lägger till nya uppdaterade cmdletar för granskningsinställningar
@@ -297,15 +298,16 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
 
 ## <a name="20170717---version-421"></a>2017.07.17 – version 4.2.1
 * Compute
-    - Åtgärda problemet med VM-disken och VM-diskens ögonblicksbild för att skapa och uppdatera cmdletar, (länk)[https://github.com/azure/azure-powershell/issues/4309]
-      - New-AzureRmDisk
-      - New-AzureRmSnapshot
-      - Update-AzureRmDisk
-      - Update-AzureRmSnapshot
+  - Åtgärda problemet med VM-disken och VM-diskens ögonblicksbild för att skapa och uppdatera cmdletar, (länk)[<https://github.com/azure/azure-powershell/issues/4309>]
+    - New-AzureRmDisk
+    - New-AzureRmSnapshot
+    - Update-AzureRmDisk
+    - Update-AzureRmSnapshot
 * Profil
-    - Åtgärda problemet med icke-interaktiv användarautentisering i RDFE (länk) [https://github.com/Azure/azure-powershell/issues/4299]
+  - Åtgärda problemet med icke-interaktiv användarautentisering i RDFE (länk) [<https://github.com/Azure/azure-powershell/issues/4299>]
+
 * ServiceManagement
-    - Åtgärda problemet med icke-interaktiv användarautentisering (länk) [https://github.com/Azure/azure-powershell/issues/4299]
+  - Åtgärda problemet med icke-interaktiv användarautentisering (länk) [<https://github.com/Azure/azure-powershell/issues/4299>]
 
 ## <a name="2017711---version-420"></a>2017.7.11 – version 4.2.0
 * AnalysisServices
@@ -560,7 +562,7 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
   - Ny cmdlet Get-AzureRmConsumptionUsageDetail
     + cmdlet för att användningsinformation för prenumerationen.
 * ContainerRegistry
-  - Lägg till PowerShell-cmdletar för Azure-behållarregistret
+  - Lägg till PowerShell-cmdletar för Azure-containerregistret
     + New-AzureRmContainerRegistry
     + Get-AzureRmContainerRegistry
     + Update-AzureRmContainerRegistry
@@ -660,7 +662,7 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
 * ServiceBus
 
   - Felkorrigering: Egenskapsvärdena för ServiceBus-köobjektet var satt till null, objektet används som indataparameter i cmdleten Set-AzureRmServiceBusQueue för att uppdatera kön.
-   - Egenskaper som påverkas är LockDuration, EntityAvailabilityStatus, DuplicateDetectionHistoryTimeWindow, MaxDeliveryCount och MessageCount
+    - Egenskaper som påverkas är LockDuration, EntityAvailabilityStatus, DuplicateDetectionHistoryTimeWindow, MaxDeliveryCount och MessageCount
 * ServiceFabric
 
   - Lade till cmdletar för Service Fabric
