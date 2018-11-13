@@ -8,12 +8,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: carmonm
 ms.date: 09/11/2018
-ms.openlocfilehash: 32decf653a956d0b0b202b38a238f42fa831ecae
-ms.sourcegitcommit: 06f9206e025afa7207d4657c8f57c94ddb74817a
+ms.openlocfilehash: bdd8e69a2ea9df8b4fff100e1f3cc4c82d2d9d9d
+ms.sourcegitcommit: ac4b53bb42a25aae013a9d8cd9ae98ada9397274
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51213051"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51274984"
 ---
 # <a name="overview-of-azure-powershell"></a>Översikt över Azure PowerShell
 
@@ -28,8 +28,7 @@ Med hjälp av följande exempel kan du lära dig hur du utför vanliga scenarier
 * [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json)
 * [SQL-databaser](/azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json)
 
-> [!NOTE]
-> Om du har distributioner som använder sig av den klassiska distributionsmodellen och som inte kan konverteras, kan du installera Service Management-versionen av Azure PowerShell. Läs mer i informationen om hur du [installerar Azure PowerShell Service Management-modulen](/powershell/azure/servicemanagement/install-azure-ps).
+[!INCLUDE[az-replacing-azurerm](../includes/az-replacing-azurerm.md)]
 
 ## <a name="learn-powershell-basics"></a>Lär dig grunderna i PowerShell
 
