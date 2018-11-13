@@ -8,12 +8,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.workload: ''
 ms.date: 08/28/2018
-ms.openlocfilehash: c60bc9197266cc1da37cc9af7baf03e7ba8fb7ac
-ms.sourcegitcommit: 06f9206e025afa7207d4657c8f57c94ddb74817a
+ms.openlocfilehash: 8a7b184ed06eb078956229fa67d02840014e3aaf
+ms.sourcegitcommit: ac4b53bb42a25aae013a9d8cd9ae98ada9397274
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51213107"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51275528"
 ---
 # <a name="release-notes"></a>Viktig information
 
@@ -164,7 +164,7 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
 #### <a name="azurermprofile"></a>AzureRM.Profile
 * Mindre ändringar i den gemensamma koden för lagring
 * Hjälpfiler har uppdaterats för att innehålla fullständiga parametertyper.
-- -ServicePrincipal har ändrats så att den inte längre är obligatorisk i parameteruppsättningen ServicePrincipalCertificateWithSubscriptionId 
+* -ServicePrincipal har ändrats så att den inte längre är obligatorisk i parameteruppsättningen ServicePrincipalCertificateWithSubscriptionId 
 
 #### <a name="azurestorage"></a>Azure.Storage
 * Stöd för att skapa lagringskontext med OAuth. 
@@ -403,7 +403,7 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
 
 #### <a name="azurestorage"></a>Azure.Storage
 * Ta bort begränsningen på 5 TB för Azure-filresurskvoten
-- Set-AzureStorageShareQuota
+* Set-AzureStorageShareQuota
 
 #### <a name="azurermanalysisservices"></a>AzureRM.AnalysisServices
 * Har uppdaterats till den senaste versionen av Azure ClientRuntime.
@@ -680,8 +680,8 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
 
 #### <a name="azurestorage"></a>Azure.Storage
 * Stöd för uppladdning av blob eller fil med lässkyddad SAS-token
-- Set-AzureStorageBlobContent
-- Set-AzureStorageFileContent
+* Set-AzureStorageBlobContent
+* Set-AzureStorageFileContent
 
 #### <a name="azurermanalysisservices"></a>AzureRM.AnalysisServices
 * Lägg till den nödvändiga egenskapen ResourceGroupName i AS.

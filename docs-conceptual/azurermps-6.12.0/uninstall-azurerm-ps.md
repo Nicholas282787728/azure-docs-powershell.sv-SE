@@ -7,28 +7,17 @@ ms.author: sttramer
 ms.manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.openlocfilehash: 5f51683896fffe56332ac0a43179ad1f894d8d75
-ms.sourcegitcommit: 06f9206e025afa7207d4657c8f57c94ddb74817a
+ms.openlocfilehash: 3543dbb692a41bd3b417bb3d771e67c52d57c340
+ms.sourcegitcommit: ac4b53bb42a25aae013a9d8cd9ae98ada9397274
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51213059"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51274661"
 ---
 # <a name="uninstall-the-azure-powershell-module"></a>Avinstallera Azure PowerShell-modulen
 
 Den här artikeln beskriver hur du avinstallerar en äldre version av Azure PowerShell eller tar bort det fullständigt från ditt system. Om du har bestämt dig för att avinstallera Azure PowerShell fullständigt kan du ge oss feedback genom cmdleten [Send-Feedback](/powershell/module/azurerm.profile/send-feedback).
 Om du har påträffat en bugg vill vi gärna att du [öppnar ett GitHub-supportärende](https://github.com/azure/azure-powershell/issues).
-
-## <a name="uninstall-msi"></a>Avinstallera MSI
-
-Om du har installerat Azure PowerShell med hjälp av MSI-paketet måste du avinstallera det via Windows-systemet i stället för PowerShell.
-
-| Plattform | Instruktioner |
-|----------|--------------|
-| Windows 10 | Start > Inställningar > Appar |
-| Windows 7 </br>Windows 8 | Start > Kontrollpanelen > Program > Avinstallera ett program |
-
-På den här skärmen bör du se ”Azure PowerShell” i listan över program och du kan avinstallera härifrån.
 
 ## <a name="uninstall-from-powershell"></a>Avinstallera från PowerShell
 
@@ -91,3 +80,14 @@ Kör det här kommandot för varje version av Azure PowerShell som du vill avins
 $versions = (get-installedmodule AzureRM -AllVersions | Select-Object Version)
 $versions[1..($versions.Length-1)]  | foreach { Uninstall-AllModules -TargetModule AzureRM -Version ($_.Version) -Force }
 ```
+
+## <a name="uninstall-msi"></a>Avinstallera MSI
+
+Om du har installerat Azure PowerShell med hjälp av MSI-paketet måste du avinstallera det via Windows-systemet i stället för PowerShell.
+
+| Plattform | Instruktioner |
+|----------|--------------|
+| Windows 10 | Start > Inställningar > Appar |
+| Windows 7 </br>Windows 8 | Start > Kontrollpanelen > Program > Avinstallera ett program |
+
+På den här skärmen bör du se ”Azure PowerShell” i listan över program och du kan avinstallera härifrån.
