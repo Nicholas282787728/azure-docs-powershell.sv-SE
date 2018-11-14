@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/01/2018
-ms.openlocfilehash: a9cd0667e098e6b2c8577d11218b842548bee9d3
-ms.sourcegitcommit: 06f9206e025afa7207d4657c8f57c94ddb74817a
+ms.openlocfilehash: 39d9fa6e354c3c3448053c9cdc98fdc7f55b068d
+ms.sourcegitcommit: ac4b53bb42a25aae013a9d8cd9ae98ada9397274
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51213083"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51274576"
 ---
 # <a name="breaking-changes-for-microsoft-azure-powershell-600"></a>Icke-bakåtkompatibla ändringar för Microsoft Azure PowerShell 6.0.0
 
@@ -255,8 +255,8 @@ Remove-AzureRmDataLakeStoreItem -Account "ContosoADL" -path /myFolder -Recurse
 - Cmdleten accepterar inte längre enskilda parametrar som utgör åtkomst-token. I stället ersätter cmdleten explicita tokenparametrar, som t. ex. `Service` eller `Permissions` med en allmän `TemplateUri`-parameter som motsvarar en exempel-åtkomsttoken och som definierats någon annanstans (förmodligen med Storage PowerShell-cmdletar eller sammanställts manuellt enligt Storage-dokumentationen.) Cmdleten behåller parametern `ValidityPeriod`.
 
 Mer information om att sammanställa token för delad åtkomst för Azure Storage hittar du på följande dokumentationssidor:
-- [Skapa en tjänst-SAS] (https://docs.microsoft.com/rest/api/storageservices/Constructing-a-Service-SAS)
-- [Skapa en konto-SAS] (https://docs.microsoft.com/rest/api/storageservices/constructing-an-account-sas)
+- [Skapa en tjänst-SAS](https://docs.microsoft.com/rest/api/storageservices/Constructing-a-Service-SAS)
+- [Skapa en konto-SAS](https://docs.microsoft.com/rest/api/storageservices/constructing-an-account-sas)
 
 ```powershell-interactive
 # Old

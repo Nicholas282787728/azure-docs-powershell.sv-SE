@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/05/2017
-ms.openlocfilehash: ac571363d79c83b268b5c25f65b14f16d4b86e71
-ms.sourcegitcommit: bcf80dfd7fbe17e82e7ad029802cfe8a2f02b15c
+ms.openlocfilehash: ff58693c8ec21b7e50e37bd85975a9ae3980a5e7
+ms.sourcegitcommit: ac4b53bb42a25aae013a9d8cd9ae98ada9397274
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35323041"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51275732"
 ---
 # <a name="using-experimental-azure-powershell-modules"></a>Använda experimentella Azure PowerShell-moduler
 
@@ -63,11 +63,11 @@ I Azure CLI 2.0 används ett antal smarta standardvärden som förenklar kom-ig�
 
 Grundläggande förbättringar räknas som ”sunt förnuft” och lite experimenterande krävs för att gå vidare och implementera uppdateringarna.
 
-- Scenario-baserade cmdletar – **All*-cmdletar bör utformas runt scenarier, inte Azure REST-tjänsten.
+- Scenario-baserade cmdletar – *<em>All</em>-cmdletar bör utformas runt scenarier, inte Azure REST-tjänsten.
 
 - Kortare namn – Omfattar namnen på cmdletar (till exempel `New-AzureRmVM` => `New-AzVm`) och parameternamnen (till exempel `-ResourceGroupName` => `-Rg`). Använd alias för kompatibilitet med ”gamla” cmdletar. Tillhandahåll _bakåtkompatibla_ parameteruppsättningar.
 
-- Smarta standardvärden – Skapa smarta standardvärden för att fylla i ”obligatorisk” information. Till exempel:
+- Smarta standardvärden – Skapa smarta standardvärden för att fylla i ”obligatorisk” information. Exempel:
   - Resursgrupp
   - Plats
   - Beroende resurser
