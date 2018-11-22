@@ -1,19 +1,18 @@
 ---
-title: Hantera Azure-prenumerationer med Azure PowerShell | Microsoft Docs
+title: Hantera Azure-prenumerationer med Azure PowerShell
 description: Hantera Azure-prenumerationer med Azure PowerShell
-keywords: Azure PowerShell, prenumeration
 author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 03/30/2017
-ms.openlocfilehash: 8869b700e513d6fc07e69de1dbfe852bd2a52df1
+ms.date: 09/11/2018
+ms.openlocfilehash: a93461af1dafbf8f2c85ef127ecaefadf3be2f52
 ms.sourcegitcommit: 80a3da199954d0ab78765715fb49793e89a30f12
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 11/22/2018
-ms.locfileid: "52258612"
+ms.locfileid: "52260033"
 ---
 # <a name="manage-multiple-azure-subscriptions"></a>Hantera flera Azure-prenumerationer
 
@@ -21,7 +20,7 @@ Om du är nybörjare på Azure har du förmodligen bara en enda prenumeration. M
 
 1. Hämta en lista över alla prenumerationer i ditt konto.
 
-    ```powershell-interactive
+    ```azurepowershell-interactive
     Get-AzureRmSubscription
     ```
 
@@ -50,13 +49,13 @@ Om du är nybörjare på Azure har du förmodligen bara en enda prenumeration. M
 
 2. Ange standard.
 
-    ```powershell-interactive
-    Select-AzureRmSubscription -SubscriptionName "My Demos"
+    ```azurepowershell-interactive
+    Select-AzureRmSubscription -Subscription "My Demos"
     ```
 
 3. Verifiera ändringen genom att köra `Get-AzureRmContext`-cmdleten.
 
-    ```powershell-interactive
+    ```azurepowershell-interactive
     Get-AzureRmContext
     ```
 
@@ -69,4 +68,4 @@ Om du är nybörjare på Azure har du förmodligen bara en enda prenumeration. M
     CurrentStorageAccount :
     ```
 
-När du ställer in din standardprenumeration körs alla efterföljande Azure PowerShell-kommandon mot den här prenumerationen.
+När du ställer in din standardprenumeration körs alla Azure PowerShell-kommandon mot den här prenumerationen.

@@ -7,43 +7,43 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 05/15/2017
-ms.openlocfilehash: 19379a57e2ed369f75b2f02c73c00c1fbe02213e
+ms.date: 09/09/2018
+ms.openlocfilehash: 433a638187f024883c177457e420a759968fed9a
 ms.sourcegitcommit: 80a3da199954d0ab78765715fb49793e89a30f12
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 11/22/2018
-ms.locfileid: "52257796"
+ms.locfileid: "52259933"
 ---
 # <a name="create-an-azure-service-principal-with-azure-powershell"></a>Skapa tjänstens huvudnamn för Azure med Azure PowerShell
 
-Om du planerar att hantera appen eller tjänsten med Azure PowerShell bör du köra denna under tjänstens huvudnamn för Azure Active Directory (AAD), i stället för dina autentiseringsuppgifter. Den här artikeln vägleder dig genom att skapa en säkerhetsprincip med Azure PowerShell.
+Om du planerar att hantera appen eller tjänsten med Azure PowerShell bör du köra denna under tjänstens huvudnamn för Azure Active Directory (AAD), i stället för dina autentiseringsuppgifter. Den här artikeln vägleder dig genom att skapa ett säkerhetsobjekt med Azure PowerShell.
 
 > [!NOTE]
 > Du kan också skapa ett huvudnamn för tjänsten via Azure Portal. Läs [Använd portalen för att skapa Active Directory-program och ett huvudnamn för tjänsten som får åtkomst till resurser](/azure/azure-resource-manager/resource-group-create-service-principal-portal) för mer information.
 
 ## <a name="what-is-a-service-principal"></a>Vad är ett huvudnamn för tjänsten?
 
-Ett huvudnamn för Azure-tjänsten är en säkerhetsidentitet som används av appar som skapats av användare, tjänster och automatiseringsverktyg för att få åtkomst till specifika Azure-resurser. Se det som en användaridentitet (användarnamn och lösenord eller certifikat) med en specifik roll och väl kontrollerade behörigheter. Den behöver bara kunna utföra vissa åtgärder, till skillnad från en allmän användaridentitet. Det ger bättre säkerhet om du bara ger den lägsta behörighetsnivån som krävs för att den ska kunna utföra sina administrativa uppgifter.
+Ett huvudnamn för Azure-tjänsten är en säkerhetsidentitet som används av appar som skapats av användare, tjänster och automatiseringsverktyg för att få åtkomst till specifika Azure-resurser. Se det som en användaridentitet (användarnamn och lösenord eller certifikat) med en specifik roll och väl kontrollerade behörigheter. Ett huvudnamn för tjänsten bör bara behöva utföra vissa åtgärder, till skillnad från en allmän användaridentitet. Det ger bättre säkerhet om du bara ger den lägsta behörighetsnivån som krävs för att den ska kunna utföra sina administrativa uppgifter.
 
 ## <a name="verify-your-own-permission-level"></a>Kontrollera din egen behörighetsnivå
 
-Först måste du ha tillräcklig behörighet i Azure Active Directory och Azure-prenumerationen. Du måste specifikt kunna skapa en app i Active Directory och tilldela en roll till tjänstens huvudnamn.
+Först måste du ha tillräcklig behörighet i Azure Active Directory och Azure-prenumerationen. Du måste kunna skapa en app i Active Directory och tilldela en roll till tjänstens huvudnamn.
 
-Det enklaste sättet att kontrollera om kontot har tillräcklig behörighet är via portalen. Se [Kontrollera behörighet som krävs i portalen](/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions).
+Det enklaste sättet att kontrollera om kontot har rätt behörighet är via portalen. Se [Kontrollera behörighet som krävs i portalen](/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions).
 
 ## <a name="create-a-service-principal-for-your-app"></a>Skapa ett huvudnamn för tjänsten för appen
 
-När du är inloggad på ditt Azure-konto, kan du skapa tjänstens huvudnamn. Du måste ha någon av följande metoder för att identifiera den distribuerade appen:
+När du är inloggad på ditt Azure-konto kan du skapa tjänstens huvudnamn. Du måste ha någon av följande metoder för att identifiera den distribuerade appen:
 
 * Det unika namnet för den distribuerade appen, t.ex. "MyDemoWebApp" i följande exempel, eller
 * program-ID, unikt GUID som är kopplat till den distribuerade appen, tjänsten eller objektet
 
 ### <a name="get-information-about-your-application"></a>Hämta information om programmet
 
-Cmdleten `Get-AzureRmADApplication` kan användas för att identifiera information om programmet.
+Cmdleten `Get-AzureRmADApplication` kan användas för att hämta information om programmet.
 
-```powershell-interactive
+```azurepowershell-interactive
 Get-AzureRmADApplication -DisplayNameStartWith MyDemoWebApp
 ```
 
@@ -63,10 +63,11 @@ ReplyUrls               : {}
 
 Cmdleten `New-AzureRmADServicePrincipal` används för att skapa tjänstens huvudnamn.
 
-```powershell-interactive
+```azurepowershell-interactive
 Add-Type -Assembly System.Web
 $password = [System.Web.Security.Membership]::GeneratePassword(16,3)
-New-AzureRmADServicePrincipal -ApplicationId 00c01aaa-1603-49fc-b6df-b78c4e5138b4 -Password $password
+$securePassword = ConvertTo-SecureString -Force -AsPlainText -String $password
+New-AzureRmADServicePrincipal -ApplicationId 00c01aaa-1603-49fc-b6df-b78c4e5138b4 -Password $securePassword
 ```
 
 ```output
@@ -77,7 +78,7 @@ MyDemoWebApp                   ServicePrincipal               698138e7-d7b6-4738
 
 ### <a name="get-information-about-the-service-principal"></a>Hämta information om tjänstens huvudnamn
 
-```powershell-interactive
+```azurepowershell-interactive
 $svcprincipal = Get-AzureRmADServicePrincipal -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4
 $svcprincipal | Select-Object *
 ```
@@ -92,14 +93,14 @@ Type                  : ServicePrincipal
 
 ### <a name="sign-in-using-the-service-principal"></a>Logga in med tjänstens huvudnamn
 
-Du kan nu logga in som det nya huvudnamnet för tjänsten för appen med hjälp av det *appId* och *lösenord* du angav. Du måste ange klient-ID för kontot. Klient-ID visas när du loggar in på Azure med dina personliga autentiseringsuppgifter.
+Du kan nu logga in som det nya huvudnamnet för tjänsten för appen med hjälp av det *appId* och *lösenord* du angav. Du behöver också klient-ID:t för tjänstens huvudnamn. Ditt klient-ID visas när du loggar in på Azure med dina personliga autentiseringsuppgifter. Använd följande kommandon för att logga in med ett huvudnamn för tjänsten:
 
-```powershell-interactive
+```azurepowershell-interactive
 $cred = Get-Credential -UserName $svcprincipal.ApplicationId -Message "Enter Password"
-Login-AzureRmAccount -Credential $cred -ServicePrincipal -TenantId XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+Connect-AzureRmAccount -Credential $cred -ServicePrincipal -TenantId XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 ```
 
-Kör detta kommando från en ny PowerShell-session. När registreringen är klar ser du något som liknar följande:
+Efter en lyckad inloggning visas utdata som liknar följande:
 
 ```output
 Environment           : AzureCloud
@@ -128,7 +129,7 @@ Rollen **Läsare** är mer begränsad och kan vara ett bra val för skrivskyddad
 
 I det här exemplet lägger vi till rollen **Läsare** i vårt tidigare exempel och tar bort rollen **Deltagare**:
 
-```powershell-interactive
+```azurepowershell-interactive
 New-AzureRmRoleAssignment -ResourceGroupName myRG -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4 -RoleDefinitionName Reader
 ```
 
@@ -143,13 +144,13 @@ ObjectId           : 698138e7-d7b6-4738-a866-b4e3081a69e4
 ObjectType         : ServicePrincipal
 ```
 
-```powershell-interactive
+```azurepowershell-interactive
 Remove-AzureRmRoleAssignment -ResourceGroupName myRG -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4 -RoleDefinitionName Contributor
 ```
 
 Visa de tilldelade rollerna:
 
-```powershell-interactive
+```azurepowershell-interactive
 Get-AzureRmRoleAssignment -ResourceGroupName myRG -ObjectId 698138e7-d7b6-4738-a866-b4e3081a69e4
 ```
 
@@ -177,7 +178,7 @@ Det är en bra säkerhetsrutin att granska behörigheter och uppdatera lösenord
 
 ### <a name="add-a-new-password-for-the-service-principal"></a>Lägga till ett nytt lösenord för tjänstens huvudnamn
 
-```powershell-interactive
+```azurepowershell-interactive
 $password = [System.Web.Security.Membership]::GeneratePassword(16,3)
 New-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp -Password $password
 ```
@@ -190,7 +191,7 @@ StartDate           EndDate             KeyId                                Typ
 
 ### <a name="get-a-list-of-credentials-for-the-service-principal"></a>Hämta en lista över autentiseringsuppgifter för tjänstens huvudnamn
 
-```powershell-interactive
+```azurepowershell-interactive
 Get-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp
 ```
 
@@ -203,7 +204,7 @@ StartDate           EndDate             KeyId                                Typ
 
 ### <a name="remove-the-old-password-from-the-service-principal"></a>Ta bort det gamla lösenordet för tjänstens huvudnamn
 
-```powershell-interactive
+```azurepowershell-interactive
 Remove-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp -KeyId ca9d4846-4972-4c70-b6f5-a4effa60b9bc
 ```
 
@@ -216,7 +217,7 @@ service principal objectId '698138e7-d7b6-4738-a866-b4e3081a69e4'.
 
 ### <a name="verify-the-list-of-credentials-for-the-service-principal"></a>Bekräfta listan över autentiseringsuppgifter för tjänstens huvudnamn
 
-```powershell-interactive
+```azurepowershell-interactive
 Get-AzureRmADSpCredential -ServicePrincipalName http://MyDemoWebApp
 ```
 
