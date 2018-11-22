@@ -6,19 +6,19 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 08/31/2017
-ms.openlocfilehash: 164444b7bacbef202513bfafe2f75bdcd6d027c4
+ms.date: 09/09/2018
+ms.openlocfilehash: a07b5fe8cd532f99038d7f0ce10b3b891c896da1
 ms.sourcegitcommit: 80a3da199954d0ab78765715fb49793e89a30f12
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 11/22/2018
-ms.locfileid: "52258255"
+ms.locfileid: "52259960"
 ---
-# <a name="persisting-user-credentials-across-powershell-sessions"></a>Spara autentiseringsuppgifter för användare mellan olika PowerShell-sessioner
+# <a name="persist-user-credentials-across-powershell-sessions"></a>Bevara autentiseringsuppgifter för användare mellan PowerShell-sessioner
 
 Azure PowerShell erbjuder en funktion som kallas **Azure Context Autosave**, som ger följande funktioner:
 
-- Bevara inloggningsinformation för återanvändning nya PowerShell-sessioner.
+- Bevara inloggningsinformation för återanvändning i nya PowerShell-sessioner.
 - Enklare användning av bakgrundsaktiviteter för att köra tidskrävande cmdletar.
 - Växla mellan konton, prenumerationer och miljöer utan separat inloggning.
 - Köra uppgifter med olika autentiseringsuppgifter och prenumerationer, samtidigt från samma PowerShell-session.
@@ -28,22 +28,20 @@ Azure PowerShell erbjuder en funktion som kallas **Azure Context Autosave**, som
 En *Azure-kontext* är en informationsuppsättning som definierar målet för Azure PowerShell-cmdletar. Kontexten består av fem delar:
 
 - Ett *konto* – användarnamnet eller tjänstens huvudnamn som används för att autentisera kommunikationen med Azure
-- En *prenumeration* – den Azure-prenumeration som innehåller de resurser där åtgärder vidtas.
+- En *prenumeration* – Azure-prenumerationen med de resurser där åtgärder vidtas.
 - En *klientorganisation* – Azure Active Directory-klienten som innehåller din prenumeration. Klienter är viktigare för ServicePrincipal-autentisering.
 - En *miljö* – det specifika Azure-moln som är målet, vanligtvis det globala Azure-molnet.
   Med miljöinställningen kan du även ange nationella, offentliga och lokala moln (Azure Stack) som mål.
-- *Autentiseringsuppgifter* – den information som används av Azure för att verifiera din identitet och kontrollera din behörighet att komma åt resurser i Azure
+- *Autentiseringsuppgifter* – den information som används av Azure för att verifiera din identitet och bekräfta din behörighet att komma åt resurser i Azure
 
-I tidigare versioner måste Azure-kontexten skapas varje gång du öppnade en ny PowerShell-session. Från och med Azure PowerShell v4.4.0 kan du aktivera funktionen att spara automatiskt och återanvända Azure-kontexter varje gång du öppnar en ny PowerShell-session.
+I tidigare versioner måste en Azure-kontext skapas varje gång du öppnade en ny PowerShell-session. Från och med Azure PowerShell v4.4.0 kan Azure-kontexter sparas automatiskt när du öppnar en ny PowerShell-session.
 
-## <a name="automatically-saving-the-context-for-the-next-sign-in"></a>Spara automatiskt kontexten för nästa inloggning
+## <a name="automatically-save-the-context-for-the-next-sign-in"></a>Spara automatiskt kontexten för nästa inloggning
 
-Som standard tar Azure PowerShell bort din kontextinformation när du stänger PowerShell-sessionen.
+I version 6.3.0 och senare behåller Azure PowerShell din kontextinformation mellan sessioner automatiskt. Om du vill ange att PowerShell ska glömma kontexten och autentiseringsuppgifterna ska du använda `Disable-AzureRmContextAutoSave`. Du måste logga in på Azure varje gång du öppnar en PowerShell-session.
 
 Om du vill tillåta Azure PowerShell att komma ihåg kontexten när PowerShell-sessionen avslutas ska du använda `Enable-AzureRmContextAutosave`. Information om kontext och autentiseringsuppgifter sparas automatiskt i en särskild dold mapp i användarkatalogen (`%AppData%\Roaming\Windows Azure PowerShell`).
-I varje ny PowerShell-session därefter används kontexten i den senaste sessionen som mål.
-
-Om du vill ange att PowerShell ska glömma kontexten och autentiseringsuppgifterna ska du använda `Disable-AzureRmContextAutoSave`. Du måste logga in på Azure varje gång du öppnar en PowerShell-session.
+I varje ny PowerShell-session används kontexten i den senaste sessionen som mål.
 
 Med de cmdletar du kan använda för att hantera Azure-kontexter kan du också göra mer detaljerade inställningar. Om du vill att ändringarna ska tillämpas endast på den aktuella PowerShell-sessionen (omfånget `Process`) eller alla PowerShell-sessioner (omfånget `CurrentUser`). Dessa alternativ beskrivs mer detaljerat i [Använda kontextomfång](#Using-Context-Scopes).
 
@@ -71,7 +69,7 @@ När du behöver veta resultatet av en bakgrundsaktivitet kan du använda `Get-J
 
 ## <a name="creating-selecting-renaming-and-removing-contexts"></a>Skapa, välja, byta namn på och ta bort kontexter
 
-Om du vill skapa en kontext måste du vara inloggad i Azure. Med cmdleten `Connect-AzureRmAccount` (eller dess alias `Login-AzureRmAccount`) anger du standardkontexten som används av efterföljande Azure PowerShell-cmdletar och kan komma åt alla klienter eller prenumerationer som tillåts med dina autentiseringsuppgifter.
+Om du vill skapa en kontext måste du vara inloggad i Azure. Med cmdleten `Connect-AzureRmAccount` (eller dess alias `Login-AzureRmAccount`) anger du standardkontexten som används av Azure PowerShell-cmdletar och kan komma åt alla klienter eller prenumerationer som tillåts med dina autentiseringsuppgifter.
 
 Om du vill lägga till en ny kontext efter inloggningen använder du `Set-AzureRmContext` (eller dess alias `Select-AzureRmSubscription`).
 
@@ -95,7 +93,7 @@ Slutligen, för att ta bort en kontext använder du cmdlet `Remove-AzureRmContex
 PS C:\> Remove-AzureRmContext Contoso2
 ```
 
-Glömmer kontexten med namnet ”Contoso2”. Du kan återskapa den här kontexten senare med hjälp av `Set-AzureRmContext`
+Glömmer kontexten med namnet ”Contoso2”. Du kan återskapa den här kontexten med hjälp av `Set-AzureRmContext`
 
 ## <a name="removing-credentials"></a>Ta bort autentiseringsuppgifter
 
@@ -123,7 +121,7 @@ Inställningen för att spara kontext automatiskt sparas i användarens Azure Po
 $env:AzureRmContextAutoSave="true" | "false"
 ```
 
-Om värdet är true sparas kontexten automatiskt. Om värdet är false sparas inte kontexten.
+När värdet är true sparas kontexten automatiskt. Om värdet är false sparas inte kontexten.
 
 ## <a name="changes-to-the-azurermprofile-module"></a>Ändringar i modulen AzureRM.Profile
 
@@ -132,7 +130,7 @@ Nya cmdletar för att hantera kontext
 - [Enable-AzureRmContextAutosave][enable] – Tillåt att kontexten sparas mellan PowerShell-sessioner.
   Eventuella ändringar ändrar den globala kontexten.
 - [Disable-AzureRmContextAutosave][disable] – Inaktivera automatiskt sparande av kontexten. Inloggning krävs för varje ny PowerShell-session.
-- [Select-AzureRmContext][select] – Välj en kontext som standard. Alla efterföljande cmdletar använder autentiseringsuppgifterna i den här kontexten för autentisering.
+- [Select-AzureRmContext][select] – Välj en kontext som standard. Alla cmdletar använder autentiseringsuppgifterna i den här kontexten för autentisering.
 - [Disconnect-AzureRmAccount][remove-cred] – Ta bort alla autentiseringsuppgifter och kontexter som är kopplade till ett konto.
 - [Remove-AzureRmContext][remove-context] – Ta bort en namngiven kontext.
 - [Rename-AzureRmContext][rename] – Byt namn på en befintlig kontext.
@@ -154,5 +152,5 @@ Nya cmdletar för att hantera kontext
 
 <!-- Updated cmdlets -->
 [login]: /powershell/module/azurerm.profile/Connect-AzureRmAccount
-[import]: /powershell/module/azurerm.profile/Import-AzureRmAccount
-[set-context]: /powershell/module/azurerm.profile/Import-AzureRmContext
+[import]:  /powershell/module/azurerm.profile/Import-AzureRmContext
+[set-context]: /powershell/module/azurerm.profile/Set-AzureRmContext
