@@ -6,13 +6,13 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 11/16/2018
-ms.openlocfilehash: 32e96c6459c9db0c4b9eda0cc170c85ba99a22ca
-ms.sourcegitcommit: 80a3da199954d0ab78765715fb49793e89a30f12
+ms.date: 11/26/2018
+ms.openlocfilehash: 3d52b18750341f220dc8e10d6bf89796457c5a10
+ms.sourcegitcommit: 558436c824d9b59731aa9b963cdc8df4dea932e7
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "52260020"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52588187"
 ---
 # <a name="install-the-azure-powershell-az-module"></a>Installera modulen Azure PowerShell ”Az”
 
@@ -32,7 +32,9 @@ Om du har en inaktuell version eller behöver installera PowerShell kan du läsa
 
 > [!IMPORTANT]
 >
-> Du bör inte ha både `AzureRM`- och `Az`-modulen installerade på ett system på samma gång. För att kunna installera `Az`-modulen måste `AzureRM` avinstalleras. Anvisningar om hur du gör det finns i [Avinstallera Azure PowerShell-modulen (AzureRM)](uninstall-azurerm-ps.md).
+> Du kan ha både modulen `AzureRM` och modulen `Az` installerade samtidigt. Om du har båda modulerna installerade __ska du inte aktivera__ -alias.
+> Om du aktiverar alias skapas konflikter mellan `AzureRM`-cmdletar och `Az`-kommandoalias och detta kan orsaka oväntat beteende.
+> Vi rekommenderar att du avinstallerar `AzureRM` innan du installerar modulen `Az`. Du kan alltid avinstallera `AzureRM` eller aktivera alias när som helst. Anvisningar om hur du avinstallerar finns i [Avinstallera Azure PowerShell-modulen (AzureRM)](uninstall-azurerm-ps.md). 
 
 Om du vill installera moduler med globalt omfång behöver du ha utökade privilegier för att installera moduler från PowerShell-galleriet. Du installerar Azure PowerShell genom att köra följande kommando i en upphöjd session (”Kör som administratör” på Windows eller med superanvändarprivilegier på macOS eller Linux):
 
