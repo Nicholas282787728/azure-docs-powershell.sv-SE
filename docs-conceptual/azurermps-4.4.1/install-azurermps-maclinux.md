@@ -8,11 +8,11 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/06/2018
 ms.openlocfilehash: 47611281f67d68c9fc2686e0c6156b060a225158
-ms.sourcegitcommit: 558436c824d9b59731aa9b963cdc8df4dea932e7
+ms.sourcegitcommit: 087c588169786c005a3c177624fb3ac6c8870125
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586691"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53217532"
 ---
 # <a name="install-azure-powershell-on-macos-or-linux"></a>Installera Azure PowerShell på macOS eller Linux
 

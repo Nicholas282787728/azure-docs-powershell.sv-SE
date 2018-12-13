@@ -4,11 +4,11 @@ ms.author: sttramer
 ms.date: 10/22/2018
 ms.topic: include
 ms.openlocfilehash: 02a7969c5a52f47de2024485e642ed03834fe8e9
-ms.sourcegitcommit: 558436c824d9b59731aa9b963cdc8df4dea932e7
+ms.sourcegitcommit: 087c588169786c005a3c177624fb3ac6c8870125
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52588272"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53218246"
 ---
 > [!NOTE]
 > 

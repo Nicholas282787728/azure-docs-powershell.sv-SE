@@ -8,11 +8,11 @@ ms.manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.openlocfilehash: b0f31341d4344bdac5b4d657a1f66acfd9984dda
-ms.sourcegitcommit: 558436c824d9b59731aa9b963cdc8df4dea932e7
+ms.sourcegitcommit: 087c588169786c005a3c177624fb3ac6c8870125
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52587320"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53217549"
 ---
 # <a name="introducing-the-new-azure-powershell-az-module"></a>Introduktion till den nya Azure PowerShell Az-modulen
 
