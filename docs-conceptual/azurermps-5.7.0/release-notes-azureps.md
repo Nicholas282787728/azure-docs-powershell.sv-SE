@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.workload: ''
 ms.date: 2/20/2018
 ms.openlocfilehash: 1a9d38cd60ba596c085e5ee9f8d815e238362b1f
-ms.sourcegitcommit: 558436c824d9b59731aa9b963cdc8df4dea932e7
+ms.sourcegitcommit: 087c588169786c005a3c177624fb3ac6c8870125
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586725"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53218110"
 ---
 # <a name="release-notes"></a>Viktig information
 
@@ -273,14 +273,14 @@ Update-Module -Name AzureRM
     - Remove-AzureRmNetworkWatcherConnectionMonitor
 * Dokumentationen Set-AzureRmApplicationGatewayBackendAddressPool för att ta bort föråldrat exempel har uppdaterats
 * EnableHttp2-flagga har lagts till i Application Gateway
-    - New-AzureRmApplicationGateway har uppdaterats: den valfria parametern -EnableHttp2 har lagts till
+    - New-AzureRmApplicationGateway har uppdaterats: Ny valfri parameter har lagts till: -EnableHttp2
 * Lägg till IpTags i PublicIpAddress
     - New-AzureRmPublicIpAddress har uppdaterats: IpTags har lagts till
     - New-AzureRmPublicIpTag för att lägga till Iptag
 * Lägg till DisableBgpRoutePropagation-egenskap i RouteTable och effectiveRoute.
 
 #### <a name="azurermresources"></a>AzureRM.Resources
-* Registrera-AzureRmProviderFeature: exempel som saknades i dokumenten har lagts till
+* Register-AzureRmProviderFeature: exempel som saknades i dokumenten har lagts till
 * Register-AzureRmResourceProvider: exempel som saknades i dokumenten har lagts till
 
 #### <a name="azurermstorage"></a>AzureRM.Storage
@@ -349,7 +349,7 @@ Update-Module -Name AzureRM
 * Stöd har lagts till för V2 API-frågor via `Invoke-AzureRmOperationalInsightsQuery`. Mer information om det nya API:et finns i [https://dev.loganalytics.io/](https://dev.loganalytics.io/).
 
 ### <a name="azurermresources"></a>AzureRM.Resources
-* `Get-AzureRmADServicePrincipal`: har tagits bort `-ServicePrincipalName` från standardparameteruppsättningen Empty eftersom den var redundant i SPN-parameteruppsättningen
+* `Get-AzureRmADServicePrincipal`: `-ServicePrincipalName` har tagits bort från standardparameteruppsättningen Empty eftersom den var redundant i SPN-parameteruppsättningen
 
 ### <a name="azurermservicebus"></a>AzureRM.ServiceBus
 
@@ -491,7 +491,7 @@ Update-Module -Name AzureRM
 * Platsifyllning har lagts till i -Location-parametrar vilket möjliggör tabbifyllning via giltiga platser
 * ResourceGroup-ifyllning har lagts till i -ResourceGroup-parametrar vilket möjliggör tabbifyllning via resursgrupper i den aktuella prenumerationen
 * Stöd för -AsJob för tidskrävande KeyVault-cmdletar har lagts till. Tillåter att valda cmdletar körs i bakgrunden och returnerar ett jobb för att spåra och kontrollera förloppet.
-  * Den berörda cmdleten är: Remove-AzureRmKeyVault
+  * Berörd cmdlet: Remove-AzureRmKeyVault
 * En bugg i Set-AzureRmKeyVaultAccessPolicy där AAD-filtret ställde in SPN till angivet UPN i stället för att ställa in UPN har åtgärdats
   - Se följande problem för mer information: https://github.com/Azure/azure-powershell/issues/5201
 
@@ -642,15 +642,15 @@ Update-Module -Name AzureRM
   - En parameter med namnet ScriptParameter för Submit-AzureRmDataLakeAnalyticsJob har lagts till
     - Du kan hitta detaljerad information om ScriptParameter med hjälp av Get-Help på Submit-AzureRmDataLakeAnalyticsJob
   - Parametern MaxDegreeOfParallelism till MaxAnalyticsUnits för New-AzureRmDataLakeAnalyticsAccount har ändrats
-    - Ett alias för parametern MaxAnalyticsUnits: MaxDegreeOfParallelism har lagts till
+    - Ett alias för parametern MaxAnalyticsUnits har lagts till: MaxDegreeOfParallelism
   - Parametern MaxDegreeOfParallelismPerJob till MaxAnalyticsUnitsPerJob för New-AzureRmDataLakeAnalyticsComputePolicy har ändrats
-    - Ett alias för parametern MaxAnalyticsUnitsPerJob: MaxDegreeOfParallelismPerJob har lagts till
+    - Ett alias för parametern MaxAnalyticsUnitsPerJob har lagts till: MaxDegreeOfParallelismPerJob
   - Parametern MaxDegreeOfParallelism till MaxAnalyticsUnits för Set-AzureRmDataLakeAnalyticsAccount har ändrats
-    - Ett alias för parametern MaxAnalyticsUnits: MaxDegreeOfParallelism har lagts till
+    - Ett alias för parametern MaxAnalyticsUnits har lagts till: MaxDegreeOfParallelism
   - Parametern DegreeOfParallelism till AnalyticsUnits för Submit-AzureRmDataLakeAnalyticsJob har ändrats
-    - Ett alias för parametern AnalyticsUnits: DegreeOfParallelism har lagts till
+    - Ett alias för parametern AnalyticsUnits har lagts till: DegreeOfParallelism
   - Parametern MaxDegreeOfParallelismPerJob till MaxAnalyticsUnitsPerJob för Update-AzureRmDataLakeAnalyticsComputePolicy har ändrats
-    - Ett alias för parametern MaxAnalyticsUnitsPerJob: MaxDegreeOfParallelismPerJob har lagts till
+    - Ett alias för parametern MaxAnalyticsUnitsPerJob har lagts till: MaxDegreeOfParallelismPerJob
 * MachineLearningCompute
   - Lägg till Set-AzureRmMlOpCluster
     - Uppdatera ett klusters agentantal eller SSL-konfiguration
@@ -721,7 +721,7 @@ Update-Module -Name AzureRM
   - AzureRM.StreamAnalytics
 
 ## <a name="2017118---version-500"></a>2017-11-08 – version 5.0.0
-* Obs! Detta är en viktig ändring. I migreringsguiden (https://aka.ms/azps-migration-guide) finns en fullständig lista över viktiga ändringar som har introducerats.
+* OBS! Detta är en icke-bakåtkompatibel ändring. I migreringsguiden (https://aka.ms/azps-migration-guide) finns en fullständig lista över viktiga ändringar som har introducerats.
 * Alla cmdletar i AzureRM stöder nu onlinehjälp
   - Kör Get-Help med parametern -Online för att öppna onlinehjälpen i din standardwebbläsare
 * AnalysisServices
@@ -753,7 +753,7 @@ Update-Module -Name AzureRM
     - `PoolAllocationMode`: Allokeringsläget som ska användas för att skapa pooler i Batch-kontot. Om du vill skapa ett Batch-konto som allokerar poolnoder i användarens prenumeration ställer du in detta på `UserSubscription`.
     - `KeyVaultId`: Resurs-ID:t till det Azure-nyckelvalv som är associerat till Batch-kontot.
     - `KeyVaultUrl`: Webbadressen till det Azure-nyckelvalv som är associerat till Batch-kontot.
-  * Uppdaterade parametrar till `New-AzureBatchTask`.
+  * Parametrar för `New-AzureBatchTask` har uppdaterats.
     - Switchen `RunElevated` har tagits bort. Parametern `UserIdentity` har lagts till för att ersätta `RunElevated`, och motsvarande beteende kan uppnås om en `PSUserIdentity` byggs enligt nedan:
       - $autoUser = New-Object Microsoft.Azure.Commands.Batch.Models.PSAutoUserSpecification -ArgumentList @("Task", "Admin")
       - $userIdentity = New-Object Microsoft.Azure.Commands.Batch.Models.PSUserIdentity $autoUser

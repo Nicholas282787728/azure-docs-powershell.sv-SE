@@ -8,16 +8,16 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/27/2018
 ms.openlocfilehash: ef796bcb81e24b1942c644aad2b4ec7705916b02
-ms.sourcegitcommit: 558436c824d9b59731aa9b963cdc8df4dea932e7
+ms.sourcegitcommit: 087c588169786c005a3c177624fb3ac6c8870125
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52588153"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53217753"
 ---
 # <a name="install-and-configure-azure-powershell"></a>Installera och konfigurera Azure PowerShell
 
 Den här artikeln beskriver stegen för att installera Azure PowerShell-moduler i en Windows-miljö.
-Läs följande artikel om du vill använda Azure PowerShell på macOS eller Linux: [Installera och konfigurera Azure PowerShell på macOS och Linux](install-azurermps-maclinux.md).
+Om du vill använda Azure PowerShell på macOS eller Linux kan du läsa följande artikel: [Installera och konfigurera Azure PowerShell på macOS och Linux](install-azurermps-maclinux.md).
 
 Det rekommenderade sättet att installera Azure PowerShell är från PowerShell-galleriet.
 

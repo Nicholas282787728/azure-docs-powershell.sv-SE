@@ -8,19 +8,19 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: knithinc
 ms.date: 09/21/2018
-ms.openlocfilehash: fb892daeafb1365ea62324392ac806cf9f3d39cf
-ms.sourcegitcommit: 558436c824d9b59731aa9b963cdc8df4dea932e7
+ms.openlocfilehash: 3add10651334a9c8a1e4ebfd5c8b9cfbf0cc7981
+ms.sourcegitcommit: 087c588169786c005a3c177624fb3ac6c8870125
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586674"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53218025"
 ---
 # <a name="azure-stack-module-130"></a>Modulen Azure Stack 1.3.0
 
 ## <a name="requirements"></a>Krav:
 Lägsta version av Azure Stack som stöds är 1804.
 
-Obs! Om du använder en tidigare version måste du installera version 1.2.11
+Obs! Om du använder en tidigare version så måste du installera version 1.2.11
 
 ## <a name="known-issues"></a>Kända problem:
 

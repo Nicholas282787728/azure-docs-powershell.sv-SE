@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.workload: ''
 ms.date: 08/28/2018
 ms.openlocfilehash: 7f517f0b3768a2075557b131158ee1264ea9ab3f
-ms.sourcegitcommit: 558436c824d9b59731aa9b963cdc8df4dea932e7
+ms.sourcegitcommit: 087c588169786c005a3c177624fb3ac6c8870125
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52587847"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53218229"
 ---
 # <a name="release-notes"></a>Viktig information
 
@@ -166,9 +166,9 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
 
 #### <a name="azurermdatalakestore"></a>AzureRM.DataLakeStore
 * Lägger till stöd för virtuella nätverksregler
-    - Get-AzureRmDataLakeStoreVirtualNetworkRule: Hämtar eller lägger till regel för virtuellt nätverk i Azure Data Lake Store i en lista.
-    - Add-AzureRmDataLakeStoreVirtualNetworkRule: Lägger till en virtuell nätverksregel till det angivna Data Lake Store-kontot.
-    - Set-AzureRmDataLakeStoreVirtualNetworkRule: Ändrar den angivna virtuella nätverksregeln i det angivna Data Lake Store-kontot.
+    - Get-AzureRmDataLakeStoreVirtualNetworkRule: Hämtar eller listar regel för virtuellt Azure Data Lake Store-nätverk.
+    - Add-AzureRmDataLakeStoreVirtualNetworkRule: Lägger till en regel för det virtuella nätverket till det angivna Data Lake Store-kontot.
+    - Set-AzureRmDataLakeStoreVirtualNetworkRule: Ändrar den angivna regeln för det virtuella nätverket i det angivna Data Lake Store-kontot.
     - Remove-AzureRmDataLakeStoreVirtualNetworkRule: Tar bort en regel för virtuellt nätverk i Azure Data Lake Store.
 
 #### <a name="azurermnetwork"></a>AzureRM.Network
@@ -778,7 +778,7 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
 * Nedanstående cmdletar för Application Gateway har uppdaterats
     - New-AzureRmApplicationGateway: EnableFIPS-flagga har lagts till för stöd för zoner
     - New-AzureRmApplicationGatewaySku: nya SKU:er, Standard_v2 och WAF_v2, har lagts till
-    - Set-AzureRmApplicationGatewaySku: nya SKU:er, Standard_v2 och WAF_v2, har lagts till
+    - Set-AzureRmApplicationGatewaySku : nya SKU:er, Standard_v2 och WAF_v2, har lagts till
 * RouteTable-cmdletar har återskapats med den senaste versionen av generatorn
 
 #### <a name="azurermrelay"></a>AzureRM.Relay
@@ -852,7 +852,7 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
 
 #### <a name="azurermnetwork"></a>AzureRM.Network
 * Gör nya SKU:er tillgängliga för zonredundanta VirtualNetworkGateways
-* Nya kommandon har lagts till för funktionen: ExpressRoute Partner APIs via ARM
+* Nya kommandon har lagts till för funktionen: ExpressRoute Partner API:er via ARM
     - Get-AzureRmExpressRouteCrossConnection har lagts till
     - Set-AzureRmExpressRouteCrossConnection har lagts till
     - Add-AzureRmExpressRouteCrossConnectionPeering har lagts till

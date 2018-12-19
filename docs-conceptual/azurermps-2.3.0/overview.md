@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.manager: knithinc
 ms.date: 09/21/2018
 ms.openlocfilehash: cd415e862bfaa2b767cce108689ebaf34ef74305
-ms.sourcegitcommit: 558436c824d9b59731aa9b963cdc8df4dea932e7
+ms.sourcegitcommit: 087c588169786c005a3c177624fb3ac6c8870125
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586929"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53218161"
 ---
 # <a name="azurerm-module-230"></a>AzureRM-modul 2.3.0
 
 ## <a name="requirements"></a>Krav:
 Den lägsta versionen av Azure Stack som stöds är 1808.
 
-Obs! Om du använder en tidigare version måste du installera version 1.2.11
+Obs! Om du använder en tidigare version så måste du installera version 1.2.11
 
 
 ## <a name="install"></a>Installera
