@@ -7,15 +7,17 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: carmonm
-ms.date: 09/11/2018
-ms.openlocfilehash: bdd8e69a2ea9df8b4fff100e1f3cc4c82d2d9d9d
-ms.sourcegitcommit: 087c588169786c005a3c177624fb3ac6c8870125
+ms.date: 12/20/2018
+ms.openlocfilehash: eaa4e3ccd2b53304aeaf9cb184814b83f4f88608
+ms.sourcegitcommit: 4acddc7026522c4fe39de2c4424917d88ee01b7e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53217821"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53736400"
 ---
 # <a name="overview-of-azure-powershell"></a>Översikt över Azure PowerShell
+
+[!INCLUDE[az-replacing-azurerm](../includes/az-replacing-azurerm.md)]
 
 Azure PowerShell tillhandahåller en uppsättning cmdletar som använder [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview)-modellen för att hantera dina Azure-resurser. Du kan använda det i webbläsaren med [Azure Cloud Shell](/azure/cloud-shell/overview) eller installera det på din lokala dator och använda det i PowerShell-sessioner.
 
@@ -27,8 +29,6 @@ Med hjälp av följande exempel kan du lära dig hur du utför vanliga scenarier
 * [Virtuella Windows-datorer](/azure/virtual-machines/virtual-machines-windows-powershell-samples?toc=/powershell/azure/toc.json)
 * [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json)
 * [SQL-databaser](/azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json)
-
-[!INCLUDE[az-replacing-azurerm](../includes/az-replacing-azurerm.md)]
 
 ## <a name="learn-powershell-basics"></a>Lär dig grunderna i PowerShell
 

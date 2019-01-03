@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/06/2017
-ms.openlocfilehash: 6cc6d9984e49c0cbc23c7ef3a77b98c0b7f3a8e0
-ms.sourcegitcommit: 087c588169786c005a3c177624fb3ac6c8870125
+ms.openlocfilehash: b7283e4a54cd423282141c07750630050799d59c
+ms.sourcegitcommit: 6685809f054203bd733c84f68acc69e53e5cca8c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53217787"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53982798"
 ---
 # <a name="installing-the-azure-powershell-service-management-module"></a>Installera Azure PowerShell Service Management-modulen
 
@@ -23,7 +23,7 @@ Vi rekommenderar att du installerar Azure PowerShell från [PowerShell-galleriet
 Du måste ha modulen PowerShellGet för att kunna installera objekt från PowerShell-galleriet. Kontrollera att du har rätt version av PowerShellGet och att datorn uppfyller övriga systemkrav. Kör följande kommando för att se om du har PowerShellGet installerat på datorn.
 
 ```powershell
-Get-Module PowerShellGet -list | Select-Object Name,Version,Path
+Get-InstalledModule PowerShellGet -AllVersions | Select-Object Name,Version,Path
 ```
 
 Nu bör du se utdata som ser ut ungefär så här:
@@ -70,7 +70,7 @@ När du har loggat in på Azure skapar Azure PowerShell en kontext för den angi
 
 ## <a name="azure-service-management-cmdlets"></a>Azure Service Management-cmdletar
 
-Azure PowerShell-modulerna uppdateras kontinuerligt. Om du märker att onlinehjälpen för cmdletar omfattar cmdletar eller parametrar som inte finns i din modul bör du hämta och installera den senaste versionen av modulen. Du kan hitta modulens version genom att skriva in: `(Get-Module Azure).Version`.
+Azure PowerShell-modulerna uppdateras kontinuerligt. Om du märker att onlinehjälpen för cmdletar omfattar cmdletar eller parametrar som inte finns i din modul bör du hämta och installera den senaste versionen av modulen. Du kan hitta modulens version genom att skriva in: `(Get-InstalledModule Azure).Version`.
 
 Om du vill ha exempelskript som kan hjälpa dig att automatisera vissa av de vanliga uppgifterna i Azure kan du se [Windows Azure Script Center](http://www.windowsazure.com/documentation/scripts/).
 
@@ -88,8 +88,8 @@ Allmän information om installation, inlärning, användning och anpassning av W
 
 ### <a name="checking-the-version-of-azure-powershell"></a>Kontrollera Azure PowerShell-versionen
 
-Flera versioner av Azure PowerShell stöds, men vi rekommenderar att du uppgraderar till den senaste versionen så snabbt som möjligt. Om du vill kontrollera vilken version av Azure PowerShell som du har installerat kör du `Get-Module AzureRM` från kommandoraden.
+Flera versioner av Azure PowerShell stöds, men vi rekommenderar att du uppgraderar till den senaste versionen så snabbt som möjligt. Om du vill kontrollera vilken version av Azure PowerShell som du har installerat kör du `Get-InstalledModule Azure` från kommandoraden.
 
 ```powershell
-Get-Module AzureRM -list | Select-Object Name,Version,Path
+Get-InstalledModule Azure -AllVersions | Select-Object Name,Version,Path
 ```

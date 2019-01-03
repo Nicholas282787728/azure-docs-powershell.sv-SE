@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/11/2018
-ms.openlocfilehash: 22f6398e7abcb1eab9d8f3bda01fd885544fb1aa
-ms.sourcegitcommit: 087c588169786c005a3c177624fb3ac6c8870125
+ms.openlocfilehash: 36a689dcfbd311871fe8638a0e56b037f6d0292a
+ms.sourcegitcommit: 6685809f054203bd733c84f68acc69e53e5cca8c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53217600"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53983036"
 ---
 # <a name="get-started-with-azure-powershell"></a>Komma igång med Azure PowerShell
 
@@ -24,7 +24,7 @@ Det första steget är att kontrollera att du har den senaste versionen av Azure
 
 1. [Installera Azure PowerShell](install-azurerm-ps.md).
 
-2. Kontrollera att installationen lyckades genom att köra `Get-Module AzureRM -ListAvailable` från kommandoraden.
+2. Kontrollera att installationen lyckades genom att köra `Get-InstalledModule AzureRM -AllVersions` från kommandoraden.
 
 ## <a name="azure-cloud-shell"></a>Azure Cloud Shell
 

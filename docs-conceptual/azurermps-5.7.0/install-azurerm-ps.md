@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/15/2018
-ms.openlocfilehash: 5f7f65aa25d86feb77a85fc28d122118216542cc
-ms.sourcegitcommit: 087c588169786c005a3c177624fb3ac6c8870125
+ms.openlocfilehash: 5561fd7a1b2018c126da26eaad7d51049497ec8e
+ms.sourcegitcommit: 6685809f054203bd733c84f68acc69e53e5cca8c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53217379"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53983019"
 ---
 # <a name="install-azure-powershell-on-windows-with-powershellget"></a>Installera Azure PowerShell på Windows med PowerShellGet
 
@@ -20,14 +20,12 @@ Den här artikeln beskriver stegen för att installera Azure PowerShell-moduler 
 
 Anvisningar för hur du installerar Azure PowerShell på andra plattformar finns i [Installera och konfigurera Azure PowerShell på macOS och Linux](install-azurermps-maclinux.md).
 
-Den klassiska Azure-distributionsmodellen har inte stöd på den här versionen av Azure PowerShell. Följ anvisningarna i [Installera Azure PowerShell Service Management-modulen](/powershell/azure/servicemanagement/install-azure-ps) för stöd för klassiska distributioner.
-
 ## <a name="requirements"></a>Krav
 
 Du behöver PowerShellGet version 1.1.2.0 eller senare för att installera Azure PowerShell. Kör följande kommando för att kontrollera om det är tillgängligt på ditt system:
 
 ```powershell-interactive
-Get-Module -Name PowerShellGet -ListAvailable | Select-Object -Property Name,Version,Path
+Get-InstalledModule -Name PowerShellGet -AllVersions | Select-Object -Property Name,Version,Path
 ```
 
 Nu bör du se utdata som ser ut ungefär så här:
