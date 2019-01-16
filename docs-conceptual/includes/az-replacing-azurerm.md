@@ -3,16 +3,16 @@ author: sptramer
 ms.author: sttramer
 ms.date: 12/20/2018
 ms.topic: include
-ms.openlocfilehash: a19417fcab60d92edc1867901fe8c4fffdaefd30
-ms.sourcegitcommit: 4acddc7026522c4fe39de2c4424917d88ee01b7e
+ms.openlocfilehash: 0ed886744a95e9f5a9c251c1dfd40d537d31812d
+ms.sourcegitcommit: 007a733342f37894d4aaec7a859dc1ca93c00c92
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53736916"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029331"
 ---
 > [!NOTE]
 > 
-> Från och med december 2018 kommer inga nya funktioner att läggas till i AzureRM-modulen. Det kommer fortfarande att finnas stöd och felkorrigeringar för AzureRM. Nya funktioner finns i modulen Azure PowerShell Az. Mer information om Az-modulen, inklusive hur du uppgraderar från AzureRM, finns i [huvuddokumentationen till Azure PowerShell](/powershell/azure).
+> Från och med december 2018 kommer inga nya funktioner att läggas till i AzureRM-modulen. Det kommer fortfarande att finnas stöd och buggkorrigeringar för AzureRM fram till december 2020. Nya funktioner finns i modulen Azure PowerShell Az. Mer information om Az-modulen, inklusive hur du uppgraderar från AzureRM, finns i [huvuddokumentationen till Azure PowerShell](/powershell/azure).
 >
 > Du som använder Azure Stack bör fortsätta använda AzureRM för närvarande. Den senaste versionen av AzureRM med stöd för Azure Stack är [AzureRM 2.3.0](/powershell/azure/azurerm?view=azurermps-2.3.0).
 >
