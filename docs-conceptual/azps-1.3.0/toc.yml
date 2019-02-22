@@ -2,15 +2,12 @@ items:
 - name: Azure PowerShell
   href: overview.md
   items:
+  - name: Introduktion till den nya Az-modulen
+    href: new-azureps-module-az.md
   - name: Installera
-    href: install-azurerm-ps.md
-    items:
-    - name: Installera på macOS eller Linux
-      href: install-azurermps-maclinux.md
-    - name: Installera med MSI
-      href: other-install.md
+    href: install-az-ps.md
   - name: Avinstallera
-    href: uninstall-azurerm-ps.md
+    href: uninstall-az-ps.md
   - name: Kom igång
     href: get-started-azureps.md
   - name: Cloud Shell
@@ -22,6 +19,8 @@ items:
       href: create-azure-service-principal-azureps.md
     - name: Beständiga autentiseringsuppgifter
       href: context-persistence.md
+  - name: Migrera från AzureRM
+    href: migrate-from-azurerm-to-az.md
   - name: Frågor
     href: queries-azureps.md
   - name: Formatera utdata
@@ -45,8 +44,8 @@ items:
   - name: Viktig information
     href: release-notes-azureps.md
     items:
-    - name: Icke-bakåtkompatibel ändring för Azure PowerShell 6.x
-      href: migration-guide.6.0.0.md
+    - name: Icke-bakåtkompatibla ändringar för Az 1.0.0
+      href: migrate-az-1.0.0.md
 - name: Självstudier
   items:
   - name: Skapa virtuella datorer
@@ -63,9 +62,9 @@ items:
     href: /azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json
   - name: Cosmos DB
     href: /azure/cosmos-db/powershell-samples?toc=%2fpowershell%2fmodules%2ftoc.json
-ms.openlocfilehash: 44b6c7eaf75dfd1119ba6a0cc4888834a1fc698a
+ms.openlocfilehash: 5954dc3821f68af8bba916fc4832038ca24b5ca5
 ms.sourcegitcommit: 2054a8f74cd9bf5a50ea7fdfddccaa632c842934
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156306"
+ms.locfileid: "56145026"
