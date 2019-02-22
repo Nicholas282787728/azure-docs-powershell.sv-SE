@@ -6,17 +6,17 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/05/2017
-ms.openlocfilehash: ff58693c8ec21b7e50e37bd85975a9ae3980a5e7
+ms.date: 12/13/2018
+ms.openlocfilehash: ae2fecf73271a34a08ac66de03962a7a529e353b
 ms.sourcegitcommit: 2054a8f74cd9bf5a50ea7fdfddccaa632c842934
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154047"
+ms.locfileid: "56145232"
 ---
-# <a name="using-experimental-azure-powershell-modules"></a>Använda experimentella Azure PowerShell-moduler
+# <a name="use-experimental-azure-powershell-modules"></a>Använda experimentella Azure PowerShell-moduler
 
-Med betoning på utvecklarverktyg (i synnerhet CLI:er) i Azure experimenterar Azure PowerShell-teamet med många förbättringar av Azure PowerShell.
+Med betoning på utvecklarverktyg i Azure experimenterar Azure PowerShell-teamet med många förbättringar av Azure PowerShell. I den här artikeln beskrivs hur du registrerar dig för experiment med Azure PowerShell och ger feedback till utvecklingsteamet.
 
 ## <a name="experimentation-methodology"></a>Metodik
 
@@ -24,29 +24,17 @@ För att underlätta experimenteringen skapar vi nya Azure PowerShell-moduler so
 
 Dessa moduler kan vara installerade sida vid sida med befintliga Azure PowerShell-moduler. Cmdlet-namnen har kortats ned för att få kortare namn och undvika namnkonflikter med befintliga, icke-experimentella cmdletar.
 
-De experimentella modulerna använder följande namngivningskonvention: `AzureRM.*.Experiments`. Namngivningskonventionen liknar namngivningen i förhandsversionsmoduler: `AzureRM.*.Preview`. Förhandsversionsmoduler skiljer sig från experimentella moduler. Förhandsversionsmoduler implementerar nya funktioner i Azure-tjänster som endast är tillgängliga som en förhandsversion. Förhandsversionsmoduler ersätter befintliga Azure PowerShell-moduler och använder samma cmdlet- och parameternamn.
+De experimentella modulerna använder följande namngivningskonvention: `Az.*.Experiments`. Namngivningskonventionen liknar namngivningen i förhandsversionsmoduler: `Az.*.Preview`. Förhandsversionsmoduler skiljer sig från experimentella moduler. Förhandsversionsmoduler implementerar nya funktioner i Azure-tjänster som endast är tillgängliga som en förhandsversion. Förhandsversionsmoduler ersätter befintliga Azure PowerShell-moduler och använder samma cmdlet- och parameternamn.
 
 ## <a name="how-to-install-an-experimental-module"></a>Så här installerar du en experimentell modul
 
 Experimentella moduler publiceras i PowerShell-galleriet precis som de befintliga Azure PowerShell-modulerna. Om du vill se en lista med experimentella moduler kör du följande kommando:
 
 ```azurepowershell-interactive
-Find-Module AzureRM.*.Experiments
+Find-Module Az.*.Experiments
 ```
 
-```output
-Version Name                         Repository Description
-------- ----                         ---------- -----------
-1.0.25  AzureRM.Compute.Experiments  PSGallery  Azure Compute experiments for VM creation
-1.0.0   AzureRM.Websites.Experiments PSGallery  Create and deploy web applications using Azure App Services.
-```
-
-Om du vill installera den experimentella modulen ska du använda följande kommandon från en upphöjd PowerShell-session:
-
-```azurepowershell-interactive
-Install-Module AzureRM.Compute.Experiments
-Install-Module AzureRM.Websites.Experiments
-```
+Om du vill installera en experimentell modul använder cmdleten `Install-Module`.
 
 ### <a name="documentation-and-support"></a>Dokumentation och support
 
@@ -56,16 +44,17 @@ Vi uppmuntrar dig att testa dessa moduler. Din feedback gör att vi kan förbät
 
 ## <a name="experiments-and-areas-of-improvement"></a>Experiment och förbättringsområden
 
-Dessa förbättringar har valts ut baserat på viktiga skillnaderna i konkurrerande produkter. Azure CLI 2.0 är det till exempel viktigt att kommandon baseras på _scenarier_ snarare än _API-ytan_.
-I Azure CLI 2.0 används ett antal smarta standardvärden som förenklar kom-igång-scenarier för slutanvändare.
+Dessa förbättringar har valts ut baserat på viktiga skillnaderna i konkurrerande produkter. I Azure CLI är det till exempel viktigt att kommandon baseras på _scenarier_ i stället för _API-ytan_.
+I Azure CLI används ett antal smarta standardvärden som förenklar kom-igång-scenarier för slutanvändare.
 
 ### <a name="core-improvements"></a>Grundläggande förbättringar
 
 Grundläggande förbättringar räknas som ”sunt förnuft” och lite experimenterande krävs för att gå vidare och implementera uppdateringarna.
 
-- Scenario-baserade cmdletar – *<em>All</em>-cmdletar bör utformas runt scenarier, inte Azure REST-tjänsten.
+- Scenario-baserade cmdletar – **All*-cmdletar bör utformas runt scenarier, inte Azure REST-tjänsten.
 
-- Kortare namn – Omfattar namnen på cmdletar (till exempel `New-AzureRmVM` => `New-AzVm`) och parameternamnen (till exempel `-ResourceGroupName` => `-Rg`). Använd alias för kompatibilitet med ”gamla” cmdletar. Tillhandahåll _bakåtkompatibla_ parameteruppsättningar.
+- Kortare namn – Omfattar namnen på cmdletar och parametrar.
+  Använd alias för kompatibilitet med ”gamla” cmdletar. Tillhandahåll _bakåtkompatibla_ parameteruppsättningar.
 
 - Smarta standardvärden – Skapa smarta standardvärden för att fylla i ”obligatorisk” information. Exempel:
   - Resursgrupp
@@ -80,7 +69,7 @@ Experimentella förbättringar presenterat en betydande förändring som teamet 
 
 - ”Smart Create” – Alla skapa-scenarier som implementerar ”Smart Create” skulle inte ha _någon_ obligatorisk parameter: all nödvändig information skulle väljas av Azure PowerShell på ett smart sätt.
 
-- Grå parametrar – I många fall skulle vissa parametrar kunna vara ”grå” eller delvis valfria. Om parametern inte anges, ska användarna tillfrågas om de vill den parameter som genererats åt dem. Det vore också rimligt att grå parametrar med användarens medgivande skulle härleda ett värde utifrån sammanhanget.
+- Grå parametrar – I många fall skulle vissa parametrar kunna vara ”grå” eller delvis valfria. Om parametern inte anges tillfrågas användaren om de vill att parametern ska genereras åt dem. Det vore också rimligt att grå parametrar med användarens medgivande skulle härleda ett värde utifrån sammanhanget.
   Exempelvis kunde det vara klokt att den grå parametern föreslår det senast använda värdet.
 
 - Switchen `-Auto` – Switchen `-Auto` skulle göra det möjligt för användare att välja _standardvärden på allt_ samtidigt som obligatoriska parametrars integritet bevaras i huvudspåret.
@@ -89,7 +78,7 @@ Experimentella förbättringar presenterat en betydande förändring som teamet 
 
 Scenariet ”Skapa webbapp” skulle till exempel kunna ha en `-Git`- eller `-AddRemote`-switch som automatiskt skulle lägga till en ”azure” fjärrlagringsplats till en befintlig git-lagringsplats.
 
-- Inställningsbara standardvärden – Användare bör ha möjlighet att ange vissa allmänt förekommande parametrar som standardvärden, `-ResourceGroupName` och `-Location`.
+- Inställningsbara standardvärden – Användare bör kunna ange standardvärden för vanliga parametrar, till exempel `-ResourceGroupName` och `-Location`.
 
 - Storleksstandard – Resursers ”storlekar” kan vara förvirrande för användarna eftersom många resursproviders använder olika namn (till exempel ”Standard\_DS1\_v2” eller ”S1”). Dock är de flesta användare mer intresserade av kostnaden. Därför vore det praktiskt att definiera ”universella” storlekar utifrån ett prissättningsschema. Användare kan välja en viss storlek eller låta Azure PowerShell välja det _bästa alternativet_ utifrån resursbudgeten.
 

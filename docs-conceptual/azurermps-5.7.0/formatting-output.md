@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/07/2018
-ms.openlocfilehash: 833c82903305f99be5ad43f707e22644bb568abe
-ms.sourcegitcommit: bcf80dfd7fbe17e82e7ad029802cfe8a2f02b15c
+ms.openlocfilehash: e3f603b69aa7fef2de034416b9e352b05bea71b6
+ms.sourcegitcommit: 2054a8f74cd9bf5a50ea7fdfddccaa632c842934
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35323398"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156309"
 ---
 # <a name="format-azurepowershell-cmdlet-output"></a>Formatera cmdlet-utdata för Azure PowerShell
 
@@ -73,7 +73,7 @@ ResourceGroupName : MYWESTEURG
 
 ## <a name="convert-to-other-data-types"></a>Konvertera till andra datatyper
 
-PowerShell kan också ta kommandoutdata och konvertera det till flera dataformat. I följande exempel använder vi cmdleten `Select-Object` för att hämta attributen för de virtuella datorerna i vår prenumeration och konvertera utdata till ett CSV-format för enkel import till en databas eller ett kalkylblad.
+PowerShell kan också ta kommandoutdata och konvertera dem till flera dataformat. I följande exempel använder vi cmdleten `Select-Object` för att hämta attributen för de virtuella datorerna i vår prenumeration och konvertera utdata till ett CSV-format för enkel import till en databas eller ett kalkylblad.
 
 ```azurepowershell-interactive
 Get-AzureRmVM | Select-Object ResourceGroupName,Id,VmId,Name,Location,ProvisioningState | ConvertTo-Csv -NoTypeInformation
