@@ -7,12 +7,12 @@ ms.author: sttramer
 ms.manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.openlocfilehash: 7456e45fe9a94d3c1e809dfd075a090448001607
-ms.sourcegitcommit: 6685809f054203bd733c84f68acc69e53e5cca8c
+ms.openlocfilehash: a0afae1ba51fdb34425c91049e08d7388f434d7d
+ms.sourcegitcommit: 0b5b0434fba7a752b0199256e04fa34f06aaf33a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53982836"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56464986"
 ---
 # <a name="uninstall-the-azure-powershell-module"></a>Avinstallera Azure PowerShell-modulen
 
@@ -20,7 +20,7 @@ Den här artikeln beskriver hur du avinstallerar en äldre version av Azure Powe
 Om du påträffar en bugg får du gärna [skicka in ett GitHub-ärende](https://github.com/azure/azure-powershell/issues).
 
 
-## <a name="uninstall-msi"></a>Avinstallera MSI
+## <a name="uninstall-azure-powershell-msi"></a>Avinstallera Azure PowerShell MSI
 
 Om du har installerat Azure PowerShell med hjälp av MSI-paketet måste du avinstallera det via Windows-systemet i stället för PowerShell.
 
@@ -29,7 +29,7 @@ Om du har installerat Azure PowerShell med hjälp av MSI-paketet måste du avins
 | Windows 10 | Start > Inställningar > Appar |
 | Windows 7 </br>Windows 8 | Start > Kontrollpanelen > Program > Avinstallera ett program |
 
-På den här skärmen bör du se ”Azure PowerShell” i listan över program och du kan avinstallera härifrån.
+På den här skärmen bör du se __Azure PowerShell__ i listan över program. Det är appen som ska avinstalleras.
 
 ## <a name="uninstall-from-powershell"></a>Avinstallera från PowerShell
 
