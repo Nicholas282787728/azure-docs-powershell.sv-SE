@@ -16,7 +16,7 @@ ms.locfileid: "58475689"
 ---
 # <a name="introducing-the-new-azure-powershell-az-module"></a>Introduktion till den nya Azure PowerShell Az-modulen
 
-Från och med december 2018 är Az för Azure PowerShell-modulen en allmän version och är nu den PowerShell-modulen som är avsedd för interaktion med Azure. Az erbjuder kortare kommandon, bättre stabilitet och stöd för flera plattformar. Az erbjuder också funktionsparitet och en enkel migreringsväg från AzureRM.
+Från och med december 2018 finns Az-modulen för Azure PowerShell tillgänglig i en allmän version och är nu den PowerShell-modul som är avsedd för interaktion med Azure. Az erbjuder kortare kommandon, bättre stabilitet och stöd för flera plattformar. Az erbjuder också funktionsparitet och en enkel migreringsväg från AzureRM.
 
 Az använder .NET Standard-biblioteket, vilket innebär att den körs på PowerShell 5 och PowerShell 6.
 Eftersom PowerShell 6 kan köras på Linux, macOS och Windows är Azure PowerShell nu tillgängligt för alla plattformar.
