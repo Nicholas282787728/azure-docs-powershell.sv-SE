@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: get-started-article
 ms.date: 01/14/2019
 ms.openlocfilehash: 0c3b749cb2ac7f11dacafca76b65944f523f727d
-ms.sourcegitcommit: 89066b7c4b527357bb2024e1ad708df84c131804
+ms.sourcegitcommit: ae4540a90508db73335a54408dfd6cdf3712a1e9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59364232"
 ---
 # <a name="get-started-with-azure-powershell"></a>Komma igång med Azure PowerShell
@@ -82,19 +82,19 @@ För att komma igång med Azure PowerShell kan du prova detaljerade självstudie
 
 Det finns även Azure PowerShell-snabbstarter för andra populära Azure-tjänster:
 
-* [skapar ett lagringskonto](/azure/storage/common/storage-quickstart-create-account?tabs=azure-powershell)
+* [Skapa ett lagringskonto](/azure/storage/common/storage-quickstart-create-account?tabs=azure-powershell)
 * [Överföra objekt till och från Azure Blob Storage](/azure/storage/blobs/storage-quickstart-blobs-powershell)
 * [Skapa och hämta hemligheter från Azure Key Vault](/azure/key-vault/quick-create-powershell)
 * [Skapa en Azure SQL-databas och -brandvägg](/azure/sql-database/scripts/sql-database-create-and-configure-database-powershell)
 * [Köra en container i Azure Container Instances](/azure/container-instances/container-instances-quickstart-powershell)
 * [Skapa en VM-skalningsuppsättning med Virtual Machine Scale Sets (VMSS)](/azure/virtual-machine-scale-sets/quick-create-powershell)
-* [Skapa en standardlastbalanserare](/azure/load-balancer/quickstart-create-standard-load-balancer-powershell)
+* [Skapa en standardbelastningsutjämnare](/azure/load-balancer/quickstart-create-standard-load-balancer-powershell)
 
 ## <a name="next-steps"></a>Nästa steg
 
 * [Logga in med Azure PowerShell](authenticate-azureps.md)
 * [Hantera Azure-prenumerationer med Azure PowerShell](manage-subscriptions-azureps.md)
-* [Skapa tjänsthuvudnamn med Azure PowerShell](create-azure-service-principal-azureps.md)
+* [Skapa huvudnamn för tjänsten med Azure PowerShell](create-azure-service-principal-azureps.md)
 * Få hjälp från communityn:
   * [Azure-forumet på MSDN](http://go.microsoft.com/fwlink/p/?LinkId=320212)
   * [Stack Overflow](http://go.microsoft.com/fwlink/?LinkId=320213)

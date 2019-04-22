@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 12/13/2018
 ms.openlocfilehash: 28122ca953d62b405f19effbbc680f2dc6202cca
-ms.sourcegitcommit: 89066b7c4b527357bb2024e1ad708df84c131804
+ms.sourcegitcommit: ae4540a90508db73335a54408dfd6cdf3712a1e9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59364276"
 ---
 # <a name="migrate-from-azurerm-to-azure-powershell-az"></a>Migrera från AzureRM till Azure PowerShell Az
@@ -68,7 +68,7 @@ När aliasläget har aktiverats kör du skripten igen för att bekräfta att de 
 ## <a name="change-module-imports-and-cmdlet-names"></a>Ändra modulimporter och cmdlet-namn
 
 I allmänhet har modulnamnen ändrats så att `AzureRM` och `Azure` blir `Az`, och samma sak för cmdletar.
-`AzureRM.Compute`-modulens namn har till exempel ändrats till `Az.Compute`. `New-AzureRMVM` har blivit `New-AzVM` och `Get-AzureStorageBlob` är nu `Get-AzStorageBlob`.
+`AzureRM.Compute`-modulens namn har till exempel ändrats till `Az.Compute`. `New-AzureRMVM` har blivit `New-AzVM`, och `Get-AzureStorageBlob` är nu `Get-AzStorageBlob`.
 
 Det finns undantag för den här namngivningsändringen som du bör känna till. Vissa moduler har bytt namn eller slagits samman till befintliga modeller utan att det påverkar suffixet för deras cmdletar, förutom att `AzureRM` eller `Azure` ändras till `Az`. I övrigt ändras det fullständiga cmdlet-suffixet så att det återspeglar det nya modulnamnet.
 

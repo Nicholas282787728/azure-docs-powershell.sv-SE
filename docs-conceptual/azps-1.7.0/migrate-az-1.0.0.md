@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 12/14/2018
 ms.openlocfilehash: be3e19dc4b689adbc63b933dd9f3454122d5344a
-ms.sourcegitcommit: 89066b7c4b527357bb2024e1ad708df84c131804
+ms.sourcegitcommit: ae4540a90508db73335a54408dfd6cdf3712a1e9
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59364248"
 ---
 # <a name="migration-guide-for-az-100"></a>Migreringsguide för Az 1.0.0
@@ -82,7 +82,7 @@ Get-AzureRmStorageAccount | Get-AzureStorageContainer | Get-AzureStorageBlob
 
 Om du vill ha information om användning av alias-cmdletarna kör du ```Get-Help -Online Enable-AzureRmAlias``` från powershell-prompten.
 
-```Disable-AzureRmAlias``` tar bort de alias för AzureRM-cmdleten som skapats av ```Enable-AzureRmAlias```.  Om du vill ha mer information kör du ```Get-Help -Online Disable-AzureRmAlias``` från powershell-prompten.
+```Disable-AzureRmAlias``` tar bort de alias för AzureRM-cmdlet som skapats av ```Enable-AzureRmAlias```.  Om du vill ha mer information kör du ```Get-Help -Online Disable-AzureRmAlias``` från powershell-prompten.
 
 ### <a name="module-name-changes"></a>Ändringar av modulnamn
 - Modulnamnen har ändrats från `AzureRM.*` till `Az.*`, förutom följande moduler:
@@ -188,7 +188,7 @@ Verktyg för de här tjänsterna stöds inte längre aktivt.  Kunderna rekommend
 ### <a name="azcompute-previously-azurermcompute"></a>Az.Compute (tidigare AzureRM.Compute)
 - `IdentityIds` tas bort från egenskapen `Identity` i objekten `PSVirtualMachine` och `PSVirtualMachineScaleSet` Skripten bör nu inte längre använda värdet för det här fältet för att fatta bearbetningsbeslut.
 - Typ av `InstanceView`-egenskap för `PSVirtualMachineScaleSetVM`-objekt ändras från `VirtualMachineInstanceView` till `VirtualMachineScaleSetVMInstanceView`
-- `AutoOSUpgradePolicy` och `AutomaticOSUpgrade`-egenskaper tas bort från `UpgradePolicy`-egenskapen
+- Egenskaperna `AutoOSUpgradePolicy` och `AutomaticOSUpgrade` tas bort från egenskapen `UpgradePolicy`
 - Typ av `Sku`-egenskap i `PSSnapshotUpdate`-objekt ändras från `DiskSku` till `SnapshotSku`
 - `VmScaleSetVMParameterSet` tas bort från cmdleten `Add-AzVMDataDisk`, och du kan inte längre lägga till en datadisk individuellt till en virtuell ScaleSet-dator.
 
@@ -264,7 +264,7 @@ Skript bör inte längre fatta bearbetningsbeslut baserat på värdena för dess
 
 ### <a name="azrecoveryservices-previously-azurermrecoveryservices-azurermrecoveryservicesbackup-and-azurermrecoveryservicessiterecovery"></a>Az.RecoveryServices (tidigare AzureRM.RecoveryServices, AzureRM.RecoveryServices.Backup och AzureRM.RecoveryServices.SiteRecovery)
 - Parametern `Encryption` har tagits bort från cmdleten `New/Set-AzRecoveryServicesAsrPolicy`
-- `TargetStorageAccountName` parametern är nu obligatorisk för hanterade diskåterställningar i cmdleten `Restore-AzRecoveryServicesBackupItem`
+- Parametern `TargetStorageAccountName` är nu obligatorisk för hanterade diskåterställningar i cmdleten `Restore-AzRecoveryServicesBackupItem`
 - Tog bort parametrarna `StorageAccountName` och `StorageAccountResourceGroupName` i cmdleten `Restore-AzRecoveryServicesBackupItem`
 - Tog bort parametern `Name` i cmdleten `Get-AzRecoveryServicesBackupContainer`
 
@@ -310,7 +310,7 @@ Skript bör inte längre fatta bearbetningsbeslut baserat på värdena för dess
 - Tog bort den inaktuella parametern `PrivilegedLogin` från cmdleten `Set-AzSqlDatabaseDataMaskingPolicy`
 
 ### <a name="azstorage-previously-azurestorage-and-azurermstorage"></a>Az.Storage (tidigare Azure.Storage och AzureRM.Storage)
-- För att det ska gå att skapa en Oauth-lagringskontext endast med namnet på lagringskontot har standardparameteruppsättningen ändrats till `OAuthParameterSet`
+- Standardparameteruppsättningen har ändrats till `OAuthParameterSet` för att det ska gå att skapa en Oauth-lagringskontext endast med namnet på lagringskontot
   - Exempel: `$ctx = New-AzureStorageContext -StorageAccountName $accountName`
 - Parametern `Location` har blivit obligatorisk i cmdleten `Get-AzStorageUsage`
 - Storage-API-metoderna använder nu TAP (uppgiftsbaserat asynkront mönster) i stället för synkrona API-anrop.
