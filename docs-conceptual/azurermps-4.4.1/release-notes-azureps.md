@@ -183,11 +183,11 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
     - Cmdlet Remove-AzureRmManagedApplicationDefinition för att ta bort en definition för hanterade program
     - Cmdlet Set-AzureRmManagedApplicationDefinition för att uppdatera en befintlig definition för hanterade program
 * SQL
-  * Lägger till stöd för virtuella nätverksregler
-    - Lägger till cmdlet Get-AzureRmSqlServerVirtualNetworkRule som hämtar de virtuella nätverksreglerna via ett visst regelnamn eller som en lista över virtuella nätverksregler på en Azure Sql-server.
+  * Lägger till stöd för regler för virtuellt nätverk
+    - Lägger till cmdlet Get-AzureRmSqlServerVirtualNetworkRule som hämtar reglerna för virtuellt nätverk via ett visst regelnamn eller som en lista över regler för virtuellt nätverk på en Azure Sql-server.
     - Lägger till cmdlet Set-AzureRmSqlServerVirtualNetworkRule som ändrar vilket virtuellt nätverk regeln pekar mot.
-    - Lägger till cmdlet Remove-AzureRmSqlServerVirtualNetworkRule som tar bort en virtuell nätverksregel för en Azure Sql-server.
-    - Lägger till cmdlet New-AzureRmSqlServerVirtualNetworkRule som skapar en ny virtuell nätverksregel för en Azure Sql-server.
+    - Lägger till cmdlet Remove-AzureRmSqlServerVirtualNetworkRule som tar bort en regel för virtuellt nätverk för en Azure Sql-server.
+    - Lägger till cmdlet New-AzureRmSqlServerVirtualNetworkRule som skapar en ny regel för virtuellt nätverk för en Azure Sql-server.
 * Websites
   * Lägg till PremiumV2-nivå för App Service Plans
 * Azure.Storage

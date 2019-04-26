@@ -165,10 +165,10 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
 * Argumentslutförare för ResourceName har lagts till i alla cmdletar.
 
 #### <a name="azurermdatalakestore"></a>AzureRM.DataLakeStore
-* Lägger till stöd för virtuella nätverksregler
-    - Get-AzureRmDataLakeStoreVirtualNetworkRule: Hämtar eller listar regel för virtuellt Azure Data Lake Store-nätverk.
-    - Add-AzureRmDataLakeStoreVirtualNetworkRule: Lägger till en regel för det virtuella nätverket till det angivna Data Lake Store-kontot.
-    - Set-AzureRmDataLakeStoreVirtualNetworkRule: Ändrar den angivna regeln för det virtuella nätverket i det angivna Data Lake Store-kontot.
+* Lägger till stöd för regler för virtuellt nätverk
+    - Get-AzureRmDataLakeStoreVirtualNetworkRule: Hämtar eller listar regel för virtuellt nätverk i Azure Data Lake Store.
+    - Add-AzureRmDataLakeStoreVirtualNetworkRule: Lägger till en regel för virtuellt nätverk i det angivna Data Lake Store-kontot.
+    - Set-AzureRmDataLakeStoreVirtualNetworkRule: Ändrar den angivna regeln för virtuellt nätverk i det angivna Data Lake Store-kontot.
     - Remove-AzureRmDataLakeStoreVirtualNetworkRule: Tar bort en regel för virtuellt nätverk i Azure Data Lake Store.
 
 #### <a name="azurermnetwork"></a>AzureRM.Network
