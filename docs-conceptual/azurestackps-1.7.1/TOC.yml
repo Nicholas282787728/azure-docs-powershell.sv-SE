@@ -1,9 +1,0 @@
-- name: Azure Stack PowerShell
-  href: overview.md
-  items:
-    - name: Installera
-      href: 'https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-powershell-install?toc=/powershell/azure/azure-stack/toc.json'
-    - name: Anslut – Molnoperatör
-      href: 'https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-powershell-configure-admin'
-    - name: Anslut – Användare
-      href: 'https://docs.microsoft.com/en-us/azure/azure-stack/user/azure-stack-powershell-configure-user'
