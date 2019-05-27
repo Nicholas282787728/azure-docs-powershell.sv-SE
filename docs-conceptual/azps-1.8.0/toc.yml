@@ -6,6 +6,12 @@
   href: install-az-ps.md
 - name: Avinstallera
   href: uninstall-az-ps.md
+- name: Migrera från AzureRM
+  items:
+    - name: Påbörja migreringen
+      href: migrate-from-azurerm-to-az.md
+    - name: Ändringar mellan AzureRM och Az
+      href: migrate-az-1.0.0.md
 - name: Kom igång
   href: get-started-azureps.md
 - name: Cloud Shell
@@ -18,8 +24,6 @@
       href: create-azure-service-principal-azureps.md
     - name: Beständiga autentiseringsuppgifter
       href: context-persistence.md
-- name: Migrera från AzureRM
-  href: migrate-from-azurerm-to-az.md
 - name: Frågor
   href: queries-azureps.md
 - name: Formatera utdata
@@ -58,5 +62,3 @@
       href: /azure/cosmos-db/powershell-samples?toc=%2fpowershell%2fmodules%2ftoc.json
 - name: Viktig information
   href: release-notes-azureps.md
-- name: Icke-bakåtkompatibla ändringar för Az 1.0.0
-  href: migrate-az-1.0.0.md
