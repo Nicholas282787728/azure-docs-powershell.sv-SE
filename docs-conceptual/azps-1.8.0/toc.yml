@@ -8,7 +8,7 @@
   href: uninstall-az-ps.md
 - name: Migrera från AzureRM
   items:
-    - name: Påbörja migreringen
+    - name: Migreringsanvisningar
       href: migrate-from-azurerm-to-az.md
     - name: Ändringar mellan AzureRM och Az
       href: migrate-az-1.0.0.md
