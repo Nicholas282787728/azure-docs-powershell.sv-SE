@@ -7,14 +7,16 @@ ms.author: sttramer
 ms.manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.openlocfilehash: a0afae1ba51fdb34425c91049e08d7388f434d7d
-ms.sourcegitcommit: 0b5b0434fba7a752b0199256e04fa34f06aaf33a
+ms.openlocfilehash: 79c34ea74887113be3683e32ab9a03ed4c7daa7c
+ms.sourcegitcommit: bbd3f061cac3417ce588487c1ae4e0bc52c11d6a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56464986"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65534474"
 ---
 # <a name="uninstall-the-azure-powershell-module"></a>Avinstallera Azure PowerShell-modulen
+
+[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
 
 Den här artikeln beskriver hur du avinstallerar en äldre version av Azure PowerShell eller tar bort det fullständigt från ditt system. Om du har bestämt dig för att avinstallera Azure PowerShell fullständigt kan du ge oss feedback genom cmdleten [Send-Feedback](/powershell/module/azurerm.profile/send-feedback).
 Om du påträffar en bugg får du gärna [skicka in ett GitHub-ärende](https://github.com/azure/azure-powershell/issues).
