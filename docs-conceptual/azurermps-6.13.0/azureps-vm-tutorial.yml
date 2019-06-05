@@ -16,22 +16,15 @@ metadata:
   ms.technology: azure-powershell
   ms.topic: tutorial
   clicktale: true
-  ms.openlocfilehash: 79cc104858e107d69b8946d9c7674ca75ec5650a
-  ms.sourcegitcommit: 2054a8f74cd9bf5a50ea7fdfddccaa632c842934
+  ms.openlocfilehash: a037b16eef107ecfab9a8df9de0b085b0c9a9ae2
+  ms.sourcegitcommit: bbd3f061cac3417ce588487c1ae4e0bc52c11d6a
   ms.translationtype: HT
   ms.contentlocale: sv-SE
-  ms.lasthandoff: 02/12/2019
-  ms.locfileid: "56145103"
+  ms.lasthandoff: 05/11/2019
+  ms.locfileid: "65534801"
 items:
 - durationInMinutes: 1
-  content: >-
-    I den här självstudien får du lära dig allt du behöver veta för att konfigurera en virtuell dator med Azure PowerShell. Självstudien omfattar även ämnen som rör utdatafrågor, återanvändning av Azure-resurser och rensning av resurser.
-
-
-    Den här självstudien kan utföras med de interaktiva funktionerna som erbjuds genom Azure Cloud Shell. Du kan även [installera Azure PowerShell](install-azurerm-ps.md) lokalt.
-
-
-    Använd __ctrl + skift + v__ (__cmd + skift + v__ på macOS) för att klistra in självstudietexten i Azure Cloud Shell.
+  content: "\n[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]\n\nI den här självstudien får du lära dig allt du behöver veta för att konfigurera en virtuell dator med Azure PowerShell. Självstudien omfattar även ämnen som rör utdatafrågor, återanvändning av Azure-resurser och rensning av resurser.\n\nDen här självstudien kan utföras med de interaktiva funktionerna som erbjuds genom Azure Cloud Shell. Du kan även [installera Azure PowerShell](install-azurerm-ps.md) lokalt.\n\nAnvänd __ctrl + skift + v__ (__cmd + skift + v__ på macOS) för att klistra in självstudietexten i Azure Cloud Shell."
 - durationInMinutes: 1
   title: Logga in
   content: >-

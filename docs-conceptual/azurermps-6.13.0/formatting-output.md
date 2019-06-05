@@ -7,14 +7,16 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/09/2018
-ms.openlocfilehash: 390285bcf483e75b7a2b77d345ccb108669f66e5
-ms.sourcegitcommit: 2054a8f74cd9bf5a50ea7fdfddccaa632c842934
+ms.openlocfilehash: 6a35024e1bac819fa9b69174195e5245361cb7cc
+ms.sourcegitcommit: bbd3f061cac3417ce588487c1ae4e0bc52c11d6a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56153972"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65535002"
 ---
 # <a name="format-azurepowershell-cmdlet-output"></a>Formatera cmdlet-utdata för Azure PowerShell
+
+[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
 
 Som standard har varje Azure PowerShell-cmdlet fördefinierad formatering av utdata, vilket gör det enklare att läsa.  PowerShell ger också flexibiliteten att justera utdata eller konvertera cmdlet-utdata till ett annat format med följande cmdletar:
 

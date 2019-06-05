@@ -7,14 +7,16 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/01/2018
-ms.openlocfilehash: b4cbeb1b523664fb49c4640eaafd56e3b843ebaa
-ms.sourcegitcommit: 2054a8f74cd9bf5a50ea7fdfddccaa632c842934
+ms.openlocfilehash: f8dc413a91876e53e62d25cc38ac3b3ef6afda8e
+ms.sourcegitcommit: bbd3f061cac3417ce588487c1ae4e0bc52c11d6a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56145050"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65534595"
 ---
 # <a name="breaking-changes-for-microsoft-azure-powershell-500"></a>Större ändringar för Microsoft Azure PowerShell 5.0.0
+
+[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
 
 Det här dokumentet fungerar både som ett meddelande om större ändringar och som en migreringsguide för användare av Microsoft Azure PowerShell-cmdletar. I varje avsnitt beskrivs både orsaken till den större ändringen och det enklaste migreringssättet. Se den pull-begäran som är kopplad till varje ändring för en mer djupgående kontext.
 
