@@ -74,7 +74,7 @@
       displayName: 'database, nosql, mongodb, couchdb'
 - name: Viktig information
   items:
-    - name: Az 2.1.0 – viktig information
+    - name: Viktig information
       href: release-notes-azureps.md
     - name: Az 2.0.0 – icke-bakåtkompatibla ändringar
       href: migrate-az-2.0.0.md
