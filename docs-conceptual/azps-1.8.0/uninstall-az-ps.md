@@ -1,18 +1,18 @@
 ---
 title: Avinstallera Azure PowerShell
 description: Så här utför du en fullständig avinstallation av Azure PowerShell
-ms.date: 05/10/2019
+ms.date: 06/10/2019
 author: sptramer
 ms.author: sttramer
 ms.manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.openlocfilehash: b32547e9c3df0df7495d1631a43be6934e1f62dc
-ms.sourcegitcommit: febbbd3f75c8dd1a296281d265289f015b6cb537
+ms.openlocfilehash: e71b4d0d662b29a32610fecb36351532040428e4
+ms.sourcegitcommit: a261efc84dedfd829c0613cf62f8fcf3aa62adb8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67037759"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68807433"
 ---
 # <a name="uninstall-the-azure-powershell-module"></a>Avinstallera Azure PowerShell-modulen
 
@@ -106,7 +106,8 @@ Uninstalling Az.AnalysisServices version 0.7.0
 ```
 
 > [!NOTE]
-> Om det här skriptet inte kan matcha en exakt beroende modulversion som ska avinstalleras kommer inte _någon_ version av modulen att avinstalleras. Det beror på att det kan finnas andra versioner av `Az` i systemet som förlitar sig på dessa moduler. I sådant fall visas en lista med de versioner av modulen som inte kunde hittas, om några var installerade. Du kan sedan ta bort eventuella gamla versioner manuellt med `Uninstall-Module`.
+> Om det här skriptet inte kan matcha ett exakt beroende med den version som ska avinstalleras kommer inte _någon_ version av beroendet att avinstalleras. Det beror på att det kan finnas andra versioner av målmodulen i systemet som förlitar sig på dessa beroenden. I sådant fall visas en lista med de tillgängliga versionerna av beroendet.
+> Du kan sedan ta bort eventuella gamla versioner manuellt med `Uninstall-Module`.
 
 Kör det här kommandot för varje version av Azure PowerShell som du vill avinstallera. I syfte att underlätta för dig avinstallerar följande skript alla versioner av Az __utom__ den senaste.
 
