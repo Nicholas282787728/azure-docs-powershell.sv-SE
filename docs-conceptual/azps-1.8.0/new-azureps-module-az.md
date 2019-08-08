@@ -7,16 +7,16 @@ ms.author: sttramer
 ms.manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.openlocfilehash: da1d7ec9a196068db237d871834b92f8b077b42c
-ms.sourcegitcommit: 020c69430358b13cbd99fedd5d56607c9b10047b
+ms.openlocfilehash: 8dc5a7d3b47870455213aa01aebc1d215ad640a7
+ms.sourcegitcommit: a261efc84dedfd829c0613cf62f8fcf3aa62adb8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365685"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68807497"
 ---
 # <a name="introducing-the-new-azure-powershell-az-module"></a>Introduktion till den nya Azure PowerShell Az-modulen
 
-Från och med december 2018 är Az för Azure PowerShell-modulen en allmän version och är nu den PowerShell-modulen som är avsedd för interaktion med Azure. Az erbjuder kortare kommandon, bättre stabilitet och stöd för flera plattformar. Az erbjuder också funktionsparitet och en enkel migreringsväg från AzureRM.
+Från och med december 2018 är Az för Azure PowerShell-modulen en allmän version och är nu den PowerShell-modulen som är avsedd för interaktion med Azure. Az erbjuder kortare kommandon, bättre stabilitet och stöd för flera plattformar. Az har även funktionsparitet med AzureRM, vilket underlättar migreringen.
 
 I och med Az-modulen är Azure PowerShell nu kompatibelt med PowerShell 5.1 på Windows och PowerShell Core 6.x och senare på alla plattformar som stöds, inklusive Windows, macOS och Linux.
 
@@ -67,6 +67,4 @@ Az-modulen har ett kompatibilitetsläge för befintliga skript medan du arbetar 
 
 ## <a name="continued-support-for-azurerm"></a>Fortsatt stöd för AzureRM
 
-Den befintliga AzureRM-modulen tar inte längre emot nya cmdletar eller funktioner. AzureRM underhålls dock fortfarande officiellt och får nya buggkorrigeringar minst fram till december 2020.
-
-Om du undrar om Az-modulen har alla funktioner, är testad eller produktionsklar: Allt arbete kring AzureRM har nu fokuserats på Az. Det här omfattar bland annat så stor kodåteranvändning av de befintliga modulerna som var möjligt och omfattande testning för att se till att funktioner är kompatibla med de nya modulerna. Flytten till Az bör endast påverkas av organisationens schema. Du behöver inte vänta på specifika funktioner.
+Inga nya cmdletar eller funktioner kommer att ges ut för AzureRM, men modulen underhålls fortfarande officiellt och felkorrigeringar kommer att ges ut till och med december 2020.

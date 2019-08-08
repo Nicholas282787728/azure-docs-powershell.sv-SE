@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 12/13/2018
-ms.openlocfilehash: ead6c48496c646b5184f88aeac64fbe650be17c4
-ms.sourcegitcommit: 6c0d296bfec7c1c35a1d15074ca5eacda6684ea4
+ms.openlocfilehash: 8e63e3efb2671eef435498063010d5704c793060
+ms.sourcegitcommit: a261efc84dedfd829c0613cf62f8fcf3aa62adb8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657985"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68807471"
 ---
 # <a name="install-the-azure-powershell-module"></a>Installera Azure PowerShell-modulen
 
@@ -40,16 +40,16 @@ Det finns inga ytterligare krav för Azure PowerShell när du använder PowerShe
 > [!WARNING]
 > Det går __inte__ både modulen AzureRM och modulen Az installerade samtidigt för PowerShell 5.1 för Windows. Om du vill behålla AzureRM på datorn installerar du Az-modulen för PowerShell Core 6.x eller senare. För att göra det [installerar du PowerShell Core 6.x eller senare](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows) och följer instruktionerna i PowerShell Core-terminalen.
 
-Om du vill installera moduler med globalt omfång behöver du ha utökade privilegier för att installera moduler från PowerShell-galleriet. Du installerar Azure PowerShell genom att köra följande kommando i en upphöjd session (”Kör som administratör” på Windows eller med superanvändarprivilegier på macOS eller Linux):
-
-```powershell-interactive
-Install-Module -Name Az -AllowClobber
-```
-
-Om du inte har åtkomst till administratörsprivilegier kan du installera för den aktuella användaren genom att lägga till argumentet `-Scope`.
+Den rekommenderade installationsmetoden är att begränsa installationen till den aktiva användaren:
 
 ```powershell-interactive
 Install-Module -Name Az -AllowClobber -Scope CurrentUser
+```
+
+Om du vill installera för alla användare i ett system krävs administratörsbehörighet. I macOS eller Linux kör du som administratör eller med `sudo`-kommandot i en PowerShell-session med förhöjd behörighet:
+
+```powershell-interactive
+Install-Module -Name Az -AllowClobber -Scope AllUsers
 ```
 
 Som standard konfigureras inte PowerShell-galleriet som en betrodd lagringsplats för PowerShellGet. Första gången du använder PSGallery visas följande meddelande:
