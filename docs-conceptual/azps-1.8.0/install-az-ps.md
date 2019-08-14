@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 12/13/2018
-ms.openlocfilehash: 8e63e3efb2671eef435498063010d5704c793060
-ms.sourcegitcommit: a261efc84dedfd829c0613cf62f8fcf3aa62adb8
+ms.openlocfilehash: 21345445efc89ab54bb7483cfe81f439f0a887a3
+ms.sourcegitcommit: b02cbcd00748a4a9a4790a5fba229ce53c3bf973
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68807498"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68861305"
 ---
 # <a name="install-the-azure-powershell-module"></a>Installera Azure PowerShell-modulen
 
@@ -38,7 +38,7 @@ Det finns inga ytterligare krav för Azure PowerShell när du använder PowerShe
 ## <a name="install-the-azure-powershell-module"></a>Installera Azure PowerShell-modulen
 
 > [!WARNING]
-> Det går __inte__ både modulen AzureRM och modulen Az installerade samtidigt för PowerShell 5.1 för Windows. Om du vill behålla AzureRM på datorn installerar du Az-modulen för PowerShell Core 6.x eller senare. För att göra det [installerar du PowerShell Core 6.x eller senare](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows) och följer instruktionerna i PowerShell Core-terminalen.
+> Det går __inte__ både modulen AzureRM och modulen Az installerade samtidigt för PowerShell 5.1 för Windows. Om du vill behålla AzureRM på datorn installerar du Az-modulen för PowerShell Core 6.x eller senare. För att göra det [installerar du PowerShell Core 6.x eller senare](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows) och följer instruktionerna i PowerShell Core-terminalen.
 
 Den rekommenderade installationsmetoden är att begränsa installationen till den aktiva användaren:
 

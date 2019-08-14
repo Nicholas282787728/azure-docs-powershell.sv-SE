@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/15/2018
-ms.openlocfilehash: e05a519fabe41f3c23ffd63a8ceea69a0e58d5e1
-ms.sourcegitcommit: bbd3f061cac3417ce588487c1ae4e0bc52c11d6a
+ms.openlocfilehash: ff50c676d42cad515aea74ea960105ed76f418a6
+ms.sourcegitcommit: b02cbcd00748a4a9a4790a5fba229ce53c3bf973
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "65534681"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68863297"
 ---
 # <a name="install-azure-powershell-on-windows-with-powershellget"></a>Installera Azure PowerShell på Windows med PowerShellGet
 
@@ -55,7 +55,7 @@ Följ anvisningarna i tabellen nedan för ditt system om du inte har PowerShellG
 |Scenario|Installationsinstruktioner|
 |---|---|
 |Windows 10<br/>Windows Server 2016|Inbyggt i Windows Management Framework (WMF) 5.0 som ingår i operativsystemet|
-|Uppgradera till PowerShell 5| <ol><li>[Installera den senaste versionen av WMF](https://www.microsoft.com/en-us/download/details.aspx?id=54616)</li><li>Kör följande kommando:<br/>```Install-Module PowerShellGet -Force```</li></ol>|
+|Uppgradera till PowerShell 5| <ol><li>[Installera den senaste versionen av WMF](https://www.microsoft.com/download/details.aspx?id=54616)</li><li>Kör följande kommando:<br/>```Install-Module PowerShellGet -Force```</li></ol>|
 |Windows med PowerShell 3 eller PowerShell 4|<ol><il>[Hämta PackageManagement-modulerna](http://go.microsoft.com/fwlink/?LinkID=746217)</il><li>Kör följande kommando:<br/>```Install-Module PowerShellGet -Force```</li></ol>|
 
 > [!NOTE]

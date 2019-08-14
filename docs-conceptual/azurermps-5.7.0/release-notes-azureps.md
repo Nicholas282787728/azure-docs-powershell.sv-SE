@@ -8,12 +8,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.workload: ''
 ms.date: 2/20/2018
-ms.openlocfilehash: ee9fb7e777d06f50514c6b4ba39805936b867045
-ms.sourcegitcommit: bbd3f061cac3417ce588487c1ae4e0bc52c11d6a
+ms.openlocfilehash: 61ab0f91c3d6fffdbffd336fa0d6ed9b0ab8f6ec
+ms.sourcegitcommit: b02cbcd00748a4a9a4790a5fba229ce53c3bf973
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "65535075"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68863281"
 ---
 # <a name="release-notes"></a>Viktig information
 
@@ -669,7 +669,7 @@ Update-Module -Name AzureRM
   - Ny cmdlet: Update-AzureRmPowerBIEmbeddedCapacity – Ändrar en instans av PowerBI Embedded-kapaciteten
 * Profil
   - USGovernmentActiveDirectoryEndpoint har uppdaterats till https://login.microsoftonline.us/
-    - Mer information om Azure Government-slutpunktsmappningar finns här: https://docs.microsoft.com/en-us/azure/azure-government/documentation-government-developer-guide#endpoint-mapping
+    - Mer information om Azure Government-slutpunktsmappningar finns här: https://docs.microsoft.com/azure/azure-government/documentation-government-developer-guide#endpoint-mapping
     - Stöd har lagts till för -AsJob för cmdletar, vilket gör det möjligt att köra valda cmdletar i bakgrunden och returnera ett jobb som spårar och kontrollerar förloppet
     - Parametern -AsJob har lagts till för cmdleten Get-AzureRmSubscription
 * RecoveryServices.Backup

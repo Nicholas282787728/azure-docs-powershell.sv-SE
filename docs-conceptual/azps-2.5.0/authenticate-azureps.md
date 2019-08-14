@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 02/20/2019
-ms.openlocfilehash: 1e25d4650cc20d7b6613e0efb12ec60d424608c4
-ms.sourcegitcommit: 6c0d296bfec7c1c35a1d15074ca5eacda6684ea4
+ms.openlocfilehash: 0b7a6fa4278d95a69b21f570ac6fb22b70f073f6
+ms.sourcegitcommit: b02cbcd00748a4a9a4790a5fba229ce53c3bf973
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68658104"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68861330"
 ---
 # <a name="sign-in-with-azure-powershell"></a>Logga in med Azure PowerShell
 
@@ -110,7 +110,7 @@ Om du vill lära dig mer om hanterade identiteter för Azure-resurser kan du lä
 
 Om ditt konto är associerat med fler än en klientorganisation måste du använda parametern `-TenantId` när du ansluter för att logga in. Den här parametern fungerar med alla andra inloggningsmetoder. När du loggar in kan det här parametervärdet antingen vara klientorganisationens objekt-ID för Azure (klient-ID) eller det fullständigt kvalificerade domännamnet för klientorganisationen.
 
-Om du är [molnlösningsleverantör (CSP)](https://azure.microsoft.com/en-us/offers/ms-azr-0145p/) **måste** värdet `-TenantId` vara ett klient-ID.
+Om du är [molnlösningsleverantör (CSP)](https://azure.microsoft.com/offers/ms-azr-0145p/) **måste** värdet `-TenantId` vara ett klient-ID.
 
 ```azurepowershell-interactive
 Connect-AzAccount -TenantId 'xxxx-xxxx-xxxx-xxxx'

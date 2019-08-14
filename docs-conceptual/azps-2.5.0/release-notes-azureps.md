@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e72aae940b48543d6a99801032186112748ea48b
-ms.sourcegitcommit: 6c0d296bfec7c1c35a1d15074ca5eacda6684ea4
+ms.openlocfilehash: 77cb28e47d8dddcf3936edff23f794de3b78442b
+ms.sourcegitcommit: b02cbcd00748a4a9a4790a5fba229ce53c3bf973
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657968"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68861197"
 ---
 ## <a name="250---july-2019"></a>2.5.0 – July 2019
 #### <a name="azaccounts"></a>Az.Accounts
@@ -536,7 +536,7 @@ ms.locfileid: "68657968"
     - Set-AzScheduledQueryRule
     - Update-AzScheduledQueryRule
     - Remove-AzScheduledQueryRule
-    - [Mer](https://docs.microsoft.com/en-us/rest/api/monitor/scheduledqueryrules) information om SQR API
+    - [Mer](https://docs.microsoft.com/rest/api/monitor/scheduledqueryrules) information om SQR API
     - Az.Monitor.md har uppdaterats för att omfatta cmdletar för måttbaserade aviseringsregler i GenV2 (inte klassiska)
 
 #### <a name="aznetwork"></a>Az.Network
@@ -589,7 +589,7 @@ ms.locfileid: "68657968"
 ### <a name="highlights-since-the-last-major-release"></a>Höjdpunkter sedan den senaste större uppdateringen
 * Allmän tillgänglighet för `Az`-modulen
 * Mer information om `Az`-modulen finns här: https://aka.ms/azps-announce
-* Ifyllning för Location, ResourceGroup och ResourceName har lagts till: https://azure.microsoft.com/en-us/blog/completers-in-azure-powershell/
+* Ifyllning för Location, ResourceGroup och ResourceName har lagts till: https://azure.microsoft.com/blog/completers-in-azure-powershell/
 * Stöd för jokertecken för Get-cmdletar för Az.Compute och Az.Network har lagts till
 * Endast interaktiv autentisering och autentisering med användarnamn/lösenord för Windows PowerShell 5.1 har lagts till
 * Stöd för Python 2-runbookflöden i Az.Automation har lagts till
@@ -693,7 +693,7 @@ ms.locfileid: "68657968"
 ### <a name="highlights-since-the-last-major-release"></a>Höjdpunkter sedan den senaste större uppdateringen
 * Allmän tillgänglighet för `Az`-modulen
 * Mer information om `Az`-modulen finns här: https://aka.ms/azps-announce
-* Ifyllning för Location, ResourceGroup och ResourceName har lagts till: https://azure.microsoft.com/en-us/blog/completers-in-azure-powershell/
+* Ifyllning för Location, ResourceGroup och ResourceName har lagts till: https://azure.microsoft.com/blog/completers-in-azure-powershell/
 * Stöd för jokertecken för Get-cmdletar för Az.Compute och Az.Network har lagts till
 * Endast interaktiv autentisering och autentisering med användarnamn/lösenord för Windows PowerShell 5.1 har lagts till
 * Stöd för Python 2-runbookflöden i Az.Automation har lagts till
@@ -750,7 +750,7 @@ ms.locfileid: "68657968"
 ### <a name="highlights-since-the-last-major-release"></a>Höjdpunkter sedan den senaste större uppdateringen
 * Allmän tillgänglighet för `Az`-modulen
 * Mer information om `Az`-modulen finns här: https://aka.ms/azps-announce
-* Ifyllning för Location, ResourceGroup och ResourceName har lagts till: https://azure.microsoft.com/en-us/blog/completers-in-azure-powershell/
+* Ifyllning för Location, ResourceGroup och ResourceName har lagts till: https://azure.microsoft.com/blog/completers-in-azure-powershell/
 * Stöd för jokertecken för Get-cmdletar för Az.Compute och Az.Network har lagts till
 * Endast interaktiv autentisering och autentisering med användarnamn/lösenord för Windows PowerShell 5.1 har lagts till
 * Stöd för Python 2-runbookflöden i Az.Automation har lagts till

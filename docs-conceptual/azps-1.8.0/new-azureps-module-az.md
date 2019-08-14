@@ -7,12 +7,12 @@ ms.author: sttramer
 ms.manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.openlocfilehash: 8dc5a7d3b47870455213aa01aebc1d215ad640a7
-ms.sourcegitcommit: a261efc84dedfd829c0613cf62f8fcf3aa62adb8
+ms.openlocfilehash: 21d41b6e14d1b39a78e40daee74b80de3a80c2a0
+ms.sourcegitcommit: b02cbcd00748a4a9a4790a5fba229ce53c3bf973
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68807497"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68861312"
 ---
 # <a name="introducing-the-new-azure-powershell-az-module"></a>Introduktion till den nya Azure PowerShell Az-modulen
 
@@ -39,7 +39,7 @@ Genom att genomföra de här ändringarna, som krävde en ny Azure PowerShell-mo
 
 Om du vill dra nytta av de senaste Azure-funktionerna i PowerShell bör du migrera till Az-modulen så snart som möjligt. Om du inte är redo att ersätta AzureRM med Az-modulen finns det ett par alternativ för att experimentera med Az:
 
-* Du kan använda en `PowerShell`-miljö med [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview).
+* Du kan använda en `PowerShell`-miljö med [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview).
   Azure Cloud Shell är en webbläsarbaserad skalmiljö som medföljer installerad med Az-modulen, med `Enable-AzureRM`-kompabilitetsalias installerade.
 * Låt AzureRM-modulen förbli installerad med PowerShell 5.1 för Windows. Installera däremot Az-modulen för PowerShell Core 6.x och senare. PowerShell 5.1 för Windows och PowerShell Core använder separata modulsamlingar. Följ instruktionerna för att [installera PowerShell Core](/powershell/scripting/install/installing-powershell-core-on-windows) och [installera sedan Az-modulen](install-az-ps.md) från en PowerShell Core-terminal.
 
