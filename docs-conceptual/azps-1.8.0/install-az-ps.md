@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 12/13/2018
-ms.openlocfilehash: 21345445efc89ab54bb7483cfe81f439f0a887a3
-ms.sourcegitcommit: b02cbcd00748a4a9a4790a5fba229ce53c3bf973
+ms.openlocfilehash: e302e49d95b6bc15750366c9eb960a6fec80c1a4
+ms.sourcegitcommit: e5b029312d17e12257b2b5351b808fdab0b4634c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68861305"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70386793"
 ---
 # <a name="install-the-azure-powershell-module"></a>Installera Azure PowerShell-modulen
 
@@ -101,13 +101,14 @@ Connect-AzAccount
 
 > [!NOTE]
 >
-> Om du har inaktiverat modulen för automatisk inläsning måste du importera modulen manuellt med `Import-Module Az`. Det kan ta några sekunder. Det beror på hur modulen är strukturerad.
+> Om du har inaktiverat modulen för automatisk inläsning, kan du importera den manuellt med `Import-Module Az`. Det kan ta några sekunder. Det beror på hur modulen är strukturerad.
 
 Du måste upprepa de här stegen för varje ny PowerShell-session du startar. Information om hur du sparar Azure-inloggningen mellan olika PowerShell-sessioner hittar du i artikeln om att [spara autentiseringsuppgifter för användare mellan olika PowerShell-sessioner](context-persistence.md).
 
 ## <a name="update-the-azure-powershell-module"></a>Uppdatera Azure PowerShell-modulen
 
-På grund av hur Az-modulen är paketerad uppdaterar kommandot [Update-Module](/powershell/module/powershellget/update-module) inte installationen på rätt sätt. Az är tekniskt sett en metamodul. Den omfattar alla undermoduler som innehåller cmdletar för att interagera med Azure-tjänster. Det innebär att om du vill uppdatera Azure PowerShell-modulen behöver du __installera om__, snarare än att bara __uppdatera__. Det gör du på samma sätt som när du installerar, men du kan behöva lägga till argumentet `-Force`:
+På grund av hur Az-modulen är paketerad uppdaterar kommandot [Update-Module](/powershell/module/powershellget/update-module) inte installationen på rätt sätt. När du installerar AZ-modulen samlar den in och installerar alla sina beroende undermoduler och tillhandahåller cmdletarna för varje tjänst.
+Det innebär att om du vill uppdatera Azure PowerShell-modulen behöver du __installera om__, snarare än att bara __uppdatera__. Det gör du på samma sätt som när du installerar, men du kan behöva lägga till argumentet `-Force`:
 
 ```powershell
 Install-Module -Name Az -AllowClobber -Force

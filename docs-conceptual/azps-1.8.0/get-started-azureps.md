@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: get-started-article
 ms.date: 01/14/2019
-ms.openlocfilehash: c60036ba8be6282007aa34a0bb9c0d9e33197072
-ms.sourcegitcommit: fd62a6376eef9b6ca76df766de1edcd7938c7a30
+ms.openlocfilehash: a4c8792f2ff27e1b6d3cee97144c26455356b7fd
+ms.sourcegitcommit: e5b029312d17e12257b2b5351b808fdab0b4634c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388916"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70386828"
 ---
 # <a name="get-started-with-azure-powershell"></a>Komma igång med Azure PowerShell
 
@@ -43,7 +43,8 @@ Om du är i en region som inte är i USA använder du parametern `-Environment` 
 Connect-AzAccount -Environment AzureChinaCloud
 ```
 
-Du får ett token att använda på https://microsoft.com/devicelogin. Öppna den här sidan i webbläsaren och ange token. Logga sedan in med dina Azure-autentiseringsuppgifter och auktorisera Azure PowerShell. 
+I PowerShell 5.1-miljöer visas en inloggningsdialogruta där du kan ange användarnamn och lösenord för ditt Azure-konto. I alla andra versioner av PowerShell får du en token att använda på [https://microsoft.com/devicelogin ].
+Öppna den här sidan i webbläsaren och ange token. Logga sedan in med dina Azure-autentiseringsuppgifter och auktorisera Azure PowerShell.
 
 Efter att du loggat in ser du information om vilka av dina Azure-prenumerationer som är aktiva. Om du har flera Azure-prenumerationer i ditt konto och vill välja en annan, hämtar du dina tillgängliga prenumerationer med [Get-AzSubscription](/powershell/module/az.accounts/get-azsubscription) och använder cmdleten [Set-AzContext](/powershell/module/az.accounts/set-azcontext) med ditt prenumerations-ID.
 Mer information om hur du hanterar dina Azure-prenumerationer i Azure PowerShell finns i [Använda flera Azure-prenumerationer](manage-subscriptions-azureps.md).
@@ -88,7 +89,7 @@ Det finns även Azure PowerShell-snabbstarter för andra populära Azure-tjänst
 * [Skapa en Azure SQL-databas och -brandvägg](/azure/sql-database/scripts/sql-database-create-and-configure-database-powershell)
 * [Köra en container i Azure Container Instances](/azure/container-instances/container-instances-quickstart-powershell)
 * [Skapa en VM-skalningsuppsättning med Virtual Machine Scale Sets (VMSS)](/azure/virtual-machine-scale-sets/quick-create-powershell)
-* [Skapa en standardbelastningsutjämnare](/azure/load-balancer/quickstart-create-standard-load-balancer-powershell)
+* [Skapa en standardlastbalanserare](/azure/load-balancer/quickstart-create-standard-load-balancer-powershell)
 
 ## <a name="next-steps"></a>Nästa steg
 

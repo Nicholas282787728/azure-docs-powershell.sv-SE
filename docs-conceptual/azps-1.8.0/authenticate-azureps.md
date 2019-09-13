@@ -6,13 +6,13 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 02/20/2019
-ms.openlocfilehash: 0b7a6fa4278d95a69b21f570ac6fb22b70f073f6
-ms.sourcegitcommit: b02cbcd00748a4a9a4790a5fba229ce53c3bf973
+ms.date: 09/04/2019
+ms.openlocfilehash: 21d87bd35da74f09b70976e7b395e7b987fbd3f5
+ms.sourcegitcommit: e5b029312d17e12257b2b5351b808fdab0b4634c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68861221"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70386802"
 ---
 # <a name="sign-in-with-azure-powershell"></a>Logga in med Azure PowerShell
 
@@ -54,7 +54,7 @@ Använd cmdleten [Get-Credential](/powershell/module/microsoft.powershell.securi
 
 ```azurepowershell-interactive
 $pscredential = Get-Credential
-Connect-AzAccount -ServicePrincipal -Credential $pscredential -TenantId $tenantId
+Connect-AzAccount -ServicePrincipal -Credential $pscredential -Tenant $tenantId
 ```
 
 I automationsscenarier måste du skapa autentiseringsuppgifter från ett användarnamn och en säker sträng:
@@ -62,7 +62,7 @@ I automationsscenarier måste du skapa autentiseringsuppgifter från ett använd
 ```azurepowershell-interactive
 $passwd = ConvertTo-SecureString <use a secure password here> -AsPlainText -Force
 $pscredential = New-Object System.Management.Automation.PSCredential('service principal name/id', $passwd)
-Connect-AzAccount -ServicePrincipal -Credential $pscredential -TenantId $tenantId
+Connect-AzAccount -ServicePrincipal -Credential $pscredential -Tenant $tenantId
 ```
 
 Se till att du använder metoder för säker lagring av lösenord vid automatisering av anslutningar med tjänstens huvudnamn.
@@ -71,7 +71,13 @@ Se till att du använder metoder för säker lagring av lösenord vid automatise
 
 För certifikatbaserad autentisering måste Azure PowerShell kunna hämta information från ett lokalt certifikatarkiv baserat på ett tumavtryck för certifikat.
 ```azurepowershell-interactive
-Connect-AzAccount -ServicePrincipal -TenantId $tenantId -CertificateThumbprint <thumbprint>
+Connect-AzAccount -ApplicationId $appId -Tenant $tenantId -CertificateThumbprint <thumbprint>
+```
+
+När du använder tjänstens huvudnamn i stället för ett registrerat program, lägger du till argumentet `-ServicePrincipal` och anger ID:t för tjänstens huvudnamn som `-ApplicationId`-parameterns värde.
+
+```azurepowershell-interactive
+Connect-AzAccount -ServicePrincipal -ApplicationId $servicePrincipalId -Tenant $tenantId -CertificateThumbprint <thumbprint>
 ```
 
 I PowerShell 5.1 kan certifikatarkivet hanteras och kontrolleras med [PKI](/powershell/module/pkiclient)-modulen. I PowerShell Core 6.x och senare är processen mer komplicerad. Följande skript visar hur du importerar ett befintligt certifikat till det certifikatarkiv som är tillgängligt för PowerShell.
@@ -100,7 +106,7 @@ $store.Add($Certificate)
 $store.Close()
 ```
 
-## <a name="sign-in-using-a-managed-identity"></a>Logga in med en hanterad identitet 
+## <a name="sign-in-using-a-managed-identity"></a>Logga in med en hanterad identitet
 
 Hanterade identiteter är en funktion i Azure Active Directory. Hanterade identiteter är tjänsthuvudnamn som tilldelats till resurser som körs i Azure. Du kan använda en hanterad identitet som tjänstens huvudnamn för att logga in och få en app-begränsad åtkomsttoken för att komma åt andra resurser. Hanterade identiteter är endast tillgängliga på resurser som körs i ett Azure-moln.
 
@@ -108,19 +114,19 @@ Om du vill lära dig mer om hanterade identiteter för Azure-resurser kan du lä
 
 ## <a name="sign-in-with-a-non-default-tenant-or-as-a-cloud-solution-provider-csp"></a>Logga in med en klientorganisation som inte är standard eller som molnlösningsleverantör (CSP)
 
-Om ditt konto är associerat med fler än en klientorganisation måste du använda parametern `-TenantId` när du ansluter för att logga in. Den här parametern fungerar med alla andra inloggningsmetoder. När du loggar in kan det här parametervärdet antingen vara klientorganisationens objekt-ID för Azure (klient-ID) eller det fullständigt kvalificerade domännamnet för klientorganisationen.
+Om ditt konto är associerat med fler än en klientorganisation måste du använda parametern `-Tenant` när du ansluter för att logga in. Den här parametern kan användas med alla inloggningsmetoder. När du loggar in kan det här parametervärdet antingen vara klientorganisationens objekt-ID för Azure (klient-ID) eller det fullständigt kvalificerade domännamnet för klientorganisationen.
 
-Om du är [molnlösningsleverantör (CSP)](https://azure.microsoft.com/offers/ms-azr-0145p/) **måste** värdet `-TenantId` vara ett klient-ID.
+Om du är [molnlösningsleverantör (CSP)](https://azure.microsoft.com/offers/ms-azr-0145p/) **måste** värdet `-Tenant` vara ett klient-ID.
 
 ```azurepowershell-interactive
-Connect-AzAccount -TenantId 'xxxx-xxxx-xxxx-xxxx'
+Connect-AzAccount -Tenant 'xxxx-xxxx-xxxx-xxxx'
 ```
 
 ## <a name="sign-in-to-another-cloud"></a>Logga in på ett annat moln
 
 Azures molntjänster erbjuder miljöer som följer regionala lagar för datahantering.
 För konton i ett regionalt moln anger du miljön när du loggar in med argumentet `-Environment`.
-Om ditt konto till exempel finns i Kina-molnet:
+Den här parametern kan användas med alla inloggningsmetoder. Om ditt konto till exempel finns i Kina-molnet:
 
 ```azurepowershell-interactive
 Connect-AzAccount -Environment AzureChinaCloud
