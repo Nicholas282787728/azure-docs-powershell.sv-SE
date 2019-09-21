@@ -1,5 +1,5 @@
 - name: Azure PowerShell
-  href: overview.md
+  href: index.yml
 - name: Introduktion till den nya Az-modulen
   href: new-azureps-module-az.md
   displayName: 'intro, introduction, azurerm'
@@ -15,7 +15,7 @@
     - name: Ändringar mellan AzureRM och Az
       href: migrate-az-1.0.0.md
       displayName: 'breaking, cmdlet, module, names'
-- name: Kom igång
+- name: Komma igång
   href: get-started-azureps.md
   displayName: 'sign in, signin, log in, login, find, feedback, intro, introduction'
 - name: Cloud Shell
