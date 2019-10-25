@@ -1,150 +1,76 @@
 ---
-title: Köra cmdletar parallellt med hjälp av PowerShell-jobb
-description: Så här kör du cmdletar parallellt med parametern -AsJob.
+title: Köra Azure PowerShell-cmdletar i PowerShell-jobb
+description: Lär dig hur du kör Azure PowerShell-cmdletar parallellt eller som bakgrundsaktiviteter med hjälp av -AsJob och Start-Job.
 author: sptramer
 ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/11/2018
-ms.openlocfilehash: 825a07e01194a07b747712a62384c7f162e63d7d
-ms.sourcegitcommit: 5bdedc77b27b66998387486761ec67ed9326f169
+ms.date: 10/21/2019
+ms.openlocfilehash: d74d3681794398534fe2c75a0c8fc314767ffa85
+ms.sourcegitcommit: 1cdff856d1d559b978aac6bc034dd2f99ac04afe
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67346687"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72791480"
 ---
-# <a name="running-cmdlets-in-parallel-using-powershell-jobs"></a>Kör cmdletar parallellt med hjälp av PowerShell-jobb
+# <a name="run-azure-powershell-cmdlets-in-powershell-jobs"></a>Köra Azure PowerShell-cmdletar i PowerShell-jobb
 
-PowerShell har stöd för asynkrona åtgärder med [PowerShell-jobb](/powershell/module/microsoft.powershell.core/about/about_jobs).
-Azure PowerShell är kraftigt beroende av att utföra och vänta på nätverksanrop till Azure. Du kanske ofta behöver utföra icke-blockerande anrop. För att uppfylla det behovet tillhandahåller Azure PowerShell förstklassigt [PSJob](/powershell/module/microsoft.powershell.core/about/about_jobs)-stöd.
+Azure PowerShell är beroende av att ansluta till ett Azure-moln och vänta på svar, så att de flesta av dessa cmdletar blockerar PowerShell-sessionen tills de får ett svar från molnet.
+Med PowerShell-jobb kan du köra cmdletar i bakgrunden eller utföra flera uppgifter på Azure samtidigt, inifrån en och samma PowerShell-session.
 
-## <a name="context-persistence-and-psjobs"></a>Sammanhangsbeständighet och PSJobs
+Den här artikeln ger en kort översikt över hur du kör Azure PowerShell-cmdletar som PowerShell-jobb och kontrollerar att de är klara. Om du ska köra kommandon i Azure PowerShell måste du använda Azure PowerShell-kontexter som beskrivs i detalj i [Azure-kontexter och inloggningsuppgifter](context-persistence.md).
+Mer information om PowerShell-jobb finns i [Om PowerShell-jobb](/powershell/module/microsoft.powershell.core/about/about_jobs).
 
-Eftersom PSJobs körs som separata processer måste Azure-anslutningen delas med dem. När du har loggat in på ditt Azure-konto med `Connect-AzAccount` överför du sammanhanget till ett jobb.
+## <a name="azure-contexts-with-powershell-jobs"></a>Azure-kontexter med PowerShell-jobb
+
+PowerShell-jobb körs som separata processer utan en ansluten PowerShell-session, så dina Azure-autentiseringsuppgifter måste delas med dem. Autentiseringsuppgifterna skickas som Azure-kontextobjekt med någon av följande metoder:
+
+* Automatisk kontextpersistens. Kontextpersistens är aktiverat som standard och bevarar din inloggningsinformation över flera sessioner. Med kontextpersistens aktiverat skickas den aktuella Azure-kontexten till den nya processen:
+
+  ```azurepowershell-interactive
+  Enable-AzContextAutosave # Enables context autosave if not already on
+  $creds = Get-Credential
+  $job = Start-Job { param($vmadmin) New-AzVM -Name MyVm -Credential $vmadmin } -ArgumentList $creds
+  ```
+
+* Använd parametern `-AzContext` med alla Azure PowerShell-cmdletar för att ange ett Azure-kontextobjekt:
+
+  ```azurepowershell-interactive
+  $context = Get-AzContext -Name 'mycontext' # Get an Azure context object
+  $creds = Get-Credential
+  $job = Start-Job { param($context, $vmadmin) New-AzVM -Name MyVm -AzContext $context -Credential $vmadmin} -ArgumentList $context,$creds }
+  ```
+
+  Om kontextpersistens är inaktiverat krävs argumentet `-AzContext`.
+
+* Använd växeln `-AsJob` som tillhandahålls av vissa Azure PowerShell-cmdletar. Den här växeln startar automatiskt cmdleten som ett PowerShell-jobb med den aktuella aktiva Azure-kontexten:
+
+  ```azurepowershell-interactive
+  $creds = Get-Credential
+  $job = New-AzVM -Name MyVm -Credential $creds -AsJob
+  ```
+
+  Om du vill se om en cmdlet stöder `-AsJob` kan du kontrollera referensdokumentationen. Växeln `-AsJob` kräver inte att kontexten sparas automatiskt.
+
+Du kan kontrollera statusen för ett jobb som körs med cmdleten [Get-Job](/powershell/module/microsoft.powershell.core/get-job). Om du vill hämta utdata från ett jobb hittills använder du cmdleten [Receive-Job](/powershell/module/microsoft.powershell.core/receive-job).
+
+Om du vill kontrollera en åtgärds status på Azure via en fjärranslutning använder du de `Get-`-cmdletar som är kopplade till den typ av resurs som ändras av jobbet:
 
 ```azurepowershell-interactive
 $creds = Get-Credential
-$job = Start-Job { param($context,$vmadmin) New-AzVM -Name MyVm -AzContext $context -Credential $vmadmin} -ArgumentList (Get-AzContext),$creds
-```
+$context = Get-AzContext -Name 'mycontext'
+$vmName = "MyVm"
 
-Men om du har valt att sammanhanget ska sparas automatiskt med `Enable-AzContextAutosave` delas sammanhanget automatiskt med alla jobb som du skapar.
+$job = Start-Job { param($context, $vmName, $vmadmin) New-AzVM -Name $vmName -AzContext $context -Credential $vmadmin} -ArgumentList $context,$vmName,$creds }
 
-```azurepowershell-interactive
-Enable-AzContextAutosave
-$creds = Get-Credential
-$job = Start-Job { param($vmadmin) New-AzVM -Name MyVm -Credential $vmadmin} -ArgumentList $creds
-```
-
-## <a name="automatic-jobs-with--asjob"></a>Automatiska jobb med `-AsJob`
-
-För att förenkla processen tillhandahåller Azure PowerShell även en `-AsJob`-växel på vissa tidskrävande-cmdletar.
-`-AsJob`-växeln gör det enklare att skapa PSJobs.
-
-```azurepowershell-interactive
-$creds = Get-Credential
-$job = New-AzVM -Name MyVm -Credential $creds -AsJob
-```
-
-Du kan inspektera jobb och förlopp när som helst med `Get-Job` och `Get-AzVM`.
-
-```azurepowershell-interactive
 Get-Job $job
-Get-AzVM MyVm
+Get-AzVM -Name $vmName
 ```
 
-```output
-Id Name                                       PSJobTypeName         State   HasMoreData Location  Command
--- ----                                       -------------         -----   ----------- --------  -------
-1  Long Running Operation for 'New-AzVM' AzureLongRunningJob`1 Running True        localhost New-AzVM
+## <a name="see-also"></a>Se även
 
-ResourceGroupName    Name Location          VmSize  OsType     NIC ProvisioningState Zone
------------------    ---- --------          ------  ------     --- ----------------- ----
-MyVm                 MyVm   eastus Standard_DS1_v2 Windows    MyVm          Creating
-```
-
-När jobbet har slutförts hämtar du resultatet av jobbet med `Receive-Job`.
-
-> [!NOTE]
-> `Receive-Job` returnerar resultatet från cmdleten som om flaggan `-AsJob` inte fanns.
-> Till exempel, resultatet `Receive-Job` av `Do-Action -AsJob` är av samma typ som ett resultat av `Do-Action`.
-
-```azurepowershell-interactive
-$vm = Receive-Job $job
-$vm
-```
-
-```output
-ResourceGroupName        : MyVm
-Id                       : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyVm/providers/Microsoft.Compute/virtualMachines/MyVm
-VmId                     : dff1f79e-a8f7-4664-ab72-0ec28b9fbb5b
-Name                     : MyVm
-Type                     : Microsoft.Compute/virtualMachines
-Location                 : eastus
-Tags                     : {}
-HardwareProfile          : {VmSize}
-NetworkProfile           : {NetworkInterfaces}
-OSProfile                : {ComputerName, AdminUsername, WindowsConfiguration, Secrets}
-ProvisioningState        : Succeeded
-StorageProfile           : {ImageReference, OsDisk, DataDisks}
-FullyQualifiedDomainName : myvmmyvm.eastus.cloudapp.azure.com
-```
-
-## <a name="example-scenarios"></a>Exempelscenarier
-
-Skapa flera virtuella datorer samtidigt:
-
-```azurepowershell-interactive
-$creds = Get-Credential
-# Create 10 jobs.
-for($k = 0; $k -lt 10; $k++) {
-    New-AzVm -Name MyVm$k  -Credential $creds -AsJob
-}
-
-# Get all jobs and wait on them.
-Get-Job | Wait-Job
-"All jobs completed"
-Get-AzVM
-```
-
-I det här exemplet gör cmdleten `Wait-Job` att skriptet pausas medan jobben fortfarande körs. Skriptet fortsätter att köras när alla jobb har slutförts. Flera jobb körs parallellt och sedan väntar skriptet på att de slutförs innan det fortsätter.
-
-```output
-Id     Name            PSJobTypeName   State         HasMoreData     Location             Command
---     ----            -------------   -----         -----------     --------             -------
-2      Long Running... AzureLongRun... Running       True            localhost            New-AzVM
-3      Long Running... AzureLongRun... Running       True            localhost            New-AzVM
-4      Long Running... AzureLongRun... Running       True            localhost            New-AzVM
-5      Long Running... AzureLongRun... Running       True            localhost            New-AzVM
-6      Long Running... AzureLongRun... Running       True            localhost            New-AzVM
-7      Long Running... AzureLongRun... Running       True            localhost            New-AzVM
-8      Long Running... AzureLongRun... Running       True            localhost            New-AzVM
-9      Long Running... AzureLongRun... Running       True            localhost            New-AzVM
-10     Long Running... AzureLongRun... Running       True            localhost            New-AzVM
-11     Long Running... AzureLongRun... Running       True            localhost            New-AzVM
-2      Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
-3      Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
-4      Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
-5      Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
-6      Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
-7      Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
-8      Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
-9      Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
-10     Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
-11     Long Running... AzureLongRun... Completed     True            localhost            New-AzVM
-All Jobs completed.
-
-ResourceGroupName        Name   Location          VmSize  OsType           NIC ProvisioningState Zone
------------------        ----   --------          ------  ------           --- ----------------- ----
-MYVM                     MyVm     eastus Standard_DS1_v2 Windows          MyVm         Succeeded
-MYVM0                   MyVm0     eastus Standard_DS1_v2 Windows         MyVm0         Succeeded
-MYVM1                   MyVm1     eastus Standard_DS1_v2 Windows         MyVm1         Succeeded
-MYVM2                   MyVm2     eastus Standard_DS1_v2 Windows         MyVm2         Succeeded
-MYVM3                   MyVm3     eastus Standard_DS1_v2 Windows         MyVm3         Succeeded
-MYVM4                   MyVm4     eastus Standard_DS1_v2 Windows         MyVm4         Succeeded
-MYVM5                   MyVm5     eastus Standard_DS1_v2 Windows         MyVm5         Succeeded
-MYVM6                   MyVm6     eastus Standard_DS1_v2 Windows         MyVm6         Succeeded
-MYVM7                   MyVm7     eastus Standard_DS1_v2 Windows         MyVm7         Succeeded
-MYVM8                   MyVm8     eastus Standard_DS1_v2 Windows         MyVm8         Succeeded
-MYVM9                   MyVm9     eastus Standard_DS1_v2 Windows         MyVm9         Succeeded
-```
+* [Azure PowerShell-kontexter](context-persistence.md)
+* [Om PowerShell-jobb](/powershell/module/microsoft.powershell.core/about/about_jobs)
+* [Referens för Get-Job](/powershell/module/microsoft.powershell.core/get-job)
+* [Referens för Receive-Job](/powershell/module/microsoft.powershell.core/receive-job)
