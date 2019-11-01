@@ -1,25 +1,36 @@
 ---
 title: Avinstallera Azure PowerShell
 description: Så här utför du en fullständig avinstallation av Azure PowerShell
-ms.date: 06/10/2019
+ms.date: 10/22/2019
 author: sptramer
 ms.author: sttramer
 ms.manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.openlocfilehash: e71b4d0d662b29a32610fecb36351532040428e4
-ms.sourcegitcommit: a261efc84dedfd829c0613cf62f8fcf3aa62adb8
+ms.openlocfilehash: 772667032d421e32c6cd63abbcb686b4eab308e2
+ms.sourcegitcommit: ad7677d703a8512d371d3123dc7e541156b95cb8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68807433"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72814337"
 ---
 # <a name="uninstall-the-azure-powershell-module"></a>Avinstallera Azure PowerShell-modulen
 
 Den här artikeln beskriver hur du avinstallerar en äldre version av Azure PowerShell eller tar bort det fullständigt från ditt system. Om du har bestämt dig för att avinstallera Azure PowerShell fullständigt kan du ge oss feedback genom cmdleten [Send-Feedback](/powershell/module/az.accounts/send-feedback).
 Om du har påträffat en bugg vill vi gärna att du [öppnar ett GitHub-supportärende](https://github.com/azure/azure-powershell/issues) så att den kan korrigeras.
 
-## <a name="uninstall-the-az-module"></a>Avinstallera Az-modulen
+## <a name="uninstall-azure-powershell-from-msi"></a>Avinstallera Azure PowerShell från MSI
+
+Om du har installerat Azure PowerShell med hjälp av MSI-paketet måste du avinstallera det via Windows-systemet i stället för PowerShell.
+
+| Plattform | Instruktioner |
+|----------|--------------|
+| Windows 10 | Start > Inställningar > Appar |
+| Windows 7 </br>Windows 8 | Start > Kontrollpanelen > Program > Avinstallera ett program |
+
+På den här skärmen bör du se __Azure PowerShell__ i listan över program. Det är appen som ska avinstalleras. Om det här programmet inte visas i listan så installerade du via PowerShellGet. Då följer du anvisningarna som följer.
+
+## <a name="uninstall-azure-powershell-from-powershell-get"></a>Avinstallera Azure PowerShell från PowerShell Get
 
 Om du vill avinstallera Az-modulerna använder du cmdleten [Uninstall-Module](/powershell/module/powershellget/uninstall-module). Men `Uninstall-Module` avinstallerar endast en modul. Om du vill ta bort Azure PowerShell helt måste du avinstallera varje modul individuellt. Avinstallationen kan vara komplicerad om du har fler än en version av Azure PowerShell installerad.
 

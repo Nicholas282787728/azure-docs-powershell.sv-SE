@@ -6,13 +6,13 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 12/13/2018
-ms.openlocfilehash: e302e49d95b6bc15750366c9eb960a6fec80c1a4
-ms.sourcegitcommit: 0b94b9566124331d0b15eb7f5a811305c254172e
+ms.date: 10/22/2019
+ms.openlocfilehash: 7f22a420068db87fa2c3c007bd36f515384162fb
+ms.sourcegitcommit: ad7677d703a8512d371d3123dc7e541156b95cb8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72370348"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72814219"
 ---
 # <a name="install-the-azure-powershell-module"></a>Installera Azure PowerShell-modulen
 
@@ -67,6 +67,18 @@ Are you sure you want to install the modules from 'PSGallery'?
 Svara `Yes` eller `Yes to All` för att fortsätta med installationen.
 
 Az-modulen är en sammanslagen modul för Azure PowerShell-cmdletar. När du installerar den laddar den ned alla tillgängliga Azure Resource Manager-moduler och gör dess cmdletar tillgängliga för användning.
+
+## <a name="install-offline"></a>Installera offline
+
+I en del miljöer går det inte att ansluta till PowerShell-galleriet. I sådana situationer kan du fortfarande installera offline på något av dessa sätt:
+
+* Ladda ned modulerna till en annan plats och använd det som en installationskälla på ditt nätverk. Det här kan vara komplicerat, men då kan du cachelagra PowerShell-moduler på en enda server eller filresurs så att de kan distribueras med PowerShellGet till frånkopplade system. Läs artikeln om hur du [arbetar med lokala PowerShellGet-lagringsplatser](/powershell/scripting/gallery/how-to/working-with-local-psrepositories) för mer information om hur du konfigurerar lokala lagringsplatser och installerar på frånkopplade system.
+* [Ladda ned Azure PowerShell MSI](install-az-ps-msi.md) till en dator som är ansluten till nätverket, och kopiera sedan installationsprogrammet till system som saknar åtkomst till PowerShell-galleriet. Tänk på att MSI-installationsprogrammet endast fungerar för PowerShell 5.1 på Windows.
+* Spara modulen med [Save-Module](/powershell/module/PowershellGet/Save-Module) till en filresurs, eller spara den till en annan källa och kopiera den manuellt till andra datorer:
+  
+  ```powershell-interactive
+  Save-Module -Name Az -Path '\\someshare\PowerShell\modules' -Force
+  ```
 
 ## <a name="troubleshooting"></a>Felsökning
 
