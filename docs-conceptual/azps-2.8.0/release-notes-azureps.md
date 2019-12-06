@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/15/2019
-ms.openlocfilehash: 83e6039153bcc2b8ccb7ceddfa91609f0d6c7b3f
-ms.sourcegitcommit: b4ee3fbaaa2a329ea28308bd1902ae83a34db698
+ms.openlocfilehash: 8c1369cdedf8848f3c62ca6b6bc4eb3d2d78be95
+ms.sourcegitcommit: f9445d1525eac8c165637e1a80fbc92b1ab005c2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72380183"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74656819"
 ---
 ## <a name="280---october-2019"></a>2.8.0 – oktober 2019
 ### <a name="general"></a>Allmänt
@@ -56,7 +56,7 @@ ms.locfileid: "72380183"
 * Mindre felkorrigering: Get-AzIothub returnerar inte subscriptionId 
 
 #### <a name="azmonitor"></a>Az.Monitor
-* Nya åtgärdsgruppsmottagare har lagts till för åtgärdsgrupp   -ItsmReceiver   -VoiceReceiver   -ArmRoleReceiver   -AzureFunctionReceiver   -LogicAppReceiver   -AutomationRunbookReceiver   -AzureAppPushReceiver
+* Nya åtgärdsgruppsmottagare har lagts till för New-AzActionGroupReceiver:   -ItsmReceiver   -VoiceReceiver   -ArmRoleReceiver   -AzureFunctionReceiver   -LogicAppReceiver   -AutomationRunbookReceiver   -AzureAppPushReceiver
 * Använd vanligt aviseringsschema som är aktiverat för mottagarna. Detta gäller inte för SMS, push för Azure-app, ITSM och röstmottagare
 * Webhooks har nu stöd för Azure Active Directory-autentisering.
 
@@ -64,8 +64,8 @@ ms.locfileid: "72380183"
 * Lägg till ny cmdlet Get-AzAvailableServiceAlias som kan anropas för att hämta de alias som kan användas för tjänstslutpunktsprinciper.
 * Stöd för tillägg av trafikväljare har lagts till i gatewayanslutningar för virtuella nätverk
     - Nya cmdletar har lagts till:
-        - New-AzureRmTrafficSelectorPolicy
-    - Cmdletar har uppdaterats med valfri parameter -TrafficSelectorPolicies   -New-AzureRmVirtualNetworkGatewayConnection   -Set-AzureRmVirtualNetworkGatewayConnection
+        - New-AzIpsecTrafficSelectorPolicy
+    - Cmdletar har uppdaterats med valfri parameter -TrafficSelectorPolicies   -New-AzVirtualNetworkGatewayConnection   -Set-AzVirtualNetworkGatewayConnection
 * Lägg till stöd för ESP- och AH-protokoll i konfiguration av nätverkssäkerhetsregler
     - Uppdaterade cmdletar:
         - Add-AzNetworkSecurityRuleConfig
@@ -220,7 +220,7 @@ ms.locfileid: "72380183"
     -  Remove-AzRmStorageShare
 
 #### <a name="azwebsites"></a>Az.Websites
-* Åtgärdar problemet där webapp-taggar togs bort när appen migrerades till nya ASP
+* Åtgärda problemet där webbapp-taggar togs bort när appen migrerades till en ny ASP
 * Åtgärda Publish-AzureWebapp så att det fungerar i Linux och Windows
 * Uppdatera exempel i ”Get-AzWebAppPublishingProfile”-referensdokumentationen
 
