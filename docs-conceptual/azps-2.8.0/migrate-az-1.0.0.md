@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2019
-ms.openlocfilehash: 1d99f04525a33f03f859bfb4abe263b12ca6add9
-ms.sourcegitcommit: 0b94b9566124331d0b15eb7f5a811305c254172e
+ms.openlocfilehash: e5121d61b0f5f68ff3e1f33d774e3533adfeb64f
+ms.sourcegitcommit: f9445d1525eac8c165637e1a80fbc92b1ab005c2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72370303"
+ms.lasthandoff: 12/16/2019
+ms.locfileid: "75035786"
 ---
 # <a name="breaking-changes-for-az-100"></a>Icke-bakåtkompatibla ändringar för Az 1.0.0
 
@@ -295,7 +295,7 @@ I det här avsnittet beskriver vi icke-bakåtkompatibla ändringar för enskilda
 - Tog bort den inaktuella parametern `ResourceId` från cmdleten `Get-AzServiceEndpointPolicyDefinition`
 - Tog bort den inaktuella egenskapen `EnableVmProtection` från objektet `PSVirtualNetwork`
 - Tog bort den inaktuella cmdleten `Set-AzVirtualNetworkGatewayVpnClientConfig`
-  
+
 Skript bör inte längre fatta bearbetningsbeslut baserat på värdena för dessa fält.
 
 ### <a name="azoperationalinsights-previously-azurermoperationalinsights"></a>Az.OperationalInsights (tidigare AzureRM.OperationalInsights)
