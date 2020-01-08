@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/20/2018
-ms.openlocfilehash: fe35fccd7994d7c3c3587096263a50af598e8651
-ms.sourcegitcommit: bbd3f061cac3417ce588487c1ae4e0bc52c11d6a
+ms.openlocfilehash: aaba0ce38129b96e3d691f1a9d9cfdc929188ffd
+ms.sourcegitcommit: 2d0c3ffaa5246f680784fa7e15b0d2536c27ff80
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "65535029"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75722415"
 ---
 # <a name="install-azure-powershell-on-windows-with-msi-or-web-platform-installer"></a>Installera Azure PowerShell på Windows med MSI eller installationsprogrammet för webbplattformen
 
@@ -42,7 +42,7 @@ Om du vill lära dig hur du sparar din Azure-inloggning mellan olika sessioner k
 
 ## <a name="install-or-update-on-windows-using-the-web-platform-installer"></a>Installera eller uppdatera på Windows med hjälp av installationsprogrammet för webbplattformen
 
-Hämta [Azure PowerShell WebPI-paketet](http://aka.ms/webpi-azps) och starta installationen. Om du har installerat tidigare versioner av Azure-moduler från MSI eller med installationsprogrammet för webbplattformen så tar installationsprogrammet automatiskt bort dem. Moduler installeras till `${env:ProgramFiles}\WindowsPowerShell\Modules`. Både modulerna `AzureRM` och `Azure` installeras.
+Hämta [Azure PowerShell WebPI-paketet](https://aka.ms/webpi-azps) och starta installationen. Om du har installerat tidigare versioner av Azure-moduler från MSI eller med installationsprogrammet för webbplattformen så tar installationsprogrammet automatiskt bort dem. Moduler installeras till `${env:ProgramFiles}\WindowsPowerShell\Modules`. Både modulerna `AzureRM` och `Azure` installeras.
 
 > [!NOTE]
 > Använd endast modulen `Azure` om du arbetar med den klassiska Azure-distributionsmodellen.

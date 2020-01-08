@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/06/2017
-ms.openlocfilehash: d41e7ce2faac6a82b63ed173b5b64b85b56577c0
-ms.sourcegitcommit: bbd3f061cac3417ce588487c1ae4e0bc52c11d6a
+ms.openlocfilehash: c0ac4f6cfb803519b8dd711d3cca0d4a4f7e6f8b
+ms.sourcegitcommit: 2d0c3ffaa5246f680784fa7e15b0d2536c27ff80
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "65535077"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75722466"
 ---
 # <a name="other-installation-methods"></a>Andra installationsmetoder
 
@@ -23,7 +23,7 @@ Azure PowerShell har flera olika installationsmetoder. Vi rekommenderar att du a
 ## <a name="install-on-windows-using-the-web-platform-installer"></a>Installera på Windows med hjälp av installationsprogrammet för webbplattformen
 
 Att installera den senaste versionen av Azure PowerShell från WebPI går till på samma sätt som det gjorde för tidigare versioner.
-Hämta [Azure PowerShell WebPI-paketet](http://aka.ms/webpi-azps) och starta installationen.
+Hämta [Azure PowerShell WebPI-paketet](https://aka.ms/webpi-azps) och starta installationen.
 
 > [!NOTE]
 > Om du tidigare har installerat Azure-moduler från PowerShell-galleriet så kommer installationsprogrammet automatiskt att ta bort dem. Detta förenklar din miljö genom att se till att endast en version av Azure PowerShell är installerad. Det finns dock scenarier där du kan behöva flera versioner installerade på samma gång.
@@ -56,7 +56,7 @@ At line:1 char:1
     + FullyQualifiedErrorId : CommandNotFoundException
 ```
 
-Det här felet kan korrigeras genom att starta om datorn eller importera modulen med den fullständigt kvalificerade sökvägen. Exempel:
+Det här felet kan korrigeras genom att starta om datorn eller importera modulen med den fullständigt kvalificerade sökvägen. Ett exempel:
 
 ```powershell-interactive
 Import-Module "$env:ProgramFiles(x86)\Microsoft SDKs\Azure\PowerShell\AzureRM.psd1"

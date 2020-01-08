@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/15/2018
-ms.openlocfilehash: ff50c676d42cad515aea74ea960105ed76f418a6
-ms.sourcegitcommit: b02cbcd00748a4a9a4790a5fba229ce53c3bf973
+ms.openlocfilehash: 5a4ccd67433fe3716df42075a4e2fd035a12af2b
+ms.sourcegitcommit: 2d0c3ffaa5246f680784fa7e15b0d2536c27ff80
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68863297"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75722449"
 ---
 # <a name="install-azure-powershell-on-windows-with-powershellget"></a>Installera Azure PowerShell på Windows med PowerShellGet
 
@@ -56,7 +56,7 @@ Följ anvisningarna i tabellen nedan för ditt system om du inte har PowerShellG
 |---|---|
 |Windows 10<br/>Windows Server 2016|Inbyggt i Windows Management Framework (WMF) 5.0 som ingår i operativsystemet|
 |Uppgradera till PowerShell 5| <ol><li>[Installera den senaste versionen av WMF](https://www.microsoft.com/download/details.aspx?id=54616)</li><li>Kör följande kommando:<br/>```Install-Module PowerShellGet -Force```</li></ol>|
-|Windows med PowerShell 3 eller PowerShell 4|<ol><il>[Hämta PackageManagement-modulerna](http://go.microsoft.com/fwlink/?LinkID=746217)</il><li>Kör följande kommando:<br/>```Install-Module PowerShellGet -Force```</li></ol>|
+|Windows med PowerShell 3 eller PowerShell 4|<ol><il>[Hämta PackageManagement-modulerna](https://go.microsoft.com/fwlink/?LinkID=746217)</il><li>Kör följande kommando:<br/>```Install-Module PowerShellGet -Force```</li></ol>|
 
 > [!NOTE]
 > För att kunna använda PowerShellGet, krävs en körningsprincip som låter dig köra skript. Mer information om PowerShell-körningsprincipen finns i [Om körningsprinciper](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
@@ -136,6 +136,6 @@ Import-Module -Name AzureRM -RequiredVersion 2.3.0
 Om du upptäcker en bugg när du använder Azure PowerShell kan du [öppna ett ärende på GitHub](https://github.com/Azure/azure-powershell/issues).
 Om du vill ge feedback från kommandoraden använder du cmdleten [Send-Feedback](/powershell/module/azurerm.profile/send-feedback).
 
-## <a name="next-steps"></a>Nästa steg
+## <a name="next-steps"></a>Efterföljande moment
 
 Läs informationen i [Komma igång med Azure PowerShell](get-started-azureps.md) för att komma igång med Azure PowerShell och lära dig mer om modulerna och dess funktioner.

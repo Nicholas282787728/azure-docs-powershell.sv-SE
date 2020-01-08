@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 11/15/2017
-ms.openlocfilehash: e2962245b332939da9d65468b57ced28be31d20a
-ms.sourcegitcommit: bbd3f061cac3417ce588487c1ae4e0bc52c11d6a
+ms.openlocfilehash: fde36bd3b4e2d5780f74f7bc74267ff611116400
+ms.sourcegitcommit: 2d0c3ffaa5246f680784fa7e15b0d2536c27ff80
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "65534823"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75722483"
 ---
 # <a name="get-started-with-azure-powershell"></a>Komma igång med Azure PowerShell
 
@@ -371,7 +371,7 @@ Om du vill lära dig mer om att använda Azure PowerShell kan du ta en titt på 
 * [Logga in med Azure PowerShell](authenticate-azureps.md)
 * [Hantera Azure-prenumerationer med Azure PowerShell](manage-subscriptions-azureps.md)
 * [Skapa tjänstens huvudnamn i Azure med Azure PowerShell](create-azure-service-principal-azureps.md)
-* Läs den viktiga informationen om hur du migrerar från en äldre version: [ https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes ](https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes).
+* Läs den viktiga informationen om hur du migrerar från en äldre version: [https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes](https://github.com/Azure/azure-powershell/tree/dev/documentation/release-notes).
 * Få hjälp från communityn:
-  * [Azure-forumet på MSDN](http://go.microsoft.com/fwlink/p/?LinkId=320212)
-  * [stackoverflow](http://go.microsoft.com/fwlink/?LinkId=320213)
+  * [Azure-forumet på MSDN](https://go.microsoft.com/fwlink/p/?LinkId=320212)
+  * [stackoverflow](https://go.microsoft.com/fwlink/?LinkId=320213)

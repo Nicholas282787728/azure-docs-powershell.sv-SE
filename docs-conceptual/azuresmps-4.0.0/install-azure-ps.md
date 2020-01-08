@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/06/2017
-ms.openlocfilehash: 1f859dcbaca88e28ebc0814513b7f4ee35610dc2
-ms.sourcegitcommit: b02cbcd00748a4a9a4790a5fba229ce53c3bf973
+ms.openlocfilehash: a4911e72f687c07b31805c07fd23263a6b7f33b4
+ms.sourcegitcommit: 2d0c3ffaa5246f680784fa7e15b0d2536c27ff80
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68863218"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75718805"
 ---
 # <a name="installing-the-azure-powershell-service-management-module"></a>Installera Azure PowerShell Service Management-modulen
 
@@ -74,7 +74,7 @@ Azure PowerShell-modulerna uppdateras kontinuerligt. Om du märker att onlinehj�
 
 Om du vill ha exempelskript som kan hjälpa dig att automatisera vissa av de vanliga uppgifterna i Azure kan du se [Windows Azure Script Center](http://www.windowsazure.com/documentation/scripts/).
 
-Allmän information om installation, inlärning, användning och anpassning av Windows PowerShell finns i [Skript med Windows PowerShell](http://go.microsoft.com/fwlink/p/?linkid=320210).
+Allmän information om installation, inlärning, användning och anpassning av Windows PowerShell finns i [Skript med Windows PowerShell](https://go.microsoft.com/fwlink/p/?linkid=320210).
 
 ### <a name="how-to-get-powershellget"></a>Hämta PowerShellGet
 
@@ -82,7 +82,7 @@ Allmän information om installation, inlärning, användning och anpassning av W
 |---|---|
 |Jag har Windows 10 eller Windows Server 2016|Inbyggt i Windows Management Framework (WMF) 5.0 som ingår i operativsystemet|
 |Jag vill uppgradera till PowerShell 5|[Installera den senaste versionen av WMF](https://www.microsoft.com/download/details.aspx?id=54616)|
-|Jag använder en Windows-version med PowerShell 3 eller PowerShell 4|[Hämta PackageManagement-moduler](http://go.microsoft.com/fwlink/?LinkID=746217)|
+|Jag använder en Windows-version med PowerShell 3 eller PowerShell 4|[Hämta PackageManagement-moduler](https://go.microsoft.com/fwlink/?LinkID=746217)|
 
 <div id="helpmechoose"/>
 

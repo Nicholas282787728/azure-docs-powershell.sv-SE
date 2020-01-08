@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/27/2018
-ms.openlocfilehash: dc11af0fff84899ca1b3ad3abf8760dd8c59e6f6
-ms.sourcegitcommit: b02cbcd00748a4a9a4790a5fba229ce53c3bf973
+ms.openlocfilehash: 7b099fead7cb985fc8f7e6fed55b8c1107caa0d9
+ms.sourcegitcommit: 2d0c3ffaa5246f680784fa7e15b0d2536c27ff80
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68863275"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75720386"
 ---
 # <a name="install-azure-powershell-on-windows-with-powershellget"></a>Installera Azure PowerShell på Windows med PowerShellGet
 
@@ -97,7 +97,7 @@ När modulen har installerats måste du läsa in modulen i din PowerShell-sessio
 Import-Module -Name AzureRM
 ```
 
-## <a name="next-steps"></a>Nästa steg
+## <a name="next-steps"></a>Efterföljande moment
 
 Mer information om hur du använder Azure PowerShell finns i följande artiklar:
 
@@ -115,7 +115,7 @@ Om du stöter på några buggar med verktyget kan du rapportera problemet i [pro
 |---|---|
 |Jag har Windows 10 eller Windows Server 2016|Inbyggt i Windows Management Framework (WMF) 5.0 som ingår i operativsystemet|
 |Jag vill uppgradera till PowerShell 5|[Installera den senaste versionen av WMF](https://www.microsoft.com/download/details.aspx?id=54616)|
-|Jag använder en Windows-version med PowerShell 3 eller PowerShell 4|[Hämta PackageManagement-moduler](http://go.microsoft.com/fwlink/?LinkID=746217)|
+|Jag använder en Windows-version med PowerShell 3 eller PowerShell 4|[Hämta PackageManagement-moduler](https://go.microsoft.com/fwlink/?LinkID=746217)|
 
 ### <a name="div-idhelpmechoosechecking-the-version-of-azure-powershell"></a><div id="helpmechoose"/>Kontrollera Azure PowerShell-versionen
 
