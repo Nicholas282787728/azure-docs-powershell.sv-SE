@@ -6,13 +6,13 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 10/15/2019
-ms.openlocfilehash: fb934ed0f8bef5e2aff715debe5d406d54abf24f
-ms.sourcegitcommit: 2d0c3ffaa5246f680784fa7e15b0d2536c27ff80
+ms.date: 01/09/2020
+ms.openlocfilehash: 3806a1c609a71c53c0bddc5bafd51d845c0c296e
+ms.sourcegitcommit: 16904e0a72c55fb81248e0252769defb86c50f36
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75718992"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831652"
 ---
 # <a name="azure-powershell-release-notes"></a>Viktig information om Azure PowerShell
 
@@ -31,7 +31,7 @@ ms.locfileid: "75718992"
 
 #### <a name="azdataboxedge"></a>Az.DataBoxEdge
 * Cmdleten ”Get-AzDataBoxEdgeStorageContainer” har lagts till
-  - Hämta gränslagringscontainer
+  - Hämta gränslagringscontainern
 * Cmdleten ”New-AzDataBoxEdgeStorageContainer” har lagts till
   - Skapa en ny gränslagringscontainer
 * Cmdleten ”Remove-AzDataBoxEdgeStorageContainer” har lagts till
@@ -41,7 +41,7 @@ ms.locfileid: "75718992"
 * Cmdleten ”Get-AzDataBoxEdgeStorageAccount” har lagts till
   - Hämta gränslagringskontot
 * Cmdleten ”New-AzDataBoxEdgeStorageAccount” har lagts till
-  - Skapa nytt gränslagringskonto
+  - Skapa ett nytt gränslagringskonto
 * Cmdleten ”Remove-AzDataBoxEdgeStorageAccount” har lagts till
   - Ta bort gränslagringskontot
 * Anropa cmdleten ”Invoke-AzDataBoxEdgeShare”
@@ -74,7 +74,7 @@ ms.locfileid: "75718992"
   - Update-AzMlOpClusterSystemService
 
 #### <a name="aznetwork"></a>Az.Network
-* Uppgradera beroende av Microsoft.Azure.Management.Sql från 1.36-preivew till 1.37-preivew
+* Uppgradera beroende av Microsoft.Azure.Management.Sql från 1.36-preview till 1.37-preview
 
 #### <a name="azrecoveryservices"></a>Az.RecoveryServices
 * Ändrat Azure Site Recovery-stöd för krypterade vilande data på virtuella datorer med hanterade diskar med kundhanterade nycklar för Azure till Azure-providern.
