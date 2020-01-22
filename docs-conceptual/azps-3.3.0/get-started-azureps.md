@@ -6,13 +6,13 @@ ms.author: sttramer
 manager: carmonm
 ms.devlang: powershell
 ms.topic: get-started-article
-ms.date: 01/14/2019
-ms.openlocfilehash: c515fcbbe4dcb0b6578a56da137a77e3f843a2e6
-ms.sourcegitcommit: 2d0c3ffaa5246f680784fa7e15b0d2536c27ff80
+ms.date: 01/17/2020
+ms.openlocfilehash: 718f0dc0f1ef9b0c2aa3d0630ca099fa5cec7ec0
+ms.sourcegitcommit: 30eeeec0985f8623b1bc03f461124446b04297c2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75722048"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76256839"
 ---
 # <a name="get-started-with-azure-powershell"></a>Komma igång med Azure PowerShell
 
@@ -53,7 +53,7 @@ När du är inloggad på ett Azure-konto kan du använda Azure PowerShell-cmdlet
 
 ## <a name="find-commands"></a>Hitta kommandon
 
-Azure PowerShell-cmdletarna följer en standardkonvention för namngivning i PowerShell, `VERB-NOUN`. Verbet beskriver åtgärden (till exempel `New`, `Get`, `Set`, `Remove`) och substantivet beskriver resurstypen (till exempel `AzVM`, `AzKeyVaultCertificate`, `AzFirewall`, `AzVirtualNetworkGateway`). Substantiv i Azure PowerShell börjar alltid med prefixet `Az`. En fullständig lista över standardverb finns i [Godkända verb för PowerShell-kommandon](/powershell/developer/cmdlet/approved-verbs-for-windows-powershell-commands).
+Azure PowerShell-cmdletarna följer en standardkonvention för namngivning i PowerShell, `VERB-NOUN`. Verbet beskriver åtgärden (till exempel `New`, `Get`, `Set`, `Remove`) och substantivet beskriver resurstypen (till exempel `AzVM`, `AzKeyVaultCertificate`, `AzFirewall`, `AzVirtualNetworkGateway`). Substantiv i Azure PowerShell börjar alltid med prefixet `Az`. En fullständig lista över standardverb finns i [Godkända verb för PowerShell-kommandon](/powershell/scripting/developer/cmdlet/approved-verbs-for-windows-powershell-commands).
 
 Att känna till vilka substantiv, verb och Azure PowerShell-moduler som är tillgängliga hjälper dig att hitta kommandon med cmdleten [Get-Command](/powershell/module/microsoft.powershell.core/get-command). Exempel: Om du vill hitta alla VM-relaterade kommandon som använder verbet `Get`:
 
