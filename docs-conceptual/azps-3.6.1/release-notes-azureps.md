@@ -1,18 +1,15 @@
 ---
 title: Viktig information om Azure PowerShell
 description: Lär dig mer om alla de senaste uppdateringarna för Azure PowerShell-modulerna.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 01/09/2020
-ms.openlocfilehash: 4c7ea19a225d63307ecf4a6fe5ebfa14ccd78d7e
+ms.date: 03/10/2020
+ms.openlocfilehash: f24e5ef66f9c49976c550c9847903bd0608c5123
 ms.sourcegitcommit: f6fa6543be1e0f6330b1598f01528b2928cc426c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79036169"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79111041"
 ---
 # <a name="azure-powershell-release-notes"></a>Viktig information om Azure PowerShell
 
@@ -72,14 +69,14 @@ ms.locfileid: "79036169"
     - Remove-AzTag -ResourceId
 * Ny Tag-cmdlet har lagts till
     - Update-AzTag -ResourceId
-* Flyttade ScopedDeployment från SDK 3.3.0 
+* Flyttade ScopedDeployment från SDK 3.3.0
 
 #### <a name="azsql"></a>Az.Sql
 * PublicNetworkAccess har lagts till i ”New-AzSqlServer” och ”Set-AzSqlServer”
 * Stöd har lagts till för konfiguration av säkerhetskopiering för långsiktig kvarhållning för hanterade databaser
-    - Hämta/ange LTR-princip på en hanterad databas 
-    - Hämta LTR-säkerhetskopior efter hanterad databas, hanterad instans eller plats 
-    - Ta bort en LTR-säkerhetskopia 
+    - Hämta/ange LTR-princip på en hanterad databas
+    - Hämta LTR-säkerhetskopior efter hanterad databas, hanterad instans eller plats
+    - Ta bort en LTR-säkerhetskopia
     - Återställa en LTR-säkerhetskopia för att skapa en ny hanterad databas
 * MinimalTlsVersion har lagts till för New-AzSqlServer och Set-AzSqlServer
 * MinimalTlsVersion har lagts till för New-AzSqlInstance och Set-AzSqlInstance
@@ -323,7 +320,7 @@ ms.locfileid: "79036169"
 #### <a name="azstorage"></a>Az.Storage
 * Lägg till varningsmeddelande om icke-bakåtkompatibel ändring för DefaultAction-värdeändring i en framtida version
     - Update-AzStorageAccountNetworkRuleSet
-* Stöd för att hämta lagringskontots senaste synkroniseringstid genom att köra get-AzureRMStorageAccount med parametern -IncludeGeoReplicationStats 
+* Stöd för att hämta lagringskontots senaste synkroniseringstid genom att köra get-AzureRMStorageAccount med parametern -IncludeGeoReplicationStats
     - Get-AzureRMStorageAccount
 
 ## <a name="320---december-2019"></a>3.2.0 – December 2019
@@ -373,7 +370,7 @@ ms.locfileid: "79036169"
 * Stöd för återkallning av användardelegeringsnycklar för lagringskonto för att återkalla alla SAS-token
     - Revoke-AzStorageAccountUserDelegationKeys
 * Uppgradera till Microsoft.Azure.Management.Storage 14.2.0 för att stödja den nya API-versionen 2019-06-01.
-* Stöd för QuotaGiB (resurskvot i Gibibye) för värden över 5120 i hanteringsplanet för cmdletar för filresurser och parameteraliaset. Quota har också lagts till för parametern ”QuotaGiB”. 
+* Stöd för QuotaGiB (resurskvot i Gibibye) för värden över 5120 i hanteringsplanet för cmdletar för filresurser och parameteraliaset. Quota har också lagts till för parametern ”QuotaGiB”.
     - New-AzRmStorageShare
     - Update-AzRmStorageShare
 * Lägg till parameteraliaset QuotaGiB i parametern Quota
@@ -491,7 +488,7 @@ ms.locfileid: "79036169"
 * `TargetOSVersion` har tagits bort från `PSCloudServiceConfiguration`.
 * Bytte namn på `CurrentOSVersion` till `OSVersion` på `PSCloudServiceConfiguration`.
 * `DataEgressGiB` och `DataIngressGiB` har tagits bort från `PSPoolUsageMetrics`.
-* Tog bort **Get-AzBatchNodeAgentSku** och ersatte det med **Get-AzBatchSupportedImage**. 
+* Tog bort **Get-AzBatchNodeAgentSku** och ersatte det med **Get-AzBatchSupportedImage**.
   - **Get-AzBatchSupportedImage** returnerar samma data som **Get-AzBatchNodeAgentSku** men i ett mer användarvänligt format.
   - Nya icke-verifierade avbildningar returneras nu också. Ytterligare information om `Capabilities` och `BatchSupportEndOfLife` för varje avbildning inkluderas också.
 * Lade till möjlighet att montera fjärrfilsystem på varje nod i en pool via den nya parametern `MountConfiguration` för **New-AzBatchPool**.
@@ -508,8 +505,7 @@ ms.locfileid: "79036169"
 #### <a name="azcompute"></a>Az.Compute
 * Funktion för diskkrypteringsuppsättning
     - Nya cmdletar:   New-AzDiskEncryptionSetConfig   New-AzDiskEncryptionSet   Get-AzDiskEncryptionSet   Remove-AzDiskEncryptionSet
-    - Parametern DiskEncryptionSetId har lagts till i följande cmdletar: Set-AzImageOSDisk Set-AzVMOSDisk Set-AzVmssStorageProfile        
-        Add-AzImageDataDisk New-AzVMDataDisk Set-AzVMDataDisk Add-AzVMDataDisk Add-AzVmssDataDisk Add-AzVmssVMDataDisk
+    - Parametern DiskEncryptionSetId har lagts till i följande cmdletar:   Set-AzImageOSDisk   Set-AzVMOSDisk   Set-AzVmssStorageProfile   Add-AzImageDataDisk   New-AzVMDataDisk   Set-AzVMDataDisk   Add-AzVMDataDisk   Add-AzVmssDataDisk   Add-AzVmssVMDataDisk
     - Parametrarna DiskEncryptionSetId och EncryptionType har lagts till i följande cmdletar:   New-AzDiskConfig   New-AzSnapshotConfig
 * Lägg till parametern PublicIPAddressVersion i New-AzVmssIPConfig
 * Flytta FileUris för anpassat skripttillägg från offentlig inställning till skyddad inställning
@@ -660,7 +656,7 @@ ms.locfileid: "79036169"
 * Get-AzSqlDatabaseRestorePoints (använd Get-AzSqlDatabaseRestorePoint istället)
 * Ta bort cmdleten Get-AzSqlDatabaseSecureConnectionPolicy
 * Ta bort alias för inaktuella cmdletar för inställningar för utvärdering av säkerhetsrisk
-* Inaktualisera cmdletar för inställningar för avancerad hotidentifiering 
+* Inaktualisera cmdletar för inställningar för avancerad hotidentifiering
 * Lägga till cmdletar för att inaktivera och aktivera känslighetsrekommendationer på kolumner i en databas.
 
 #### <a name="azstorage"></a>Az.Storage
@@ -670,7 +666,7 @@ ms.locfileid: "79036169"
 * När du stänger/hämtar en filreferens kan du hoppa över kontrollen av huruvida indatasökvägen är en filkatalog eller en fil för att undvika problem med objekt som har status DeletePending
     -  Get-AzStorageFileHandle
     -  Close-AzStorageFileHandle
-    
+
 ## <a name="280---october-2019"></a>2.8.0 – oktober 2019
 ### <a name="general"></a>Allmänt
 * AZ. HealthcareApis 1.0.0-version
@@ -683,7 +679,7 @@ ms.locfileid: "79036169"
     - Korrigering av problemet https://github.com/Azure/azure-powershell/issues/10068
 
 #### <a name="azautomation"></a>Az.Automation
-* Åtgärdade cmdleten New-AzureAutomationSoftwareUpdateConfiguration för parametern för inställning av Linux-omstart. 
+* Åtgärdade cmdleten New-AzureAutomationSoftwareUpdateConfiguration för parametern för inställning av Linux-omstart.
 
 #### <a name="azbatch"></a>Az.Batch
 * **Get-AzBatchNodeAgentSku** är inaktuell och ersätts av **Get-AzBatchSupportImage** i version 2.0.0.
@@ -691,7 +687,7 @@ ms.locfileid: "79036169"
 #### <a name="azcompute"></a>Az.Compute
 * Lägg till parametrarna Priority, EvictionPolicy och MaxPrice till cmdletarna New-AzVM och New-AzVmss
 * Korrigera varningsmeddelande och hjälpdokument för cmdletarna Add-AzVMAdditionalUnattendContent och Add-AzVMSshPublicKey
-* Åtgärda – skipVmBackup-undantag för virtuella Linux-datorer med hanterade diskar för Set-AzVMDiskEncryptionExtension. 
+* Åtgärda – skipVmBackup-undantag för virtuella Linux-datorer med hanterade diskar för Set-AzVMDiskEncryptionExtension.
 * Åtgärda fel i uppdatera krypteringsinställningarna i set-AzVMDiskEncryptionExtension, scenario i två steg.
 
 #### <a name="azdatafactory"></a>Az.DataFactory
@@ -710,7 +706,7 @@ ms.locfileid: "79036169"
 
 #### <a name="aziothub"></a>Az.IotHub
 * Lägg till ny routningskälla: DigitalTwinChangeEvents
-* Mindre felkorrigering: Get-AzIothub returnerar inte subscriptionId 
+* Mindre felkorrigering: Get-AzIothub returnerar inte subscriptionId
 
 #### <a name="azmonitor"></a>Az.Monitor
 * Nya åtgärdsgruppsmottagare har lagts till för åtgärdsgrupp   -ItsmReceiver   -VoiceReceiver   -ArmRoleReceiver   -AzureFunctionReceiver   -LogicAppReceiver   -AutomationRunbookReceiver   -AzureAppPushReceiver
@@ -806,7 +802,7 @@ ms.locfileid: "79036169"
 * Åtgärda bugg då omfattningstypen fastställs för ”Set-AzActionRule”
 
 #### <a name="aznetwork"></a>Az.Network
-* Korrigera felaktigt exempel i referensdokumentationen för ”New-AzApplicationGateway” 
+* Korrigera felaktigt exempel i referensdokumentationen för ”New-AzApplicationGateway”
 * Lägg till anmärkning i ”Get-AzNetworkWatcherPacketCapture”-referensdokumentationen om hämtning av alla egenskaper för en paketinsamling
 * Exempel har korrigerats i ”Test-AzNetworkWatcherIPFlow”-referensdokumentationen för korrekt uppräkning av nätverkskort
 * Förbättrad tolkning av molnundantag för att visa eventuell ytterligare information
@@ -942,7 +938,7 @@ ms.locfileid: "79036169"
     - Gjorde parametern "PublicIpAddress" inaktuell eftersom den aldrig används på serversidan.
     - Lade till den valfria parametern "Primary", som anger huruvida den aktuella IP-konfigurationen är den primära.
 * Förbättrade hanteringen av felundantag för begärande från SDK – åtgärdar problemet att tidigare SDK-undantag inte hanteras på rätt sätt, vilket leder till att viktig felinformation inte visas
-* Justerade valideringslogiken för IPv6-IP-prefix till att kontrollera korrekt IPv6-prefixlängd. 
+* Justerade valideringslogiken för IPv6-IP-prefix till att kontrollera korrekt IPv6-prefixlängd.
 * Uppdaterade Get-AzVirtualNetworkSubnetConfig: Lade till parameter som anges till get av undernätets resurs-ID.
 * Uppdaterade beskrivningen av parametern Location för AzNetworkServiceTag
 
@@ -965,7 +961,7 @@ ms.locfileid: "79036169"
 #### <a name="azservicebus"></a>Az.ServiceBus
 * Korrigering av problem #9658 : Skrivfel i parametern VirtualNetworkRule i set-AzServiceBusNetworkRuleSet
 * Korrigering av problem #9786 : kan inte skapa en regel med Endast lyssna-behörighet
-* Lade till det nya kommandot "Test-AzServiceBusNameAvailability" för att kontrollera namntillgängligheten för kö och ämne 
+* Lade till det nya kommandot "Test-AzServiceBusNameAvailability" för att kontrollera namntillgängligheten för kö och ämne
 
 #### <a name="azservicefabric"></a>Az.ServiceFabric
 * Åtgärda buggar med tillägg av nodtyps-cmdlet:
@@ -992,10 +988,10 @@ ms.locfileid: "79036169"
 * Uppdatera gemensam kod så att den använder den senaste versionen av ClientRuntime
 
 #### <a name="azapplicationinsights"></a>Az.ApplicationInsights
-* Korrigera skrivfel i exempel i dokumentationen för Remove-AzApplicationInsightsApiKey 
+* Korrigera skrivfel i exempel i dokumentationen för Remove-AzApplicationInsightsApiKey
 
 #### <a name="azautomation"></a>Az.Automation
-* Korrigera skrivfel i resurssträng 
+* Korrigera skrivfel i resurssträng
 
 #### <a name="azcognitiveservices"></a>Az.CognitiveServices
 * Stöd för NetworkRuleSet har lagts till.
@@ -1056,7 +1052,7 @@ ms.locfileid: "79036169"
     - Uppdaterade New-AzApplicationGatewayProbeConfig: Den valfria parametern Port som används för avsökning i serverdelen har lagts till. Denna parameter gäller för SKU:erna Standard_V2 och WAF_V2.
 
 #### <a name="azoperationalinsights"></a>Az.OperationalInsights
-* Uppdaterade standardversionen för sparade sökningar till 1. 
+* Uppdaterade standardversionen för sparade sökningar till 1.
 * Åtgärdade hantering av anpassad log null regex
 
 #### <a name="azrecoveryservices"></a>Az.RecoveryServices
@@ -1210,7 +1206,7 @@ ms.locfileid: "79036169"
     - New-AzureRmEventGridDomainTopic:
         - Skapar ett nytt Azure Event Grid-domänämne.
     - Get-AzureRmEventGridDomainTopic
-        - Hämtar information om ett Event Grid-domänämne eller hämtar en lista med alla Event Grid-domänämnen under en specifik Event Grid-domän i nuvarande Azure 
+        - Hämtar information om ett Event Grid-domänämne eller hämtar en lista med alla Event Grid-domänämnen under en specifik Event Grid-domän i nuvarande Azure
     - Remove-AzureRmEventGridDomainTopic:
         - Tar bort ett befintligt Azure Event Grid-domänämne.
 * Uppdaterade cmdletar:
@@ -1222,7 +1218,7 @@ ms.locfileid: "79036169"
             - Förfallodatum för händelseprenumeration
             - Avancerade filterparametrar.
         - Lägg till ny uppräkning för servicebusqueue som mål.
-        - Tillåt inte användning av ”Alla” i alternativet -IncludedEventType och ersätt det med 
+        - Tillåt inte användning av ”Alla” i alternativet -IncludedEventType och ersätt det med
     - Get-AzEventGridTopic, Get-AzEventGridDomain, Get-AzEventGridDomainTopic, Get-AzEventGridSubscription:
         - Lägg till ny valfria parametrar (Top, ODataQuery och NextLink) för att stödja sidnumrering och filtrering av resultat.
     - Remove-AzureRmEventGridSubscription
@@ -1240,11 +1236,11 @@ ms.locfileid: "79036169"
     - Nya cmdletar
         - Get-AzVirtualNetworkGatewayVpnClientConnectionHealth
 * Lägg till AvailablePrivateEndpointType
-    - Nya cmdletar 
+    - Nya cmdletar
         - Get-AzAvailablePrivateEndpointType
 * Lägg till PrivatePrivateLinkService
-    - Nya cmdletar 
-        - Get-AzPrivateLinkService 
+    - Nya cmdletar
+        - Get-AzPrivateLinkService
         - New-AzPrivateLinkService
         - Remove-AzPrivateLinkService
         - New-AzPrivateLinkServiceIpConfig
@@ -1273,8 +1269,8 @@ ms.locfileid: "79036169"
         - Parametern -PublicIpAddress som accepterar ett eller flera offentliga IP-adressobjekt har lagts till
         - Parametern -VirtualNetwork som accepterar ett virtuellt nätverksobjekt har lagts till
         - Metoderna AddPublicIpAddress och RemovePublicIpAddress har lagts till på brandväggsobjekt – dessa accepterar ett offentligt IP-adressobjekt som indata
-        - Inaktuella parametrar -PublicIpName och -VirtualNetworkName 
-* Nedanstående kommandon för funktionen har uppdaterats: Ange autentiseringsalternativ för VpnClient AAD till resurser för virtuella nätverksgatewayer. 
+        - Inaktuella parametrar -PublicIpName och -VirtualNetworkName
+* Nedanstående kommandon för funktionen har uppdaterats: Ange autentiseringsalternativ för VpnClient AAD till resurser för virtuella nätverksgatewayer.
     - New-AzVirtualNetworkGateway har uppdaterats: De valfria parametrarna AadTenantUri, AadAudienceId och AadIssuerUri för att ange VpnClient AAD-autentiseringsalternativ på en gateway har lagts till.
     - Set-AzVirtualNetworkGateway har uppdaterats: De valfria parametrarna AadTenantUri, AadAudienceId och AadIssuerUri för att ange VpnClient AAD-autentiseringsalternativ på en gateway har lagts till.
     - Set-AzVirtualNetworkGateway har uppdaterats: Den valfria växelparametern RemoveAadAuthentication som tar bort VpnClient AAD-autentiseringsalternativ från en gateway har lagts till.
@@ -1369,17 +1365,17 @@ ms.locfileid: "79036169"
     - **Get-AzApiManagementSchema** – Hämta de scheman som konfigurerats i API:et
     - **Remove-AzApiManagementSchema** – Ta bort de scheman som konfigurerats i API:et
     - **Set-AzApiManagementSchema** – Uppdatera de scheman som konfigurerats i API:et
-* Skapa ny cmdlet för att generera en användartoken. 
+* Skapa ny cmdlet för att generera en användartoken.
     - **New-AzApiManagementUserToken** – Skapa en ny användartoken som enligt standardinställning är giltig i 8 timmar. Token för GIT-användaren kan skapas med den här cmdleten./
 * Skapade en ny cmdlet för att hämta nätverksstatus
     - **Get-AzApiManagementNetworkStatus** – Hämta nätverksstatusanslutningen för resurserna som API Management-tjänsten är beroende av. Det här är användbart när du distribuerar ApiManagement-tjänsten i ett virtuellt nätverk och validerar om något beroende är brutet.
-* Uppdaterade cmdlet **New-AzApiManagement** för att hantera ApiManagement-tjänsten 
+* Uppdaterade cmdlet **New-AzApiManagement** för att hantera ApiManagement-tjänsten
     - Lade till stöd för den nya SKU:n Consumption
     - Aktiverade stöd för att slå på flaggan EnableClientCertificate för SKU:n Consumption
     - Den nya cmdleten **New-AzApiManagementSslSetting** gör det möjligt att ställa in TLS/SSL-inställningen på ”Backend” och ”Frontend” (serverdel och klientdel). Det här kan också användas till att konfigurera chiffer som 3DES och ServerProtocols som Http2 för Frontend för en ApiManagement-tjänst.
     - Stöd har lagts till för att konfigurera värdnamnet DeveloperPortal på ApiManagement-tjänsten.
 * Uppdaterade cmdletar **Get-AzApiManagementSsoToken** för att ta PsApiManagement-objekt som indata
-* Uppdaterad cmdleten för att visa infogade felmeddelanden 
+* Uppdaterad cmdleten för att visa infogade felmeddelanden
      > PS D:\github\azure-powershell> Set-AzApiManagementPolicy -Context  -PolicyFilePath C:\wrongpolicy.xml -ApiId httpbin Set-AzApiManagementPolicy : Felkod: Felmeddelande av typen ValidationError: Ett eller flera fält innehåller felaktiga värden: Felinformation:    [Code=ValidationError, Message=Error in element 'log-to-eventhub' on line 3, column 10: Logger not found, Target=log-to-eventhub]
 * Uppdaterade cmdlet **Export-AzApiManagementApi** för att exportera API:er i OpenApi 3.0-format
 * Uppdaterade cmdlet **Import-AzApiManagementApi**
@@ -1388,15 +1384,15 @@ ms.locfileid: "79036169"
     - Åsidosätta egenskapen ServiceUrl som specificeras i ett dokument.
 * Uppdaterade cmdlet **Get-AzApiManagementPolicy** för att returnera policy i undantaget format av typen icke-XML med rawxml
 * Uppdaterade cmdlet **Set-AzApiManagementPolicy** för att godkänna policy i undantaget format av typen icke-XML med rawxml och XML undantaget med xml
-* Uppdaterad cmdlet **New-AzApiManagementApi** 
+* Uppdaterad cmdlet **New-AzApiManagementApi**
     - Konfigurera API med OpenId auktoriseringsservern.
     - Skapa ett API i ApiVersionSet
     - Klona ett API med SourceApiId och SourceApiRevision.
-    - Möjlighet att konfigurera SubscriptionRequired i API-omfattningen. 
+    - Möjlighet att konfigurera SubscriptionRequired i API-omfattningen.
 * Uppdaterad cmdlet **Set-AzApiManagementApi**
     - Konfigurera API med OpenId auktoriseringsservern.
-    - Uppdatera ett API till ApiVersionSet    
-    - Möjlighet att konfigurera SubscriptionRequired i API-omfattningen. 
+    - Uppdatera ett API till ApiVersionSet
+    - Möjlighet att konfigurera SubscriptionRequired i API-omfattningen.
 * Uppdaterad cmdlet **New-AzApiManagementRevision**
     - Klona en befintlig version med hjälp av SourceApiRevision (kopiera taggar, produkter, åtgärder och principer). Den nya revisionen antar ApiId från den överordnade instansen.
     - Tillhandahålla ApiRevisionDescription
@@ -1422,7 +1418,7 @@ ms.locfileid: "79036169"
     - Get-AzApiManagementAuthorizationServer
     - Get-AzApiManagementBackend
         > Get-AzApiManagementBackend -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/contoso/backends/servicefabric
-    - Get-AzApiManagementCertificate 
+    - Get-AzApiManagementCertificate
     - Remove-AzApiManagementApiVersionSet
     - Remove-AzApiManagementSubscription
 
@@ -1470,7 +1466,7 @@ ms.locfileid: "79036169"
     - Den nya parametern ProximityPlacementGroupId har lagts till i följande cmdletar:   New-AzAvailabilitySet   New-AzVMConfig   New-AzVmssConfig
 * Parametern StorageAccountType har lagts till i New-AzGalleryImageVersion.
 * TargetRegion för New-AzGalleryImageVersion kan innehålla StorageAccountType.
-* Växlingsparametern SkipShutdown har lagts till i Stop-AzVM och Stop-AzVmss       
+* Växlingsparametern SkipShutdown har lagts till i Stop-AzVM och Stop-AzVmss
 * Icke-bakåtkompatibla ändringar
     - Set-AzVMBootDiagnostics har ändrats till Set-AzVMBootDiagnostic.
     - Export-AzLogAnalyticThrottledRequests har ändrats till Export-AzLogAnalyticThrottledRequests.
@@ -1505,7 +1501,7 @@ ms.locfileid: "79036169"
     - Användare med HDInsight-operatörsrollen påverkas inte.
 
 #### <a name="azmonitor"></a>Az.Monitor
-* Nya cmdletar för SQR API (schemalagd frågeregel)  
+* Nya cmdletar för SQR API (schemalagd frågeregel)
     - New-AzScheduledQueryRuleAlertingAction
     - New-AzScheduledQueryRuleAznsActionGroup
     - New-AzScheduledQueryRuleLogMetricTrigger
@@ -1603,7 +1599,7 @@ ms.locfileid: "79036169"
 * Hjälptexten för slutpunkten har uppdaterats för att visa att resurser ska skapas innan cmdletarna för att skapa/uppdatera händelseprenumerationer används.
 
 #### <a name="azeventhub"></a>Az.EventHub
-* Nya cmdletar har lagts till för NetworkRuleSet för namnområden 
+* Nya cmdletar har lagts till för NetworkRuleSet för namnområden
 
 #### <a name="azhdinsight"></a>Az.HDInsight
 * Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.
@@ -1693,7 +1689,7 @@ ms.locfileid: "79036169"
 
 #### <a name="azcompute"></a>Az.Compute
 * Lägg till parametern HyperVGeneration i New-AzDiskConfig och New-AzSnapshotConfig
-* Tillåt att virtuella datorer skapas med galleribilder från andra klientorganisationer. 
+* Tillåt att virtuella datorer skapas med galleribilder från andra klientorganisationer.
 
 #### <a name="azcontainerinstance"></a>Az.ContainerInstance
 * Ett problem har åtgärdats i parametern -Command för New-AzContainerGroup som lade till ett avslutande tomt argument
@@ -1775,7 +1771,7 @@ ms.locfileid: "79036169"
     - New-AzStorageAccountManagementPolicyRule
 
 #### <a name="azwebsites"></a>Az.Websites
-* Åtgärda fel med ARM-mall som avbryter kloning av alla platser med 'New-AzWebApp -IncludeSourceWebAppSlots' 
+* Åtgärda fel med ARM-mall som avbryter kloning av alla platser med 'New-AzWebApp -IncludeSourceWebAppSlots'
 
 ## <a name="150---march-2019"></a>1.5.0 – mars 2019
 #### <a name="azaccounts"></a>Az.Accounts
@@ -1844,7 +1840,7 @@ ms.locfileid: "79036169"
 * Cmdletar har lagts till för uppräkning och återställning av borttagna objekt i ADL
 
 #### <a name="azeventhub"></a>Az.EventHub
-* Ny boolesk egenskap SkipEmptyArchives har lagts till i Skip Empty Archives i CaptureDescription-klassen i Eventhub 
+* Ny boolesk egenskap SkipEmptyArchives har lagts till i Skip Empty Archives i CaptureDescription-klassen i Eventhub
 
 #### <a name="azkeyvault"></a>Az.KeyVault
 * Taggning i Set-AzKeyVaultSecret har åtgärdats
@@ -1872,8 +1868,8 @@ ms.locfileid: "79036169"
 
 #### <a name="azoperationalinsights"></a>Az.OperationalInsights
 * Ytterligare stöd för datakällorna New och Get ApplicationInsights.
-    - Ny ApplicationInsights-typ har lagts till för att ge stöd för ”Get specific” och ”Get all” för ApplicationInsights-datakällor för angiven arbetsyta. 
-    - Cmdleten New-AzOperationalInsightsApplicationInsightsDataSource har lagts till för att skapa datakälla med angivna parametrar för Application Insights-resurs: subscription Id, resourceGroupName och name. 
+    - Ny ApplicationInsights-typ har lagts till för att ge stöd för ”Get specific” och ”Get all” för ApplicationInsights-datakällor för angiven arbetsyta.
+    - Cmdleten New-AzOperationalInsightsApplicationInsightsDataSource har lagts till för att skapa datakälla med angivna parametrar för Application Insights-resurs: subscription Id, resourceGroupName och name.
 
 #### <a name="azresources"></a>Az.Resources
 * Korrigering av problemet https://github.com/Azure/azure-powershell/issues/8166
@@ -1904,9 +1900,9 @@ Allmän tillgänglighet för Az.AnalysisServices-modulen.
 Allmän tillgänglighet för Az.RecoveryServices-modulen.
 
 #### <a name="azresources"></a>Az.Resources
-* Korrigera taggar för resursgrupper 
+* Korrigera taggar för resursgrupper
     - Mer information här: https://github.com/Azure/azure-powershell/issues/8166
-* Åtgärda problem där `Get-AzureRmRoleAssignment` inte respekterar -ErrorAction 
+* Åtgärda problem där `Get-AzureRmRoleAssignment` inte respekterar -ErrorAction
     - Mer information här: https://github.com/Azure/azure-powershell/issues/8235
 
 #### <a name="azsql"></a>Az.Sql
@@ -2211,7 +2207,7 @@ Stöd har lagts till för konfiguration av RewriteRuleSets i Application Gateway
 
 ### <a name="azwebsites"></a>Az.Websites
 
-* Set-AzureRmWebApp och Set-AzureRmWebAppSlot 
+* Set-AzureRmWebApp och Set-AzureRmWebAppSlot
     - Ny parameter (-AzureStoragePath) har lagts till för att ange att Azure Storage-sökvägar ska monteras i containerappar i Windows och Linux. Använder utdata från den nya cmdleten New-AzureRmWebAppAzureStoragePath som en parameter för att ange sökvägar för Azure Storage.
 
 ## <a name="061---november-2018"></a>0.6.1 – november 2018
@@ -2239,7 +2235,7 @@ Stöd har lagts till för konfiguration av RewriteRuleSets i Application Gateway
 ### <a name="aznetwork"></a>Az.Network
 * Cmdlet New-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayCustomError, Get-AzureRmApplicationGatewayCustomError, Set-AzureRmApplicationGatewayCustomError, Remove-AzureRmApplicationGatewayCustomErreller Add-AzureRmApplicationGatewayHttpListenerCustomError, Get-AzureRmApplicationGatewayHttpListenerCustomError, Set-AzureRmApplicationGatewayHttpListenerCustomError, Remove-AzureRmApplicationGatewayHttpListenerCustomError har lagts till
 * ICMP tillbaka till stöd för Azure Firewall-nätverksprotokoll har lagts till
-* Uppdatera cmdlet Test-AzureRmNetworkWatcherConnectivity, lägga till verifiering av mål-id, adress och port. 
+* Uppdatera cmdlet Test-AzureRmNetworkWatcherConnectivity, lägga till verifiering av mål-id, adress och port.
 * Åtgärda problem med minnesanvändning i VirtualNetwork-karta
 
 ### <a name="azrecoveryservicesbackup"></a>Az.RecoveryServices.Backup
@@ -2371,7 +2367,7 @@ Stöd har lagts till för konfiguration av RewriteRuleSets i Application Gateway
     - Start-AzureStorageFileCopy
 * Stöd för att hämta användningsinformation om en Storage-resurs för en specifik plats och för att lägga till ett varningsmeddelande för att hämta användningsinformation om en global Storage-resurs är inaktuellt.
     - Get-AzStorageUsage
-    
+
 #### <a name="azcognitiveservices"></a>Az.CognitiveServices
 * Stöd för Get-AzCognitiveServicesAccountSkus utan ett befintligt konto.
 

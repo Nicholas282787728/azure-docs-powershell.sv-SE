@@ -1,26 +1,25 @@
 ---
 title: Installera Azure PowerShell med PowerShellGet
 description: Så här installerar du Azure PowerShell med PowerShellGet
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 10/22/2019
-ms.openlocfilehash: 66d755384e532d434811f3e6122dcba97d5c48b5
+ms.date: 02/26/2020
+ms.openlocfilehash: 7a25270566f5e856ee44c4c191a47a3e7334508b
 ms.sourcegitcommit: f6fa6543be1e0f6330b1598f01528b2928cc426c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79035795"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79110976"
 ---
-# <a name="install-the-azure-powershell-module"></a>Installera Azure PowerShell-modulen
+# <a name="install-azure-powershell"></a>Installera Azure PowerShell
 
-Den här artikeln beskriver hur du installerar Azure PowerShell-modulerna med hjälp av PowerShellGet. De här instruktionerna fungerar för Windows-, macOS- och Linux-plattformar. För Az-modulen kan för närvarande inga andra installationsmetoder användas.
+Den här artikeln beskriver hur du installerar Azure PowerShell-modulerna med hjälp av PowerShellGet. De här instruktionerna fungerar för Windows-, macOS- och Linux-plattformar.
+
+Azure PowerShell är också tillgängligt i Azure [Cloud Shell](/azure/cloud-shell/overview) och är nu förinstallerat i [Docker-avbildningar](azureps-in-docker.md).
 
 ## <a name="requirements"></a>Krav
 
-Azure PowerShell fungerar med PowerShell 5.1 och senare i Windows och med PowerShell Core 6.x och senare på valfri plattform. Om du är osäker på om du har PowerShell, eller macOS eller Linux, [installerar du senaste versionen av PowerShell Core](/powershell/scripting/install/installing-powershell#powershell-core).
+Azure PowerShell fungerar med PowerShell 5.1 och senare i Windows och med PowerShell Core 6.x och senare på valfri plattform. Du bör installera [den senaste versionen av PowerShell Core](/powershell/scripting/install/installing-powershell#powershell-core) som är tillgänglig för ditt operativsystem. Det finns inga ytterligare krav för Azure PowerShell när du kör det på PowerShell Core.
 
 Du kan kontrollera vilken PowerShell-version du har genom att köra kommandot:
 
@@ -28,37 +27,27 @@ Du kan kontrollera vilken PowerShell-version du har genom att köra kommandot:
 $PSVersionTable.PSVersion
 ```
 
-Köra Azure PowerShell på PowerShell 5.1 på Windows:
+Använda Azure PowerShell i PowerShell 5.1 på Windows:
 
 1. Uppdatera vid behov till [Windows PowerShell 5.1](/powershell/scripting/install/installing-windows-powershell#upgrading-existing-windows-powershell). Om du använder Windows 10 kan PowerShell 5.1 redan vara installerat.
 2. Installera [.NET Framework 4.7.2 eller senare](/dotnet/framework/install).
-
-Det finns inga ytterligare krav för Azure PowerShell när du använder PowerShell Core.
+3. Kontrollera att du har den senaste versionen av PowerShellGet. Kör `Update-Module PowerShellGet -Force`.
 
 ## <a name="install-the-azure-powershell-module"></a>Installera Azure PowerShell-modulen
 
-> [!WARNING]
-> Det går __inte__ både modulen AzureRM och modulen Az installerade samtidigt för PowerShell 5.1 för Windows. Om du vill behålla AzureRM på datorn installerar du Az-modulen för PowerShell Core 6.x eller senare. För att göra det [installerar du PowerShell Core 6.x eller senare](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows) och följer instruktionerna i PowerShell Core-terminalen.
-
-Den rekommenderade installationsmetoden är att begränsa installationen till den aktiva användaren:
+Att använda PowerShellGet-cmdletar är den installationsmetod som föredras. Den här metoden fungerar på samma sätt för plattformarna Windows, macOS och Linux. Kör följande kommando från en PowerShell-session:
 
 ```powershell-interactive
-Install-Module -Name Az -AllowClobber -Scope CurrentUser
-```
-
-Om du vill installera för alla användare i ett system krävs administratörsbehörighet. I macOS eller Linux kör du som administratör eller med `sudo`-kommandot i en PowerShell-session med förhöjd behörighet:
-
-```powershell-interactive
-Install-Module -Name Az -AllowClobber -Scope AllUsers
+Install-Module -Name Az -AllowClobber
 ```
 
 Som standard konfigureras inte PowerShell-galleriet som en betrodd lagringsplats för PowerShellGet. Första gången du använder PSGallery visas följande meddelande:
 
-```output
+```Output
 Untrusted repository
 
 You are installing the modules from an untrusted repository. If you trust this repository, change
-its InstallationPolicy value by running the Set-PSRepository cmdlet.
+its InstallationPolicy value by running the `Set-PSRepository` cmdlet.
 
 Are you sure you want to install the modules from 'PSGallery'?
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"):
@@ -68,16 +57,34 @@ Svara `Yes` eller `Yes to All` för att fortsätta med installationen.
 
 Az-modulen är en sammanslagen modul för Azure PowerShell-cmdletar. När du installerar den laddar den ned alla tillgängliga Azure Resource Manager-moduler och gör dess cmdletar tillgängliga för användning.
 
+> [!WARNING]
+> Det går inte att ha både modulen AzureRM och modulen Az installerade samtidigt för PowerShell 5.1 för Windows. Om du vill behålla AzureRM på datorn installerar du Az-modulen för PowerShell Core 6.x eller senare.
+
+Börja med att [installera PowerShell Core 6.x eller senare](/powershell/scripting/install/installing-powershell-core-on-windows)
+
+Sedan kan du från en PowerShell Core-processor installera Az-modulen för endast den aktuella användaren. Detta är det rekommenderade installationsomfånget.
+
+```powershell-interactive
+Install-Module -Name Az -AllowClobber -Scope CurrentUser
+```
+
+Att installera modulen för alla användare i ett system kräver förhöjd behörighet. Starta PowerShell-sessionen med **Kör som administratör** i Windows eller använd kommandot `sudo` på macOS eller Linux:
+
+```powershell-interactive
+Install-Module -Name Az -AllowClobber -Scope AllUsers
+```
+
 ## <a name="install-offline"></a>Installera offline
 
 I en del miljöer går det inte att ansluta till PowerShell-galleriet. I sådana situationer kan du fortfarande installera offline på något av dessa sätt:
 
-* Ladda ned modulerna till en annan plats och använd det som en installationskälla på ditt nätverk. Det här kan vara komplicerat, men då kan du cachelagra PowerShell-moduler på en enda server eller filresurs så att de kan distribueras med PowerShellGet till frånkopplade system. Läs artikeln om hur du [arbetar med lokala PowerShellGet-lagringsplatser](/powershell/scripting/gallery/how-to/working-with-local-psrepositories) för mer information om hur du konfigurerar lokala lagringsplatser och installerar på frånkopplade system.
+* Ladda ned modulerna till en annan plats i nätverket och använd den som en installationskälla.
+  Då kan du cachelagra PowerShell-moduler på en enda server eller filresurs så att de kan distribueras med PowerShellGet till frånkopplade system. Läs artikeln om hur du [arbetar med lokala PowerShellGet-lagringsplatser](/powershell/scripting/gallery/how-to/working-with-local-psrepositories) för mer information om hur du konfigurerar lokala lagringsplatser och installerar på frånkopplade system.
 * [Ladda ned Azure PowerShell MSI](install-az-ps-msi.md) till en dator som är ansluten till nätverket, och kopiera sedan installationsprogrammet till system som saknar åtkomst till PowerShell-galleriet. Tänk på att MSI-installationsprogrammet endast fungerar för PowerShell 5.1 på Windows.
 * Spara modulen med [Save-Module](/powershell/module/PowershellGet/Save-Module) till en filresurs, eller spara den till en annan källa och kopiera den manuellt till andra datorer:
-  
+
   ```powershell-interactive
-  Save-Module -Name Az -Path '\\someshare\PowerShell\modules' -Force
+  Save-Module -Name Az -Path '\\server\share\PowerShell\modules' -Force
   ```
 
 ## <a name="troubleshooting"></a>Felsökning
@@ -86,17 +93,16 @@ Här är några vanliga problem som kan uppstå när du installerar Azure PowerS
 
 ### <a name="proxy-blocks-connection"></a>Proxy blockerar anslutning
 
-Om du får felmeddelanden från `Install-Module` som indikerar att det inte går att nå PowerShell Gallery kan du hindras av en proxy. Olika operativsystem har olika krav för att konfigurera en systemomfattande proxy. Det tas inte upp i detalj här. Systemadministratören kan ge dig information om proxyinställningarna och hur du konfigurerar dem för operativsystemet.
+Om du får felmeddelanden från `Install-Module` som indikerar att det inte går att nå PowerShell Gallery kan du hindras av en proxy. Olika operativsystem och nätverksmiljöer har olika krav för att konfigurera en systemomfattande proxy. Systemadministratören kan ge dig information om proxyinställningarna och hur du konfigurerar dem för din miljö.
 
-Själva PowerShell kan inte konfigureras för att använda den här proxyn automatiskt. Med PowerShell 5.1 och senare konfigurerar du proxyn för PowerShell-sessionen med följande kommando:
+Själva PowerShell kan inte konfigureras för att använda den här proxyn automatiskt. Med PowerShell 5.1 och senare konfigurerar du proxyn för PowerShell-sessionen med följande kommandon:
 
 ```powershell
-(New-Object System.Net.WebClient).Proxy.Credentials = `
-  [System.Net.CredentialCache]::DefaultNetworkCredentials
+$webClient = New-Object System.Net.WebClient
+$webClient.Proxy.Credentials = [System.Net.CredentialCache]::DefaultNetworkCredentials
 ```
 
-Om autentiseringsuppgifter för operativsystemet är rätt konfigurerade dirigeras PowerShell-begärandena genom proxyn.
-För att den här inställningen ska finnas kvar mellan sessionerna lägger du till kommandot i en [PowerShell profil](/powershell/module/microsoft.powershell.core/about/about_profiles).
+Om autentiseringsuppgifter för operativsystemet är rätt konfigurerade dirigerar den här konfigurationen PowerShell-begärandena genom proxyn. För att den här inställningen ska finnas kvar mellan sessionerna lägger du till kommandona i en [PowerShell-profil](/powershell/module/microsoft.powershell.core/about/about_profiles).
 
 För att du ska kunna installera paketet måste proxyservern tillåta HTTPS-anslutningar till följande adress:
 
@@ -112,21 +118,21 @@ Connect-AzAccount
 ```
 
 > [!NOTE]
->
 > Om du har inaktiverat modulen för automatisk inläsning, kan du importera den manuellt med `Import-Module Az`. Det kan ta några sekunder. Det beror på hur modulen är strukturerad.
 
 Du måste upprepa de här stegen för varje ny PowerShell-session du startar. Information om hur du sparar Azure-inloggningen mellan olika PowerShell-sessioner hittar du i artikeln om att [spara autentiseringsuppgifter för användare mellan olika PowerShell-sessioner](context-persistence.md).
 
 ## <a name="update-the-azure-powershell-module"></a>Uppdatera Azure PowerShell-modulen
 
-Om du ursprungligen använde Install-Module använder du [Update-Module](/powershell/module/powershellget/update-module) för att hämta den senaste versionen. Om du ursprungligen använde MSI-paketet laddar du ned och installerar det nya MSI-paketet för att uppdatera. Om du har problem med att uppdatera med hjälp av paketet från PowershellGet måste du __installera om__, i stället för att bara __uppdatera__. Det gör du på samma sätt som när du installerar, men du kan behöva lägga till argumentet `-Force`:
+Om du vill uppdatera en PowerShell-modul ska du använda samma metod som för att installera modulen. Om du ursprungligen till exempel använde `Install-Module` använder du [Update-Module](/powershell/module/powershellget/update-module) för att hämta den senaste versionen. Om du ursprungligen använde MSI-paketet laddar du ned och installerar det nya MSI-paketet.
+
+PowerShellGet-cmdletar kan inte uppdatera moduler som har installerats från ett MSI-paket. MSI-paket uppdaterar inte moduler som har installerats med PowerShellGet. Om du har problem med att uppdatera med PowershellGet bör du **installera om**, i stället för **uppdatera**. Ominstallation görs på samma sätt som när du installerar, men du behöver lägga till parametern `-Force`:
 
 ```powershell
 Install-Module -Name Az -AllowClobber -Force
 ```
 
-Det här kan skriva över installerade moduler, men du kan fortfarande ha äldre versioner kvar på datorn.
-Om du vill ta bort äldre versioner av Azure PowerShell från ditt system läser du [Avinstallera Azure PowerShell-modulen](uninstall-az-ps.md).
+Till skillnad från MSI-baserade installationer, tar installationer eller uppdateringar med PowerShellGet inte bort äldre versioner som kan finnas i systemet. Om du vill ta bort äldre versioner av Azure PowerShell från ditt system går du till [Avinstallera Azure PowerShell-modulen](uninstall-az-ps.md). Mer information om MSI-baserade installationer finns i [Installera Azure PowerShell med MSI](install-az-ps-msi.md).
 
 ## <a name="use-multiple-versions-of-azure-powershell"></a>Använd flera versioner av Azure PowerShell
 
@@ -138,23 +144,21 @@ Get-InstalledModule -Name Az -AllVersions | select Name,Version
 
 Se [Avinstallera Azure PowerShell-modulen](uninstall-az-ps.md) om du vill ta bort en version av Azure PowerShell.
 
-Du kan installera eller läsa in en specifik version av `Az`-modulen med hjälp av argumentet `-RequiredVersion`:
+Om du har flera versioner av modulen installerade läses den senaste versionen in som standard av automatisk inläsning och `Import-Module`.
+
+Du kan installera eller läsa in en specifik version av `Az`-modulen med hjälp av parametern `-RequiredVersion`:
 
 ```powershell-interactive
-# Install Az version 0.7.0
-Install-Module -Name Az -RequiredVersion 0.7.0 
-# Load Az version 0.7.0
-Import-Module -Name Az -RequiredVersion 0.7.0
+# Install Az version 3.6.1
+Install-Module -Name Az -RequiredVersion 3.6.1
+# Load Az version 3.6.1
+Import-Module -Name Az -RequiredVersion 3.6.1
 ```
-
-Om du har flera versioner av modulen installerade läses den senaste versionen in som standard av automatisk inläsning och `Import-Module`.
 
 ## <a name="provide-feedback"></a>Ge feedback
 
-Om du upptäcker en bugg i Azure PowerShell kan du [öppna ett ärende på GitHub](https://github.com/Azure/azure-powershell/issues).
-Om du vill ge feedback från kommandoraden använder du cmdleten [Send-Feedback](/powershell/module/az.accounts/send-feedback).
+Om du upptäcker en bugg i Azure PowerShell kan du [öppna ett ärende på GitHub](https://github.com/Azure/azure-powershell/issues). Om du vill ge feedback från kommandoraden använder du cmdleten [Send-Feedback](/powershell/module/az.accounts/send-feedback).
 
 ## <a name="next-steps"></a>Efterföljande moment
 
-Läs informationen i [Komma igång med Azure PowerShell](get-started-azureps.md) för att komma igång med Azure PowerShell-modulerna och deras funktioner.
-Om du känner till Azure PowerShell och behöver migrera från AzureRM läser du [Migrera från AzureRM till Az](migrate-from-azurerm-to-az.md).
+Läs informationen i [Komma igång med Azure PowerShell](get-started-azureps.md) för att komma igång med Azure PowerShell-modulerna och deras funktioner. Om du känner till Azure PowerShell och behöver migrera från AzureRM läser du [Migrera från AzureRM till Az](migrate-from-azurerm-to-az.md).
