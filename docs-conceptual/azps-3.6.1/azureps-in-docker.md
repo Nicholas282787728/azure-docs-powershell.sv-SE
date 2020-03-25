@@ -3,13 +3,13 @@ title: Använda Azure PowerShell i Docker
 description: Så här använder du Azure PowerShell som är förinstallerat i en Docker-avbildning.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 03/10/2020
-ms.openlocfilehash: a5746b71cfc41f7c6283b0e95b0940ca4b594ec7
-ms.sourcegitcommit: fb95591c45bb5f12b98e0690938d18f2ec611897
+ms.date: 03/20/2020
+ms.openlocfilehash: b5ad201abcabbdc1a88db241b028d88f05054a14
+ms.sourcegitcommit: 104c90600e0c5eeb841b5a596ba7ebe60cc7f4fa
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79402688"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "79990539"
 ---
 # <a name="using-azure-powershell-in-docker"></a>Använda Azure PowerShell i Docker
 
@@ -19,13 +19,13 @@ Vi publicerar Docker-avbildningar med Azure PowerShell förinstallerat. Den här
 
 De publicerade avbildningarna kräver Docker 17.05 eller senare. Det förväntas också att du kan köra Docker utan `sudo` eller lokal administratörsbehörighet. Följ Dockers officiella [instruktioner][install] för att installera `docker` korrekt.
 
-De utgivna containrarna skapas från officiella PowerShell-containrar och sedan läggs Az-modulen till som ett lager.
+Den senaste containeravbildningen innehåller den senaste versionen av PowerShell och de senaste Azure PowerShell-modulerna som stöds med AZ-modulen.
 
-Den senaste stabila avbildningen innehåller:
+För varje ny version av AZ-modulen släpper vi en avbildning för följande operativsystem:
 
-- Ubuntu 18.04
-- PowerShell version 6.2.4
-- Azure PowerShells senaste Az-modul
+- Ubuntu 18.04 (standard)
+- Debian 9
+- CentOs 7
 
 En fullständig lista över tillgängliga avbildningar finns på sidan [Docker-avbildning][az image].
 
@@ -44,6 +44,8 @@ Följande steg visar de Docker-kommandon som krävs för att ladda ned avbildnin
    ```console
    docker run -it mcr.microsoft.com/azure-powershell pwsh
    ```
+
+För Windows Docker-värdar måste du aktivera Docker-fildelningen för att tillåta att lokala enheter i Windows delas med Linux-containrar. Mer information finns i [Kom igång med Docker för Windows][file-sharing].
 
 ### <a name="run-the-azure-powershell-container-interactively-using-host-authentication"></a>Köra azure-powershell-containern interaktivt med hjälp av värdautentisering
 
@@ -71,3 +73,4 @@ Läs informationen i [Komma igång med Azure PowerShell](get-started-azureps.md)
 [install]: https://docs.docker.com/engine/installation/
 [powershell image]: https://hub.docker.com/_/microsoft-powershell
 [az image]: https://hub.docker.com/_/microsoft-azure-powershell
+[file-sharing]: https://docs.docker.com/docker-for-windows/#file-sharing
