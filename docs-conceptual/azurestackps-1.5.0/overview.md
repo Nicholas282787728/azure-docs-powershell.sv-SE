@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.manager: knithinc
 ms.date: 09/21/2018
 ms.openlocfilehash: afa83a6258e57e961576b328e67fad634704dddf
-ms.sourcegitcommit: 2054a8f74cd9bf5a50ea7fdfddccaa632c842934
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154227"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "63053366"
 ---
 # <a name="azure-stack-module-150"></a>Modulen Azure Stack 1.5.0
 
@@ -69,7 +69,7 @@ Install-Module -Name AzureStack -RequiredVersion 1.5.0
 ### <a name="azure-bridge"></a>Azure Bridge
 Förhandsversionen av administratörsmodulen AzureBridge i Azure Stack, där du kan publicera bilder från Azure.
 
-### <a name="backup"></a>Backup
+### <a name="backup"></a>Säkerhetskopiering
 Förhandsversionen av administratörsmodulen Backup som gör att administratörer kan:
 - Konfigurera var säkerhetskopiorna ska lagras
 - Säkerhetskopiera
@@ -120,14 +120,14 @@ Förhandsversion av administratörsmodulen Azure Stack Storage.  I den här vers
 ### <a name="subscription-admin"></a>Prenumerationsadministration
 Förhandsversion av administratörsmodulen Azure Stack Subscription.  Den här modulen innehåller administratörsfunktioner för att:
 - Hantera avtal och erbjudanden
-- Visa information om användning och prestanda
+- Visning av information om användning och prestanda
 - Hantera RBAC
 
 ### <a name="subscription"></a>Prenumeration
 Förhandsversion av modulen Azure Stack Subscription.  Den här modulen innehåller användarfunktioner för att:
 - Skapa, ta bort och uppdatera prenumerationer
 
-### <a name="update"></a>Uppdatering
+### <a name="update"></a>Uppdatera
 Förhandsversion av administratörsmodulen Azure Stack Update.  I den här kan modulen kan administratörer:
 - Lista och installera tillgängliga uppdateringar
 - Återuppta avbrutna uppdateringar

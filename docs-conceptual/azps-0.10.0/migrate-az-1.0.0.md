@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2019
 ms.openlocfilehash: e5121d61b0f5f68ff3e1f33d774e3533adfeb64f
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81445551"
 ---
 # <a name="breaking-changes-for-az-100"></a>Icke-bakåtkompatibla ändringar för Az 1.0.0
@@ -58,7 +58,7 @@ I det här avsnittet beskriver vi de allmänna icke-bakåtkompatibla ändringarn
 
 ### <a name="cmdlet-noun-prefix-changes"></a>Ändringar av substantivprefix i cmdlet
 
-I AzureRM-modulen är de cmdletar som används antingen `AzureRM` eller `Azure` som ett substantivprefix.  Az förenklar och normaliserar cmdlet-namn så att Az används som cmdlet-substantivprefix för alla cmdletar. Ett exempel:
+I AzureRM-modulen är de cmdletar som används antingen `AzureRM` eller `Azure` som ett substantivprefix.  Az förenklar och normaliserar cmdlet-namn så att Az används som cmdlet-substantivprefix för alla cmdletar. Exempel:
 
 ```azurepowershell-interactive
 Get-AzureRMVM
@@ -125,7 +125,7 @@ Modulnamnen har ändrats från `AzureRM.*` till `Az.*`, förutom följande modul
 
 #### <a name="migrating-requires-and-import-module-statements"></a>Migrera instruktioner av typen #Requires och Import-Module
 
-Skript som använder `#Requires` eller `Import-Module` för att deklarera beroende av AzureRM-moduler måste uppdateras så att de nya modulnamnen används. Ett exempel:
+Skript som använder `#Requires` eller `Import-Module` för att deklarera beroende av AzureRM-moduler måste uppdateras så att de nya modulnamnen används. Exempel:
 
 ```azurepowershell-interactive
 #Requires -Module AzureRM.Compute

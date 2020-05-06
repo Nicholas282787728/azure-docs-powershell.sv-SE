@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/11/2018
 ms.openlocfilehash: 11847ca2fe09ebeb48f962eab6dac2be06bd8805
-ms.sourcegitcommit: bbd3f061cac3417ce588487c1ae4e0bc52c11d6a
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "65534354"
 ---
 # <a name="use-experimental-azure-powershell-modules"></a>Använda experimentella Azure PowerShell-moduler
@@ -71,7 +71,7 @@ Grundläggande förbättringar räknas som ”sunt förnuft” och lite experime
 
 - Smarta standardvärden – Skapa smarta standardvärden för att fylla i ”obligatorisk” information. Exempel:
   - Resursgrupp
-  - Plats
+  - plats.
   - Beroende resurser
 
 ### <a name="experimental-improvements"></a>Experimentella förbättringar
