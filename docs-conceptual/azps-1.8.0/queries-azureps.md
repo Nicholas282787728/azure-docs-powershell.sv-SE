@@ -7,12 +7,12 @@ manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 01/10/2019
-ms.openlocfilehash: 9141f5640467722608cb7748f425ce3942668fb8
-ms.sourcegitcommit: 5bdedc77b27b66998387486761ec67ed9326f169
+ms.openlocfilehash: 4f74df6acaa05babc712b7b35737ce3001170b87
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67346585"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82588000"
 ---
 # <a name="query-output-of-azure-powershell"></a>Fråga utdata från Azure PowerShell 
 
@@ -76,7 +76,7 @@ Utdata från användning av `Select-Object` formateras alltid så att den begär
 Vissa egenskaper i cmdlet-utdata i Azure PowerShell använder kapslade objekt som egenskapen `StorageProfile` i `Get-AzVM`-utdata. Om du vill ha ett värde från en kapslad egenskap anger du ett visningsnamn och den fullständiga sökvägen till det värde du vill granska som en del av ett ordlisteargument för `Select-Object`:
 
 ```azurepowershell-interactive
-Get-AzVM -ResourceGroupName TestGroup | `
+Get-AzVM -ResourceGroupName TestGroup |
     Select-Object Name,@{Name="OSType"; Expression={$_.StorageProfile.OSDisk.OSType}}
 ```
 
@@ -95,7 +95,7 @@ Varje ordlisteargument väljer en egenskap från objektet. Den egenskap som ska 
 Med cmdleten `Where-Object` kan du filtrera resultatet baserat på valfritt egenskapsvärde, inklusive kapslade egenskaper. I nästa exempel visas hur du använder `Where-Object` för att hitta de virtuella Linux-datorerna i en resursgrupp.
 
 ```azurepowershell-interactive
-Get-AzVM -ResourceGroupName TestGroup | `
+Get-AzVM -ResourceGroupName TestGroup |
     Where-Object {$_.StorageProfile.OSDisk.OSType -eq "Linux"}
 ```
 
@@ -109,8 +109,8 @@ TestGroup         TestVM2  westus2 Standard_D2s_v3  Linux testvm2669         Suc
 Du kan dirigera resultaten för `Select-Object` och `Where-Object` till varandra. Av prestandaskäl rekommenderar vi alltid att du placerar åtgärden `Where-Object` före `Select-Object`:
 
 ```azurepowershell-interactive
-Get-AzVM -ResourceGroupName TestGroup | `
-    Where-Object {$_.StorageProfile.OsDisk.OsType -eq "Linux"} | `
+Get-AzVM -ResourceGroupName TestGroup |
+    Where-Object {$_.StorageProfile.OsDisk.OsType -eq "Linux"} |
     Select-Object Name,VmID,ProvisioningState
 ```
 

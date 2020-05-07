@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 11/04/2019
 ms.openlocfilehash: e88752e0c997efc4f49161e358072803cb63450a
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81445534"
 ---
 # <a name="migration-guide-for-az-300"></a>Migreringsguide för Az 3.0.0
@@ -175,7 +175,7 @@ Disable-AzHDInsightMonitoring -Name testcluster
 
 
 ### `Enable-AzHDInsightMonitoring`
-Lade till en ny `Enable-AzHDInsightMonitoring`-cmdlet. Använd denna cmdlet för att aktivera övervakning i ett HDInsight-kluster (ersätter `Enable-AzHDInsightOperationsManagementSuite` och `Enable-AzHDInsightOMS`).
+Lade till ny `Enable-AzHDInsightMonitoring`-cmdlet. Använd denna cmdlet för att aktivera övervakning i ett HDInsight-kluster (ersätter `Enable-AzHDInsightOperationsManagementSuite` och `Enable-AzHDInsightOMS`).
 
 #### <a name="before"></a>Före
 ```powershell
@@ -191,7 +191,7 @@ Enable-AzHDInsightMonitoring Enable-AzHDInsightMonitoring -Name testcluster -Wor
 ```
 
 ### `Get-AzHDInsightMonitoring`
-Lade till en ny `Get-AzHDInsightMonitoring`-cmdlet. Använd denna cmdlet för att hämta status för övervakning av installation i ett Azure HDInsight-kluster (ersätter `Get-AzHDInsightOperationsManagementSuite` och `Get-AzHDInsightOMS`).
+Lade till ny `Get-AzHDInsightMonitoring`-cmdlet. Använd denna cmdlet för att hämta status för övervakning av installation i ett Azure HDInsight-kluster (ersätter `Get-AzHDInsightOperationsManagementSuite` och `Get-AzHDInsightOMS`).
 
 #### <a name="before"></a>Före
 ```powershell

@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/06/2017
 ms.openlocfilehash: a4911e72f687c07b31805c07fd23263a6b7f33b4
-ms.sourcegitcommit: 2d0c3ffaa5246f680784fa7e15b0d2536c27ff80
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "75718805"
 ---
 # <a name="installing-the-azure-powershell-service-management-module"></a>Installera Azure PowerShell Service Management-modulen
