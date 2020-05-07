@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/04/2019
 ms.openlocfilehash: 44f5d5b44788a52db297a0d73697161eec2eedc2
-ms.sourcegitcommit: fb95591c45bb5f12b98e0690938d18f2ec611897
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "79402824"
 ---
 # <a name="sign-in-with-azure-powershell"></a>Logga in med Azure PowerShell
@@ -40,7 +40,7 @@ När du kör cmdleten visas en tokensträng. Kopiera den här strängen och klis
 > Auktorisering med användarnamn/lösenord har tagits bort i Azure PowerShell på grund av ändringar i auktoriseringsimplementering och säkerhetsproblem i Active Directory.
 > Om du använder autentiseringsuppgifter för automation får du i stället [skapa ett huvudnamn för tjänsten](create-azure-service-principal-azureps.md).
 
-## <a name="sign-in-with-a-service-principal-a-namesp-signin"></a>Logga in med ett huvudnamn för tjänsten <a name="sp-signin"/>
+## <a name="sign-in-with-a-service-principal"></a>Logga in med ett huvudnamn för tjänsten <a name="sp-signin"/>
 
 Tjänstens huvudnamn är icke-interaktiva Azure-konton. Precis som med andra användarkonton hanteras deras behörigheter med Azure Active Directory. Genom att endast bevilja de behörigheter som krävs för tjänstens huvudnamn skyddas dina automatiseringsskript.
 
@@ -117,7 +117,7 @@ Om du vill lära dig mer om hanterade identiteter för Azure-resurser kan du lä
 
 Om ditt konto är associerat med fler än en klientorganisation måste du använda parametern `-Tenant` när du ansluter för att logga in. Den här parametern kan användas med alla inloggningsmetoder. När du loggar in kan det här parametervärdet antingen vara klientorganisationens objekt-ID för Azure (klient-ID) eller det fullständigt kvalificerade domännamnet för klientorganisationen.
 
-Om du är [molnlösningsleverantör (CSP)](https://azure.microsoft.com/offers/ms-azr-0145p/)**måste** värdet `-Tenant` vara ett klient-ID.
+Om du är [molnlösningsleverantör (CSP)](https://azure.microsoft.com/offers/ms-azr-0145p/)`-Tenant`måste**värdet** vara ett klient-ID.
 
 ```azurepowershell-interactive
 Connect-AzAccount -Tenant 'xxxx-xxxx-xxxx-xxxx'

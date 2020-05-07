@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.manager: knithinc
 ms.date: 09/21/2018
 ms.openlocfilehash: 55f19ac5e6767df1312e0b531184e8621b60a011
-ms.sourcegitcommit: febbbd3f75c8dd1a296281d265289f015b6cb537
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "67038201"
 ---
 # <a name="azurerm-module-250"></a>AzureRM-modul 2.5.0
@@ -20,7 +20,7 @@ ms.locfileid: "67038201"
 ## <a name="requirements"></a>Krav:
 Den lägsta versionen av Azure Stack som stöds är 1904.
 
-Obs! Om du använder en tidigare version så måste du installera version 1.2.11
+Obs! Om du använder en tidigare version måste du installera version 1.2.11
 
 
 ## <a name="install"></a>Installera
@@ -65,7 +65,7 @@ Use-AzureRmProfile -Profile 2018-03-01-hybrid -Force
 ### <a name="azure-bridge"></a>Azure Bridge
 Förhandsversionen av administratörsmodulen AzureBridge i Azure Stack, där du kan publicera bilder från Azure.
 
-### <a name="backup"></a>Backup
+### <a name="backup"></a>Säkerhetskopiering
 Förhandsversionen av administratörsmodulen Backup som gör att administratörer kan:
 - Konfigurera var säkerhetskopiorna ska lagras
 - Säkerhetskopiera
@@ -116,14 +116,14 @@ Förhandsversion av administratörsmodulen Azure Stack Storage.  I den här vers
 ### <a name="subscription-admin"></a>Prenumerationsadministration
 Förhandsversion av administratörsmodulen Azure Stack Subscription.  Den här modulen innehåller administratörsfunktioner för att:
 - Hantera avtal och erbjudanden
-- Visa information om användning och prestanda
+- Visning av information om användning och prestanda
 - Hantera RBAC
 
 ### <a name="subscription"></a>Prenumeration
 Förhandsversion av modulen Azure Stack Subscription.  Den här modulen innehåller användarfunktioner för att:
 - Skapa, ta bort och uppdatera prenumerationer
 
-### <a name="update"></a>Uppdatering
+### <a name="update"></a>Uppdatera
 Förhandsversion av administratörsmodulen Azure Stack Update.  I den här kan modulen kan administratörer:
 - Lista och installera tillgängliga uppdateringar
 - Återuppta avbrutna uppdateringar

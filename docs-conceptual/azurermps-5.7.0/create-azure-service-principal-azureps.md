@@ -9,10 +9,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
 ms.openlocfilehash: dd2528cf91495361343ff562b7a602e7c115d13b
-ms.sourcegitcommit: bbd3f061cac3417ce588487c1ae4e0bc52c11d6a
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "65534696"
 ---
 # <a name="create-an-azure-service-principal-with-azure-powershell"></a>Skapa tjänstens huvudnamn för Azure med Azure PowerShell
@@ -113,7 +113,7 @@ SubscriptionName      :
 CurrentStorageAccount :
 ```
 
-Grattis! Du kan använda dessa autentiseringsuppgifter för att köra appen. Därefter måste du justera behörigheterna för tjänstens huvudnamn.
+Gratulerar! Du kan använda dessa autentiseringsuppgifter för att köra appen. Därefter måste du justera behörigheterna för tjänstens huvudnamn.
 
 ## <a name="managing-roles"></a>Hantera roller
 

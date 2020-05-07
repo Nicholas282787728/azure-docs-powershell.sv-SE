@@ -5,10 +5,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 02/26/2020
 ms.openlocfilehash: 7a25270566f5e856ee44c4c191a47a3e7334508b
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81445704"
 ---
 # <a name="install-azure-powershell"></a>Installera Azure PowerShell
@@ -159,6 +159,6 @@ Import-Module -Name Az -RequiredVersion 3.6.1
 
 Om du upptäcker en bugg i Azure PowerShell kan du [öppna ett ärende på GitHub](https://github.com/Azure/azure-powershell/issues). Om du vill ge feedback från kommandoraden använder du cmdleten [Send-Feedback](/powershell/module/az.accounts/send-feedback).
 
-## <a name="next-steps"></a>Efterföljande moment
+## <a name="next-steps"></a>Nästa steg
 
 Läs informationen i [Komma igång med Azure PowerShell](get-started-azureps.md) för att komma igång med Azure PowerShell-modulerna och deras funktioner. Om du känner till Azure PowerShell och behöver migrera från AzureRM läser du [Migrera från AzureRM till Az](migrate-from-azurerm-to-az.md).

@@ -5,10 +5,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/10/2020
 ms.openlocfilehash: 1bd5bd1ae529a63c848b7aa835272d79b4011d32
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81740209"
 ---
 # <a name="install-azure-powershell-on-windows-with-msi"></a>Installera Azure PowerShell på Windows med MSI
@@ -48,6 +48,6 @@ Du måste upprepa det här steget för varje ny PowerShell-session du startar. I
 
 Om du upptäcker en bugg i Azure PowerShell kan du [öppna ett ärende på GitHub](https://github.com/Azure/azure-powershell/issues). Om du vill ge feedback från kommandoraden använder du cmdleten [Send-Feedback](/powershell/module/az.accounts/send-feedback).
 
-## <a name="next-steps"></a>Efterföljande moment
+## <a name="next-steps"></a>Nästa steg
 
 Läs informationen i [Komma igång med Azure PowerShell](get-started-azureps.md) för att komma igång med Azure PowerShell-modulerna och deras funktioner. Om du känner till Azure PowerShell och behöver migrera från AzureRM läser du [Migrera från AzureRM till Az](migrate-from-azurerm-to-az.md).

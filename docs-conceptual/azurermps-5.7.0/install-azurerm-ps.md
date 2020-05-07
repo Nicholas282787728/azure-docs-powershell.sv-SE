@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/15/2018
 ms.openlocfilehash: 5a4ccd67433fe3716df42075a4e2fd035a12af2b
-ms.sourcegitcommit: 2d0c3ffaa5246f680784fa7e15b0d2536c27ff80
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "75722449"
 ---
 # <a name="install-azure-powershell-on-windows-with-powershellget"></a>Installera Azure PowerShell på Windows med PowerShellGet
@@ -136,6 +136,6 @@ Import-Module -Name AzureRM -RequiredVersion 2.3.0
 Om du upptäcker en bugg när du använder Azure PowerShell kan du [öppna ett ärende på GitHub](https://github.com/Azure/azure-powershell/issues).
 Om du vill ge feedback från kommandoraden använder du cmdleten [Send-Feedback](/powershell/module/azurerm.profile/send-feedback).
 
-## <a name="next-steps"></a>Efterföljande moment
+## <a name="next-steps"></a>Nästa steg
 
 Läs informationen i [Komma igång med Azure PowerShell](get-started-azureps.md) för att komma igång med Azure PowerShell och lära dig mer om modulerna och dess funktioner.

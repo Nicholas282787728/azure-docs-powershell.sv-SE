@@ -19,7 +19,7 @@
     - name: Ändringar mellan AzureRM och Az
       href: migrate-az-1.0.0.md
       displayName: 'breaking, cmdlet, module, names'
-- name: Komma igång
+- name: Kom igång
   href: get-started-azureps.md
   displayName: 'sign in, signin, log in, login, find, feedback, intro, introduction'
 - name: Cloud Shell
@@ -52,7 +52,7 @@
       href: /azure/azure-resource-manager/resource-manager-export-template-powershell
     - name: Distribuera privata Resource Manager-mallar
       href: /azure/azure-resource-manager/resource-manager-powershell-sas-token
-- name: Begrepp
+- name: Koncept
   items:
     - name: PowerShell-jobb
       href: using-psjobs.md
@@ -69,7 +69,7 @@
     - name: Virtuella Windows-datorer
       href: /azure/virtual-machines/windows/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json
       displayName: vms
-    - name: Web Apps
+    - name: Webbappar
       href: /azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json
     - name: SQL Databases
       href: /azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json

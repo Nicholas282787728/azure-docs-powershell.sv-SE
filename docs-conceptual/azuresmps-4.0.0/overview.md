@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.author: sttramer
 ms.manager: carmonm
 ms.openlocfilehash: 05192f290c57c8ac004ba6bb698e531e51c7d4f2
-ms.sourcegitcommit: 2054a8f74cd9bf5a50ea7fdfddccaa632c842934
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56145377"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "63053427"
 ---
 # <a name="overview-of-the-azure-powershell-service-management-module"></a>Översikt över Azure PowerShell Service Management-modulen
 

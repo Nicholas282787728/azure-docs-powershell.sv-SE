@@ -8,10 +8,10 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/27/2018
 ms.openlocfilehash: 7b099fead7cb985fc8f7e6fed55b8c1107caa0d9
-ms.sourcegitcommit: 2d0c3ffaa5246f680784fa7e15b0d2536c27ff80
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "75720386"
 ---
 # <a name="install-azure-powershell-on-windows-with-powershellget"></a>Installera Azure PowerShell på Windows med PowerShellGet
@@ -97,7 +97,7 @@ När modulen har installerats måste du läsa in modulen i din PowerShell-sessio
 Import-Module -Name AzureRM
 ```
 
-## <a name="next-steps"></a>Efterföljande moment
+## <a name="next-steps"></a>Nästa steg
 
 Mer information om hur du använder Azure PowerShell finns i följande artiklar:
 
@@ -127,7 +127,7 @@ Get-InstalledModule AzureRM -AllVersions | Select-Object -Property Name,Version,
 
 ### <a name="support-for-classic-deployment-methods"></a>Stöd för klassiska distributionsmetoder
 
-Om du har distributioner som använder den klassiska distributionsmodellen så kan du installera Service Management-versionen av Azure PowerShell. Läs mer i informationen om hur du [installerar Azure PowerShell Service Management-modulen](/powershell/azure/servicemanagement/install-azure-ps). Azure- och AzureRM-moduler delar gemensamma beroenden. Om du använder både Azure- och AzureRM-moduler, bör du installera samma version av varje paket.
+Om du har distributioner som använder den klassiska distributionsmodellen så kan du installera Service Management-versionen av Azure PowerShell. Mer information finns i [Install the Azure PowerShell Service Management module](/powershell/azure/servicemanagement/install-azure-ps) (Installera Azure PowerShell Service Management-modulen). Azure- och AzureRM-moduler delar gemensamma beroenden. Om du använder både Azure- och AzureRM-moduler, bör du installera samma version av varje paket.
 
 ### <a name="div-idupdate-azpsupdating-to-a-new-version-of-azure-powershell"></a><div id="update-azps"/>Uppdatera till en ny version av Azure PowerShell
 

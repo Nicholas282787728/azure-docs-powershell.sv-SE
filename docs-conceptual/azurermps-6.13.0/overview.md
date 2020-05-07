@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.manager: carmonm
 ms.date: 12/20/2018
 ms.openlocfilehash: a5c5504aa4c2932582df9e4a40b4950d5f999cbd
-ms.sourcegitcommit: f9445d1525eac8c165637e1a80fbc92b1ab005c2
+ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/16/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "75035854"
 ---
 # <a name="overview-of-azure-powershell"></a>Översikt över Azure PowerShell
@@ -37,12 +37,12 @@ Om du inte känner till PowerShell kan en introduktion till PowerShell vara till
 * [Installera PowerShell](/powershell/scripting/install/installing-windows-powershell)
 * [Köra skript med PowerShell](/powershell/scripting/powershell-scripting)
 
-Du kan även se den här videon: [PowerShell-grunder: (Del 1) Komma igång med PowerShell](https://channel9.msdn.com/Blogs/Taste-of-Premier/PowerShellBasicsPart1).
+Du kan även titta på den här videon: [PowerShell Basics: (Part 1) Getting Started with PowerShell](https://channel9.msdn.com/Blogs/Taste-of-Premier/PowerShellBasicsPart1) (Grundläggande om PowerShell: (Del 1) Komma igång med PowerShell).
 
-## <a name="build-your-skills-with-microsoft-learn"></a>Utveckla dina färdigheter med Microsoft Learn
+## <a name="build-your-skills-with-microsoft-learn"></a>Utveckla din kompetens med Microsoft Learn
 
 - [Automatisera Azure-uppgifter med hjälp av skript med PowerShell](/learn/modules/automate-azure-tasks-with-powershell/)
-- [Mer interaktiv inlärning...](/learn/browse/?term=powershell)
+- [Mer interaktiv utbildning...](/learn/browse/?term=powershell)
 
 ## <a name="other-azure-powershell-modules"></a>Andra Azure PowerShell-moduler
 
