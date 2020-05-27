@@ -1,24 +1,21 @@
 ---
 title: Fråga efter Azure-resurser och formatera resultat | Microsoft Docs
 description: Så här frågar du efter resurser i Azure och formaterar resultaten.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/30/2017
-ms.openlocfilehash: db161bb0ec1b25b1cb7445724cc5758599dbc674
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: 23cc0d13e9ecb17bef04cedc8a0f395a04e89390
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "65534665"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83386484"
 ---
 # <a name="querying-for-azure-resources"></a>Fråga efter Azure-resurser
 
 [!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
 
-Frågor i PowerShell kan utföras med hjälp av inbyggda cmdletar. I PowerShell har cmdlet formen **_Verb-substantiv_** . Cmdletar med verbet **_Get_** är fråge-cmdletar. Cmdletarnas substantiv är de typer av Azure-resurser som cmdletens verb agerar på.
+Frågor i PowerShell kan utföras med hjälp av inbyggda cmdletar. I PowerShell har cmdlet formen **_Verb-substantiv_**. Cmdletar med verbet **_Get_** är fråge-cmdletar. Cmdletarnas substantiv är de typer av Azure-resurser som cmdletens verb agerar på.
 
 ## <a name="selecting-simple-properties"></a>Välja enkla egenskaper
 

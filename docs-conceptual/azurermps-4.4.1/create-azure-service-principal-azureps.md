@@ -2,18 +2,15 @@
 title: Skapa tjänstens huvudnamn för Azure med Azure PowerShell
 description: Lär dig hur du skapar ett huvudnamn för tjänsten för din app eller tjänst med Azure PowerShell.
 keywords: Azure PowerShell, Azure Active Directory, Azure Active directory, AD, RBAC
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2017
-ms.openlocfilehash: a596e321d19cf157510418c150f51eb2532adb3c
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: 8fc73b6268c01f9dbf76888e291843e035fae587
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "65535096"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83386790"
 ---
 # <a name="create-an-azure-service-principal-with-azure-powershell"></a>Skapa tjänstens huvudnamn för Azure med Azure PowerShell
 
@@ -112,7 +109,7 @@ SubscriptionName      :
 CurrentStorageAccount :
 ```
 
-Gratulerar! Du kan använda dessa autentiseringsuppgifter för att köra appen. Därefter måste du justera behörigheterna för tjänstens huvudnamn.
+Grattis! Du kan använda dessa autentiseringsuppgifter för att köra appen. Därefter måste du justera behörigheterna för tjänstens huvudnamn.
 
 ## <a name="managing-roles"></a>Hantera roller
 

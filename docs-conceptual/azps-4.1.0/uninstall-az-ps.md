@@ -4,12 +4,12 @@ description: Så här utför du en fullständig avinstallation av Azure PowerShe
 ms.date: 10/22/2019
 ms.devlang: powershell
 ms.topic: conceptual
-ms.openlocfilehash: 69b4213225181b235dfef1217e9d8e89321ef4d1
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.openlocfilehash: 1bf94f4c7a27328b60b7f9369888f688541ba4a7
+ms.sourcegitcommit: 10ec909100a70acec94d42f6084e7bf0342c6854
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83386025"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83631021"
 ---
 # <a name="uninstall-the-azure-powershell-module"></a>Avinstallera Azure PowerShell-modulen
 
@@ -138,7 +138,7 @@ Om du installerade Azure PowerShell AzureRM-modulerna med MSI-paketet måste du 
 | Windows 10 | Start > Inställningar > Appar |
 | Windows 7 </br>Windows 8 | Start > Kontrollpanelen > Program > Avinstallera ett program |
 
-På den här skärmen bör du se __Azure PowerShell__ i listan över program. Det är appen som ska avinstalleras. Om det här programmet inte visas i listan så installerade du via PowerShellGet. Då följer du anvisningarna som följer.
+På den här skärmen bör du se __Azure PowerShell__ eller __Microsoft Azure PowerShell – månad, år__ i listan över program. Det är appen som ska avinstalleras. Om det här programmet inte visas i listan så installerade du via PowerShellGet. Då följer du anvisningarna som följer.
 
 ### <a name="uninstall-from-powershell"></a>Avinstallera från PowerShell
 
@@ -147,10 +147,21 @@ Om du installerade AzureRM med PowerShellGet så kan du ta bort modulerna med ko
 ```powershell-interactive
 Uninstall-AzureRm
 ```
+eller
+```powershell-interactive
+Uninstall-Module AzureRm
+```
 
 Om du inte kan köra kommandot `Uninstall-AzureRM` använder du skriptet [`Uninstall-AllModules`](#uninstall-script) som finns i den här artikeln med följande anrop:
 
 ```powershell-interactive
 $versions = (Get-InstalledModule AzureRM -AllVersions | Select-Object Version)
 $versions | foreach { Uninstall-AllModules -TargetModule AzureRM -Version ($_.Version) -Force }
+```
+eller
+```powershell-interactive
+foreach ($module in (Get-Module -ListAvailable AzureRM*).Name |Get-Unique) {
+   write-host "Removing Module $module"
+   Uninstall-module $module
+}
 ```

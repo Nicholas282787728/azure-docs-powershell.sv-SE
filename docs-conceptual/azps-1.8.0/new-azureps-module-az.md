@@ -2,17 +2,14 @@
 title: Introduktion till Azure PowerShell Az-modulen
 description: Vi introducerar den nya Azure PowerShell-modulen Az, som ersätter AzureRM-modulen.
 ms.date: 05/10/2019
-author: sptramer
-ms.author: sttramer
-ms.manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.openlocfilehash: 21d41b6e14d1b39a78e40daee74b80de3a80c2a0
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: f593f89c99d3605f9bcd33df90b3977c72daa75f
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "68861312"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83386994"
 ---
 # <a name="introducing-the-new-azure-powershell-az-module"></a>Introduktion till den nya Azure PowerShell Az-modulen
 

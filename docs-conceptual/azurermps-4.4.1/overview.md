@@ -1,19 +1,15 @@
 ---
 title: Översikt över Azure PowerShell | Microsoft Docs
 description: En översikt över Azure PowerShell med länkar till installation och konfiguration.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.manager: carmonm
 ms.date: 08/31/2017
-ms.openlocfilehash: 0541975e55620a8792c0d51213c4ed02ea29988f
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: fbf4676189c6acd9982a10a8aa4acbab67b72730
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "67863410"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83386688"
 ---
 # <a name="overview-of-azure-powershell"></a>Översikt över Azure PowerShell
 
@@ -37,7 +33,7 @@ Om du inte känner till PowerShell, kan du ta hjälp av en introduktion till Pow
 * [Installera PowerShell](/powershell/scripting/installing-windows-powershell)
 * [Köra skript med PowerShell](/powershell/scripting/scripting-with-windows-powershell)
 
-Du kan även titta på den här videon: [PowerShell Basics: (Part 1) Getting Started with PowerShell](https://channel9.msdn.com/Blogs/Taste-of-Premier/PowerShellBasicsPart1) (Grundläggande om PowerShell: (Del 1) Komma igång med PowerShell).
+Du kan även se den här videon: [PowerShell-grunder: (Del 1) Komma igång med PowerShell](https://channel9.msdn.com/Blogs/Taste-of-Premier/PowerShellBasicsPart1).
 
 ## <a name="other-azure-powershell-modules"></a>Andra Azure PowerShell-moduler
 

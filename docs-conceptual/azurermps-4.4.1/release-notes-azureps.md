@@ -1,19 +1,16 @@
 ---
 title: Ändringslogg för Azure PowerShell | Microsoft Docs
 description: Det här är en historik över de ändringar som gjorts i den senaste versionen av Azure PowerShell.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.workload: ''
 ms.date: 07/26/2017
-ms.openlocfilehash: 1491f3f23deb767b754a98b3fab616356daa71f3
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: bdd8e71460a9adcdb2cc87544f81f82c96380ec7
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "67863768"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83387402"
 ---
 # <a name="release-notes"></a>Viktig information
 
@@ -39,23 +36,23 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
   * Nu har Get-AzureRmCognitiveServicesAccount stöd för korrekt sidindelning.
 * Compute
   * Funktionen körningskommando:
-    - Ny cmdlet: Invoke-AzureRmVMRunCommand anropar ett körningskommando på en virtuell dator
-    - Ny cmdlet: Get-AzureRmVMRunCommandDocument visar tillgängliga dokument för körningskommando
+    - Ny cmdlet: ”Invoke-AzureRmVMRunCommand” anropar ett körningskommando på en virtuell dator
+    - Ny cmdlet: ”Get-AzureRmVMRunCommandDocument” visar tillgängliga dokument för körningskommando
   * Lägg till parametern StorageAccountType för att ange Set-AzureRmDataDisk
   * Tillgänglighetszonen har stöd för virtuell dator, VM-skalningsuppsättning och disk
-    - Ny parameter: Zone har lagts till i New-AzureRmVM, New-AzureRmVMConfig, New-AzureRmVmssConfig, New-AzureRmDiskConfig
+    - Ny parameter: ”Zone” har lagts till i New-AzureRmVM, New-AzureRmVMConfig, New-AzureRmVmssConfig, New-AzureRmDiskConfig
   * Rullande uppgraderingsfunktion för VM-skalningsuppsättning:
-    - Ny cmdlet: Start-AzureRmVmssRollingOSUpgrade anropar löpande OS-uppgradering av VM-skalningsuppsättning
-    - Ny cmdlet: Set-AzureRmVmssRollingUpgradePolicy anger uppgraderingsprincip för löpande uppgradering av VM-skalningsuppsättning.
-    - Ny cmdlet: Stop-AzureRmVmssRollingOSUpgrade avbryter löpande OS-uppgradering av VM-skalningsuppsättning
-    - Ny cmdlet: Get-AzureRmVmssRollingUpgradePolicy visar status för uppgraderingsprincip för löpande uppgradering av VM-skalningsuppsättning.
+    - Ny cmdlet: ”Start-AzureRmVmssRollingOSUpgrade” anropar löpande uppgraderingar av operativsystemet för VM-skalningsuppsättningar
+    - Ny cmdlet: ”Set-AzureRmVmssRollingUpgradePolicy” anger uppgraderingsprincipen för löpande uppgraderingar av VM-skalningsuppsättningar.
+    - Ny cmdlet: ”Stop-AzureRmVmssRollingOSUpgrade” avbryter löpande uppgraderingar av operativsystemet för VM-skalningsuppsättningar
+    - Ny cmdlet: ”Get-AzureRmVmssRollingUpgradePolicy” visar status för uppgraderingsprinciper för löpande uppgraderingar av VM-skalningsuppsättningar.
   * Switchparametern AssignIdentity införs för systemtilldelad identitet.
-    - Ny parameter: AssignIdentity har lagts till i New-AzureRmVMConfig, New-AzureRmVmssConfig och Update-AzureRmVM
+    - Ny parameter: ”AssignIdentity” har lagts till i New-AzureRmVMConfig, New-AzureRmVmssConfig och Update-AzureRmVM
   * Funktionen för kryptering av Vmss-disk:
-    - Ny cmdlet: Set-AzureRmVmssDiskEncryptionExtension aktiverar diskkryptering på VM-skalningsuppsättningen
-    - Ny cmdlet: Disable-AzureRmVmssDiskEncryption inaktiverar diskkryptering på VM-skalningsuppsättningen
-    - Ny cmdlet: Get-AzureRmVmssDiskEncryptionStatus visar status för diskkryptering på VM-skalningsuppsättningen
-    - Ny cmdlet: Get-AzureRmVmssVMDiskEncryptionStatus visar status för diskkryptering på virtuella datorer i en VM-skalningsuppsättning
+    - Ny cmdlet: ”Set-AzureRmVmssDiskEncryptionExtension” aktiverar diskkryptering på en VM-skalningsuppsättning
+    - Ny cmdlet: ”Disable-AzureRmVmssDiskEncryption” inaktiverar diskkryptering på en VM-skalningsuppsättning
+    - Ny cmdlet: ”Get-AzureRmVmssDiskEncryptionStatus” visar status för diskkryptering på en VM-skalningsuppsättning
+    - Ny cmdlet: ”Get-AzureRmVmssVMDiskEncryptionStatus” visar status för diskkryptering på virtuella datorer i en VM-skalningsuppsättning
 * ContainerInstance
   * Lägg till PowerShell-cmdletar för Azure Container Instance
     - New-AzureRmContainerGroup
@@ -96,9 +93,9 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
     * Undo-AzureKeyVaultCertificateRemoval
 * Nätverk
   * Stöd för slutpunktstjänster har lagts till i Virtual Network-undernät
-    - Uppdaterat Add-AzureRmVirtualSubnetConfig: Valfria parametern -ServiceEndpoint lades till
-    - Uppdaterat New-AzureRmVirtualSubnetConfig: Valfria parametern -ServiceEndpoint lades till
-    - Uppdaterat Set-AzureRmVirtualSubnetConfig: Valfria parametern -ServiceEndpoint lades till
+    - Add-AzureRmVirtualSubnetConfig har uppdaterats: Valfri parameter har lagts till: -ServiceEndpoint
+    - New-AzureRmVirtualSubnetConfig har uppdaterats: Valfri parameter har lagts till: -ServiceEndpoint
+    - Set-AzureRmVirtualSubnetConfig har uppdaterats: Valfri parameter har lagts till: -ServiceEndpoint
   * Cmdlet har lagts till för att lista slutpunktstjänster som är tillgängliga på platsen
     - Get-AzureRmVirtualNetworkAvailableEndpointService
   * Möjligheten att konfigurera extern, radius-baserad P2S-autentisering till följande cmdletar har lagts till
@@ -109,41 +106,41 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
     - New-AzureRmVpnClientConfiguration
     - Get-AzureRmVpnClientConfiguration
   * Stöd för SKU-parametern har lagts till i offentliga IP-adresser och lastbalanserare
-    - Uppdaterat New-AzureRMLoadBalancer: Valfria parametern -Sku har lagts till
-    - Uppdaterat New-AzureRMPublicIpAddress: Valfria parametern -Sku har lagts till
+    - New-AzureRMLoadBalancer har uppdaterats: Ny valfri parameter har lagts till: -Sku
+    - New-AzureRMPublicIpAddress har uppdaterats: Ny valfri parameter har lagts till: -Sku
   * Stöd för DisableOutboundSNAT har lagts till i Load Balancer-regler
-    - Uppdaterat New-AzureRMLoadBalancerRuleConfig: Valfria parametern DisableOutboundSNAT har lagts till
-    - Uppdaterat Add-AzureRMLoadBalancerRuleConfig: Valfria parametern DisableOutboundSNAT har lagts till
-    - Uppdaterat Set-AzureRMLoadBalancerRuleConfig: Valfria parametern DisableOutboundSNAT har lagts till
+    - New-AzureRMLoadBalancerRuleConfig har uppdaterats: Valfri parameter har lagts till: DisableOutboundSNAT
+    - Add-AzureRMLoadBalancerRuleConfig har uppdaterats: Valfri parameter har lagts till: DisableOutboundSNAT
+    - Set-AzureRMLoadBalancerRuleConfig har uppdaterats: Valfri parameter har lagts till: DisableOutboundSNAT
   * Stöd har lagts till för IkeV2 P2S
-    - Uppdaterat New-AzureRmVirtualNetworkGateway: Valfria parametern -VpnClientProtocol har lagts till, standard som [ "SSTP", "IkeV2" ]
-    - Uppdaterat Set-AzureRmVirtualNetworkGateway: Valfria parametern -VpnClientProtocol har lagts till
+    - New-AzureRmVirtualNetworkGateway har uppdaterats: Den valfria parametern -VpnClientProtocol har lagts till, standard som [ "SSTP", "IkeV2" ]
+    - Set-AzureRmVirtualNetworkGateway har uppdaterats: Den valfria parametern -VpnClientProtocol har lagts till
   * Stöd för flervärdesregler har lagts till i Network Security Rules och i Effective Network Security Rules
-    - Uppdaterat Add-AzureRmNetworkSecurityRuleConfig: Uppdaterat parametrarna SourcePortRange DestinationPortRange, SourceAddressPrefix för att acceptera en lista med strängar
-    - Uppdaterat New-AzureRmNetworkSecurityRuleConfig: Uppdaterat parametrarna SourcePortRange DestinationPortRange, SourceAddressPrefix för att acceptera en lista med strängar
-    - Uppdaterat Set-AzureRmNetworkSecurityRuleConfig: Uppdaterat parametrarna SourcePortRange DestinationPortRange, SourceAddressPrefix för att acceptera en lista med strängar
-    - Uppdaterat Add-AzureRmNetworkSecurityRuleConfig: Uppdaterat parametrarna SourcePortRange DestinationPortRange, SourceAddressPrefix för att acceptera en lista med strängar
-    - Uppdaterat New-AzureRmNetworkSecurityGroup: Uppdaterat parametern SecurityRules för acceptera parametrarna SourcePortRange, DestinationPortRange, SourceAddressPrefix som är lista med strängar i objektet PSSecurityRule
-    - Uppdaterat Get-AzureRmEffectiveNetworkSecurityGroup: Parametern TagMap har lagts till
-    - Uppdaterat Get-AzureRmEffectiveNetworkSecurityGroup: Uppdaterat det returnerade PSEffectiveSecurityRule-objektet med parametrarna SourcePortRange, DestinationPortRange, SourceAddressPrefix som är lista med strängar.
+    - Add-AzureRmNetworkSecurityRuleConfig har uppdaterats: Parametrarna SourcePortRange DestinationPortRange, SourceAddressPrefix för att acceptera en lista med strängar har uppdaterats
+    - New-AzureRmNetworkSecurityRuleConfig har uppdaterats: Parametrarna SourcePortRange DestinationPortRange, SourceAddressPrefix för att acceptera en lista med strängar har uppdaterats
+    - Set-AzureRmNetworkSecurityRuleConfig har uppdaterats: Parametrarna SourcePortRange DestinationPortRange, SourceAddressPrefix för att acceptera en lista med strängar har uppdaterats
+    - Add-AzureRmNetworkSecurityRuleConfig har uppdaterats: Parametrarna SourcePortRange DestinationPortRange, SourceAddressPrefix för att acceptera en lista med strängar har uppdaterats
+    - New-AzureRmNetworkSecurityGroup har uppdaterats: Parametern SecurityRules för acceptera parametrarna SourcePortRange, DestinationPortRange, SourceAddressPrefix som är en lista med strängar i objektet PSSecurityRule har uppdaterats
+    - Get-AzureRmEffectiveNetworkSecurityGroup har uppdaterats: Parametern TagMap har lagts till
+    - Get-AzureRmEffectiveNetworkSecurityGroup har uppdaterats: Det returnerade PSEffectiveSecurityRule-objektet med parametrarna SourcePortRange, DestinationPortRange, SourceAddressPrefix, som är en lista med strängar, har uppdaterats.
   * Stöd för DDOS-skydd för virtuella nätverk har lagts till
-    - Uppdaterat New-AzureRmVirtualNetwork: Switchparametrarna EnableDDoSProtection och EnableVmProtection har lagts till
+    - New-AzureRmVirtualNetwork har uppdaterats: Switchparametrarna EnableDDoSProtection och EnableVmProtection har lagts till
     - Egenskaperna EnableDDoSProtection och EnableVmProtection har lagts till i PSVirtualNetwork-objektet
   * Stöd för intern lastbalanserare med hög tillgänglighet har lagts till
-    - Uppdaterat Add-AzureRmLoadBalancerRuleConfig: Lade till Alla som ett giltigt värde för parametern Protocol
-    - Uppdaterat New-AzureRmLoadBalancerRuleConfig: Lade till Alla som ett giltigt värde för parametern Protocol
-    - Uppdaterat Set-AzureRmLoadBalancerRuleConfig: Lade till Alla som ett giltigt värde för parametern Protocol
+    - Add-AzureRmLoadBalancerRuleConfig har uppdaterats: All har lagts till som ett giltigt värde för parametern Protocol
+    - New-AzureRmLoadBalancerRuleConfig har lagts till: All har lagts till som ett giltigt värde för parametern Protocol
+    - Set-AzureRmLoadBalancerRuleConfig har uppdaterats: All har lagts till som ett giltigt värde för parametern Protocol
   * Stöd för programsäkerhetsgrupper har lagts till
     - New-AzureRmApplicationSecurityGroup har lagts till
     - Get-AzureRmApplicationSecurityGroup har lagts till
     - Remove-AzureRmApplicationSecurityGroup har lagts till
-    - Uppdaterat New-AzureRmNetworkInterface: Valfria parametrarna ApplicationSecurityGroup och ApplicationSecurityGroupId har lagts till
-    - Uppdaterat New-AzureRmNetworkInterfaceIpConfig: Valfria parametrarna ApplicationSecurityGroup och ApplicationSecurityGroupId har lagts till
-    - Uppdaterat Add-AzureRmNetworkInterfaceIpConfig: Valfria parametrarna ApplicationSecurityGroup och ApplicationSecurityGroupId har lagts till
-    - Uppdaterat Set-AzureRmNetworkInterfaceIpConfig: Valfria parametrarna ApplicationSecurityGroup och ApplicationSecurityGroupId har lagts till
-    - Uppdaterat New-AzureRmNetworkSecurityRuleConfig: Valfria parametrarna SourceApplicationSecurityGroup, SourceApplicationSecurityGroupId, DestinationApplicationSecurityGroup och DestinationApplicationSecurityGroupId har lagts till
-    - Uppdaterat Add-AzureRmNetworkSecurityRuleConfig: Valfria parametrarna SourceApplicationSecurityGroup, SourceApplicationSecurityGroupId, DestinationApplicationSecurityGroup och DestinationApplicationSecurityGroupId har lagts till
-    - Uppdaterat New-AzureRmNetworkSecurityRuleConfig: Valfria parametrarna SourceApplicationSecurityGroup, SourceApplicationSecurityGroupId, DestinationApplicationSecurityGroup och DestinationApplicationSecurityGroupId har lagts till
+    - New-AzureRmNetworkInterface har uppdaterats: De valfria parametrarna ApplicationSecurityGroup och ApplicationSecurityGroupId har lagts till
+    - New-AzureRmNetworkInterfaceIpConfig har uppdaterats: De valfria parametrarna ApplicationSecurityGroup och ApplicationSecurityGroupId har lagts till
+    - Add-AzureRmNetworkInterfaceIpConfig har uppdaterats: De valfria parametrarna ApplicationSecurityGroup och ApplicationSecurityGroupId har lagts till
+    - Set-AzureRmNetworkInterfaceIpConfig har uppdaterats: De valfria parametrarna ApplicationSecurityGroup och ApplicationSecurityGroupId har lagts till
+    - New-AzureRmNetworkSecurityRuleConfig har uppdaterats: De valfria parametrarna SourceApplicationSecurityGroup, SourceApplicationSecurityGroupId, DestinationApplicationSecurityGroup och DestinationApplicationSecurityGroupId har lagts till
+    - Add-AzureRmNetworkSecurityRuleConfig har uppdaterats: De valfria parametrarna SourceApplicationSecurityGroup, SourceApplicationSecurityGroupId, DestinationApplicationSecurityGroup och DestinationApplicationSecurityGroupId har lagts till
+    - Set-AzureRmNetworkSecurityRuleConfig har uppdaterats: De valfria parametrarna SourceApplicationSecurityGroup, SourceApplicationSecurityGroupId, DestinationApplicationSecurityGroup och DestinationApplicationSecurityGroupId har lagts till
   * Nya kommandon har lagts till för skriptet VpnDeviceConfiguration
     - Get-AzureRmVirtualNetworkGatewaySupportedVpnDevices
     - Get-AzureRmVirtualNetworkGatewayConnectionVpnDeviceConfigScript
@@ -340,7 +337,7 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
         - Parametern ”IdentityType” har lagts till i New-AzureRmVmssConfig
         - Get-AzureRmVmss visar identitetsinformationen för angiven Vmss
     * Funktion för Vmss-startdiagnostik:
-        - Ny cmdlet för att ställa in diagnostik av Vmss-objekt: Set-AzureRmVmssBootDiagnostics
+        - Ny cmdlet för att ställa in diagnostik för Vmss-objekt: Set-AzureRmVmssBootDiagnostics
         - Parametern ”BootDiagnostic” har lagts till i New-AzureRmVmssConfig
     * Funktionen Vmss LicenseType:
         - Parametern ”LicenseType” har lagts till i New-AzureRmVmssConfig
@@ -385,10 +382,10 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
 * Insikter
     * Problem nr. 4215 (ändringsbegäran) tar bort 15-dagarsgränsen i tidsperioden för cmdleten Get-AzureRmLog. Även mindre ändringar av enhetens testnamn.
     * Problem nr. 3957 är åtgärdat för Get-AzureRmLog
-        - Problem nr. 1: Serverdelen returnerar poster på sidor med 200 poster vardera, som är länkade genom fortsättningstoken till nästa sida. Kunderna har sett att cmdleten endast returnerar 200 poster när de visste att det fanns fler. Detta hände oavsett vilket värde som ställdes in för MaxEvents, såvida inte värdet var mindre än 200.
-        - Problem nr. 2: Dokumentationen innehöll felaktiga data om denna cmdlet, t.ex. att standardtidsperioden var 1 timme.
-        - Korrigering nr. 1: Cmdleten följer nu fortsättningstoken som returneras av serverdelen tills den når MaxEvents eller slutet på uppsättningen.<br>Standardvärdet för MaxEvents är 1 000 och det högsta värdet är 100 000. Ett värde för MaxEvents som är mindre än 1 ignoreras och standardvärdet används i stället. Dessa värden och beteenden har inte ändrats. De dokumenteras nu på rätt sätt.<br>Ett alias för MaxEvents har lagts till, MaxRecords, eftersom namnet på cmdleten inte talar om händelser längre, utan endast om loggarna.
-        - Korrigering nr. 2: Dokumentationen innehåller korrekt och mer detaljerad information: nytt alias, korrekt tidsperiod, rätt standard, minimum- och maximumvärden.
+        - Problem 1: Serverdelen returnerar poster på sidor med 200 poster vardera som är länkade genom fortsättningstoken till nästa sida. Kunderna har sett att cmdleten endast returnerar 200 poster när de visste att det fanns fler. Detta hände oavsett vilket värde som ställdes in för MaxEvents, såvida inte värdet var mindre än 200.
+        - Problem 2: Dokumentationen innehöll felaktiga data om denna cmdlet, t.ex. att standardtidsperioden var en timme.
+        - Korrigering 1: Cmdleten följer nu fortsättningstoken som returneras av serverdelen tills den når MaxEvents eller slutet på uppsättningen.<br>Standardvärdet för MaxEvents är 1 000 och det högsta värdet är 100 000. Ett värde för MaxEvents som är mindre än 1 ignoreras och standardvärdet används i stället. Dessa värden och beteenden har inte ändrats. De dokumenteras nu på rätt sätt.<br>Ett alias för MaxEvents har lagts till, MaxRecords, eftersom namnet på cmdleten inte talar om händelser längre, utan endast om loggarna.
+        - Korrigering 2: Dokumentationen innehåller korrekt och mer detaljerad information: nytt alias, korrekt tidsperiod, rätt standard, minimum- och maximumvärden.
 * KeyVault
     * Ta bort e-postadressen från katalogfrågan när -UserPrincipalName anges för cmdletarna Set-AzureRMKeyVaultAccessPolicy och Remove-AzureRMKeyVaultAccessPolicy.
       - Båda cmdletarna har nu en -EmailAddress-parameter som kan användas i stället för parametern -UserPrincipalName när frågor efter e-postadress är olämpliga.  Om det finns fler än en matchande e-postadress i katalogen misslyckas cmdleten.
@@ -452,11 +449,11 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
         - Mer information finns i följande problem: https://github.com/Azure/azure-powershell/issues/635
 * ServiceManagement för ExpressRoute:
     * Cmdleten New-AzureBgpPeering har uppdaterats för att lägga till följande nya alternativ:
-        - PeerAddressType: Värdena för "IPv4" eller "IPv6" kan specificeras för att skapa en BGP-peering av motsvarande adressfamiljtyp
+        - PeerAddressType: Värdena för "IPv4" eller "IPv6" kan anges för att skapa en BGP-peering av motsvarande adresserietyp
     * Cmdleten Set-AzureBgpPeering har uppdaterats för att lägga till följande nya alternativ:
-        - PeerAddressType: värdena för "IPv4" eller "IPv6" kan anges för att uppdatera BGP-peering av motsvarande adressfamiljtyp
+        - PeerAddressType: Värdena för "IPv4" eller "IPv6" kan anges för att uppdatera en BGP-peering av motsvarande adresserietyp
     * Cmdleten Remove-AzureBgpPeering har uppdaterats för att lägga till följande nya alternativ:
-        - PeerAddressType: värdena "IPv4", "IPv6" eller All kan specificeras för att ta bort BGP-peering av motsvarande adressfamiljtyp eller alla
+        - PeerAddressType: Värdena "IPv4", "IPv6" eller All kan anges för att ta bort BGP-peering av motsvarande adresserietyp eller alla
 
 ## <a name="20170607---version-410"></a>2017.06.07 – version 4.1.0
 * AnalysisServices
@@ -467,14 +464,14 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
 * Compute
     * Åtgärda Test-AzureRmVMAEMExtension för virtuella maskiner med flera hanterade diskar
     * Set-AzureRmVMAEMExtension har uppdaterats: Lägg till information om cachelagring för Premium Managed Disks
-    * Add-AzureRmVhd: Storleksgränsen för VHD har ökats till 4 TB.
+    * Add-AzureRmVhd: Storleksgränsen för VHD har ökats till 4 TB.
     * Stop-AzureRmVM: Förtydliga dokumentationen för parametern STayProvisioned
     * New-AzureRmDiskUpdateConfig
       * Föråldrade parametrar CreateOption, StorageAccountId, ImageReference, SourceUri, SourceResourceId
-    * Set-AzureRmDiskUpdateImageReference: Föråldrad cmdlet
+    * Set-AzureRmDiskUpdateImageReference: Inaktuella cmdletar
     * New-AzureRmSnapshotUpdateConfig
       * Föråldrade parametrar CreateOption, StorageAccountId, ImageReference, SourceUri, SourceResourceId
-    * Set-AzureRmSnapshotUpdateImageReference: Föråldrad Cmdlet
+    * Set-AzureRmSnapshotUpdateImageReference: Inaktuella cmdletar
 * DataLakeStore
     * Enable-AzureRmDataLakeStoreKeyVault (Enable-AdlStoreKeyVault)
       * Aktivera hanterad KeyVault-kryptering för DataLake-lagring
@@ -511,7 +508,7 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
     * Åtgärdat problem där Get-AzureRMRoleAssignment ger en felaktig förfrågan om antalet rolltilldelningar är fler än 1 000
         * Användarna kan nu använda Get-AzureRMRoleAssignment även om de rolltilldelningar som returneras är fler än 1 000
 * SQL
-    * Restore-AzureRmSqlDatabase: Uppdatera dokumentationsexempel
+    * Restore-AzureRmSqlDatabase: Uppdatera dokumentation med exempel
 * Storage
     * Lägg till stöd för AssignIdentity-inställningen för cmdletar för lagringskontot i resursläget
         * New-AzureRmStorageAccount
@@ -524,7 +521,7 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
     * Nya övervakningsinställningar ”MonitorIntervalInSeconds”, ”MonitorTimeoutInSeconds”, ”MonitorToleratedNumberOfFailures”
     * Nytt övervakningsprotokoll ”TCP”
 * ServiceManagement
-    * Add-AzureVhd: Storleksgränsen för VHD har ökats till 4 TB.
+    * Add-AzureVhd: Storleksgränsen för virtuella hårddiskar har utökats till 4 TB.
     * New-AzureBGPPeering: Stöd för LegacyMode
 * Azure.Storage
     * Uppdatera hjälp för parametrar som godkänner jokertecken och uppdatera StorageContext-typ
@@ -609,14 +606,14 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
   - Get-AzureRmMetricDefinition
     + Utdata är fortfarande en lista, men listans struktur har ändrats.
   - Get-AzureRmMetric
-    + Anropet har ändrats. Detta är den nya syntaxen: Get-AzureRmMetric ResourceId [MetricNames [TimeGrain] [AggregationType] [StartTime] [EndTime]] [DetailedOutput]
+    + Anropet har ändrats. Det här är den nya syntaxen: Get-AzureRmMetric ResourceId [MetricNames [TimeGrain] [AggregationType] [StartTime] [EndTime]] [DetailedOutput]
     + Utdata är en lista och strukturen för dess element har förändrats.
 * KeyVault
   - Lägger till stöd för säkerhetskopiering/återställning av KeyVault-hemligheter
     + Hemligheter kan säkerhetskopieras och återställas, vilket matchar de funktioner som stöds för nycklar för tillfället
 
   - Säkerhetskopierings-cmdletar för nycklar och hemligheter accepterar nu ett motsvarande objekt som indataparameter
-    + Anroparen kan kedja hämtning och säkerhetskopiering: Get-AzureKeyVaultKey -VaultName myVault -Name myKey | Backup-AzureKeyVaultKey
+    + Anroparen kan kedjekoppla åtgärder för hämtning och säkerhetskopiering: Get-AzureKeyVaultKey -VaultName myVault -Name myKey | Backup-AzureKeyVaultKey
 
   - Säkerhetskopierings-cmdletar stöder nu en -Force växel för att skriva över en befintlig fil
     + Observera att försök att skriva över en befintlig fil inte längre kommer att misslyckas, utan istället tillfrågas användaren hur denne vill fortsätta.
@@ -636,7 +633,7 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
   - Följande alias har tagits bort eftersom de är i konflikt med befintliga cmdlet-namn i Azure-modulen:
     + `Enable-AzureDataCollection` (stöds av `Enable-AzureRmDataCollection`)
     + `Disable-AzureDataCollection` (stöds av `Disable-AzureRmDataCollection`)
-* Vidarebefordran
+* Relä
   - Lägger till cmdletar för Azure-Relay, som låter användare skapa och hantera alla Azure Relay-resurser.
     + `New-AzureRmRelayNamespace`
     + `Get-AzureRmRelayNamespace`
@@ -700,7 +697,7 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
 * Storage
   - Uppgradera SRP SDK till 6.3.0
   - New/Set-AzureRmStorageAccount:Lägg till en ny parameter för att stödja EnableHttpsTrafficOnly
-  - New/Set/Get-AzureRmStorageAccount: Returnerat lagringskonto innehåller ett nytt attribut EnableHttpsTrafficOnly
+  - New/Set/Get-AzureRmStorageAccount: Lagringskontot som returneras innehåller ett nytt attribut: EnableHttpsTrafficOnly
 * Azure.Storage
   - Uppgradera till Azure Storage-klientbiblioteket 8.1.1 och Azure Storage DataMovement-biblioteket 0.5.1
   - Lägg till en ny cmdlet för att stödja den inkrementella kopieringsfunktionen i blobbar

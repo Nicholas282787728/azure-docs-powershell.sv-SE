@@ -1,18 +1,15 @@
 ---
 title: Formatera cmdlet-utdata för Azure PowerShell
 description: Så här formaterar du cmdlet-utdata för Azure PowerShell.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/07/2018
-ms.openlocfilehash: 982073768a04bf31c14f9e89665822014cb72a9e
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: 9f35bb95d56c6c0fc070d6b291fbb95d369c789b
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "65534749"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83385001"
 ---
 # <a name="format-azurepowershell-cmdlet-output"></a>Formatera cmdlet-utdata för Azure PowerShell
 

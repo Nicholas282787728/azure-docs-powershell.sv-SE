@@ -1,18 +1,15 @@
 ---
 title: Alla ändringar från AzureRM till Azure PowerShell Az 1.0.0
 description: Den här migreringsguiden innehåller en lista över icke-bakåtkompatibla ändringar som gjorts i Az version 1 av Azure PowerShell.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/15/2019
-ms.openlocfilehash: ea7593cf2b753b210ff2955b7bd450030ad83596
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: d2e67ada70fed91a939dc72935e2fa639c731002
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "75035837"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83387028"
 ---
 # <a name="breaking-changes-for-az-100"></a>Icke-bakåtkompatibla ändringar för Az 1.0.0
 

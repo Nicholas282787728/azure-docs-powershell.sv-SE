@@ -1,18 +1,15 @@
 ---
 title: Viktig information om Azure PowerShell
 description: Lär dig mer om alla de senaste uppdateringarna för Azure PowerShell-modulerna.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/15/2019
-ms.openlocfilehash: 98a24c805fbf43dd899119d43301b4261c1f60dc
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: 0fc897579e8caef999c337303428fd12740c3606
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "75035769"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83386110"
 ---
 ## <a name="280---october-2019"></a>2.8.0 – oktober 2019
 ### <a name="general"></a>Allmänt

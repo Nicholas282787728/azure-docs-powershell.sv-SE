@@ -1,24 +1,21 @@
 ---
 title: Fråga utdata från Azure PowerShell-cmdletar
 description: Så här frågar du efter resurser i Azure och formaterar resultaten.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/08/2018
-ms.openlocfilehash: dae1db158f940587d81a3fe47dfad8524f136d56
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: 52e3611e1587aea5eccb14d86042940bca1b3312
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "65534641"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83387470"
 ---
 # <a name="query-output-of-azure-powershell-cmdlets"></a>Fråga utdata från Azure PowerShell-cmdletar
 
 [!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
 
-Frågor i PowerShell kan utföras med hjälp av inbyggda cmdletar. I PowerShell har cmdlet formen **_Verb-substantiv_** . Cmdletar med verbet **_Get_** är fråge-cmdletar. Cmdletarnas substantiv är de typer av Azure-resurser som cmdletens verb agerar på.
+Frågor i PowerShell kan utföras med hjälp av inbyggda cmdletar. I PowerShell har cmdlet formen **_Verb-substantiv_**. Cmdletar med verbet **_Get_** är fråge-cmdletar. Cmdletarnas substantiv är de typer av Azure-resurser som cmdletens verb agerar på.
 
 ## <a name="select-simple-properties"></a>Välja enkla egenskaper
 
