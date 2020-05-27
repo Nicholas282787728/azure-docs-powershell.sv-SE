@@ -1,18 +1,15 @@
 ---
 title: Större ändringar för Microsoft Azure PowerShell 5.0.0
 description: Den här migreringsguiden innehåller en lista över icke-bakåtkompatibla ändringar som gjorts i version 5 av Azure PowerShell.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/01/2018
-ms.openlocfilehash: f8dc413a91876e53e62d25cc38ac3b3ef6afda8e
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: 375aadbf34a452b7fb6d4c1f69a03ec25a3b0e23
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "65534595"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83385022"
 ---
 # <a name="breaking-changes-for-microsoft-azure-powershell-500"></a>Större ändringar för Microsoft Azure PowerShell 5.0.0
 

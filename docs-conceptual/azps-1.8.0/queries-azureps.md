@@ -1,18 +1,15 @@
 ---
 title: Fråga utdata från Azure PowerShell-cmdletar
 description: Så här frågar du efter resurser i Azure och formaterar resultaten.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 01/10/2019
-ms.openlocfilehash: 4f74df6acaa05babc712b7b35737ce3001170b87
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: 15067736388b35d2283932b1ca4e9a0d968315a9
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82588000"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83386943"
 ---
 # <a name="query-output-of-azure-powershell"></a>Fråga utdata från Azure PowerShell 
 

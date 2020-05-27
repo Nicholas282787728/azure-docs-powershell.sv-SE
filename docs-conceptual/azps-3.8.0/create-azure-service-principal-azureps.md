@@ -1,18 +1,15 @@
 ---
 title: Använd huvudnamn för tjänsten i Azure med Azure PowerShell
 description: Lär dig hur du skapar och använder huvudnamn för tjänsten med Azure PowerShell.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 04/23/2019
-ms.openlocfilehash: 4c47d2bac2c63f13ac0ebbccda3e2eed12cd658f
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: 2da3d55c8afce97722b68d0753dd2bcac38b00d9
+ms.sourcegitcommit: 80c3188500fd174f5c5484302360ad87ace0fb9b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81740022"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83554582"
 ---
 # <a name="create-an-azure-service-principal-with-azure-powershell"></a>Skapa tjänstens huvudnamn för Azure med Azure PowerShell
 
@@ -45,8 +42,7 @@ Det returnerade objektet innehåller medlemmen `Secret`, som är en `SecureStrin
 Med följande kod kan du exportera hemligheten:
 
 ```azurepowershell-interactive
-$BSTR = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($sp.Secret)
-$UnsecureSecret = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($BSTR)
+$UnsecureSecret = ConvertFrom-SecureString -SecureString $sp.Secret -AsPlainText
 ```
 
 För lösenord som anges av användaren tar argumentet `-PasswordCredential` objekten `Microsoft.Azure.Commands.ActiveDirectory.PSADPasswordCredential`. Objekten måste ha ett giltigt `StartDate` och `EndDate` samt ett `Password` i klartext. Skapa ett starkt lösenord genom att följa [regler och begränsningar för Azure Active Directory-lösenord](/azure/active-directory/active-directory-passwords-policy). Använd inte ett svagt lösenord och återanvänd aldrig lösenord.
