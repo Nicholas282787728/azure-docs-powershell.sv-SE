@@ -1,836 +1,833 @@
 ---
 title: Viktig information om Azure PowerShell
 description: Lär dig mer om alla de senaste uppdateringarna för Azure PowerShell-modulerna.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/15/2019
-ms.openlocfilehash: 98a24c805fbf43dd899119d43301b4261c1f60dc
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: 0fc897579e8caef999c337303428fd12740c3606
+ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "75035769"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83386110"
 ---
-## <a name="280---october-2019"></a><span data-ttu-id="7b0da-103">2.8.0 – oktober 2019</span><span class="sxs-lookup"><span data-stu-id="7b0da-103">2.8.0 - October 2019</span></span>
-### <a name="general"></a><span data-ttu-id="7b0da-104">Allmänt</span><span class="sxs-lookup"><span data-stu-id="7b0da-104">General</span></span>
-* <span data-ttu-id="7b0da-105">AZ. HealthcareApis 1.0.0-version</span><span class="sxs-lookup"><span data-stu-id="7b0da-105">Az.HealthcareApis 1.0.0 release</span></span>
+## <a name="280---october-2019"></a><span data-ttu-id="dca39-103">2.8.0 – oktober 2019</span><span class="sxs-lookup"><span data-stu-id="dca39-103">2.8.0 - October 2019</span></span>
+### <a name="general"></a><span data-ttu-id="dca39-104">Allmänt</span><span class="sxs-lookup"><span data-stu-id="dca39-104">General</span></span>
+* <span data-ttu-id="dca39-105">AZ. HealthcareApis 1.0.0-version</span><span class="sxs-lookup"><span data-stu-id="dca39-105">Az.HealthcareApis 1.0.0 release</span></span>
 
-#### <a name="azaccounts"></a><span data-ttu-id="7b0da-106">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="7b0da-106">Az.Accounts</span></span>
-* <span data-ttu-id="7b0da-107">Uppdatera telemetri och URL-omskrivning för genererade moduler, korrigera Windows-enhetstester.</span><span class="sxs-lookup"><span data-stu-id="7b0da-107">Update telemetry and url rewriting for generated modules, fix windows unit tests.</span></span>
+#### <a name="azaccounts"></a><span data-ttu-id="dca39-106">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="dca39-106">Az.Accounts</span></span>
+* <span data-ttu-id="dca39-107">Uppdatera telemetri och URL-omskrivning för genererade moduler, korrigera Windows-enhetstester.</span><span class="sxs-lookup"><span data-stu-id="dca39-107">Update telemetry and url rewriting for generated modules, fix windows unit tests.</span></span>
 
-#### <a name="azapimanagement"></a><span data-ttu-id="7b0da-108">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="7b0da-108">Az.ApiManagement</span></span>
-* <span data-ttu-id="7b0da-109">**Set-AzApiManagementApi** – Tillagt stöd för att uppdatera Api till ApiVersionSet</span><span class="sxs-lookup"><span data-stu-id="7b0da-109">**Set-AzApiManagementApi** - Added support for Updating Api into ApiVersionSet</span></span>
-    - <span data-ttu-id="7b0da-110">Korrigering av problemet https://github.com/Azure/azure-powershell/issues/10068</span><span class="sxs-lookup"><span data-stu-id="7b0da-110">Fix for issue https://github.com/Azure/azure-powershell/issues/10068</span></span>
+#### <a name="azapimanagement"></a><span data-ttu-id="dca39-108">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="dca39-108">Az.ApiManagement</span></span>
+* <span data-ttu-id="dca39-109">**Set-AzApiManagementApi** – Tillagt stöd för att uppdatera Api till ApiVersionSet</span><span class="sxs-lookup"><span data-stu-id="dca39-109">**Set-AzApiManagementApi** - Added support for Updating Api into ApiVersionSet</span></span>
+    - <span data-ttu-id="dca39-110">Korrigering av problemet https://github.com/Azure/azure-powershell/issues/10068</span><span class="sxs-lookup"><span data-stu-id="dca39-110">Fix for issue https://github.com/Azure/azure-powershell/issues/10068</span></span>
 
-#### <a name="azautomation"></a><span data-ttu-id="7b0da-111">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="7b0da-111">Az.Automation</span></span>
-* <span data-ttu-id="7b0da-112">Åtgärdade cmdleten New-AzureAutomationSoftwareUpdateConfiguration för parametern för inställning av Linux-omstart.</span><span class="sxs-lookup"><span data-stu-id="7b0da-112">Fixed New-AzureAutomationSoftwareUpdateConfiguration cmdlet for Linux reboot setting parameter.</span></span> 
+#### <a name="azautomation"></a><span data-ttu-id="dca39-111">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="dca39-111">Az.Automation</span></span>
+* <span data-ttu-id="dca39-112">Åtgärdade cmdleten New-AzureAutomationSoftwareUpdateConfiguration för parametern för inställning av Linux-omstart.</span><span class="sxs-lookup"><span data-stu-id="dca39-112">Fixed New-AzureAutomationSoftwareUpdateConfiguration cmdlet for Linux reboot setting parameter.</span></span> 
 
-#### <a name="azbatch"></a><span data-ttu-id="7b0da-113">Az.Batch</span><span class="sxs-lookup"><span data-stu-id="7b0da-113">Az.Batch</span></span>
-* <span data-ttu-id="7b0da-114">**Get-AzBatchNodeAgentSku** är inaktuell och ersätts av **Get-AzBatchSupportImage** i version 2.0.0.</span><span class="sxs-lookup"><span data-stu-id="7b0da-114">**Get-AzBatchNodeAgentSku** is deprecated and will be replaced by **Get-AzBatchSupportImage** in version 2.0.0.</span></span>
+#### <a name="azbatch"></a><span data-ttu-id="dca39-113">Az.Batch</span><span class="sxs-lookup"><span data-stu-id="dca39-113">Az.Batch</span></span>
+* <span data-ttu-id="dca39-114">**Get-AzBatchNodeAgentSku** är inaktuell och ersätts av **Get-AzBatchSupportImage** i version 2.0.0.</span><span class="sxs-lookup"><span data-stu-id="dca39-114">**Get-AzBatchNodeAgentSku** is deprecated and will be replaced by **Get-AzBatchSupportImage** in version 2.0.0.</span></span>
 
-#### <a name="azcompute"></a><span data-ttu-id="7b0da-115">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="7b0da-115">Az.Compute</span></span>
-* <span data-ttu-id="7b0da-116">Lägg till parametrarna Priority, EvictionPolicy och MaxPrice till cmdletarna New-AzVM och New-AzVmss</span><span class="sxs-lookup"><span data-stu-id="7b0da-116">Add Priority, EvictionPolicy, and MaxPrice parameters to New-AzVM and New-AzVmss cmdlets</span></span>
-* <span data-ttu-id="7b0da-117">Korrigera varningsmeddelande och hjälpdokument för cmdletarna Add-AzVMAdditionalUnattendContent och Add-AzVMSshPublicKey</span><span class="sxs-lookup"><span data-stu-id="7b0da-117">Fix warning message and help document for Add-AzVMAdditionalUnattendContent and Add-AzVMSshPublicKey cmdlets</span></span>
-* <span data-ttu-id="7b0da-118">Åtgärda – skipVmBackup-undantag för virtuella Linux-datorer med hanterade diskar för Set-AzVMDiskEncryptionExtension.</span><span class="sxs-lookup"><span data-stu-id="7b0da-118">Fix -skipVmBackup exception for Linux VMs with managed disks for Set-AzVMDiskEncryptionExtension.</span></span> 
-* <span data-ttu-id="7b0da-119">Åtgärda fel i uppdatera krypteringsinställningarna i set-AzVMDiskEncryptionExtension, scenario i två steg.</span><span class="sxs-lookup"><span data-stu-id="7b0da-119">Fix bug in update encryption settings in Set-AzVMDiskEncryptionExtension, two pass scenario.</span></span>
+#### <a name="azcompute"></a><span data-ttu-id="dca39-115">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="dca39-115">Az.Compute</span></span>
+* <span data-ttu-id="dca39-116">Lägg till parametrarna Priority, EvictionPolicy och MaxPrice till cmdletarna New-AzVM och New-AzVmss</span><span class="sxs-lookup"><span data-stu-id="dca39-116">Add Priority, EvictionPolicy, and MaxPrice parameters to New-AzVM and New-AzVmss cmdlets</span></span>
+* <span data-ttu-id="dca39-117">Korrigera varningsmeddelande och hjälpdokument för cmdletarna Add-AzVMAdditionalUnattendContent och Add-AzVMSshPublicKey</span><span class="sxs-lookup"><span data-stu-id="dca39-117">Fix warning message and help document for Add-AzVMAdditionalUnattendContent and Add-AzVMSshPublicKey cmdlets</span></span>
+* <span data-ttu-id="dca39-118">Åtgärda – skipVmBackup-undantag för virtuella Linux-datorer med hanterade diskar för Set-AzVMDiskEncryptionExtension.</span><span class="sxs-lookup"><span data-stu-id="dca39-118">Fix -skipVmBackup exception for Linux VMs with managed disks for Set-AzVMDiskEncryptionExtension.</span></span> 
+* <span data-ttu-id="dca39-119">Åtgärda fel i uppdatera krypteringsinställningarna i set-AzVMDiskEncryptionExtension, scenario i två steg.</span><span class="sxs-lookup"><span data-stu-id="dca39-119">Fix bug in update encryption settings in Set-AzVMDiskEncryptionExtension, two pass scenario.</span></span>
 
-#### <a name="azdatafactory"></a><span data-ttu-id="7b0da-120">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="7b0da-120">Az.DataFactory</span></span>
-* <span data-ttu-id="7b0da-121">Lägga till CRUD-kommandon för ADF V2-dataflödet: Set-AzDataFactoryV2DataFlow, Remove-AzDataFactoryV2DataFlow och Get-AzDataFactoryV2DataFlow.</span><span class="sxs-lookup"><span data-stu-id="7b0da-121">Adding CRUD commands for ADF V2 data flow: Set-AzDataFactoryV2DataFlow, Remove-AzDataFactoryV2DataFlow, and Get-AzDataFactoryV2DataFlow.</span></span>
-* <span data-ttu-id="7b0da-122">Lägger till åtgärdskommandon för ADF V2-dataflödesfelsökningssession: Start-AzDataFactoryV2DataFlowDebugSession, Get-AzDataFactoryV2DataFlowDebugSession, Add-AzDataFactoryV2DataFlowDebugSessionPackage, Invoke-AzDataFactoryV2DataFlowDebugSessionCommand och Stop-AzDataFactoryV2DataFlowDebugSession.</span><span class="sxs-lookup"><span data-stu-id="7b0da-122">Adding action commands for ADF V2 data flow debug Session: Start-AzDataFactoryV2DataFlowDebugSession, Get-AzDataFactoryV2DataFlowDebugSession, Add-AzDataFactoryV2DataFlowDebugSessionPackage, Invoke-AzDataFactoryV2DataFlowDebugSessionCommand and Stop-AzDataFactoryV2DataFlowDebugSession.</span></span>
-* <span data-ttu-id="7b0da-123">Uppdatera ADF .Net SDK-versionen till 4.2.0</span><span class="sxs-lookup"><span data-stu-id="7b0da-123">Update ADF .Net SDK version to 4.2.0</span></span>
+#### <a name="azdatafactory"></a><span data-ttu-id="dca39-120">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="dca39-120">Az.DataFactory</span></span>
+* <span data-ttu-id="dca39-121">Lägga till CRUD-kommandon för ADF V2-dataflödet: Set-AzDataFactoryV2DataFlow, Remove-AzDataFactoryV2DataFlow och Get-AzDataFactoryV2DataFlow.</span><span class="sxs-lookup"><span data-stu-id="dca39-121">Adding CRUD commands for ADF V2 data flow: Set-AzDataFactoryV2DataFlow, Remove-AzDataFactoryV2DataFlow, and Get-AzDataFactoryV2DataFlow.</span></span>
+* <span data-ttu-id="dca39-122">Lägger till åtgärdskommandon för ADF V2-dataflödesfelsökningssession: Start-AzDataFactoryV2DataFlowDebugSession, Get-AzDataFactoryV2DataFlowDebugSession, Add-AzDataFactoryV2DataFlowDebugSessionPackage, Invoke-AzDataFactoryV2DataFlowDebugSessionCommand och Stop-AzDataFactoryV2DataFlowDebugSession.</span><span class="sxs-lookup"><span data-stu-id="dca39-122">Adding action commands for ADF V2 data flow debug Session: Start-AzDataFactoryV2DataFlowDebugSession, Get-AzDataFactoryV2DataFlowDebugSession, Add-AzDataFactoryV2DataFlowDebugSessionPackage, Invoke-AzDataFactoryV2DataFlowDebugSessionCommand and Stop-AzDataFactoryV2DataFlowDebugSession.</span></span>
+* <span data-ttu-id="dca39-123">Uppdatera ADF .Net SDK-versionen till 4.2.0</span><span class="sxs-lookup"><span data-stu-id="dca39-123">Update ADF .Net SDK version to 4.2.0</span></span>
 
-#### <a name="azdatalakestore"></a><span data-ttu-id="7b0da-124">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="7b0da-124">Az.DataLakeStore</span></span>
-* <span data-ttu-id="7b0da-125">Korrigera kontovalidering så att konton med ”-” kan skickas utan domän</span><span class="sxs-lookup"><span data-stu-id="7b0da-125">Fix account validation so that accounts with '-' can be passed without domain</span></span>
+#### <a name="azdatalakestore"></a><span data-ttu-id="dca39-124">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="dca39-124">Az.DataLakeStore</span></span>
+* <span data-ttu-id="dca39-125">Korrigera kontovalidering så att konton med ”-” kan skickas utan domän</span><span class="sxs-lookup"><span data-stu-id="dca39-125">Fix account validation so that accounts with '-' can be passed without domain</span></span>
 
-#### <a name="azhealthcareapis"></a><span data-ttu-id="7b0da-126">Az.HealthcareApis</span><span class="sxs-lookup"><span data-stu-id="7b0da-126">Az.HealthcareApis</span></span>
-* <span data-ttu-id="7b0da-127">PowerShell-versionen har uppdaterats till 1.0.0</span><span class="sxs-lookup"><span data-stu-id="7b0da-127">Updated the powershell version to 1.0.0</span></span>
-* <span data-ttu-id="7b0da-128">Uppdaterade SDK-versionen till 1.0.2</span><span class="sxs-lookup"><span data-stu-id="7b0da-128">Updated the SDK version to 1.0.2</span></span>
-* <span data-ttu-id="7b0da-129">Uppdatera i tester för att referera till en ny SDK-version</span><span class="sxs-lookup"><span data-stu-id="7b0da-129">Update in tests to refer to new SDK version</span></span>
-* <span data-ttu-id="7b0da-130">Utdatastrukturen har uppdaterats från kapslad till förenklad.</span><span class="sxs-lookup"><span data-stu-id="7b0da-130">Updated the output structure from nested to flattened.</span></span>
+#### <a name="azhealthcareapis"></a><span data-ttu-id="dca39-126">Az.HealthcareApis</span><span class="sxs-lookup"><span data-stu-id="dca39-126">Az.HealthcareApis</span></span>
+* <span data-ttu-id="dca39-127">PowerShell-versionen har uppdaterats till 1.0.0</span><span class="sxs-lookup"><span data-stu-id="dca39-127">Updated the powershell version to 1.0.0</span></span>
+* <span data-ttu-id="dca39-128">Uppdaterade SDK-versionen till 1.0.2</span><span class="sxs-lookup"><span data-stu-id="dca39-128">Updated the SDK version to 1.0.2</span></span>
+* <span data-ttu-id="dca39-129">Uppdatera i tester för att referera till en ny SDK-version</span><span class="sxs-lookup"><span data-stu-id="dca39-129">Update in tests to refer to new SDK version</span></span>
+* <span data-ttu-id="dca39-130">Utdatastrukturen har uppdaterats från kapslad till förenklad.</span><span class="sxs-lookup"><span data-stu-id="dca39-130">Updated the output structure from nested to flattened.</span></span>
 
-#### <a name="aziothub"></a><span data-ttu-id="7b0da-131">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="7b0da-131">Az.IotHub</span></span>
-* <span data-ttu-id="7b0da-132">Lägg till ny routningskälla: DigitalTwinChangeEvents</span><span class="sxs-lookup"><span data-stu-id="7b0da-132">Add new routing source: DigitalTwinChangeEvents</span></span>
-* <span data-ttu-id="7b0da-133">Mindre felkorrigering: Get-AzIothub returnerar inte subscriptionId</span><span class="sxs-lookup"><span data-stu-id="7b0da-133">Minor bug fix: Get-AzIothub not returning subscriptionId</span></span> 
+#### <a name="aziothub"></a><span data-ttu-id="dca39-131">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="dca39-131">Az.IotHub</span></span>
+* <span data-ttu-id="dca39-132">Lägg till ny routningskälla: DigitalTwinChangeEvents</span><span class="sxs-lookup"><span data-stu-id="dca39-132">Add new routing source: DigitalTwinChangeEvents</span></span>
+* <span data-ttu-id="dca39-133">Mindre felkorrigering: Get-AzIothub returnerar inte subscriptionId</span><span class="sxs-lookup"><span data-stu-id="dca39-133">Minor bug fix: Get-AzIothub not returning subscriptionId</span></span> 
 
-#### <a name="azmonitor"></a><span data-ttu-id="7b0da-134">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="7b0da-134">Az.Monitor</span></span>
-* <span data-ttu-id="7b0da-135">Nya åtgärdsgruppsmottagare har lagts till för New-AzActionGroupReceiver:   -ItsmReceiver   -VoiceReceiver   -ArmRoleReceiver   -AzureFunctionReceiver   -LogicAppReceiver   -AutomationRunbookReceiver   -AzureAppPushReceiver</span><span class="sxs-lookup"><span data-stu-id="7b0da-135">New action group receivers added for New-AzActionGroupReceiver:   -ItsmReceiver   -VoiceReceiver   -ArmRoleReceiver   -AzureFunctionReceiver   -LogicAppReceiver   -AutomationRunbookReceiver   -AzureAppPushReceiver</span></span>
-* <span data-ttu-id="7b0da-136">Använd vanligt aviseringsschema som är aktiverat för mottagarna.</span><span class="sxs-lookup"><span data-stu-id="7b0da-136">Use common alert schema enabled for the receivers.</span></span> <span data-ttu-id="7b0da-137">Detta gäller inte för SMS, push för Azure-app, ITSM och röstmottagare</span><span class="sxs-lookup"><span data-stu-id="7b0da-137">This is not applicable for SMS, Azure App push , ITSM and Voice recievers</span></span>
-* <span data-ttu-id="7b0da-138">Webhooks har nu stöd för Azure Active Directory-autentisering.</span><span class="sxs-lookup"><span data-stu-id="7b0da-138">Webhooks now supports Azure active directory authentication.</span></span>
+#### <a name="azmonitor"></a><span data-ttu-id="dca39-134">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="dca39-134">Az.Monitor</span></span>
+* <span data-ttu-id="dca39-135">Nya åtgärdsgruppsmottagare har lagts till för New-AzActionGroupReceiver:   -ItsmReceiver   -VoiceReceiver   -ArmRoleReceiver   -AzureFunctionReceiver   -LogicAppReceiver   -AutomationRunbookReceiver   -AzureAppPushReceiver</span><span class="sxs-lookup"><span data-stu-id="dca39-135">New action group receivers added for New-AzActionGroupReceiver:   -ItsmReceiver   -VoiceReceiver   -ArmRoleReceiver   -AzureFunctionReceiver   -LogicAppReceiver   -AutomationRunbookReceiver   -AzureAppPushReceiver</span></span>
+* <span data-ttu-id="dca39-136">Använd vanligt aviseringsschema som är aktiverat för mottagarna.</span><span class="sxs-lookup"><span data-stu-id="dca39-136">Use common alert schema enabled for the receivers.</span></span> <span data-ttu-id="dca39-137">Detta gäller inte för SMS, push för Azure-app, ITSM och röstmottagare</span><span class="sxs-lookup"><span data-stu-id="dca39-137">This is not applicable for SMS, Azure App push , ITSM and Voice recievers</span></span>
+* <span data-ttu-id="dca39-138">Webhooks har nu stöd för Azure Active Directory-autentisering.</span><span class="sxs-lookup"><span data-stu-id="dca39-138">Webhooks now supports Azure active directory authentication.</span></span>
 
-#### <a name="aznetwork"></a><span data-ttu-id="7b0da-139">Az.Network</span><span class="sxs-lookup"><span data-stu-id="7b0da-139">Az.Network</span></span>
-* <span data-ttu-id="7b0da-140">Lägg till ny cmdlet Get-AzAvailableServiceAlias som kan anropas för att hämta de alias som kan användas för tjänstslutpunktsprinciper.</span><span class="sxs-lookup"><span data-stu-id="7b0da-140">Add new cmdlet Get-AzAvailableServiceAlias which can be called to get the aliases that can be used for Service Endpoint Policies.</span></span>
-* <span data-ttu-id="7b0da-141">Stöd för tillägg av trafikväljare har lagts till i gatewayanslutningar för virtuella nätverk</span><span class="sxs-lookup"><span data-stu-id="7b0da-141">Added support for the adding traffic selectors to Virtual Network Gateway Connections</span></span>
-    - <span data-ttu-id="7b0da-142">Nya cmdletar har lagts till:</span><span class="sxs-lookup"><span data-stu-id="7b0da-142">New cmdlets added:</span></span>
-        - <span data-ttu-id="7b0da-143">New-AzIpsecTrafficSelectorPolicy</span><span class="sxs-lookup"><span data-stu-id="7b0da-143">New-AzIpsecTrafficSelectorPolicy</span></span>
-    - <span data-ttu-id="7b0da-144">Cmdletar har uppdaterats med den valfria parametern -TrafficSelectorPolicies</span><span class="sxs-lookup"><span data-stu-id="7b0da-144">Cmdlets updated with optional parameter -TrafficSelectorPolicies</span></span>
-        - <span data-ttu-id="7b0da-145">New-AzVirtualNetworkGatewayConnection</span><span class="sxs-lookup"><span data-stu-id="7b0da-145">New-AzVirtualNetworkGatewayConnection</span></span>
-        - <span data-ttu-id="7b0da-146">Set-AzVirtualNetworkGatewayConnection</span><span class="sxs-lookup"><span data-stu-id="7b0da-146">Set-AzVirtualNetworkGatewayConnection</span></span>
-* <span data-ttu-id="7b0da-147">Lägg till stöd för ESP- och AH-protokoll i konfiguration av nätverkssäkerhetsregler</span><span class="sxs-lookup"><span data-stu-id="7b0da-147">Add support for ESP and AH protocols in network security rule configurations</span></span>
-    - <span data-ttu-id="7b0da-148">Uppdaterade cmdletar:</span><span class="sxs-lookup"><span data-stu-id="7b0da-148">Updated cmdlets:</span></span>
-        - <span data-ttu-id="7b0da-149">Add-AzNetworkSecurityRuleConfig</span><span class="sxs-lookup"><span data-stu-id="7b0da-149">Add-AzNetworkSecurityRuleConfig</span></span>
-        - <span data-ttu-id="7b0da-150">New-AzNetworkSecurityRuleConfig</span><span class="sxs-lookup"><span data-stu-id="7b0da-150">New-AzNetworkSecurityRuleConfig</span></span>
-        - <span data-ttu-id="7b0da-151">Set-AzNetworkSecurityRuleConfig</span><span class="sxs-lookup"><span data-stu-id="7b0da-151">Set-AzNetworkSecurityRuleConfig</span></span>
-* <span data-ttu-id="7b0da-152">Förbättra hanteringen av undantag i Cortex-cmdletar</span><span class="sxs-lookup"><span data-stu-id="7b0da-152">Improve handling of exceptions in Cortex cmdlets</span></span>
-* <span data-ttu-id="7b0da-153">Nya generationer och SKU:er för VirtualNetworkGateways</span><span class="sxs-lookup"><span data-stu-id="7b0da-153">New Generations and SKUs for VirtualNetworkGateways</span></span>
-  - <span data-ttu-id="7b0da-154">Introducera nya generationer för VirtualNetworkGateways.</span><span class="sxs-lookup"><span data-stu-id="7b0da-154">Introduce new Generations for VirtualNetworkGateways.</span></span>
-  - <span data-ttu-id="7b0da-155">Introducera nya SKU:er med högt dataflöde för VirtualNetworkGateways.</span><span class="sxs-lookup"><span data-stu-id="7b0da-155">Introduce new high throughput SKUs for VirtualNetworkGateways.</span></span>
+#### <a name="aznetwork"></a><span data-ttu-id="dca39-139">Az.Network</span><span class="sxs-lookup"><span data-stu-id="dca39-139">Az.Network</span></span>
+* <span data-ttu-id="dca39-140">Lägg till ny cmdlet Get-AzAvailableServiceAlias som kan anropas för att hämta de alias som kan användas för tjänstslutpunktsprinciper.</span><span class="sxs-lookup"><span data-stu-id="dca39-140">Add new cmdlet Get-AzAvailableServiceAlias which can be called to get the aliases that can be used for Service Endpoint Policies.</span></span>
+* <span data-ttu-id="dca39-141">Stöd för tillägg av trafikväljare har lagts till i gatewayanslutningar för virtuella nätverk</span><span class="sxs-lookup"><span data-stu-id="dca39-141">Added support for the adding traffic selectors to Virtual Network Gateway Connections</span></span>
+    - <span data-ttu-id="dca39-142">Nya cmdletar har lagts till:</span><span class="sxs-lookup"><span data-stu-id="dca39-142">New cmdlets added:</span></span>
+        - <span data-ttu-id="dca39-143">New-AzIpsecTrafficSelectorPolicy</span><span class="sxs-lookup"><span data-stu-id="dca39-143">New-AzIpsecTrafficSelectorPolicy</span></span>
+    - <span data-ttu-id="dca39-144">Cmdletar har uppdaterats med den valfria parametern -TrafficSelectorPolicies</span><span class="sxs-lookup"><span data-stu-id="dca39-144">Cmdlets updated with optional parameter -TrafficSelectorPolicies</span></span>
+        - <span data-ttu-id="dca39-145">New-AzVirtualNetworkGatewayConnection</span><span class="sxs-lookup"><span data-stu-id="dca39-145">New-AzVirtualNetworkGatewayConnection</span></span>
+        - <span data-ttu-id="dca39-146">Set-AzVirtualNetworkGatewayConnection</span><span class="sxs-lookup"><span data-stu-id="dca39-146">Set-AzVirtualNetworkGatewayConnection</span></span>
+* <span data-ttu-id="dca39-147">Lägg till stöd för ESP- och AH-protokoll i konfiguration av nätverkssäkerhetsregler</span><span class="sxs-lookup"><span data-stu-id="dca39-147">Add support for ESP and AH protocols in network security rule configurations</span></span>
+    - <span data-ttu-id="dca39-148">Uppdaterade cmdletar:</span><span class="sxs-lookup"><span data-stu-id="dca39-148">Updated cmdlets:</span></span>
+        - <span data-ttu-id="dca39-149">Add-AzNetworkSecurityRuleConfig</span><span class="sxs-lookup"><span data-stu-id="dca39-149">Add-AzNetworkSecurityRuleConfig</span></span>
+        - <span data-ttu-id="dca39-150">New-AzNetworkSecurityRuleConfig</span><span class="sxs-lookup"><span data-stu-id="dca39-150">New-AzNetworkSecurityRuleConfig</span></span>
+        - <span data-ttu-id="dca39-151">Set-AzNetworkSecurityRuleConfig</span><span class="sxs-lookup"><span data-stu-id="dca39-151">Set-AzNetworkSecurityRuleConfig</span></span>
+* <span data-ttu-id="dca39-152">Förbättra hanteringen av undantag i Cortex-cmdletar</span><span class="sxs-lookup"><span data-stu-id="dca39-152">Improve handling of exceptions in Cortex cmdlets</span></span>
+* <span data-ttu-id="dca39-153">Nya generationer och SKU:er för VirtualNetworkGateways</span><span class="sxs-lookup"><span data-stu-id="dca39-153">New Generations and SKUs for VirtualNetworkGateways</span></span>
+  - <span data-ttu-id="dca39-154">Introducera nya generationer för VirtualNetworkGateways.</span><span class="sxs-lookup"><span data-stu-id="dca39-154">Introduce new Generations for VirtualNetworkGateways.</span></span>
+  - <span data-ttu-id="dca39-155">Introducera nya SKU:er med högt dataflöde för VirtualNetworkGateways.</span><span class="sxs-lookup"><span data-stu-id="dca39-155">Introduce new high throughput SKUs for VirtualNetworkGateways.</span></span>
 
-#### <a name="azrediscache"></a><span data-ttu-id="7b0da-156">Az.RedisCache</span><span class="sxs-lookup"><span data-stu-id="7b0da-156">Az.RedisCache</span></span>
-* <span data-ttu-id="7b0da-157">Uppdaterad referensdokumentation för ”set-AzRedisCache” för att inkludera saknade värden för parametern ”size”</span><span class="sxs-lookup"><span data-stu-id="7b0da-157">Updated 'Set-AzRedisCache' reference documentation to include missing values for '-Size' parameter</span></span>
+#### <a name="azrediscache"></a><span data-ttu-id="dca39-156">Az.RedisCache</span><span class="sxs-lookup"><span data-stu-id="dca39-156">Az.RedisCache</span></span>
+* <span data-ttu-id="dca39-157">Uppdaterad referensdokumentation för ”set-AzRedisCache” för att inkludera saknade värden för parametern ”size”</span><span class="sxs-lookup"><span data-stu-id="dca39-157">Updated 'Set-AzRedisCache' reference documentation to include missing values for '-Size' parameter</span></span>
 
-#### <a name="azsql"></a><span data-ttu-id="7b0da-158">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="7b0da-158">Az.Sql</span></span>
-* <span data-ttu-id="7b0da-159">Lägg till stöd för inställningen Active Directory administratör på den hanterade instansen</span><span class="sxs-lookup"><span data-stu-id="7b0da-159">Add support for setting Active Directory Administrator on Managed Instance</span></span>
+#### <a name="azsql"></a><span data-ttu-id="dca39-158">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="dca39-158">Az.Sql</span></span>
+* <span data-ttu-id="dca39-159">Lägg till stöd för inställningen Active Directory administratör på den hanterade instansen</span><span class="sxs-lookup"><span data-stu-id="dca39-159">Add support for setting Active Directory Administrator on Managed Instance</span></span>
 
-#### <a name="azstorage"></a><span data-ttu-id="7b0da-160">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="7b0da-160">Az.Storage</span></span>
-* <span data-ttu-id="7b0da-161">Uppdatera Lagringsklientbibliotek till 11.1.0</span><span class="sxs-lookup"><span data-stu-id="7b0da-161">Upgrade Storage Client Library to 11.1.0</span></span>
-* <span data-ttu-id="7b0da-162">Lista containrar med hanteringsplans-API, kommer att listas med NextPageLink</span><span class="sxs-lookup"><span data-stu-id="7b0da-162">List containers with Management plane API, will list with NextPageLink</span></span>
-    -  <span data-ttu-id="7b0da-163">Get-AzRmStorageContainer</span><span class="sxs-lookup"><span data-stu-id="7b0da-163">Get-AzRmStorageContainer</span></span>
-* <span data-ttu-id="7b0da-164">Lista lagringskonton från prenumerationen, kommer att listas med NextPageLink</span><span class="sxs-lookup"><span data-stu-id="7b0da-164">List Storage accounts from subscription, will list with NextPageLink</span></span>
-    -  <span data-ttu-id="7b0da-165">Get-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="7b0da-165">Get-AzStorageAccount</span></span>
+#### <a name="azstorage"></a><span data-ttu-id="dca39-160">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="dca39-160">Az.Storage</span></span>
+* <span data-ttu-id="dca39-161">Uppdatera Lagringsklientbibliotek till 11.1.0</span><span class="sxs-lookup"><span data-stu-id="dca39-161">Upgrade Storage Client Library to 11.1.0</span></span>
+* <span data-ttu-id="dca39-162">Lista containrar med hanteringsplans-API, kommer att listas med NextPageLink</span><span class="sxs-lookup"><span data-stu-id="dca39-162">List containers with Management plane API, will list with NextPageLink</span></span>
+    -  <span data-ttu-id="dca39-163">Get-AzRmStorageContainer</span><span class="sxs-lookup"><span data-stu-id="dca39-163">Get-AzRmStorageContainer</span></span>
+* <span data-ttu-id="dca39-164">Lista lagringskonton från prenumerationen, kommer att listas med NextPageLink</span><span class="sxs-lookup"><span data-stu-id="dca39-164">List Storage accounts from subscription, will list with NextPageLink</span></span>
+    -  <span data-ttu-id="dca39-165">Get-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="dca39-165">Get-AzStorageAccount</span></span>
 
-#### <a name="azstoragesync"></a><span data-ttu-id="7b0da-166">Az.StorageSync</span><span class="sxs-lookup"><span data-stu-id="7b0da-166">Az.StorageSync</span></span>
-* <span data-ttu-id="7b0da-167">Åtgärda problemet 9810 i Reset-AzStorageSyncServerCertificate.</span><span class="sxs-lookup"><span data-stu-id="7b0da-167">Fix Issue 9810 in Reset-AzStorageSyncServerCertificate.</span></span>
+#### <a name="azstoragesync"></a><span data-ttu-id="dca39-166">Az.StorageSync</span><span class="sxs-lookup"><span data-stu-id="dca39-166">Az.StorageSync</span></span>
+* <span data-ttu-id="dca39-167">Åtgärda problemet 9810 i Reset-AzStorageSyncServerCertificate.</span><span class="sxs-lookup"><span data-stu-id="dca39-167">Fix Issue 9810 in Reset-AzStorageSyncServerCertificate.</span></span>
 
-#### <a name="azwebsites"></a><span data-ttu-id="7b0da-168">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="7b0da-168">Az.Websites</span></span>
-* <span data-ttu-id="7b0da-169">Set-AzWebApp – uppdatering av ASP för en app misslyckades</span><span class="sxs-lookup"><span data-stu-id="7b0da-169">Set-AzWebApp updating ASP of an app was failing</span></span>
+#### <a name="azwebsites"></a><span data-ttu-id="dca39-168">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="dca39-168">Az.Websites</span></span>
+* <span data-ttu-id="dca39-169">Set-AzWebApp – uppdatering av ASP för en app misslyckades</span><span class="sxs-lookup"><span data-stu-id="dca39-169">Set-AzWebApp updating ASP of an app was failing</span></span>
 
-## <a name="270---september-2019"></a><span data-ttu-id="7b0da-170">2.7.0 – september 2019</span><span class="sxs-lookup"><span data-stu-id="7b0da-170">2.7.0 - September 2019</span></span>
-#### <a name="azapimanagement"></a><span data-ttu-id="7b0da-171">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="7b0da-171">Az.ApiManagement</span></span>
-* <span data-ttu-id="7b0da-172">Uppdatera ”-Format”-parameterbeskrivningen i ”Set-AzApiManagementPolicy”-referensdokumentationen</span><span class="sxs-lookup"><span data-stu-id="7b0da-172">Update '-Format' parameter description in 'Set-AzApiManagementPolicy' reference documentation</span></span>
-* <span data-ttu-id="7b0da-173">Referenser för den föråldrade cmdleten ”Update-AzApiManagementDeployment” har tagits bort från referensdokumentationen.</span><span class="sxs-lookup"><span data-stu-id="7b0da-173">Removed references of deprecated cmdlet 'Update-AzApiManagementDeployment' from reference documentation.</span></span> <span data-ttu-id="7b0da-174">Använd ”Set-AzApiManagement” i stället.</span><span class="sxs-lookup"><span data-stu-id="7b0da-174">Use 'Set-AzApiManagement' instead.</span></span>
+## <a name="270---september-2019"></a><span data-ttu-id="dca39-170">2.7.0 – september 2019</span><span class="sxs-lookup"><span data-stu-id="dca39-170">2.7.0 - September 2019</span></span>
+#### <a name="azapimanagement"></a><span data-ttu-id="dca39-171">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="dca39-171">Az.ApiManagement</span></span>
+* <span data-ttu-id="dca39-172">Uppdatera ”-Format”-parameterbeskrivningen i ”Set-AzApiManagementPolicy”-referensdokumentationen</span><span class="sxs-lookup"><span data-stu-id="dca39-172">Update '-Format' parameter description in 'Set-AzApiManagementPolicy' reference documentation</span></span>
+* <span data-ttu-id="dca39-173">Referenser för den föråldrade cmdleten ”Update-AzApiManagementDeployment” har tagits bort från referensdokumentationen.</span><span class="sxs-lookup"><span data-stu-id="dca39-173">Removed references of deprecated cmdlet 'Update-AzApiManagementDeployment' from reference documentation.</span></span> <span data-ttu-id="dca39-174">Använd ”Set-AzApiManagement” i stället.</span><span class="sxs-lookup"><span data-stu-id="dca39-174">Use 'Set-AzApiManagement' instead.</span></span>
 
-#### <a name="azautomation"></a><span data-ttu-id="7b0da-175">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="7b0da-175">Az.Automation</span></span>
-* <span data-ttu-id="7b0da-176">Stavfel har korrigerats i exempel i referensdokumentationen för ”Register-AzAutomationDscNode”</span><span class="sxs-lookup"><span data-stu-id="7b0da-176">Fixed example typo in reference documentation for 'Register-AzAutomationDscNode'</span></span>
-* <span data-ttu-id="7b0da-177">Klargörande har lagts till om OS-begränsningar för Register-AzAutomationDSCNode</span><span class="sxs-lookup"><span data-stu-id="7b0da-177">Added clarification on OS restriction to Register-AzAutomationDSCNode</span></span>
-* <span data-ttu-id="7b0da-178">Null-referensundantag har korrigerats för -Wait-alternativet i Start-AzAutomationRunbook-cmdleten.</span><span class="sxs-lookup"><span data-stu-id="7b0da-178">Fixed Start-AzAutomationRunbook cmdlet Null reference exception for -Wait option.</span></span>
+#### <a name="azautomation"></a><span data-ttu-id="dca39-175">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="dca39-175">Az.Automation</span></span>
+* <span data-ttu-id="dca39-176">Stavfel har korrigerats i exempel i referensdokumentationen för ”Register-AzAutomationDscNode”</span><span class="sxs-lookup"><span data-stu-id="dca39-176">Fixed example typo in reference documentation for 'Register-AzAutomationDscNode'</span></span>
+* <span data-ttu-id="dca39-177">Klargörande har lagts till om OS-begränsningar för Register-AzAutomationDSCNode</span><span class="sxs-lookup"><span data-stu-id="dca39-177">Added clarification on OS restriction to Register-AzAutomationDSCNode</span></span>
+* <span data-ttu-id="dca39-178">Null-referensundantag har korrigerats för -Wait-alternativet i Start-AzAutomationRunbook-cmdleten.</span><span class="sxs-lookup"><span data-stu-id="dca39-178">Fixed Start-AzAutomationRunbook cmdlet Null reference exception for -Wait option.</span></span>
 
-#### <a name="azcompute"></a><span data-ttu-id="7b0da-179">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="7b0da-179">Az.Compute</span></span>
-* <span data-ttu-id="7b0da-180">Lägg till UploadSizeInBytes-parameter till New-AzDiskConfig</span><span class="sxs-lookup"><span data-stu-id="7b0da-180">Add UploadSizeInBytes parameter tp New-AzDiskConfig</span></span>
-* <span data-ttu-id="7b0da-181">Lägg till Incremental-parameter till New-AzSnapshotConfig</span><span class="sxs-lookup"><span data-stu-id="7b0da-181">Add Incremental parameter to New-AzSnapshotConfig</span></span>
-* <span data-ttu-id="7b0da-182">Lägg till en funktion för virtuella datorer med låg prioritet:</span><span class="sxs-lookup"><span data-stu-id="7b0da-182">Add a low priority virtual machine feature:</span></span>
-    - <span data-ttu-id="7b0da-183">MaxPrice-, EvictionPolicy- och Priority-parametrar har lagts till i New-AzVMConfig.</span><span class="sxs-lookup"><span data-stu-id="7b0da-183">MaxPrice, EvictionPolicy and Priority parameters are added to New-AzVMConfig.</span></span>
-    - <span data-ttu-id="7b0da-184">MaxPrice-parametern har lagts till i New-AzVmssConfig-, Update-AzVM- och Update-AzVmss-cmdletarna.</span><span class="sxs-lookup"><span data-stu-id="7b0da-184">MaxPrice parameter is added to New-AzVmssConfig, Update-AzVM and Update-AzVmss cmdlets.</span></span>
-* <span data-ttu-id="7b0da-185">Åtgärda problem med VM-referenser för Get-AzAvailabilitySet-cmdleten när alla tillgänglighetsuppsättningar i prenumerationen visas.</span><span class="sxs-lookup"><span data-stu-id="7b0da-185">Fix VM reference issue for Get-AzAvailabilitySet cmdlet when it lists all availability sets in the subscription.</span></span>
-* <span data-ttu-id="7b0da-186">Korrigera null-undantaget för Get-AzRemoteDesktopFile.</span><span class="sxs-lookup"><span data-stu-id="7b0da-186">Fix the null exception for Get-AzRemoteDesktopFile.</span></span>
-* <span data-ttu-id="7b0da-187">Korrigera VHD-metoden för sökning relativt till slut.</span><span class="sxs-lookup"><span data-stu-id="7b0da-187">Fix VHD Seek method for end-relative position.</span></span>
-* <span data-ttu-id="7b0da-188">Åtgärda UltraSSD-problem för New-AzVM och Update-AzVM.</span><span class="sxs-lookup"><span data-stu-id="7b0da-188">Fix UltraSSD issue for New-AzVM and Update-AzVM.</span></span>
+#### <a name="azcompute"></a><span data-ttu-id="dca39-179">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="dca39-179">Az.Compute</span></span>
+* <span data-ttu-id="dca39-180">Lägg till UploadSizeInBytes-parameter till New-AzDiskConfig</span><span class="sxs-lookup"><span data-stu-id="dca39-180">Add UploadSizeInBytes parameter tp New-AzDiskConfig</span></span>
+* <span data-ttu-id="dca39-181">Lägg till Incremental-parameter till New-AzSnapshotConfig</span><span class="sxs-lookup"><span data-stu-id="dca39-181">Add Incremental parameter to New-AzSnapshotConfig</span></span>
+* <span data-ttu-id="dca39-182">Lägg till en funktion för virtuella datorer med låg prioritet:</span><span class="sxs-lookup"><span data-stu-id="dca39-182">Add a low priority virtual machine feature:</span></span>
+    - <span data-ttu-id="dca39-183">MaxPrice-, EvictionPolicy- och Priority-parametrar har lagts till i New-AzVMConfig.</span><span class="sxs-lookup"><span data-stu-id="dca39-183">MaxPrice, EvictionPolicy and Priority parameters are added to New-AzVMConfig.</span></span>
+    - <span data-ttu-id="dca39-184">MaxPrice-parametern har lagts till i New-AzVmssConfig-, Update-AzVM- och Update-AzVmss-cmdletarna.</span><span class="sxs-lookup"><span data-stu-id="dca39-184">MaxPrice parameter is added to New-AzVmssConfig, Update-AzVM and Update-AzVmss cmdlets.</span></span>
+* <span data-ttu-id="dca39-185">Åtgärda problem med VM-referenser för Get-AzAvailabilitySet-cmdleten när alla tillgänglighetsuppsättningar i prenumerationen visas.</span><span class="sxs-lookup"><span data-stu-id="dca39-185">Fix VM reference issue for Get-AzAvailabilitySet cmdlet when it lists all availability sets in the subscription.</span></span>
+* <span data-ttu-id="dca39-186">Korrigera null-undantaget för Get-AzRemoteDesktopFile.</span><span class="sxs-lookup"><span data-stu-id="dca39-186">Fix the null exception for Get-AzRemoteDesktopFile.</span></span>
+* <span data-ttu-id="dca39-187">Korrigera VHD-metoden för sökning relativt till slut.</span><span class="sxs-lookup"><span data-stu-id="dca39-187">Fix VHD Seek method for end-relative position.</span></span>
+* <span data-ttu-id="dca39-188">Åtgärda UltraSSD-problem för New-AzVM och Update-AzVM.</span><span class="sxs-lookup"><span data-stu-id="dca39-188">Fix UltraSSD issue for New-AzVM and Update-AzVM.</span></span>
 
-#### <a name="azdatafactory"></a><span data-ttu-id="7b0da-189">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="7b0da-189">Az.DataFactory</span></span>
-* <span data-ttu-id="7b0da-190">Lägger till 3 nya kommandon för ADF V2 – Add-AzDataFactoryV2TriggerSubscription, Remove-AzDataFactoryV2TriggerSubscription och Get-AzDataFactoryV2TriggerSubscriptionStatus</span><span class="sxs-lookup"><span data-stu-id="7b0da-190">Adding 3 new commands for ADF V2 - Add-AzDataFactoryV2TriggerSubscription, Remove-AzDataFactoryV2TriggerSubscription, and Get-AzDataFactoryV2TriggerSubscriptionStatus</span></span>
-* <span data-ttu-id="7b0da-191">ADF .Net SDK har uppdaterats till 4.1.3</span><span class="sxs-lookup"><span data-stu-id="7b0da-191">Updated ADF .Net SDK version to 4.1.3</span></span>
+#### <a name="azdatafactory"></a><span data-ttu-id="dca39-189">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="dca39-189">Az.DataFactory</span></span>
+* <span data-ttu-id="dca39-190">Lägger till 3 nya kommandon för ADF V2 – Add-AzDataFactoryV2TriggerSubscription, Remove-AzDataFactoryV2TriggerSubscription och Get-AzDataFactoryV2TriggerSubscriptionStatus</span><span class="sxs-lookup"><span data-stu-id="dca39-190">Adding 3 new commands for ADF V2 - Add-AzDataFactoryV2TriggerSubscription, Remove-AzDataFactoryV2TriggerSubscription, and Get-AzDataFactoryV2TriggerSubscriptionStatus</span></span>
+* <span data-ttu-id="dca39-191">ADF .Net SDK har uppdaterats till 4.1.3</span><span class="sxs-lookup"><span data-stu-id="dca39-191">Updated ADF .Net SDK version to 4.1.3</span></span>
 
-#### <a name="azhdinsight"></a><span data-ttu-id="7b0da-192">Az.HDInsight</span><span class="sxs-lookup"><span data-stu-id="7b0da-192">Az.HDInsight</span></span>
-* <span data-ttu-id="7b0da-193">Anrop för icke-bakåtkompatibla ändringar</span><span class="sxs-lookup"><span data-stu-id="7b0da-193">Call out breaking changes</span></span>
+#### <a name="azhdinsight"></a><span data-ttu-id="dca39-192">Az.HDInsight</span><span class="sxs-lookup"><span data-stu-id="dca39-192">Az.HDInsight</span></span>
+* <span data-ttu-id="dca39-193">Anrop för icke-bakåtkompatibla ändringar</span><span class="sxs-lookup"><span data-stu-id="dca39-193">Call out breaking changes</span></span>
 
-#### <a name="aziothub"></a><span data-ttu-id="7b0da-194">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="7b0da-194">Az.IotHub</span></span>
-* <span data-ttu-id="7b0da-195">Lägg till stöd för att anropa redundans för en IotHub till den geo-länkade katastrofåterställningsregionen.</span><span class="sxs-lookup"><span data-stu-id="7b0da-195">Add support to invoke failover for an IotHub to the geo-paired disaster recovery region.</span></span>
-* <span data-ttu-id="7b0da-196">Lägg till stöd för att hantera meddelandeberikning för en IotHub.</span><span class="sxs-lookup"><span data-stu-id="7b0da-196">Add support to manage message enrichment for an IotHub.</span></span> <span data-ttu-id="7b0da-197">Nya cmdlet:ar är:</span><span class="sxs-lookup"><span data-stu-id="7b0da-197">New cmdlets are:</span></span>
-    - <span data-ttu-id="7b0da-198">Add-AzIotHubMessageEnrichment</span><span class="sxs-lookup"><span data-stu-id="7b0da-198">Add-AzIotHubMessageEnrichment</span></span>
-    - <span data-ttu-id="7b0da-199">Get-AzIotHubMessageEnrichment</span><span class="sxs-lookup"><span data-stu-id="7b0da-199">Get-AzIotHubMessageEnrichment</span></span>
-    - <span data-ttu-id="7b0da-200">Remove-AzIotHubMessageEnrichment</span><span class="sxs-lookup"><span data-stu-id="7b0da-200">Remove-AzIotHubMessageEnrichment</span></span>
-    - <span data-ttu-id="7b0da-201">Set-AzIotHubMessageEnrichment</span><span class="sxs-lookup"><span data-stu-id="7b0da-201">Set-AzIotHubMessageEnrichment</span></span>
+#### <a name="aziothub"></a><span data-ttu-id="dca39-194">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="dca39-194">Az.IotHub</span></span>
+* <span data-ttu-id="dca39-195">Lägg till stöd för att anropa redundans för en IotHub till den geo-länkade katastrofåterställningsregionen.</span><span class="sxs-lookup"><span data-stu-id="dca39-195">Add support to invoke failover for an IotHub to the geo-paired disaster recovery region.</span></span>
+* <span data-ttu-id="dca39-196">Lägg till stöd för att hantera meddelandeberikning för en IotHub.</span><span class="sxs-lookup"><span data-stu-id="dca39-196">Add support to manage message enrichment for an IotHub.</span></span> <span data-ttu-id="dca39-197">Nya cmdlet:ar är:</span><span class="sxs-lookup"><span data-stu-id="dca39-197">New cmdlets are:</span></span>
+    - <span data-ttu-id="dca39-198">Add-AzIotHubMessageEnrichment</span><span class="sxs-lookup"><span data-stu-id="dca39-198">Add-AzIotHubMessageEnrichment</span></span>
+    - <span data-ttu-id="dca39-199">Get-AzIotHubMessageEnrichment</span><span class="sxs-lookup"><span data-stu-id="dca39-199">Get-AzIotHubMessageEnrichment</span></span>
+    - <span data-ttu-id="dca39-200">Remove-AzIotHubMessageEnrichment</span><span class="sxs-lookup"><span data-stu-id="dca39-200">Remove-AzIotHubMessageEnrichment</span></span>
+    - <span data-ttu-id="dca39-201">Set-AzIotHubMessageEnrichment</span><span class="sxs-lookup"><span data-stu-id="dca39-201">Set-AzIotHubMessageEnrichment</span></span>
 
-#### <a name="azmonitor"></a><span data-ttu-id="7b0da-202">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="7b0da-202">Az.Monitor</span></span>
-* <span data-ttu-id="7b0da-203">Pekar på den senaste Monitor SDK:n, dvs. 0.24.1-preview</span><span class="sxs-lookup"><span data-stu-id="7b0da-203">Pointing to the most recent Monitor SDK, i.e. 0.24.1-preview</span></span>
-   - <span data-ttu-id="7b0da-204">Lägger till bakåtkompatibla ändringar i Metrics-cmdletarna, dvs. enhetsuppräkningen stöder flera nya värden.</span><span class="sxs-lookup"><span data-stu-id="7b0da-204">Adds non-braking changes to the Metrics cmdlets, i.e. the Unit enumeration supports several new values.</span></span> <span data-ttu-id="7b0da-205">Detta är skrivskyddade cmdletar, så det förekommer inga ändringar i inmatningen för cmdletarna.</span><span class="sxs-lookup"><span data-stu-id="7b0da-205">These are read-only cmdlets, so there would be no change in the input of the cmdlets.</span></span>
-   - <span data-ttu-id="7b0da-206">API-versionen för **ActionGroups**-begäranden är nu **2019-06-01**. Tidigare var den **2018-03-01**.</span><span class="sxs-lookup"><span data-stu-id="7b0da-206">The api-version of the **ActionGroups** requests is now **2019-06-01**, before it was **2018-03-01**.</span></span> <span data-ttu-id="7b0da-207">Test av scenarier har uppdaterats för att anpassas till den här ändringen.</span><span class="sxs-lookup"><span data-stu-id="7b0da-207">The scenario tests have been updated to accommodate for this change.</span></span>
-   - <span data-ttu-id="7b0da-208">Ett nytt obligatoriskt argument har lagts till för konstruktorerna för klasserna **EmailReceiver** och **WebhookReceiver** – ett booleskt värde med namnet **useCommonAlertSchema**.</span><span class="sxs-lookup"><span data-stu-id="7b0da-208">The constructors for the classes **EmailReceiver** and **WebhookReceiver** added one new mandatory argument, i.e. a Boolean value called **useCommonAlertSchema**.</span></span> <span data-ttu-id="7b0da-209">Värdet är för närvarande fast till **false** så att den här icke-bakåtkompatibla ändringen är dold från cmdletarna.</span><span class="sxs-lookup"><span data-stu-id="7b0da-209">Currently, the value is fixed to **false** to hide this breaking change from the cmdlets.</span></span> <span data-ttu-id="7b0da-210">**Obs!** Det här är en tillfällig ändring som måste verifieras av Alerts-teamet.</span><span class="sxs-lookup"><span data-stu-id="7b0da-210">**NOTE**: this is a temporary change that must be validated by the Alerts team.</span></span>
-   - <span data-ttu-id="7b0da-211">Ordningen på argumenten för konstruktorn för klassen **Source** (relaterad till klassen **ScheduledQueryRuleSource**) har ändrats från den tidigare SDK:n.</span><span class="sxs-lookup"><span data-stu-id="7b0da-211">The order of the arguments for the constructor of the class **Source** (related to the **ScheduledQueryRuleSource** class) changed from the previous SDK.</span></span> <span data-ttu-id="7b0da-212">Den här ändringen krävde korrigering av två enhetstest: de kompilerades, men testerna skickades inte.</span><span class="sxs-lookup"><span data-stu-id="7b0da-212">This change required two unit tests to the be fixed: they compiled, but failed to pass the tests.</span></span>
-   - <span data-ttu-id="7b0da-213">Ordningen på argumenten för konstruktorn för klassen **AlertingAction** (relaterad till klassen **ScheduledQueryRuleSource**) har ändrats från den tidigare SDK:n.</span><span class="sxs-lookup"><span data-stu-id="7b0da-213">The order of the arguments for the constructor of the class **AlertingAction** (related to the **ScheduledQueryRuleSource** class) changed from the previous SDK.</span></span> <span data-ttu-id="7b0da-214">Den här ändringen krävde korrigering av två enhetstest: de kompilerades, men testerna skickades inte.</span><span class="sxs-lookup"><span data-stu-id="7b0da-214">This change required two unit tests to the be fixed: they compiled, but failed to pass the tests.</span></span>
-* <span data-ttu-id="7b0da-215">Stöd för kriterier för dynamiskt tröskelvärde för måttavisering v2</span><span class="sxs-lookup"><span data-stu-id="7b0da-215">Support Dynamic Threshold criteria for metric alert V2</span></span>
-    - <span data-ttu-id="7b0da-216">New-AzMetricAlertRuleV2Criteria: skapar nu även kriterier för dynamiskt tröskelvärde</span><span class="sxs-lookup"><span data-stu-id="7b0da-216">New-AzMetricAlertRuleV2Criteria: now creats dynamic threshold criteria also</span></span>
-    - <span data-ttu-id="7b0da-217">Add-AzMetricAlertRuleV2: accepterar nu även kriterier för dynamiskt tröskelvärde</span><span class="sxs-lookup"><span data-stu-id="7b0da-217">Add-AzMetricAlertRuleV2: now accept dynamic threshold criteria also</span></span>
-* <span data-ttu-id="7b0da-218">Förbättringar i schemalagd frågeregel (SQR)</span><span class="sxs-lookup"><span data-stu-id="7b0da-218">Improvements in Scheduled Query Rule cmdlets (SQR)</span></span>
- - <span data-ttu-id="7b0da-219">Cmdletar accepterar ”Location”-parameter i båda formaten, antingen platsen (t.ex. eastus) eller platsens visningsnamn (t.ex. USA, östra)</span><span class="sxs-lookup"><span data-stu-id="7b0da-219">Cmdlets will accept 'Location' paramater in both formats, either the location (e.g. eastus) or the location display name (e.g. East US)</span></span>
- - <span data-ttu-id="7b0da-220">”Enabled”-parametern illustreras korrekt i hjälpfiler</span><span class="sxs-lookup"><span data-stu-id="7b0da-220">Illustrated 'Enabled' parameter in help files properly</span></span>
- - <span data-ttu-id="7b0da-221">Exempel för den valfria parametern ”ActionGroup” har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-221">Added examples for 'ActionGroup' optional parameter</span></span>
- - <span data-ttu-id="7b0da-222">Förbättrade hjälpfiler</span><span class="sxs-lookup"><span data-stu-id="7b0da-222">Overall improved help files</span></span>
-* <span data-ttu-id="7b0da-223">Åtgärda bugg då omfattningstypen fastställs för ”Set-AzActionRule”</span><span class="sxs-lookup"><span data-stu-id="7b0da-223">Fix bug in determining scope type for 'Set-AzActionRule'</span></span>
+#### <a name="azmonitor"></a><span data-ttu-id="dca39-202">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="dca39-202">Az.Monitor</span></span>
+* <span data-ttu-id="dca39-203">Pekar på den senaste Monitor SDK:n, dvs. 0.24.1-preview</span><span class="sxs-lookup"><span data-stu-id="dca39-203">Pointing to the most recent Monitor SDK, i.e. 0.24.1-preview</span></span>
+   - <span data-ttu-id="dca39-204">Lägger till bakåtkompatibla ändringar i Metrics-cmdletarna, dvs. enhetsuppräkningen stöder flera nya värden.</span><span class="sxs-lookup"><span data-stu-id="dca39-204">Adds non-braking changes to the Metrics cmdlets, i.e. the Unit enumeration supports several new values.</span></span> <span data-ttu-id="dca39-205">Detta är skrivskyddade cmdletar, så det förekommer inga ändringar i inmatningen för cmdletarna.</span><span class="sxs-lookup"><span data-stu-id="dca39-205">These are read-only cmdlets, so there would be no change in the input of the cmdlets.</span></span>
+   - <span data-ttu-id="dca39-206">API-versionen för **ActionGroups**-begäranden är nu **2019-06-01**. Tidigare var den **2018-03-01**.</span><span class="sxs-lookup"><span data-stu-id="dca39-206">The api-version of the **ActionGroups** requests is now **2019-06-01**, before it was **2018-03-01**.</span></span> <span data-ttu-id="dca39-207">Test av scenarier har uppdaterats för att anpassas till den här ändringen.</span><span class="sxs-lookup"><span data-stu-id="dca39-207">The scenario tests have been updated to accommodate for this change.</span></span>
+   - <span data-ttu-id="dca39-208">Ett nytt obligatoriskt argument har lagts till för konstruktorerna för klasserna **EmailReceiver** och **WebhookReceiver** – ett booleskt värde med namnet **useCommonAlertSchema**.</span><span class="sxs-lookup"><span data-stu-id="dca39-208">The constructors for the classes **EmailReceiver** and **WebhookReceiver** added one new mandatory argument, i.e. a Boolean value called **useCommonAlertSchema**.</span></span> <span data-ttu-id="dca39-209">Värdet är för närvarande fast till **false** så att den här icke-bakåtkompatibla ändringen är dold från cmdletarna.</span><span class="sxs-lookup"><span data-stu-id="dca39-209">Currently, the value is fixed to **false** to hide this breaking change from the cmdlets.</span></span> <span data-ttu-id="dca39-210">**Obs!** Det här är en tillfällig ändring som måste verifieras av Alerts-teamet.</span><span class="sxs-lookup"><span data-stu-id="dca39-210">**NOTE**: this is a temporary change that must be validated by the Alerts team.</span></span>
+   - <span data-ttu-id="dca39-211">Ordningen på argumenten för konstruktorn för klassen **Source** (relaterad till klassen **ScheduledQueryRuleSource**) har ändrats från den tidigare SDK:n.</span><span class="sxs-lookup"><span data-stu-id="dca39-211">The order of the arguments for the constructor of the class **Source** (related to the **ScheduledQueryRuleSource** class) changed from the previous SDK.</span></span> <span data-ttu-id="dca39-212">Den här ändringen krävde korrigering av två enhetstest: de kompilerades, men testerna skickades inte.</span><span class="sxs-lookup"><span data-stu-id="dca39-212">This change required two unit tests to the be fixed: they compiled, but failed to pass the tests.</span></span>
+   - <span data-ttu-id="dca39-213">Ordningen på argumenten för konstruktorn för klassen **AlertingAction** (relaterad till klassen **ScheduledQueryRuleSource**) har ändrats från den tidigare SDK:n.</span><span class="sxs-lookup"><span data-stu-id="dca39-213">The order of the arguments for the constructor of the class **AlertingAction** (related to the **ScheduledQueryRuleSource** class) changed from the previous SDK.</span></span> <span data-ttu-id="dca39-214">Den här ändringen krävde korrigering av två enhetstest: de kompilerades, men testerna skickades inte.</span><span class="sxs-lookup"><span data-stu-id="dca39-214">This change required two unit tests to the be fixed: they compiled, but failed to pass the tests.</span></span>
+* <span data-ttu-id="dca39-215">Stöd för kriterier för dynamiskt tröskelvärde för måttavisering v2</span><span class="sxs-lookup"><span data-stu-id="dca39-215">Support Dynamic Threshold criteria for metric alert V2</span></span>
+    - <span data-ttu-id="dca39-216">New-AzMetricAlertRuleV2Criteria: skapar nu även kriterier för dynamiskt tröskelvärde</span><span class="sxs-lookup"><span data-stu-id="dca39-216">New-AzMetricAlertRuleV2Criteria: now creats dynamic threshold criteria also</span></span>
+    - <span data-ttu-id="dca39-217">Add-AzMetricAlertRuleV2: accepterar nu även kriterier för dynamiskt tröskelvärde</span><span class="sxs-lookup"><span data-stu-id="dca39-217">Add-AzMetricAlertRuleV2: now accept dynamic threshold criteria also</span></span>
+* <span data-ttu-id="dca39-218">Förbättringar i schemalagd frågeregel (SQR)</span><span class="sxs-lookup"><span data-stu-id="dca39-218">Improvements in Scheduled Query Rule cmdlets (SQR)</span></span>
+ - <span data-ttu-id="dca39-219">Cmdletar accepterar ”Location”-parameter i båda formaten, antingen platsen (t.ex. eastus) eller platsens visningsnamn (t.ex. USA, östra)</span><span class="sxs-lookup"><span data-stu-id="dca39-219">Cmdlets will accept 'Location' paramater in both formats, either the location (e.g. eastus) or the location display name (e.g. East US)</span></span>
+ - <span data-ttu-id="dca39-220">”Enabled”-parametern illustreras korrekt i hjälpfiler</span><span class="sxs-lookup"><span data-stu-id="dca39-220">Illustrated 'Enabled' parameter in help files properly</span></span>
+ - <span data-ttu-id="dca39-221">Exempel för den valfria parametern ”ActionGroup” har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-221">Added examples for 'ActionGroup' optional parameter</span></span>
+ - <span data-ttu-id="dca39-222">Förbättrade hjälpfiler</span><span class="sxs-lookup"><span data-stu-id="dca39-222">Overall improved help files</span></span>
+* <span data-ttu-id="dca39-223">Åtgärda bugg då omfattningstypen fastställs för ”Set-AzActionRule”</span><span class="sxs-lookup"><span data-stu-id="dca39-223">Fix bug in determining scope type for 'Set-AzActionRule'</span></span>
 
-#### <a name="aznetwork"></a><span data-ttu-id="7b0da-224">Az.Network</span><span class="sxs-lookup"><span data-stu-id="7b0da-224">Az.Network</span></span>
-* <span data-ttu-id="7b0da-225">Korrigera felaktigt exempel i referensdokumentationen för ”New-AzApplicationGateway”</span><span class="sxs-lookup"><span data-stu-id="7b0da-225">Fix incorrect example in 'New-AzApplicationGateway' reference documentation</span></span> 
-* <span data-ttu-id="7b0da-226">Lägg till anmärkning i ”Get-AzNetworkWatcherPacketCapture”-referensdokumentationen om hämtning av alla egenskaper för en paketinsamling</span><span class="sxs-lookup"><span data-stu-id="7b0da-226">Add note in 'Get-AzNetworkWatcherPacketCapture' reference documentation about retrieving all properties for a packet capture</span></span>
-* <span data-ttu-id="7b0da-227">Exempel har korrigerats i ”Test-AzNetworkWatcherIPFlow”-referensdokumentationen för korrekt uppräkning av nätverkskort</span><span class="sxs-lookup"><span data-stu-id="7b0da-227">Fixed example in 'Test-AzNetworkWatcherIPFlow' reference documentation to correctly enumerate NICs</span></span>
-* <span data-ttu-id="7b0da-228">Förbättrad tolkning av molnundantag för att visa eventuell ytterligare information</span><span class="sxs-lookup"><span data-stu-id="7b0da-228">Improved cloud exception parsing to display additional details if they are present</span></span>
-* <span data-ttu-id="7b0da-229">Förbättrad tolkning av molnundantag för att hantera ytterligare en typ av SDK-undantag</span><span class="sxs-lookup"><span data-stu-id="7b0da-229">Improved cloud exception parsing to handle additional type of SDK exception</span></span>
-* <span data-ttu-id="7b0da-230">Felaktig mappning av säkerhetsregelmodeller har korrigerats</span><span class="sxs-lookup"><span data-stu-id="7b0da-230">Fixed incorrect mapping of Security Rule models</span></span>
-* <span data-ttu-id="7b0da-231">Egenskaper har lagts till för nätverksgränssnittet för funktionen Privat IP</span><span class="sxs-lookup"><span data-stu-id="7b0da-231">Added properties to network interface for private ip feature</span></span>
-    - <span data-ttu-id="7b0da-232">Egenskapen ”PrivateEndpoint” har lagts till som en typ av PSResourceId till PSNetworkInterface</span><span class="sxs-lookup"><span data-stu-id="7b0da-232">Added property 'PrivateEndpoint' as type of PSResourceId to PSNetworkInterface</span></span>
-    - <span data-ttu-id="7b0da-233">Egenskapen ”PrivateLinkConnectionProperties” har lagts till som en typ av PSIpConfigurationConnectivityInformation till PSNetworkInterfaceIPConfiguration</span><span class="sxs-lookup"><span data-stu-id="7b0da-233">Added property 'PrivateLinkConnectionProperties' as type of PSIpConfigurationConnectivityInformation to PSNetworkInterfaceIPConfiguration</span></span>
-    - <span data-ttu-id="7b0da-234">Modellklassen PSIpConfigurationConnectivityInformation har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-234">Added new model class PSIpConfigurationConnectivityInformation</span></span>
-* <span data-ttu-id="7b0da-235">ApplicationRuleProtocolType ”mssql” har lagts till för Azure Firewall-resurs</span><span class="sxs-lookup"><span data-stu-id="7b0da-235">Added new ApplicationRuleProtocolType 'mssql' for Azure Firewall resource</span></span>
-* <span data-ttu-id="7b0da-236">MultiLink-stöd i virtuellt WAN</span><span class="sxs-lookup"><span data-stu-id="7b0da-236">MultiLink support in Virtual WAN</span></span>
-    - <span data-ttu-id="7b0da-237">Nya cmdletar</span><span class="sxs-lookup"><span data-stu-id="7b0da-237">New cmdlets</span></span>
-        - <span data-ttu-id="7b0da-238">New-AzVpnSiteLink</span><span class="sxs-lookup"><span data-stu-id="7b0da-238">New-AzVpnSiteLink</span></span>
-        - <span data-ttu-id="7b0da-239">New-AzVpnSiteLinkConnection</span><span class="sxs-lookup"><span data-stu-id="7b0da-239">New-AzVpnSiteLinkConnection</span></span>
-    - <span data-ttu-id="7b0da-240">Uppdaterad cmdlet:</span><span class="sxs-lookup"><span data-stu-id="7b0da-240">Updated cmdlet:</span></span>
-        - <span data-ttu-id="7b0da-241">New-VpnSite</span><span class="sxs-lookup"><span data-stu-id="7b0da-241">New-VpnSite</span></span>
-        - <span data-ttu-id="7b0da-242">Update-VpnSite</span><span class="sxs-lookup"><span data-stu-id="7b0da-242">Update-VpnSite</span></span>
-        - <span data-ttu-id="7b0da-243">New-VpnConnection</span><span class="sxs-lookup"><span data-stu-id="7b0da-243">New-VpnConnection</span></span>
-        - <span data-ttu-id="7b0da-244">Update-VpnConnection</span><span class="sxs-lookup"><span data-stu-id="7b0da-244">Update-VpnConnection</span></span>
-* <span data-ttu-id="7b0da-245">Dokument för vissa PowerShell-exempel har korrigerats så att Az-cmdletar används i stället för AzureRM-cmdletar</span><span class="sxs-lookup"><span data-stu-id="7b0da-245">Fixed documents for some PowerShell examples to use Az cmdlets instead of AzureRM cmdlets</span></span>
+#### <a name="aznetwork"></a><span data-ttu-id="dca39-224">Az.Network</span><span class="sxs-lookup"><span data-stu-id="dca39-224">Az.Network</span></span>
+* <span data-ttu-id="dca39-225">Korrigera felaktigt exempel i referensdokumentationen för ”New-AzApplicationGateway”</span><span class="sxs-lookup"><span data-stu-id="dca39-225">Fix incorrect example in 'New-AzApplicationGateway' reference documentation</span></span> 
+* <span data-ttu-id="dca39-226">Lägg till anmärkning i ”Get-AzNetworkWatcherPacketCapture”-referensdokumentationen om hämtning av alla egenskaper för en paketinsamling</span><span class="sxs-lookup"><span data-stu-id="dca39-226">Add note in 'Get-AzNetworkWatcherPacketCapture' reference documentation about retrieving all properties for a packet capture</span></span>
+* <span data-ttu-id="dca39-227">Exempel har korrigerats i ”Test-AzNetworkWatcherIPFlow”-referensdokumentationen för korrekt uppräkning av nätverkskort</span><span class="sxs-lookup"><span data-stu-id="dca39-227">Fixed example in 'Test-AzNetworkWatcherIPFlow' reference documentation to correctly enumerate NICs</span></span>
+* <span data-ttu-id="dca39-228">Förbättrad tolkning av molnundantag för att visa eventuell ytterligare information</span><span class="sxs-lookup"><span data-stu-id="dca39-228">Improved cloud exception parsing to display additional details if they are present</span></span>
+* <span data-ttu-id="dca39-229">Förbättrad tolkning av molnundantag för att hantera ytterligare en typ av SDK-undantag</span><span class="sxs-lookup"><span data-stu-id="dca39-229">Improved cloud exception parsing to handle additional type of SDK exception</span></span>
+* <span data-ttu-id="dca39-230">Felaktig mappning av säkerhetsregelmodeller har korrigerats</span><span class="sxs-lookup"><span data-stu-id="dca39-230">Fixed incorrect mapping of Security Rule models</span></span>
+* <span data-ttu-id="dca39-231">Egenskaper har lagts till för nätverksgränssnittet för funktionen Privat IP</span><span class="sxs-lookup"><span data-stu-id="dca39-231">Added properties to network interface for private ip feature</span></span>
+    - <span data-ttu-id="dca39-232">Egenskapen ”PrivateEndpoint” har lagts till som en typ av PSResourceId till PSNetworkInterface</span><span class="sxs-lookup"><span data-stu-id="dca39-232">Added property 'PrivateEndpoint' as type of PSResourceId to PSNetworkInterface</span></span>
+    - <span data-ttu-id="dca39-233">Egenskapen ”PrivateLinkConnectionProperties” har lagts till som en typ av PSIpConfigurationConnectivityInformation till PSNetworkInterfaceIPConfiguration</span><span class="sxs-lookup"><span data-stu-id="dca39-233">Added property 'PrivateLinkConnectionProperties' as type of PSIpConfigurationConnectivityInformation to PSNetworkInterfaceIPConfiguration</span></span>
+    - <span data-ttu-id="dca39-234">Modellklassen PSIpConfigurationConnectivityInformation har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-234">Added new model class PSIpConfigurationConnectivityInformation</span></span>
+* <span data-ttu-id="dca39-235">ApplicationRuleProtocolType ”mssql” har lagts till för Azure Firewall-resurs</span><span class="sxs-lookup"><span data-stu-id="dca39-235">Added new ApplicationRuleProtocolType 'mssql' for Azure Firewall resource</span></span>
+* <span data-ttu-id="dca39-236">MultiLink-stöd i virtuellt WAN</span><span class="sxs-lookup"><span data-stu-id="dca39-236">MultiLink support in Virtual WAN</span></span>
+    - <span data-ttu-id="dca39-237">Nya cmdletar</span><span class="sxs-lookup"><span data-stu-id="dca39-237">New cmdlets</span></span>
+        - <span data-ttu-id="dca39-238">New-AzVpnSiteLink</span><span class="sxs-lookup"><span data-stu-id="dca39-238">New-AzVpnSiteLink</span></span>
+        - <span data-ttu-id="dca39-239">New-AzVpnSiteLinkConnection</span><span class="sxs-lookup"><span data-stu-id="dca39-239">New-AzVpnSiteLinkConnection</span></span>
+    - <span data-ttu-id="dca39-240">Uppdaterad cmdlet:</span><span class="sxs-lookup"><span data-stu-id="dca39-240">Updated cmdlet:</span></span>
+        - <span data-ttu-id="dca39-241">New-VpnSite</span><span class="sxs-lookup"><span data-stu-id="dca39-241">New-VpnSite</span></span>
+        - <span data-ttu-id="dca39-242">Update-VpnSite</span><span class="sxs-lookup"><span data-stu-id="dca39-242">Update-VpnSite</span></span>
+        - <span data-ttu-id="dca39-243">New-VpnConnection</span><span class="sxs-lookup"><span data-stu-id="dca39-243">New-VpnConnection</span></span>
+        - <span data-ttu-id="dca39-244">Update-VpnConnection</span><span class="sxs-lookup"><span data-stu-id="dca39-244">Update-VpnConnection</span></span>
+* <span data-ttu-id="dca39-245">Dokument för vissa PowerShell-exempel har korrigerats så att Az-cmdletar används i stället för AzureRM-cmdletar</span><span class="sxs-lookup"><span data-stu-id="dca39-245">Fixed documents for some PowerShell examples to use Az cmdlets instead of AzureRM cmdlets</span></span>
 
-#### <a name="azrecoveryservices"></a><span data-ttu-id="7b0da-246">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="7b0da-246">Az.RecoveryServices</span></span>
-* <span data-ttu-id="7b0da-247">Uppdatera AzureVMpolicy-objekt med ProtectedItemsCount-attribut</span><span class="sxs-lookup"><span data-stu-id="7b0da-247">Update AzureVMpolicy Object with ProtectedItemsCount Attribute</span></span>
-* <span data-ttu-id="7b0da-248">Ytterligare tester har lagts till för VM-princip och återställning av ursprungligt lagringskonto</span><span class="sxs-lookup"><span data-stu-id="7b0da-248">Added Tests for VM policy and Original Storage Account Restore</span></span>
+#### <a name="azrecoveryservices"></a><span data-ttu-id="dca39-246">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="dca39-246">Az.RecoveryServices</span></span>
+* <span data-ttu-id="dca39-247">Uppdatera AzureVMpolicy-objekt med ProtectedItemsCount-attribut</span><span class="sxs-lookup"><span data-stu-id="dca39-247">Update AzureVMpolicy Object with ProtectedItemsCount Attribute</span></span>
+* <span data-ttu-id="dca39-248">Ytterligare tester har lagts till för VM-princip och återställning av ursprungligt lagringskonto</span><span class="sxs-lookup"><span data-stu-id="dca39-248">Added Tests for VM policy and Original Storage Account Restore</span></span>
 
-#### <a name="azresources"></a><span data-ttu-id="7b0da-249">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="7b0da-249">Az.Resources</span></span>
-* <span data-ttu-id="7b0da-250">Åtgärda fel där det inte gick att anropa New-AzRoleAssignment utan parametern Scope.</span><span class="sxs-lookup"><span data-stu-id="7b0da-250">Fix bug where New-AzRoleAssignment could not be called without parameter Scope.</span></span>
+#### <a name="azresources"></a><span data-ttu-id="dca39-249">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="dca39-249">Az.Resources</span></span>
+* <span data-ttu-id="dca39-250">Åtgärda fel där det inte gick att anropa New-AzRoleAssignment utan parametern Scope.</span><span class="sxs-lookup"><span data-stu-id="dca39-250">Fix bug where New-AzRoleAssignment could not be called without parameter Scope.</span></span>
 
-#### <a name="azservicefabric"></a><span data-ttu-id="7b0da-251">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="7b0da-251">Az.ServiceFabric</span></span>
-* <span data-ttu-id="7b0da-252">Stavfel har korrigerats i exempel för ”Update-AzServiceFabricReliability”-referensdokumentationen</span><span class="sxs-lookup"><span data-stu-id="7b0da-252">Fixed typo in example for 'Update-AzServiceFabricReliability' reference documentation</span></span>
-* <span data-ttu-id="7b0da-253">Lägger till nya cmdletar för att hantera program och tjänster:</span><span class="sxs-lookup"><span data-stu-id="7b0da-253">Adding new cmdlets to manage appliaction and services:</span></span>
-    - <span data-ttu-id="7b0da-254">New-AzServiceFabricApplication</span><span class="sxs-lookup"><span data-stu-id="7b0da-254">New-AzServiceFabricApplication</span></span>
-    - <span data-ttu-id="7b0da-255">New-AzServiceFabricApplicationType</span><span class="sxs-lookup"><span data-stu-id="7b0da-255">New-AzServiceFabricApplicationType</span></span>
-    - <span data-ttu-id="7b0da-256">New-AzServiceFabricApplicationTypeVersion</span><span class="sxs-lookup"><span data-stu-id="7b0da-256">New-AzServiceFabricApplicationTypeVersion</span></span>
-    - <span data-ttu-id="7b0da-257">New-AzServiceFabricService</span><span class="sxs-lookup"><span data-stu-id="7b0da-257">New-AzServiceFabricService</span></span>
-    - <span data-ttu-id="7b0da-258">Update-AzServiceFabricApplication</span><span class="sxs-lookup"><span data-stu-id="7b0da-258">Update-AzServiceFabricApplication</span></span>
-    - <span data-ttu-id="7b0da-259">Get-AzServiceFabricApplication</span><span class="sxs-lookup"><span data-stu-id="7b0da-259">Get-AzServiceFabricApplication</span></span>
-    - <span data-ttu-id="7b0da-260">Get-AzServiceFabricApplicationType</span><span class="sxs-lookup"><span data-stu-id="7b0da-260">Get-AzServiceFabricApplicationType</span></span>
-    - <span data-ttu-id="7b0da-261">Get-AzServiceFabricApplicationTypeVersion</span><span class="sxs-lookup"><span data-stu-id="7b0da-261">Get-AzServiceFabricApplicationTypeVersion</span></span>
-    - <span data-ttu-id="7b0da-262">Get-AzServiceFabricService</span><span class="sxs-lookup"><span data-stu-id="7b0da-262">Get-AzServiceFabricService</span></span>
-    - <span data-ttu-id="7b0da-263">Remove-AzServiceFabricApplication</span><span class="sxs-lookup"><span data-stu-id="7b0da-263">Remove-AzServiceFabricApplication</span></span>
-    - <span data-ttu-id="7b0da-264">Remove-AzServiceFabricApplicationType</span><span class="sxs-lookup"><span data-stu-id="7b0da-264">Remove-AzServiceFabricApplicationType</span></span>
-    - <span data-ttu-id="7b0da-265">Remove-AzServiceFabricApplicationTypeVersion</span><span class="sxs-lookup"><span data-stu-id="7b0da-265">Remove-AzServiceFabricApplicationTypeVersion</span></span>
-    - <span data-ttu-id="7b0da-266">Remove-AzServiceFabricServic</span><span class="sxs-lookup"><span data-stu-id="7b0da-266">Remove-AzServiceFabricServic</span></span>
-* <span data-ttu-id="7b0da-267">Service Fabric SDK har uppgraderats till version 1.2.0 som använder Service Fabric-resursprovidern med API-version 2019-03-01.</span><span class="sxs-lookup"><span data-stu-id="7b0da-267">Upgraded Service Fabric SDK to version 1.2.0 which uses service fabric resource provider api-version 2019-03-01.</span></span>
+#### <a name="azservicefabric"></a><span data-ttu-id="dca39-251">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="dca39-251">Az.ServiceFabric</span></span>
+* <span data-ttu-id="dca39-252">Stavfel har korrigerats i exempel för ”Update-AzServiceFabricReliability”-referensdokumentationen</span><span class="sxs-lookup"><span data-stu-id="dca39-252">Fixed typo in example for 'Update-AzServiceFabricReliability' reference documentation</span></span>
+* <span data-ttu-id="dca39-253">Lägger till nya cmdletar för att hantera program och tjänster:</span><span class="sxs-lookup"><span data-stu-id="dca39-253">Adding new cmdlets to manage appliaction and services:</span></span>
+    - <span data-ttu-id="dca39-254">New-AzServiceFabricApplication</span><span class="sxs-lookup"><span data-stu-id="dca39-254">New-AzServiceFabricApplication</span></span>
+    - <span data-ttu-id="dca39-255">New-AzServiceFabricApplicationType</span><span class="sxs-lookup"><span data-stu-id="dca39-255">New-AzServiceFabricApplicationType</span></span>
+    - <span data-ttu-id="dca39-256">New-AzServiceFabricApplicationTypeVersion</span><span class="sxs-lookup"><span data-stu-id="dca39-256">New-AzServiceFabricApplicationTypeVersion</span></span>
+    - <span data-ttu-id="dca39-257">New-AzServiceFabricService</span><span class="sxs-lookup"><span data-stu-id="dca39-257">New-AzServiceFabricService</span></span>
+    - <span data-ttu-id="dca39-258">Update-AzServiceFabricApplication</span><span class="sxs-lookup"><span data-stu-id="dca39-258">Update-AzServiceFabricApplication</span></span>
+    - <span data-ttu-id="dca39-259">Get-AzServiceFabricApplication</span><span class="sxs-lookup"><span data-stu-id="dca39-259">Get-AzServiceFabricApplication</span></span>
+    - <span data-ttu-id="dca39-260">Get-AzServiceFabricApplicationType</span><span class="sxs-lookup"><span data-stu-id="dca39-260">Get-AzServiceFabricApplicationType</span></span>
+    - <span data-ttu-id="dca39-261">Get-AzServiceFabricApplicationTypeVersion</span><span class="sxs-lookup"><span data-stu-id="dca39-261">Get-AzServiceFabricApplicationTypeVersion</span></span>
+    - <span data-ttu-id="dca39-262">Get-AzServiceFabricService</span><span class="sxs-lookup"><span data-stu-id="dca39-262">Get-AzServiceFabricService</span></span>
+    - <span data-ttu-id="dca39-263">Remove-AzServiceFabricApplication</span><span class="sxs-lookup"><span data-stu-id="dca39-263">Remove-AzServiceFabricApplication</span></span>
+    - <span data-ttu-id="dca39-264">Remove-AzServiceFabricApplicationType</span><span class="sxs-lookup"><span data-stu-id="dca39-264">Remove-AzServiceFabricApplicationType</span></span>
+    - <span data-ttu-id="dca39-265">Remove-AzServiceFabricApplicationTypeVersion</span><span class="sxs-lookup"><span data-stu-id="dca39-265">Remove-AzServiceFabricApplicationTypeVersion</span></span>
+    - <span data-ttu-id="dca39-266">Remove-AzServiceFabricServic</span><span class="sxs-lookup"><span data-stu-id="dca39-266">Remove-AzServiceFabricServic</span></span>
+* <span data-ttu-id="dca39-267">Service Fabric SDK har uppgraderats till version 1.2.0 som använder Service Fabric-resursprovidern med API-version 2019-03-01.</span><span class="sxs-lookup"><span data-stu-id="dca39-267">Upgraded Service Fabric SDK to version 1.2.0 which uses service fabric resource provider api-version 2019-03-01.</span></span>
 
-#### <a name="azsignalr"></a><span data-ttu-id="7b0da-268">Az.SignalR</span><span class="sxs-lookup"><span data-stu-id="7b0da-268">Az.SignalR</span></span>
-* <span data-ttu-id="7b0da-269">Lägg till Update-, Restart-, CheckNameAvailability- och GetUsage-cmdletar</span><span class="sxs-lookup"><span data-stu-id="7b0da-269">Add Update, Restart, CheckNameAvailability, GetUsage Cmdlets</span></span>
+#### <a name="azsignalr"></a><span data-ttu-id="dca39-268">Az.SignalR</span><span class="sxs-lookup"><span data-stu-id="dca39-268">Az.SignalR</span></span>
+* <span data-ttu-id="dca39-269">Lägg till Update-, Restart-, CheckNameAvailability- och GetUsage-cmdletar</span><span class="sxs-lookup"><span data-stu-id="dca39-269">Add Update, Restart, CheckNameAvailability, GetUsage Cmdlets</span></span>
 
-#### <a name="azsql"></a><span data-ttu-id="7b0da-270">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="7b0da-270">Az.Sql</span></span>
-* <span data-ttu-id="7b0da-271">Uppdatera exempel i referensdokumentationen för ”Get-AzSqlElasticPool”</span><span class="sxs-lookup"><span data-stu-id="7b0da-271">Update example in reference documentation for 'Get-AzSqlElasticPool'</span></span>
-* <span data-ttu-id="7b0da-272">vCore-exempel för att skapa en elastisk pool (New-AzSqlElasticPool) har lagts till.</span><span class="sxs-lookup"><span data-stu-id="7b0da-272">Added vCore example to creating an elastic pool (New-AzSqlElasticPool).</span></span>
-* <span data-ttu-id="7b0da-273">Ta bort verifieringen av EmailAddresses och kontrollen som bekräftar att EmailAdmins inte är falskt när EmailAddresses är tomt i Set-AzSqlServerAdvancedThreatProtectionPolicy och Set-AzSqlDatabaseAdvancedThreatProtectionPolicy</span><span class="sxs-lookup"><span data-stu-id="7b0da-273">Remove the validation of EmailAddresses and the check that EmailAdmins is not false in case EmailAddresses is empty in Set-AzSqlServerAdvancedThreatProtectionPolicy and Set-AzSqlDatabaseAdvancedThreatProtectionPolicy</span></span>
-* <span data-ttu-id="7b0da-274">Server-/databasgranskningsinställningar kan tas bort när det finns flera diagnostikinställningar som aktiverar granskningskategorin.</span><span class="sxs-lookup"><span data-stu-id="7b0da-274">Enabled removal of server/database auditing settings when multiple diagnostic settings that enable audit category exist.</span></span>
-* <span data-ttu-id="7b0da-275">Åtgärda verifiering av e-postadresser i flera Sql Vulnerability Assessment-cmdletar (Update-AzSqlDatabaseVulnerabilityAssessmentSetting, Update-AzSqlServerVulnerabilityAssessmentSetting, Update-AzSqlInstanceDatabaseVulnerabilityAssessmentSetting och Update-AzSqlInstanceVulnerabilityAssessmentSetting).</span><span class="sxs-lookup"><span data-stu-id="7b0da-275">Fix email addresses validation in multiple Sql Vulnerability Assessment cmdlets (Update-AzSqlDatabaseVulnerabilityAssessmentSetting, Update-AzSqlServerVulnerabilityAssessmentSetting, Update-AzSqlInstanceDatabaseVulnerabilityAssessmentSetting and Update-AzSqlInstanceVulnerabilityAssessmentSetting).</span></span>
+#### <a name="azsql"></a><span data-ttu-id="dca39-270">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="dca39-270">Az.Sql</span></span>
+* <span data-ttu-id="dca39-271">Uppdatera exempel i referensdokumentationen för ”Get-AzSqlElasticPool”</span><span class="sxs-lookup"><span data-stu-id="dca39-271">Update example in reference documentation for 'Get-AzSqlElasticPool'</span></span>
+* <span data-ttu-id="dca39-272">vCore-exempel för att skapa en elastisk pool (New-AzSqlElasticPool) har lagts till.</span><span class="sxs-lookup"><span data-stu-id="dca39-272">Added vCore example to creating an elastic pool (New-AzSqlElasticPool).</span></span>
+* <span data-ttu-id="dca39-273">Ta bort verifieringen av EmailAddresses och kontrollen som bekräftar att EmailAdmins inte är falskt när EmailAddresses är tomt i Set-AzSqlServerAdvancedThreatProtectionPolicy och Set-AzSqlDatabaseAdvancedThreatProtectionPolicy</span><span class="sxs-lookup"><span data-stu-id="dca39-273">Remove the validation of EmailAddresses and the check that EmailAdmins is not false in case EmailAddresses is empty in Set-AzSqlServerAdvancedThreatProtectionPolicy and Set-AzSqlDatabaseAdvancedThreatProtectionPolicy</span></span>
+* <span data-ttu-id="dca39-274">Server-/databasgranskningsinställningar kan tas bort när det finns flera diagnostikinställningar som aktiverar granskningskategorin.</span><span class="sxs-lookup"><span data-stu-id="dca39-274">Enabled removal of server/database auditing settings when multiple diagnostic settings that enable audit category exist.</span></span>
+* <span data-ttu-id="dca39-275">Åtgärda verifiering av e-postadresser i flera Sql Vulnerability Assessment-cmdletar (Update-AzSqlDatabaseVulnerabilityAssessmentSetting, Update-AzSqlServerVulnerabilityAssessmentSetting, Update-AzSqlInstanceDatabaseVulnerabilityAssessmentSetting och Update-AzSqlInstanceVulnerabilityAssessmentSetting).</span><span class="sxs-lookup"><span data-stu-id="dca39-275">Fix email addresses validation in multiple Sql Vulnerability Assessment cmdlets (Update-AzSqlDatabaseVulnerabilityAssessmentSetting, Update-AzSqlServerVulnerabilityAssessmentSetting, Update-AzSqlInstanceDatabaseVulnerabilityAssessmentSetting and Update-AzSqlInstanceVulnerabilityAssessmentSetting).</span></span>
 
-#### <a name="azstorage"></a><span data-ttu-id="7b0da-276">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="7b0da-276">Az.Storage</span></span>
-* <span data-ttu-id="7b0da-277">Exempel i referensdokumentationen för ”Get-AzStorageAccountKey” har uppdaterats</span><span class="sxs-lookup"><span data-stu-id="7b0da-277">Updated example in reference documentation for 'Get-AzStorageAccountKey'</span></span>
-* <span data-ttu-id="7b0da-278">Vid upp- och nedladdning av en Azure-fil kan SMB-egenskaperna för källfilen (t.ex. filattribut, tidpunkten då filen skapades och tidpunkten för den senaste skrivningen) sparas i målfilen</span><span class="sxs-lookup"><span data-stu-id="7b0da-278">In upload/Downalod Azure File,support perserve the source File SMB properties (File Attributtes, File Creation Time, File Last Write Time) in the destination file</span></span>
-    -  <span data-ttu-id="7b0da-279">Set-AzStorageFileContent</span><span class="sxs-lookup"><span data-stu-id="7b0da-279">Set-AzStorageFileContent</span></span>
-    -  <span data-ttu-id="7b0da-280">Get-AzStorageFileContent</span><span class="sxs-lookup"><span data-stu-id="7b0da-280">Get-AzStorageFileContent</span></span>
-* <span data-ttu-id="7b0da-281">Korrigera problem med uppladdningen av blockblob med egenskaper/metadata för ImmutabilityPolicy i containrar.</span><span class="sxs-lookup"><span data-stu-id="7b0da-281">Fix Upload block blob with properties/metadate fail on container enabled ImmutabilityPolicy.</span></span>
-    -  <span data-ttu-id="7b0da-282">Set-AzStorageBlobContent</span><span class="sxs-lookup"><span data-stu-id="7b0da-282">Set-AzStorageBlobContent</span></span>
-* <span data-ttu-id="7b0da-283">Stöd för hantering av Azure-filresurser med API för hanteringsplan</span><span class="sxs-lookup"><span data-stu-id="7b0da-283">Support manage Azure File shares with Management plane API</span></span>
-    -  <span data-ttu-id="7b0da-284">New-AzRmStorageShare</span><span class="sxs-lookup"><span data-stu-id="7b0da-284">New-AzRmStorageShare</span></span>
-    -  <span data-ttu-id="7b0da-285">Get-AzRmStorageShare</span><span class="sxs-lookup"><span data-stu-id="7b0da-285">Get-AzRmStorageShare</span></span>
-    -  <span data-ttu-id="7b0da-286">Update-AzRmStorageShare</span><span class="sxs-lookup"><span data-stu-id="7b0da-286">Update-AzRmStorageShare</span></span>
-    -  <span data-ttu-id="7b0da-287">Remove-AzRmStorageShare</span><span class="sxs-lookup"><span data-stu-id="7b0da-287">Remove-AzRmStorageShare</span></span>
+#### <a name="azstorage"></a><span data-ttu-id="dca39-276">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="dca39-276">Az.Storage</span></span>
+* <span data-ttu-id="dca39-277">Exempel i referensdokumentationen för ”Get-AzStorageAccountKey” har uppdaterats</span><span class="sxs-lookup"><span data-stu-id="dca39-277">Updated example in reference documentation for 'Get-AzStorageAccountKey'</span></span>
+* <span data-ttu-id="dca39-278">Vid upp- och nedladdning av en Azure-fil kan SMB-egenskaperna för källfilen (t.ex. filattribut, tidpunkten då filen skapades och tidpunkten för den senaste skrivningen) sparas i målfilen</span><span class="sxs-lookup"><span data-stu-id="dca39-278">In upload/Downalod Azure File,support perserve the source File SMB properties (File Attributtes, File Creation Time, File Last Write Time) in the destination file</span></span>
+    -  <span data-ttu-id="dca39-279">Set-AzStorageFileContent</span><span class="sxs-lookup"><span data-stu-id="dca39-279">Set-AzStorageFileContent</span></span>
+    -  <span data-ttu-id="dca39-280">Get-AzStorageFileContent</span><span class="sxs-lookup"><span data-stu-id="dca39-280">Get-AzStorageFileContent</span></span>
+* <span data-ttu-id="dca39-281">Korrigera problem med uppladdningen av blockblob med egenskaper/metadata för ImmutabilityPolicy i containrar.</span><span class="sxs-lookup"><span data-stu-id="dca39-281">Fix Upload block blob with properties/metadate fail on container enabled ImmutabilityPolicy.</span></span>
+    -  <span data-ttu-id="dca39-282">Set-AzStorageBlobContent</span><span class="sxs-lookup"><span data-stu-id="dca39-282">Set-AzStorageBlobContent</span></span>
+* <span data-ttu-id="dca39-283">Stöd för hantering av Azure-filresurser med API för hanteringsplan</span><span class="sxs-lookup"><span data-stu-id="dca39-283">Support manage Azure File shares with Management plane API</span></span>
+    -  <span data-ttu-id="dca39-284">New-AzRmStorageShare</span><span class="sxs-lookup"><span data-stu-id="dca39-284">New-AzRmStorageShare</span></span>
+    -  <span data-ttu-id="dca39-285">Get-AzRmStorageShare</span><span class="sxs-lookup"><span data-stu-id="dca39-285">Get-AzRmStorageShare</span></span>
+    -  <span data-ttu-id="dca39-286">Update-AzRmStorageShare</span><span class="sxs-lookup"><span data-stu-id="dca39-286">Update-AzRmStorageShare</span></span>
+    -  <span data-ttu-id="dca39-287">Remove-AzRmStorageShare</span><span class="sxs-lookup"><span data-stu-id="dca39-287">Remove-AzRmStorageShare</span></span>
 
-#### <a name="azwebsites"></a><span data-ttu-id="7b0da-288">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="7b0da-288">Az.Websites</span></span>
-* <span data-ttu-id="7b0da-289">Åtgärda problemet där webbapp-taggar togs bort när appen migrerades till en ny ASP</span><span class="sxs-lookup"><span data-stu-id="7b0da-289">Fixing issue where webapp Tags were getting deleted when migrating App to new ASP</span></span>
-* <span data-ttu-id="7b0da-290">Åtgärda Publish-AzureWebapp så att det fungerar i Linux och Windows</span><span class="sxs-lookup"><span data-stu-id="7b0da-290">Fixing the Publish-AzureWebapp to work across Linux and windows</span></span>
-* <span data-ttu-id="7b0da-291">Uppdatera exempel i ”Get-AzWebAppPublishingProfile”-referensdokumentationen</span><span class="sxs-lookup"><span data-stu-id="7b0da-291">Update example in 'Get-AzWebAppPublishingProfile' reference documentation</span></span>
+#### <a name="azwebsites"></a><span data-ttu-id="dca39-288">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="dca39-288">Az.Websites</span></span>
+* <span data-ttu-id="dca39-289">Åtgärda problemet där webbapp-taggar togs bort när appen migrerades till en ny ASP</span><span class="sxs-lookup"><span data-stu-id="dca39-289">Fixing issue where webapp Tags were getting deleted when migrating App to new ASP</span></span>
+* <span data-ttu-id="dca39-290">Åtgärda Publish-AzureWebapp så att det fungerar i Linux och Windows</span><span class="sxs-lookup"><span data-stu-id="dca39-290">Fixing the Publish-AzureWebapp to work across Linux and windows</span></span>
+* <span data-ttu-id="dca39-291">Uppdatera exempel i ”Get-AzWebAppPublishingProfile”-referensdokumentationen</span><span class="sxs-lookup"><span data-stu-id="dca39-291">Update example in 'Get-AzWebAppPublishingProfile' reference documentation</span></span>
 
-## <a name="260---august-2019"></a><span data-ttu-id="7b0da-292">2.6.0 – augusti 2019</span><span class="sxs-lookup"><span data-stu-id="7b0da-292">2.6.0 - August 2019</span></span>
-#### <a name="general"></a><span data-ttu-id="7b0da-293">Allmänt</span><span class="sxs-lookup"><span data-stu-id="7b0da-293">General</span></span>
-* <span data-ttu-id="7b0da-294">Åtgärdade diverse skrivfel i flera moduler</span><span class="sxs-lookup"><span data-stu-id="7b0da-294">Fixed miscellaneous typos across numerous modules</span></span>
+## <a name="260---august-2019"></a><span data-ttu-id="dca39-292">2.6.0 – augusti 2019</span><span class="sxs-lookup"><span data-stu-id="dca39-292">2.6.0 - August 2019</span></span>
+#### <a name="general"></a><span data-ttu-id="dca39-293">Allmänt</span><span class="sxs-lookup"><span data-stu-id="dca39-293">General</span></span>
+* <span data-ttu-id="dca39-294">Åtgärdade diverse skrivfel i flera moduler</span><span class="sxs-lookup"><span data-stu-id="dca39-294">Fixed miscellaneous typos across numerous modules</span></span>
 
-#### <a name="azaccounts"></a><span data-ttu-id="7b0da-295">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="7b0da-295">Az.Accounts</span></span>
-* <span data-ttu-id="7b0da-296">Stöd för användartilldelat MSI i Azure Functions-autentisering (#9479)</span><span class="sxs-lookup"><span data-stu-id="7b0da-296">Support user-assigned MSI in Azure Functiosn Authentication (#9479)</span></span>
+#### <a name="azaccounts"></a><span data-ttu-id="dca39-295">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="dca39-295">Az.Accounts</span></span>
+* <span data-ttu-id="dca39-296">Stöd för användartilldelat MSI i Azure Functions-autentisering (#9479)</span><span class="sxs-lookup"><span data-stu-id="dca39-296">Support user-assigned MSI in Azure Functiosn Authentication (#9479)</span></span>
 
-#### <a name="azaks"></a><span data-ttu-id="7b0da-297">Az.Aks</span><span class="sxs-lookup"><span data-stu-id="7b0da-297">Az.Aks</span></span>
-* <span data-ttu-id="7b0da-298">Åtgärda problem med utdata för "Get-AzAks"</span><span class="sxs-lookup"><span data-stu-id="7b0da-298">Fix issue with output for 'Get-AzAks'</span></span>
-    * <span data-ttu-id="7b0da-299">Mer information här: https://github.com/Azure/azure-powershell/issues/9847</span><span class="sxs-lookup"><span data-stu-id="7b0da-299">More information here: https://github.com/Azure/azure-powershell/issues/9847</span></span>
+#### <a name="azaks"></a><span data-ttu-id="dca39-297">Az.Aks</span><span class="sxs-lookup"><span data-stu-id="dca39-297">Az.Aks</span></span>
+* <span data-ttu-id="dca39-298">Åtgärda problem med utdata för "Get-AzAks"</span><span class="sxs-lookup"><span data-stu-id="dca39-298">Fix issue with output for 'Get-AzAks'</span></span>
+    * <span data-ttu-id="dca39-299">Mer information här: https://github.com/Azure/azure-powershell/issues/9847</span><span class="sxs-lookup"><span data-stu-id="dca39-299">More information here: https://github.com/Azure/azure-powershell/issues/9847</span></span>
 
-#### <a name="azapimanagement"></a><span data-ttu-id="7b0da-300">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="7b0da-300">Az.ApiManagement</span></span>
-* <span data-ttu-id="7b0da-301">Korrigering av problemet https://github.com/Azure/azure-powershell/issues/9351</span><span class="sxs-lookup"><span data-stu-id="7b0da-301">Fix for issue https://github.com/Azure/azure-powershell/issues/9351</span></span>
-    - <span data-ttu-id="7b0da-302">Uppdatera .net-NuGet-versionen, som inte tillämpar begränsningar för productId, apiId och userId</span><span class="sxs-lookup"><span data-stu-id="7b0da-302">Update .net nuget version, which does not enforce restrictions on productId, apiId, groupId and userId</span></span>
-* <span data-ttu-id="7b0da-303">**Get-AzApiManagementProduct** – Lade till stöd för frågekörning mot produkter via API.</span><span class="sxs-lookup"><span data-stu-id="7b0da-303">**Get-AzApiManagementProduct** - Added support for querying products using Api.</span></span>
+#### <a name="azapimanagement"></a><span data-ttu-id="dca39-300">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="dca39-300">Az.ApiManagement</span></span>
+* <span data-ttu-id="dca39-301">Korrigering av problemet https://github.com/Azure/azure-powershell/issues/9351</span><span class="sxs-lookup"><span data-stu-id="dca39-301">Fix for issue https://github.com/Azure/azure-powershell/issues/9351</span></span>
+    - <span data-ttu-id="dca39-302">Uppdatera .net-NuGet-versionen, som inte tillämpar begränsningar för productId, apiId och userId</span><span class="sxs-lookup"><span data-stu-id="dca39-302">Update .net nuget version, which does not enforce restrictions on productId, apiId, groupId and userId</span></span>
+* <span data-ttu-id="dca39-303">**Get-AzApiManagementProduct** – Lade till stöd för frågekörning mot produkter via API.</span><span class="sxs-lookup"><span data-stu-id="dca39-303">**Get-AzApiManagementProduct** - Added support for querying products using Api.</span></span>
   https://github.com/Azure/azure-powershell/issues/9482
-* <span data-ttu-id="7b0da-304">**New-AzApiManagementApiRevision** – Korrigering för problem där ApiRevisionDescription inte angavs vid skapande av ny API-revision https://github.com/Azure/azure-powershell/issues/9752</span><span class="sxs-lookup"><span data-stu-id="7b0da-304">**New-AzApiManagementApiRevision** - Fix for issue where ApiRevisionDescription was not being set when creating new api revision https://github.com/Azure/azure-powershell/issues/9752</span></span>
-* <span data-ttu-id="7b0da-305">Åtgärdade skrivfel i modellen "PsApiManagementOAuth2AuthrozationServer" till "PsApiManagementOAuth2AuthorizationServer"</span><span class="sxs-lookup"><span data-stu-id="7b0da-305">Fixed typo in model 'PsApiManagementOAuth2AuthrozationServer' to 'PsApiManagementOAuth2AuthorizationServer'</span></span>
-
-#### <a name="azbatch"></a><span data-ttu-id="7b0da-306">Az.Batch</span><span class="sxs-lookup"><span data-stu-id="7b0da-306">Az.Batch</span></span>
-* <span data-ttu-id="7b0da-307">Åtgärdade skrivfel i hjälpmeddelande och dokumentation till att skriva Windows med versaler</span><span class="sxs-lookup"><span data-stu-id="7b0da-307">Fixed typo in help message and documentation to capitalize Windows</span></span>
-
-#### <a name="azcdn"></a><span data-ttu-id="7b0da-308">Az.Cdn</span><span class="sxs-lookup"><span data-stu-id="7b0da-308">Az.Cdn</span></span>
-* <span data-ttu-id="7b0da-309">Åtgärdade skrivfel i CDN-modulens konverteringshjälp</span><span class="sxs-lookup"><span data-stu-id="7b0da-309">Fixed a typo in CDN module conversion helper</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="7b0da-310">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="7b0da-310">Az.Compute</span></span>
-* <span data-ttu-id="7b0da-311">Lägg till VmssId i New-AzVMConfig-cmdleten</span><span class="sxs-lookup"><span data-stu-id="7b0da-311">Add VmssId to New-AzVMConfig cmdlet</span></span>
-* <span data-ttu-id="7b0da-312">Lägg till parametrarna TerminateScheduledEvents och TerminateScheduledEventNotBeforeTimeoutInMinutes i New-AzVmssConfig och Update-AzVmss</span><span class="sxs-lookup"><span data-stu-id="7b0da-312">Add TerminateScheduledEvents and TerminateScheduledEventNotBeforeTimeoutInMinutes parameters to New-AzVmssConfig and Update-AzVmss</span></span>
-* <span data-ttu-id="7b0da-313">Lägg till egenskapen HyperVGeneration till avbildningsobjekt för virtuell dator</span><span class="sxs-lookup"><span data-stu-id="7b0da-313">Add HyperVGeneration property to VM image object</span></span>
-* <span data-ttu-id="7b0da-314">Lägg till funktioner för Host och HostGroup</span><span class="sxs-lookup"><span data-stu-id="7b0da-314">Add Host and HostGroup features</span></span>
-    - <span data-ttu-id="7b0da-315">Nya cmdletar:   New-AzHostGroup   New-AzHost   Get-AzHostGroup   Get-AzHost   Remove-AzHostGroup   Remove-AzHost</span><span class="sxs-lookup"><span data-stu-id="7b0da-315">New cmdlets:   New-AzHostGroup   New-AzHost   Get-AzHostGroup   Get-AzHost   Remove-AzHostGroup   Remove-AzHost</span></span>
-    - <span data-ttu-id="7b0da-316">HostId-parametern läggs till i New-AzVMConfig och New-AzVM</span><span class="sxs-lookup"><span data-stu-id="7b0da-316">HostId parameter is added to New-AzVMConfig and New-AzVM</span></span>
-* <span data-ttu-id="7b0da-317">Uppdatera exempel i "Invoke-AzVMRunCommand"-dokumentationen till att använda rätt parameternamn</span><span class="sxs-lookup"><span data-stu-id="7b0da-317">Update example in 'Invoke-AzVMRunCommand' documentation to use correct parameter name</span></span>
-* <span data-ttu-id="7b0da-318">Uppdatera "-VolumeType"-beskrivningen i referensdokumentationen för "set-AzVMDiskEncryptionExtension" och "set-AzVmssDiskEncryptionExtension"</span><span class="sxs-lookup"><span data-stu-id="7b0da-318">Update '-VolumeType' description in 'Set-AzVMDiskEncryptionExtension' and 'Set-AzVmssDiskEncryptionExtension' reference documentation</span></span>
-
-#### <a name="azdatafactory"></a><span data-ttu-id="7b0da-319">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="7b0da-319">Az.DataFactory</span></span>
-* <span data-ttu-id="7b0da-320">Åtgärda skrivfel till att använda versaler för "Windows" i "New-AzDataFactoryEncryptValue"-dokumentationen</span><span class="sxs-lookup"><span data-stu-id="7b0da-320">Fix typo to capitalize 'Windows' in 'New-AzDataFactoryEncryptValue' documentation</span></span>
-* <span data-ttu-id="7b0da-321">Uppdaterade ADF .Net SDK-versionen till 4.1.2</span><span class="sxs-lookup"><span data-stu-id="7b0da-321">Updated ADF .Net SDK version to 4.1.2</span></span>
-* <span data-ttu-id="7b0da-322">Lägg till parametrarna "DataProxyIntegrationRuntimeName", "DataProxyStagingLinkedServiceName" och "DataProxyStagingPath" för "Set-AzureRmDataFactoryV2IntegrationRuntime"-cmd för att aktivera konfiguration av lokalt installerad integrationskörning som en proxy för SSIS Integration Runtime</span><span class="sxs-lookup"><span data-stu-id="7b0da-322">Add parameter 'DataProxyIntegrationRuntimeName', 'DataProxyStagingLinkedServiceName' and 'DataProxyStagingPath' for 'Set-AzureRmDataFactoryV2IntegrationRuntime' cmd to enable set up Self-Hosted Integration Runtime as a proxy for SSIS Integration Runtime</span></span>
-* <span data-ttu-id="7b0da-323">Uppdaterade PSTriggerRun till att visa utlöst pipeline, meddelande och egenskaper samt PSActivityRun till att visa aktivitetstypen</span><span class="sxs-lookup"><span data-stu-id="7b0da-323">Updated PSTriggerRun to show the triggered pipelines, message and properties, and PSActivityRun to show the activity type</span></span>
-
-#### <a name="azdatalakestore"></a><span data-ttu-id="7b0da-324">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="7b0da-324">Az.DataLakeStore</span></span>
-* <span data-ttu-id="7b0da-325">Korrigering av frysning av Get-DataLakeStoreDeletedItem för fel eller fjärrundantag.</span><span class="sxs-lookup"><span data-stu-id="7b0da-325">Fix hanging of Get-DataLakeStoreDeletedItem for any errors or remote exceptions.</span></span>
-
-#### <a name="azeventhub"></a><span data-ttu-id="7b0da-326">Az.EventHub</span><span class="sxs-lookup"><span data-stu-id="7b0da-326">Az.EventHub</span></span>
-* <span data-ttu-id="7b0da-327">Korrigering av problem #9658 : Skrivfel i parametern VirtualNteworkRule i Set-AzEventHubNetworkRuleSet</span><span class="sxs-lookup"><span data-stu-id="7b0da-327">Fix for issue #9658 : Typo VirtualNteworkRule parameter in Set-AzEventHubNetworkRuleSet</span></span>
-* <span data-ttu-id="7b0da-328">Korrigering av problem #9558 : Set-AzEventHubNamespace använder PATCH i stället för PUT</span><span class="sxs-lookup"><span data-stu-id="7b0da-328">Fix for issue #9558 : Set-AzEventHubNamespace is using PATCH instead of PUT</span></span>
-* <span data-ttu-id="7b0da-329">lade till parametern EnableKafka i Set-AzEventHubNamespace-cmdleten</span><span class="sxs-lookup"><span data-stu-id="7b0da-329">added EnableKafka parameter to Set-AzEventHubNamespace cmdlet</span></span>
-* <span data-ttu-id="7b0da-330">Korrigering av problem #9786 : kan inte skapa en regel med Endast lyssna-behörighet</span><span class="sxs-lookup"><span data-stu-id="7b0da-330">Fix for issue #9786 : cannot create a rule with Listen only rights</span></span>
-
-#### <a name="azmarketplaceordering"></a><span data-ttu-id="7b0da-331">Az.MarketplaceOrdering</span><span class="sxs-lookup"><span data-stu-id="7b0da-331">Az.MarketplaceOrdering</span></span>
-* <span data-ttu-id="7b0da-332">Åtgärdade skrivfel i dokumentation där "Azure" skrevs helt med gemener</span><span class="sxs-lookup"><span data-stu-id="7b0da-332">Fixed documentation typo where 'Azure' was all lowercase letters</span></span>
-
-#### <a name="azmonitor"></a><span data-ttu-id="7b0da-333">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="7b0da-333">Az.Monitor</span></span>
-* <span data-ttu-id="7b0da-334">Åtgärdade felaktigt parameternamn i hjälpdokumentationen</span><span class="sxs-lookup"><span data-stu-id="7b0da-334">Fixed incorrect parameter name in help documentation</span></span>
-
-#### <a name="aznetwork"></a><span data-ttu-id="7b0da-335">Az.Network</span><span class="sxs-lookup"><span data-stu-id="7b0da-335">Az.Network</span></span>
-* <span data-ttu-id="7b0da-336">Uppdaterade New-AzPrivateLinkServiceIpConfig</span><span class="sxs-lookup"><span data-stu-id="7b0da-336">Updated New-AzPrivateLinkServiceIpConfig</span></span>
-    - <span data-ttu-id="7b0da-337">Gjorde parametern "PublicIpAddress" inaktuell eftersom den aldrig används på serversidan.</span><span class="sxs-lookup"><span data-stu-id="7b0da-337">Deprecated the paramster 'PublicIpAddress' since this is never used in the server side.</span></span>
-    - <span data-ttu-id="7b0da-338">Lade till den valfria parametern "Primary", som anger huruvida den aktuella IP-konfigurationen är den primära.</span><span class="sxs-lookup"><span data-stu-id="7b0da-338">Added one optional parameter 'Primary' that indicate the current ip configuration is primary one or not.</span></span>
-* <span data-ttu-id="7b0da-339">Förbättrade hanteringen av felundantag för begärande från SDK – åtgärdar problemet att tidigare SDK-undantag inte hanteras på rätt sätt, vilket leder till att viktig felinformation inte visas</span><span class="sxs-lookup"><span data-stu-id="7b0da-339">Improved handling of request error exception from SDK   -Fixes the issue that previously SDK exceptions aren't handled correctly which results in key error details not being displayed</span></span>
-* <span data-ttu-id="7b0da-340">Justerade valideringslogiken för IPv6-IP-prefix till att kontrollera korrekt IPv6-prefixlängd.</span><span class="sxs-lookup"><span data-stu-id="7b0da-340">Adjusted validation logic for Ipv6 IP Prefix to check for correct IPv6 prefix length.</span></span> 
-* <span data-ttu-id="7b0da-341">Uppdaterade Get-AzVirtualNetworkSubnetConfig: Lade till parameter som anges till get av undernätets resurs-ID.</span><span class="sxs-lookup"><span data-stu-id="7b0da-341">Updated Get-AzVirtualNetworkSubnetConfig: Added parameter set to get by subnet resource id.</span></span>
-* <span data-ttu-id="7b0da-342">Uppdaterade beskrivningen av parametern Location för AzNetworkServiceTag</span><span class="sxs-lookup"><span data-stu-id="7b0da-342">Updated description of Location parameter for AzNetworkServiceTag</span></span>
-
-#### <a name="azoperationalinsights"></a><span data-ttu-id="7b0da-343">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="7b0da-343">Az.OperationalInsights</span></span>
-* <span data-ttu-id="7b0da-344">Uppdaterade dokumentation för "New-AzOperationalInsightsLinuxSyslogDataSource"</span><span class="sxs-lookup"><span data-stu-id="7b0da-344">Updated documentation for 'New-AzOperationalInsightsLinuxSyslogDataSource'</span></span>
-    - <span data-ttu-id="7b0da-345">Lade till exempel</span><span class="sxs-lookup"><span data-stu-id="7b0da-345">Added example</span></span>
-    - <span data-ttu-id="7b0da-346">Uppdaterade beskrivningen av parametern "-Name"</span><span class="sxs-lookup"><span data-stu-id="7b0da-346">Updated description for '-Name' parameter</span></span>
-* <span data-ttu-id="7b0da-347">Lade till ett exempel för New-AzOperationalInsightsWindowsEventDataSource</span><span class="sxs-lookup"><span data-stu-id="7b0da-347">Added an example for New-AzOperationalInsightsWindowsEventDataSource</span></span>
-* <span data-ttu-id="7b0da-348">Ändrade beskrivningen av parametern -Name för New-AzOperationalInsightsWindowsEventDataSource</span><span class="sxs-lookup"><span data-stu-id="7b0da-348">Changed the description of the -Name parameter for New-AzOperationalInsightsWindowsEventDataSource</span></span>
-
-#### <a name="azrecoveryservices"></a><span data-ttu-id="7b0da-349">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="7b0da-349">Az.RecoveryServices</span></span>
-* <span data-ttu-id="7b0da-350">Uppdatera "Get-AzRecoveryServicesBackupJobDetail.md"</span><span class="sxs-lookup"><span data-stu-id="7b0da-350">Update 'Get-AzRecoveryServicesBackupJobDetail.md'</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="7b0da-351">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="7b0da-351">Az.Resources</span></span>
-* <span data-ttu-id="7b0da-352">Lägg till stöd för den nya API-versionen från 2019-05-10 för Microsoft.Resource</span><span class="sxs-lookup"><span data-stu-id="7b0da-352">Add support for new api version 2019-05-10 for Microsoft.Resource</span></span>
-    - <span data-ttu-id="7b0da-353">Lägg till stöd för "copy.count = 0" för variabler, resurser och egenskaper</span><span class="sxs-lookup"><span data-stu-id="7b0da-353">Add support for 'copy.count = 0' for variables, resources and properties</span></span>
-    - <span data-ttu-id="7b0da-354">Resurser med "condition = false" eller "copy.count = 0" tas bort i complete-läget</span><span class="sxs-lookup"><span data-stu-id="7b0da-354">Resources with 'condition = false' or 'copy.count = 0' will be deleted in complete mode</span></span>
-* <span data-ttu-id="7b0da-355">Lägg till ett exempel på tilldelning av princip på prenumerationsnivå i hjälpdokumentationen</span><span class="sxs-lookup"><span data-stu-id="7b0da-355">Add an example of assigning policy at subscription level to help doc</span></span>
-
-#### <a name="azservicebus"></a><span data-ttu-id="7b0da-356">Az.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="7b0da-356">Az.ServiceBus</span></span>
-* <span data-ttu-id="7b0da-357">Korrigering av problem #9658 : Skrivfel i parametern VirtualNetworkRule i set-AzServiceBusNetworkRuleSet</span><span class="sxs-lookup"><span data-stu-id="7b0da-357">Fix for issue #9658 : Typo VirtualNetworkRule parameter in Set-AzServiceBusNetworkRuleSet</span></span>
-* <span data-ttu-id="7b0da-358">Korrigering av problem #9786 : kan inte skapa en regel med Endast lyssna-behörighet</span><span class="sxs-lookup"><span data-stu-id="7b0da-358">Fix for issue #9786 : cannot create a rule with Listen only rights</span></span>
-* <span data-ttu-id="7b0da-359">Lade till det nya kommandot "Test-AzServiceBusNameAvailability" för att kontrollera namntillgängligheten för kö och ämne</span><span class="sxs-lookup"><span data-stu-id="7b0da-359">Added new command 'Test-AzServiceBusNameAvailability' to check the name availability for queue and topic</span></span> 
-
-#### <a name="azservicefabric"></a><span data-ttu-id="7b0da-360">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="7b0da-360">Az.ServiceFabric</span></span>
-* <span data-ttu-id="7b0da-361">Åtgärda buggar med tillägg av nodtyps-cmdlet:</span><span class="sxs-lookup"><span data-stu-id="7b0da-361">Fix add node type cmdlet bugs:</span></span>
-    - <span data-ttu-id="7b0da-362">NullReferenceException-bugg när resursgrupp hade annan vmss som inte är relaterad till Service Fabric-klustret.</span><span class="sxs-lookup"><span data-stu-id="7b0da-362">NullReferenceException bug when resource group had other vmss not related to the service fabric cluster.</span></span> <span data-ttu-id="7b0da-363">Åtgärdar problemet: https://github.com/Azure/azure-powershell/issues/8681</span><span class="sxs-lookup"><span data-stu-id="7b0da-363">Fixes issue: https://github.com/Azure/azure-powershell/issues/8681</span></span>
-    - <span data-ttu-id="7b0da-364">Åtgärda bugg där cmdleten misslyckades om virtualNetwork var i en annan resursgrupp än klustret.</span><span class="sxs-lookup"><span data-stu-id="7b0da-364">Fix bug where cmdlet failed if virtualNetwork was in a different resource group that the cluster.</span></span> <span data-ttu-id="7b0da-365">Åtgärdar problemet: https://github.com/Azure/azure-powershell/issues/8407</span><span class="sxs-lookup"><span data-stu-id="7b0da-365">fixes issue: https://github.com/Azure/azure-powershell/issues/8407</span></span>
-    - <span data-ttu-id="7b0da-366">AzServiceFabricApplicationCertificate-cmdleten görs inaktuell</span><span class="sxs-lookup"><span data-stu-id="7b0da-366">Deprecating Add-AzServiceFabricApplicationCertificate cmdlet</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="7b0da-367">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="7b0da-367">Az.Sql</span></span>
-* <span data-ttu-id="7b0da-368">Uppdatera dokumentation om gamla gransknings-cmdletar.</span><span class="sxs-lookup"><span data-stu-id="7b0da-368">Update documentation of old Auditing cmdlets.</span></span>
-
-#### <a name="azstorage"></a><span data-ttu-id="7b0da-369">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="7b0da-369">Az.Storage</span></span>
-* <span data-ttu-id="7b0da-370">Uppdatera hjälpen för Get/Close-AzStorageFileHandle genom att lägga till fler scenarier i cmdlet-exempel och uppdatera parameterbeskrivningar</span><span class="sxs-lookup"><span data-stu-id="7b0da-370">Update help for Get/Close-AzStorageFileHandle, by add more scenarios to cmdlet examples and update parameter descriptions</span></span>
-* <span data-ttu-id="7b0da-371">Stöd för StandardBlobTier i uppladdningsblob och kopieringsblob</span><span class="sxs-lookup"><span data-stu-id="7b0da-371">Support StandardBlobTier in upload blob and copy blob</span></span>
-    -  <span data-ttu-id="7b0da-372">Set-AzStorageBlobContent</span><span class="sxs-lookup"><span data-stu-id="7b0da-372">Set-AzStorageBlobContent</span></span>
-    -  <span data-ttu-id="7b0da-373">Start-AzStorageBlobCopy</span><span class="sxs-lookup"><span data-stu-id="7b0da-373">Start-AzStorageBlobCopy</span></span>
-* <span data-ttu-id="7b0da-374">Stöd för rehydratiseringsprioritet i kopieringsblob</span><span class="sxs-lookup"><span data-stu-id="7b0da-374">Support Rehydrate Priority in copy blob</span></span>
-    -  <span data-ttu-id="7b0da-375">Start-AzStorageBlobCopy</span><span class="sxs-lookup"><span data-stu-id="7b0da-375">Start-AzStorageBlobCopy</span></span>
-
-#### <a name="azwebsites"></a><span data-ttu-id="7b0da-376">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="7b0da-376">Az.Websites</span></span>
-* <span data-ttu-id="7b0da-377">Lägg till klargöranden gällande parametern -AppSettings i Set-AzWebApp och Set-AzWebAppSlot</span><span class="sxs-lookup"><span data-stu-id="7b0da-377">Add clarification around -AppSettings parameter in Set-AzWebApp and Set-AzWebAppSlot</span></span>
-
-## <a name="250---july-2019"></a><span data-ttu-id="7b0da-378">2.5.0 – July 2019</span><span class="sxs-lookup"><span data-stu-id="7b0da-378">2.5.0 - July 2019</span></span>
-#### <a name="azaccounts"></a><span data-ttu-id="7b0da-379">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="7b0da-379">Az.Accounts</span></span>
-* <span data-ttu-id="7b0da-380">Uppdatera gemensam kod så att den använder den senaste versionen av ClientRuntime</span><span class="sxs-lookup"><span data-stu-id="7b0da-380">Update common code to use latest version of ClientRuntime</span></span>
-
-#### <a name="azapplicationinsights"></a><span data-ttu-id="7b0da-381">Az.ApplicationInsights</span><span class="sxs-lookup"><span data-stu-id="7b0da-381">Az.ApplicationInsights</span></span>
-* <span data-ttu-id="7b0da-382">Korrigera skrivfel i exempel i dokumentationen för Remove-AzApplicationInsightsApiKey</span><span class="sxs-lookup"><span data-stu-id="7b0da-382">Fix example typo in 'Remove-AzApplicationInsightsApiKey' documentation</span></span> 
-
-#### <a name="azautomation"></a><span data-ttu-id="7b0da-383">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="7b0da-383">Az.Automation</span></span>
-* <span data-ttu-id="7b0da-384">Korrigera skrivfel i resurssträng</span><span class="sxs-lookup"><span data-stu-id="7b0da-384">Fix typo in resource string</span></span> 
-
-#### <a name="azcognitiveservices"></a><span data-ttu-id="7b0da-385">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="7b0da-385">Az.CognitiveServices</span></span>
-* <span data-ttu-id="7b0da-386">Stöd för NetworkRuleSet har lagts till.</span><span class="sxs-lookup"><span data-stu-id="7b0da-386">Added NetworkRuleSet support.</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="7b0da-387">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="7b0da-387">Az.Compute</span></span>
-* <span data-ttu-id="7b0da-388">Lägg till saknade egenskaper (ComputerName, OsName, OsVersion och HyperVGeneration) för visningsobjekt i den virtuella datorinstansen.</span><span class="sxs-lookup"><span data-stu-id="7b0da-388">Add missing properties (ComputerName, OsName, OsVersion and HyperVGeneration) of VM instance view object.</span></span>
-
-#### <a name="azcontainerregistry"></a><span data-ttu-id="7b0da-389">Az.ContainerRegistry</span><span class="sxs-lookup"><span data-stu-id="7b0da-389">Az.ContainerRegistry</span></span>
-* <span data-ttu-id="7b0da-390">Åtgärda skrivfel i Remove-AzContainerRegistryReplication för parametern Replication</span><span class="sxs-lookup"><span data-stu-id="7b0da-390">Fix typo in Remove-AzContainerRegistryReplication for Replication parameter</span></span>
-    - <span data-ttu-id="7b0da-391">Mer information finns här: https://github.com/Azure/azure-powershell/issues/9633</span><span class="sxs-lookup"><span data-stu-id="7b0da-391">More information here https://github.com/Azure/azure-powershell/issues/9633</span></span>
-
-#### <a name="azdatafactory"></a><span data-ttu-id="7b0da-392">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="7b0da-392">Az.DataFactory</span></span>
-* <span data-ttu-id="7b0da-393">ADF .Net SDK-versionen har uppdaterats till 4.1.0</span><span class="sxs-lookup"><span data-stu-id="7b0da-393">Updated ADF .Net SDK version to 4.1.0</span></span>
-* <span data-ttu-id="7b0da-394">Korrigera skrivfel i dokumentationen för Get-AzDataFactoryV2PipelineRun</span><span class="sxs-lookup"><span data-stu-id="7b0da-394">Fix typo in documentation for 'Get-AzDataFactoryV2PipelineRun'</span></span>
-
-#### <a name="azeventhub"></a><span data-ttu-id="7b0da-395">Az.EventHub</span><span class="sxs-lookup"><span data-stu-id="7b0da-395">Az.EventHub</span></span>
-* <span data-ttu-id="7b0da-396">Ny cmmdlet har lagts till för att skapa SAS-token: New-AzEventHubAuthorizationRuleSASToken</span><span class="sxs-lookup"><span data-stu-id="7b0da-396">Added new cmmdlet added for generating SAS token : New-AzEventHubAuthorizationRuleSASToken</span></span>
-* <span data-ttu-id="7b0da-397">verifierings- och felmeddelande har lagts till för authorizationrules-rättigheter om endast "hantera" har tilldelats</span><span class="sxs-lookup"><span data-stu-id="7b0da-397">added verification and error message for authorizationrules rights if only 'Manage' is assigned</span></span>
-
-#### <a name="azkeyvault"></a><span data-ttu-id="7b0da-398">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="7b0da-398">Az.KeyVault</span></span>
-* <span data-ttu-id="7b0da-399">Stöd har lagts till för att ange KeySize för certifikatprinciper</span><span class="sxs-lookup"><span data-stu-id="7b0da-399">Added support to specify the KeySize for Certificate Policies</span></span>
-
-#### <a name="azlogicapp"></a><span data-ttu-id="7b0da-400">Az.LogicApp</span><span class="sxs-lookup"><span data-stu-id="7b0da-400">Az.LogicApp</span></span>
-* <span data-ttu-id="7b0da-401">Korrigering för Get-AzIntegrationAccountMap för att lista alla mappningstyper</span><span class="sxs-lookup"><span data-stu-id="7b0da-401">Fix for Get-AzIntegrationAccountMap to list all map types</span></span>
-    - <span data-ttu-id="7b0da-402">Ny MapType-parameter har lagts till för filtrering</span><span class="sxs-lookup"><span data-stu-id="7b0da-402">Added new MapType parameter for filtering</span></span>
-
-#### <a name="azmanagedservices"></a><span data-ttu-id="7b0da-403">Az.ManagedServices</span><span class="sxs-lookup"><span data-stu-id="7b0da-403">Az.ManagedServices</span></span>
-* <span data-ttu-id="7b0da-404">Stöd för API-versionen 2019-06-01 (GA) har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-404">Added support for api version 2019-06-01 (GA)</span></span>
-
-#### <a name="aznetwork"></a><span data-ttu-id="7b0da-405">Az.Network</span><span class="sxs-lookup"><span data-stu-id="7b0da-405">Az.Network</span></span>
-* <span data-ttu-id="7b0da-406">Lägg till stöd för privat slutpunkt och privat länktjänst</span><span class="sxs-lookup"><span data-stu-id="7b0da-406">Add support for private endpoint and private link service</span></span>
-    - <span data-ttu-id="7b0da-407">Nya cmdletar</span><span class="sxs-lookup"><span data-stu-id="7b0da-407">New cmdlets</span></span>
-        - <span data-ttu-id="7b0da-408">Set-AzPrivateEndpoint</span><span class="sxs-lookup"><span data-stu-id="7b0da-408">Set-AzPrivateEndpoint</span></span>
-        - <span data-ttu-id="7b0da-409">Set-AzPrivateLinkService</span><span class="sxs-lookup"><span data-stu-id="7b0da-409">Set-AzPrivateLinkService</span></span>
-        - <span data-ttu-id="7b0da-410">Approve-AzPrivateEndpointConnection</span><span class="sxs-lookup"><span data-stu-id="7b0da-410">Approve-AzPrivateEndpointConnection</span></span>
-        - <span data-ttu-id="7b0da-411">Deny-AzPrivateEndpointConnection</span><span class="sxs-lookup"><span data-stu-id="7b0da-411">Deny-AzPrivateEndpointConnection</span></span>
-        - <span data-ttu-id="7b0da-412">Get-AzPrivateEndpointConnection</span><span class="sxs-lookup"><span data-stu-id="7b0da-412">Get-AzPrivateEndpointConnection</span></span>
-        - <span data-ttu-id="7b0da-413">Remove-AzPrivateEndpointConnection</span><span class="sxs-lookup"><span data-stu-id="7b0da-413">Remove-AzPrivateEndpointConnection</span></span>
-        - <span data-ttu-id="7b0da-414">Test-AzPrivateLinkServiceVisibility</span><span class="sxs-lookup"><span data-stu-id="7b0da-414">Test-AzPrivateLinkServiceVisibility</span></span>
-        - <span data-ttu-id="7b0da-415">Get-AzAutoApprovedPrivateLinkService</span><span class="sxs-lookup"><span data-stu-id="7b0da-415">Get-AzAutoApprovedPrivateLinkService</span></span>
-* <span data-ttu-id="7b0da-416">Nedanstående kommandon för funktionen har uppdaterats: Flaggan PrivateEndpointNetworkPolicies/PrivateLinkServiceNetworkPolicies på undernätet i VirtualNetwork</span><span class="sxs-lookup"><span data-stu-id="7b0da-416">Updated below commands for feature: PrivateEndpointNetworkPolicies/PrivateLinkServiceNetworkPolicies flag on Subnet in Virtualnetwork</span></span>
-    - <span data-ttu-id="7b0da-417">Uppdaterade New-AzVirtualNetworkSubnetConfig/Set-AzVirtualNetworkSubnetConfig/Add-AzVirtualNetworkSubnetConfig</span><span class="sxs-lookup"><span data-stu-id="7b0da-417">Updated New-AzVirtualNetworkSubnetConfig/Set-AzVirtualNetworkSubnetConfig/Add-AzVirtualNetworkSubnetConfig</span></span>
-        - <span data-ttu-id="7b0da-418">Valfri parameter har lagts till – PrivateEndpointNetworkPoliciesFlag som konfigurerar huruvida nätverksprinciper ska tillämpas på en privat slutpunkt i det här undernätet.</span><span class="sxs-lookup"><span data-stu-id="7b0da-418">Added optional parameter -PrivateEndpointNetworkPoliciesFlag that configures whether to apply network policies on private endpoint in this subnet.</span></span>
-        - <span data-ttu-id="7b0da-419">Valfri parameter har lagts till – PrivateLinkServiceNetworkPoliciesFlag som konfigurerar huruvida nätverksprinciper ska tillämpas på en privat länktjänst i det här undernätet.</span><span class="sxs-lookup"><span data-stu-id="7b0da-419">Added optional parameter -PrivateLinkServiceNetworkPoliciesFlag that configures whether to apply network policies network policies on private link service in this subnet.</span></span>
-* <span data-ttu-id="7b0da-420">AzPrivateLinkService för cmdlet-parametern ServiceName har bytt namn till Name med aliaset ServiceName för bakåtkompatibilitet</span><span class="sxs-lookup"><span data-stu-id="7b0da-420">AzPrivateLinkService's cmdlet parameter 'ServiceName' was renamed to 'Name' with an alias 'ServiceName' for backward compatibility</span></span>
-* <span data-ttu-id="7b0da-421">Aktivera ICMP-protokoll för konfiguration av nätverkssäkerhetsregler</span><span class="sxs-lookup"><span data-stu-id="7b0da-421">Enable ICMP protocol for network security rule configurations</span></span>
-    - <span data-ttu-id="7b0da-422">Uppdaterade cmdletar</span><span class="sxs-lookup"><span data-stu-id="7b0da-422">Updated cmdlets</span></span>
-        - <span data-ttu-id="7b0da-423">Add-AzNetworkSecurityRuleConfig</span><span class="sxs-lookup"><span data-stu-id="7b0da-423">Add-AzNetworkSecurityRuleConfig</span></span>
-        - <span data-ttu-id="7b0da-424">New-AzNetworkSecurityRuleConfig</span><span class="sxs-lookup"><span data-stu-id="7b0da-424">New-AzNetworkSecurityRuleConfig</span></span>
-        - <span data-ttu-id="7b0da-425">Set-AzNetworkSecurityRuleConfig</span><span class="sxs-lookup"><span data-stu-id="7b0da-425">Set-AzNetworkSecurityRuleConfig</span></span>
-* <span data-ttu-id="7b0da-426">Lägg till ConnectionProtocolType (Ikev1/Ikev2) som en konfigurerbar parameter för New-AzVirtualNetworkGatewayConnection</span><span class="sxs-lookup"><span data-stu-id="7b0da-426">Add ConnectionProtocolType (Ikev1/Ikev2) as a configurable parameter for New-AzVirtualNetworkGatewayConnection</span></span>
-* <span data-ttu-id="7b0da-427">Lägg till PrivateIpAddressVersion i LoadBalancerFrontendIpConfiguration</span><span class="sxs-lookup"><span data-stu-id="7b0da-427">Add PrivateIpAddressVersion in LoadBalancerFrontendIpConfiguration</span></span>
-    - <span data-ttu-id="7b0da-428">Uppdaterad cmdlet:</span><span class="sxs-lookup"><span data-stu-id="7b0da-428">Updated cmdlet:</span></span>
-        - <span data-ttu-id="7b0da-429">New-AzLoadBalancerFrontendIpConfig</span><span class="sxs-lookup"><span data-stu-id="7b0da-429">New-AzLoadBalancerFrontendIpConfig</span></span>
-        - <span data-ttu-id="7b0da-430">Add-AzLoadBalancerFrontendIpConfig</span><span class="sxs-lookup"><span data-stu-id="7b0da-430">Add-AzLoadBalancerFrontendIpConfig</span></span>
-        - <span data-ttu-id="7b0da-431">Set-AzLoadBalancerFrontendIpConfig</span><span class="sxs-lookup"><span data-stu-id="7b0da-431">Set-AzLoadBalancerFrontendIpConfig</span></span>
-* <span data-ttu-id="7b0da-432">Uppdatering av Application Gateway-kommandot New-AzApplicationGatewayProbeConfig för stöd av anpassad port i Probe</span><span class="sxs-lookup"><span data-stu-id="7b0da-432">Application Gateway New-AzApplicationGatewayProbeConfig command update for supporting custom port in Probe</span></span>
-    - <span data-ttu-id="7b0da-433">Uppdaterade New-AzApplicationGatewayProbeConfig: Den valfria parametern Port som används för avsökning i serverdelen har lagts till.</span><span class="sxs-lookup"><span data-stu-id="7b0da-433">Updated New-AzApplicationGatewayProbeConfig: Added optional parameter Port which is used for probing backend server.</span></span> <span data-ttu-id="7b0da-434">Denna parameter gäller för SKU:erna Standard_V2 och WAF_V2.</span><span class="sxs-lookup"><span data-stu-id="7b0da-434">This parameter is applicable for Standard_V2 and WAF_V2 SKU.</span></span>
-
-#### <a name="azoperationalinsights"></a><span data-ttu-id="7b0da-435">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="7b0da-435">Az.OperationalInsights</span></span>
-* <span data-ttu-id="7b0da-436">Uppdaterade standardversionen för sparade sökningar till 1.</span><span class="sxs-lookup"><span data-stu-id="7b0da-436">Updated default version for saved searches to be 1.</span></span> 
-* <span data-ttu-id="7b0da-437">Åtgärdade hantering av anpassad log null regex</span><span class="sxs-lookup"><span data-stu-id="7b0da-437">Fixed custom log null regex handling</span></span>
-
-#### <a name="azrecoveryservices"></a><span data-ttu-id="7b0da-438">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="7b0da-438">Az.RecoveryServices</span></span>
-* <span data-ttu-id="7b0da-439">Uppdatera Get-AzRecoveryServicesBackupJob.md</span><span class="sxs-lookup"><span data-stu-id="7b0da-439">Update 'Get-AzRecoveryServicesBackupJob.md'</span></span>
-* <span data-ttu-id="7b0da-440">Uppdatera Get-AzRecoveryServicesBackupContainer.md</span><span class="sxs-lookup"><span data-stu-id="7b0da-440">Update 'Get-AzRecoveryServicesBackupContainer.md'</span></span>
-* <span data-ttu-id="7b0da-441">Uppdatera Get-AzRecoveryServicesVault.md</span><span class="sxs-lookup"><span data-stu-id="7b0da-441">Update 'Get-AzRecoveryServicesVault.md'</span></span>
-* <span data-ttu-id="7b0da-442">Uppdatera Wait-AzRecoveryServicesBackupJob.md</span><span class="sxs-lookup"><span data-stu-id="7b0da-442">Update 'Wait-AzRecoveryServicesBackupJob.md'</span></span>
-* <span data-ttu-id="7b0da-443">Uppdatera Set-AzRecoveryServicesVaultContext.md</span><span class="sxs-lookup"><span data-stu-id="7b0da-443">Update 'Set-AzRecoveryServicesVaultContext.md'</span></span>
-* <span data-ttu-id="7b0da-444">Uppdatera Get-AzRecoveryServicesBackupItem.md</span><span class="sxs-lookup"><span data-stu-id="7b0da-444">Update 'Get-AzRecoveryServicesBackupItem.md'</span></span>
-* <span data-ttu-id="7b0da-445">Uppdatera Get-AzRecoveryServicesBackupRecoveryPoint.md</span><span class="sxs-lookup"><span data-stu-id="7b0da-445">Update 'Get-AzRecoveryServicesBackupRecoveryPoint.md'</span></span>
-* <span data-ttu-id="7b0da-446">Uppdatera Restore-AzRecoveryServicesBackupItem.md</span><span class="sxs-lookup"><span data-stu-id="7b0da-446">Update 'Restore-AzRecoveryServicesBackupItem.md'</span></span>
-* <span data-ttu-id="7b0da-447">Uppdaterat tjänstanrop för avregistrering av container för Azure-filresurs</span><span class="sxs-lookup"><span data-stu-id="7b0da-447">Updated service call for Unregistering container for Azure File Share</span></span>
-* <span data-ttu-id="7b0da-448">Uppdatera Set-AzRecoveryServicesAsrAlertSetting.md</span><span class="sxs-lookup"><span data-stu-id="7b0da-448">Update 'Set-AzRecoveryServicesAsrAlertSetting.md'</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="7b0da-449">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="7b0da-449">Az.Resources</span></span>
-- <span data-ttu-id="7b0da-450">Ta bort den cmdlet som saknas och som refereras i dokumentationen till New-AzResourceGroupDeployment</span><span class="sxs-lookup"><span data-stu-id="7b0da-450">Remove missing cmdlet referenced in 'New-AzResourceGroupDeployment' documentation</span></span>
-- <span data-ttu-id="7b0da-451">Princip-cmdletar har uppdaterats så att de använder den nya API-versionen 2019-01-01</span><span class="sxs-lookup"><span data-stu-id="7b0da-451">Updated policy cmdlets to use new api version 2019-01-01</span></span>
-
-#### <a name="azservicebus"></a><span data-ttu-id="7b0da-452">Az.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="7b0da-452">Az.ServiceBus</span></span>
-* <span data-ttu-id="7b0da-453">Ny cmmdlet har lagts till för att skapa SAS-token: New-AzServiceBusAuthorizationRuleSASToken</span><span class="sxs-lookup"><span data-stu-id="7b0da-453">Added new cmmdlet added for generating SAS token : New-AzServiceBusAuthorizationRuleSASToken</span></span>
-* <span data-ttu-id="7b0da-454">verifierings- och felmeddelande har lagts till för authorizationrules-rättigheter om endast "hantera" har tilldelats</span><span class="sxs-lookup"><span data-stu-id="7b0da-454">added verification and error message for authorizationrules rights if only 'Manage' is assigned</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="7b0da-455">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="7b0da-455">Az.Sql</span></span>
-* <span data-ttu-id="7b0da-456">Åtgärda saknade exempel för Set-AzSqlDatabaseSecondary cmdlet</span><span class="sxs-lookup"><span data-stu-id="7b0da-456">Fix missing examples for Set-AzSqlDatabaseSecondary cmdlet</span></span>
-* <span data-ttu-id="7b0da-457">Åtgärda angivna återkommande genomsökningar för bedömning av säkerhetsrisk utan angivna e-postadresser</span><span class="sxs-lookup"><span data-stu-id="7b0da-457">Fix set Vulnerability Assessment recurring scans without providing any email addresses</span></span>
-* <span data-ttu-id="7b0da-458">Korrigera ett skrivfel i ett varningsmeddelande.</span><span class="sxs-lookup"><span data-stu-id="7b0da-458">Fix a small typo in a warining message.</span></span>
-
-#### <a name="azstorage"></a><span data-ttu-id="7b0da-459">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="7b0da-459">Az.Storage</span></span>
-* <span data-ttu-id="7b0da-460">Uppdatera exempel i referensdokumentationen för Get-AzStorageAccount så att rätt parameternamn används</span><span class="sxs-lookup"><span data-stu-id="7b0da-460">Update example in reference documentation for 'Get-AzStorageAccount' to use correct parameter name</span></span>
-
-#### <a name="azstoragesync"></a><span data-ttu-id="7b0da-461">Az.StorageSync</span><span class="sxs-lookup"><span data-stu-id="7b0da-461">Az.StorageSync</span></span>
-* <span data-ttu-id="7b0da-462">Lägger till cmdleten Invoke-AzStorageSyncChangeDetection.</span><span class="sxs-lookup"><span data-stu-id="7b0da-462">Adding Invoke-AzStorageSyncChangeDetection cmdlet.</span></span>
-* <span data-ttu-id="7b0da-463">Åtgärda problem 9551 så att TierFilesOlderThanDays föredras</span><span class="sxs-lookup"><span data-stu-id="7b0da-463">Fix Issue 9551 for honoring TierFilesOlderThanDays</span></span>
-
-#### <a name="azwebsites"></a><span data-ttu-id="7b0da-464">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="7b0da-464">Az.Websites</span></span>
-* <span data-ttu-id="7b0da-465">Åtgärdar ett fel där vissa SiteConfig-egenskaper inte returnerades av Get-AzWebApp och Set-AzWebApp</span><span class="sxs-lookup"><span data-stu-id="7b0da-465">Fixing a bug where some SiteConfig properties were not returned by Get-AzWebApp and Set-AzWebApp</span></span>
-* <span data-ttu-id="7b0da-466">Lägger till en ny platsparameter för Get-AzDeletedWebApp och Restore-AzDeletedWebApp</span><span class="sxs-lookup"><span data-stu-id="7b0da-466">Adds a new Location parameter to Get-AzDeletedWebApp and Restore-AzDeletedWebApp</span></span>
-* <span data-ttu-id="7b0da-467">Åtgärdar ett fel i kloning av webbapp-platser som använder New-AzWebApp-IncludeSourceWebAppSlots</span><span class="sxs-lookup"><span data-stu-id="7b0da-467">Fixes a bug with cloning web app slots using New-AzWebApp -IncludeSourceWebAppSlots</span></span>
-
-## <a name="240---july-2019"></a><span data-ttu-id="7b0da-468">2.4.0 – juli 2019</span><span class="sxs-lookup"><span data-stu-id="7b0da-468">2.4.0 - July 2019</span></span>
-#### <a name="azaccounts"></a><span data-ttu-id="7b0da-469">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="7b0da-469">Az.Accounts</span></span>
-* <span data-ttu-id="7b0da-470">Lägg till stöd för profil-cmdletar</span><span class="sxs-lookup"><span data-stu-id="7b0da-470">Add support for profile cmdlets</span></span>
-* <span data-ttu-id="7b0da-471">Lägg till stöd för miljöer och dataplaner i genererade cmdletar</span><span class="sxs-lookup"><span data-stu-id="7b0da-471">Add support for environments and data planes in generated cmdlets</span></span>
-* <span data-ttu-id="7b0da-472">Åtgärda bugg där fel slutpunkt i vissa fall användes för cmdletar för dataplaner i Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="7b0da-472">Fix bug where incorrect endpoint was being used in some cases for data plane cmdlets in Windows PowerShell</span></span>
-
-#### <a name="azadvisor"></a><span data-ttu-id="7b0da-473">Az.Advisor</span><span class="sxs-lookup"><span data-stu-id="7b0da-473">Az.Advisor</span></span>
-* <span data-ttu-id="7b0da-474">GA-version av Az.Advisor</span><span class="sxs-lookup"><span data-stu-id="7b0da-474">GA release of Az.Advisor</span></span>
-* <span data-ttu-id="7b0da-475">Den här modulen ingår nu som en del av `Az`-sammanslagningsmodulen</span><span class="sxs-lookup"><span data-stu-id="7b0da-475">This module is now included as a part of the roll-up `Az` module</span></span>
-
-#### <a name="azapimanagement"></a><span data-ttu-id="7b0da-476">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="7b0da-476">Az.ApiManagement</span></span>
-* <span data-ttu-id="7b0da-477">Korrigering av problemet https://github.com/Azure/azure-powershell/issues/8671</span><span class="sxs-lookup"><span data-stu-id="7b0da-477">Fix for issue https://github.com/Azure/azure-powershell/issues/8671</span></span>
-    - <span data-ttu-id="7b0da-478">**Get-AzApiManagementSubscription**</span><span class="sxs-lookup"><span data-stu-id="7b0da-478">**Get-AzApiManagementSubscription**</span></span>
-        - <span data-ttu-id="7b0da-479">Stöd för att fråga prenumerationer efter användare och produkt har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-479">Added support for querying subscriptions by User and Product</span></span>
-        - <span data-ttu-id="7b0da-480">Stöd för att fråga med hjälp av omfång ”/”, ”/apis”, ”/apis/echo-api” har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-480">Added support for querying using Scope '/', '/apis', '/apis/echo-api'</span></span>
-* <span data-ttu-id="7b0da-481">Korrigering av problem https://github.com/Azure/azure-powershell/issues/9307 och https://github.com/Azure/azure-powershell/issues/8432</span><span class="sxs-lookup"><span data-stu-id="7b0da-481">Fix for issue https://github.com/Azure/azure-powershell/issues/9307 and https://github.com/Azure/azure-powershell/issues/8432</span></span>
-    - <span data-ttu-id="7b0da-482">**Import-AzApiManagementApi**</span><span class="sxs-lookup"><span data-stu-id="7b0da-482">**Import-AzApiManagementApi**</span></span>
-        - <span data-ttu-id="7b0da-483">Stöd för att ange ”ApiVersion” och ”ApiVersionSetId” när API:er importeras har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-483">Added support for specifying 'ApiVersion' and 'ApiVersionSetId' when importing Apis</span></span>
-
-#### <a name="azautomation"></a><span data-ttu-id="7b0da-484">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="7b0da-484">Az.Automation</span></span>
-* <span data-ttu-id="7b0da-485">Bugg med cmdleten Set-AzAutomationConnectionFieldValue för att hantera strängvärde har åtgärdats.</span><span class="sxs-lookup"><span data-stu-id="7b0da-485">Fixed Set-AzAutomationConnectionFieldValue cmdlet bug to handle string value.</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="7b0da-486">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="7b0da-486">Az.Compute</span></span>
-* <span data-ttu-id="7b0da-487">Lägg till parametern HyperVGeneration i New-AzImageConfig</span><span class="sxs-lookup"><span data-stu-id="7b0da-487">Add HyperVGeneration parameter to New-AzImageConfig</span></span>
-
-#### <a name="azdatafactory"></a><span data-ttu-id="7b0da-488">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="7b0da-488">Az.DataFactory</span></span>
-* <span data-ttu-id="7b0da-489">Uppdaterar utdata från ADF-cmdletar som hämtar aktivitetskörningar, hämtar pipelinekörningar och hämtar utlösarkörningar för stöd för Select-Object-pipe.</span><span class="sxs-lookup"><span data-stu-id="7b0da-489">Updating the output of get activity runs, get pipeline runs, and get trigger runs ADF cmdlets to support Select-Object pipe.</span></span>
-
-#### <a name="azeventgrid"></a><span data-ttu-id="7b0da-490">Az.EventGrid</span><span class="sxs-lookup"><span data-stu-id="7b0da-490">Az.EventGrid</span></span>
-* <span data-ttu-id="7b0da-491">Korrigera stavfel i dokumentation om ”New-AzEventGridSubscription”</span><span class="sxs-lookup"><span data-stu-id="7b0da-491">Fix typo in 'New-AzEventGridSubscription' documentation</span></span>
-
-#### <a name="aziothub"></a><span data-ttu-id="7b0da-492">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="7b0da-492">Az.IotHub</span></span>
-* <span data-ttu-id="7b0da-493">Lägg till stöd för att återskapa principnycklar för auktorisering.</span><span class="sxs-lookup"><span data-stu-id="7b0da-493">Add support to regenerate authorization policy keys.</span></span>
-
-#### <a name="aznetwork"></a><span data-ttu-id="7b0da-494">Az.Network</span><span class="sxs-lookup"><span data-stu-id="7b0da-494">Az.Network</span></span>
-* <span data-ttu-id="7b0da-495">”RoutingPreference” har lagts till i offentliga IP-taggar</span><span class="sxs-lookup"><span data-stu-id="7b0da-495">Added 'RoutingPreference' to public ip tags</span></span>
-* <span data-ttu-id="7b0da-496">Förbättra exempel för referensdokumentation om ”Get-AzNetworkServiceTag”</span><span class="sxs-lookup"><span data-stu-id="7b0da-496">Improve examples for 'Get-AzNetworkServiceTag' reference documentation</span></span>
-
-#### <a name="azpolicyinsights"></a><span data-ttu-id="7b0da-497">Az.PolicyInsights</span><span class="sxs-lookup"><span data-stu-id="7b0da-497">Az.PolicyInsights</span></span>
-* <span data-ttu-id="7b0da-498">Åtgärda problem med null-referens i Get-AzPolicyState</span><span class="sxs-lookup"><span data-stu-id="7b0da-498">Fix null reference issue in Get-AzPolicyState</span></span>
-    - <span data-ttu-id="7b0da-499">Mer information här: https://github.com/Azure/azure-powershell/issues/9446</span><span class="sxs-lookup"><span data-stu-id="7b0da-499">More information here: https://github.com/Azure/azure-powershell/issues/9446</span></span>
-
-#### <a name="azoperationalinsights"></a><span data-ttu-id="7b0da-500">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="7b0da-500">Az.OperationalInsights</span></span>
-* <span data-ttu-id="7b0da-501">Modellen för CustomLog-datakälla som returneras i Get-AzOperationalInsightsDataSource har åtgärdats</span><span class="sxs-lookup"><span data-stu-id="7b0da-501">Fixed CustomLog datasource model returned in Get-AzOperationalInsightsDataSource</span></span>
-
-#### <a name="azrecoveryservices"></a><span data-ttu-id="7b0da-502">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="7b0da-502">Az.RecoveryServices</span></span>
-* <span data-ttu-id="7b0da-503">Kommandot get-policy för IaaSVM:er har åtgärdats</span><span class="sxs-lookup"><span data-stu-id="7b0da-503">Fix for get-policy command for IaaSVMs</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="7b0da-504">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="7b0da-504">Az.Resources</span></span>
-    - <span data-ttu-id="7b0da-505">Korrigera hjälptext för den översta parametern i Get-AzPolicyState</span><span class="sxs-lookup"><span data-stu-id="7b0da-505">Fix help text for Get-AzPolicyState -Top parameter</span></span>
-    - <span data-ttu-id="7b0da-506">Lägg till växlingsstöd på klientsidan för Get-AzPolicyAlias</span><span class="sxs-lookup"><span data-stu-id="7b0da-506">Add client-side paging support for Get-AzPolicyAlias</span></span>
-    - <span data-ttu-id="7b0da-507">Lägg till nya parametrar för Set-AzPolicyAssignment, -PolicyParameters och -PolicyParametersObject</span><span class="sxs-lookup"><span data-stu-id="7b0da-507">Add new parameters for Set-AzPolicyAssignment, -PolicyParameters and -PolicyParametersObject</span></span>
-    - <span data-ttu-id="7b0da-508">En mängd dokument- och exempeluppdateringar för Policy-cmdletar</span><span class="sxs-lookup"><span data-stu-id="7b0da-508">Handful of doc and example updates for Policy cmdlets</span></span>
-
-#### <a name="azservicebus"></a><span data-ttu-id="7b0da-509">Az.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="7b0da-509">Az.ServiceBus</span></span>
-* <span data-ttu-id="7b0da-510">Korrigering av problem #4938 – New-AzureRmServiceBusQueue returnerar BadRequest vid konfiguration av MaxSizeInMegabytes</span><span class="sxs-lookup"><span data-stu-id="7b0da-510">Fix for issue #4938 - New-AzureRmServiceBusQueue returns BadRequest when setting MaxSizeInMegabytes</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="7b0da-511">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="7b0da-511">Az.Sql</span></span>
-* <span data-ttu-id="7b0da-512">Lägg till cmdletar för instansredundansgrupper från förhandsversion till offentlig version</span><span class="sxs-lookup"><span data-stu-id="7b0da-512">Add Instance Failover Group cmdlets from preview release to public release</span></span>
-* <span data-ttu-id="7b0da-513">Stöd för granskning för Azure SQL Server\Database med nya cmdletar.</span><span class="sxs-lookup"><span data-stu-id="7b0da-513">Support Azure SQL Server\Database Auditing with new cmdlets.</span></span>
-    - <span data-ttu-id="7b0da-514">Set-AzSqlServerAudit</span><span class="sxs-lookup"><span data-stu-id="7b0da-514">Set-AzSqlServerAudit</span></span>
-    - <span data-ttu-id="7b0da-515">Get-AzSqlServerAudit</span><span class="sxs-lookup"><span data-stu-id="7b0da-515">Get-AzSqlServerAudit</span></span>
-    - <span data-ttu-id="7b0da-516">Remove-AzSqlServerAudit</span><span class="sxs-lookup"><span data-stu-id="7b0da-516">Remove-AzSqlServerAudit</span></span>
-    - <span data-ttu-id="7b0da-517">Set-AzSqlDatabaseAudit</span><span class="sxs-lookup"><span data-stu-id="7b0da-517">Set-AzSqlDatabaseAudit</span></span>
-    - <span data-ttu-id="7b0da-518">Get-AzSqlDatabaseAudit</span><span class="sxs-lookup"><span data-stu-id="7b0da-518">Get-AzSqlDatabaseAudit</span></span>
-    - <span data-ttu-id="7b0da-519">Remove-AzSqlDatabaseAudit</span><span class="sxs-lookup"><span data-stu-id="7b0da-519">Remove-AzSqlDatabaseAudit</span></span>
-* <span data-ttu-id="7b0da-520">Ta bort begränsningar för e-post från inställningarna för sårbarhetsbedömning</span><span class="sxs-lookup"><span data-stu-id="7b0da-520">Remove email constraints from Vulnerability Assessment settings</span></span>
-
-#### <a name="azstorage"></a><span data-ttu-id="7b0da-521">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="7b0da-521">Az.Storage</span></span>
-* <span data-ttu-id="7b0da-522">Ändra två parametrar ”-IndexDocument” och ”-ErrorDocument404Path” från ”krävs” till ”valfri” i cmdlet:</span><span class="sxs-lookup"><span data-stu-id="7b0da-522">Change 2 parameters '-IndexDocument' and '-ErrorDocument404Path' from required to optional  in cmdlet:</span></span>
-    -  <span data-ttu-id="7b0da-523">Enable-AzStorageStaticWebsite</span><span class="sxs-lookup"><span data-stu-id="7b0da-523">Enable-AzStorageStaticWebsite</span></span>
-* <span data-ttu-id="7b0da-524">Uppdatera hjälpen för Get-AzStorageBlobContent genom att lägga till ett exempel</span><span class="sxs-lookup"><span data-stu-id="7b0da-524">Update help of Get-AzStorageBlobContent by add an example</span></span>
-* <span data-ttu-id="7b0da-525">Visa mer felinformation när cmdleten misslyckas med StorageException</span><span class="sxs-lookup"><span data-stu-id="7b0da-525">Show more error information when cmdlet failed with StorageException</span></span>
-* <span data-ttu-id="7b0da-526">Stöd för att skapa eller uppdatera lagringskonto med Azure Files AAD DS-autentisering</span><span class="sxs-lookup"><span data-stu-id="7b0da-526">Support create or update Storage account with Azure Files AAD DS Authentication</span></span>
-    -  <span data-ttu-id="7b0da-527">New-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="7b0da-527">New-AzStorageAccount</span></span>
-    -  <span data-ttu-id="7b0da-528">Set-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="7b0da-528">Set-AzStorageAccount</span></span>
-* <span data-ttu-id="7b0da-529">Stöd för att lista eller stänga filreferenser för en filresurs, filkatalog eller en fil</span><span class="sxs-lookup"><span data-stu-id="7b0da-529">Support list or close file handles of a file share, file directory or a file</span></span>
-    - <span data-ttu-id="7b0da-530">Get-AzStorageFileHandle</span><span class="sxs-lookup"><span data-stu-id="7b0da-530">Get-AzStorageFileHandle</span></span>
-    - <span data-ttu-id="7b0da-531">Close-AzStorageFileHandle</span><span class="sxs-lookup"><span data-stu-id="7b0da-531">Close-AzStorageFileHandle</span></span>
-
-#### <a name="azstoragesync"></a><span data-ttu-id="7b0da-532">Az.StorageSync</span><span class="sxs-lookup"><span data-stu-id="7b0da-532">Az.StorageSync</span></span>
-* <span data-ttu-id="7b0da-533">Den här modulen ingår nu som en del av `Az`-sammanslagningsmodulen</span><span class="sxs-lookup"><span data-stu-id="7b0da-533">This module is now included as a part of the roll-up `Az` module</span></span>
-
-## <a name="232---june-2019"></a><span data-ttu-id="7b0da-534">2.3.2 – juni 2019</span><span class="sxs-lookup"><span data-stu-id="7b0da-534">2.3.2 - June 2019</span></span>
-#### <a name="azaccounts"></a><span data-ttu-id="7b0da-535">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="7b0da-535">Az.Accounts</span></span>
-* <span data-ttu-id="7b0da-536">Åtgärda bugg med felaktiga webbadresser som i vissa fall användes för Functions-anrop</span><span class="sxs-lookup"><span data-stu-id="7b0da-536">Fix bug with incorrect URL being used in some cases for Functions calls</span></span>
-    - <span data-ttu-id="7b0da-537">Mer information här: https://github.com/Azure/azure-powershell/issues/8983</span><span class="sxs-lookup"><span data-stu-id="7b0da-537">More information here: https://github.com/Azure/azure-powershell/issues/8983</span></span>
-* <span data-ttu-id="7b0da-538">Åtgärda problem med alias från AzureRM i Az-cmdletar</span><span class="sxs-lookup"><span data-stu-id="7b0da-538">Fix Issue with aliases from AzureRM to Az cmdlets</span></span>
-  - <span data-ttu-id="7b0da-539">Set-AzureRmVMBootDiagnostics -> Set-AzVMBootDiagnostic</span><span class="sxs-lookup"><span data-stu-id="7b0da-539">Set-AzureRmVMBootDiagnostics -> Set-AzVMBootDiagnostic</span></span>
-  - <span data-ttu-id="7b0da-540">Export-AzureRMLogAnalyticThrottledRequests -> Export-AzLogAnalyticThrottledRequest</span><span class="sxs-lookup"><span data-stu-id="7b0da-540">Export-AzureRMLogAnalyticThrottledRequests -> Export-AzLogAnalyticThrottledRequest</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="7b0da-541">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="7b0da-541">Az.Compute</span></span>
-* <span data-ttu-id="7b0da-542">Parameteruppsättningarna New-AzVm och New-AzVmss accepterar nu parametern ”ProximityPlacementGroup”.</span><span class="sxs-lookup"><span data-stu-id="7b0da-542">New-AzVm and New-AzVmss simple parameter sets now accept the 'ProximityPlacementGroup' parameter.</span></span>
-* <span data-ttu-id="7b0da-543">Stavfel i referensdokumentationen för ”New-AzVM” har korrigerats</span><span class="sxs-lookup"><span data-stu-id="7b0da-543">Fix typo in 'New-AzVM' reference documentation</span></span>
-
-#### <a name="azdns"></a><span data-ttu-id="7b0da-544">Az.Dns</span><span class="sxs-lookup"><span data-stu-id="7b0da-544">Az.Dns</span></span>
-* <span data-ttu-id="7b0da-545">Stavfel i hjälpexempel för ”Set-AzDnsZone” har korrigerats.</span><span class="sxs-lookup"><span data-stu-id="7b0da-545">Fixed a typo in 'Set-AzDnsZone' help examples.</span></span>
-
-#### <a name="azeventgrid"></a><span data-ttu-id="7b0da-546">Az.EventGrid</span><span class="sxs-lookup"><span data-stu-id="7b0da-546">Az.EventGrid</span></span>
-* <span data-ttu-id="7b0da-547">Har uppdaterats för att använda API-versionen 2019-06-01.</span><span class="sxs-lookup"><span data-stu-id="7b0da-547">Updated to use the 2019-06-01 API version.</span></span>
-* <span data-ttu-id="7b0da-548">Nya cmdletar:</span><span class="sxs-lookup"><span data-stu-id="7b0da-548">New cmdlets:</span></span>
-    - <span data-ttu-id="7b0da-549">New-AzureRmEventGridDomain</span><span class="sxs-lookup"><span data-stu-id="7b0da-549">New-AzureRmEventGridDomain</span></span>
-        - <span data-ttu-id="7b0da-550">Skapar en ny Azure Event Grid-domän.</span><span class="sxs-lookup"><span data-stu-id="7b0da-550">Creates a new Azure Event Grid Domain.</span></span>
-    - <span data-ttu-id="7b0da-551">Get-AzureRmEventGridDomain</span><span class="sxs-lookup"><span data-stu-id="7b0da-551">Get-AzureRmEventGridDomain</span></span>
-        - <span data-ttu-id="7b0da-552">Hämtar information om en Event Grid-domän eller hämtar en lista med alla Event Grid-domäner i den aktuella Azure-prenumerationen.</span><span class="sxs-lookup"><span data-stu-id="7b0da-552">Gets the details of an Event Grid Domain, or gets a list of all Event Grid Domains in the current Azure subscription.</span></span>
-    - <span data-ttu-id="7b0da-553">Remove-AzureRmEventGridDomain</span><span class="sxs-lookup"><span data-stu-id="7b0da-553">Remove-AzureRmEventGridDomain</span></span>
-        - <span data-ttu-id="7b0da-554">Tar bort en Azure Event Grid-domän.</span><span class="sxs-lookup"><span data-stu-id="7b0da-554">Removes an Azure Event Grid Domain.</span></span>
-    - <span data-ttu-id="7b0da-555">New-AzureRmEventGridDomainKey</span><span class="sxs-lookup"><span data-stu-id="7b0da-555">New-AzureRmEventGridDomainKey</span></span>
-        - <span data-ttu-id="7b0da-556">Återskapar nyckeln för delad åtkomst för en Azure Event Grid-domän.</span><span class="sxs-lookup"><span data-stu-id="7b0da-556">Regenerates the shared access key for an Azure Event Grid Domain.</span></span>
-    - <span data-ttu-id="7b0da-557">Get-AzureRmEventGridDomainKey</span><span class="sxs-lookup"><span data-stu-id="7b0da-557">Get-AzureRmEventGridDomainKey</span></span>
-        - <span data-ttu-id="7b0da-558">Hämtar de nycklar för delad åtkomst som används för att publicera händelser till en Event Grid-domän.</span><span class="sxs-lookup"><span data-stu-id="7b0da-558">Gets the shared access keys used to publish events to an Event Grid Domain.</span></span>
-    - <span data-ttu-id="7b0da-559">New-AzureRmEventGridDomainTopic:</span><span class="sxs-lookup"><span data-stu-id="7b0da-559">New-AzureRmEventGridDomainTopic:</span></span>
-        - <span data-ttu-id="7b0da-560">Skapar ett nytt Azure Event Grid-domänämne.</span><span class="sxs-lookup"><span data-stu-id="7b0da-560">Creates a new Azure Event Grid Domain Topic.</span></span>
-    - <span data-ttu-id="7b0da-561">Get-AzureRmEventGridDomainTopic</span><span class="sxs-lookup"><span data-stu-id="7b0da-561">Get-AzureRmEventGridDomainTopic</span></span>
-        - <span data-ttu-id="7b0da-562">Hämtar information om ett Event Grid-domänämne eller hämtar en lista med alla Event Grid-domänämnen under en specifik Event Grid-domän i nuvarande Azure</span><span class="sxs-lookup"><span data-stu-id="7b0da-562">Gets the details of an Event Grid Domain Topic, or gets a list of all Event Grid Domain Topics under specific Event Grid Domain in the current Azure</span></span> 
-    - <span data-ttu-id="7b0da-563">Remove-AzureRmEventGridDomainTopic:</span><span class="sxs-lookup"><span data-stu-id="7b0da-563">Remove-AzureRmEventGridDomainTopic:</span></span>
-        - <span data-ttu-id="7b0da-564">Tar bort ett befintligt Azure Event Grid-domänämne.</span><span class="sxs-lookup"><span data-stu-id="7b0da-564">Removes an existing Azure Event Grid Domain Topic.</span></span>
-* <span data-ttu-id="7b0da-565">Uppdaterade cmdletar:</span><span class="sxs-lookup"><span data-stu-id="7b0da-565">Updated cmdlets:</span></span>
-    - <span data-ttu-id="7b0da-566">New-AzureRmEventGridSubscription/Update-AzureRmEventGridSubscription:</span><span class="sxs-lookup"><span data-stu-id="7b0da-566">New-AzureRmEventGridSubscription/Update-AzureRmEventGridSubscription:</span></span>
-        - <span data-ttu-id="7b0da-567">Lägg till nya obligatoriska parametrar för att stödja piping för den nya Event Grid-domänen och Event Grid-domänämnet för att göra det möjligt att skapa nya händelseprenumerationer under dessa resurser.</span><span class="sxs-lookup"><span data-stu-id="7b0da-567">Add new mandatory parameters to support piping for the new Event Grid Domain and Event Grid Domain Topic to allow creating new event subscription under these resources.</span></span>
-        - <span data-ttu-id="7b0da-568">Lägg till nya obligatoriska parametrar för att ange det nya Event Grid-domännamnet och/eller namnet på Event Grid-domänämnet för att göra det möjligt att skapa nya händelseprenumerationer under dessa resurser.</span><span class="sxs-lookup"><span data-stu-id="7b0da-568">Add new mandatory parameters for specifying the new Event Grid Domain name and/or Event Grid Domain Topic name to allow creating new event subscription under these resources.</span></span>
-        - <span data-ttu-id="7b0da-569">Lägg till ny parameteruppsättningar för domäner och domänämnen för att göra det möjligt att återanvända befintliga parametrar (t.ex. EndPointType, SubjectBeginsWith osv).</span><span class="sxs-lookup"><span data-stu-id="7b0da-569">Add new Parameter sets for domains and domain topics to allow reusing existing parameters (e.g., EndPointType, SubjectBeginsWith, etc).</span></span>
-        - <span data-ttu-id="7b0da-570">Lade till ny valfria parametrar för att ange:</span><span class="sxs-lookup"><span data-stu-id="7b0da-570">Add new optional parameters for specifying:</span></span>
-            - <span data-ttu-id="7b0da-571">Förfallodatum för händelseprenumeration</span><span class="sxs-lookup"><span data-stu-id="7b0da-571">Event subscription expiration date,</span></span>
-            - <span data-ttu-id="7b0da-572">Avancerade filterparametrar.</span><span class="sxs-lookup"><span data-stu-id="7b0da-572">Advanced filtering parameters.</span></span>
-        - <span data-ttu-id="7b0da-573">Lägg till ny uppräkning för servicebusqueue som mål.</span><span class="sxs-lookup"><span data-stu-id="7b0da-573">Add new enum for servicebusqueue as destination.</span></span>
-        - <span data-ttu-id="7b0da-574">Tillåt inte användning av ”Alla” i alternativet -IncludedEventType och ersätt det med</span><span class="sxs-lookup"><span data-stu-id="7b0da-574">Disallow usage of 'All' in -IncludedEventType option and replace it with</span></span> 
-    - <span data-ttu-id="7b0da-575">Get-AzEventGridTopic, Get-AzEventGridDomain, Get-AzEventGridDomainTopic, Get-AzEventGridSubscription:</span><span class="sxs-lookup"><span data-stu-id="7b0da-575">Get-AzEventGridTopic, Get-AzEventGridDomain, Get-AzEventGridDomainTopic, Get-AzEventGridSubscription:</span></span>
-        - <span data-ttu-id="7b0da-576">Lägg till ny valfria parametrar (Top, ODataQuery och NextLink) för att stödja sidnumrering och filtrering av resultat.</span><span class="sxs-lookup"><span data-stu-id="7b0da-576">Add new optional parameters (Top, ODataQuery and NextLink) to support results pagination and filtering.</span></span>
-    - <span data-ttu-id="7b0da-577">Remove-AzureRmEventGridSubscription</span><span class="sxs-lookup"><span data-stu-id="7b0da-577">Remove-AzureRmEventGridSubscription</span></span>
-        - <span data-ttu-id="7b0da-578">Lägg till nya obligatoriska parametrar för att stödja piping för en Event Grid-domän och Event Grid-domänämnen för att göra det möjligt att ta bort befintliga händelseprenumerationer under dessa resurser.</span><span class="sxs-lookup"><span data-stu-id="7b0da-578">Add new mandatory parameters to support piping for Event Grid Domain and Event Grid Domain Topic to allow removing existing event subscription under these resources.</span></span>
-        - <span data-ttu-id="7b0da-579">Lägg till nya obligatoriska parametrar för att ange Event Grid-domännamnet och/eller namnet på Event Grid-domänämnet för att göra det möjligt att ta bort befintliga händelseprenumerationer under dessa resurser.</span><span class="sxs-lookup"><span data-stu-id="7b0da-579">Add new mandatory parameters for specifying the Event Grid Domain name and/or Event Grid Domain Topic name to allow removing existing event subscription under these resources.</span></span>
-
-#### <a name="azfrontdoor"></a><span data-ttu-id="7b0da-580">Az.FrontDoor</span><span class="sxs-lookup"><span data-stu-id="7b0da-580">Az.FrontDoor</span></span>
-* <span data-ttu-id="7b0da-581">New-AzFrontDoorWafMatchConditionObject</span><span class="sxs-lookup"><span data-stu-id="7b0da-581">New-AzFrontDoorWafMatchConditionObject</span></span>
-    - <span data-ttu-id="7b0da-582">Lägg till stöd för transformeringar och nytt värde för automatisk komplettering för operatorer (RegEx)</span><span class="sxs-lookup"><span data-stu-id="7b0da-582">Add transforms support and new operator auto-complete value (RegEx)</span></span>
-* <span data-ttu-id="7b0da-583">New-AzFrontDoorWafManagedRuleObject</span><span class="sxs-lookup"><span data-stu-id="7b0da-583">New-AzFrontDoorWafManagedRuleObject</span></span>
-    - <span data-ttu-id="7b0da-584">Lägg till nya värden för automatisk komplettering</span><span class="sxs-lookup"><span data-stu-id="7b0da-584">Add new auto-complete values</span></span>
-
-#### <a name="aznetwork"></a><span data-ttu-id="7b0da-585">Az.Network</span><span class="sxs-lookup"><span data-stu-id="7b0da-585">Az.Network</span></span>
-* <span data-ttu-id="7b0da-586">Lägg till stöd för resurs för virtuell nätverksgateway</span><span class="sxs-lookup"><span data-stu-id="7b0da-586">Add support for Virtual Network Gateway Resource</span></span>
-    - <span data-ttu-id="7b0da-587">Nya cmdletar</span><span class="sxs-lookup"><span data-stu-id="7b0da-587">New cmdlets</span></span>
-        - <span data-ttu-id="7b0da-588">Get-AzVirtualNetworkGatewayVpnClientConnectionHealth</span><span class="sxs-lookup"><span data-stu-id="7b0da-588">Get-AzVirtualNetworkGatewayVpnClientConnectionHealth</span></span>
-* <span data-ttu-id="7b0da-589">Lägg till AvailablePrivateEndpointType</span><span class="sxs-lookup"><span data-stu-id="7b0da-589">Add AvailablePrivateEndpointType</span></span>
-    - <span data-ttu-id="7b0da-590">Nya cmdletar</span><span class="sxs-lookup"><span data-stu-id="7b0da-590">New cmdlets</span></span> 
-        - <span data-ttu-id="7b0da-591">Get-AzAvailablePrivateEndpointType</span><span class="sxs-lookup"><span data-stu-id="7b0da-591">Get-AzAvailablePrivateEndpointType</span></span>
-* <span data-ttu-id="7b0da-592">Lägg till PrivatePrivateLinkService</span><span class="sxs-lookup"><span data-stu-id="7b0da-592">Add PrivatePrivateLinkService</span></span>
-    - <span data-ttu-id="7b0da-593">Nya cmdletar</span><span class="sxs-lookup"><span data-stu-id="7b0da-593">New cmdlets</span></span> 
-        - <span data-ttu-id="7b0da-594">Get-AzPrivateLinkService</span><span class="sxs-lookup"><span data-stu-id="7b0da-594">Get-AzPrivateLinkService</span></span> 
-        - <span data-ttu-id="7b0da-595">New-AzPrivateLinkService</span><span class="sxs-lookup"><span data-stu-id="7b0da-595">New-AzPrivateLinkService</span></span>
-        - <span data-ttu-id="7b0da-596">Remove-AzPrivateLinkService</span><span class="sxs-lookup"><span data-stu-id="7b0da-596">Remove-AzPrivateLinkService</span></span>
-        - <span data-ttu-id="7b0da-597">New-AzPrivateLinkServiceIpConfig</span><span class="sxs-lookup"><span data-stu-id="7b0da-597">New-AzPrivateLinkServiceIpConfig</span></span>
-        - <span data-ttu-id="7b0da-598">Set-AzPrivateEndpointConnection</span><span class="sxs-lookup"><span data-stu-id="7b0da-598">Set-AzPrivateEndpointConnection</span></span>
-* <span data-ttu-id="7b0da-599">Lägg till PrivateEndpoint</span><span class="sxs-lookup"><span data-stu-id="7b0da-599">Add PrivateEndpoint</span></span>
-    - <span data-ttu-id="7b0da-600">Nya cmdletar</span><span class="sxs-lookup"><span data-stu-id="7b0da-600">New cmdlets</span></span>
-        - <span data-ttu-id="7b0da-601">Get-AzPrivateEndpoint</span><span class="sxs-lookup"><span data-stu-id="7b0da-601">Get-AzPrivateEndpoint</span></span>
-        - <span data-ttu-id="7b0da-602">New-AzPrivateEndpoint</span><span class="sxs-lookup"><span data-stu-id="7b0da-602">New-AzPrivateEndpoint</span></span>
-        - <span data-ttu-id="7b0da-603">Remove-AzPrivateEndpoint</span><span class="sxs-lookup"><span data-stu-id="7b0da-603">Remove-AzPrivateEndpoint</span></span>
-        - <span data-ttu-id="7b0da-604">New-AzPrivateLinkServiceConnection</span><span class="sxs-lookup"><span data-stu-id="7b0da-604">New-AzPrivateLinkServiceConnection</span></span>
-* <span data-ttu-id="7b0da-605">Nedanstående kommandon för funktionen har uppdaterats: Flaggan UseLocalAzureIpAddress på VpnConnection</span><span class="sxs-lookup"><span data-stu-id="7b0da-605">Updated below commands for feature: UseLocalAzureIpAddress flag on VpnConnection</span></span>
-    - <span data-ttu-id="7b0da-606">New-AzVpnConnection har uppdaterats: Den valfria parametern -UseLocalAzureIpAddress har lagts till för att visa att en lokal IP-adress i Azure ska användas som källadress när anslutningen initieras.</span><span class="sxs-lookup"><span data-stu-id="7b0da-606">Updated New-AzVpnConnection: Added optional parameter -UseLocalAzureIpAddress to indicate that local azure ip address should be used as source address while initiating connection.</span></span>
-    - <span data-ttu-id="7b0da-607">Set-AzVpnConnection har uppdaterats: Den valfria parametern -UseLocalAzureIpAddress har lagts till för att visa att en lokal IP-adress i Azure ska användas som källadress när anslutningen initieras.</span><span class="sxs-lookup"><span data-stu-id="7b0da-607">Updated Set-AzVpnConnection: Added optional parameter -UseLocalAzureIpAddress to indicate that local azure ip address should be used as source address while initiating connection.</span></span>
-* <span data-ttu-id="7b0da-608">Det skrivskyddade fältet PeeredConnections har lagts till i ExpressRoute-peering.</span><span class="sxs-lookup"><span data-stu-id="7b0da-608">Added readonly field PeeredConnections in ExpressRoute peering.</span></span>
-* <span data-ttu-id="7b0da-609">Det skrivskyddade fältet GlobalReachEnabled har lagts till i ExpressRoute.</span><span class="sxs-lookup"><span data-stu-id="7b0da-609">Added readonly field GlobalReachEnabled in ExpressRoute.</span></span>
-* <span data-ttu-id="7b0da-610">Ett attribut för icke-bakåtkompatibla ändringar har lagts till för att lyfta fram utfasning av fältet AllowGlobalReach i modellen ExpressRouteCircuit</span><span class="sxs-lookup"><span data-stu-id="7b0da-610">Added breaking change attribute to call out deprecation of AllowGlobalReach field in ExpressRouteCircuit model</span></span>
-* <span data-ttu-id="7b0da-611">Problem 8756 har åtgärdats: Fel vid användning av TargetListenerID med AzApplicationGatewayRedirectConfiguration-cmdletar</span><span class="sxs-lookup"><span data-stu-id="7b0da-611">Fixed Issue 8756 Error using TargetListenerID with AzApplicationGatewayRedirectConfiguration cmdlets</span></span>
-* <span data-ttu-id="7b0da-612">En bugg i New-AzApplicationGatewayPathRuleConfig som gjorde att regeluppsättningen för att återskapa inte kunde anges har åtgärdats.</span><span class="sxs-lookup"><span data-stu-id="7b0da-612">Fixed bug in New-AzApplicationGatewayPathRuleConfig that prevented the rewrite ruleset from being set.</span></span>
-* <span data-ttu-id="7b0da-613">Visningen av VirtualNetworkTaps i NetworkInterfaceIpConfiguration har åtgärdats</span><span class="sxs-lookup"><span data-stu-id="7b0da-613">Fixed displaying of VirtualNetworkTaps in NetworkInterfaceIpConfiguration</span></span>
-* <span data-ttu-id="7b0da-614">Cortex Get-cmdletar för att visa en lista med alla delar har åtgärdats</span><span class="sxs-lookup"><span data-stu-id="7b0da-614">Fixed Cortex Get cmdlets for list all part</span></span>
-* <span data-ttu-id="7b0da-615">Funktionen för att skapa VirtualHub-referenser för ExpressRouteGateways och VpnGateway har åtgärdats</span><span class="sxs-lookup"><span data-stu-id="7b0da-615">Fixed VirtualHub reference creation for ExpressRouteGateways, VpnGateway</span></span>
-* <span data-ttu-id="7b0da-616">Stöd för tillgänglighetszoner i AzureFirewall och NatGateway har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-616">Added support for Availability Zones in AzureFirewall and NatGateway</span></span>
-* <span data-ttu-id="7b0da-617">Cmdleten Get-AzNetworkServiceTag har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-617">Added cmdlet Get-AzNetworkServiceTag</span></span>
-* <span data-ttu-id="7b0da-618">Lägg till stöd för flera offentliga IP-adresser för Azure Firewall</span><span class="sxs-lookup"><span data-stu-id="7b0da-618">Add support for multiple public IP addresses for Azure Firewall</span></span>
-    - <span data-ttu-id="7b0da-619">Cmdleten New-AzFirewall har uppdaterats:</span><span class="sxs-lookup"><span data-stu-id="7b0da-619">Updated New-AzFirewall cmdlet:</span></span>
-        - <span data-ttu-id="7b0da-620">Parametern -PublicIpAddress som accepterar ett eller flera offentliga IP-adressobjekt har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-620">Added parameter -PublicIpAddress which accepts one or more Public IP Address objects</span></span>
-        - <span data-ttu-id="7b0da-621">Parametern -VirtualNetwork som accepterar ett virtuellt nätverksobjekt har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-621">Added parameter -VirtualNetwork which accepts a Virtual Network object</span></span>
-        - <span data-ttu-id="7b0da-622">Metoderna AddPublicIpAddress och RemovePublicIpAddress har lagts till på brandväggsobjekt – dessa accepterar ett offentligt IP-adressobjekt som indata</span><span class="sxs-lookup"><span data-stu-id="7b0da-622">Added methods AddPublicIpAddress and RemovePublicIpAddress on firewall object - these accept a Public IP Address object as input</span></span>
-        - <span data-ttu-id="7b0da-623">Inaktuella parametrar -PublicIpName och -VirtualNetworkName</span><span class="sxs-lookup"><span data-stu-id="7b0da-623">Deprecated parameters -PublicIpName and -VirtualNetworkName</span></span> 
-* <span data-ttu-id="7b0da-624">Nedanstående kommandon för funktionen har uppdaterats: Ange autentiseringsalternativ för VpnClient AAD till resurser för virtuella nätverksgatewayer.</span><span class="sxs-lookup"><span data-stu-id="7b0da-624">Updated below commands for feature: Set VpnClient AAD authentication options to Virtual network gateway resource.</span></span> 
-    - <span data-ttu-id="7b0da-625">New-AzVirtualNetworkGateway har uppdaterats: De valfria parametrarna AadTenantUri, AadAudienceId och AadIssuerUri för att ange VpnClient AAD-autentiseringsalternativ på en gateway har lagts till.</span><span class="sxs-lookup"><span data-stu-id="7b0da-625">Updated New-AzVirtualNetworkGateway: Added optional parameters AadTenantUri,AadAudienceId,AadIssuerUri to set VpnClient AAD authentication options on Gateway.</span></span>
-    - <span data-ttu-id="7b0da-626">Set-AzVirtualNetworkGateway har uppdaterats: De valfria parametrarna AadTenantUri, AadAudienceId och AadIssuerUri för att ange VpnClient AAD-autentiseringsalternativ på en gateway har lagts till.</span><span class="sxs-lookup"><span data-stu-id="7b0da-626">Updated Set-AzVirtualNetworkGateway: Added optional parameter AadTenantUri,AadAudienceId,AadIssuerUri to set VpnClient AAD authentication options on Gateway.</span></span>
-    - <span data-ttu-id="7b0da-627">Set-AzVirtualNetworkGateway har uppdaterats: Den valfria växelparametern RemoveAadAuthentication som tar bort VpnClient AAD-autentiseringsalternativ från en gateway har lagts till.</span><span class="sxs-lookup"><span data-stu-id="7b0da-627">Updated Set-AzVirtualNetworkGateway: Added optional switch parameter RemoveAadAuthentication to remove VpnClient AAD authentication options from Gateway.</span></span>
-
-#### <a name="azoperationalinsights"></a><span data-ttu-id="7b0da-628">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="7b0da-628">Az.OperationalInsights</span></span>
-* <span data-ttu-id="7b0da-629">Aktivera prisnivån **pergb2018** i kommandot ”New-AzureRmOperationalInsightsWorkspace”</span><span class="sxs-lookup"><span data-stu-id="7b0da-629">Enable **pergb2018** pricing tier in 'New-AzureRmOperationalInsightsWorkspace' command</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="7b0da-630">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="7b0da-630">Az.Resources</span></span>
-* <span data-ttu-id="7b0da-631">Stöd för ytterligare alternativ för att exportera en mall</span><span class="sxs-lookup"><span data-stu-id="7b0da-631">Support for additional Template Export options</span></span>
-    - <span data-ttu-id="7b0da-632">Lägg till parametern ”-SkipResourceNameParameterization” till Export-AzResourceGroup</span><span class="sxs-lookup"><span data-stu-id="7b0da-632">Add '-SkipResourceNameParameterization' parameter to Export-AzResourceGroup</span></span>
-    - <span data-ttu-id="7b0da-633">Lägg till parametern ”-SkipAllParameterization” till Export-AzResourceGroup</span><span class="sxs-lookup"><span data-stu-id="7b0da-633">Add '-SkipAllParameterization' parameter to Export-AzResourceGroup</span></span>
-    - <span data-ttu-id="7b0da-634">Lägg till parametern ”-Resource” till Export-AzResourceGroup för exporterad resursfiltrering</span><span class="sxs-lookup"><span data-stu-id="7b0da-634">Add '-Resource' parameter to Export-AzResourceGroup for exported resource filtering</span></span>
-
-#### <a name="azservicefabric"></a><span data-ttu-id="7b0da-635">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="7b0da-635">Az.ServiceFabric</span></span>
-* <span data-ttu-id="7b0da-636">Åtgärda att fel tumavtryck används vid tilläggning av certifikat i ByExistingKeyVault i vissa fall</span><span class="sxs-lookup"><span data-stu-id="7b0da-636">Fix add certificate ByExistingKeyVault getting the wrong thumbprint in some cases</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="7b0da-637">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="7b0da-637">Az.Sql</span></span>
-* <span data-ttu-id="7b0da-638">Åtgärda suffix för lagringsslutpunkt i Advanced Threat Protection</span><span class="sxs-lookup"><span data-stu-id="7b0da-638">Fix Advanced Threat Protection storage endpoint suffix</span></span>
-* <span data-ttu-id="7b0da-639">Åtgärda att aktivering av Advanced Data Security åsidosätter Advanced Threat Protection-princip</span><span class="sxs-lookup"><span data-stu-id="7b0da-639">Fix Advanced Data Security enable overrides Advanced Threat Protection policy</span></span>
-* <span data-ttu-id="7b0da-640">Nya cmdletar för Management.Sql som gör att kunderna kan lägga till nycklar för transparent datakryptering (TDE) och ange TDE-skydd för hanterade instanser</span><span class="sxs-lookup"><span data-stu-id="7b0da-640">New Cmdlets for Management.Sql to allow customers to add TDE keys and set TDE protector for managed instances</span></span>
-   - <span data-ttu-id="7b0da-641">Add-AzSqlInstanceKeyVaultKey</span><span class="sxs-lookup"><span data-stu-id="7b0da-641">Add-AzSqlInstanceKeyVaultKey</span></span>
-   - <span data-ttu-id="7b0da-642">Get-AzSqlInstanceKeyVaultKey</span><span class="sxs-lookup"><span data-stu-id="7b0da-642">Get-AzSqlInstanceKeyVaultKey</span></span>
-   - <span data-ttu-id="7b0da-643">Remove-AzSqlInstanceKeyVaultKey</span><span class="sxs-lookup"><span data-stu-id="7b0da-643">Remove-AzSqlInstanceKeyVaultKey</span></span>
-   - <span data-ttu-id="7b0da-644">Get-AzSqlInstanceTransparentDataEncryptionProtector</span><span class="sxs-lookup"><span data-stu-id="7b0da-644">Get-AzSqlInstanceTransparentDataEncryptionProtector</span></span>
-   - <span data-ttu-id="7b0da-645">Set-AzSqlInstanceTransparentDataEncryptionProtector</span><span class="sxs-lookup"><span data-stu-id="7b0da-645">Set-AzSqlInstanceTransparentDataEncryptionProtector</span></span>
-
-#### <a name="azstorage"></a><span data-ttu-id="7b0da-646">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="7b0da-646">Az.Storage</span></span>
-* <span data-ttu-id="7b0da-647">Stöd för typerna FileStorage och SkuName Premium_ZRS när lagringskonton skapas</span><span class="sxs-lookup"><span data-stu-id="7b0da-647">Support Kind FileStorage and SkuName Premium_ZRS when create Storage account</span></span>
-    - <span data-ttu-id="7b0da-648">New-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="7b0da-648">New-AzStorageAccount</span></span>
-* <span data-ttu-id="7b0da-649">Beskrivningen av cmdleten för bloboföränderlighet har förtydligats</span><span class="sxs-lookup"><span data-stu-id="7b0da-649">Clarified description of blob immutability cmdlet</span></span>
-    -  <span data-ttu-id="7b0da-650">Remove-AzRmStorageContainerImmutabilityPolicy</span><span class="sxs-lookup"><span data-stu-id="7b0da-650">Remove-AzRmStorageContainerImmutabilityPolicy</span></span>
-
-#### <a name="azwebsites"></a><span data-ttu-id="7b0da-651">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="7b0da-651">Az.Websites</span></span>
-* <span data-ttu-id="7b0da-652">Optimerar Get-AzWebAppCertificate för att filtrera efter resursgrupp på servern i stället för klienten</span><span class="sxs-lookup"><span data-stu-id="7b0da-652">Optimizes Get-AzWebAppCertificate to filter by resource group on the server instead of the client</span></span>
-* <span data-ttu-id="7b0da-653">Lägger till växlingsparametern -UseDisasterRecovery till Get-AzWebAppSnapshot</span><span class="sxs-lookup"><span data-stu-id="7b0da-653">Adds -UseDisasterRecovery switch parameter to Get-AzWebAppSnapshot</span></span>
-
-## <a name="220---june-2019"></a><span data-ttu-id="7b0da-654">2.2.0 – juni 2019</span><span class="sxs-lookup"><span data-stu-id="7b0da-654">2.2.0 - June 2019</span></span>
-#### <a name="azcdn"></a><span data-ttu-id="7b0da-655">Az.Cdn</span><span class="sxs-lookup"><span data-stu-id="7b0da-655">Az.Cdn</span></span>
-* <span data-ttu-id="7b0da-656">Uppdaterade cmdletar för att ge stöd för rulesEngine-funktion baserat på API-version 2019-04-15.</span><span class="sxs-lookup"><span data-stu-id="7b0da-656">Updated cmdlets to support rulesEngine feature based on API version 2019-04-15.</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="7b0da-657">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="7b0da-657">Az.Compute</span></span>
-* <span data-ttu-id="7b0da-658">Lade till parameter `NoWait` som startar åtgärden och returnerar omedelbart, innan åtgärden har slutförts.</span><span class="sxs-lookup"><span data-stu-id="7b0da-658">Added `NoWait` parameter that starts the operation and returns immediately, before the operation is completed.</span></span>
-    - <span data-ttu-id="7b0da-659">Uppdaterade cmdletar:   Export-AzLogAnalyticRequestRateByInterval   Export-AzLogAnalyticThrottledRequest   Remove-AzVM   Remove-AzVMAccessExtension   Remove-AzVMAEMExtension   Remove-AzVMChefExtension   Remove-AzVMCustomScriptExtension   Remove-AzVMDiagnosticsExtension   Remove-AzVMDiskEncryptionExtension   Remove-AzVMDscExtension   Remove-AzVMSqlServerExtension   Restart-AzVM   Set-AzVM   Set-AzVMAccessExtension   Set-AzVMADDomainExtension   Set-AzVMAEMExtension   Set-AzVMBginfoExtension   Set-AzVMChefExtension   Set-AzVMCustomScriptExtension   Set-AzVMDiagnosticsExtension   Set-AzVMDscExtension   Set-AzVMExtension   Start-AzVM   Stop-AzVM   Update-AzVM</span><span class="sxs-lookup"><span data-stu-id="7b0da-659">Updated cmdlets:   Export-AzLogAnalyticRequestRateByInterval   Export-AzLogAnalyticThrottledRequest   Remove-AzVM   Remove-AzVMAccessExtension   Remove-AzVMAEMExtension   Remove-AzVMChefExtension   Remove-AzVMCustomScriptExtension   Remove-AzVMDiagnosticsExtension   Remove-AzVMDiskEncryptionExtension   Remove-AzVMDscExtension   Remove-AzVMSqlServerExtension   Restart-AzVM   Set-AzVM   Set-AzVMAccessExtension   Set-AzVMADDomainExtension   Set-AzVMAEMExtension   Set-AzVMBginfoExtension   Set-AzVMChefExtension   Set-AzVMCustomScriptExtension   Set-AzVMDiagnosticsExtension   Set-AzVMDscExtension   Set-AzVMExtension   Start-AzVM   Stop-AzVM   Update-AzVM</span></span>
-
-#### <a name="azeventhub"></a><span data-ttu-id="7b0da-660">Az.EventHub</span><span class="sxs-lookup"><span data-stu-id="7b0da-660">Az.EventHub</span></span>
-* <span data-ttu-id="7b0da-661">Korrigering för #9231 – Get-AzEventHubNamespace returnerar inga taggar</span><span class="sxs-lookup"><span data-stu-id="7b0da-661">Fix for #9231 - Get-AzEventHubNamespace does not return tags</span></span>
-* <span data-ttu-id="7b0da-662">Korrigering för #9230 – Get-AzEventHubNamespace returnerar ResourceGroup istället för ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="7b0da-662">Fix for #9230 - Get-AzEventHubNamespace returns ResourceGroup instead of ResourceGroupName</span></span>
-
-#### <a name="aznetwork"></a><span data-ttu-id="7b0da-663">Az.Network</span><span class="sxs-lookup"><span data-stu-id="7b0da-663">Az.Network</span></span>
-* <span data-ttu-id="7b0da-664">Uppdatera ResourceId och InputObject för NAT-gateway</span><span class="sxs-lookup"><span data-stu-id="7b0da-664">Update ResourceId and InputObject for Nat Gateway</span></span>
-    - <span data-ttu-id="7b0da-665">Lägg till alias för ResourceId och InputObject</span><span class="sxs-lookup"><span data-stu-id="7b0da-665">Add alias for ResourceId and InputObject</span></span>
-
-#### <a name="azpolicyinsights"></a><span data-ttu-id="7b0da-666">Az.PolicyInsights</span><span class="sxs-lookup"><span data-stu-id="7b0da-666">Az.PolicyInsights</span></span>
-* <span data-ttu-id="7b0da-667">Åtgärda Null-referensproblem i Get-AzPolicyEvent</span><span class="sxs-lookup"><span data-stu-id="7b0da-667">Fix Null reference issue in Get-AzPolicyEvent</span></span>
-
-#### <a name="azrecoveryservices"></a><span data-ttu-id="7b0da-668">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="7b0da-668">Az.RecoveryServices</span></span>
-* <span data-ttu-id="7b0da-669">Minsta kvarhållning för IaaSVM-policy i dagar ändrat till 7 från 1</span><span class="sxs-lookup"><span data-stu-id="7b0da-669">IaaSVM policy minimum retention in days changed to 7 from 1</span></span>
-
-#### <a name="azservicebus"></a><span data-ttu-id="7b0da-670">Az.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="7b0da-670">Az.ServiceBus</span></span>
-* <span data-ttu-id="7b0da-671">Korrigering för ärende #9182 – Get-AzServiceBusNamespace returnerar ResourceGroup istället för ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="7b0da-671">Fix for issue #9182 - Get-AzServiceBusNamespace returns ResourceGroup instead of ResourceGroupName</span></span>
-
-#### <a name="azservicefabric"></a><span data-ttu-id="7b0da-672">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="7b0da-672">Az.ServiceFabric</span></span>
-* <span data-ttu-id="7b0da-673">Åtgärda stavfel i felmeddelandet för Update-AzServiceFabricReliability</span><span class="sxs-lookup"><span data-stu-id="7b0da-673">Fix typo in error message for 'Update-AzServiceFabricReliability'</span></span>
-* <span data-ttu-id="7b0da-674">Åtgärda saknat tecken i Service Fabric-kommandorader</span><span class="sxs-lookup"><span data-stu-id="7b0da-674">Fix missing character in Service Fabric cmdlines</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="7b0da-675">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="7b0da-675">Az.Sql</span></span>
-* <span data-ttu-id="7b0da-676">Lägg till parametern DnsZonePartner för New-AzureSqlInstance-cmdlet för att ge stöd för AutoDr för hanterad instans.</span><span class="sxs-lookup"><span data-stu-id="7b0da-676">Add DnsZonePartner Parameter for New-AzureSqlInstance cmdlet to support AutoDr for Managed Instance.</span></span>
-* <span data-ttu-id="7b0da-677">Avvecklar cmdlet Get-AzSqlDatabaseSecureConnectionPolicy</span><span class="sxs-lookup"><span data-stu-id="7b0da-677">Deprecating Get-AzSqlDatabaseSecureConnectionPolicy cmdlet</span></span>
-* <span data-ttu-id="7b0da-678">Döp om cmdletar för hotidentifiering till Advanced Threat Protection</span><span class="sxs-lookup"><span data-stu-id="7b0da-678">Rename Threat Detection cmdlets to Advanced Threat Protection</span></span>
-* <span data-ttu-id="7b0da-679">Parametrarna New-AzSqlInstance -StorageSizeInGB och -LicenseType är nu valfria.</span><span class="sxs-lookup"><span data-stu-id="7b0da-679">New-AzSqlInstance -StorageSizeInGB and -LicenseType parameters are now optional.</span></span>
-
-#### <a name="azwebsites"></a><span data-ttu-id="7b0da-680">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="7b0da-680">Az.Websites</span></span>
-* <span data-ttu-id="7b0da-681">åtgärdar problemet där användningen av Set-AzWebApp och Set-AzWebAppSlot med -WebApp-egenskap tog bort taggarna</span><span class="sxs-lookup"><span data-stu-id="7b0da-681">fixes the issue where using  Set-AzWebApp and Set-AzWebAppSlot with -WebApp property was removing the tags</span></span>
-
-## <a name="210---may-2019"></a><span data-ttu-id="7b0da-682">2.1.0 – maj 2019</span><span class="sxs-lookup"><span data-stu-id="7b0da-682">2.1.0 - May 2019</span></span>
-#### <a name="azapimanagement"></a><span data-ttu-id="7b0da-683">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="7b0da-683">Az.ApiManagement</span></span>
-* <span data-ttu-id="7b0da-684">Skapade nya cmdletar för att hantera diagnostik för global- och API-omfång</span><span class="sxs-lookup"><span data-stu-id="7b0da-684">Created new Cmdlets for managing diagnostics at the global and API Scope</span></span>
-    - <span data-ttu-id="7b0da-685">**Get-AzApiManagementDiagnostic** – Skaffa diagnostik konfigurerad för global- eller api-omfång</span><span class="sxs-lookup"><span data-stu-id="7b0da-685">**Get-AzApiManagementDiagnostic** - Get the diagnostics configured a global or api Scope</span></span>
-    - <span data-ttu-id="7b0da-686">**New-AzApiManagementDiagnostic** – Skapa ny diagnostik för globalt omfång eller api-omfång</span><span class="sxs-lookup"><span data-stu-id="7b0da-686">**New-AzApiManagementDiagnostic** - Create new diagnostics at the global scope or api Scope</span></span>
-    - <span data-ttu-id="7b0da-687">**New-AzApiManagementHttpMessageDiagnostic** – Skapa diagnostikinställning om vilka rubriker som ska loggas och storleken på brödtextbyte</span><span class="sxs-lookup"><span data-stu-id="7b0da-687">**New-AzApiManagementHttpMessageDiagnostic** - Create diagnostic setting for which Headers to log and the size of Body Bytes</span></span>
-    - <span data-ttu-id="7b0da-688">**New-AzApiManagementPipelineDiagnosticSetting** – Skapa diagnostikinställningar för inkommande/utgående HTTP-meddelanden till gatewayen.</span><span class="sxs-lookup"><span data-stu-id="7b0da-688">**New-AzApiManagementPipelineDiagnosticSetting** - Create Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.</span></span>
-    - <span data-ttu-id="7b0da-689">**New-AzApiManagementSamplingSetting** – Skapa samplinginställningar för begäranden/svar för en diagnostik</span><span class="sxs-lookup"><span data-stu-id="7b0da-689">**New-AzApiManagementSamplingSetting** - Create Sampling Setting  for the requests/response for a diagnostic</span></span>
-    - <span data-ttu-id="7b0da-690">**Remove-AzApiManagementDiagnostic** – Ta bort en diagnostikenhet för globalt omfång eller api-omfång</span><span class="sxs-lookup"><span data-stu-id="7b0da-690">**Remove-AzApiManagementDiagnostic** - Remove a diagnostic entity at global or api scope</span></span>
-    - <span data-ttu-id="7b0da-691">**Set-AzApiManagementDiagnostic** – Uppdatera en diagnostikenhet för globalt omfång eller api-omfång</span><span class="sxs-lookup"><span data-stu-id="7b0da-691">**Set-AzApiManagementDiagnostic** - Update a diagnostic Entity at global or api scope</span></span>
-* <span data-ttu-id="7b0da-692">Skapade nya cmdletar för hantering av cacheminne i ApiManagement-tjänsten</span><span class="sxs-lookup"><span data-stu-id="7b0da-692">Created new Cmdlets for managing Cache in ApiManagement service</span></span>
-    - <span data-ttu-id="7b0da-693">**Get-AzApiManagementCache** – Hämta information om cacheminnet som anges av identifierare eller alla cacheminnen</span><span class="sxs-lookup"><span data-stu-id="7b0da-693">**Get-AzApiManagementCache** - Get the details of the Cache specified by identifier or all caches</span></span>
-    - <span data-ttu-id="7b0da-694">**New-AzApiManagementCache** – Skapa ett nytt default-cacheminne eller cacheminne i en viss Azure-region</span><span class="sxs-lookup"><span data-stu-id="7b0da-694">**New-AzApiManagementCache** - Create a new 'default' Cache or Cache in a particular azure 'region'</span></span>
-    - <span data-ttu-id="7b0da-695">**Remove-AzApiManagementCache** – Ta bort ett cacheminne</span><span class="sxs-lookup"><span data-stu-id="7b0da-695">**Remove-AzApiManagementCache** - Remove a cache</span></span>
-    - <span data-ttu-id="7b0da-696">**Remove-AzApiManagementCache** – Ta bort ett cacheminne</span><span class="sxs-lookup"><span data-stu-id="7b0da-696">**Update-AzApiManagementCache** - Update a cache</span></span>
-* <span data-ttu-id="7b0da-697">Skapade nya cmdletar för hantering av API-schema</span><span class="sxs-lookup"><span data-stu-id="7b0da-697">Created new Cmdlets for managing API Schema</span></span>
-    - <span data-ttu-id="7b0da-698">**New-AzApiManagementSchema** – Skapa ett nytt schema för ett API</span><span class="sxs-lookup"><span data-stu-id="7b0da-698">**New-AzApiManagementSchema** - Create a new Schema for an API</span></span>
-    - <span data-ttu-id="7b0da-699">**Get-AzApiManagementSchema** – Hämta de scheman som konfigurerats i API:et</span><span class="sxs-lookup"><span data-stu-id="7b0da-699">**Get-AzApiManagementSchema** - Get the schemas configured in the API</span></span>
-    - <span data-ttu-id="7b0da-700">**Remove-AzApiManagementSchema** – Ta bort de scheman som konfigurerats i API:et</span><span class="sxs-lookup"><span data-stu-id="7b0da-700">**Remove-AzApiManagementSchema** - Remove the schema configured in the API</span></span>
-    - <span data-ttu-id="7b0da-701">**Set-AzApiManagementSchema** – Uppdatera de scheman som konfigurerats i API:et</span><span class="sxs-lookup"><span data-stu-id="7b0da-701">**Set-AzApiManagementSchema** - Update the schema configured in the API</span></span>
-* <span data-ttu-id="7b0da-702">Skapa ny cmdlet för att generera en användartoken.</span><span class="sxs-lookup"><span data-stu-id="7b0da-702">Created new Cmdlet for generating a User Token.</span></span> 
-    - <span data-ttu-id="7b0da-703">**New-AzApiManagementUserToken** – Skapa en ny användartoken som enligt standardinställning är giltig i 8 timmar. Token för GIT-användaren kan skapas med den här cmdleten./</span><span class="sxs-lookup"><span data-stu-id="7b0da-703">**New-AzApiManagementUserToken** - Generate a new User Token valid for 8 hours by default.Token for the 'GIT' user can be generated using this cmdlet./</span></span>
-* <span data-ttu-id="7b0da-704">Skapade en ny cmdlet för att hämta nätverksstatus</span><span class="sxs-lookup"><span data-stu-id="7b0da-704">Created a new cmdlet to retrieving the Network Status</span></span>
-    - <span data-ttu-id="7b0da-705">**Get-AzApiManagementNetworkStatus** – Hämta nätverksstatusanslutningen för resurserna som API Management-tjänsten är beroende av.</span><span class="sxs-lookup"><span data-stu-id="7b0da-705">**Get-AzApiManagementNetworkStatus** - Get the Network status connectivity of resources on which API Management service depends on.</span></span> <span data-ttu-id="7b0da-706">Det här är användbart när du distribuerar ApiManagement-tjänsten i ett virtuellt nätverk och validerar om något beroende är brutet.</span><span class="sxs-lookup"><span data-stu-id="7b0da-706">This is useful when deploying ApiManagement service into a Virtual Network and validing whether any of the dependencies are broken.</span></span>
-* <span data-ttu-id="7b0da-707">Uppdaterade cmdlet **New-AzApiManagement** för att hantera ApiManagement-tjänsten</span><span class="sxs-lookup"><span data-stu-id="7b0da-707">Updated cmdlet **New-AzApiManagement** to manage ApiManagement service</span></span> 
-    - <span data-ttu-id="7b0da-708">Lade till stöd för den nya SKU:n Consumption</span><span class="sxs-lookup"><span data-stu-id="7b0da-708">Added support for the new 'Consumption' SKU</span></span>
-    - <span data-ttu-id="7b0da-709">Aktiverade stöd för att slå på flaggan EnableClientCertificate för SKU:n Consumption</span><span class="sxs-lookup"><span data-stu-id="7b0da-709">Added support to turn the 'EnableClientCertificate' flag on for 'Consumption' SKU</span></span>
-    - <span data-ttu-id="7b0da-710">Den nya cmdleten **New-AzApiManagementSslSetting** gör det möjligt att ställa in TLS/SSL-inställningen på ”Backend” och ”Frontend” (serverdel och klientdel).</span><span class="sxs-lookup"><span data-stu-id="7b0da-710">The new cmdlet **New-AzApiManagementSslSetting** allows configuring 'TLS/SSL' setting on the 'Backend' and 'Frontend'.</span></span> <span data-ttu-id="7b0da-711">Det här kan också användas till att konfigurera chiffer som 3DES och ServerProtocols som Http2 för Frontend för en ApiManagement-tjänst.</span><span class="sxs-lookup"><span data-stu-id="7b0da-711">This can also be used to configure 'Ciphers' like '3DES' and 'ServerProtocols' like 'Http2' on the 'Frontend' of an ApiManagement service.</span></span>
-    - <span data-ttu-id="7b0da-712">Stöd har lagts till för att konfigurera värdnamnet DeveloperPortal på ApiManagement-tjänsten.</span><span class="sxs-lookup"><span data-stu-id="7b0da-712">Added support for configuring the 'DeveloperPortal' hostname on ApiManagement service.</span></span>
-* <span data-ttu-id="7b0da-713">Uppdaterade cmdletar **Get-AzApiManagementSsoToken** för att ta PsApiManagement-objekt som indata</span><span class="sxs-lookup"><span data-stu-id="7b0da-713">Updated cmdlets **Get-AzApiManagementSsoToken** to take 'PsApiManagement' object as input</span></span>
-* <span data-ttu-id="7b0da-714">Uppdaterad cmdleten för att visa infogade felmeddelanden</span><span class="sxs-lookup"><span data-stu-id="7b0da-714">Updated the cmdlet to display Error Messages inline</span></span> 
-     > <span data-ttu-id="7b0da-715">PS D:\github\azure-powershell> Set-AzApiManagementPolicy -Context  -PolicyFilePath C:\wrongpolicy.xml -ApiId httpbin Set-AzApiManagementPolicy : Felkod: Felmeddelande av typen ValidationError: Ett eller flera fält innehåller felaktiga värden: Felinformation:    [Code=ValidationError, Message=Error in element 'log-to-eventhub' on line 3, column 10: Logger not found, Target=log-to-eventhub]</span><span class="sxs-lookup"><span data-stu-id="7b0da-715">PS D:\github\azure-powershell> Set-AzApiManagementPolicy -Context  -PolicyFilePath C:\wrongpolicy.xml -ApiId httpbin Set-AzApiManagementPolicy : Error Code: ValidationError Error Message: One or more fields contain incorrect values: Error Details:    [Code=ValidationError, Message=Error in element 'log-to-eventhub' on line 3, column 10: Logger not found, Target=log-to-eventhub]</span></span>
-* <span data-ttu-id="7b0da-716">Uppdaterade cmdlet **Export-AzApiManagementApi** för att exportera API:er i OpenApi 3.0-format</span><span class="sxs-lookup"><span data-stu-id="7b0da-716">Updated cmdlet **Export-AzApiManagementApi** to export APIs in 'OpenApi 3.0' format</span></span>
-* <span data-ttu-id="7b0da-717">Uppdaterade cmdlet **Import-AzApiManagementApi**</span><span class="sxs-lookup"><span data-stu-id="7b0da-717">Updated cmdlet **Import-AzApiManagementApi**</span></span>
-    - <span data-ttu-id="7b0da-718">Importera API från dokumentspecifikationen OpenApi 3.0</span><span class="sxs-lookup"><span data-stu-id="7b0da-718">To import Api from 'OpenApi 3.0' document specification</span></span>
-    - <span data-ttu-id="7b0da-719">Om du vill åsidosätta egenskapen PsApiManagementSchema specificerad i ett dokument (Swagger, Wadl, Wsdl, OpenApi).</span><span class="sxs-lookup"><span data-stu-id="7b0da-719">To override the 'PsApiManagementSchema' property specified in any ('Swagger', 'Wadl', 'Wsdl', 'OpenApi') document.</span></span>
-    - <span data-ttu-id="7b0da-720">Åsidosätta egenskapen ServiceUrl som specificeras i ett dokument.</span><span class="sxs-lookup"><span data-stu-id="7b0da-720">To override the 'ServiceUrl' property specified in any document.</span></span>
-* <span data-ttu-id="7b0da-721">Uppdaterade cmdlet **Get-AzApiManagementPolicy** för att returnera policy i undantaget format av typen icke-XML med rawxml</span><span class="sxs-lookup"><span data-stu-id="7b0da-721">Updated cmdlet **Get-AzApiManagementPolicy** to return policy in Non-Xml escaped 'format' using 'rawxml'</span></span>
-* <span data-ttu-id="7b0da-722">Uppdaterade cmdlet **Set-AzApiManagementPolicy** för att godkänna policy i undantaget format av typen icke-XML med rawxml och XML undantaget med xml</span><span class="sxs-lookup"><span data-stu-id="7b0da-722">Updated cmdlet **Set-AzApiManagementPolicy** to accept policy in Non-Xml escaped 'format' using 'rawxml' and Xml escaped using 'xml'</span></span>
-* <span data-ttu-id="7b0da-723">Uppdaterad cmdlet **New-AzApiManagementApi**</span><span class="sxs-lookup"><span data-stu-id="7b0da-723">Updated cmdlet **New-AzApiManagementApi**</span></span> 
-    - <span data-ttu-id="7b0da-724">Konfigurera API med OpenId auktoriseringsservern.</span><span class="sxs-lookup"><span data-stu-id="7b0da-724">To configure API with 'OpenId' authorization server.</span></span>
-    - <span data-ttu-id="7b0da-725">Skapa ett API i ApiVersionSet</span><span class="sxs-lookup"><span data-stu-id="7b0da-725">To create an API in an 'ApiVersionSet'</span></span>
-    - <span data-ttu-id="7b0da-726">Klona ett API med SourceApiId och SourceApiRevision.</span><span class="sxs-lookup"><span data-stu-id="7b0da-726">To clone an API using 'SourceApiId' and 'SourceApiRevision'.</span></span>
-    - <span data-ttu-id="7b0da-727">Möjlighet att konfigurera SubscriptionRequired i API-omfattningen.</span><span class="sxs-lookup"><span data-stu-id="7b0da-727">Ability to configure 'SubscriptionRequired' at the Api scope.</span></span> 
-* <span data-ttu-id="7b0da-728">Uppdaterad cmdlet **Set-AzApiManagementApi**</span><span class="sxs-lookup"><span data-stu-id="7b0da-728">Updated cmdlet **Set-AzApiManagementApi**</span></span>
-    - <span data-ttu-id="7b0da-729">Konfigurera API med OpenId auktoriseringsservern.</span><span class="sxs-lookup"><span data-stu-id="7b0da-729">To configure API with 'OpenId' authorization server.</span></span>
-    - <span data-ttu-id="7b0da-730">Uppdatera ett API till ApiVersionSet</span><span class="sxs-lookup"><span data-stu-id="7b0da-730">To updated an API into an 'ApiVersionSet'</span></span>    
-    - <span data-ttu-id="7b0da-731">Möjlighet att konfigurera SubscriptionRequired i API-omfattningen.</span><span class="sxs-lookup"><span data-stu-id="7b0da-731">Ability to configure 'SubscriptionRequired' at the Api scope.</span></span> 
-* <span data-ttu-id="7b0da-732">Uppdaterad cmdlet **New-AzApiManagementRevision**</span><span class="sxs-lookup"><span data-stu-id="7b0da-732">Updated cmdlet **New-AzApiManagementRevision**</span></span>
-    - <span data-ttu-id="7b0da-733">Klona en befintlig version med hjälp av SourceApiRevision (kopiera taggar, produkter, åtgärder och principer).</span><span class="sxs-lookup"><span data-stu-id="7b0da-733">To clone (copy tags, products, operations and policies) an existing revision using 'SourceApiRevision'.</span></span> <span data-ttu-id="7b0da-734">Den nya revisionen antar ApiId från den överordnade instansen.</span><span class="sxs-lookup"><span data-stu-id="7b0da-734">The new Revision assumes the 'ApiId' of the parent.</span></span>
-    - <span data-ttu-id="7b0da-735">Tillhandahålla ApiRevisionDescription</span><span class="sxs-lookup"><span data-stu-id="7b0da-735">To provide an 'ApiRevisionDescription'</span></span>
-    - <span data-ttu-id="7b0da-736">Åsidosätta ServiceUrl vid kloning av ett API.</span><span class="sxs-lookup"><span data-stu-id="7b0da-736">To override the 'ServiceUrl' when cloning an API.</span></span>
-* <span data-ttu-id="7b0da-737">Uppdaterad cmdlet **New-AzApiManagementIdentityProvider**</span><span class="sxs-lookup"><span data-stu-id="7b0da-737">Updated cmdlet **New-AzApiManagementIdentityProvider**</span></span>
-    - <span data-ttu-id="7b0da-738">Konfigurera AAD eller AADB2C med en Authority</span><span class="sxs-lookup"><span data-stu-id="7b0da-738">To configure 'AAD' or 'AADB2C' with an 'Authority'</span></span>
-    - <span data-ttu-id="7b0da-739">Konfigurera SignupPolicy, SigninPolicy, ProfileEditingPolicy och PasswordResetPolicy</span><span class="sxs-lookup"><span data-stu-id="7b0da-739">To setup 'SignupPolicy', 'SigninPolicy', 'ProfileEditingPolicy' and 'PasswordResetPolicy'</span></span>
-* <span data-ttu-id="7b0da-740">Uppdaterad cmdlet **New-AzApiManagementSubscription**</span><span class="sxs-lookup"><span data-stu-id="7b0da-740">Updated cmdlet **New-AzApiManagementSubscription**</span></span>
-    - <span data-ttu-id="7b0da-741">Kompensera för ny SubscriptonModel med Scope och UserId</span><span class="sxs-lookup"><span data-stu-id="7b0da-741">To account for the new SubscriptonModel using 'Scope' and 'UserId'</span></span>
-    - <span data-ttu-id="7b0da-742">Kompensera för gammal prenumerationsmodell med ProductId och UserId</span><span class="sxs-lookup"><span data-stu-id="7b0da-742">To account for the old subscription model using 'ProductId' and 'UserId'</span></span>
-    - <span data-ttu-id="7b0da-743">Lägg till funktion för att aktivera AllowTracing på prenumerationsnivå.</span><span class="sxs-lookup"><span data-stu-id="7b0da-743">Add support to enable 'AllowTracing' at the subscription level.</span></span>
-* <span data-ttu-id="7b0da-744">Uppdaterad cmdlet **Set-AzApiManagementSubscription**</span><span class="sxs-lookup"><span data-stu-id="7b0da-744">Updated cmdlet **Set-AzApiManagementSubscription**</span></span>
-    - <span data-ttu-id="7b0da-745">Kompensera för ny SubscriptonModel med Scope och UserId</span><span class="sxs-lookup"><span data-stu-id="7b0da-745">To account for the new SubscriptonModel using 'Scope' and 'UserId'</span></span>
-    - <span data-ttu-id="7b0da-746">Kompensera för gammal prenumerationsmodell med ProductId och UserId</span><span class="sxs-lookup"><span data-stu-id="7b0da-746">To account for the old subscription model using 'ProductId' and 'UserId'</span></span>
-    - <span data-ttu-id="7b0da-747">Lägg till funktion för att aktivera AllowTracing på prenumerationsnivå.</span><span class="sxs-lookup"><span data-stu-id="7b0da-747">Add support to enable 'AllowTracing' at the subscription level.</span></span>
-* <span data-ttu-id="7b0da-748">Uppdaterade följande cmdletar för att acceptera ResourceId som indata</span><span class="sxs-lookup"><span data-stu-id="7b0da-748">Updated following cmdlets to accept 'ResourceId' as input</span></span>
-    - <span data-ttu-id="7b0da-749">New-AzApiManagementContext</span><span class="sxs-lookup"><span data-stu-id="7b0da-749">'New-AzApiManagementContext'</span></span>
-        > <span data-ttu-id="7b0da-750">New-AzApiManagementContext -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/contoso</span><span class="sxs-lookup"><span data-stu-id="7b0da-750">New-AzApiManagementContext -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/contoso</span></span>
-    - <span data-ttu-id="7b0da-751">Get-AzApiManagementApiRelease</span><span class="sxs-lookup"><span data-stu-id="7b0da-751">'Get-AzApiManagementApiRelease'</span></span>
-        > <span data-ttu-id="7b0da-752">Get-AzApiManagementApiRelease -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/contoso/apis/echo-api/releases/releaseId</span><span class="sxs-lookup"><span data-stu-id="7b0da-752">Get-AzApiManagementApiRelease -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/contoso/apis/echo-api/releases/releaseId</span></span>
-    - <span data-ttu-id="7b0da-753">Get-AzApiManagementApiVersionSet</span><span class="sxs-lookup"><span data-stu-id="7b0da-753">'Get-AzApiManagementApiVersionSet'</span></span>
-        > <span data-ttu-id="7b0da-754">Get-AzApiManagementApiVersionSet -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/constoso/apiversionsets/pathversionset</span><span class="sxs-lookup"><span data-stu-id="7b0da-754">Get-AzApiManagementApiVersionSet -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/constoso/apiversionsets/pathversionset</span></span>
-    - <span data-ttu-id="7b0da-755">Get-AzApiManagementAuthorizationServer</span><span class="sxs-lookup"><span data-stu-id="7b0da-755">'Get-AzApiManagementAuthorizationServer'</span></span>
-    - <span data-ttu-id="7b0da-756">Get-AzApiManagementBackend</span><span class="sxs-lookup"><span data-stu-id="7b0da-756">'Get-AzApiManagementBackend'</span></span>
-        > <span data-ttu-id="7b0da-757">Get-AzApiManagementBackend -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/contoso/backends/servicefabric</span><span class="sxs-lookup"><span data-stu-id="7b0da-757">Get-AzApiManagementBackend -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/contoso/backends/servicefabric</span></span>
-    - <span data-ttu-id="7b0da-758">Get-AzApiManagementCertificate</span><span class="sxs-lookup"><span data-stu-id="7b0da-758">'Get-AzApiManagementCertificate'</span></span> 
-    - <span data-ttu-id="7b0da-759">Remove-AzApiManagementApiVersionSet</span><span class="sxs-lookup"><span data-stu-id="7b0da-759">'Remove-AzApiManagementApiVersionSet'</span></span>
-    - <span data-ttu-id="7b0da-760">Remove-AzApiManagementSubscription</span><span class="sxs-lookup"><span data-stu-id="7b0da-760">'Remove-AzApiManagementSubscription'</span></span>
-
-#### <a name="azautomation"></a><span data-ttu-id="7b0da-761">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="7b0da-761">Az.Automation</span></span>
-* <span data-ttu-id="7b0da-762">Uppdaterade Get-AzAutomationJobOutputRecord för att hantera postvärden av typen JSON och Text.</span><span class="sxs-lookup"><span data-stu-id="7b0da-762">Updated Get-AzAutomationJobOutputRecord to handle JSON and Text record values.</span></span>
-    - <span data-ttu-id="7b0da-763">Korrigering av problemet https://github.com/Azure/azure-powershell/issues/7977</span><span class="sxs-lookup"><span data-stu-id="7b0da-763">Fix for issue https://github.com/Azure/azure-powershell/issues/7977</span></span>
-    - <span data-ttu-id="7b0da-764">Korrigering av problemet https://github.com/Azure/azure-powershell/issues/8600</span><span class="sxs-lookup"><span data-stu-id="7b0da-764">Fix for issue https://github.com/Azure/azure-powershell/issues/8600</span></span>
-* <span data-ttu-id="7b0da-765">Ändrade beteende för Start-AzAutomationDscCompilationJob till att bara starta jobbet istället för att vänta på slutförandet.</span><span class="sxs-lookup"><span data-stu-id="7b0da-765">Changed behavior for Start-AzAutomationDscCompilationJob to just start the job instead of waiting for its completion.</span></span>
-    * <span data-ttu-id="7b0da-766">Korrigering av problemet https://github.com/Azure/azure-powershell/issues/8347</span><span class="sxs-lookup"><span data-stu-id="7b0da-766">Fix for issue https://github.com/Azure/azure-powershell/issues/8347</span></span>
-* <span data-ttu-id="7b0da-767">Korrigering för Get-AzAutomationDscNode när using -Name returnerar alla noder.</span><span class="sxs-lookup"><span data-stu-id="7b0da-767">Fix for Get-AzAutomationDscNode when using -Name returns all node.</span></span> <span data-ttu-id="7b0da-768">Nu returnerar den endast den matchande noden.</span><span class="sxs-lookup"><span data-stu-id="7b0da-768">Now it returns matching node only.</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="7b0da-769">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="7b0da-769">Az.Compute</span></span>
-* <span data-ttu-id="7b0da-770">Lägg till parametrarna ProtectFromScaleIn och ProtectFromScaleSetAction i cmdleten Update-AzVmssVM.</span><span class="sxs-lookup"><span data-stu-id="7b0da-770">Add ProtectFromScaleIn and ProtectFromScaleSetAction parameters to Update-AzVmssVM cmdlet.</span></span>
-* <span data-ttu-id="7b0da-771">Nu är standardinställningen att vimpelparametern New-AzVM använder en tillgänglig plats om USA, östra inte stöds</span><span class="sxs-lookup"><span data-stu-id="7b0da-771">New-AzVM wimple parameter set now uses by default an available location if 'East US' is not supported</span></span>
-
-#### <a name="azdatalakestore"></a><span data-ttu-id="7b0da-772">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="7b0da-772">Az.DataLakeStore</span></span>
-* <span data-ttu-id="7b0da-773">Uppdatera ADLS-sdk för att använda httpclient, integrera dataplanstestning med Azure-ramverk</span><span class="sxs-lookup"><span data-stu-id="7b0da-773">Update the ADLS sdk to use httpclient, integrate dataplane testing with azure framework</span></span>
-
-#### <a name="azmonitor"></a><span data-ttu-id="7b0da-774">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="7b0da-774">Az.Monitor</span></span>
-* <span data-ttu-id="7b0da-775">Korrigera felaktiga parameternamn i hjälpexempel</span><span class="sxs-lookup"><span data-stu-id="7b0da-775">Fixed incorrect parameter names in help examples</span></span>
-
-#### <a name="aznetwork"></a><span data-ttu-id="7b0da-776">Az.Network</span><span class="sxs-lookup"><span data-stu-id="7b0da-776">Az.Network</span></span>
-* <span data-ttu-id="7b0da-777">Lägg till flaggan DisableBgpRoutePropagation i utdata för effektiv routningstabell</span><span class="sxs-lookup"><span data-stu-id="7b0da-777">Add DisableBgpRoutePropagation flag to Effective Route Table output</span></span>
-    - <span data-ttu-id="7b0da-778">Uppdaterad cmdlet:</span><span class="sxs-lookup"><span data-stu-id="7b0da-778">Updated cmdlet:</span></span>
-        - <span data-ttu-id="7b0da-779">Get-AzEffectiveRouteTable</span><span class="sxs-lookup"><span data-stu-id="7b0da-779">Get-AzEffectiveRouteTable</span></span>
-* <span data-ttu-id="7b0da-780">Åtgärda dubbelstreck i dokumentationen New-AzApplicationGatewayTrustedRootCertificate</span><span class="sxs-lookup"><span data-stu-id="7b0da-780">Fix double dash in New-AzApplicationGatewayTrustedRootCertificate documentation</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="7b0da-781">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="7b0da-781">Az.Resources</span></span>
-* <span data-ttu-id="7b0da-782">Lägg till ny cmdlet Get-AzureRmDenyAssignment för att hämta tilldelningsnekanden</span><span class="sxs-lookup"><span data-stu-id="7b0da-782">Add new cmdlet Get-AzureRmDenyAssignment for retrieving deny assignments</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="7b0da-783">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="7b0da-783">Az.Sql</span></span>
-* <span data-ttu-id="7b0da-784">Döp om Advanced Threat Protection-cmdletar för Advanced Data Security och aktivera Vulnerability Assessment som standard</span><span class="sxs-lookup"><span data-stu-id="7b0da-784">Rename Advanced Threat Protection cmdlets to Advanced Data Security and enable Vulnerability Assessment by default</span></span>
-
-## <a name="200---may-2019"></a><span data-ttu-id="7b0da-785">2.0.0 – maj 2019</span><span class="sxs-lookup"><span data-stu-id="7b0da-785">2.0.0 - May 2019</span></span>
-#### <a name="azaccounts"></a><span data-ttu-id="7b0da-786">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="7b0da-786">Az.Accounts</span></span>
-* <span data-ttu-id="7b0da-787">Uppdatera autentiseringsbiblioteket för att åtgärda ADFS-problem med autentisering av användarnamn/lösenord</span><span class="sxs-lookup"><span data-stu-id="7b0da-787">Update Authentication Library to fix ADFS issues with username/password auth</span></span>
-
-#### <a name="azcognitiveservices"></a><span data-ttu-id="7b0da-788">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="7b0da-788">Az.CognitiveServices</span></span>
-* <span data-ttu-id="7b0da-789">Visa endast Bing-ansvarsfriskrivning för Bing-sökningstjänster.</span><span class="sxs-lookup"><span data-stu-id="7b0da-789">Only display Bing disclaimer for Bing Search Services.</span></span>
-* <span data-ttu-id="7b0da-790">Förbättra felmeddelande när det inte går att skapa konton.</span><span class="sxs-lookup"><span data-stu-id="7b0da-790">Improve error when create account failed.</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="7b0da-791">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="7b0da-791">Az.Compute</span></span>
-* <span data-ttu-id="7b0da-792">Funktion för närhetsplaceringsgrupper.</span><span class="sxs-lookup"><span data-stu-id="7b0da-792">Proximity placement group feature.</span></span>
-    - <span data-ttu-id="7b0da-793">Följande nya cmdletar har lagts till:   New-AzProximityPlacementGroup   Get-AzProximityPlacementGroup   Remove-AzProximityPlacementGroup</span><span class="sxs-lookup"><span data-stu-id="7b0da-793">The following new cmdlets are added:   New-AzProximityPlacementGroup   Get-AzProximityPlacementGroup   Remove-AzProximityPlacementGroup</span></span>
-    - <span data-ttu-id="7b0da-794">Den nya parametern ProximityPlacementGroupId har lagts till i följande cmdletar:   New-AzAvailabilitySet   New-AzVMConfig   New-AzVmssConfig</span><span class="sxs-lookup"><span data-stu-id="7b0da-794">The new parameter, ProximityPlacementGroupId, is added to the following cmdlets:   New-AzAvailabilitySet   New-AzVMConfig   New-AzVmssConfig</span></span>
-* <span data-ttu-id="7b0da-795">Parametern StorageAccountType har lagts till i New-AzGalleryImageVersion.</span><span class="sxs-lookup"><span data-stu-id="7b0da-795">StorageAccountType parameter is added to New-AzGalleryImageVersion.</span></span>
-* <span data-ttu-id="7b0da-796">TargetRegion för New-AzGalleryImageVersion kan innehålla StorageAccountType.</span><span class="sxs-lookup"><span data-stu-id="7b0da-796">TargetRegion of New-AzGalleryImageVersion can contain StorageAccountType.</span></span>
-* <span data-ttu-id="7b0da-797">Växlingsparametern SkipShutdown har lagts till i Stop-AzVM och Stop-AzVmss</span><span class="sxs-lookup"><span data-stu-id="7b0da-797">SkipShutdown switch parameter is added to Stop-AzVM and Stop-AzVmss</span></span>       
-* <span data-ttu-id="7b0da-798">Icke-bakåtkompatibla ändringar</span><span class="sxs-lookup"><span data-stu-id="7b0da-798">Breaking changes</span></span>
-    - <span data-ttu-id="7b0da-799">Set-AzVMBootDiagnostics har ändrats till Set-AzVMBootDiagnostic.</span><span class="sxs-lookup"><span data-stu-id="7b0da-799">Set-AzVMBootDiagnostics is changed to Set-AzVMBootDiagnostic.</span></span>
-    - <span data-ttu-id="7b0da-800">Export-AzLogAnalyticThrottledRequests har ändrats till Export-AzLogAnalyticThrottledRequests.</span><span class="sxs-lookup"><span data-stu-id="7b0da-800">Export-AzLogAnalyticThrottledRequests is changed to Export-AzLogAnalyticThrottledRequests.</span></span>
-
-#### <a name="azdeploymentmanager"></a><span data-ttu-id="7b0da-801">Az.DeploymentManager</span><span class="sxs-lookup"><span data-stu-id="7b0da-801">Az.DeploymentManager</span></span>
-* <span data-ttu-id="7b0da-802">De första allmänt tillgängliga versionerna av cmdletar för Distributionshanteraren i Azure</span><span class="sxs-lookup"><span data-stu-id="7b0da-802">First Generally Available release of Azure Deployment Manager cmdlets</span></span>
-
-#### <a name="azdns"></a><span data-ttu-id="7b0da-803">Az.Dns</span><span class="sxs-lookup"><span data-stu-id="7b0da-803">Az.Dns</span></span>
-* <span data-ttu-id="7b0da-804">Automatisk delegering av DNS för NameServer</span><span class="sxs-lookup"><span data-stu-id="7b0da-804">Automatic DNS NameServer Delegation</span></span>
-    - <span data-ttu-id="7b0da-805">Det överordnade zonnamnet kan användas som ytterligare valfri parameter i cmdleten för att skapa DNS-zoner.</span><span class="sxs-lookup"><span data-stu-id="7b0da-805">Create DNS zone cmdlet accepts parent zone name as additional optional parameter.</span></span>
-    - <span data-ttu-id="7b0da-806">Lägger till NS-poster för en nyligen skapad underordnad zon i den överordnade zonen.</span><span class="sxs-lookup"><span data-stu-id="7b0da-806">Adds NS records in the parent zone for newly created child zone.</span></span>
-
-#### <a name="azfrontdoor"></a><span data-ttu-id="7b0da-807">Az.FrontDoor</span><span class="sxs-lookup"><span data-stu-id="7b0da-807">Az.FrontDoor</span></span>
-* <span data-ttu-id="7b0da-808">De första allmänt tillgängliga versionerna av cmdletar för Azure FrontDoor</span><span class="sxs-lookup"><span data-stu-id="7b0da-808">First Generally Available Release of Azure FrontDoor cmdlets</span></span>
-* <span data-ttu-id="7b0da-809">Byt namn på WAF-cmdletar så att de omfattar ”Waf”</span><span class="sxs-lookup"><span data-stu-id="7b0da-809">Rename WAF cmdlets to include 'Waf'</span></span>
+* <span data-ttu-id="dca39-304">**New-AzApiManagementApiRevision** – Korrigering för problem där ApiRevisionDescription inte angavs vid skapande av ny API-revision https://github.com/Azure/azure-powershell/issues/9752</span><span class="sxs-lookup"><span data-stu-id="dca39-304">**New-AzApiManagementApiRevision** - Fix for issue where ApiRevisionDescription was not being set when creating new api revision https://github.com/Azure/azure-powershell/issues/9752</span></span>
+* <span data-ttu-id="dca39-305">Åtgärdade skrivfel i modellen "PsApiManagementOAuth2AuthrozationServer" till "PsApiManagementOAuth2AuthorizationServer"</span><span class="sxs-lookup"><span data-stu-id="dca39-305">Fixed typo in model 'PsApiManagementOAuth2AuthrozationServer' to 'PsApiManagementOAuth2AuthorizationServer'</span></span>
+
+#### <a name="azbatch"></a><span data-ttu-id="dca39-306">Az.Batch</span><span class="sxs-lookup"><span data-stu-id="dca39-306">Az.Batch</span></span>
+* <span data-ttu-id="dca39-307">Åtgärdade skrivfel i hjälpmeddelande och dokumentation till att skriva Windows med versaler</span><span class="sxs-lookup"><span data-stu-id="dca39-307">Fixed typo in help message and documentation to capitalize Windows</span></span>
+
+#### <a name="azcdn"></a><span data-ttu-id="dca39-308">Az.Cdn</span><span class="sxs-lookup"><span data-stu-id="dca39-308">Az.Cdn</span></span>
+* <span data-ttu-id="dca39-309">Åtgärdade skrivfel i CDN-modulens konverteringshjälp</span><span class="sxs-lookup"><span data-stu-id="dca39-309">Fixed a typo in CDN module conversion helper</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="dca39-310">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="dca39-310">Az.Compute</span></span>
+* <span data-ttu-id="dca39-311">Lägg till VmssId i New-AzVMConfig-cmdleten</span><span class="sxs-lookup"><span data-stu-id="dca39-311">Add VmssId to New-AzVMConfig cmdlet</span></span>
+* <span data-ttu-id="dca39-312">Lägg till parametrarna TerminateScheduledEvents och TerminateScheduledEventNotBeforeTimeoutInMinutes i New-AzVmssConfig och Update-AzVmss</span><span class="sxs-lookup"><span data-stu-id="dca39-312">Add TerminateScheduledEvents and TerminateScheduledEventNotBeforeTimeoutInMinutes parameters to New-AzVmssConfig and Update-AzVmss</span></span>
+* <span data-ttu-id="dca39-313">Lägg till egenskapen HyperVGeneration till avbildningsobjekt för virtuell dator</span><span class="sxs-lookup"><span data-stu-id="dca39-313">Add HyperVGeneration property to VM image object</span></span>
+* <span data-ttu-id="dca39-314">Lägg till funktioner för Host och HostGroup</span><span class="sxs-lookup"><span data-stu-id="dca39-314">Add Host and HostGroup features</span></span>
+    - <span data-ttu-id="dca39-315">Nya cmdletar:   New-AzHostGroup   New-AzHost   Get-AzHostGroup   Get-AzHost   Remove-AzHostGroup   Remove-AzHost</span><span class="sxs-lookup"><span data-stu-id="dca39-315">New cmdlets:   New-AzHostGroup   New-AzHost   Get-AzHostGroup   Get-AzHost   Remove-AzHostGroup   Remove-AzHost</span></span>
+    - <span data-ttu-id="dca39-316">HostId-parametern läggs till i New-AzVMConfig och New-AzVM</span><span class="sxs-lookup"><span data-stu-id="dca39-316">HostId parameter is added to New-AzVMConfig and New-AzVM</span></span>
+* <span data-ttu-id="dca39-317">Uppdatera exempel i "Invoke-AzVMRunCommand"-dokumentationen till att använda rätt parameternamn</span><span class="sxs-lookup"><span data-stu-id="dca39-317">Update example in 'Invoke-AzVMRunCommand' documentation to use correct parameter name</span></span>
+* <span data-ttu-id="dca39-318">Uppdatera "-VolumeType"-beskrivningen i referensdokumentationen för "set-AzVMDiskEncryptionExtension" och "set-AzVmssDiskEncryptionExtension"</span><span class="sxs-lookup"><span data-stu-id="dca39-318">Update '-VolumeType' description in 'Set-AzVMDiskEncryptionExtension' and 'Set-AzVmssDiskEncryptionExtension' reference documentation</span></span>
+
+#### <a name="azdatafactory"></a><span data-ttu-id="dca39-319">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="dca39-319">Az.DataFactory</span></span>
+* <span data-ttu-id="dca39-320">Åtgärda skrivfel till att använda versaler för "Windows" i "New-AzDataFactoryEncryptValue"-dokumentationen</span><span class="sxs-lookup"><span data-stu-id="dca39-320">Fix typo to capitalize 'Windows' in 'New-AzDataFactoryEncryptValue' documentation</span></span>
+* <span data-ttu-id="dca39-321">Uppdaterade ADF .Net SDK-versionen till 4.1.2</span><span class="sxs-lookup"><span data-stu-id="dca39-321">Updated ADF .Net SDK version to 4.1.2</span></span>
+* <span data-ttu-id="dca39-322">Lägg till parametrarna "DataProxyIntegrationRuntimeName", "DataProxyStagingLinkedServiceName" och "DataProxyStagingPath" för "Set-AzureRmDataFactoryV2IntegrationRuntime"-cmd för att aktivera konfiguration av lokalt installerad integrationskörning som en proxy för SSIS Integration Runtime</span><span class="sxs-lookup"><span data-stu-id="dca39-322">Add parameter 'DataProxyIntegrationRuntimeName', 'DataProxyStagingLinkedServiceName' and 'DataProxyStagingPath' for 'Set-AzureRmDataFactoryV2IntegrationRuntime' cmd to enable set up Self-Hosted Integration Runtime as a proxy for SSIS Integration Runtime</span></span>
+* <span data-ttu-id="dca39-323">Uppdaterade PSTriggerRun till att visa utlöst pipeline, meddelande och egenskaper samt PSActivityRun till att visa aktivitetstypen</span><span class="sxs-lookup"><span data-stu-id="dca39-323">Updated PSTriggerRun to show the triggered pipelines, message and properties, and PSActivityRun to show the activity type</span></span>
+
+#### <a name="azdatalakestore"></a><span data-ttu-id="dca39-324">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="dca39-324">Az.DataLakeStore</span></span>
+* <span data-ttu-id="dca39-325">Korrigering av frysning av Get-DataLakeStoreDeletedItem för fel eller fjärrundantag.</span><span class="sxs-lookup"><span data-stu-id="dca39-325">Fix hanging of Get-DataLakeStoreDeletedItem for any errors or remote exceptions.</span></span>
+
+#### <a name="azeventhub"></a><span data-ttu-id="dca39-326">Az.EventHub</span><span class="sxs-lookup"><span data-stu-id="dca39-326">Az.EventHub</span></span>
+* <span data-ttu-id="dca39-327">Korrigering av problem #9658 : Skrivfel i parametern VirtualNteworkRule i Set-AzEventHubNetworkRuleSet</span><span class="sxs-lookup"><span data-stu-id="dca39-327">Fix for issue #9658 : Typo VirtualNteworkRule parameter in Set-AzEventHubNetworkRuleSet</span></span>
+* <span data-ttu-id="dca39-328">Korrigering av problem #9558 : Set-AzEventHubNamespace använder PATCH i stället för PUT</span><span class="sxs-lookup"><span data-stu-id="dca39-328">Fix for issue #9558 : Set-AzEventHubNamespace is using PATCH instead of PUT</span></span>
+* <span data-ttu-id="dca39-329">lade till parametern EnableKafka i Set-AzEventHubNamespace-cmdleten</span><span class="sxs-lookup"><span data-stu-id="dca39-329">added EnableKafka parameter to Set-AzEventHubNamespace cmdlet</span></span>
+* <span data-ttu-id="dca39-330">Korrigering av problem #9786 : kan inte skapa en regel med Endast lyssna-behörighet</span><span class="sxs-lookup"><span data-stu-id="dca39-330">Fix for issue #9786 : cannot create a rule with Listen only rights</span></span>
+
+#### <a name="azmarketplaceordering"></a><span data-ttu-id="dca39-331">Az.MarketplaceOrdering</span><span class="sxs-lookup"><span data-stu-id="dca39-331">Az.MarketplaceOrdering</span></span>
+* <span data-ttu-id="dca39-332">Åtgärdade skrivfel i dokumentation där "Azure" skrevs helt med gemener</span><span class="sxs-lookup"><span data-stu-id="dca39-332">Fixed documentation typo where 'Azure' was all lowercase letters</span></span>
+
+#### <a name="azmonitor"></a><span data-ttu-id="dca39-333">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="dca39-333">Az.Monitor</span></span>
+* <span data-ttu-id="dca39-334">Åtgärdade felaktigt parameternamn i hjälpdokumentationen</span><span class="sxs-lookup"><span data-stu-id="dca39-334">Fixed incorrect parameter name in help documentation</span></span>
+
+#### <a name="aznetwork"></a><span data-ttu-id="dca39-335">Az.Network</span><span class="sxs-lookup"><span data-stu-id="dca39-335">Az.Network</span></span>
+* <span data-ttu-id="dca39-336">Uppdaterade New-AzPrivateLinkServiceIpConfig</span><span class="sxs-lookup"><span data-stu-id="dca39-336">Updated New-AzPrivateLinkServiceIpConfig</span></span>
+    - <span data-ttu-id="dca39-337">Gjorde parametern "PublicIpAddress" inaktuell eftersom den aldrig används på serversidan.</span><span class="sxs-lookup"><span data-stu-id="dca39-337">Deprecated the paramster 'PublicIpAddress' since this is never used in the server side.</span></span>
+    - <span data-ttu-id="dca39-338">Lade till den valfria parametern "Primary", som anger huruvida den aktuella IP-konfigurationen är den primära.</span><span class="sxs-lookup"><span data-stu-id="dca39-338">Added one optional parameter 'Primary' that indicate the current ip configuration is primary one or not.</span></span>
+* <span data-ttu-id="dca39-339">Förbättrade hanteringen av felundantag för begärande från SDK – åtgärdar problemet att tidigare SDK-undantag inte hanteras på rätt sätt, vilket leder till att viktig felinformation inte visas</span><span class="sxs-lookup"><span data-stu-id="dca39-339">Improved handling of request error exception from SDK   -Fixes the issue that previously SDK exceptions aren't handled correctly which results in key error details not being displayed</span></span>
+* <span data-ttu-id="dca39-340">Justerade valideringslogiken för IPv6-IP-prefix till att kontrollera korrekt IPv6-prefixlängd.</span><span class="sxs-lookup"><span data-stu-id="dca39-340">Adjusted validation logic for Ipv6 IP Prefix to check for correct IPv6 prefix length.</span></span> 
+* <span data-ttu-id="dca39-341">Uppdaterade Get-AzVirtualNetworkSubnetConfig: Lade till parameter som anges till get av undernätets resurs-ID.</span><span class="sxs-lookup"><span data-stu-id="dca39-341">Updated Get-AzVirtualNetworkSubnetConfig: Added parameter set to get by subnet resource id.</span></span>
+* <span data-ttu-id="dca39-342">Uppdaterade beskrivningen av parametern Location för AzNetworkServiceTag</span><span class="sxs-lookup"><span data-stu-id="dca39-342">Updated description of Location parameter for AzNetworkServiceTag</span></span>
+
+#### <a name="azoperationalinsights"></a><span data-ttu-id="dca39-343">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="dca39-343">Az.OperationalInsights</span></span>
+* <span data-ttu-id="dca39-344">Uppdaterade dokumentation för "New-AzOperationalInsightsLinuxSyslogDataSource"</span><span class="sxs-lookup"><span data-stu-id="dca39-344">Updated documentation for 'New-AzOperationalInsightsLinuxSyslogDataSource'</span></span>
+    - <span data-ttu-id="dca39-345">Lade till exempel</span><span class="sxs-lookup"><span data-stu-id="dca39-345">Added example</span></span>
+    - <span data-ttu-id="dca39-346">Uppdaterade beskrivningen av parametern "-Name"</span><span class="sxs-lookup"><span data-stu-id="dca39-346">Updated description for '-Name' parameter</span></span>
+* <span data-ttu-id="dca39-347">Lade till ett exempel för New-AzOperationalInsightsWindowsEventDataSource</span><span class="sxs-lookup"><span data-stu-id="dca39-347">Added an example for New-AzOperationalInsightsWindowsEventDataSource</span></span>
+* <span data-ttu-id="dca39-348">Ändrade beskrivningen av parametern -Name för New-AzOperationalInsightsWindowsEventDataSource</span><span class="sxs-lookup"><span data-stu-id="dca39-348">Changed the description of the -Name parameter for New-AzOperationalInsightsWindowsEventDataSource</span></span>
+
+#### <a name="azrecoveryservices"></a><span data-ttu-id="dca39-349">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="dca39-349">Az.RecoveryServices</span></span>
+* <span data-ttu-id="dca39-350">Uppdatera "Get-AzRecoveryServicesBackupJobDetail.md"</span><span class="sxs-lookup"><span data-stu-id="dca39-350">Update 'Get-AzRecoveryServicesBackupJobDetail.md'</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="dca39-351">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="dca39-351">Az.Resources</span></span>
+* <span data-ttu-id="dca39-352">Lägg till stöd för den nya API-versionen från 2019-05-10 för Microsoft.Resource</span><span class="sxs-lookup"><span data-stu-id="dca39-352">Add support for new api version 2019-05-10 for Microsoft.Resource</span></span>
+    - <span data-ttu-id="dca39-353">Lägg till stöd för "copy.count = 0" för variabler, resurser och egenskaper</span><span class="sxs-lookup"><span data-stu-id="dca39-353">Add support for 'copy.count = 0' for variables, resources and properties</span></span>
+    - <span data-ttu-id="dca39-354">Resurser med "condition = false" eller "copy.count = 0" tas bort i complete-läget</span><span class="sxs-lookup"><span data-stu-id="dca39-354">Resources with 'condition = false' or 'copy.count = 0' will be deleted in complete mode</span></span>
+* <span data-ttu-id="dca39-355">Lägg till ett exempel på tilldelning av princip på prenumerationsnivå i hjälpdokumentationen</span><span class="sxs-lookup"><span data-stu-id="dca39-355">Add an example of assigning policy at subscription level to help doc</span></span>
+
+#### <a name="azservicebus"></a><span data-ttu-id="dca39-356">Az.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="dca39-356">Az.ServiceBus</span></span>
+* <span data-ttu-id="dca39-357">Korrigering av problem #9658 : Skrivfel i parametern VirtualNetworkRule i set-AzServiceBusNetworkRuleSet</span><span class="sxs-lookup"><span data-stu-id="dca39-357">Fix for issue #9658 : Typo VirtualNetworkRule parameter in Set-AzServiceBusNetworkRuleSet</span></span>
+* <span data-ttu-id="dca39-358">Korrigering av problem #9786 : kan inte skapa en regel med Endast lyssna-behörighet</span><span class="sxs-lookup"><span data-stu-id="dca39-358">Fix for issue #9786 : cannot create a rule with Listen only rights</span></span>
+* <span data-ttu-id="dca39-359">Lade till det nya kommandot "Test-AzServiceBusNameAvailability" för att kontrollera namntillgängligheten för kö och ämne</span><span class="sxs-lookup"><span data-stu-id="dca39-359">Added new command 'Test-AzServiceBusNameAvailability' to check the name availability for queue and topic</span></span> 
+
+#### <a name="azservicefabric"></a><span data-ttu-id="dca39-360">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="dca39-360">Az.ServiceFabric</span></span>
+* <span data-ttu-id="dca39-361">Åtgärda buggar med tillägg av nodtyps-cmdlet:</span><span class="sxs-lookup"><span data-stu-id="dca39-361">Fix add node type cmdlet bugs:</span></span>
+    - <span data-ttu-id="dca39-362">NullReferenceException-bugg när resursgrupp hade annan vmss som inte är relaterad till Service Fabric-klustret.</span><span class="sxs-lookup"><span data-stu-id="dca39-362">NullReferenceException bug when resource group had other vmss not related to the service fabric cluster.</span></span> <span data-ttu-id="dca39-363">Åtgärdar problemet: https://github.com/Azure/azure-powershell/issues/8681</span><span class="sxs-lookup"><span data-stu-id="dca39-363">Fixes issue: https://github.com/Azure/azure-powershell/issues/8681</span></span>
+    - <span data-ttu-id="dca39-364">Åtgärda bugg där cmdleten misslyckades om virtualNetwork var i en annan resursgrupp än klustret.</span><span class="sxs-lookup"><span data-stu-id="dca39-364">Fix bug where cmdlet failed if virtualNetwork was in a different resource group that the cluster.</span></span> <span data-ttu-id="dca39-365">Åtgärdar problemet: https://github.com/Azure/azure-powershell/issues/8407</span><span class="sxs-lookup"><span data-stu-id="dca39-365">fixes issue: https://github.com/Azure/azure-powershell/issues/8407</span></span>
+    - <span data-ttu-id="dca39-366">AzServiceFabricApplicationCertificate-cmdleten görs inaktuell</span><span class="sxs-lookup"><span data-stu-id="dca39-366">Deprecating Add-AzServiceFabricApplicationCertificate cmdlet</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="dca39-367">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="dca39-367">Az.Sql</span></span>
+* <span data-ttu-id="dca39-368">Uppdatera dokumentation om gamla gransknings-cmdletar.</span><span class="sxs-lookup"><span data-stu-id="dca39-368">Update documentation of old Auditing cmdlets.</span></span>
+
+#### <a name="azstorage"></a><span data-ttu-id="dca39-369">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="dca39-369">Az.Storage</span></span>
+* <span data-ttu-id="dca39-370">Uppdatera hjälpen för Get/Close-AzStorageFileHandle genom att lägga till fler scenarier i cmdlet-exempel och uppdatera parameterbeskrivningar</span><span class="sxs-lookup"><span data-stu-id="dca39-370">Update help for Get/Close-AzStorageFileHandle, by add more scenarios to cmdlet examples and update parameter descriptions</span></span>
+* <span data-ttu-id="dca39-371">Stöd för StandardBlobTier i uppladdningsblob och kopieringsblob</span><span class="sxs-lookup"><span data-stu-id="dca39-371">Support StandardBlobTier in upload blob and copy blob</span></span>
+    -  <span data-ttu-id="dca39-372">Set-AzStorageBlobContent</span><span class="sxs-lookup"><span data-stu-id="dca39-372">Set-AzStorageBlobContent</span></span>
+    -  <span data-ttu-id="dca39-373">Start-AzStorageBlobCopy</span><span class="sxs-lookup"><span data-stu-id="dca39-373">Start-AzStorageBlobCopy</span></span>
+* <span data-ttu-id="dca39-374">Stöd för rehydratiseringsprioritet i kopieringsblob</span><span class="sxs-lookup"><span data-stu-id="dca39-374">Support Rehydrate Priority in copy blob</span></span>
+    -  <span data-ttu-id="dca39-375">Start-AzStorageBlobCopy</span><span class="sxs-lookup"><span data-stu-id="dca39-375">Start-AzStorageBlobCopy</span></span>
+
+#### <a name="azwebsites"></a><span data-ttu-id="dca39-376">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="dca39-376">Az.Websites</span></span>
+* <span data-ttu-id="dca39-377">Lägg till klargöranden gällande parametern -AppSettings i Set-AzWebApp och Set-AzWebAppSlot</span><span class="sxs-lookup"><span data-stu-id="dca39-377">Add clarification around -AppSettings parameter in Set-AzWebApp and Set-AzWebAppSlot</span></span>
+
+## <a name="250---july-2019"></a><span data-ttu-id="dca39-378">2.5.0 – July 2019</span><span class="sxs-lookup"><span data-stu-id="dca39-378">2.5.0 - July 2019</span></span>
+#### <a name="azaccounts"></a><span data-ttu-id="dca39-379">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="dca39-379">Az.Accounts</span></span>
+* <span data-ttu-id="dca39-380">Uppdatera gemensam kod så att den använder den senaste versionen av ClientRuntime</span><span class="sxs-lookup"><span data-stu-id="dca39-380">Update common code to use latest version of ClientRuntime</span></span>
+
+#### <a name="azapplicationinsights"></a><span data-ttu-id="dca39-381">Az.ApplicationInsights</span><span class="sxs-lookup"><span data-stu-id="dca39-381">Az.ApplicationInsights</span></span>
+* <span data-ttu-id="dca39-382">Korrigera skrivfel i exempel i dokumentationen för Remove-AzApplicationInsightsApiKey</span><span class="sxs-lookup"><span data-stu-id="dca39-382">Fix example typo in 'Remove-AzApplicationInsightsApiKey' documentation</span></span> 
+
+#### <a name="azautomation"></a><span data-ttu-id="dca39-383">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="dca39-383">Az.Automation</span></span>
+* <span data-ttu-id="dca39-384">Korrigera skrivfel i resurssträng</span><span class="sxs-lookup"><span data-stu-id="dca39-384">Fix typo in resource string</span></span> 
+
+#### <a name="azcognitiveservices"></a><span data-ttu-id="dca39-385">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="dca39-385">Az.CognitiveServices</span></span>
+* <span data-ttu-id="dca39-386">Stöd för NetworkRuleSet har lagts till.</span><span class="sxs-lookup"><span data-stu-id="dca39-386">Added NetworkRuleSet support.</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="dca39-387">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="dca39-387">Az.Compute</span></span>
+* <span data-ttu-id="dca39-388">Lägg till saknade egenskaper (ComputerName, OsName, OsVersion och HyperVGeneration) för visningsobjekt i den virtuella datorinstansen.</span><span class="sxs-lookup"><span data-stu-id="dca39-388">Add missing properties (ComputerName, OsName, OsVersion and HyperVGeneration) of VM instance view object.</span></span>
+
+#### <a name="azcontainerregistry"></a><span data-ttu-id="dca39-389">Az.ContainerRegistry</span><span class="sxs-lookup"><span data-stu-id="dca39-389">Az.ContainerRegistry</span></span>
+* <span data-ttu-id="dca39-390">Åtgärda skrivfel i Remove-AzContainerRegistryReplication för parametern Replication</span><span class="sxs-lookup"><span data-stu-id="dca39-390">Fix typo in Remove-AzContainerRegistryReplication for Replication parameter</span></span>
+    - <span data-ttu-id="dca39-391">Mer information finns här: https://github.com/Azure/azure-powershell/issues/9633</span><span class="sxs-lookup"><span data-stu-id="dca39-391">More information here https://github.com/Azure/azure-powershell/issues/9633</span></span>
+
+#### <a name="azdatafactory"></a><span data-ttu-id="dca39-392">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="dca39-392">Az.DataFactory</span></span>
+* <span data-ttu-id="dca39-393">ADF .Net SDK-versionen har uppdaterats till 4.1.0</span><span class="sxs-lookup"><span data-stu-id="dca39-393">Updated ADF .Net SDK version to 4.1.0</span></span>
+* <span data-ttu-id="dca39-394">Korrigera skrivfel i dokumentationen för Get-AzDataFactoryV2PipelineRun</span><span class="sxs-lookup"><span data-stu-id="dca39-394">Fix typo in documentation for 'Get-AzDataFactoryV2PipelineRun'</span></span>
+
+#### <a name="azeventhub"></a><span data-ttu-id="dca39-395">Az.EventHub</span><span class="sxs-lookup"><span data-stu-id="dca39-395">Az.EventHub</span></span>
+* <span data-ttu-id="dca39-396">Ny cmmdlet har lagts till för att skapa SAS-token: New-AzEventHubAuthorizationRuleSASToken</span><span class="sxs-lookup"><span data-stu-id="dca39-396">Added new cmmdlet added for generating SAS token : New-AzEventHubAuthorizationRuleSASToken</span></span>
+* <span data-ttu-id="dca39-397">verifierings- och felmeddelande har lagts till för authorizationrules-rättigheter om endast "hantera" har tilldelats</span><span class="sxs-lookup"><span data-stu-id="dca39-397">added verification and error message for authorizationrules rights if only 'Manage' is assigned</span></span>
+
+#### <a name="azkeyvault"></a><span data-ttu-id="dca39-398">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="dca39-398">Az.KeyVault</span></span>
+* <span data-ttu-id="dca39-399">Stöd har lagts till för att ange KeySize för certifikatprinciper</span><span class="sxs-lookup"><span data-stu-id="dca39-399">Added support to specify the KeySize for Certificate Policies</span></span>
+
+#### <a name="azlogicapp"></a><span data-ttu-id="dca39-400">Az.LogicApp</span><span class="sxs-lookup"><span data-stu-id="dca39-400">Az.LogicApp</span></span>
+* <span data-ttu-id="dca39-401">Korrigering för Get-AzIntegrationAccountMap för att lista alla mappningstyper</span><span class="sxs-lookup"><span data-stu-id="dca39-401">Fix for Get-AzIntegrationAccountMap to list all map types</span></span>
+    - <span data-ttu-id="dca39-402">Ny MapType-parameter har lagts till för filtrering</span><span class="sxs-lookup"><span data-stu-id="dca39-402">Added new MapType parameter for filtering</span></span>
+
+#### <a name="azmanagedservices"></a><span data-ttu-id="dca39-403">Az.ManagedServices</span><span class="sxs-lookup"><span data-stu-id="dca39-403">Az.ManagedServices</span></span>
+* <span data-ttu-id="dca39-404">Stöd för API-versionen 2019-06-01 (GA) har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-404">Added support for api version 2019-06-01 (GA)</span></span>
+
+#### <a name="aznetwork"></a><span data-ttu-id="dca39-405">Az.Network</span><span class="sxs-lookup"><span data-stu-id="dca39-405">Az.Network</span></span>
+* <span data-ttu-id="dca39-406">Lägg till stöd för privat slutpunkt och privat länktjänst</span><span class="sxs-lookup"><span data-stu-id="dca39-406">Add support for private endpoint and private link service</span></span>
+    - <span data-ttu-id="dca39-407">Nya cmdletar</span><span class="sxs-lookup"><span data-stu-id="dca39-407">New cmdlets</span></span>
+        - <span data-ttu-id="dca39-408">Set-AzPrivateEndpoint</span><span class="sxs-lookup"><span data-stu-id="dca39-408">Set-AzPrivateEndpoint</span></span>
+        - <span data-ttu-id="dca39-409">Set-AzPrivateLinkService</span><span class="sxs-lookup"><span data-stu-id="dca39-409">Set-AzPrivateLinkService</span></span>
+        - <span data-ttu-id="dca39-410">Approve-AzPrivateEndpointConnection</span><span class="sxs-lookup"><span data-stu-id="dca39-410">Approve-AzPrivateEndpointConnection</span></span>
+        - <span data-ttu-id="dca39-411">Deny-AzPrivateEndpointConnection</span><span class="sxs-lookup"><span data-stu-id="dca39-411">Deny-AzPrivateEndpointConnection</span></span>
+        - <span data-ttu-id="dca39-412">Get-AzPrivateEndpointConnection</span><span class="sxs-lookup"><span data-stu-id="dca39-412">Get-AzPrivateEndpointConnection</span></span>
+        - <span data-ttu-id="dca39-413">Remove-AzPrivateEndpointConnection</span><span class="sxs-lookup"><span data-stu-id="dca39-413">Remove-AzPrivateEndpointConnection</span></span>
+        - <span data-ttu-id="dca39-414">Test-AzPrivateLinkServiceVisibility</span><span class="sxs-lookup"><span data-stu-id="dca39-414">Test-AzPrivateLinkServiceVisibility</span></span>
+        - <span data-ttu-id="dca39-415">Get-AzAutoApprovedPrivateLinkService</span><span class="sxs-lookup"><span data-stu-id="dca39-415">Get-AzAutoApprovedPrivateLinkService</span></span>
+* <span data-ttu-id="dca39-416">Nedanstående kommandon för funktionen har uppdaterats: Flaggan PrivateEndpointNetworkPolicies/PrivateLinkServiceNetworkPolicies på undernätet i VirtualNetwork</span><span class="sxs-lookup"><span data-stu-id="dca39-416">Updated below commands for feature: PrivateEndpointNetworkPolicies/PrivateLinkServiceNetworkPolicies flag on Subnet in Virtualnetwork</span></span>
+    - <span data-ttu-id="dca39-417">Uppdaterade New-AzVirtualNetworkSubnetConfig/Set-AzVirtualNetworkSubnetConfig/Add-AzVirtualNetworkSubnetConfig</span><span class="sxs-lookup"><span data-stu-id="dca39-417">Updated New-AzVirtualNetworkSubnetConfig/Set-AzVirtualNetworkSubnetConfig/Add-AzVirtualNetworkSubnetConfig</span></span>
+        - <span data-ttu-id="dca39-418">Valfri parameter har lagts till – PrivateEndpointNetworkPoliciesFlag som konfigurerar huruvida nätverksprinciper ska tillämpas på en privat slutpunkt i det här undernätet.</span><span class="sxs-lookup"><span data-stu-id="dca39-418">Added optional parameter -PrivateEndpointNetworkPoliciesFlag that configures whether to apply network policies on private endpoint in this subnet.</span></span>
+        - <span data-ttu-id="dca39-419">Valfri parameter har lagts till – PrivateLinkServiceNetworkPoliciesFlag som konfigurerar huruvida nätverksprinciper ska tillämpas på en privat länktjänst i det här undernätet.</span><span class="sxs-lookup"><span data-stu-id="dca39-419">Added optional parameter -PrivateLinkServiceNetworkPoliciesFlag that configures whether to apply network policies network policies on private link service in this subnet.</span></span>
+* <span data-ttu-id="dca39-420">AzPrivateLinkService för cmdlet-parametern ServiceName har bytt namn till Name med aliaset ServiceName för bakåtkompatibilitet</span><span class="sxs-lookup"><span data-stu-id="dca39-420">AzPrivateLinkService's cmdlet parameter 'ServiceName' was renamed to 'Name' with an alias 'ServiceName' for backward compatibility</span></span>
+* <span data-ttu-id="dca39-421">Aktivera ICMP-protokoll för konfiguration av nätverkssäkerhetsregler</span><span class="sxs-lookup"><span data-stu-id="dca39-421">Enable ICMP protocol for network security rule configurations</span></span>
+    - <span data-ttu-id="dca39-422">Uppdaterade cmdletar</span><span class="sxs-lookup"><span data-stu-id="dca39-422">Updated cmdlets</span></span>
+        - <span data-ttu-id="dca39-423">Add-AzNetworkSecurityRuleConfig</span><span class="sxs-lookup"><span data-stu-id="dca39-423">Add-AzNetworkSecurityRuleConfig</span></span>
+        - <span data-ttu-id="dca39-424">New-AzNetworkSecurityRuleConfig</span><span class="sxs-lookup"><span data-stu-id="dca39-424">New-AzNetworkSecurityRuleConfig</span></span>
+        - <span data-ttu-id="dca39-425">Set-AzNetworkSecurityRuleConfig</span><span class="sxs-lookup"><span data-stu-id="dca39-425">Set-AzNetworkSecurityRuleConfig</span></span>
+* <span data-ttu-id="dca39-426">Lägg till ConnectionProtocolType (Ikev1/Ikev2) som en konfigurerbar parameter för New-AzVirtualNetworkGatewayConnection</span><span class="sxs-lookup"><span data-stu-id="dca39-426">Add ConnectionProtocolType (Ikev1/Ikev2) as a configurable parameter for New-AzVirtualNetworkGatewayConnection</span></span>
+* <span data-ttu-id="dca39-427">Lägg till PrivateIpAddressVersion i LoadBalancerFrontendIpConfiguration</span><span class="sxs-lookup"><span data-stu-id="dca39-427">Add PrivateIpAddressVersion in LoadBalancerFrontendIpConfiguration</span></span>
+    - <span data-ttu-id="dca39-428">Uppdaterad cmdlet:</span><span class="sxs-lookup"><span data-stu-id="dca39-428">Updated cmdlet:</span></span>
+        - <span data-ttu-id="dca39-429">New-AzLoadBalancerFrontendIpConfig</span><span class="sxs-lookup"><span data-stu-id="dca39-429">New-AzLoadBalancerFrontendIpConfig</span></span>
+        - <span data-ttu-id="dca39-430">Add-AzLoadBalancerFrontendIpConfig</span><span class="sxs-lookup"><span data-stu-id="dca39-430">Add-AzLoadBalancerFrontendIpConfig</span></span>
+        - <span data-ttu-id="dca39-431">Set-AzLoadBalancerFrontendIpConfig</span><span class="sxs-lookup"><span data-stu-id="dca39-431">Set-AzLoadBalancerFrontendIpConfig</span></span>
+* <span data-ttu-id="dca39-432">Uppdatering av Application Gateway-kommandot New-AzApplicationGatewayProbeConfig för stöd av anpassad port i Probe</span><span class="sxs-lookup"><span data-stu-id="dca39-432">Application Gateway New-AzApplicationGatewayProbeConfig command update for supporting custom port in Probe</span></span>
+    - <span data-ttu-id="dca39-433">Uppdaterade New-AzApplicationGatewayProbeConfig: Den valfria parametern Port som används för avsökning i serverdelen har lagts till.</span><span class="sxs-lookup"><span data-stu-id="dca39-433">Updated New-AzApplicationGatewayProbeConfig: Added optional parameter Port which is used for probing backend server.</span></span> <span data-ttu-id="dca39-434">Denna parameter gäller för SKU:erna Standard_V2 och WAF_V2.</span><span class="sxs-lookup"><span data-stu-id="dca39-434">This parameter is applicable for Standard_V2 and WAF_V2 SKU.</span></span>
+
+#### <a name="azoperationalinsights"></a><span data-ttu-id="dca39-435">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="dca39-435">Az.OperationalInsights</span></span>
+* <span data-ttu-id="dca39-436">Uppdaterade standardversionen för sparade sökningar till 1.</span><span class="sxs-lookup"><span data-stu-id="dca39-436">Updated default version for saved searches to be 1.</span></span> 
+* <span data-ttu-id="dca39-437">Åtgärdade hantering av anpassad log null regex</span><span class="sxs-lookup"><span data-stu-id="dca39-437">Fixed custom log null regex handling</span></span>
+
+#### <a name="azrecoveryservices"></a><span data-ttu-id="dca39-438">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="dca39-438">Az.RecoveryServices</span></span>
+* <span data-ttu-id="dca39-439">Uppdatera Get-AzRecoveryServicesBackupJob.md</span><span class="sxs-lookup"><span data-stu-id="dca39-439">Update 'Get-AzRecoveryServicesBackupJob.md'</span></span>
+* <span data-ttu-id="dca39-440">Uppdatera Get-AzRecoveryServicesBackupContainer.md</span><span class="sxs-lookup"><span data-stu-id="dca39-440">Update 'Get-AzRecoveryServicesBackupContainer.md'</span></span>
+* <span data-ttu-id="dca39-441">Uppdatera Get-AzRecoveryServicesVault.md</span><span class="sxs-lookup"><span data-stu-id="dca39-441">Update 'Get-AzRecoveryServicesVault.md'</span></span>
+* <span data-ttu-id="dca39-442">Uppdatera Wait-AzRecoveryServicesBackupJob.md</span><span class="sxs-lookup"><span data-stu-id="dca39-442">Update 'Wait-AzRecoveryServicesBackupJob.md'</span></span>
+* <span data-ttu-id="dca39-443">Uppdatera Set-AzRecoveryServicesVaultContext.md</span><span class="sxs-lookup"><span data-stu-id="dca39-443">Update 'Set-AzRecoveryServicesVaultContext.md'</span></span>
+* <span data-ttu-id="dca39-444">Uppdatera Get-AzRecoveryServicesBackupItem.md</span><span class="sxs-lookup"><span data-stu-id="dca39-444">Update 'Get-AzRecoveryServicesBackupItem.md'</span></span>
+* <span data-ttu-id="dca39-445">Uppdatera Get-AzRecoveryServicesBackupRecoveryPoint.md</span><span class="sxs-lookup"><span data-stu-id="dca39-445">Update 'Get-AzRecoveryServicesBackupRecoveryPoint.md'</span></span>
+* <span data-ttu-id="dca39-446">Uppdatera Restore-AzRecoveryServicesBackupItem.md</span><span class="sxs-lookup"><span data-stu-id="dca39-446">Update 'Restore-AzRecoveryServicesBackupItem.md'</span></span>
+* <span data-ttu-id="dca39-447">Uppdaterat tjänstanrop för avregistrering av container för Azure-filresurs</span><span class="sxs-lookup"><span data-stu-id="dca39-447">Updated service call for Unregistering container for Azure File Share</span></span>
+* <span data-ttu-id="dca39-448">Uppdatera Set-AzRecoveryServicesAsrAlertSetting.md</span><span class="sxs-lookup"><span data-stu-id="dca39-448">Update 'Set-AzRecoveryServicesAsrAlertSetting.md'</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="dca39-449">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="dca39-449">Az.Resources</span></span>
+- <span data-ttu-id="dca39-450">Ta bort den cmdlet som saknas och som refereras i dokumentationen till New-AzResourceGroupDeployment</span><span class="sxs-lookup"><span data-stu-id="dca39-450">Remove missing cmdlet referenced in 'New-AzResourceGroupDeployment' documentation</span></span>
+- <span data-ttu-id="dca39-451">Princip-cmdletar har uppdaterats så att de använder den nya API-versionen 2019-01-01</span><span class="sxs-lookup"><span data-stu-id="dca39-451">Updated policy cmdlets to use new api version 2019-01-01</span></span>
+
+#### <a name="azservicebus"></a><span data-ttu-id="dca39-452">Az.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="dca39-452">Az.ServiceBus</span></span>
+* <span data-ttu-id="dca39-453">Ny cmmdlet har lagts till för att skapa SAS-token: New-AzServiceBusAuthorizationRuleSASToken</span><span class="sxs-lookup"><span data-stu-id="dca39-453">Added new cmmdlet added for generating SAS token : New-AzServiceBusAuthorizationRuleSASToken</span></span>
+* <span data-ttu-id="dca39-454">verifierings- och felmeddelande har lagts till för authorizationrules-rättigheter om endast "hantera" har tilldelats</span><span class="sxs-lookup"><span data-stu-id="dca39-454">added verification and error message for authorizationrules rights if only 'Manage' is assigned</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="dca39-455">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="dca39-455">Az.Sql</span></span>
+* <span data-ttu-id="dca39-456">Åtgärda saknade exempel för Set-AzSqlDatabaseSecondary cmdlet</span><span class="sxs-lookup"><span data-stu-id="dca39-456">Fix missing examples for Set-AzSqlDatabaseSecondary cmdlet</span></span>
+* <span data-ttu-id="dca39-457">Åtgärda angivna återkommande genomsökningar för bedömning av säkerhetsrisk utan angivna e-postadresser</span><span class="sxs-lookup"><span data-stu-id="dca39-457">Fix set Vulnerability Assessment recurring scans without providing any email addresses</span></span>
+* <span data-ttu-id="dca39-458">Korrigera ett skrivfel i ett varningsmeddelande.</span><span class="sxs-lookup"><span data-stu-id="dca39-458">Fix a small typo in a warining message.</span></span>
+
+#### <a name="azstorage"></a><span data-ttu-id="dca39-459">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="dca39-459">Az.Storage</span></span>
+* <span data-ttu-id="dca39-460">Uppdatera exempel i referensdokumentationen för Get-AzStorageAccount så att rätt parameternamn används</span><span class="sxs-lookup"><span data-stu-id="dca39-460">Update example in reference documentation for 'Get-AzStorageAccount' to use correct parameter name</span></span>
+
+#### <a name="azstoragesync"></a><span data-ttu-id="dca39-461">Az.StorageSync</span><span class="sxs-lookup"><span data-stu-id="dca39-461">Az.StorageSync</span></span>
+* <span data-ttu-id="dca39-462">Lägger till cmdleten Invoke-AzStorageSyncChangeDetection.</span><span class="sxs-lookup"><span data-stu-id="dca39-462">Adding Invoke-AzStorageSyncChangeDetection cmdlet.</span></span>
+* <span data-ttu-id="dca39-463">Åtgärda problem 9551 så att TierFilesOlderThanDays föredras</span><span class="sxs-lookup"><span data-stu-id="dca39-463">Fix Issue 9551 for honoring TierFilesOlderThanDays</span></span>
+
+#### <a name="azwebsites"></a><span data-ttu-id="dca39-464">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="dca39-464">Az.Websites</span></span>
+* <span data-ttu-id="dca39-465">Åtgärdar ett fel där vissa SiteConfig-egenskaper inte returnerades av Get-AzWebApp och Set-AzWebApp</span><span class="sxs-lookup"><span data-stu-id="dca39-465">Fixing a bug where some SiteConfig properties were not returned by Get-AzWebApp and Set-AzWebApp</span></span>
+* <span data-ttu-id="dca39-466">Lägger till en ny platsparameter för Get-AzDeletedWebApp och Restore-AzDeletedWebApp</span><span class="sxs-lookup"><span data-stu-id="dca39-466">Adds a new Location parameter to Get-AzDeletedWebApp and Restore-AzDeletedWebApp</span></span>
+* <span data-ttu-id="dca39-467">Åtgärdar ett fel i kloning av webbapp-platser som använder New-AzWebApp-IncludeSourceWebAppSlots</span><span class="sxs-lookup"><span data-stu-id="dca39-467">Fixes a bug with cloning web app slots using New-AzWebApp -IncludeSourceWebAppSlots</span></span>
+
+## <a name="240---july-2019"></a><span data-ttu-id="dca39-468">2.4.0 – juli 2019</span><span class="sxs-lookup"><span data-stu-id="dca39-468">2.4.0 - July 2019</span></span>
+#### <a name="azaccounts"></a><span data-ttu-id="dca39-469">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="dca39-469">Az.Accounts</span></span>
+* <span data-ttu-id="dca39-470">Lägg till stöd för profil-cmdletar</span><span class="sxs-lookup"><span data-stu-id="dca39-470">Add support for profile cmdlets</span></span>
+* <span data-ttu-id="dca39-471">Lägg till stöd för miljöer och dataplaner i genererade cmdletar</span><span class="sxs-lookup"><span data-stu-id="dca39-471">Add support for environments and data planes in generated cmdlets</span></span>
+* <span data-ttu-id="dca39-472">Åtgärda bugg där fel slutpunkt i vissa fall användes för cmdletar för dataplaner i Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="dca39-472">Fix bug where incorrect endpoint was being used in some cases for data plane cmdlets in Windows PowerShell</span></span>
+
+#### <a name="azadvisor"></a><span data-ttu-id="dca39-473">Az.Advisor</span><span class="sxs-lookup"><span data-stu-id="dca39-473">Az.Advisor</span></span>
+* <span data-ttu-id="dca39-474">GA-version av Az.Advisor</span><span class="sxs-lookup"><span data-stu-id="dca39-474">GA release of Az.Advisor</span></span>
+* <span data-ttu-id="dca39-475">Den här modulen ingår nu som en del av `Az`-sammanslagningsmodulen</span><span class="sxs-lookup"><span data-stu-id="dca39-475">This module is now included as a part of the roll-up `Az` module</span></span>
+
+#### <a name="azapimanagement"></a><span data-ttu-id="dca39-476">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="dca39-476">Az.ApiManagement</span></span>
+* <span data-ttu-id="dca39-477">Korrigering av problemet https://github.com/Azure/azure-powershell/issues/8671</span><span class="sxs-lookup"><span data-stu-id="dca39-477">Fix for issue https://github.com/Azure/azure-powershell/issues/8671</span></span>
+    - <span data-ttu-id="dca39-478">**Get-AzApiManagementSubscription**</span><span class="sxs-lookup"><span data-stu-id="dca39-478">**Get-AzApiManagementSubscription**</span></span>
+        - <span data-ttu-id="dca39-479">Stöd för att fråga prenumerationer efter användare och produkt har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-479">Added support for querying subscriptions by User and Product</span></span>
+        - <span data-ttu-id="dca39-480">Stöd för att fråga med hjälp av omfång ”/”, ”/apis”, ”/apis/echo-api” har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-480">Added support for querying using Scope '/', '/apis', '/apis/echo-api'</span></span>
+* <span data-ttu-id="dca39-481">Korrigering av problem https://github.com/Azure/azure-powershell/issues/9307 och https://github.com/Azure/azure-powershell/issues/8432</span><span class="sxs-lookup"><span data-stu-id="dca39-481">Fix for issue https://github.com/Azure/azure-powershell/issues/9307 and https://github.com/Azure/azure-powershell/issues/8432</span></span>
+    - <span data-ttu-id="dca39-482">**Import-AzApiManagementApi**</span><span class="sxs-lookup"><span data-stu-id="dca39-482">**Import-AzApiManagementApi**</span></span>
+        - <span data-ttu-id="dca39-483">Stöd för att ange ”ApiVersion” och ”ApiVersionSetId” när API:er importeras har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-483">Added support for specifying 'ApiVersion' and 'ApiVersionSetId' when importing Apis</span></span>
+
+#### <a name="azautomation"></a><span data-ttu-id="dca39-484">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="dca39-484">Az.Automation</span></span>
+* <span data-ttu-id="dca39-485">Bugg med cmdleten Set-AzAutomationConnectionFieldValue för att hantera strängvärde har åtgärdats.</span><span class="sxs-lookup"><span data-stu-id="dca39-485">Fixed Set-AzAutomationConnectionFieldValue cmdlet bug to handle string value.</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="dca39-486">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="dca39-486">Az.Compute</span></span>
+* <span data-ttu-id="dca39-487">Lägg till parametern HyperVGeneration i New-AzImageConfig</span><span class="sxs-lookup"><span data-stu-id="dca39-487">Add HyperVGeneration parameter to New-AzImageConfig</span></span>
+
+#### <a name="azdatafactory"></a><span data-ttu-id="dca39-488">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="dca39-488">Az.DataFactory</span></span>
+* <span data-ttu-id="dca39-489">Uppdaterar utdata från ADF-cmdletar som hämtar aktivitetskörningar, hämtar pipelinekörningar och hämtar utlösarkörningar för stöd för Select-Object-pipe.</span><span class="sxs-lookup"><span data-stu-id="dca39-489">Updating the output of get activity runs, get pipeline runs, and get trigger runs ADF cmdlets to support Select-Object pipe.</span></span>
+
+#### <a name="azeventgrid"></a><span data-ttu-id="dca39-490">Az.EventGrid</span><span class="sxs-lookup"><span data-stu-id="dca39-490">Az.EventGrid</span></span>
+* <span data-ttu-id="dca39-491">Korrigera stavfel i dokumentation om ”New-AzEventGridSubscription”</span><span class="sxs-lookup"><span data-stu-id="dca39-491">Fix typo in 'New-AzEventGridSubscription' documentation</span></span>
+
+#### <a name="aziothub"></a><span data-ttu-id="dca39-492">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="dca39-492">Az.IotHub</span></span>
+* <span data-ttu-id="dca39-493">Lägg till stöd för att återskapa principnycklar för auktorisering.</span><span class="sxs-lookup"><span data-stu-id="dca39-493">Add support to regenerate authorization policy keys.</span></span>
+
+#### <a name="aznetwork"></a><span data-ttu-id="dca39-494">Az.Network</span><span class="sxs-lookup"><span data-stu-id="dca39-494">Az.Network</span></span>
+* <span data-ttu-id="dca39-495">”RoutingPreference” har lagts till i offentliga IP-taggar</span><span class="sxs-lookup"><span data-stu-id="dca39-495">Added 'RoutingPreference' to public ip tags</span></span>
+* <span data-ttu-id="dca39-496">Förbättra exempel för referensdokumentation om ”Get-AzNetworkServiceTag”</span><span class="sxs-lookup"><span data-stu-id="dca39-496">Improve examples for 'Get-AzNetworkServiceTag' reference documentation</span></span>
+
+#### <a name="azpolicyinsights"></a><span data-ttu-id="dca39-497">Az.PolicyInsights</span><span class="sxs-lookup"><span data-stu-id="dca39-497">Az.PolicyInsights</span></span>
+* <span data-ttu-id="dca39-498">Åtgärda problem med null-referens i Get-AzPolicyState</span><span class="sxs-lookup"><span data-stu-id="dca39-498">Fix null reference issue in Get-AzPolicyState</span></span>
+    - <span data-ttu-id="dca39-499">Mer information här: https://github.com/Azure/azure-powershell/issues/9446</span><span class="sxs-lookup"><span data-stu-id="dca39-499">More information here: https://github.com/Azure/azure-powershell/issues/9446</span></span>
+
+#### <a name="azoperationalinsights"></a><span data-ttu-id="dca39-500">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="dca39-500">Az.OperationalInsights</span></span>
+* <span data-ttu-id="dca39-501">Modellen för CustomLog-datakälla som returneras i Get-AzOperationalInsightsDataSource har åtgärdats</span><span class="sxs-lookup"><span data-stu-id="dca39-501">Fixed CustomLog datasource model returned in Get-AzOperationalInsightsDataSource</span></span>
+
+#### <a name="azrecoveryservices"></a><span data-ttu-id="dca39-502">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="dca39-502">Az.RecoveryServices</span></span>
+* <span data-ttu-id="dca39-503">Kommandot get-policy för IaaSVM:er har åtgärdats</span><span class="sxs-lookup"><span data-stu-id="dca39-503">Fix for get-policy command for IaaSVMs</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="dca39-504">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="dca39-504">Az.Resources</span></span>
+    - <span data-ttu-id="dca39-505">Korrigera hjälptext för den översta parametern i Get-AzPolicyState</span><span class="sxs-lookup"><span data-stu-id="dca39-505">Fix help text for Get-AzPolicyState -Top parameter</span></span>
+    - <span data-ttu-id="dca39-506">Lägg till växlingsstöd på klientsidan för Get-AzPolicyAlias</span><span class="sxs-lookup"><span data-stu-id="dca39-506">Add client-side paging support for Get-AzPolicyAlias</span></span>
+    - <span data-ttu-id="dca39-507">Lägg till nya parametrar för Set-AzPolicyAssignment, -PolicyParameters och -PolicyParametersObject</span><span class="sxs-lookup"><span data-stu-id="dca39-507">Add new parameters for Set-AzPolicyAssignment, -PolicyParameters and -PolicyParametersObject</span></span>
+    - <span data-ttu-id="dca39-508">En mängd dokument- och exempeluppdateringar för Policy-cmdletar</span><span class="sxs-lookup"><span data-stu-id="dca39-508">Handful of doc and example updates for Policy cmdlets</span></span>
+
+#### <a name="azservicebus"></a><span data-ttu-id="dca39-509">Az.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="dca39-509">Az.ServiceBus</span></span>
+* <span data-ttu-id="dca39-510">Korrigering av problem #4938 – New-AzureRmServiceBusQueue returnerar BadRequest vid konfiguration av MaxSizeInMegabytes</span><span class="sxs-lookup"><span data-stu-id="dca39-510">Fix for issue #4938 - New-AzureRmServiceBusQueue returns BadRequest when setting MaxSizeInMegabytes</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="dca39-511">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="dca39-511">Az.Sql</span></span>
+* <span data-ttu-id="dca39-512">Lägg till cmdletar för instansredundansgrupper från förhandsversion till offentlig version</span><span class="sxs-lookup"><span data-stu-id="dca39-512">Add Instance Failover Group cmdlets from preview release to public release</span></span>
+* <span data-ttu-id="dca39-513">Stöd för granskning för Azure SQL Server\Database med nya cmdletar.</span><span class="sxs-lookup"><span data-stu-id="dca39-513">Support Azure SQL Server\Database Auditing with new cmdlets.</span></span>
+    - <span data-ttu-id="dca39-514">Set-AzSqlServerAudit</span><span class="sxs-lookup"><span data-stu-id="dca39-514">Set-AzSqlServerAudit</span></span>
+    - <span data-ttu-id="dca39-515">Get-AzSqlServerAudit</span><span class="sxs-lookup"><span data-stu-id="dca39-515">Get-AzSqlServerAudit</span></span>
+    - <span data-ttu-id="dca39-516">Remove-AzSqlServerAudit</span><span class="sxs-lookup"><span data-stu-id="dca39-516">Remove-AzSqlServerAudit</span></span>
+    - <span data-ttu-id="dca39-517">Set-AzSqlDatabaseAudit</span><span class="sxs-lookup"><span data-stu-id="dca39-517">Set-AzSqlDatabaseAudit</span></span>
+    - <span data-ttu-id="dca39-518">Get-AzSqlDatabaseAudit</span><span class="sxs-lookup"><span data-stu-id="dca39-518">Get-AzSqlDatabaseAudit</span></span>
+    - <span data-ttu-id="dca39-519">Remove-AzSqlDatabaseAudit</span><span class="sxs-lookup"><span data-stu-id="dca39-519">Remove-AzSqlDatabaseAudit</span></span>
+* <span data-ttu-id="dca39-520">Ta bort begränsningar för e-post från inställningarna för sårbarhetsbedömning</span><span class="sxs-lookup"><span data-stu-id="dca39-520">Remove email constraints from Vulnerability Assessment settings</span></span>
+
+#### <a name="azstorage"></a><span data-ttu-id="dca39-521">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="dca39-521">Az.Storage</span></span>
+* <span data-ttu-id="dca39-522">Ändra två parametrar ”-IndexDocument” och ”-ErrorDocument404Path” från ”krävs” till ”valfri” i cmdlet:</span><span class="sxs-lookup"><span data-stu-id="dca39-522">Change 2 parameters '-IndexDocument' and '-ErrorDocument404Path' from required to optional  in cmdlet:</span></span>
+    -  <span data-ttu-id="dca39-523">Enable-AzStorageStaticWebsite</span><span class="sxs-lookup"><span data-stu-id="dca39-523">Enable-AzStorageStaticWebsite</span></span>
+* <span data-ttu-id="dca39-524">Uppdatera hjälpen för Get-AzStorageBlobContent genom att lägga till ett exempel</span><span class="sxs-lookup"><span data-stu-id="dca39-524">Update help of Get-AzStorageBlobContent by add an example</span></span>
+* <span data-ttu-id="dca39-525">Visa mer felinformation när cmdleten misslyckas med StorageException</span><span class="sxs-lookup"><span data-stu-id="dca39-525">Show more error information when cmdlet failed with StorageException</span></span>
+* <span data-ttu-id="dca39-526">Stöd för att skapa eller uppdatera lagringskonto med Azure Files AAD DS-autentisering</span><span class="sxs-lookup"><span data-stu-id="dca39-526">Support create or update Storage account with Azure Files AAD DS Authentication</span></span>
+    -  <span data-ttu-id="dca39-527">New-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="dca39-527">New-AzStorageAccount</span></span>
+    -  <span data-ttu-id="dca39-528">Set-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="dca39-528">Set-AzStorageAccount</span></span>
+* <span data-ttu-id="dca39-529">Stöd för att lista eller stänga filreferenser för en filresurs, filkatalog eller en fil</span><span class="sxs-lookup"><span data-stu-id="dca39-529">Support list or close file handles of a file share, file directory or a file</span></span>
+    - <span data-ttu-id="dca39-530">Get-AzStorageFileHandle</span><span class="sxs-lookup"><span data-stu-id="dca39-530">Get-AzStorageFileHandle</span></span>
+    - <span data-ttu-id="dca39-531">Close-AzStorageFileHandle</span><span class="sxs-lookup"><span data-stu-id="dca39-531">Close-AzStorageFileHandle</span></span>
+
+#### <a name="azstoragesync"></a><span data-ttu-id="dca39-532">Az.StorageSync</span><span class="sxs-lookup"><span data-stu-id="dca39-532">Az.StorageSync</span></span>
+* <span data-ttu-id="dca39-533">Den här modulen ingår nu som en del av `Az`-sammanslagningsmodulen</span><span class="sxs-lookup"><span data-stu-id="dca39-533">This module is now included as a part of the roll-up `Az` module</span></span>
+
+## <a name="232---june-2019"></a><span data-ttu-id="dca39-534">2.3.2 – juni 2019</span><span class="sxs-lookup"><span data-stu-id="dca39-534">2.3.2 - June 2019</span></span>
+#### <a name="azaccounts"></a><span data-ttu-id="dca39-535">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="dca39-535">Az.Accounts</span></span>
+* <span data-ttu-id="dca39-536">Åtgärda bugg med felaktiga webbadresser som i vissa fall användes för Functions-anrop</span><span class="sxs-lookup"><span data-stu-id="dca39-536">Fix bug with incorrect URL being used in some cases for Functions calls</span></span>
+    - <span data-ttu-id="dca39-537">Mer information här: https://github.com/Azure/azure-powershell/issues/8983</span><span class="sxs-lookup"><span data-stu-id="dca39-537">More information here: https://github.com/Azure/azure-powershell/issues/8983</span></span>
+* <span data-ttu-id="dca39-538">Åtgärda problem med alias från AzureRM i Az-cmdletar</span><span class="sxs-lookup"><span data-stu-id="dca39-538">Fix Issue with aliases from AzureRM to Az cmdlets</span></span>
+  - <span data-ttu-id="dca39-539">Set-AzureRmVMBootDiagnostics -> Set-AzVMBootDiagnostic</span><span class="sxs-lookup"><span data-stu-id="dca39-539">Set-AzureRmVMBootDiagnostics -> Set-AzVMBootDiagnostic</span></span>
+  - <span data-ttu-id="dca39-540">Export-AzureRMLogAnalyticThrottledRequests -> Export-AzLogAnalyticThrottledRequest</span><span class="sxs-lookup"><span data-stu-id="dca39-540">Export-AzureRMLogAnalyticThrottledRequests -> Export-AzLogAnalyticThrottledRequest</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="dca39-541">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="dca39-541">Az.Compute</span></span>
+* <span data-ttu-id="dca39-542">Parameteruppsättningarna New-AzVm och New-AzVmss accepterar nu parametern ”ProximityPlacementGroup”.</span><span class="sxs-lookup"><span data-stu-id="dca39-542">New-AzVm and New-AzVmss simple parameter sets now accept the 'ProximityPlacementGroup' parameter.</span></span>
+* <span data-ttu-id="dca39-543">Stavfel i referensdokumentationen för ”New-AzVM” har korrigerats</span><span class="sxs-lookup"><span data-stu-id="dca39-543">Fix typo in 'New-AzVM' reference documentation</span></span>
+
+#### <a name="azdns"></a><span data-ttu-id="dca39-544">Az.Dns</span><span class="sxs-lookup"><span data-stu-id="dca39-544">Az.Dns</span></span>
+* <span data-ttu-id="dca39-545">Stavfel i hjälpexempel för ”Set-AzDnsZone” har korrigerats.</span><span class="sxs-lookup"><span data-stu-id="dca39-545">Fixed a typo in 'Set-AzDnsZone' help examples.</span></span>
+
+#### <a name="azeventgrid"></a><span data-ttu-id="dca39-546">Az.EventGrid</span><span class="sxs-lookup"><span data-stu-id="dca39-546">Az.EventGrid</span></span>
+* <span data-ttu-id="dca39-547">Har uppdaterats för att använda API-versionen 2019-06-01.</span><span class="sxs-lookup"><span data-stu-id="dca39-547">Updated to use the 2019-06-01 API version.</span></span>
+* <span data-ttu-id="dca39-548">Nya cmdletar:</span><span class="sxs-lookup"><span data-stu-id="dca39-548">New cmdlets:</span></span>
+    - <span data-ttu-id="dca39-549">New-AzureRmEventGridDomain</span><span class="sxs-lookup"><span data-stu-id="dca39-549">New-AzureRmEventGridDomain</span></span>
+        - <span data-ttu-id="dca39-550">Skapar en ny Azure Event Grid-domän.</span><span class="sxs-lookup"><span data-stu-id="dca39-550">Creates a new Azure Event Grid Domain.</span></span>
+    - <span data-ttu-id="dca39-551">Get-AzureRmEventGridDomain</span><span class="sxs-lookup"><span data-stu-id="dca39-551">Get-AzureRmEventGridDomain</span></span>
+        - <span data-ttu-id="dca39-552">Hämtar information om en Event Grid-domän eller hämtar en lista med alla Event Grid-domäner i den aktuella Azure-prenumerationen.</span><span class="sxs-lookup"><span data-stu-id="dca39-552">Gets the details of an Event Grid Domain, or gets a list of all Event Grid Domains in the current Azure subscription.</span></span>
+    - <span data-ttu-id="dca39-553">Remove-AzureRmEventGridDomain</span><span class="sxs-lookup"><span data-stu-id="dca39-553">Remove-AzureRmEventGridDomain</span></span>
+        - <span data-ttu-id="dca39-554">Tar bort en Azure Event Grid-domän.</span><span class="sxs-lookup"><span data-stu-id="dca39-554">Removes an Azure Event Grid Domain.</span></span>
+    - <span data-ttu-id="dca39-555">New-AzureRmEventGridDomainKey</span><span class="sxs-lookup"><span data-stu-id="dca39-555">New-AzureRmEventGridDomainKey</span></span>
+        - <span data-ttu-id="dca39-556">Återskapar nyckeln för delad åtkomst för en Azure Event Grid-domän.</span><span class="sxs-lookup"><span data-stu-id="dca39-556">Regenerates the shared access key for an Azure Event Grid Domain.</span></span>
+    - <span data-ttu-id="dca39-557">Get-AzureRmEventGridDomainKey</span><span class="sxs-lookup"><span data-stu-id="dca39-557">Get-AzureRmEventGridDomainKey</span></span>
+        - <span data-ttu-id="dca39-558">Hämtar de nycklar för delad åtkomst som används för att publicera händelser till en Event Grid-domän.</span><span class="sxs-lookup"><span data-stu-id="dca39-558">Gets the shared access keys used to publish events to an Event Grid Domain.</span></span>
+    - <span data-ttu-id="dca39-559">New-AzureRmEventGridDomainTopic:</span><span class="sxs-lookup"><span data-stu-id="dca39-559">New-AzureRmEventGridDomainTopic:</span></span>
+        - <span data-ttu-id="dca39-560">Skapar ett nytt Azure Event Grid-domänämne.</span><span class="sxs-lookup"><span data-stu-id="dca39-560">Creates a new Azure Event Grid Domain Topic.</span></span>
+    - <span data-ttu-id="dca39-561">Get-AzureRmEventGridDomainTopic</span><span class="sxs-lookup"><span data-stu-id="dca39-561">Get-AzureRmEventGridDomainTopic</span></span>
+        - <span data-ttu-id="dca39-562">Hämtar information om ett Event Grid-domänämne eller hämtar en lista med alla Event Grid-domänämnen under en specifik Event Grid-domän i nuvarande Azure</span><span class="sxs-lookup"><span data-stu-id="dca39-562">Gets the details of an Event Grid Domain Topic, or gets a list of all Event Grid Domain Topics under specific Event Grid Domain in the current Azure</span></span> 
+    - <span data-ttu-id="dca39-563">Remove-AzureRmEventGridDomainTopic:</span><span class="sxs-lookup"><span data-stu-id="dca39-563">Remove-AzureRmEventGridDomainTopic:</span></span>
+        - <span data-ttu-id="dca39-564">Tar bort ett befintligt Azure Event Grid-domänämne.</span><span class="sxs-lookup"><span data-stu-id="dca39-564">Removes an existing Azure Event Grid Domain Topic.</span></span>
+* <span data-ttu-id="dca39-565">Uppdaterade cmdletar:</span><span class="sxs-lookup"><span data-stu-id="dca39-565">Updated cmdlets:</span></span>
+    - <span data-ttu-id="dca39-566">New-AzureRmEventGridSubscription/Update-AzureRmEventGridSubscription:</span><span class="sxs-lookup"><span data-stu-id="dca39-566">New-AzureRmEventGridSubscription/Update-AzureRmEventGridSubscription:</span></span>
+        - <span data-ttu-id="dca39-567">Lägg till nya obligatoriska parametrar för att stödja piping för den nya Event Grid-domänen och Event Grid-domänämnet för att göra det möjligt att skapa nya händelseprenumerationer under dessa resurser.</span><span class="sxs-lookup"><span data-stu-id="dca39-567">Add new mandatory parameters to support piping for the new Event Grid Domain and Event Grid Domain Topic to allow creating new event subscription under these resources.</span></span>
+        - <span data-ttu-id="dca39-568">Lägg till nya obligatoriska parametrar för att ange det nya Event Grid-domännamnet och/eller namnet på Event Grid-domänämnet för att göra det möjligt att skapa nya händelseprenumerationer under dessa resurser.</span><span class="sxs-lookup"><span data-stu-id="dca39-568">Add new mandatory parameters for specifying the new Event Grid Domain name and/or Event Grid Domain Topic name to allow creating new event subscription under these resources.</span></span>
+        - <span data-ttu-id="dca39-569">Lägg till ny parameteruppsättningar för domäner och domänämnen för att göra det möjligt att återanvända befintliga parametrar (t.ex. EndPointType, SubjectBeginsWith osv).</span><span class="sxs-lookup"><span data-stu-id="dca39-569">Add new Parameter sets for domains and domain topics to allow reusing existing parameters (e.g., EndPointType, SubjectBeginsWith, etc).</span></span>
+        - <span data-ttu-id="dca39-570">Lade till ny valfria parametrar för att ange:</span><span class="sxs-lookup"><span data-stu-id="dca39-570">Add new optional parameters for specifying:</span></span>
+            - <span data-ttu-id="dca39-571">Förfallodatum för händelseprenumeration</span><span class="sxs-lookup"><span data-stu-id="dca39-571">Event subscription expiration date,</span></span>
+            - <span data-ttu-id="dca39-572">Avancerade filterparametrar.</span><span class="sxs-lookup"><span data-stu-id="dca39-572">Advanced filtering parameters.</span></span>
+        - <span data-ttu-id="dca39-573">Lägg till ny uppräkning för servicebusqueue som mål.</span><span class="sxs-lookup"><span data-stu-id="dca39-573">Add new enum for servicebusqueue as destination.</span></span>
+        - <span data-ttu-id="dca39-574">Tillåt inte användning av ”Alla” i alternativet -IncludedEventType och ersätt det med</span><span class="sxs-lookup"><span data-stu-id="dca39-574">Disallow usage of 'All' in -IncludedEventType option and replace it with</span></span> 
+    - <span data-ttu-id="dca39-575">Get-AzEventGridTopic, Get-AzEventGridDomain, Get-AzEventGridDomainTopic, Get-AzEventGridSubscription:</span><span class="sxs-lookup"><span data-stu-id="dca39-575">Get-AzEventGridTopic, Get-AzEventGridDomain, Get-AzEventGridDomainTopic, Get-AzEventGridSubscription:</span></span>
+        - <span data-ttu-id="dca39-576">Lägg till ny valfria parametrar (Top, ODataQuery och NextLink) för att stödja sidnumrering och filtrering av resultat.</span><span class="sxs-lookup"><span data-stu-id="dca39-576">Add new optional parameters (Top, ODataQuery and NextLink) to support results pagination and filtering.</span></span>
+    - <span data-ttu-id="dca39-577">Remove-AzureRmEventGridSubscription</span><span class="sxs-lookup"><span data-stu-id="dca39-577">Remove-AzureRmEventGridSubscription</span></span>
+        - <span data-ttu-id="dca39-578">Lägg till nya obligatoriska parametrar för att stödja piping för en Event Grid-domän och Event Grid-domänämnen för att göra det möjligt att ta bort befintliga händelseprenumerationer under dessa resurser.</span><span class="sxs-lookup"><span data-stu-id="dca39-578">Add new mandatory parameters to support piping for Event Grid Domain and Event Grid Domain Topic to allow removing existing event subscription under these resources.</span></span>
+        - <span data-ttu-id="dca39-579">Lägg till nya obligatoriska parametrar för att ange Event Grid-domännamnet och/eller namnet på Event Grid-domänämnet för att göra det möjligt att ta bort befintliga händelseprenumerationer under dessa resurser.</span><span class="sxs-lookup"><span data-stu-id="dca39-579">Add new mandatory parameters for specifying the Event Grid Domain name and/or Event Grid Domain Topic name to allow removing existing event subscription under these resources.</span></span>
+
+#### <a name="azfrontdoor"></a><span data-ttu-id="dca39-580">Az.FrontDoor</span><span class="sxs-lookup"><span data-stu-id="dca39-580">Az.FrontDoor</span></span>
+* <span data-ttu-id="dca39-581">New-AzFrontDoorWafMatchConditionObject</span><span class="sxs-lookup"><span data-stu-id="dca39-581">New-AzFrontDoorWafMatchConditionObject</span></span>
+    - <span data-ttu-id="dca39-582">Lägg till stöd för transformeringar och nytt värde för automatisk komplettering för operatorer (RegEx)</span><span class="sxs-lookup"><span data-stu-id="dca39-582">Add transforms support and new operator auto-complete value (RegEx)</span></span>
+* <span data-ttu-id="dca39-583">New-AzFrontDoorWafManagedRuleObject</span><span class="sxs-lookup"><span data-stu-id="dca39-583">New-AzFrontDoorWafManagedRuleObject</span></span>
+    - <span data-ttu-id="dca39-584">Lägg till nya värden för automatisk komplettering</span><span class="sxs-lookup"><span data-stu-id="dca39-584">Add new auto-complete values</span></span>
+
+#### <a name="aznetwork"></a><span data-ttu-id="dca39-585">Az.Network</span><span class="sxs-lookup"><span data-stu-id="dca39-585">Az.Network</span></span>
+* <span data-ttu-id="dca39-586">Lägg till stöd för resurs för virtuell nätverksgateway</span><span class="sxs-lookup"><span data-stu-id="dca39-586">Add support for Virtual Network Gateway Resource</span></span>
+    - <span data-ttu-id="dca39-587">Nya cmdletar</span><span class="sxs-lookup"><span data-stu-id="dca39-587">New cmdlets</span></span>
+        - <span data-ttu-id="dca39-588">Get-AzVirtualNetworkGatewayVpnClientConnectionHealth</span><span class="sxs-lookup"><span data-stu-id="dca39-588">Get-AzVirtualNetworkGatewayVpnClientConnectionHealth</span></span>
+* <span data-ttu-id="dca39-589">Lägg till AvailablePrivateEndpointType</span><span class="sxs-lookup"><span data-stu-id="dca39-589">Add AvailablePrivateEndpointType</span></span>
+    - <span data-ttu-id="dca39-590">Nya cmdletar</span><span class="sxs-lookup"><span data-stu-id="dca39-590">New cmdlets</span></span> 
+        - <span data-ttu-id="dca39-591">Get-AzAvailablePrivateEndpointType</span><span class="sxs-lookup"><span data-stu-id="dca39-591">Get-AzAvailablePrivateEndpointType</span></span>
+* <span data-ttu-id="dca39-592">Lägg till PrivatePrivateLinkService</span><span class="sxs-lookup"><span data-stu-id="dca39-592">Add PrivatePrivateLinkService</span></span>
+    - <span data-ttu-id="dca39-593">Nya cmdletar</span><span class="sxs-lookup"><span data-stu-id="dca39-593">New cmdlets</span></span> 
+        - <span data-ttu-id="dca39-594">Get-AzPrivateLinkService</span><span class="sxs-lookup"><span data-stu-id="dca39-594">Get-AzPrivateLinkService</span></span> 
+        - <span data-ttu-id="dca39-595">New-AzPrivateLinkService</span><span class="sxs-lookup"><span data-stu-id="dca39-595">New-AzPrivateLinkService</span></span>
+        - <span data-ttu-id="dca39-596">Remove-AzPrivateLinkService</span><span class="sxs-lookup"><span data-stu-id="dca39-596">Remove-AzPrivateLinkService</span></span>
+        - <span data-ttu-id="dca39-597">New-AzPrivateLinkServiceIpConfig</span><span class="sxs-lookup"><span data-stu-id="dca39-597">New-AzPrivateLinkServiceIpConfig</span></span>
+        - <span data-ttu-id="dca39-598">Set-AzPrivateEndpointConnection</span><span class="sxs-lookup"><span data-stu-id="dca39-598">Set-AzPrivateEndpointConnection</span></span>
+* <span data-ttu-id="dca39-599">Lägg till PrivateEndpoint</span><span class="sxs-lookup"><span data-stu-id="dca39-599">Add PrivateEndpoint</span></span>
+    - <span data-ttu-id="dca39-600">Nya cmdletar</span><span class="sxs-lookup"><span data-stu-id="dca39-600">New cmdlets</span></span>
+        - <span data-ttu-id="dca39-601">Get-AzPrivateEndpoint</span><span class="sxs-lookup"><span data-stu-id="dca39-601">Get-AzPrivateEndpoint</span></span>
+        - <span data-ttu-id="dca39-602">New-AzPrivateEndpoint</span><span class="sxs-lookup"><span data-stu-id="dca39-602">New-AzPrivateEndpoint</span></span>
+        - <span data-ttu-id="dca39-603">Remove-AzPrivateEndpoint</span><span class="sxs-lookup"><span data-stu-id="dca39-603">Remove-AzPrivateEndpoint</span></span>
+        - <span data-ttu-id="dca39-604">New-AzPrivateLinkServiceConnection</span><span class="sxs-lookup"><span data-stu-id="dca39-604">New-AzPrivateLinkServiceConnection</span></span>
+* <span data-ttu-id="dca39-605">Nedanstående kommandon för funktionen har uppdaterats: Flaggan UseLocalAzureIpAddress på VpnConnection</span><span class="sxs-lookup"><span data-stu-id="dca39-605">Updated below commands for feature: UseLocalAzureIpAddress flag on VpnConnection</span></span>
+    - <span data-ttu-id="dca39-606">New-AzVpnConnection har uppdaterats: Den valfria parametern -UseLocalAzureIpAddress har lagts till för att visa att en lokal IP-adress i Azure ska användas som källadress när anslutningen initieras.</span><span class="sxs-lookup"><span data-stu-id="dca39-606">Updated New-AzVpnConnection: Added optional parameter -UseLocalAzureIpAddress to indicate that local azure ip address should be used as source address while initiating connection.</span></span>
+    - <span data-ttu-id="dca39-607">Set-AzVpnConnection har uppdaterats: Den valfria parametern -UseLocalAzureIpAddress har lagts till för att visa att en lokal IP-adress i Azure ska användas som källadress när anslutningen initieras.</span><span class="sxs-lookup"><span data-stu-id="dca39-607">Updated Set-AzVpnConnection: Added optional parameter -UseLocalAzureIpAddress to indicate that local azure ip address should be used as source address while initiating connection.</span></span>
+* <span data-ttu-id="dca39-608">Det skrivskyddade fältet PeeredConnections har lagts till i ExpressRoute-peering.</span><span class="sxs-lookup"><span data-stu-id="dca39-608">Added readonly field PeeredConnections in ExpressRoute peering.</span></span>
+* <span data-ttu-id="dca39-609">Det skrivskyddade fältet GlobalReachEnabled har lagts till i ExpressRoute.</span><span class="sxs-lookup"><span data-stu-id="dca39-609">Added readonly field GlobalReachEnabled in ExpressRoute.</span></span>
+* <span data-ttu-id="dca39-610">Ett attribut för icke-bakåtkompatibla ändringar har lagts till för att lyfta fram utfasning av fältet AllowGlobalReach i modellen ExpressRouteCircuit</span><span class="sxs-lookup"><span data-stu-id="dca39-610">Added breaking change attribute to call out deprecation of AllowGlobalReach field in ExpressRouteCircuit model</span></span>
+* <span data-ttu-id="dca39-611">Problem 8756 har åtgärdats: Fel vid användning av TargetListenerID med AzApplicationGatewayRedirectConfiguration-cmdletar</span><span class="sxs-lookup"><span data-stu-id="dca39-611">Fixed Issue 8756 Error using TargetListenerID with AzApplicationGatewayRedirectConfiguration cmdlets</span></span>
+* <span data-ttu-id="dca39-612">En bugg i New-AzApplicationGatewayPathRuleConfig som gjorde att regeluppsättningen för att återskapa inte kunde anges har åtgärdats.</span><span class="sxs-lookup"><span data-stu-id="dca39-612">Fixed bug in New-AzApplicationGatewayPathRuleConfig that prevented the rewrite ruleset from being set.</span></span>
+* <span data-ttu-id="dca39-613">Visningen av VirtualNetworkTaps i NetworkInterfaceIpConfiguration har åtgärdats</span><span class="sxs-lookup"><span data-stu-id="dca39-613">Fixed displaying of VirtualNetworkTaps in NetworkInterfaceIpConfiguration</span></span>
+* <span data-ttu-id="dca39-614">Cortex Get-cmdletar för att visa en lista med alla delar har åtgärdats</span><span class="sxs-lookup"><span data-stu-id="dca39-614">Fixed Cortex Get cmdlets for list all part</span></span>
+* <span data-ttu-id="dca39-615">Funktionen för att skapa VirtualHub-referenser för ExpressRouteGateways och VpnGateway har åtgärdats</span><span class="sxs-lookup"><span data-stu-id="dca39-615">Fixed VirtualHub reference creation for ExpressRouteGateways, VpnGateway</span></span>
+* <span data-ttu-id="dca39-616">Stöd för tillgänglighetszoner i AzureFirewall och NatGateway har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-616">Added support for Availability Zones in AzureFirewall and NatGateway</span></span>
+* <span data-ttu-id="dca39-617">Cmdleten Get-AzNetworkServiceTag har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-617">Added cmdlet Get-AzNetworkServiceTag</span></span>
+* <span data-ttu-id="dca39-618">Lägg till stöd för flera offentliga IP-adresser för Azure Firewall</span><span class="sxs-lookup"><span data-stu-id="dca39-618">Add support for multiple public IP addresses for Azure Firewall</span></span>
+    - <span data-ttu-id="dca39-619">Cmdleten New-AzFirewall har uppdaterats:</span><span class="sxs-lookup"><span data-stu-id="dca39-619">Updated New-AzFirewall cmdlet:</span></span>
+        - <span data-ttu-id="dca39-620">Parametern -PublicIpAddress som accepterar ett eller flera offentliga IP-adressobjekt har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-620">Added parameter -PublicIpAddress which accepts one or more Public IP Address objects</span></span>
+        - <span data-ttu-id="dca39-621">Parametern -VirtualNetwork som accepterar ett virtuellt nätverksobjekt har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-621">Added parameter -VirtualNetwork which accepts a Virtual Network object</span></span>
+        - <span data-ttu-id="dca39-622">Metoderna AddPublicIpAddress och RemovePublicIpAddress har lagts till på brandväggsobjekt – dessa accepterar ett offentligt IP-adressobjekt som indata</span><span class="sxs-lookup"><span data-stu-id="dca39-622">Added methods AddPublicIpAddress and RemovePublicIpAddress on firewall object - these accept a Public IP Address object as input</span></span>
+        - <span data-ttu-id="dca39-623">Inaktuella parametrar -PublicIpName och -VirtualNetworkName</span><span class="sxs-lookup"><span data-stu-id="dca39-623">Deprecated parameters -PublicIpName and -VirtualNetworkName</span></span> 
+* <span data-ttu-id="dca39-624">Nedanstående kommandon för funktionen har uppdaterats: Ange autentiseringsalternativ för VpnClient AAD till resurser för virtuella nätverksgatewayer.</span><span class="sxs-lookup"><span data-stu-id="dca39-624">Updated below commands for feature: Set VpnClient AAD authentication options to Virtual network gateway resource.</span></span> 
+    - <span data-ttu-id="dca39-625">New-AzVirtualNetworkGateway har uppdaterats: De valfria parametrarna AadTenantUri, AadAudienceId och AadIssuerUri för att ange VpnClient AAD-autentiseringsalternativ på en gateway har lagts till.</span><span class="sxs-lookup"><span data-stu-id="dca39-625">Updated New-AzVirtualNetworkGateway: Added optional parameters AadTenantUri,AadAudienceId,AadIssuerUri to set VpnClient AAD authentication options on Gateway.</span></span>
+    - <span data-ttu-id="dca39-626">Set-AzVirtualNetworkGateway har uppdaterats: De valfria parametrarna AadTenantUri, AadAudienceId och AadIssuerUri för att ange VpnClient AAD-autentiseringsalternativ på en gateway har lagts till.</span><span class="sxs-lookup"><span data-stu-id="dca39-626">Updated Set-AzVirtualNetworkGateway: Added optional parameter AadTenantUri,AadAudienceId,AadIssuerUri to set VpnClient AAD authentication options on Gateway.</span></span>
+    - <span data-ttu-id="dca39-627">Set-AzVirtualNetworkGateway har uppdaterats: Den valfria växelparametern RemoveAadAuthentication som tar bort VpnClient AAD-autentiseringsalternativ från en gateway har lagts till.</span><span class="sxs-lookup"><span data-stu-id="dca39-627">Updated Set-AzVirtualNetworkGateway: Added optional switch parameter RemoveAadAuthentication to remove VpnClient AAD authentication options from Gateway.</span></span>
+
+#### <a name="azoperationalinsights"></a><span data-ttu-id="dca39-628">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="dca39-628">Az.OperationalInsights</span></span>
+* <span data-ttu-id="dca39-629">Aktivera prisnivån **pergb2018** i kommandot ”New-AzureRmOperationalInsightsWorkspace”</span><span class="sxs-lookup"><span data-stu-id="dca39-629">Enable **pergb2018** pricing tier in 'New-AzureRmOperationalInsightsWorkspace' command</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="dca39-630">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="dca39-630">Az.Resources</span></span>
+* <span data-ttu-id="dca39-631">Stöd för ytterligare alternativ för att exportera en mall</span><span class="sxs-lookup"><span data-stu-id="dca39-631">Support for additional Template Export options</span></span>
+    - <span data-ttu-id="dca39-632">Lägg till parametern ”-SkipResourceNameParameterization” till Export-AzResourceGroup</span><span class="sxs-lookup"><span data-stu-id="dca39-632">Add '-SkipResourceNameParameterization' parameter to Export-AzResourceGroup</span></span>
+    - <span data-ttu-id="dca39-633">Lägg till parametern ”-SkipAllParameterization” till Export-AzResourceGroup</span><span class="sxs-lookup"><span data-stu-id="dca39-633">Add '-SkipAllParameterization' parameter to Export-AzResourceGroup</span></span>
+    - <span data-ttu-id="dca39-634">Lägg till parametern ”-Resource” till Export-AzResourceGroup för exporterad resursfiltrering</span><span class="sxs-lookup"><span data-stu-id="dca39-634">Add '-Resource' parameter to Export-AzResourceGroup for exported resource filtering</span></span>
+
+#### <a name="azservicefabric"></a><span data-ttu-id="dca39-635">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="dca39-635">Az.ServiceFabric</span></span>
+* <span data-ttu-id="dca39-636">Åtgärda att fel tumavtryck används vid tilläggning av certifikat i ByExistingKeyVault i vissa fall</span><span class="sxs-lookup"><span data-stu-id="dca39-636">Fix add certificate ByExistingKeyVault getting the wrong thumbprint in some cases</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="dca39-637">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="dca39-637">Az.Sql</span></span>
+* <span data-ttu-id="dca39-638">Åtgärda suffix för lagringsslutpunkt i Advanced Threat Protection</span><span class="sxs-lookup"><span data-stu-id="dca39-638">Fix Advanced Threat Protection storage endpoint suffix</span></span>
+* <span data-ttu-id="dca39-639">Åtgärda att aktivering av Advanced Data Security åsidosätter Advanced Threat Protection-princip</span><span class="sxs-lookup"><span data-stu-id="dca39-639">Fix Advanced Data Security enable overrides Advanced Threat Protection policy</span></span>
+* <span data-ttu-id="dca39-640">Nya cmdletar för Management.Sql som gör att kunderna kan lägga till nycklar för transparent datakryptering (TDE) och ange TDE-skydd för hanterade instanser</span><span class="sxs-lookup"><span data-stu-id="dca39-640">New Cmdlets for Management.Sql to allow customers to add TDE keys and set TDE protector for managed instances</span></span>
+   - <span data-ttu-id="dca39-641">Add-AzSqlInstanceKeyVaultKey</span><span class="sxs-lookup"><span data-stu-id="dca39-641">Add-AzSqlInstanceKeyVaultKey</span></span>
+   - <span data-ttu-id="dca39-642">Get-AzSqlInstanceKeyVaultKey</span><span class="sxs-lookup"><span data-stu-id="dca39-642">Get-AzSqlInstanceKeyVaultKey</span></span>
+   - <span data-ttu-id="dca39-643">Remove-AzSqlInstanceKeyVaultKey</span><span class="sxs-lookup"><span data-stu-id="dca39-643">Remove-AzSqlInstanceKeyVaultKey</span></span>
+   - <span data-ttu-id="dca39-644">Get-AzSqlInstanceTransparentDataEncryptionProtector</span><span class="sxs-lookup"><span data-stu-id="dca39-644">Get-AzSqlInstanceTransparentDataEncryptionProtector</span></span>
+   - <span data-ttu-id="dca39-645">Set-AzSqlInstanceTransparentDataEncryptionProtector</span><span class="sxs-lookup"><span data-stu-id="dca39-645">Set-AzSqlInstanceTransparentDataEncryptionProtector</span></span>
+
+#### <a name="azstorage"></a><span data-ttu-id="dca39-646">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="dca39-646">Az.Storage</span></span>
+* <span data-ttu-id="dca39-647">Stöd för typerna FileStorage och SkuName Premium_ZRS när lagringskonton skapas</span><span class="sxs-lookup"><span data-stu-id="dca39-647">Support Kind FileStorage and SkuName Premium_ZRS when create Storage account</span></span>
+    - <span data-ttu-id="dca39-648">New-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="dca39-648">New-AzStorageAccount</span></span>
+* <span data-ttu-id="dca39-649">Beskrivningen av cmdleten för bloboföränderlighet har förtydligats</span><span class="sxs-lookup"><span data-stu-id="dca39-649">Clarified description of blob immutability cmdlet</span></span>
+    -  <span data-ttu-id="dca39-650">Remove-AzRmStorageContainerImmutabilityPolicy</span><span class="sxs-lookup"><span data-stu-id="dca39-650">Remove-AzRmStorageContainerImmutabilityPolicy</span></span>
+
+#### <a name="azwebsites"></a><span data-ttu-id="dca39-651">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="dca39-651">Az.Websites</span></span>
+* <span data-ttu-id="dca39-652">Optimerar Get-AzWebAppCertificate för att filtrera efter resursgrupp på servern i stället för klienten</span><span class="sxs-lookup"><span data-stu-id="dca39-652">Optimizes Get-AzWebAppCertificate to filter by resource group on the server instead of the client</span></span>
+* <span data-ttu-id="dca39-653">Lägger till växlingsparametern -UseDisasterRecovery till Get-AzWebAppSnapshot</span><span class="sxs-lookup"><span data-stu-id="dca39-653">Adds -UseDisasterRecovery switch parameter to Get-AzWebAppSnapshot</span></span>
+
+## <a name="220---june-2019"></a><span data-ttu-id="dca39-654">2.2.0 – juni 2019</span><span class="sxs-lookup"><span data-stu-id="dca39-654">2.2.0 - June 2019</span></span>
+#### <a name="azcdn"></a><span data-ttu-id="dca39-655">Az.Cdn</span><span class="sxs-lookup"><span data-stu-id="dca39-655">Az.Cdn</span></span>
+* <span data-ttu-id="dca39-656">Uppdaterade cmdletar för att ge stöd för rulesEngine-funktion baserat på API-version 2019-04-15.</span><span class="sxs-lookup"><span data-stu-id="dca39-656">Updated cmdlets to support rulesEngine feature based on API version 2019-04-15.</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="dca39-657">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="dca39-657">Az.Compute</span></span>
+* <span data-ttu-id="dca39-658">Lade till parameter `NoWait` som startar åtgärden och returnerar omedelbart, innan åtgärden har slutförts.</span><span class="sxs-lookup"><span data-stu-id="dca39-658">Added `NoWait` parameter that starts the operation and returns immediately, before the operation is completed.</span></span>
+    - <span data-ttu-id="dca39-659">Uppdaterade cmdletar:   Export-AzLogAnalyticRequestRateByInterval   Export-AzLogAnalyticThrottledRequest   Remove-AzVM   Remove-AzVMAccessExtension   Remove-AzVMAEMExtension   Remove-AzVMChefExtension   Remove-AzVMCustomScriptExtension   Remove-AzVMDiagnosticsExtension   Remove-AzVMDiskEncryptionExtension   Remove-AzVMDscExtension   Remove-AzVMSqlServerExtension   Restart-AzVM   Set-AzVM   Set-AzVMAccessExtension   Set-AzVMADDomainExtension   Set-AzVMAEMExtension   Set-AzVMBginfoExtension   Set-AzVMChefExtension   Set-AzVMCustomScriptExtension   Set-AzVMDiagnosticsExtension   Set-AzVMDscExtension   Set-AzVMExtension   Start-AzVM   Stop-AzVM   Update-AzVM</span><span class="sxs-lookup"><span data-stu-id="dca39-659">Updated cmdlets:   Export-AzLogAnalyticRequestRateByInterval   Export-AzLogAnalyticThrottledRequest   Remove-AzVM   Remove-AzVMAccessExtension   Remove-AzVMAEMExtension   Remove-AzVMChefExtension   Remove-AzVMCustomScriptExtension   Remove-AzVMDiagnosticsExtension   Remove-AzVMDiskEncryptionExtension   Remove-AzVMDscExtension   Remove-AzVMSqlServerExtension   Restart-AzVM   Set-AzVM   Set-AzVMAccessExtension   Set-AzVMADDomainExtension   Set-AzVMAEMExtension   Set-AzVMBginfoExtension   Set-AzVMChefExtension   Set-AzVMCustomScriptExtension   Set-AzVMDiagnosticsExtension   Set-AzVMDscExtension   Set-AzVMExtension   Start-AzVM   Stop-AzVM   Update-AzVM</span></span>
+
+#### <a name="azeventhub"></a><span data-ttu-id="dca39-660">Az.EventHub</span><span class="sxs-lookup"><span data-stu-id="dca39-660">Az.EventHub</span></span>
+* <span data-ttu-id="dca39-661">Korrigering för #9231 – Get-AzEventHubNamespace returnerar inga taggar</span><span class="sxs-lookup"><span data-stu-id="dca39-661">Fix for #9231 - Get-AzEventHubNamespace does not return tags</span></span>
+* <span data-ttu-id="dca39-662">Korrigering för #9230 – Get-AzEventHubNamespace returnerar ResourceGroup istället för ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="dca39-662">Fix for #9230 - Get-AzEventHubNamespace returns ResourceGroup instead of ResourceGroupName</span></span>
+
+#### <a name="aznetwork"></a><span data-ttu-id="dca39-663">Az.Network</span><span class="sxs-lookup"><span data-stu-id="dca39-663">Az.Network</span></span>
+* <span data-ttu-id="dca39-664">Uppdatera ResourceId och InputObject för NAT-gateway</span><span class="sxs-lookup"><span data-stu-id="dca39-664">Update ResourceId and InputObject for Nat Gateway</span></span>
+    - <span data-ttu-id="dca39-665">Lägg till alias för ResourceId och InputObject</span><span class="sxs-lookup"><span data-stu-id="dca39-665">Add alias for ResourceId and InputObject</span></span>
+
+#### <a name="azpolicyinsights"></a><span data-ttu-id="dca39-666">Az.PolicyInsights</span><span class="sxs-lookup"><span data-stu-id="dca39-666">Az.PolicyInsights</span></span>
+* <span data-ttu-id="dca39-667">Åtgärda Null-referensproblem i Get-AzPolicyEvent</span><span class="sxs-lookup"><span data-stu-id="dca39-667">Fix Null reference issue in Get-AzPolicyEvent</span></span>
+
+#### <a name="azrecoveryservices"></a><span data-ttu-id="dca39-668">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="dca39-668">Az.RecoveryServices</span></span>
+* <span data-ttu-id="dca39-669">Minsta kvarhållning för IaaSVM-policy i dagar ändrat till 7 från 1</span><span class="sxs-lookup"><span data-stu-id="dca39-669">IaaSVM policy minimum retention in days changed to 7 from 1</span></span>
+
+#### <a name="azservicebus"></a><span data-ttu-id="dca39-670">Az.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="dca39-670">Az.ServiceBus</span></span>
+* <span data-ttu-id="dca39-671">Korrigering för ärende #9182 – Get-AzServiceBusNamespace returnerar ResourceGroup istället för ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="dca39-671">Fix for issue #9182 - Get-AzServiceBusNamespace returns ResourceGroup instead of ResourceGroupName</span></span>
+
+#### <a name="azservicefabric"></a><span data-ttu-id="dca39-672">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="dca39-672">Az.ServiceFabric</span></span>
+* <span data-ttu-id="dca39-673">Åtgärda stavfel i felmeddelandet för Update-AzServiceFabricReliability</span><span class="sxs-lookup"><span data-stu-id="dca39-673">Fix typo in error message for 'Update-AzServiceFabricReliability'</span></span>
+* <span data-ttu-id="dca39-674">Åtgärda saknat tecken i Service Fabric-kommandorader</span><span class="sxs-lookup"><span data-stu-id="dca39-674">Fix missing character in Service Fabric cmdlines</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="dca39-675">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="dca39-675">Az.Sql</span></span>
+* <span data-ttu-id="dca39-676">Lägg till parametern DnsZonePartner för New-AzureSqlInstance-cmdlet för att ge stöd för AutoDr för hanterad instans.</span><span class="sxs-lookup"><span data-stu-id="dca39-676">Add DnsZonePartner Parameter for New-AzureSqlInstance cmdlet to support AutoDr for Managed Instance.</span></span>
+* <span data-ttu-id="dca39-677">Avvecklar cmdlet Get-AzSqlDatabaseSecureConnectionPolicy</span><span class="sxs-lookup"><span data-stu-id="dca39-677">Deprecating Get-AzSqlDatabaseSecureConnectionPolicy cmdlet</span></span>
+* <span data-ttu-id="dca39-678">Döp om cmdletar för hotidentifiering till Advanced Threat Protection</span><span class="sxs-lookup"><span data-stu-id="dca39-678">Rename Threat Detection cmdlets to Advanced Threat Protection</span></span>
+* <span data-ttu-id="dca39-679">Parametrarna New-AzSqlInstance -StorageSizeInGB och -LicenseType är nu valfria.</span><span class="sxs-lookup"><span data-stu-id="dca39-679">New-AzSqlInstance -StorageSizeInGB and -LicenseType parameters are now optional.</span></span>
+
+#### <a name="azwebsites"></a><span data-ttu-id="dca39-680">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="dca39-680">Az.Websites</span></span>
+* <span data-ttu-id="dca39-681">åtgärdar problemet där användningen av Set-AzWebApp och Set-AzWebAppSlot med -WebApp-egenskap tog bort taggarna</span><span class="sxs-lookup"><span data-stu-id="dca39-681">fixes the issue where using  Set-AzWebApp and Set-AzWebAppSlot with -WebApp property was removing the tags</span></span>
+
+## <a name="210---may-2019"></a><span data-ttu-id="dca39-682">2.1.0 – maj 2019</span><span class="sxs-lookup"><span data-stu-id="dca39-682">2.1.0 - May 2019</span></span>
+#### <a name="azapimanagement"></a><span data-ttu-id="dca39-683">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="dca39-683">Az.ApiManagement</span></span>
+* <span data-ttu-id="dca39-684">Skapade nya cmdletar för att hantera diagnostik för global- och API-omfång</span><span class="sxs-lookup"><span data-stu-id="dca39-684">Created new Cmdlets for managing diagnostics at the global and API Scope</span></span>
+    - <span data-ttu-id="dca39-685">**Get-AzApiManagementDiagnostic** – Skaffa diagnostik konfigurerad för global- eller api-omfång</span><span class="sxs-lookup"><span data-stu-id="dca39-685">**Get-AzApiManagementDiagnostic** - Get the diagnostics configured a global or api Scope</span></span>
+    - <span data-ttu-id="dca39-686">**New-AzApiManagementDiagnostic** – Skapa ny diagnostik för globalt omfång eller api-omfång</span><span class="sxs-lookup"><span data-stu-id="dca39-686">**New-AzApiManagementDiagnostic** - Create new diagnostics at the global scope or api Scope</span></span>
+    - <span data-ttu-id="dca39-687">**New-AzApiManagementHttpMessageDiagnostic** – Skapa diagnostikinställning om vilka rubriker som ska loggas och storleken på brödtextbyte</span><span class="sxs-lookup"><span data-stu-id="dca39-687">**New-AzApiManagementHttpMessageDiagnostic** - Create diagnostic setting for which Headers to log and the size of Body Bytes</span></span>
+    - <span data-ttu-id="dca39-688">**New-AzApiManagementPipelineDiagnosticSetting** – Skapa diagnostikinställningar för inkommande/utgående HTTP-meddelanden till gatewayen.</span><span class="sxs-lookup"><span data-stu-id="dca39-688">**New-AzApiManagementPipelineDiagnosticSetting** - Create Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.</span></span>
+    - <span data-ttu-id="dca39-689">**New-AzApiManagementSamplingSetting** – Skapa samplinginställningar för begäranden/svar för en diagnostik</span><span class="sxs-lookup"><span data-stu-id="dca39-689">**New-AzApiManagementSamplingSetting** - Create Sampling Setting  for the requests/response for a diagnostic</span></span>
+    - <span data-ttu-id="dca39-690">**Remove-AzApiManagementDiagnostic** – Ta bort en diagnostikenhet för globalt omfång eller api-omfång</span><span class="sxs-lookup"><span data-stu-id="dca39-690">**Remove-AzApiManagementDiagnostic** - Remove a diagnostic entity at global or api scope</span></span>
+    - <span data-ttu-id="dca39-691">**Set-AzApiManagementDiagnostic** – Uppdatera en diagnostikenhet för globalt omfång eller api-omfång</span><span class="sxs-lookup"><span data-stu-id="dca39-691">**Set-AzApiManagementDiagnostic** - Update a diagnostic Entity at global or api scope</span></span>
+* <span data-ttu-id="dca39-692">Skapade nya cmdletar för hantering av cacheminne i ApiManagement-tjänsten</span><span class="sxs-lookup"><span data-stu-id="dca39-692">Created new Cmdlets for managing Cache in ApiManagement service</span></span>
+    - <span data-ttu-id="dca39-693">**Get-AzApiManagementCache** – Hämta information om cacheminnet som anges av identifierare eller alla cacheminnen</span><span class="sxs-lookup"><span data-stu-id="dca39-693">**Get-AzApiManagementCache** - Get the details of the Cache specified by identifier or all caches</span></span>
+    - <span data-ttu-id="dca39-694">**New-AzApiManagementCache** – Skapa ett nytt default-cacheminne eller cacheminne i en viss Azure-region</span><span class="sxs-lookup"><span data-stu-id="dca39-694">**New-AzApiManagementCache** - Create a new 'default' Cache or Cache in a particular azure 'region'</span></span>
+    - <span data-ttu-id="dca39-695">**Remove-AzApiManagementCache** – Ta bort ett cacheminne</span><span class="sxs-lookup"><span data-stu-id="dca39-695">**Remove-AzApiManagementCache** - Remove a cache</span></span>
+    - <span data-ttu-id="dca39-696">**Remove-AzApiManagementCache** – Ta bort ett cacheminne</span><span class="sxs-lookup"><span data-stu-id="dca39-696">**Update-AzApiManagementCache** - Update a cache</span></span>
+* <span data-ttu-id="dca39-697">Skapade nya cmdletar för hantering av API-schema</span><span class="sxs-lookup"><span data-stu-id="dca39-697">Created new Cmdlets for managing API Schema</span></span>
+    - <span data-ttu-id="dca39-698">**New-AzApiManagementSchema** – Skapa ett nytt schema för ett API</span><span class="sxs-lookup"><span data-stu-id="dca39-698">**New-AzApiManagementSchema** - Create a new Schema for an API</span></span>
+    - <span data-ttu-id="dca39-699">**Get-AzApiManagementSchema** – Hämta de scheman som konfigurerats i API:et</span><span class="sxs-lookup"><span data-stu-id="dca39-699">**Get-AzApiManagementSchema** - Get the schemas configured in the API</span></span>
+    - <span data-ttu-id="dca39-700">**Remove-AzApiManagementSchema** – Ta bort de scheman som konfigurerats i API:et</span><span class="sxs-lookup"><span data-stu-id="dca39-700">**Remove-AzApiManagementSchema** - Remove the schema configured in the API</span></span>
+    - <span data-ttu-id="dca39-701">**Set-AzApiManagementSchema** – Uppdatera de scheman som konfigurerats i API:et</span><span class="sxs-lookup"><span data-stu-id="dca39-701">**Set-AzApiManagementSchema** - Update the schema configured in the API</span></span>
+* <span data-ttu-id="dca39-702">Skapa ny cmdlet för att generera en användartoken.</span><span class="sxs-lookup"><span data-stu-id="dca39-702">Created new Cmdlet for generating a User Token.</span></span> 
+    - <span data-ttu-id="dca39-703">**New-AzApiManagementUserToken** – Skapa en ny användartoken som enligt standardinställning är giltig i 8 timmar. Token för GIT-användaren kan skapas med den här cmdleten./</span><span class="sxs-lookup"><span data-stu-id="dca39-703">**New-AzApiManagementUserToken** - Generate a new User Token valid for 8 hours by default.Token for the 'GIT' user can be generated using this cmdlet./</span></span>
+* <span data-ttu-id="dca39-704">Skapade en ny cmdlet för att hämta nätverksstatus</span><span class="sxs-lookup"><span data-stu-id="dca39-704">Created a new cmdlet to retrieving the Network Status</span></span>
+    - <span data-ttu-id="dca39-705">**Get-AzApiManagementNetworkStatus** – Hämta nätverksstatusanslutningen för resurserna som API Management-tjänsten är beroende av.</span><span class="sxs-lookup"><span data-stu-id="dca39-705">**Get-AzApiManagementNetworkStatus** - Get the Network status connectivity of resources on which API Management service depends on.</span></span> <span data-ttu-id="dca39-706">Det här är användbart när du distribuerar ApiManagement-tjänsten i ett virtuellt nätverk och validerar om något beroende är brutet.</span><span class="sxs-lookup"><span data-stu-id="dca39-706">This is useful when deploying ApiManagement service into a Virtual Network and validing whether any of the dependencies are broken.</span></span>
+* <span data-ttu-id="dca39-707">Uppdaterade cmdlet **New-AzApiManagement** för att hantera ApiManagement-tjänsten</span><span class="sxs-lookup"><span data-stu-id="dca39-707">Updated cmdlet **New-AzApiManagement** to manage ApiManagement service</span></span> 
+    - <span data-ttu-id="dca39-708">Lade till stöd för den nya SKU:n Consumption</span><span class="sxs-lookup"><span data-stu-id="dca39-708">Added support for the new 'Consumption' SKU</span></span>
+    - <span data-ttu-id="dca39-709">Aktiverade stöd för att slå på flaggan EnableClientCertificate för SKU:n Consumption</span><span class="sxs-lookup"><span data-stu-id="dca39-709">Added support to turn the 'EnableClientCertificate' flag on for 'Consumption' SKU</span></span>
+    - <span data-ttu-id="dca39-710">Den nya cmdleten **New-AzApiManagementSslSetting** gör det möjligt att ställa in TLS/SSL-inställningen på ”Backend” och ”Frontend” (serverdel och klientdel).</span><span class="sxs-lookup"><span data-stu-id="dca39-710">The new cmdlet **New-AzApiManagementSslSetting** allows configuring 'TLS/SSL' setting on the 'Backend' and 'Frontend'.</span></span> <span data-ttu-id="dca39-711">Det här kan också användas till att konfigurera chiffer som 3DES och ServerProtocols som Http2 för Frontend för en ApiManagement-tjänst.</span><span class="sxs-lookup"><span data-stu-id="dca39-711">This can also be used to configure 'Ciphers' like '3DES' and 'ServerProtocols' like 'Http2' on the 'Frontend' of an ApiManagement service.</span></span>
+    - <span data-ttu-id="dca39-712">Stöd har lagts till för att konfigurera värdnamnet DeveloperPortal på ApiManagement-tjänsten.</span><span class="sxs-lookup"><span data-stu-id="dca39-712">Added support for configuring the 'DeveloperPortal' hostname on ApiManagement service.</span></span>
+* <span data-ttu-id="dca39-713">Uppdaterade cmdletar **Get-AzApiManagementSsoToken** för att ta PsApiManagement-objekt som indata</span><span class="sxs-lookup"><span data-stu-id="dca39-713">Updated cmdlets **Get-AzApiManagementSsoToken** to take 'PsApiManagement' object as input</span></span>
+* <span data-ttu-id="dca39-714">Uppdaterad cmdleten för att visa infogade felmeddelanden</span><span class="sxs-lookup"><span data-stu-id="dca39-714">Updated the cmdlet to display Error Messages inline</span></span> 
+     > <span data-ttu-id="dca39-715">PS D:\github\azure-powershell> Set-AzApiManagementPolicy -Context  -PolicyFilePath C:\wrongpolicy.xml -ApiId httpbin Set-AzApiManagementPolicy : Felkod: Felmeddelande av typen ValidationError: Ett eller flera fält innehåller felaktiga värden: Felinformation:    [Code=ValidationError, Message=Error in element 'log-to-eventhub' on line 3, column 10: Logger not found, Target=log-to-eventhub]</span><span class="sxs-lookup"><span data-stu-id="dca39-715">PS D:\github\azure-powershell> Set-AzApiManagementPolicy -Context  -PolicyFilePath C:\wrongpolicy.xml -ApiId httpbin Set-AzApiManagementPolicy : Error Code: ValidationError Error Message: One or more fields contain incorrect values: Error Details:    [Code=ValidationError, Message=Error in element 'log-to-eventhub' on line 3, column 10: Logger not found, Target=log-to-eventhub]</span></span>
+* <span data-ttu-id="dca39-716">Uppdaterade cmdlet **Export-AzApiManagementApi** för att exportera API:er i OpenApi 3.0-format</span><span class="sxs-lookup"><span data-stu-id="dca39-716">Updated cmdlet **Export-AzApiManagementApi** to export APIs in 'OpenApi 3.0' format</span></span>
+* <span data-ttu-id="dca39-717">Uppdaterade cmdlet **Import-AzApiManagementApi**</span><span class="sxs-lookup"><span data-stu-id="dca39-717">Updated cmdlet **Import-AzApiManagementApi**</span></span>
+    - <span data-ttu-id="dca39-718">Importera API från dokumentspecifikationen OpenApi 3.0</span><span class="sxs-lookup"><span data-stu-id="dca39-718">To import Api from 'OpenApi 3.0' document specification</span></span>
+    - <span data-ttu-id="dca39-719">Om du vill åsidosätta egenskapen PsApiManagementSchema specificerad i ett dokument (Swagger, Wadl, Wsdl, OpenApi).</span><span class="sxs-lookup"><span data-stu-id="dca39-719">To override the 'PsApiManagementSchema' property specified in any ('Swagger', 'Wadl', 'Wsdl', 'OpenApi') document.</span></span>
+    - <span data-ttu-id="dca39-720">Åsidosätta egenskapen ServiceUrl som specificeras i ett dokument.</span><span class="sxs-lookup"><span data-stu-id="dca39-720">To override the 'ServiceUrl' property specified in any document.</span></span>
+* <span data-ttu-id="dca39-721">Uppdaterade cmdlet **Get-AzApiManagementPolicy** för att returnera policy i undantaget format av typen icke-XML med rawxml</span><span class="sxs-lookup"><span data-stu-id="dca39-721">Updated cmdlet **Get-AzApiManagementPolicy** to return policy in Non-Xml escaped 'format' using 'rawxml'</span></span>
+* <span data-ttu-id="dca39-722">Uppdaterade cmdlet **Set-AzApiManagementPolicy** för att godkänna policy i undantaget format av typen icke-XML med rawxml och XML undantaget med xml</span><span class="sxs-lookup"><span data-stu-id="dca39-722">Updated cmdlet **Set-AzApiManagementPolicy** to accept policy in Non-Xml escaped 'format' using 'rawxml' and Xml escaped using 'xml'</span></span>
+* <span data-ttu-id="dca39-723">Uppdaterad cmdlet **New-AzApiManagementApi**</span><span class="sxs-lookup"><span data-stu-id="dca39-723">Updated cmdlet **New-AzApiManagementApi**</span></span> 
+    - <span data-ttu-id="dca39-724">Konfigurera API med OpenId auktoriseringsservern.</span><span class="sxs-lookup"><span data-stu-id="dca39-724">To configure API with 'OpenId' authorization server.</span></span>
+    - <span data-ttu-id="dca39-725">Skapa ett API i ApiVersionSet</span><span class="sxs-lookup"><span data-stu-id="dca39-725">To create an API in an 'ApiVersionSet'</span></span>
+    - <span data-ttu-id="dca39-726">Klona ett API med SourceApiId och SourceApiRevision.</span><span class="sxs-lookup"><span data-stu-id="dca39-726">To clone an API using 'SourceApiId' and 'SourceApiRevision'.</span></span>
+    - <span data-ttu-id="dca39-727">Möjlighet att konfigurera SubscriptionRequired i API-omfattningen.</span><span class="sxs-lookup"><span data-stu-id="dca39-727">Ability to configure 'SubscriptionRequired' at the Api scope.</span></span> 
+* <span data-ttu-id="dca39-728">Uppdaterad cmdlet **Set-AzApiManagementApi**</span><span class="sxs-lookup"><span data-stu-id="dca39-728">Updated cmdlet **Set-AzApiManagementApi**</span></span>
+    - <span data-ttu-id="dca39-729">Konfigurera API med OpenId auktoriseringsservern.</span><span class="sxs-lookup"><span data-stu-id="dca39-729">To configure API with 'OpenId' authorization server.</span></span>
+    - <span data-ttu-id="dca39-730">Uppdatera ett API till ApiVersionSet</span><span class="sxs-lookup"><span data-stu-id="dca39-730">To updated an API into an 'ApiVersionSet'</span></span>    
+    - <span data-ttu-id="dca39-731">Möjlighet att konfigurera SubscriptionRequired i API-omfattningen.</span><span class="sxs-lookup"><span data-stu-id="dca39-731">Ability to configure 'SubscriptionRequired' at the Api scope.</span></span> 
+* <span data-ttu-id="dca39-732">Uppdaterad cmdlet **New-AzApiManagementRevision**</span><span class="sxs-lookup"><span data-stu-id="dca39-732">Updated cmdlet **New-AzApiManagementRevision**</span></span>
+    - <span data-ttu-id="dca39-733">Klona en befintlig version med hjälp av SourceApiRevision (kopiera taggar, produkter, åtgärder och principer).</span><span class="sxs-lookup"><span data-stu-id="dca39-733">To clone (copy tags, products, operations and policies) an existing revision using 'SourceApiRevision'.</span></span> <span data-ttu-id="dca39-734">Den nya revisionen antar ApiId från den överordnade instansen.</span><span class="sxs-lookup"><span data-stu-id="dca39-734">The new Revision assumes the 'ApiId' of the parent.</span></span>
+    - <span data-ttu-id="dca39-735">Tillhandahålla ApiRevisionDescription</span><span class="sxs-lookup"><span data-stu-id="dca39-735">To provide an 'ApiRevisionDescription'</span></span>
+    - <span data-ttu-id="dca39-736">Åsidosätta ServiceUrl vid kloning av ett API.</span><span class="sxs-lookup"><span data-stu-id="dca39-736">To override the 'ServiceUrl' when cloning an API.</span></span>
+* <span data-ttu-id="dca39-737">Uppdaterad cmdlet **New-AzApiManagementIdentityProvider**</span><span class="sxs-lookup"><span data-stu-id="dca39-737">Updated cmdlet **New-AzApiManagementIdentityProvider**</span></span>
+    - <span data-ttu-id="dca39-738">Konfigurera AAD eller AADB2C med en Authority</span><span class="sxs-lookup"><span data-stu-id="dca39-738">To configure 'AAD' or 'AADB2C' with an 'Authority'</span></span>
+    - <span data-ttu-id="dca39-739">Konfigurera SignupPolicy, SigninPolicy, ProfileEditingPolicy och PasswordResetPolicy</span><span class="sxs-lookup"><span data-stu-id="dca39-739">To setup 'SignupPolicy', 'SigninPolicy', 'ProfileEditingPolicy' and 'PasswordResetPolicy'</span></span>
+* <span data-ttu-id="dca39-740">Uppdaterad cmdlet **New-AzApiManagementSubscription**</span><span class="sxs-lookup"><span data-stu-id="dca39-740">Updated cmdlet **New-AzApiManagementSubscription**</span></span>
+    - <span data-ttu-id="dca39-741">Kompensera för ny SubscriptonModel med Scope och UserId</span><span class="sxs-lookup"><span data-stu-id="dca39-741">To account for the new SubscriptonModel using 'Scope' and 'UserId'</span></span>
+    - <span data-ttu-id="dca39-742">Kompensera för gammal prenumerationsmodell med ProductId och UserId</span><span class="sxs-lookup"><span data-stu-id="dca39-742">To account for the old subscription model using 'ProductId' and 'UserId'</span></span>
+    - <span data-ttu-id="dca39-743">Lägg till funktion för att aktivera AllowTracing på prenumerationsnivå.</span><span class="sxs-lookup"><span data-stu-id="dca39-743">Add support to enable 'AllowTracing' at the subscription level.</span></span>
+* <span data-ttu-id="dca39-744">Uppdaterad cmdlet **Set-AzApiManagementSubscription**</span><span class="sxs-lookup"><span data-stu-id="dca39-744">Updated cmdlet **Set-AzApiManagementSubscription**</span></span>
+    - <span data-ttu-id="dca39-745">Kompensera för ny SubscriptonModel med Scope och UserId</span><span class="sxs-lookup"><span data-stu-id="dca39-745">To account for the new SubscriptonModel using 'Scope' and 'UserId'</span></span>
+    - <span data-ttu-id="dca39-746">Kompensera för gammal prenumerationsmodell med ProductId och UserId</span><span class="sxs-lookup"><span data-stu-id="dca39-746">To account for the old subscription model using 'ProductId' and 'UserId'</span></span>
+    - <span data-ttu-id="dca39-747">Lägg till funktion för att aktivera AllowTracing på prenumerationsnivå.</span><span class="sxs-lookup"><span data-stu-id="dca39-747">Add support to enable 'AllowTracing' at the subscription level.</span></span>
+* <span data-ttu-id="dca39-748">Uppdaterade följande cmdletar för att acceptera ResourceId som indata</span><span class="sxs-lookup"><span data-stu-id="dca39-748">Updated following cmdlets to accept 'ResourceId' as input</span></span>
+    - <span data-ttu-id="dca39-749">New-AzApiManagementContext</span><span class="sxs-lookup"><span data-stu-id="dca39-749">'New-AzApiManagementContext'</span></span>
+        > <span data-ttu-id="dca39-750">New-AzApiManagementContext -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/contoso</span><span class="sxs-lookup"><span data-stu-id="dca39-750">New-AzApiManagementContext -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/contoso</span></span>
+    - <span data-ttu-id="dca39-751">Get-AzApiManagementApiRelease</span><span class="sxs-lookup"><span data-stu-id="dca39-751">'Get-AzApiManagementApiRelease'</span></span>
+        > <span data-ttu-id="dca39-752">Get-AzApiManagementApiRelease -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/contoso/apis/echo-api/releases/releaseId</span><span class="sxs-lookup"><span data-stu-id="dca39-752">Get-AzApiManagementApiRelease -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/contoso/apis/echo-api/releases/releaseId</span></span>
+    - <span data-ttu-id="dca39-753">Get-AzApiManagementApiVersionSet</span><span class="sxs-lookup"><span data-stu-id="dca39-753">'Get-AzApiManagementApiVersionSet'</span></span>
+        > <span data-ttu-id="dca39-754">Get-AzApiManagementApiVersionSet -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/constoso/apiversionsets/pathversionset</span><span class="sxs-lookup"><span data-stu-id="dca39-754">Get-AzApiManagementApiVersionSet -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/constoso/apiversionsets/pathversionset</span></span>
+    - <span data-ttu-id="dca39-755">Get-AzApiManagementAuthorizationServer</span><span class="sxs-lookup"><span data-stu-id="dca39-755">'Get-AzApiManagementAuthorizationServer'</span></span>
+    - <span data-ttu-id="dca39-756">Get-AzApiManagementBackend</span><span class="sxs-lookup"><span data-stu-id="dca39-756">'Get-AzApiManagementBackend'</span></span>
+        > <span data-ttu-id="dca39-757">Get-AzApiManagementBackend -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/contoso/backends/servicefabric</span><span class="sxs-lookup"><span data-stu-id="dca39-757">Get-AzApiManagementBackend -ResourceId /subscriptions/subid/resourceGroups/rgName/providers/Microsoft.ApiManagement/service/contoso/backends/servicefabric</span></span>
+    - <span data-ttu-id="dca39-758">Get-AzApiManagementCertificate</span><span class="sxs-lookup"><span data-stu-id="dca39-758">'Get-AzApiManagementCertificate'</span></span> 
+    - <span data-ttu-id="dca39-759">Remove-AzApiManagementApiVersionSet</span><span class="sxs-lookup"><span data-stu-id="dca39-759">'Remove-AzApiManagementApiVersionSet'</span></span>
+    - <span data-ttu-id="dca39-760">Remove-AzApiManagementSubscription</span><span class="sxs-lookup"><span data-stu-id="dca39-760">'Remove-AzApiManagementSubscription'</span></span>
+
+#### <a name="azautomation"></a><span data-ttu-id="dca39-761">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="dca39-761">Az.Automation</span></span>
+* <span data-ttu-id="dca39-762">Uppdaterade Get-AzAutomationJobOutputRecord för att hantera postvärden av typen JSON och Text.</span><span class="sxs-lookup"><span data-stu-id="dca39-762">Updated Get-AzAutomationJobOutputRecord to handle JSON and Text record values.</span></span>
+    - <span data-ttu-id="dca39-763">Korrigering av problemet https://github.com/Azure/azure-powershell/issues/7977</span><span class="sxs-lookup"><span data-stu-id="dca39-763">Fix for issue https://github.com/Azure/azure-powershell/issues/7977</span></span>
+    - <span data-ttu-id="dca39-764">Korrigering av problemet https://github.com/Azure/azure-powershell/issues/8600</span><span class="sxs-lookup"><span data-stu-id="dca39-764">Fix for issue https://github.com/Azure/azure-powershell/issues/8600</span></span>
+* <span data-ttu-id="dca39-765">Ändrade beteende för Start-AzAutomationDscCompilationJob till att bara starta jobbet istället för att vänta på slutförandet.</span><span class="sxs-lookup"><span data-stu-id="dca39-765">Changed behavior for Start-AzAutomationDscCompilationJob to just start the job instead of waiting for its completion.</span></span>
+    * <span data-ttu-id="dca39-766">Korrigering av problemet https://github.com/Azure/azure-powershell/issues/8347</span><span class="sxs-lookup"><span data-stu-id="dca39-766">Fix for issue https://github.com/Azure/azure-powershell/issues/8347</span></span>
+* <span data-ttu-id="dca39-767">Korrigering för Get-AzAutomationDscNode när using -Name returnerar alla noder.</span><span class="sxs-lookup"><span data-stu-id="dca39-767">Fix for Get-AzAutomationDscNode when using -Name returns all node.</span></span> <span data-ttu-id="dca39-768">Nu returnerar den endast den matchande noden.</span><span class="sxs-lookup"><span data-stu-id="dca39-768">Now it returns matching node only.</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="dca39-769">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="dca39-769">Az.Compute</span></span>
+* <span data-ttu-id="dca39-770">Lägg till parametrarna ProtectFromScaleIn och ProtectFromScaleSetAction i cmdleten Update-AzVmssVM.</span><span class="sxs-lookup"><span data-stu-id="dca39-770">Add ProtectFromScaleIn and ProtectFromScaleSetAction parameters to Update-AzVmssVM cmdlet.</span></span>
+* <span data-ttu-id="dca39-771">Nu är standardinställningen att vimpelparametern New-AzVM använder en tillgänglig plats om USA, östra inte stöds</span><span class="sxs-lookup"><span data-stu-id="dca39-771">New-AzVM wimple parameter set now uses by default an available location if 'East US' is not supported</span></span>
+
+#### <a name="azdatalakestore"></a><span data-ttu-id="dca39-772">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="dca39-772">Az.DataLakeStore</span></span>
+* <span data-ttu-id="dca39-773">Uppdatera ADLS-sdk för att använda httpclient, integrera dataplanstestning med Azure-ramverk</span><span class="sxs-lookup"><span data-stu-id="dca39-773">Update the ADLS sdk to use httpclient, integrate dataplane testing with azure framework</span></span>
+
+#### <a name="azmonitor"></a><span data-ttu-id="dca39-774">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="dca39-774">Az.Monitor</span></span>
+* <span data-ttu-id="dca39-775">Korrigera felaktiga parameternamn i hjälpexempel</span><span class="sxs-lookup"><span data-stu-id="dca39-775">Fixed incorrect parameter names in help examples</span></span>
+
+#### <a name="aznetwork"></a><span data-ttu-id="dca39-776">Az.Network</span><span class="sxs-lookup"><span data-stu-id="dca39-776">Az.Network</span></span>
+* <span data-ttu-id="dca39-777">Lägg till flaggan DisableBgpRoutePropagation i utdata för effektiv routningstabell</span><span class="sxs-lookup"><span data-stu-id="dca39-777">Add DisableBgpRoutePropagation flag to Effective Route Table output</span></span>
+    - <span data-ttu-id="dca39-778">Uppdaterad cmdlet:</span><span class="sxs-lookup"><span data-stu-id="dca39-778">Updated cmdlet:</span></span>
+        - <span data-ttu-id="dca39-779">Get-AzEffectiveRouteTable</span><span class="sxs-lookup"><span data-stu-id="dca39-779">Get-AzEffectiveRouteTable</span></span>
+* <span data-ttu-id="dca39-780">Åtgärda dubbelstreck i dokumentationen New-AzApplicationGatewayTrustedRootCertificate</span><span class="sxs-lookup"><span data-stu-id="dca39-780">Fix double dash in New-AzApplicationGatewayTrustedRootCertificate documentation</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="dca39-781">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="dca39-781">Az.Resources</span></span>
+* <span data-ttu-id="dca39-782">Lägg till ny cmdlet Get-AzureRmDenyAssignment för att hämta tilldelningsnekanden</span><span class="sxs-lookup"><span data-stu-id="dca39-782">Add new cmdlet Get-AzureRmDenyAssignment for retrieving deny assignments</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="dca39-783">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="dca39-783">Az.Sql</span></span>
+* <span data-ttu-id="dca39-784">Döp om Advanced Threat Protection-cmdletar för Advanced Data Security och aktivera Vulnerability Assessment som standard</span><span class="sxs-lookup"><span data-stu-id="dca39-784">Rename Advanced Threat Protection cmdlets to Advanced Data Security and enable Vulnerability Assessment by default</span></span>
+
+## <a name="200---may-2019"></a><span data-ttu-id="dca39-785">2.0.0 – maj 2019</span><span class="sxs-lookup"><span data-stu-id="dca39-785">2.0.0 - May 2019</span></span>
+#### <a name="azaccounts"></a><span data-ttu-id="dca39-786">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="dca39-786">Az.Accounts</span></span>
+* <span data-ttu-id="dca39-787">Uppdatera autentiseringsbiblioteket för att åtgärda ADFS-problem med autentisering av användarnamn/lösenord</span><span class="sxs-lookup"><span data-stu-id="dca39-787">Update Authentication Library to fix ADFS issues with username/password auth</span></span>
+
+#### <a name="azcognitiveservices"></a><span data-ttu-id="dca39-788">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="dca39-788">Az.CognitiveServices</span></span>
+* <span data-ttu-id="dca39-789">Visa endast Bing-ansvarsfriskrivning för Bing-sökningstjänster.</span><span class="sxs-lookup"><span data-stu-id="dca39-789">Only display Bing disclaimer for Bing Search Services.</span></span>
+* <span data-ttu-id="dca39-790">Förbättra felmeddelande när det inte går att skapa konton.</span><span class="sxs-lookup"><span data-stu-id="dca39-790">Improve error when create account failed.</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="dca39-791">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="dca39-791">Az.Compute</span></span>
+* <span data-ttu-id="dca39-792">Funktion för närhetsplaceringsgrupper.</span><span class="sxs-lookup"><span data-stu-id="dca39-792">Proximity placement group feature.</span></span>
+    - <span data-ttu-id="dca39-793">Följande nya cmdletar har lagts till:   New-AzProximityPlacementGroup   Get-AzProximityPlacementGroup   Remove-AzProximityPlacementGroup</span><span class="sxs-lookup"><span data-stu-id="dca39-793">The following new cmdlets are added:   New-AzProximityPlacementGroup   Get-AzProximityPlacementGroup   Remove-AzProximityPlacementGroup</span></span>
+    - <span data-ttu-id="dca39-794">Den nya parametern ProximityPlacementGroupId har lagts till i följande cmdletar:   New-AzAvailabilitySet   New-AzVMConfig   New-AzVmssConfig</span><span class="sxs-lookup"><span data-stu-id="dca39-794">The new parameter, ProximityPlacementGroupId, is added to the following cmdlets:   New-AzAvailabilitySet   New-AzVMConfig   New-AzVmssConfig</span></span>
+* <span data-ttu-id="dca39-795">Parametern StorageAccountType har lagts till i New-AzGalleryImageVersion.</span><span class="sxs-lookup"><span data-stu-id="dca39-795">StorageAccountType parameter is added to New-AzGalleryImageVersion.</span></span>
+* <span data-ttu-id="dca39-796">TargetRegion för New-AzGalleryImageVersion kan innehålla StorageAccountType.</span><span class="sxs-lookup"><span data-stu-id="dca39-796">TargetRegion of New-AzGalleryImageVersion can contain StorageAccountType.</span></span>
+* <span data-ttu-id="dca39-797">Växlingsparametern SkipShutdown har lagts till i Stop-AzVM och Stop-AzVmss</span><span class="sxs-lookup"><span data-stu-id="dca39-797">SkipShutdown switch parameter is added to Stop-AzVM and Stop-AzVmss</span></span>       
+* <span data-ttu-id="dca39-798">Icke-bakåtkompatibla ändringar</span><span class="sxs-lookup"><span data-stu-id="dca39-798">Breaking changes</span></span>
+    - <span data-ttu-id="dca39-799">Set-AzVMBootDiagnostics har ändrats till Set-AzVMBootDiagnostic.</span><span class="sxs-lookup"><span data-stu-id="dca39-799">Set-AzVMBootDiagnostics is changed to Set-AzVMBootDiagnostic.</span></span>
+    - <span data-ttu-id="dca39-800">Export-AzLogAnalyticThrottledRequests har ändrats till Export-AzLogAnalyticThrottledRequests.</span><span class="sxs-lookup"><span data-stu-id="dca39-800">Export-AzLogAnalyticThrottledRequests is changed to Export-AzLogAnalyticThrottledRequests.</span></span>
+
+#### <a name="azdeploymentmanager"></a><span data-ttu-id="dca39-801">Az.DeploymentManager</span><span class="sxs-lookup"><span data-stu-id="dca39-801">Az.DeploymentManager</span></span>
+* <span data-ttu-id="dca39-802">De första allmänt tillgängliga versionerna av cmdletar för Distributionshanteraren i Azure</span><span class="sxs-lookup"><span data-stu-id="dca39-802">First Generally Available release of Azure Deployment Manager cmdlets</span></span>
+
+#### <a name="azdns"></a><span data-ttu-id="dca39-803">Az.Dns</span><span class="sxs-lookup"><span data-stu-id="dca39-803">Az.Dns</span></span>
+* <span data-ttu-id="dca39-804">Automatisk delegering av DNS för NameServer</span><span class="sxs-lookup"><span data-stu-id="dca39-804">Automatic DNS NameServer Delegation</span></span>
+    - <span data-ttu-id="dca39-805">Det överordnade zonnamnet kan användas som ytterligare valfri parameter i cmdleten för att skapa DNS-zoner.</span><span class="sxs-lookup"><span data-stu-id="dca39-805">Create DNS zone cmdlet accepts parent zone name as additional optional parameter.</span></span>
+    - <span data-ttu-id="dca39-806">Lägger till NS-poster för en nyligen skapad underordnad zon i den överordnade zonen.</span><span class="sxs-lookup"><span data-stu-id="dca39-806">Adds NS records in the parent zone for newly created child zone.</span></span>
+
+#### <a name="azfrontdoor"></a><span data-ttu-id="dca39-807">Az.FrontDoor</span><span class="sxs-lookup"><span data-stu-id="dca39-807">Az.FrontDoor</span></span>
+* <span data-ttu-id="dca39-808">De första allmänt tillgängliga versionerna av cmdletar för Azure FrontDoor</span><span class="sxs-lookup"><span data-stu-id="dca39-808">First Generally Available Release of Azure FrontDoor cmdlets</span></span>
+* <span data-ttu-id="dca39-809">Byt namn på WAF-cmdletar så att de omfattar ”Waf”</span><span class="sxs-lookup"><span data-stu-id="dca39-809">Rename WAF cmdlets to include 'Waf'</span></span>
     - `Get-AzFrontDoorFireWallPolicy --> Get-AzFrontDoorWafPolicy`
     - `New-AzFrontDoorCustomRuleObject --> New-AzFrontDoorWafCustomRuleObject`
     - `New-AzFrontDoorFireWallPolicy --> New-AzFrontDoorWafPolicy`
@@ -840,919 +837,919 @@ ms.locfileid: "75035769"
     - `New-AzFrontDoorRuleGroupOverrideObject --> New-AzFrontDoorWafRuleGroupOverrideObject`
     - `Remove-AzFrontDoorFireWallPolicy --> Remove-AzFrontDoorWafPolicy`
     - `Update-AzFrontDoorFireWallPolicy --> Update-AzFrontDoorWafPolicy`
-#### <a name="azhdinsight"></a><span data-ttu-id="7b0da-810">Az.HDInsight</span><span class="sxs-lookup"><span data-stu-id="7b0da-810">Az.HDInsight</span></span>
-* <span data-ttu-id="7b0da-811">Två cmdletar har tagits bort:</span><span class="sxs-lookup"><span data-stu-id="7b0da-811">Removed two cmdlets:</span></span>
-    - <span data-ttu-id="7b0da-812">Grant-AzHDInsightHttpServicesAccess</span><span class="sxs-lookup"><span data-stu-id="7b0da-812">Grant-AzHDInsightHttpServicesAccess</span></span>
-    - <span data-ttu-id="7b0da-813">Revoke-AzHDInsightHttpServicesAccess</span><span class="sxs-lookup"><span data-stu-id="7b0da-813">Revoke-AzHDInsightHttpServicesAccess</span></span>
-* <span data-ttu-id="7b0da-814">En ny cmdlet har lagts till, Set-AzHDInsightGatewayCredential, som ersätter Grant-AzHDInsightHttpServicesAccess</span><span class="sxs-lookup"><span data-stu-id="7b0da-814">Added a new cmdlet Set-AzHDInsightGatewayCredential to replace Grant-AzHDInsightHttpServicesAccess</span></span>
-* <span data-ttu-id="7b0da-815">Uppdatera cmdleten Get-AzHDInsightJobOutput för att skilja mellan läsarrollen och HDInsight-operatörsrollen:</span><span class="sxs-lookup"><span data-stu-id="7b0da-815">Update cmdlet Get-AzHDInsightJobOutput to distinguish reader role and hdinsight operator role:</span></span>
-    - <span data-ttu-id="7b0da-816">Användare med läsarrollen måste uttryckligen ange parametern ”DefaultStorageAccountKey”, annars uppstår fel.</span><span class="sxs-lookup"><span data-stu-id="7b0da-816">Users with reader role need to specify 'DefaultStorageAccountKey' parameter explicitly, otherwise error occurs.</span></span>
-    - <span data-ttu-id="7b0da-817">Användare med HDInsight-operatörsrollen påverkas inte.</span><span class="sxs-lookup"><span data-stu-id="7b0da-817">Users with hdinsight operator role will not be affected.</span></span>
-
-#### <a name="azmonitor"></a><span data-ttu-id="7b0da-818">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="7b0da-818">Az.Monitor</span></span>
-* <span data-ttu-id="7b0da-819">Nya cmdletar för SQR API (schemalagd frågeregel)</span><span class="sxs-lookup"><span data-stu-id="7b0da-819">New cmdlets for SQR API (Scheduled Query Rule)</span></span>  
-    - <span data-ttu-id="7b0da-820">New-AzScheduledQueryRuleAlertingAction</span><span class="sxs-lookup"><span data-stu-id="7b0da-820">New-AzScheduledQueryRuleAlertingAction</span></span>
-    - <span data-ttu-id="7b0da-821">New-AzScheduledQueryRuleAznsActionGroup</span><span class="sxs-lookup"><span data-stu-id="7b0da-821">New-AzScheduledQueryRuleAznsActionGroup</span></span>
-    - <span data-ttu-id="7b0da-822">New-AzScheduledQueryRuleLogMetricTrigger</span><span class="sxs-lookup"><span data-stu-id="7b0da-822">New-AzScheduledQueryRuleLogMetricTrigger</span></span>
-    - <span data-ttu-id="7b0da-823">New-AzScheduledQueryRuleSchedule</span><span class="sxs-lookup"><span data-stu-id="7b0da-823">New-AzScheduledQueryRuleSchedule</span></span>
-    - <span data-ttu-id="7b0da-824">New-AzScheduledQueryRuleSource</span><span class="sxs-lookup"><span data-stu-id="7b0da-824">New-AzScheduledQueryRuleSource</span></span>
-    - <span data-ttu-id="7b0da-825">New-AzScheduledQueryRuleTriggerCondition</span><span class="sxs-lookup"><span data-stu-id="7b0da-825">New-AzScheduledQueryRuleTriggerCondition</span></span>
-    - <span data-ttu-id="7b0da-826">New-AzScheduledQueryRule</span><span class="sxs-lookup"><span data-stu-id="7b0da-826">New-AzScheduledQueryRule</span></span>
-    - <span data-ttu-id="7b0da-827">Get-AzScheduledQueryRule</span><span class="sxs-lookup"><span data-stu-id="7b0da-827">Get-AzScheduledQueryRule</span></span>
-    - <span data-ttu-id="7b0da-828">Set-AzScheduledQueryRule</span><span class="sxs-lookup"><span data-stu-id="7b0da-828">Set-AzScheduledQueryRule</span></span>
-    - <span data-ttu-id="7b0da-829">Update-AzScheduledQueryRule</span><span class="sxs-lookup"><span data-stu-id="7b0da-829">Update-AzScheduledQueryRule</span></span>
-    - <span data-ttu-id="7b0da-830">Remove-AzScheduledQueryRule</span><span class="sxs-lookup"><span data-stu-id="7b0da-830">Remove-AzScheduledQueryRule</span></span>
-    - <span data-ttu-id="7b0da-831">[Mer](https://docs.microsoft.com/rest/api/monitor/scheduledqueryrules) information om SQR API</span><span class="sxs-lookup"><span data-stu-id="7b0da-831">[More](https://docs.microsoft.com/rest/api/monitor/scheduledqueryrules) information about SQR API</span></span>
-    - <span data-ttu-id="7b0da-832">Az.Monitor.md har uppdaterats för att omfatta cmdletar för måttbaserade aviseringsregler i GenV2 (inte klassiska)</span><span class="sxs-lookup"><span data-stu-id="7b0da-832">Updated Az.Monitor.md to include cmdlets for GenV2(non classic) metric-based alert rule</span></span>
-
-#### <a name="aznetwork"></a><span data-ttu-id="7b0da-833">Az.Network</span><span class="sxs-lookup"><span data-stu-id="7b0da-833">Az.Network</span></span>
-* <span data-ttu-id="7b0da-834">Lägg till stöd för NAT Gateway-resurs</span><span class="sxs-lookup"><span data-stu-id="7b0da-834">Add support for Nat Gateway Resource</span></span>
-    - <span data-ttu-id="7b0da-835">Nya cmdletar</span><span class="sxs-lookup"><span data-stu-id="7b0da-835">New cmdlets</span></span>
-        - <span data-ttu-id="7b0da-836">New-AzNatGateway</span><span class="sxs-lookup"><span data-stu-id="7b0da-836">New-AzNatGateway</span></span>
-        - <span data-ttu-id="7b0da-837">Get-AzNatGateway</span><span class="sxs-lookup"><span data-stu-id="7b0da-837">Get-AzNatGateway</span></span>
-        - <span data-ttu-id="7b0da-838">Set-AzNatGateway</span><span class="sxs-lookup"><span data-stu-id="7b0da-838">Set-AzNatGateway</span></span>
-        - <span data-ttu-id="7b0da-839">Remove-AzNatGateway</span><span class="sxs-lookup"><span data-stu-id="7b0da-839">Remove-AzNatGateway</span></span>
-   - <span data-ttu-id="7b0da-840">Uppdaterade cmdletar</span><span class="sxs-lookup"><span data-stu-id="7b0da-840">Updated cmdlets</span></span>
-        - <span data-ttu-id="7b0da-841">New-AzureVirtualNetworkSubnetConfigCommand</span><span class="sxs-lookup"><span data-stu-id="7b0da-841">New-AzureVirtualNetworkSubnetConfigCommand</span></span>
-        - <span data-ttu-id="7b0da-842">Add-AzureVirtualNetworkSubnetConfigCommand</span><span class="sxs-lookup"><span data-stu-id="7b0da-842">Add-AzureVirtualNetworkSubnetConfigCommand</span></span>
-* <span data-ttu-id="7b0da-843">Nedanstående kommandon för funktionen har uppdaterats: Ange/ta bort anpassade vägar på Brooklyn Gateway.</span><span class="sxs-lookup"><span data-stu-id="7b0da-843">Updated below commands for feature: Custom routes set/remove on Brooklyn Gateway.</span></span>
-    - <span data-ttu-id="7b0da-844">New-AzVirtualNetworkGateway har uppdaterats: Den valfria parametern -CustomRoute har lagts till för att ställa in adressprefix som anpassade vägar för att ange gateway.</span><span class="sxs-lookup"><span data-stu-id="7b0da-844">Updated New-AzVirtualNetworkGateway: Added optional parameter -CustomRoute to set the address prefixes as custom routes to set on Gateway.</span></span>
-    - <span data-ttu-id="7b0da-845">Set-AzVirtualNetworkGateway har uppdaterats: Den valfria parametern -CustomRoute har lagts till för att ange adressprefix som anpassade vägar för att ange gateway.</span><span class="sxs-lookup"><span data-stu-id="7b0da-845">Updated Set-AzVirtualNetworkGateway: Added optional parameter -CustomRoute to set the address prefixes as custom routes to set on Gateway.</span></span>
-
-#### <a name="azpolicyinsights"></a><span data-ttu-id="7b0da-846">Az.PolicyInsights</span><span class="sxs-lookup"><span data-stu-id="7b0da-846">Az.PolicyInsights</span></span>
-* <span data-ttu-id="7b0da-847">Stöd för att fråga efter information om principutvärdering.</span><span class="sxs-lookup"><span data-stu-id="7b0da-847">Support for querying policy evaluation details.</span></span>
-    - <span data-ttu-id="7b0da-848">Lägg till parametern ”-Expand” för Get-AzPolicyState.</span><span class="sxs-lookup"><span data-stu-id="7b0da-848">Add '-Expand' parameter to Get-AzPolicyState.</span></span> <span data-ttu-id="7b0da-849">Stöd för -Expand PolicyEvaluationDetails.</span><span class="sxs-lookup"><span data-stu-id="7b0da-849">Support '-Expand PolicyEvaluationDetails'.</span></span>
-
-#### <a name="azrecoveryservices"></a><span data-ttu-id="7b0da-850">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="7b0da-850">Az.RecoveryServices</span></span>
-* <span data-ttu-id="7b0da-851">Stöd för att dela prenumeration mellan Azure och Azure Site Recovery.</span><span class="sxs-lookup"><span data-stu-id="7b0da-851">Support for Cross subscription Azure to Azure site recovery.</span></span>
-* <span data-ttu-id="7b0da-852">Markering av kommande icke-bakåtkompatibla ändringar för Azure Site Recovery.</span><span class="sxs-lookup"><span data-stu-id="7b0da-852">Marking upcoming breaking changes for Azure Site Recovery.</span></span>
-* <span data-ttu-id="7b0da-853">Korrigering för återställningsplan och åtgärdsplan i Azure Site Recovery.</span><span class="sxs-lookup"><span data-stu-id="7b0da-853">Fix for Azure Site Recovery recovery plan end action plan.</span></span>
-* <span data-ttu-id="7b0da-854">Korrigering för mappning av uppdateringsnätverk i Azure Site Recovery för Azure till Azure.</span><span class="sxs-lookup"><span data-stu-id="7b0da-854">Fix for Azure Site Recovery Update network mapping for Azure to Azure.</span></span>
-* <span data-ttu-id="7b0da-855">Korrigering för instruktioner för uppdateringsskydd i Azure Site Recovery för Azure till Azure för hanterade diskar.</span><span class="sxs-lookup"><span data-stu-id="7b0da-855">Fix for Azure Site Recovery update protection direction for Azure to Azure for managed disk.</span></span>
-* <span data-ttu-id="7b0da-856">Andra mindre korrigeringar.</span><span class="sxs-lookup"><span data-stu-id="7b0da-856">Other minor fixes.</span></span>
-
-#### <a name="azrelay"></a><span data-ttu-id="7b0da-857">Az.Relay</span><span class="sxs-lookup"><span data-stu-id="7b0da-857">Az.Relay</span></span>
-* <span data-ttu-id="7b0da-858">Korrigera stavfel i kundriktade meddelanden</span><span class="sxs-lookup"><span data-stu-id="7b0da-858">Fix typos in customer-facing messages</span></span>
-
-#### <a name="azservicebus"></a><span data-ttu-id="7b0da-859">Az.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="7b0da-859">Az.ServiceBus</span></span>
-* <span data-ttu-id="7b0da-860">Nya cmdletar har lagts till för NetworkRuleSet för namnområden</span><span class="sxs-lookup"><span data-stu-id="7b0da-860">Added new cmdlets for NetworkRuleSet of Namespace</span></span>
-
-#### <a name="azstorage"></a><span data-ttu-id="7b0da-861">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="7b0da-861">Az.Storage</span></span>
-* <span data-ttu-id="7b0da-862">Uppgradera till lagringsklientbiblioteket 10.0.1 (namnområdet för alla objekt från detta SDK ändras från ”Microsoft.WindowsAzure.Storage. *till ”Microsoft.Azure.Storage.* ”)</span><span class="sxs-lookup"><span data-stu-id="7b0da-862">Upgrade to Storage Client Library 10.0.1 (the namespace of all objects from this SDK change from 'Microsoft.WindowsAzure.Storage.*' to 'Microsoft.Azure.Storage.*')</span></span>
-* <span data-ttu-id="7b0da-863">Uppgradera till Microsoft.Azure.Management.Storage 11.0.0 för att stödja den nya API-versionen 2019-04-01.</span><span class="sxs-lookup"><span data-stu-id="7b0da-863">Upgrade to Microsoft.Azure.Management.Storage 11.0.0, to support new API version 2019-04-01.</span></span>
-* <span data-ttu-id="7b0da-864">Standardlagringskontot i Skapa lagringskonto ändras från ”Storage” till ”StorageV2”</span><span class="sxs-lookup"><span data-stu-id="7b0da-864">The default Storage account Kind in Create Storage account change from 'Storage' to 'StorageV2'</span></span>
-    - <span data-ttu-id="7b0da-865">New-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="7b0da-865">New-AzStorageAccount</span></span>
-* <span data-ttu-id="7b0da-866">Ändra lagringskontots cmdlet-utdata Sku.Name för att passa med indata-SkuName genom att lägga till ”-”. Till exempel ändras ”StandardLRS” till ”Standard_LRS”</span><span class="sxs-lookup"><span data-stu-id="7b0da-866">Change the Storage account cmdlet output Sku.Name to be aligned with input SkuName by add '-', like 'StandardLRS' change to 'Standard_LRS'</span></span>
-    - <span data-ttu-id="7b0da-867">New-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="7b0da-867">New-AzStorageAccount</span></span>
-    - <span data-ttu-id="7b0da-868">Get-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="7b0da-868">Get-AzStorageAccount</span></span>
-    - <span data-ttu-id="7b0da-869">Set-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="7b0da-869">Set-AzStorageAccount</span></span>
-
-#### <a name="azwebsites"></a><span data-ttu-id="7b0da-870">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="7b0da-870">Az.Websites</span></span>
-* <span data-ttu-id="7b0da-871">Egenskapen ”typ” konfigureras nu för PSSite-objekt som returneras av Get-AzWebApp</span><span class="sxs-lookup"><span data-stu-id="7b0da-871">'Kind' property will now be set for PSSite objects returned by Get-AzWebApp</span></span>
-* <span data-ttu-id="7b0da-872">Get-AzWebApp\*Metrics och Get-AzAppServicePlanMetrics markeras som inaktuella</span><span class="sxs-lookup"><span data-stu-id="7b0da-872">Get-AzWebApp\*Metrics and Get-AzAppServicePlanMetrics marked deprecated</span></span>
-
-## <a name="180---april-2019"></a><span data-ttu-id="7b0da-873">1.8.0 – april 2019</span><span class="sxs-lookup"><span data-stu-id="7b0da-873">1.8.0 - April 2019</span></span>
-### <a name="highlights-since-the-last-major-release"></a><span data-ttu-id="7b0da-874">Höjdpunkter sedan den senaste större uppdateringen</span><span class="sxs-lookup"><span data-stu-id="7b0da-874">Highlights since the last major release</span></span>
-* <span data-ttu-id="7b0da-875">Allmän tillgänglighet för `Az`-modulen</span><span class="sxs-lookup"><span data-stu-id="7b0da-875">General availability of `Az` module</span></span>
-* <span data-ttu-id="7b0da-876">Mer information om `Az`-modulen finns här: https://aka.ms/azps-announce</span><span class="sxs-lookup"><span data-stu-id="7b0da-876">For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce</span></span>
-* <span data-ttu-id="7b0da-877">Ifyllning för Location, ResourceGroup och ResourceName har lagts till: https://azure.microsoft.com/blog/completers-in-azure-powershell/</span><span class="sxs-lookup"><span data-stu-id="7b0da-877">Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/</span></span>
-* <span data-ttu-id="7b0da-878">Stöd för jokertecken för Get-cmdletar för Az.Compute och Az.Network har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-878">Added wildcard support to Get cmdlets for Az.Compute and Az.Network</span></span>
-* <span data-ttu-id="7b0da-879">Endast interaktiv autentisering och autentisering med användarnamn/lösenord för Windows PowerShell 5.1 har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-879">Added interactive and username/password authentication for Windows PowerShell 5.1 only</span></span>
-* <span data-ttu-id="7b0da-880">Stöd för Python 2-runbookflöden i Az.Automation har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-880">Added support for Python 2 runbooks in Az.Automation</span></span>
-* <span data-ttu-id="7b0da-881">Az.LogicApp: Nya cmdletar för integrationskontosammansättningar och batchkonfiguration</span><span class="sxs-lookup"><span data-stu-id="7b0da-881">Az.LogicApp: New cmdlets for Integration Account Assemblies and Batch Configuration</span></span>
-
-#### <a name="azaccounts"></a><span data-ttu-id="7b0da-882">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="7b0da-882">Az.Accounts</span></span>
-* <span data-ttu-id="7b0da-883">Uppdatera Uninstall-AzureRm för att ta bort moduler i Mac på ett korrekt sätt</span><span class="sxs-lookup"><span data-stu-id="7b0da-883">Update Uninstall-AzureRm to correctly delete modules in Mac</span></span>
-
-#### <a name="azbatch"></a><span data-ttu-id="7b0da-884">Az.Batch</span><span class="sxs-lookup"><span data-stu-id="7b0da-884">Az.Batch</span></span>
-* <span data-ttu-id="7b0da-885">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="7b0da-885">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azcdn"></a><span data-ttu-id="7b0da-886">Az.Cdn</span><span class="sxs-lookup"><span data-stu-id="7b0da-886">Az.Cdn</span></span>
-* <span data-ttu-id="7b0da-887">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="7b0da-887">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azcognitiveservices"></a><span data-ttu-id="7b0da-888">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="7b0da-888">Az.CognitiveServices</span></span>
-* <span data-ttu-id="7b0da-889">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="7b0da-889">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="7b0da-890">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="7b0da-890">Az.Compute</span></span>
-* <span data-ttu-id="7b0da-891">Åtgärda problem med AEM-installationen om resurs-ID:n för diskar innehåller resourcegroups i gemener i resurs-ID:n</span><span class="sxs-lookup"><span data-stu-id="7b0da-891">Fix issue with AEM installation if resource ids of disks had lowercase resourcegroups in resource id</span></span>
-* <span data-ttu-id="7b0da-892">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="7b0da-892">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-* <span data-ttu-id="7b0da-893">Åtgärda dokumentationen för jokertecken</span><span class="sxs-lookup"><span data-stu-id="7b0da-893">Fix documentation for wildcards</span></span>
-
-#### <a name="azdatafactory"></a><span data-ttu-id="7b0da-894">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="7b0da-894">Az.DataFactory</span></span>
-* <span data-ttu-id="7b0da-895">Lägg till SsisProperties om NodeCount inte är null för hanterad integreringskörning.</span><span class="sxs-lookup"><span data-stu-id="7b0da-895">Add SsisProperties if NodeCount not null for managed integration runtime.</span></span>
-
-#### <a name="azdatalakestore"></a><span data-ttu-id="7b0da-896">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="7b0da-896">Az.DataLakeStore</span></span>
-* <span data-ttu-id="7b0da-897">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="7b0da-897">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azeventgrid"></a><span data-ttu-id="7b0da-898">Az.EventGrid</span><span class="sxs-lookup"><span data-stu-id="7b0da-898">Az.EventGrid</span></span>
-* <span data-ttu-id="7b0da-899">Hjälptexten för slutpunkten har uppdaterats för att visa att resurser ska skapas innan cmdletarna för att skapa/uppdatera händelseprenumerationer används.</span><span class="sxs-lookup"><span data-stu-id="7b0da-899">Updated the help text for endpoint to indicate that resources should be created before using the create/update event subscription cmdlets.</span></span>
-
-#### <a name="azeventhub"></a><span data-ttu-id="7b0da-900">Az.EventHub</span><span class="sxs-lookup"><span data-stu-id="7b0da-900">Az.EventHub</span></span>
-* <span data-ttu-id="7b0da-901">Nya cmdletar har lagts till för NetworkRuleSet för namnområden</span><span class="sxs-lookup"><span data-stu-id="7b0da-901">Added new cmdlets for NetworkRuleSet of Namespace</span></span> 
-
-#### <a name="azhdinsight"></a><span data-ttu-id="7b0da-902">Az.HDInsight</span><span class="sxs-lookup"><span data-stu-id="7b0da-902">Az.HDInsight</span></span>
-* <span data-ttu-id="7b0da-903">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="7b0da-903">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="aziothub"></a><span data-ttu-id="7b0da-904">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="7b0da-904">Az.IotHub</span></span>
-* <span data-ttu-id="7b0da-905">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="7b0da-905">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azkeyvault"></a><span data-ttu-id="7b0da-906">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="7b0da-906">Az.KeyVault</span></span>
-* <span data-ttu-id="7b0da-907">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="7b0da-907">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-* <span data-ttu-id="7b0da-908">Åtgärda dokumentationen för jokertecken</span><span class="sxs-lookup"><span data-stu-id="7b0da-908">Fix documentation for wildcards</span></span>
-
-#### <a name="azmachinelearning"></a><span data-ttu-id="7b0da-909">Az.MachineLearning</span><span class="sxs-lookup"><span data-stu-id="7b0da-909">Az.MachineLearning</span></span>
-* <span data-ttu-id="7b0da-910">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="7b0da-910">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azmedia"></a><span data-ttu-id="7b0da-911">Az.Media</span><span class="sxs-lookup"><span data-stu-id="7b0da-911">Az.Media</span></span>
-* <span data-ttu-id="7b0da-912">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="7b0da-912">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azmonitor"></a><span data-ttu-id="7b0da-913">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="7b0da-913">Az.Monitor</span></span>
-  * <span data-ttu-id="7b0da-914">Nya cmdletar för måttbaserad aviseringsregel i GenV2 (inte klassisk)</span><span class="sxs-lookup"><span data-stu-id="7b0da-914">New cmdlets for GenV2(non classic) metric-based alert rule</span></span>
-      - <span data-ttu-id="7b0da-915">New-AzMetricAlertRuleV2DimensionSelection</span><span class="sxs-lookup"><span data-stu-id="7b0da-915">New-AzMetricAlertRuleV2DimensionSelection</span></span>
-      - <span data-ttu-id="7b0da-916">New-AzMetricAlertRuleV2Criteria</span><span class="sxs-lookup"><span data-stu-id="7b0da-916">New-AzMetricAlertRuleV2Criteria</span></span>
-      - <span data-ttu-id="7b0da-917">Remove-AzMetricAlertRuleV2</span><span class="sxs-lookup"><span data-stu-id="7b0da-917">Remove-AzMetricAlertRuleV2</span></span>
-      - <span data-ttu-id="7b0da-918">Get-AzMetricAlertRuleV2</span><span class="sxs-lookup"><span data-stu-id="7b0da-918">Get-AzMetricAlertRuleV2</span></span>
-      - <span data-ttu-id="7b0da-919">Add-AzMetricAlertRuleV2</span><span class="sxs-lookup"><span data-stu-id="7b0da-919">Add-AzMetricAlertRuleV2</span></span>
-  * <span data-ttu-id="7b0da-920">Monitor SDK har uppdaterats till version 0.22.0-preview</span><span class="sxs-lookup"><span data-stu-id="7b0da-920">Updated Monitor SDK to version 0.22.0-preview</span></span>
-
-#### <a name="aznetwork"></a><span data-ttu-id="7b0da-921">Az.Network</span><span class="sxs-lookup"><span data-stu-id="7b0da-921">Az.Network</span></span>
-* <span data-ttu-id="7b0da-922">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="7b0da-922">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-* <span data-ttu-id="7b0da-923">Åtgärda dokumentationen för jokertecken</span><span class="sxs-lookup"><span data-stu-id="7b0da-923">Fix documentation for wildcards</span></span>
-
-#### <a name="aznotificationhubs"></a><span data-ttu-id="7b0da-924">Az.NotificationHubs</span><span class="sxs-lookup"><span data-stu-id="7b0da-924">Az.NotificationHubs</span></span>
-* <span data-ttu-id="7b0da-925">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="7b0da-925">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azoperationalinsights"></a><span data-ttu-id="7b0da-926">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="7b0da-926">Az.OperationalInsights</span></span>
-* <span data-ttu-id="7b0da-927">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="7b0da-927">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azpowerbiembedded"></a><span data-ttu-id="7b0da-928">Az.PowerBIEmbedded</span><span class="sxs-lookup"><span data-stu-id="7b0da-928">Az.PowerBIEmbedded</span></span>
-* <span data-ttu-id="7b0da-929">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="7b0da-929">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azrecoveryservices"></a><span data-ttu-id="7b0da-930">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="7b0da-930">Az.RecoveryServices</span></span>
-* <span data-ttu-id="7b0da-931">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="7b0da-931">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-* <span data-ttu-id="7b0da-932">Tabellformatet för SQL i virtuella Azure-datorer har uppdaterats</span><span class="sxs-lookup"><span data-stu-id="7b0da-932">Updated table format for SQL in azure VM</span></span>
-* <span data-ttu-id="7b0da-933">En alternativ metod för att hämta platser i AzureFileShare har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-933">Added alternate method to fetch location in AzureFileShare</span></span>
-* <span data-ttu-id="7b0da-934">ScheduleRunDays i SchedulePolicy-objekt har uppdaterats enligt tidszon</span><span class="sxs-lookup"><span data-stu-id="7b0da-934">Updated ScheduleRunDays in SchedulePolicy object according to timezone</span></span>
-
-#### <a name="azrediscache"></a><span data-ttu-id="7b0da-935">Az.RedisCache</span><span class="sxs-lookup"><span data-stu-id="7b0da-935">Az.RedisCache</span></span>
-* <span data-ttu-id="7b0da-936">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="7b0da-936">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="7b0da-937">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="7b0da-937">Az.Resources</span></span>
-* <span data-ttu-id="7b0da-938">Åtgärda dokumentationen för jokertecken</span><span class="sxs-lookup"><span data-stu-id="7b0da-938">Fix documentation for wildcards</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="7b0da-939">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="7b0da-939">Az.Sql</span></span>
-* <span data-ttu-id="7b0da-940">Ersätt Monitor SDK-beroende med vanlig kod</span><span class="sxs-lookup"><span data-stu-id="7b0da-940">Replace dependency on Monitor SDK with common code</span></span>
-* <span data-ttu-id="7b0da-941">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="7b0da-941">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-* <span data-ttu-id="7b0da-942">Förbättrad process för klassificering av flera kolumner.</span><span class="sxs-lookup"><span data-stu-id="7b0da-942">Enhanced process of multiple columns classification.</span></span>
-* <span data-ttu-id="7b0da-943">Inkludera SKU-egenskaper (SKU-namn, serie, kapacitet) i svaret från Get-AzSqlServerServiceObjective och formatera som tabell som standard.</span><span class="sxs-lookup"><span data-stu-id="7b0da-943">Include sku properties (sku name, family, capacity) in response from Get-AzSqlServerServiceObjective and format as table by default.</span></span>
-* <span data-ttu-id="7b0da-944">Möjlighet att använda Get-AzSqlServerServiceObjective efter plats utan att behöva en redan befintlig server i regionen.</span><span class="sxs-lookup"><span data-stu-id="7b0da-944">Ability to Get-AzSqlServerServiceObjective by location without needing a preexisting server in the region.</span></span>
-* <span data-ttu-id="7b0da-945">Stöd för tidszonsparametern när hanterade instanser skapas.</span><span class="sxs-lookup"><span data-stu-id="7b0da-945">Support for time zone parameter in Managed Instance create.</span></span>
-* <span data-ttu-id="7b0da-946">Åtgärda dokumentationen för jokertecken</span><span class="sxs-lookup"><span data-stu-id="7b0da-946">Fix documentation for wildcards</span></span>
-
-#### <a name="azwebsites"></a><span data-ttu-id="7b0da-947">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="7b0da-947">Az.Websites</span></span>
-* <span data-ttu-id="7b0da-948">åtgärdar Set-AzWebApp och Set-AzWebAppSlot så att de inte tar bort taggar vid körning</span><span class="sxs-lookup"><span data-stu-id="7b0da-948">fixes the Set-AzWebApp and Set-AzWebAppSlot to not remove the tags on execution</span></span>
-* <span data-ttu-id="7b0da-949">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="7b0da-949">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
-* <span data-ttu-id="7b0da-950">SDK för WebSites har uppdaterats.</span><span class="sxs-lookup"><span data-stu-id="7b0da-950">Updated the WebSites SDK.</span></span>
-* <span data-ttu-id="7b0da-951">Egenskapen AdminSiteName har tagits bort från PSAppServicePlan.</span><span class="sxs-lookup"><span data-stu-id="7b0da-951">Removed the AdminSiteName property from PSAppServicePlan.</span></span>
-
-## <a name="170---april-2019"></a><span data-ttu-id="7b0da-952">1.7.0 – april 2019</span><span class="sxs-lookup"><span data-stu-id="7b0da-952">1.7.0 - April 2019</span></span>
-### <a name="highlights-since-the-last-major-release"></a><span data-ttu-id="7b0da-953">Höjdpunkter sedan den senaste större uppdateringen</span><span class="sxs-lookup"><span data-stu-id="7b0da-953">Highlights since the last major release</span></span>
-* <span data-ttu-id="7b0da-954">Allmän tillgänglighet för `Az`-modulen</span><span class="sxs-lookup"><span data-stu-id="7b0da-954">General availability of `Az` module</span></span>
-* <span data-ttu-id="7b0da-955">Mer information om `Az`-modulen finns här: https://aka.ms/azps-announce</span><span class="sxs-lookup"><span data-stu-id="7b0da-955">For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce</span></span>
-* <span data-ttu-id="7b0da-956">Ifyllning för Location, ResourceGroup och ResourceName har lagts till: https://azure.microsoft.com/blog/completers-in-azure-powershell/</span><span class="sxs-lookup"><span data-stu-id="7b0da-956">Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/</span></span>
-* <span data-ttu-id="7b0da-957">Stöd för jokertecken för Get-cmdletar för Az.Compute och Az.Network har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-957">Added wildcard support to Get cmdlets for Az.Compute and Az.Network</span></span>
-* <span data-ttu-id="7b0da-958">Endast interaktiv autentisering och autentisering med användarnamn/lösenord för Windows PowerShell 5.1 har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-958">Added interactive and username/password authentication for Windows PowerShell 5.1 only</span></span>
-* <span data-ttu-id="7b0da-959">Stöd för Python 2-runbookflöden i Az.Automation har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-959">Added support for Python 2 runbooks in Az.Automation</span></span>
-* <span data-ttu-id="7b0da-960">Az.LogicApp: Nya cmdletar för integrationskontosammansättningar och batchkonfiguration</span><span class="sxs-lookup"><span data-stu-id="7b0da-960">Az.LogicApp: New cmdlets for Integration Account Assemblies and Batch Configuration</span></span>
-
-#### <a name="azaccounts"></a><span data-ttu-id="7b0da-961">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="7b0da-961">Az.Accounts</span></span>
-* <span data-ttu-id="7b0da-962">Add-AzEnvironment och Set-AzEnvironment har uppdaterats för att godkänna parametern AzureAnalysisServicesEndpointResourceId</span><span class="sxs-lookup"><span data-stu-id="7b0da-962">Updated Add-AzEnvironment and Set-AzEnvironment to accept parameter AzureAnalysisServicesEndpointResourceId</span></span>
-
-#### <a name="azanalysisservices"></a><span data-ttu-id="7b0da-963">Az.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="7b0da-963">Az.AnalysisServices</span></span>
-* <span data-ttu-id="7b0da-964">ServiceClient används i cmdletar för dataplan och den ursprungliga autentiseringslogiken har tagits bort</span><span class="sxs-lookup"><span data-stu-id="7b0da-964">Using ServiceClient in dataplane cmdlets and removing the original authentication logic</span></span>
-* <span data-ttu-id="7b0da-965">Add-AzureASAccount används för omslutning av Connect-AzAccount för att undvika en icke-bakåtkompatibel ändring</span><span class="sxs-lookup"><span data-stu-id="7b0da-965">Making Add-AzureASAccount a wrapper of Connect-AzAccount to avoid a breaking change</span></span>
-
-#### <a name="azautomation"></a><span data-ttu-id="7b0da-966">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="7b0da-966">Az.Automation</span></span>
-* <span data-ttu-id="7b0da-967">Buggen för cmdleten New-AzAutomationSoftwareUpdateConfiguration för inkluderingar har åtgärdats.</span><span class="sxs-lookup"><span data-stu-id="7b0da-967">Fixed New-AzAutomationSoftwareUpdateConfiguration cmdlet bug for Inclusions.</span></span> <span data-ttu-id="7b0da-968">Nu bör parametern IncludedKbNumber och IncludedPackageNameMask fungera.</span><span class="sxs-lookup"><span data-stu-id="7b0da-968">Now parameter IncludedKbNumber and IncludedPackageNameMask should work.</span></span>
-* <span data-ttu-id="7b0da-969">Felkorrigering för dynamiska grupper i uppdateringshanteringen för azure automation</span><span class="sxs-lookup"><span data-stu-id="7b0da-969">Bug fix for azure automation update management dynamic group</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="7b0da-970">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="7b0da-970">Az.Compute</span></span>
-* <span data-ttu-id="7b0da-971">Lägg till parametern HyperVGeneration i New-AzDiskConfig och New-AzSnapshotConfig</span><span class="sxs-lookup"><span data-stu-id="7b0da-971">Add HyperVGeneration parameter to New-AzDiskConfig and New-AzSnapshotConfig</span></span>
-* <span data-ttu-id="7b0da-972">Tillåt att virtuella datorer skapas med galleribilder från andra klientorganisationer.</span><span class="sxs-lookup"><span data-stu-id="7b0da-972">Allow VM creation with galley image from other tenants.</span></span> 
-
-#### <a name="azcontainerinstance"></a><span data-ttu-id="7b0da-973">Az.ContainerInstance</span><span class="sxs-lookup"><span data-stu-id="7b0da-973">Az.ContainerInstance</span></span>
-* <span data-ttu-id="7b0da-974">Ett problem har åtgärdats i parametern -Command för New-AzContainerGroup som lade till ett avslutande tomt argument</span><span class="sxs-lookup"><span data-stu-id="7b0da-974">Fixed issue in the -Command parameter of New-AzContainerGroup which added a trailing empty argument</span></span>
-
-#### <a name="azdatafactory"></a><span data-ttu-id="7b0da-975">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="7b0da-975">Az.DataFactory</span></span>
-* <span data-ttu-id="7b0da-976">ADF .Net SDK-versionen har uppdaterats till 3.0.2</span><span class="sxs-lookup"><span data-stu-id="7b0da-976">Updated ADF .Net SDK version to 3.0.2</span></span>
-* <span data-ttu-id="7b0da-977">Cmdleten Set-AzDataFactoryV2 har uppdaterats med extra parametrar för inställningar som rör RepoConfiguration.</span><span class="sxs-lookup"><span data-stu-id="7b0da-977">Updated Set-AzDataFactoryV2 cmdlet with extra parameters for RepoConfiguration related settings.</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="7b0da-978">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="7b0da-978">Az.Resources</span></span>
-* <span data-ttu-id="7b0da-979">Förbättra hanteringen av providrar för Get-AzResource när parametrarna -ResourceId eller -ResourceGroupName, -Name och -ResourceType tillhandahålls</span><span class="sxs-lookup"><span data-stu-id="7b0da-979">Improve handling of providers for 'Get-AzResource' when providing '-ResourceId' or '-ResourceGroupName', '-Name' and '-ResourceType' parameters</span></span>
-* <span data-ttu-id="7b0da-980">Förbättra felhanteringen för ”Test-AzDeployment” och ”Test-AzResourceGroupDeployment”</span><span class="sxs-lookup"><span data-stu-id="7b0da-980">Improve error handling for 'Test-AzDeployment' and 'Test-AzResourceGroupDeployment'</span></span>
-    - <span data-ttu-id="7b0da-981">Hantera fel utanför distributionsvalideringen och ta med dem i kommandoutdata istället</span><span class="sxs-lookup"><span data-stu-id="7b0da-981">Handle errors thrown outside of deployment validation and include them in output of command instead</span></span>
-    - <span data-ttu-id="7b0da-982">Mer information här: https://github.com/Azure/azure-powershell/issues/6856</span><span class="sxs-lookup"><span data-stu-id="7b0da-982">More information here: https://github.com/Azure/azure-powershell/issues/6856</span></span>
-* <span data-ttu-id="7b0da-983">Lägg till växlingsparametern -IgnoreDynamicParameters till en uppsättning av cmdletar för distribution för att hoppa över fråga i skript och jobbscenarier</span><span class="sxs-lookup"><span data-stu-id="7b0da-983">Add '-IgnoreDynamicParameters' switch parameter to set of deployment cmdlets to skip prompt in script and job scenarios</span></span>
-    - <span data-ttu-id="7b0da-984">Mer information här: https://github.com/Azure/azure-powershell/issues/6856</span><span class="sxs-lookup"><span data-stu-id="7b0da-984">More information here: https://github.com/Azure/azure-powershell/issues/6856</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="7b0da-985">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="7b0da-985">Az.Sql</span></span>
-* <span data-ttu-id="7b0da-986">Stöd för dataklassificering av databaser.</span><span class="sxs-lookup"><span data-stu-id="7b0da-986">Support Database Data Classification.</span></span>
-
-#### <a name="azstorage"></a><span data-ttu-id="7b0da-987">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="7b0da-987">Az.Storage</span></span>
-* <span data-ttu-id="7b0da-988">Rapportera detaljfel när lagringskontext skapas med parametern -UseConnectedAccount, men utan inloggning på Azure-kontot</span><span class="sxs-lookup"><span data-stu-id="7b0da-988">Report detail error when create Storage context with parameter -UseConnectedAccount, but without login Azure account</span></span>
-    - <span data-ttu-id="7b0da-989">New-AzStorageContext</span><span class="sxs-lookup"><span data-stu-id="7b0da-989">New-AzStorageContext</span></span>
-* <span data-ttu-id="7b0da-990">Stöd för att hantera Blob Service-egenskaper för ett angivet lagringskonto med API:et för hanteringsplan</span><span class="sxs-lookup"><span data-stu-id="7b0da-990">Support Manage Blob Service Properties of a specified Storage account with Management plane API</span></span>
-    - <span data-ttu-id="7b0da-991">Update-AzStorageBlobServiceProperty</span><span class="sxs-lookup"><span data-stu-id="7b0da-991">Update-AzStorageBlobServiceProperty</span></span>
-    - <span data-ttu-id="7b0da-992">Get-AzStorageBlobServiceProperty</span><span class="sxs-lookup"><span data-stu-id="7b0da-992">Get-AzStorageBlobServiceProperty</span></span>
-    - <span data-ttu-id="7b0da-993">Enable-AzStorageBlobDeleteRetentionPolicy</span><span class="sxs-lookup"><span data-stu-id="7b0da-993">Enable-AzStorageBlobDeleteRetentionPolicy</span></span>
-    - <span data-ttu-id="7b0da-994">Disable-AzStorageBlobDeleteRetentionPolicy</span><span class="sxs-lookup"><span data-stu-id="7b0da-994">Disable-AzStorageBlobDeleteRetentionPolicy</span></span>
-* <span data-ttu-id="7b0da-995">Stöd för -AsJob-cmdletar för att ladda upp och ladda ned blobar och filer</span><span class="sxs-lookup"><span data-stu-id="7b0da-995">-AsJob support for Blob and file upload and download cmdlets</span></span>
-    - <span data-ttu-id="7b0da-996">Get-AzStorageBlobContent</span><span class="sxs-lookup"><span data-stu-id="7b0da-996">Get-AzStorageBlobContent</span></span>
-    - <span data-ttu-id="7b0da-997">Set-AzStorageBlobContent</span><span class="sxs-lookup"><span data-stu-id="7b0da-997">Set-AzStorageBlobContent</span></span>
-    - <span data-ttu-id="7b0da-998">Get-AzStorageFileContent</span><span class="sxs-lookup"><span data-stu-id="7b0da-998">Get-AzStorageFileContent</span></span>
-    - <span data-ttu-id="7b0da-999">Set-AzStorageFileContent</span><span class="sxs-lookup"><span data-stu-id="7b0da-999">Set-AzStorageFileContent</span></span>
-
-## <a name="160---march-2019"></a><span data-ttu-id="7b0da-1000">1.6.0 – mars 2019</span><span class="sxs-lookup"><span data-stu-id="7b0da-1000">1.6.0 - March 2019</span></span>
-### <a name="highlights-since-the-last-major-release"></a><span data-ttu-id="7b0da-1001">Höjdpunkter sedan den senaste större uppdateringen</span><span class="sxs-lookup"><span data-stu-id="7b0da-1001">Highlights since the last major release</span></span>
-* <span data-ttu-id="7b0da-1002">Allmän tillgänglighet för `Az`-modulen</span><span class="sxs-lookup"><span data-stu-id="7b0da-1002">General availability of `Az` module</span></span>
-* <span data-ttu-id="7b0da-1003">Mer information om `Az`-modulen finns här: https://aka.ms/azps-announce</span><span class="sxs-lookup"><span data-stu-id="7b0da-1003">For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce</span></span>
-* <span data-ttu-id="7b0da-1004">Ifyllning för Location, ResourceGroup och ResourceName har lagts till: https://azure.microsoft.com/blog/completers-in-azure-powershell/</span><span class="sxs-lookup"><span data-stu-id="7b0da-1004">Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/</span></span>
-* <span data-ttu-id="7b0da-1005">Stöd för jokertecken för Get-cmdletar för Az.Compute och Az.Network har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-1005">Added wildcard support to Get cmdlets for Az.Compute and Az.Network</span></span>
-* <span data-ttu-id="7b0da-1006">Endast interaktiv autentisering och autentisering med användarnamn/lösenord för Windows PowerShell 5.1 har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-1006">Added interactive and username/password authentication for Windows PowerShell 5.1 only</span></span>
-* <span data-ttu-id="7b0da-1007">Stöd för Python 2-runbookflöden i Az.Automation har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-1007">Added support for Python 2 runbooks in Az.Automation</span></span>
-* <span data-ttu-id="7b0da-1008">Az.LogicApp: Nya cmdletar för integrationskontosammansättningar och batchkonfiguration</span><span class="sxs-lookup"><span data-stu-id="7b0da-1008">Az.LogicApp: New cmdlets for Integration Account Assemblies and Batch Configuration</span></span>
-
-#### <a name="azautomation"></a><span data-ttu-id="7b0da-1009">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="7b0da-1009">Az.Automation</span></span>
-* <span data-ttu-id="7b0da-1010">Azure Automation – ändring av uppdateringshantering för stöd för de nya funktionerna:</span><span class="sxs-lookup"><span data-stu-id="7b0da-1010">Azure automation update management change to support the following new features :</span></span>
-    * <span data-ttu-id="7b0da-1011">Dynamisk gruppering</span><span class="sxs-lookup"><span data-stu-id="7b0da-1011">Dynamic grouping</span></span>
-    * <span data-ttu-id="7b0da-1012">För-/efterskrift</span><span class="sxs-lookup"><span data-stu-id="7b0da-1012">Pre-Post script</span></span>
-    * <span data-ttu-id="7b0da-1013">Inställning för omstart</span><span class="sxs-lookup"><span data-stu-id="7b0da-1013">Reboot Setting</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="7b0da-1014">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="7b0da-1014">Az.Compute</span></span>
-* <span data-ttu-id="7b0da-1015">Åtgärda problem med sökvägsmatchning i Get-AzVmBootDiagnosticsData</span><span class="sxs-lookup"><span data-stu-id="7b0da-1015">Fix issue with path resolution in Get-AzVmBootDiagnosticsData</span></span>
-* <span data-ttu-id="7b0da-1016">Uppdatera Compute-klientbibliotek till 25.0.0.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1016">Update Compute client library to 25.0.0.</span></span>
-
-#### <a name="azkeyvault"></a><span data-ttu-id="7b0da-1017">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="7b0da-1017">Az.KeyVault</span></span>
-* <span data-ttu-id="7b0da-1018">Stöd för jokertecken för KeyVault-cmdletar har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-1018">Added wildcard support to KeyVault cmdlets</span></span>
-
-#### <a name="aznetwork"></a><span data-ttu-id="7b0da-1019">Az.Network</span><span class="sxs-lookup"><span data-stu-id="7b0da-1019">Az.Network</span></span>
-* <span data-ttu-id="7b0da-1020">Lägg till stöd för Threat Intelligence för Azure Firewall</span><span class="sxs-lookup"><span data-stu-id="7b0da-1020">Add Threat Intelligence support for Azure Firewall</span></span>
-* <span data-ttu-id="7b0da-1021">Lägg till resurs för brandväggsprincip på översta nivå och anpassade regler för Application Gateway</span><span class="sxs-lookup"><span data-stu-id="7b0da-1021">Add Application Gateway Firewall Policy top level resource and Custom Rules</span></span>
-
-#### <a name="azrecoveryservices"></a><span data-ttu-id="7b0da-1022">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="7b0da-1022">Az.RecoveryServices</span></span>
-* <span data-ttu-id="7b0da-1023">SnapshotRetentionInDays har lagts till i Azure-principen för virtuella datorer för stöd av Instant RP</span><span class="sxs-lookup"><span data-stu-id="7b0da-1023">Added SnapshotRetentionInDays in Azure VM policy to support Instant RP</span></span>
-* <span data-ttu-id="7b0da-1024">Pipe-stöd för avregistrering av container har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-1024">Added pipe support for unregister container</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="7b0da-1025">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="7b0da-1025">Az.Resources</span></span>
-* <span data-ttu-id="7b0da-1026">Uppdatera stöd för jokertecken för Get-AzResource och Get-AzResourceGroup</span><span class="sxs-lookup"><span data-stu-id="7b0da-1026">Update wildcard support for Get-AzResource and Get-AzResourceGroup</span></span>
-* <span data-ttu-id="7b0da-1027">Uppdatera autentiseringsuppgifter som används vid allmänna anrop till ARM</span><span class="sxs-lookup"><span data-stu-id="7b0da-1027">Update credentials used when making generic calls to ARM</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="7b0da-1028">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="7b0da-1028">Az.Sql</span></span>
-* <span data-ttu-id="7b0da-1029">Cmdlet-parametern (ExcludeDetectionType) för Hotidentifiering ändrades från DetectionType till sträng[] för att framtidssäkra den när nya DetectionTypes läggs till, och även för att stödja automatisk ifyllning.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1029">changed Threat Detection's cmdlets param (ExcludeDetectionType) from DetectionType to string[] to make it future proof when new DetectionTypes are added and to support autocomplete as well.</span></span>
-
-#### <a name="azstorage"></a><span data-ttu-id="7b0da-1030">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="7b0da-1030">Az.Storage</span></span>
-* <span data-ttu-id="7b0da-1031">Stöd för att hämta/ange/ta bort hanteringsprincip på ett lagringskonto</span><span class="sxs-lookup"><span data-stu-id="7b0da-1031">Support Get/Set/Remove Management Policy on a Storage account</span></span>
-    - <span data-ttu-id="7b0da-1032">Set-AzStorageAccountManagementPolicy</span><span class="sxs-lookup"><span data-stu-id="7b0da-1032">Set-AzStorageAccountManagementPolicy</span></span>
-    - <span data-ttu-id="7b0da-1033">Get-AzStorageAccountManagementPolicy</span><span class="sxs-lookup"><span data-stu-id="7b0da-1033">Get-AzStorageAccountManagementPolicy</span></span>
-    - <span data-ttu-id="7b0da-1034">Remove-AzStorageAccountManagementPolicy</span><span class="sxs-lookup"><span data-stu-id="7b0da-1034">Remove-AzStorageAccountManagementPolicy</span></span>
-    - <span data-ttu-id="7b0da-1035">Add-AzStorageAccountManagementPolicyAction</span><span class="sxs-lookup"><span data-stu-id="7b0da-1035">Add-AzStorageAccountManagementPolicyAction</span></span>
-    - <span data-ttu-id="7b0da-1036">New-AzStorageAccountManagementPolicyFilter</span><span class="sxs-lookup"><span data-stu-id="7b0da-1036">New-AzStorageAccountManagementPolicyFilter</span></span>
-    - <span data-ttu-id="7b0da-1037">New-AzStorageAccountManagementPolicyRule</span><span class="sxs-lookup"><span data-stu-id="7b0da-1037">New-AzStorageAccountManagementPolicyRule</span></span>
-
-#### <a name="azwebsites"></a><span data-ttu-id="7b0da-1038">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="7b0da-1038">Az.Websites</span></span>
-* <span data-ttu-id="7b0da-1039">Åtgärda fel med ARM-mall som avbryter kloning av alla platser med 'New-AzWebApp -IncludeSourceWebAppSlots'</span><span class="sxs-lookup"><span data-stu-id="7b0da-1039">Fix ARM template bug that breaks cloning all slots using 'New-AzWebApp -IncludeSourceWebAppSlots'</span></span> 
-
-## <a name="150---march-2019"></a><span data-ttu-id="7b0da-1040">1.5.0 – mars 2019</span><span class="sxs-lookup"><span data-stu-id="7b0da-1040">1.5.0 - March 2019</span></span>
-#### <a name="azaccounts"></a><span data-ttu-id="7b0da-1041">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="7b0da-1041">Az.Accounts</span></span>
-* <span data-ttu-id="7b0da-1042">Lägg till kommandot Register-AzModule för stöd för AutoRest-genererade cmdletar</span><span class="sxs-lookup"><span data-stu-id="7b0da-1042">Add 'Register-AzModule' command to support AutoRest generated cmdlets</span></span>
-* <span data-ttu-id="7b0da-1043">Uppdatera exempel för Connect-AzAccount</span><span class="sxs-lookup"><span data-stu-id="7b0da-1043">Update examples for Connect-AzAccount</span></span>
-
-#### <a name="azautomation"></a><span data-ttu-id="7b0da-1044">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="7b0da-1044">Az.Automation</span></span>
-* <span data-ttu-id="7b0da-1045">Problem med att hämta vissa månadsscheman i flera Azure Automation-cmdletar har åtgärdats</span><span class="sxs-lookup"><span data-stu-id="7b0da-1045">Fixed issue when retreiving certain monthly schedules in several Azure Automation cmdlets</span></span>
-* <span data-ttu-id="7b0da-1046">Åtgärda problem med att Get-AzAutomationDscNode bara returnerar de 20 översta noderna.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1046">Fix Get-AzAutomationDscNode returning just top 20 nodes.</span></span> <span data-ttu-id="7b0da-1047">Nu returneras alla noder</span><span class="sxs-lookup"><span data-stu-id="7b0da-1047">Now it returns all nodes</span></span>
-
-#### <a name="azcdn"></a><span data-ttu-id="7b0da-1048">Az.Cdn</span><span class="sxs-lookup"><span data-stu-id="7b0da-1048">Az.Cdn</span></span>
-* <span data-ttu-id="7b0da-1049">Nya Powershell-cmdletar för att aktivera/inaktivera anpassade domän-HTTPS har lagts till och de gamla har gjorts inaktuella</span><span class="sxs-lookup"><span data-stu-id="7b0da-1049">Added new Powershell cmdlets for Enable/Disable Custom Domain Https and deprecated the old ones</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="7b0da-1050">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="7b0da-1050">Az.Compute</span></span>
-* <span data-ttu-id="7b0da-1051">Lägg till stöd för jokertecken för Get-cmdletar</span><span class="sxs-lookup"><span data-stu-id="7b0da-1051">Add wildcard support to Get cmdlets</span></span>
-
-#### <a name="azdatafactory"></a><span data-ttu-id="7b0da-1052">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="7b0da-1052">Az.DataFactory</span></span>
-* <span data-ttu-id="7b0da-1053">ADF .Net SDK-versionen har uppdaterats till 3.0.1</span><span class="sxs-lookup"><span data-stu-id="7b0da-1053">Updated ADF .Net SDK version to 3.0.1</span></span>
-
-#### <a name="azlogicapp"></a><span data-ttu-id="7b0da-1054">Az.LogicApp</span><span class="sxs-lookup"><span data-stu-id="7b0da-1054">Az.LogicApp</span></span>
-* <span data-ttu-id="7b0da-1055">Åtgärda problemet med att ListWorkflows endast hämtar den första sidan med resultat</span><span class="sxs-lookup"><span data-stu-id="7b0da-1055">Fix for ListWorkflows only retrieving the first page of results</span></span>
-
-#### <a name="aznetwork"></a><span data-ttu-id="7b0da-1056">Az.Network</span><span class="sxs-lookup"><span data-stu-id="7b0da-1056">Az.Network</span></span>
-* <span data-ttu-id="7b0da-1057">Lägg till stöd för jokertecken för Network-cmdletar</span><span class="sxs-lookup"><span data-stu-id="7b0da-1057">Add wildcard support to Network cmdlets</span></span>
-
-#### <a name="azrecoveryservices"></a><span data-ttu-id="7b0da-1058">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="7b0da-1058">Az.RecoveryServices</span></span>
-* <span data-ttu-id="7b0da-1059">Stöd har lagts till för SQL Server i virtuella Azure-datorer</span><span class="sxs-lookup"><span data-stu-id="7b0da-1059">Added Sql server in Azure VM support</span></span>
-* <span data-ttu-id="7b0da-1060">SDK-uppdatering</span><span class="sxs-lookup"><span data-stu-id="7b0da-1060">SDK Update</span></span>
-* <span data-ttu-id="7b0da-1061">Get-ProtectableItem-incheckning i VMappContainer har tagits bort</span><span class="sxs-lookup"><span data-stu-id="7b0da-1061">Removed VMappContainer check in Get-ProtectableItem</span></span>
-* <span data-ttu-id="7b0da-1062">Name och ServerName har lagts till som parametrar för Get-ProtectableItem</span><span class="sxs-lookup"><span data-stu-id="7b0da-1062">Added Name and ServerName as parameters for Get-ProtectableItem</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="7b0da-1063">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="7b0da-1063">Az.Resources</span></span>
-* <span data-ttu-id="7b0da-1064">Lägg till parametern `-TemplateObject` i cmdletar för distribution</span><span class="sxs-lookup"><span data-stu-id="7b0da-1064">Add `-TemplateObject` parameter to deployment cmdlets</span></span>
-    - <span data-ttu-id="7b0da-1065">Mer information här: https://github.com/Azure/azure-powershell/issues/2933</span><span class="sxs-lookup"><span data-stu-id="7b0da-1065">More information here: https://github.com/Azure/azure-powershell/issues/2933</span></span>
-* <span data-ttu-id="7b0da-1066">Åtgärda problem med piping av resultatet i `Get-AzResource` till `Set-AzResource`</span><span class="sxs-lookup"><span data-stu-id="7b0da-1066">Fix issue when piping the result of `Get-AzResource` to `Set-AzResource`</span></span>
-    - <span data-ttu-id="7b0da-1067">Mer information här: https://github.com/Azure/azure-powershell/issues/8240</span><span class="sxs-lookup"><span data-stu-id="7b0da-1067">More information here: https://github.com/Azure/azure-powershell/issues/8240</span></span>
-* <span data-ttu-id="7b0da-1068">Åtgärda problem med ändring av JSON-datatyp när `Set-AzResource` körs</span><span class="sxs-lookup"><span data-stu-id="7b0da-1068">Fix issue with JSON data type change when running `Set-AzResource`</span></span>
-    - <span data-ttu-id="7b0da-1069">Mer information här: https://github.com/Azure/azure-powershell/issues/7930</span><span class="sxs-lookup"><span data-stu-id="7b0da-1069">More information here: https://github.com/Azure/azure-powershell/issues/7930</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="7b0da-1070">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="7b0da-1070">Az.Sql</span></span>
-* <span data-ttu-id="7b0da-1071">AuditingEndpointsCommunicator uppdateras.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1071">Updating AuditingEndpointsCommunicator.</span></span>
-    - <span data-ttu-id="7b0da-1072">Åtgärdar beteendet hos ett gränsscenario när nya diagnostikinställningar skapas.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1072">Fixing the behavior of an edge case while creating new diagnostic settings.</span></span>
-
-#### <a name="azstorage"></a><span data-ttu-id="7b0da-1073">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="7b0da-1073">Az.Storage</span></span>
-* <span data-ttu-id="7b0da-1074">Stöd för BlockBlobStorage när Storage-konto skapas      - New-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="7b0da-1074">Support Kind BlockBlobStorage when create Storage account      - New-AzStorageAccount</span></span>
-
-## <a name="140---february-2019"></a><span data-ttu-id="7b0da-1075">1.4.0 – februari 2019</span><span class="sxs-lookup"><span data-stu-id="7b0da-1075">1.4.0 - February 2019</span></span>
-#### <a name="azanalysisservices"></a><span data-ttu-id="7b0da-1076">Az.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="7b0da-1076">Az.AnalysisServices</span></span>
-* <span data-ttu-id="7b0da-1077">Inaktuell AddAzureASAccount-cmdlet</span><span class="sxs-lookup"><span data-stu-id="7b0da-1077">Deprecated AddAzureASAccount cmdlet</span></span>
-
-#### <a name="azautomation"></a><span data-ttu-id="7b0da-1078">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="7b0da-1078">Az.Automation</span></span>
-* <span data-ttu-id="7b0da-1079">Hjälpen för Import-AzAutomationDscNodeConfiguration har uppdaterats</span><span class="sxs-lookup"><span data-stu-id="7b0da-1079">Update help for Import-AzAutomationDscNodeConfiguration</span></span>
-* <span data-ttu-id="7b0da-1080">Konfigurationsnamnsvalidering har lagts till i cmdleten Import-AzAutomationDscConfiguration</span><span class="sxs-lookup"><span data-stu-id="7b0da-1080">Added configuration name validation to Import-AzAutomationDscConfiguration cmdlet</span></span>
-* <span data-ttu-id="7b0da-1081">Förbättrad felhantering för cmdleten Import-AzAutomationDscConfiguration</span><span class="sxs-lookup"><span data-stu-id="7b0da-1081">Improved error handling for Import-AzAutomationDscConfiguration cmdlet</span></span>
-
-#### <a name="azcognitiveservices"></a><span data-ttu-id="7b0da-1082">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="7b0da-1082">Az.CognitiveServices</span></span>
-* <span data-ttu-id="7b0da-1083">CustomSubdomainName har lagts till som en ny valfri parameter för New-AzCognitiveServicesAccount, som används för att ange underdomän för resursen.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1083">Added CustomSubdomainName as a new optional parameter for New-AzCognitiveServicesAccount which is used to specify subdomain for the resource.</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="7b0da-1084">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="7b0da-1084">Az.Compute</span></span>
-* <span data-ttu-id="7b0da-1085">Problemet med ID-parameteruppsättningar har åtgärdats</span><span class="sxs-lookup"><span data-stu-id="7b0da-1085">Fix issue with ID parameter sets</span></span>
-* <span data-ttu-id="7b0da-1086">Get-AzVMExtension har uppdaterats så att alla installerade tillägg visas om parametern Name inte har angetts</span><span class="sxs-lookup"><span data-stu-id="7b0da-1086">Update Get-AzVMExtension to list all installed extension if Name parameter is not provided</span></span>
-* <span data-ttu-id="7b0da-1087">Parametrarna Tag och ResourceId har lagts till i cmdleten Update-AzImage</span><span class="sxs-lookup"><span data-stu-id="7b0da-1087">Add Tag and ResourceId parameters to Update-AzImage cmdlet</span></span>
-* <span data-ttu-id="7b0da-1088">Get-AzVmssVM utan instans-ID och med InstanceView kan visa virtuella VMSS-datorer med instansvyn.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1088">Get-AzVmssVM without instance ID and with InstanceView can list VMSS VMs with instance view.</span></span>
-
-#### <a name="azdatalakestore"></a><span data-ttu-id="7b0da-1089">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="7b0da-1089">Az.DataLakeStore</span></span>
-* <span data-ttu-id="7b0da-1090">Cmdletar har lagts till för uppräkning och återställning av borttagna objekt i ADL</span><span class="sxs-lookup"><span data-stu-id="7b0da-1090">Add cmdlets for ADL deleted item enumerate and restore</span></span>
-
-#### <a name="azeventhub"></a><span data-ttu-id="7b0da-1091">Az.EventHub</span><span class="sxs-lookup"><span data-stu-id="7b0da-1091">Az.EventHub</span></span>
-* <span data-ttu-id="7b0da-1092">Ny boolesk egenskap SkipEmptyArchives har lagts till i Skip Empty Archives i CaptureDescription-klassen i Eventhub</span><span class="sxs-lookup"><span data-stu-id="7b0da-1092">Added new boolean property SkipEmptyArchives to Skip Empty Archives in CaptureDescription class of Eventhub</span></span> 
-
-#### <a name="azkeyvault"></a><span data-ttu-id="7b0da-1093">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="7b0da-1093">Az.KeyVault</span></span>
-* <span data-ttu-id="7b0da-1094">Taggning i Set-AzKeyVaultSecret har åtgärdats</span><span class="sxs-lookup"><span data-stu-id="7b0da-1094">Fix tagging on Set-AzKeyVaultSecret</span></span>
-
-#### <a name="azlogicapp"></a><span data-ttu-id="7b0da-1095">Az.LogicApp</span><span class="sxs-lookup"><span data-stu-id="7b0da-1095">Az.LogicApp</span></span>
-* <span data-ttu-id="7b0da-1096">Grundläggande SKU har lagts till för Integrationskonton</span><span class="sxs-lookup"><span data-stu-id="7b0da-1096">Add in Basic sku for Integration Accounts</span></span>
-* <span data-ttu-id="7b0da-1097">XSLT 2.0, XSLT 3.0 och Flytande mappningstyper har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-1097">Add in XSLT 2.0, XSLT 3.0 and Liquid Map Types</span></span>
-* <span data-ttu-id="7b0da-1098">Nya cmdletar för integrationskontosammansättningar</span><span class="sxs-lookup"><span data-stu-id="7b0da-1098">New cmdlets for Integration Account Assemblies</span></span>
-    - <span data-ttu-id="7b0da-1099">Get-AzIntegrationAccountAssembly</span><span class="sxs-lookup"><span data-stu-id="7b0da-1099">Get-AzIntegrationAccountAssembly</span></span>
-    - <span data-ttu-id="7b0da-1100">New-AzIntegrationAccountAssembly</span><span class="sxs-lookup"><span data-stu-id="7b0da-1100">New-AzIntegrationAccountAssembly</span></span>
-    - <span data-ttu-id="7b0da-1101">Remove-AzIntegrationAccountAssembly</span><span class="sxs-lookup"><span data-stu-id="7b0da-1101">Remove-AzIntegrationAccountAssembly</span></span>
-    - <span data-ttu-id="7b0da-1102">Set-AzIntegrationAccountAssembly</span><span class="sxs-lookup"><span data-stu-id="7b0da-1102">Set-AzIntegrationAccountAssembly</span></span>
-* <span data-ttu-id="7b0da-1103">Nya cmdletar för batchkonfiguration för integrationskonto</span><span class="sxs-lookup"><span data-stu-id="7b0da-1103">New cmdlets for Integration Account Batch Configuration</span></span>
-    - <span data-ttu-id="7b0da-1104">Get-AzIntegrationAccountBatchConfiguration</span><span class="sxs-lookup"><span data-stu-id="7b0da-1104">Get-AzIntegrationAccountBatchConfiguration</span></span>
-    - <span data-ttu-id="7b0da-1105">New-AzIntegrationAccountBatchConfiguration</span><span class="sxs-lookup"><span data-stu-id="7b0da-1105">New-AzIntegrationAccountBatchConfiguration</span></span>
-    - <span data-ttu-id="7b0da-1106">Remove-AzIntegrationAccountBatchConfiguration</span><span class="sxs-lookup"><span data-stu-id="7b0da-1106">Remove-AzIntegrationAccountBatchConfiguration</span></span>
-    - <span data-ttu-id="7b0da-1107">Set-AzIntegrationAccountBatchConfiguration</span><span class="sxs-lookup"><span data-stu-id="7b0da-1107">Set-AzIntegrationAccountBatchConfiguration</span></span>
-* <span data-ttu-id="7b0da-1108">Logic App-SDK har uppdaterats till version 4.1.0</span><span class="sxs-lookup"><span data-stu-id="7b0da-1108">Update Logic App SDK to version 4.1.0</span></span>
-
-#### <a name="azmonitor"></a><span data-ttu-id="7b0da-1109">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="7b0da-1109">Az.Monitor</span></span>
-* <span data-ttu-id="7b0da-1110">Hjälpen för Get-AzMetric har uppdaterats</span><span class="sxs-lookup"><span data-stu-id="7b0da-1110">Update help for Get-AzMetric</span></span>
-
-#### <a name="aznetwork"></a><span data-ttu-id="7b0da-1111">Az.Network</span><span class="sxs-lookup"><span data-stu-id="7b0da-1111">Az.Network</span></span>
-* <span data-ttu-id="7b0da-1112">Hjälpexempel för Add-AzApplicationGatewayCustomError har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-1112">Update help example for Add-AzApplicationGatewayCustomError</span></span>
-
-#### <a name="azoperationalinsights"></a><span data-ttu-id="7b0da-1113">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="7b0da-1113">Az.OperationalInsights</span></span>
-* <span data-ttu-id="7b0da-1114">Ytterligare stöd för datakällorna New och Get ApplicationInsights.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1114">Additional support for New and Get ApplicationInsights data source.</span></span>
-    - <span data-ttu-id="7b0da-1115">Ny ApplicationInsights-typ har lagts till för att ge stöd för ”Get specific” och ”Get all” för ApplicationInsights-datakällor för angiven arbetsyta.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1115">Added new 'ApplicationInsights' kind to support Get specific and Get all ApplicationInsights data sources for given workspace.</span></span> 
-    - <span data-ttu-id="7b0da-1116">Cmdleten New-AzOperationalInsightsApplicationInsightsDataSource har lagts till för att skapa datakälla med angivna parametrar för Application Insights-resurs: subscription Id, resourceGroupName och name.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1116">Added New-AzOperationalInsightsApplicationInsightsDataSource cmdlet for creating data source by given Application-Insights resource parameters: subscription Id, resourceGroupName and name.</span></span> 
-
-#### <a name="azresources"></a><span data-ttu-id="7b0da-1117">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="7b0da-1117">Az.Resources</span></span>
-* <span data-ttu-id="7b0da-1118">Korrigering av problemet https://github.com/Azure/azure-powershell/issues/8166</span><span class="sxs-lookup"><span data-stu-id="7b0da-1118">Fix for issue https://github.com/Azure/azure-powershell/issues/8166</span></span>
-* <span data-ttu-id="7b0da-1119">Korrigering av problemet https://github.com/Azure/azure-powershell/issues/8235</span><span class="sxs-lookup"><span data-stu-id="7b0da-1119">Fix for issue https://github.com/Azure/azure-powershell/issues/8235</span></span>
-* <span data-ttu-id="7b0da-1120">Korrigering av problemet https://github.com/Azure/azure-powershell/issues/6219</span><span class="sxs-lookup"><span data-stu-id="7b0da-1120">Fix for issue https://github.com/Azure/azure-powershell/issues/6219</span></span>
-* <span data-ttu-id="7b0da-1121">Fel som gör att KeyCredentials inte kan skapas upprepade gånger har åtgärdats</span><span class="sxs-lookup"><span data-stu-id="7b0da-1121">Fix bug preventing repeat creation of KeyCredentials</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="7b0da-1122">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="7b0da-1122">Az.Sql</span></span>
-* <span data-ttu-id="7b0da-1123">Lägg till stöd för hyperskalanivån för SQL DB</span><span class="sxs-lookup"><span data-stu-id="7b0da-1123">Add support for SQL DB Hyperscale tier</span></span>
-* <span data-ttu-id="7b0da-1124">Ett fel har åtgärdats där återställningen kunde misslyckas på grund av onödiga inställningsegenskaper i restore-förfrågan</span><span class="sxs-lookup"><span data-stu-id="7b0da-1124">Fixed bug where restore could fail due to setting unnecessary properties in restore request</span></span>
-
-#### <a name="azwebsites"></a><span data-ttu-id="7b0da-1125">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="7b0da-1125">Az.Websites</span></span>
-* <span data-ttu-id="7b0da-1126">Rätt exempel i Get-AzWebAppSlotMetrics</span><span class="sxs-lookup"><span data-stu-id="7b0da-1126">Correct example in Get-AzWebAppSlotMetrics</span></span>
-
-## <a name="130---february-2019"></a><span data-ttu-id="7b0da-1127">1.3.0 – februari 2019</span><span class="sxs-lookup"><span data-stu-id="7b0da-1127">1.3.0 - February 2019</span></span>
-#### <a name="azaccounts"></a><span data-ttu-id="7b0da-1128">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="7b0da-1128">Az.Accounts</span></span>
-* <span data-ttu-id="7b0da-1129">Uppdatera till den senaste versionen av ClientRuntime</span><span class="sxs-lookup"><span data-stu-id="7b0da-1129">Update to latest version of ClientRuntime</span></span>
-
-#### <a name="azanalysisservices"></a><span data-ttu-id="7b0da-1130">Az.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="7b0da-1130">Az.AnalysisServices</span></span>
-<span data-ttu-id="7b0da-1131">Allmän tillgänglighet för Az.AnalysisServices-modulen.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1131">General availability for Az.AnalysisServices module.</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="7b0da-1132">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="7b0da-1132">Az.Compute</span></span>
-* <span data-ttu-id="7b0da-1133">AEM-tillägg: Lägg till stöd för UltraSSD-, P60-, P70- och P80-diskar</span><span class="sxs-lookup"><span data-stu-id="7b0da-1133">AEM extension: Add support for UltraSSD and P60,P70 and P80 disks</span></span>
-* <span data-ttu-id="7b0da-1134">Uppdatera hjälpbeskrivning för Set-AzVMBootDiagnostics</span><span class="sxs-lookup"><span data-stu-id="7b0da-1134">Update help description for Set-AzVMBootDiagnostics</span></span>
-* <span data-ttu-id="7b0da-1135">Uppdatera hjälpbeskrivning och exempel för Update-AzImage</span><span class="sxs-lookup"><span data-stu-id="7b0da-1135">Update help description and example for Update-AzImage</span></span>
-
-#### <a name="azrecoveryservices"></a><span data-ttu-id="7b0da-1136">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="7b0da-1136">Az.RecoveryServices</span></span>
-<span data-ttu-id="7b0da-1137">Allmän tillgänglighet för Az.RecoveryServices-modulen.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1137">General availability for Az.RecoveryServices module.</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="7b0da-1138">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="7b0da-1138">Az.Resources</span></span>
-* <span data-ttu-id="7b0da-1139">Korrigera taggar för resursgrupper</span><span class="sxs-lookup"><span data-stu-id="7b0da-1139">Fix tagging for resource groups</span></span> 
-    - <span data-ttu-id="7b0da-1140">Mer information här: https://github.com/Azure/azure-powershell/issues/8166</span><span class="sxs-lookup"><span data-stu-id="7b0da-1140">More information here: https://github.com/Azure/azure-powershell/issues/8166</span></span>
-* <span data-ttu-id="7b0da-1141">Åtgärda problem där `Get-AzureRmRoleAssignment` inte respekterar -ErrorAction</span><span class="sxs-lookup"><span data-stu-id="7b0da-1141">Fix issue where `Get-AzureRmRoleAssignment` doesn't respect -ErrorAction</span></span> 
-    - <span data-ttu-id="7b0da-1142">Mer information här: https://github.com/Azure/azure-powershell/issues/8235</span><span class="sxs-lookup"><span data-stu-id="7b0da-1142">More information here: https://github.com/Azure/azure-powershell/issues/8235</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="7b0da-1143">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="7b0da-1143">Az.Sql</span></span>
-* <span data-ttu-id="7b0da-1144">Lägga till Get/Set-AzSqlDatabaseBackupShortTermRetentionPolicy</span><span class="sxs-lookup"><span data-stu-id="7b0da-1144">Add Get/Set AzSqlDatabaseBackupShortTermRetentionPolicy</span></span>
-* <span data-ttu-id="7b0da-1145">Åtgärda problem där ett nullref-undantag uppstår när du kör SQL-cmdletar och inte är inloggad på ett Azure-konto</span><span class="sxs-lookup"><span data-stu-id="7b0da-1145">Fix issue where not being logged into Azure account would result in nullref exception when executing SQL cmdlets</span></span>
-* <span data-ttu-id="7b0da-1146">Åtgärda nullref-undantag i Get-AzSqlCapability</span><span class="sxs-lookup"><span data-stu-id="7b0da-1146">Fixed null ref exception in Get-AzSqlCapability</span></span>
-
-## <a name="121---january-2019"></a><span data-ttu-id="7b0da-1147">1.2.1 – januari 2019</span><span class="sxs-lookup"><span data-stu-id="7b0da-1147">1.2.1 - January 2019</span></span>
-#### <a name="azaccounts"></a><span data-ttu-id="7b0da-1148">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="7b0da-1148">Az.Accounts</span></span>
-* <span data-ttu-id="7b0da-1149">Version med rätt version av autentisering</span><span class="sxs-lookup"><span data-stu-id="7b0da-1149">Release with correct version of Authentication</span></span>
-
-#### <a name="azanalysisservices"></a><span data-ttu-id="7b0da-1150">Az.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="7b0da-1150">Az.AnalysisServices</span></span>
-* <span data-ttu-id="7b0da-1151">Version med uppdaterat autentiseringsberoende</span><span class="sxs-lookup"><span data-stu-id="7b0da-1151">Release with updated Authentication dependency</span></span>
-
-#### <a name="azrecoveryservices"></a><span data-ttu-id="7b0da-1152">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="7b0da-1152">Az.RecoveryServices</span></span>
-* <span data-ttu-id="7b0da-1153">Version med uppdaterat autentiseringsberoende</span><span class="sxs-lookup"><span data-stu-id="7b0da-1153">Release with updated Authentication dependency</span></span>
-
-## <a name="120---january-2019"></a><span data-ttu-id="7b0da-1154">1.2.0 – januari 2019</span><span class="sxs-lookup"><span data-stu-id="7b0da-1154">1.2.0 - January 2019</span></span>
-#### <a name="azaccounts"></a><span data-ttu-id="7b0da-1155">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="7b0da-1155">Az.Accounts</span></span>
-* <span data-ttu-id="7b0da-1156">Lägga till interaktiv autentisering och autentisering med användarnamn/lösenord för endast Windows PowerShell 5.1</span><span class="sxs-lookup"><span data-stu-id="7b0da-1156">Add interactive and username/password authentication for Windows PowerShell 5.1 only</span></span>
-* <span data-ttu-id="7b0da-1157">Uppdatera felaktiga URL:er för onlinehjälp</span><span class="sxs-lookup"><span data-stu-id="7b0da-1157">Update incorrect online help URLs</span></span>
-* <span data-ttu-id="7b0da-1158">Lägga till varningsmeddelande i PS Core för Uninstall-AzureRm</span><span class="sxs-lookup"><span data-stu-id="7b0da-1158">Add warning message in PS Core for Uninstall-AzureRm</span></span>
-
-#### <a name="azaks"></a><span data-ttu-id="7b0da-1159">Az.Aks</span><span class="sxs-lookup"><span data-stu-id="7b0da-1159">Az.Aks</span></span>
-* <span data-ttu-id="7b0da-1160">Uppdatera felaktiga URL:er för onlinehjälp</span><span class="sxs-lookup"><span data-stu-id="7b0da-1160">Update incorrect online help URLs</span></span>
-
-#### <a name="azautomation"></a><span data-ttu-id="7b0da-1161">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="7b0da-1161">Az.Automation</span></span>
-* <span data-ttu-id="7b0da-1162">Stöd för Python 2-runbookflöden har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-1162">Added support for Python 2 runbooks</span></span>
-* <span data-ttu-id="7b0da-1163">Uppdatera felaktiga URL:er för onlinehjälp</span><span class="sxs-lookup"><span data-stu-id="7b0da-1163">Update incorrect online help URLs</span></span>
-
-#### <a name="azcdn"></a><span data-ttu-id="7b0da-1164">Az.Cdn</span><span class="sxs-lookup"><span data-stu-id="7b0da-1164">Az.Cdn</span></span>
-* <span data-ttu-id="7b0da-1165">Uppdatera felaktiga URL:er för onlinehjälp</span><span class="sxs-lookup"><span data-stu-id="7b0da-1165">Update incorrect online help URLs</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="7b0da-1166">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="7b0da-1166">Az.Compute</span></span>
-* <span data-ttu-id="7b0da-1167">Lägga till cmdleten Invoke-AzVMReimage</span><span class="sxs-lookup"><span data-stu-id="7b0da-1167">Add Invoke-AzVMReimage cmdlet</span></span>
-* <span data-ttu-id="7b0da-1168">Lägga till TempDisk-parameter i Set-AzVmss</span><span class="sxs-lookup"><span data-stu-id="7b0da-1168">Add TempDisk parameter to Set-AzVmss</span></span>
-* <span data-ttu-id="7b0da-1169">Korrigera varningsmeddelande för New-AzVM</span><span class="sxs-lookup"><span data-stu-id="7b0da-1169">Fix the warning message of New-AzVM</span></span>
-
-#### <a name="azcontainerregistry"></a><span data-ttu-id="7b0da-1170">Az.ContainerRegistry</span><span class="sxs-lookup"><span data-stu-id="7b0da-1170">Az.ContainerRegistry</span></span>
-* <span data-ttu-id="7b0da-1171">Uppdatera felaktiga URL:er för onlinehjälp</span><span class="sxs-lookup"><span data-stu-id="7b0da-1171">Update incorrect online help URLs</span></span>
-
-#### <a name="azdatafactory"></a><span data-ttu-id="7b0da-1172">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="7b0da-1172">Az.DataFactory</span></span>
-* <span data-ttu-id="7b0da-1173">ADF .Net SDK-versionen har uppdaterats till 3.0.0</span><span class="sxs-lookup"><span data-stu-id="7b0da-1173">Updated ADF .Net SDK version to 3.0.0</span></span>
-
-#### <a name="azdatalakestore"></a><span data-ttu-id="7b0da-1174">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="7b0da-1174">Az.DataLakeStore</span></span>
-* <span data-ttu-id="7b0da-1175">Åtgärda problem med ADLS-slutpunkt vid användning av MSI</span><span class="sxs-lookup"><span data-stu-id="7b0da-1175">Fix issue with ADLS endpoint when using MSI</span></span>
-    - <span data-ttu-id="7b0da-1176">Mer information här: https://github.com/Azure/azure-powershell/issues/7462</span><span class="sxs-lookup"><span data-stu-id="7b0da-1176">More information here: https://github.com/Azure/azure-powershell/issues/7462</span></span>
-* <span data-ttu-id="7b0da-1177">Uppdatera felaktiga URL:er för onlinehjälp</span><span class="sxs-lookup"><span data-stu-id="7b0da-1177">Update incorrect online help URLs</span></span>
-
-#### <a name="aziothub"></a><span data-ttu-id="7b0da-1178">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="7b0da-1178">Az.IotHub</span></span>
-* <span data-ttu-id="7b0da-1179">Lägga till kodningsformat i cmdleten Add-IotHubRoutingEndpoint.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1179">Add Encoding format to Add-IotHubRoutingEndpoint cmdlet.</span></span>
-
-#### <a name="azkeyvault"></a><span data-ttu-id="7b0da-1180">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="7b0da-1180">Az.KeyVault</span></span>
-* <span data-ttu-id="7b0da-1181">Uppdatera felaktiga URL:er för onlinehjälp</span><span class="sxs-lookup"><span data-stu-id="7b0da-1181">Update incorrect online help URLs</span></span>
-
-#### <a name="aznetwork"></a><span data-ttu-id="7b0da-1182">Az.Network</span><span class="sxs-lookup"><span data-stu-id="7b0da-1182">Az.Network</span></span>
-* <span data-ttu-id="7b0da-1183">Uppdatera felaktiga URL:er för onlinehjälp</span><span class="sxs-lookup"><span data-stu-id="7b0da-1183">Update incorrect online help URLs</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="7b0da-1184">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="7b0da-1184">Az.Resources</span></span>
-* <span data-ttu-id="7b0da-1185">Åtgärda felaktiga exempel i referensdokumentationen ”New-AzADAppCredential” och ”New-AzADSpCredential”</span><span class="sxs-lookup"><span data-stu-id="7b0da-1185">Fix incorrect examples in 'New-AzADAppCredential' and 'New-AzADSpCredential' reference documentation</span></span>
-* <span data-ttu-id="7b0da-1186">Åtgärda problem där sökvägen för parametern ”-TemplateFile” inte omvandlas innan cmdletarna för distribution i resursgruppen körs</span><span class="sxs-lookup"><span data-stu-id="7b0da-1186">Fix issue where path for '-TemplateFile' parameter was not being resolved before executing resource group deployment cmdlets</span></span>
-* <span data-ttu-id="7b0da-1187">Az.Resources: Korrigera dokumentationen om standardvärdet för New-AzureRmPolicyDefinition -Mode</span><span class="sxs-lookup"><span data-stu-id="7b0da-1187">Az.Resources: Correct documentation for New-AzureRmPolicyDefinition -Mode default value</span></span>
-* <span data-ttu-id="7b0da-1188">Az.Resources: Korrigering av problemet https://github.com/Azure/azure-powershell/issues/7522</span><span class="sxs-lookup"><span data-stu-id="7b0da-1188">Az.Resources: Fix for issue https://github.com/Azure/azure-powershell/issues/7522</span></span>
-* <span data-ttu-id="7b0da-1189">Az.Resources: Korrigering av problemet https://github.com/Azure/azure-powershell/issues/5747</span><span class="sxs-lookup"><span data-stu-id="7b0da-1189">Az.Resources: Fix for issue https://github.com/Azure/azure-powershell/issues/5747</span></span>
-* <span data-ttu-id="7b0da-1190">Åtgärda formateringsproblemet med objektet ”PSResourceGroupDeployment”</span><span class="sxs-lookup"><span data-stu-id="7b0da-1190">Fix formatting issue with 'PSResourceGroupDeployment' object</span></span>
-    - <span data-ttu-id="7b0da-1191">Mer information här: https://github.com/Azure/azure-powershell/issues/2123</span><span class="sxs-lookup"><span data-stu-id="7b0da-1191">More information here: https://github.com/Azure/azure-powershell/issues/2123</span></span>
-
-#### <a name="azservicefabric"></a><span data-ttu-id="7b0da-1192">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="7b0da-1192">Az.ServiceFabric</span></span>
-* <span data-ttu-id="7b0da-1193">Återställ när ett certifikat läggs till i en Virtual Machine Scale Sets-modell men ett undantag genereras. Detta har gjorts för att åtgärda följande fel: https://github.com/Azure/service-fabric-issues/issues/932</span><span class="sxs-lookup"><span data-stu-id="7b0da-1193">Rollback when a certificate is added to VMSS model but an exception is thrown this is to fix bug: https://github.com/Azure/service-fabric-issues/issues/932</span></span>
-* <span data-ttu-id="7b0da-1194">Korrigera några felmeddelanden.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1194">Fix some error messages.</span></span>
-* <span data-ttu-id="7b0da-1195">Korrigering av skapande av kluster med ARM-mall som är standard för New-AzServiceFabriCluster som inte fungerade med migrering till Az.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1195">Fix create cluster with default ARM template for New-AzServiceFabriCluster which was not working with migration to Az.</span></span>
-* <span data-ttu-id="7b0da-1196">Korrigering av tilläggning av kluster/programcertifikat så att endast VM Scale Sets som motsvarar klustret läggs till genom att kontrollera ID för klustret i tillägget.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1196">Fix add cluster/application certificate to only add to VM Scale Sets that correspond to the cluster by checking cluster id in the extension.</span></span>
-
-#### <a name="azsignalr"></a><span data-ttu-id="7b0da-1197">Az.SignalR</span><span class="sxs-lookup"><span data-stu-id="7b0da-1197">Az.SignalR</span></span>
-* <span data-ttu-id="7b0da-1198">Uppdatera felaktiga URL:er för onlinehjälp</span><span class="sxs-lookup"><span data-stu-id="7b0da-1198">Update incorrect online help URLs</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="7b0da-1199">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="7b0da-1199">Az.Sql</span></span>
-* <span data-ttu-id="7b0da-1200">Uppdatera felaktiga URL:er för onlinehjälp</span><span class="sxs-lookup"><span data-stu-id="7b0da-1200">Update incorrect online help URLs</span></span>
-* <span data-ttu-id="7b0da-1201">Uppdaterad parameterbeskrivning för LicenseType-parameter med möjliga värden</span><span class="sxs-lookup"><span data-stu-id="7b0da-1201">Updated parameter description for LicenseType parameter with possible values</span></span>
-* <span data-ttu-id="7b0da-1202">Korrigering för att uppdatera hanterad instansidentitet som inte fungerar när det är den enda uppdaterade egenskapen</span><span class="sxs-lookup"><span data-stu-id="7b0da-1202">Fix for updating managed instance identity not working when it is the only updated property</span></span>
-* <span data-ttu-id="7b0da-1203">Stöd för anpassad sortering på hanterad instans</span><span class="sxs-lookup"><span data-stu-id="7b0da-1203">Support for custom collation on managed instance</span></span>
-
-#### <a name="azstorage"></a><span data-ttu-id="7b0da-1204">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="7b0da-1204">Az.Storage</span></span>
-* <span data-ttu-id="7b0da-1205">Uppdatera felaktiga URL:er för onlinehjälp</span><span class="sxs-lookup"><span data-stu-id="7b0da-1205">Update incorrect online help URLs</span></span>
-* <span data-ttu-id="7b0da-1206">Tillhandahåll detaljerat felmeddelande när en användare försöker hämta/konfigurera klassisk loggning/mått på ett Premium Storage-konto eftersom Premium Storage-kontot inte har stöd för klassisk loggning/mått.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1206">Give detail error message when get/set classic Logging/Metric on Premium Storage Account, since Premium Storage Account not supoort classic Logging/Metric.</span></span>
-    - <span data-ttu-id="7b0da-1207">Get/Set-AzStorageServiceLoggingProperty</span><span class="sxs-lookup"><span data-stu-id="7b0da-1207">Get/Set-AzStorageServiceLoggingProperty</span></span>
-    - <span data-ttu-id="7b0da-1208">Get/Set-AzStorageServiceMetricsProperty</span><span class="sxs-lookup"><span data-stu-id="7b0da-1208">Get/Set-AzStorageServiceMetricsProperty</span></span>
-
-#### <a name="aztrafficmanager"></a><span data-ttu-id="7b0da-1209">Az.TrafficManager</span><span class="sxs-lookup"><span data-stu-id="7b0da-1209">Az.TrafficManager</span></span>
-* <span data-ttu-id="7b0da-1210">Uppdatera felaktiga URL:er för onlinehjälp</span><span class="sxs-lookup"><span data-stu-id="7b0da-1210">Update incorrect online help URLs</span></span>
-
-#### <a name="azwebsites"></a><span data-ttu-id="7b0da-1211">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="7b0da-1211">Az.Websites</span></span>
-* <span data-ttu-id="7b0da-1212">Uppdatera felaktiga URL:er för onlinehjälp</span><span class="sxs-lookup"><span data-stu-id="7b0da-1212">Update incorrect online help URLs</span></span>
-* <span data-ttu-id="7b0da-1213">Korrigerar ”New-AzWebAppSSLBinding” så att certifikatet laddas upp till rätt resursgrupp och plats om appen finns i en ASE.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1213">Fixes 'New-AzWebAppSSLBinding' to upload the certificate to the correct resourcegroup+location if the app is hosted on an ASE.</span></span>
-* <span data-ttu-id="7b0da-1214">Korrigerar ”New-AzWebAppSSLBinding” så att taggarna inte skrivs över på en bindning av ett SSL-certifikat till en app</span><span class="sxs-lookup"><span data-stu-id="7b0da-1214">Fixes 'New-AzWebAppSSLBinding' to not overwrite the tags on binding an SSL certificate to an app</span></span>
-
-## <a name="110---january-2019"></a><span data-ttu-id="7b0da-1215">1.1.0 – januari 2019</span><span class="sxs-lookup"><span data-stu-id="7b0da-1215">1.1.0 - January 2019</span></span>
-#### <a name="azaccounts"></a><span data-ttu-id="7b0da-1216">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="7b0da-1216">Az.Accounts</span></span>
-* <span data-ttu-id="7b0da-1217">Lade till omfattningen ”Lokal” till Enable-AzureRmAlias</span><span class="sxs-lookup"><span data-stu-id="7b0da-1217">Add 'Local' Scope to Enable-AzureRmAlias</span></span>
-
-#### <a name="azcompute"></a><span data-ttu-id="7b0da-1218">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="7b0da-1218">Az.Compute</span></span>
-* <span data-ttu-id="7b0da-1219">Namn är nu valfritt i ID-parametern för Restart/Start/Stop/Remove/Set-AzVM och Save-AzVMImage</span><span class="sxs-lookup"><span data-stu-id="7b0da-1219">Name is now optional in ID parameter set for Restart/Start/Stop/Remove/Set-AzVM and Save-AzVMImage</span></span>
-* <span data-ttu-id="7b0da-1220">Uppdaterade beskrivningen av ID i hjälpfiler</span><span class="sxs-lookup"><span data-stu-id="7b0da-1220">Updated the description of ID in help files</span></span>
-* <span data-ttu-id="7b0da-1221">Åtgärdade problemet med bakåtkompatibilitet med modulen Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="7b0da-1221">Fix backward compatibility issue with Az.Accounts module</span></span>
-
-#### <a name="azdatalakestore"></a><span data-ttu-id="7b0da-1222">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="7b0da-1222">Az.DataLakeStore</span></span>
-* <span data-ttu-id="7b0da-1223">Uppdatera sdk-versionen av dataplanet till 1.1.14 för SDK-korrigeringar.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1223">Update the sdk version of dataplane to 1.1.14 for SDK fixes.</span></span>
-    - <span data-ttu-id="7b0da-1224">Korrigerade hanteringen av negativ accesstime och modificationtime för getfilestatus och liststatus; korrigera asynkront annulleringstoken</span><span class="sxs-lookup"><span data-stu-id="7b0da-1224">Fix handling of negative acesstime and modificationtime for getfilestatus and liststatus, Fix async cancellation token</span></span>
-
-#### <a name="azeventgrid"></a><span data-ttu-id="7b0da-1225">Az.EventGrid</span><span class="sxs-lookup"><span data-stu-id="7b0da-1225">Az.EventGrid</span></span>
-* <span data-ttu-id="7b0da-1226">Uppdaterat för användning av API-versionen 2019-01-01.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1226">Updated to use the 2019-01-01 API version.</span></span>
-* <span data-ttu-id="7b0da-1227">Uppdaterade följande cmdletar för att stödja nytt scenario i API-versionen 2019-01-01</span><span class="sxs-lookup"><span data-stu-id="7b0da-1227">Update the following cmdlets to support new scenario in 2019-01-01 API version</span></span>
-    - <span data-ttu-id="7b0da-1228">New-AzureRmEventGridSubscription: Lade till ny valfria parametrar för att ange:</span><span class="sxs-lookup"><span data-stu-id="7b0da-1228">New-AzureRmEventGridSubscription: Add new optional parameters for specifying:</span></span>
-        - <span data-ttu-id="7b0da-1229">Time-To-Live för händelse,</span><span class="sxs-lookup"><span data-stu-id="7b0da-1229">Event Time-To-Live,</span></span>
-        - <span data-ttu-id="7b0da-1230">Maximalt antal leveransförsök för händelserna,</span><span class="sxs-lookup"><span data-stu-id="7b0da-1230">Maximum number of delivery attempts for the events,</span></span>
-        - <span data-ttu-id="7b0da-1231">Slutpunkt för obeställbar meddelanden.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1231">Dead letter endpoint.</span></span>
-    - <span data-ttu-id="7b0da-1232">Update-AzureRmEventGridSubscription: Lade till ny valfria parametrar för att ange:</span><span class="sxs-lookup"><span data-stu-id="7b0da-1232">Update-AzureRmEventGridSubscription: Add new optional parameters for specifying:</span></span>
-        - <span data-ttu-id="7b0da-1233">Time-To-Live för händelse,</span><span class="sxs-lookup"><span data-stu-id="7b0da-1233">Event Time-To-Live,</span></span>
-        - <span data-ttu-id="7b0da-1234">Maximalt antal leveransförsök för händelserna,</span><span class="sxs-lookup"><span data-stu-id="7b0da-1234">Maximum number of delivery attempts for the events,</span></span>
-        - <span data-ttu-id="7b0da-1235">Slutpunkt för obeställbar meddelanden.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1235">Dead letter endpoint.</span></span>
-* <span data-ttu-id="7b0da-1236">Lade till nya enum-värden (storageQueue och hybridConnection) för alternativet EndpointType i cmdletarna New-AzureRmEventGridSubscription och Update-AzureRmEventGridSubscription.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1236">Add new enum values (namely, storageQueue and hybridConnection) for EndpointType option in New-AzureRmEventGridSubscription and Update-AzureRmEventGridSubscription cmdlets.</span></span>
-* <span data-ttu-id="7b0da-1237">Visa varningsmeddelanden om skapande eller uppdatering av händelseprenumerationen förväntas medföra manuell åtgärd från användaren.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1237">Show warning message if creating or updating the event subscription is expected to entail manual action from user.</span></span>
-
-#### <a name="aziothub"></a><span data-ttu-id="7b0da-1238">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="7b0da-1238">Az.IotHub</span></span>
-* <span data-ttu-id="7b0da-1239">Har uppdaterats till den senaste versionen av SDK:n lotHub</span><span class="sxs-lookup"><span data-stu-id="7b0da-1239">Updated to the latest version of the IotHub SDK</span></span>
-
-#### <a name="azlogicapp"></a><span data-ttu-id="7b0da-1240">Az.LogicApp</span><span class="sxs-lookup"><span data-stu-id="7b0da-1240">Az.LogicApp</span></span>
-* <span data-ttu-id="7b0da-1241">Get-AzLogicApp visar en lista över alla som inte har angivet namn</span><span class="sxs-lookup"><span data-stu-id="7b0da-1241">Get-AzLogicApp lists all without specified Name</span></span>
-
-#### <a name="azresources"></a><span data-ttu-id="7b0da-1242">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="7b0da-1242">Az.Resources</span></span>
-* <span data-ttu-id="7b0da-1243">Åtgärdade problem med parameteruppsättningen när parametrarna -ODataQuery och -ResourceId anges för Get-AzResource</span><span class="sxs-lookup"><span data-stu-id="7b0da-1243">Fix parameter set issue when providing '-ODataQuery' and '-ResourceId' parameters for 'Get-AzResource'</span></span>
-    - <span data-ttu-id="7b0da-1244">Mer information här: https://github.com/Azure/azure-powershell/issues/7875</span><span class="sxs-lookup"><span data-stu-id="7b0da-1244">More information here: https://github.com/Azure/azure-powershell/issues/7875</span></span>
-* <span data-ttu-id="7b0da-1245">Åtgärdade hantering av parametern -Custom i New/Set-AzPolicyDefinition</span><span class="sxs-lookup"><span data-stu-id="7b0da-1245">Fix handling of the -Custom parameter in New/Set-AzPolicyDefinition</span></span>
-* <span data-ttu-id="7b0da-1246">Korrigerade stavfel i New-AzDeployment-dokumentationen</span><span class="sxs-lookup"><span data-stu-id="7b0da-1246">Fix typo in New-AzDeployment documentation</span></span>
-* <span data-ttu-id="7b0da-1247">Gjorde parametern -MailNickname obligatorisk för New-AzADUser</span><span class="sxs-lookup"><span data-stu-id="7b0da-1247">Made '-MailNickname' parameter mandatory for 'New-AzADUser'</span></span>
-    - <span data-ttu-id="7b0da-1248">Mer information här: https://github.com/Azure/azure-powershell/issues/8220</span><span class="sxs-lookup"><span data-stu-id="7b0da-1248">More information here: https://github.com/Azure/azure-powershell/issues/8220</span></span>
-
-#### <a name="azsignalr"></a><span data-ttu-id="7b0da-1249">Az.SignalR</span><span class="sxs-lookup"><span data-stu-id="7b0da-1249">Az.SignalR</span></span>
-* <span data-ttu-id="7b0da-1250">Åtgärdade problemet med bakåtkompatibilitet med modulen Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="7b0da-1250">Fix backward compatibility issue with Az.Accounts module</span></span>
-
-#### <a name="azsql"></a><span data-ttu-id="7b0da-1251">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="7b0da-1251">Az.Sql</span></span>
-* <span data-ttu-id="7b0da-1252">Konverterade lagringshanteringsklientens beroende av den normala SDK-implementeringen.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1252">Converted the Storage management client dependency to the common SDK implementation.</span></span>
-
-#### <a name="azstorage"></a><span data-ttu-id="7b0da-1253">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="7b0da-1253">Az.Storage</span></span>
-* <span data-ttu-id="7b0da-1254">Angav StorageAccountName för lagringskontext som det verkliga namnet på lagringskontot när det skapas med Sas Token, OAuth eller Anonymous</span><span class="sxs-lookup"><span data-stu-id="7b0da-1254">Set the StorageAccountName of Storage context as the real Storage Account Name, when it's created with Sas Token, OAuth or Anonymous</span></span>
-    - <span data-ttu-id="7b0da-1255">New-AzStorageContext</span><span class="sxs-lookup"><span data-stu-id="7b0da-1255">New-AzStorageContext</span></span>
-* <span data-ttu-id="7b0da-1256">Skapade Sas Token för Blob Snapshot-objekt med parametern -FullUri, åtgärdade den returnerade URI:n så att den blir URI för ögonblicksbild</span><span class="sxs-lookup"><span data-stu-id="7b0da-1256">Create Sas Token of Blob Snapshot Object with '-FullUri' parameter, fix the returned Uri to be the sanpshot Uri</span></span>
-    - <span data-ttu-id="7b0da-1257">New-AzStorageBlobSASToken</span><span class="sxs-lookup"><span data-stu-id="7b0da-1257">New-AzStorageBlobSASToken</span></span>
-
-#### <a name="azwebsites"></a><span data-ttu-id="7b0da-1258">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="7b0da-1258">Az.Websites</span></span>
-* <span data-ttu-id="7b0da-1259">Åtgärdade en bugg i datumparsningen i Get-AzDeletedWebApp</span><span class="sxs-lookup"><span data-stu-id="7b0da-1259">Fixed a date parsing bug in 'Get-AzDeletedWebApp'</span></span>
-* <span data-ttu-id="7b0da-1260">Åtgärdade problemet med bakåtkompatibilitet med modulen Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="7b0da-1260">Fix backward compatibility issue with Az.Accounts module</span></span>
-
-## <a name="100---december-2018"></a><span data-ttu-id="7b0da-1261">1.0.0 – december 2018</span><span class="sxs-lookup"><span data-stu-id="7b0da-1261">1.0.0 - December 2018</span></span>
-### <a name="general"></a><span data-ttu-id="7b0da-1262">Allmänt</span><span class="sxs-lookup"><span data-stu-id="7b0da-1262">General</span></span>
-
-- <span data-ttu-id="7b0da-1263">Allmän tillgänglighet för Az-modulen</span><span class="sxs-lookup"><span data-stu-id="7b0da-1263">General Availability of Az Module</span></span>
-- <span data-ttu-id="7b0da-1264">Onlinehjälp för varje modul</span><span class="sxs-lookup"><span data-stu-id="7b0da-1264">Online help for each module</span></span>
-- <span data-ttu-id="7b0da-1265">Mer information och en översikt finns på [Az-informationssidan](https://aka.ms/azps-announce)</span><span class="sxs-lookup"><span data-stu-id="7b0da-1265">For more details and a roadmap, see the [Az Announcement page](https://aka.ms/azps-announce)</span></span>
-- <span data-ttu-id="7b0da-1266">Information om hur du migrerar från AzureRM finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="7b0da-1266">See the [Migration Guide](https://aka.ms/azps-migration-guide) for information on migrating from AzureRM</span></span>
-
-### <a name="azaccounts"></a><span data-ttu-id="7b0da-1267">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="7b0da-1267">Az.Accounts</span></span>
-- <span data-ttu-id="7b0da-1268">Har ändrats från Az.Profile</span><span class="sxs-lookup"><span data-stu-id="7b0da-1268">Changed from Az.Profile</span></span>
-- <span data-ttu-id="7b0da-1269">Fasta tabellformat för profil- och kontexttyper</span><span class="sxs-lookup"><span data-stu-id="7b0da-1269">Fixed table formats for profile and context types</span></span>
-
-### <a name="azapimanagement"></a><span data-ttu-id="7b0da-1270">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="7b0da-1270">Az.ApiManagement</span></span>
-- <span data-ttu-id="7b0da-1271">Korrigeringar för #7002</span><span class="sxs-lookup"><span data-stu-id="7b0da-1271">Fixes for #7002</span></span>
-- <span data-ttu-id="7b0da-1272">Mer information om mindre icke-bakåtkompatibla ändringar finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="7b0da-1272">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azbatch"></a><span data-ttu-id="7b0da-1273">Az.Batch</span><span class="sxs-lookup"><span data-stu-id="7b0da-1273">Az.Batch</span></span>
-- <span data-ttu-id="7b0da-1274">Lade till möjligheten att se vilken version av Azure Batch Node Agent som körs på var och en av de virtuella datorerna i en pool, via den nya egenskapen `NodeAgentInformation` på `PSComputeNode`.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1274">Added the ability to see what version of the Azure Batch Node Agent is running on each of the VMs in a pool, via the new `NodeAgentInformation` property on `PSComputeNode`.</span></span>
-- <span data-ttu-id="7b0da-1275">Standarden `Caching` för `PSDataDisk` är nu `ReadWrite` i stället för `None`.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1275">The `Caching` default for `PSDataDisk` is now `ReadWrite` instead of `None`.</span></span>
-- <span data-ttu-id="7b0da-1276">Mer information om mindre icke-bakåtkompatibla ändringar finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="7b0da-1276">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azbilling"></a><span data-ttu-id="7b0da-1277">Az.Billing</span><span class="sxs-lookup"><span data-stu-id="7b0da-1277">Az.Billing</span></span>
-- <span data-ttu-id="7b0da-1278">Kombinerar cmdletarna för fakturering, förbrukning och UsageAggregates. Mer information finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="7b0da-1278">Combines Billing, Consumption, and UsageAggregates cmdlets, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azcognitivservices"></a><span data-ttu-id="7b0da-1279">Az.CognitivServices</span><span class="sxs-lookup"><span data-stu-id="7b0da-1279">Az.CognitivServices</span></span>
-- <span data-ttu-id="7b0da-1280">Lade till kompletterare för SkuName och Typem som är tillgängliga i New-AzureRmCognitiveServicesAccount</span><span class="sxs-lookup"><span data-stu-id="7b0da-1280">Add completers for SkuName and Typem available on New-AzureRmCognitiveServicesAccount operation</span></span>
-- <span data-ttu-id="7b0da-1281">Tog bort parameteruppsättningen GetSkusWithAccountParamSetName från Get-AzCognitiveServicesAccountSkus</span><span class="sxs-lookup"><span data-stu-id="7b0da-1281">Removed GetSkusWithAccountParamSetName parameter set from Get-AzCognitiveServicesAccountSkus</span></span>
-
-### <a name="azcontainerinstance"></a><span data-ttu-id="7b0da-1282">Az.ContainerInstance</span><span class="sxs-lookup"><span data-stu-id="7b0da-1282">Az.ContainerInstance</span></span>
-- <span data-ttu-id="7b0da-1283">Stöd för ManagedIdentity</span><span class="sxs-lookup"><span data-stu-id="7b0da-1283">Added ManagedIdentity support</span></span>
-
-### <a name="azdatalakeanalytics"></a><span data-ttu-id="7b0da-1284">Az.DataLakeAnalytics</span><span class="sxs-lookup"><span data-stu-id="7b0da-1284">Az.DataLakeAnalytics</span></span>
-- <span data-ttu-id="7b0da-1285">Mer information om mindre icke-bakåtkompatibla ändringar finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="7b0da-1285">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azdatalakestore"></a><span data-ttu-id="7b0da-1286">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="7b0da-1286">Az.DataLakeStore</span></span>
-- <span data-ttu-id="7b0da-1287">Mer information om mindre icke-bakåtkompatibla ändringar finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="7b0da-1287">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azmonitor"></a><span data-ttu-id="7b0da-1288">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="7b0da-1288">Az.Monitor</span></span>
-- <span data-ttu-id="7b0da-1289">Döpte om Az.Insights till Az.Monitor och andra mindre icke-bakåtkompatibla ändringar. Mer information finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="7b0da-1289">Renamed Az.Insights to Az.Monitor and other minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azkeyvault"></a><span data-ttu-id="7b0da-1290">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="7b0da-1290">Az.KeyVault</span></span>
-- <span data-ttu-id="7b0da-1291">Tog bort den inaktuella egenskapen PurgeDisabled från utdatatyper</span><span class="sxs-lookup"><span data-stu-id="7b0da-1291">Removed the deprecated 'PurgeDisabled' property from output types</span></span>
-
-### <a name="azmachinelearning"></a><span data-ttu-id="7b0da-1292">Az.MachineLearning</span><span class="sxs-lookup"><span data-stu-id="7b0da-1292">Az.MachineLearning</span></span>
-- <span data-ttu-id="7b0da-1293">Inkluderade cmdletarna från modulen Az.MachineLearningCompute</span><span class="sxs-lookup"><span data-stu-id="7b0da-1293">Included cmdlets from Az.MachineLearningCompute module</span></span>
-
-### <a name="azmedia"></a><span data-ttu-id="7b0da-1294">Az.Media</span><span class="sxs-lookup"><span data-stu-id="7b0da-1294">Az.Media</span></span>
-- <span data-ttu-id="7b0da-1295">Tog bort inaktuella -Tags-alias från New-AzMediaService</span><span class="sxs-lookup"><span data-stu-id="7b0da-1295">Remove deprecated -Tags alias from New-AzMediaService</span></span>
-
-### <a name="aznetwork"></a><span data-ttu-id="7b0da-1296">Az.Network</span><span class="sxs-lookup"><span data-stu-id="7b0da-1296">Az.Network</span></span>
-<span data-ttu-id="7b0da-1297">Stöd har lagts till för konfiguration av RewriteRuleSets i Application Gateway</span><span class="sxs-lookup"><span data-stu-id="7b0da-1297">Added support for the configuring RewriteRuleSets in the Application Gateway</span></span>
-    - <span data-ttu-id="7b0da-1298">Nya cmdletar har lagts till:</span><span class="sxs-lookup"><span data-stu-id="7b0da-1298">New cmdlets added:</span></span>
-        - <span data-ttu-id="7b0da-1299">Add-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="7b0da-1299">Add-AzureRmApplicationGatewayRewriteRuleSet</span></span>
-        - <span data-ttu-id="7b0da-1300">Get-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="7b0da-1300">Get-AzureRmApplicationGatewayRewriteRuleSet</span></span>
-        - <span data-ttu-id="7b0da-1301">New-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="7b0da-1301">New-AzureRmApplicationGatewayRewriteRuleSet</span></span>
-        - <span data-ttu-id="7b0da-1302">Remove-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="7b0da-1302">Remove-AzureRmApplicationGatewayRewriteRuleSet</span></span>
-        - <span data-ttu-id="7b0da-1303">Set-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="7b0da-1303">Set-AzureRmApplicationGatewayRewriteRuleSet</span></span>
-        - <span data-ttu-id="7b0da-1304">New-AzureRmApplicationGatewayRewriteRule</span><span class="sxs-lookup"><span data-stu-id="7b0da-1304">New-AzureRmApplicationGatewayRewriteRule</span></span>
-        - <span data-ttu-id="7b0da-1305">New-AzureRmApplicationGatewayRewriteRuleActionSet</span><span class="sxs-lookup"><span data-stu-id="7b0da-1305">New-AzureRmApplicationGatewayRewriteRuleActionSet</span></span>
-        - <span data-ttu-id="7b0da-1306">New-AzureRmApplicationGatewayRewriteRuleHeaderConfiguration</span><span class="sxs-lookup"><span data-stu-id="7b0da-1306">New-AzureRmApplicationGatewayRewriteRuleHeaderConfiguration</span></span>
-    - <span data-ttu-id="7b0da-1307">Cmdletar har uppdaterats med den valfria parametern -RewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="7b0da-1307">Cmdlets updated with optional parameter -RewriteRuleSet</span></span>
-        - <span data-ttu-id="7b0da-1308">New-AzureRmApplicationGateway</span><span class="sxs-lookup"><span data-stu-id="7b0da-1308">New-AzureRmApplicationGateway</span></span>
-        - <span data-ttu-id="7b0da-1309">New-AzureRmApplicationGatewayRequestRoutingRule</span><span class="sxs-lookup"><span data-stu-id="7b0da-1309">New-AzureRmApplicationGatewayRequestRoutingRule</span></span>
-        - <span data-ttu-id="7b0da-1310">Add-AzureRmApplicationGatewayRequestRoutingRule</span><span class="sxs-lookup"><span data-stu-id="7b0da-1310">Add-AzureRmApplicationGatewayRequestRoutingRule</span></span>
-        - <span data-ttu-id="7b0da-1311">New-AzureRmApplicationGatewayPathRuleConfig</span><span class="sxs-lookup"><span data-stu-id="7b0da-1311">New-AzureRmApplicationGatewayPathRuleConfig</span></span>
-        - <span data-ttu-id="7b0da-1312">Add-AzureRmApplicationGatewayUrlPathMapConfig</span><span class="sxs-lookup"><span data-stu-id="7b0da-1312">Add-AzureRmApplicationGatewayUrlPathMapConfig</span></span>
-        - <span data-ttu-id="7b0da-1313">New-AzureRmApplicationGatewayUrlPathMapConfig har lagt till KeyVault-stöd för Application Gateway med Identity.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1313">New-AzureRmApplicationGatewayUrlPathMapConfig Added KeyVault Support to Application Gateway using Identity.</span></span>
-    - <span data-ttu-id="7b0da-1314">Cmdletar har uppdaterats med den valfria parametern -KeyVaultSecretId, -KeyVaultSecret</span><span class="sxs-lookup"><span data-stu-id="7b0da-1314">Cmdlets updated with optonal parameter -KeyVaultSecretId, -KeyVaultSecret</span></span>
-        - <span data-ttu-id="7b0da-1315">Add-AzApplicationGatewaySslCertificate</span><span class="sxs-lookup"><span data-stu-id="7b0da-1315">Add-AzApplicationGatewaySslCertificate</span></span>
-        - <span data-ttu-id="7b0da-1316">New-AzApplicationGatewaySslCertificate</span><span class="sxs-lookup"><span data-stu-id="7b0da-1316">New-AzApplicationGatewaySslCertificate</span></span>
-        - <span data-ttu-id="7b0da-1317">Set-AzApplicationGatewaySslCertificate</span><span class="sxs-lookup"><span data-stu-id="7b0da-1317">Set-AzApplicationGatewaySslCertificate</span></span>
-    - <span data-ttu-id="7b0da-1318">Cmdleten New-AzApplicationGateway har uppdaterats med den valfria parametern -UserAssignedIdentity</span><span class="sxs-lookup"><span data-stu-id="7b0da-1318">New-AzApplicationGateway cmdlet updated with optional parameter -UserAssignedIdentity</span></span>
-- <span data-ttu-id="7b0da-1319">Mer information om mindre icke-bakåtkompatibla ändringar finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="7b0da-1319">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azoperationalinsights"></a><span data-ttu-id="7b0da-1320">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="7b0da-1320">Az.OperationalInsights</span></span>
-- <span data-ttu-id="7b0da-1321">Mer information om mindre icke-bakåtkompatibla ändringar finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="7b0da-1321">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azprofile"></a><span data-ttu-id="7b0da-1322">Az.Profile</span><span class="sxs-lookup"><span data-stu-id="7b0da-1322">Az.Profile</span></span>
-- <span data-ttu-id="7b0da-1323">Modulnamnet har ändrats till Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="7b0da-1323">Changed module name to Az.Accounts</span></span>
-
-### <a name="azrecoveryservices"></a><span data-ttu-id="7b0da-1324">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="7b0da-1324">Az.RecoveryServices</span></span>
-- <span data-ttu-id="7b0da-1325">Mer information om mindre icke-bakåtkompatibla ändringar finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="7b0da-1325">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azresources"></a><span data-ttu-id="7b0da-1326">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="7b0da-1326">Az.Resources</span></span>
-- <span data-ttu-id="7b0da-1327">Mer information om mindre icke-bakåtkompatibla ändringar finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="7b0da-1327">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azservicefabric"></a><span data-ttu-id="7b0da-1328">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="7b0da-1328">Az.ServiceFabric</span></span>
-- <span data-ttu-id="7b0da-1329">Stöd för specificering av certifikat efter eget namn och tumavtryck</span><span class="sxs-lookup"><span data-stu-id="7b0da-1329">Support specfying certificate by common name and thumbprint</span></span>
-- <span data-ttu-id="7b0da-1330">Information om fler icke-bakåtkompatibla ändringar finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="7b0da-1330">Mnor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azsignalr"></a><span data-ttu-id="7b0da-1331">Az.SIgnalR</span><span class="sxs-lookup"><span data-stu-id="7b0da-1331">Az.SIgnalR</span></span>
-- <span data-ttu-id="7b0da-1332">Allmän tillgänglighet för PowerShell-cmdletar för SIgnalR</span><span class="sxs-lookup"><span data-stu-id="7b0da-1332">General Availability for PowerShell cmdlets for SIgnalR</span></span>
-
-### <a name="azsql"></a><span data-ttu-id="7b0da-1333">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="7b0da-1333">Az.Sql</span></span>
-- <span data-ttu-id="7b0da-1334">Lade till de nya identifieringstyperna Data_Exfiltration och Unsafe_Action i Threat Detection-cmdletar</span><span class="sxs-lookup"><span data-stu-id="7b0da-1334">Added new Data_Exfiltration and Unsafe_Action detection types to Threat Detection's cmdlets</span></span>
-- <span data-ttu-id="7b0da-1335">Uppdaterade dokumentationsexempel för Sql Auditing-cmdletar</span><span class="sxs-lookup"><span data-stu-id="7b0da-1335">Updated documentation examples for Sql Auditing cmdlets</span></span>
-- <span data-ttu-id="7b0da-1336">Mer information om mindre icke-bakåtkompatibla ändringar finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="7b0da-1336">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azstorage"></a><span data-ttu-id="7b0da-1337">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="7b0da-1337">Az.Storage</span></span>
-- <span data-ttu-id="7b0da-1338">Mer information om mindre icke-bakåtkompatibla ändringar finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="7b0da-1338">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-### <a name="azwebsites"></a><span data-ttu-id="7b0da-1339">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="7b0da-1339">Az.Websites</span></span>
-- <span data-ttu-id="7b0da-1340">Mer information om mindre icke-bakåtkompatibla ändringar finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="7b0da-1340">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
-
-## <a name="070---december-2018"></a><span data-ttu-id="7b0da-1341">0.7.0 – december 2018</span><span class="sxs-lookup"><span data-stu-id="7b0da-1341">0.7.0 - December 2018</span></span>
-
-### <a name="general"></a><span data-ttu-id="7b0da-1342">Allmänt</span><span class="sxs-lookup"><span data-stu-id="7b0da-1342">General</span></span>
-
-* <span data-ttu-id="7b0da-1343">Mindre ändringar för kommande övergång från AzureRM till Az</span><span class="sxs-lookup"><span data-stu-id="7b0da-1343">Minor changes for upcoming AzureRM to Az transition</span></span>
-
-### <a name="azcompute"></a><span data-ttu-id="7b0da-1344">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="7b0da-1344">Az.Compute</span></span>
-
-* <span data-ttu-id="7b0da-1345">Lade till stöd för UltraSSD och Galleriavbildningar i de enkla parameteruppsättningarna för `New-AzVm(ss)`-cmdletar.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1345">Add support for UltraSSD and Gallery Images in the simple param sets for `New-AzVm(ss)` cmdlets.</span></span>
-
-### <a name="azdatalakestore"></a><span data-ttu-id="7b0da-1346">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="7b0da-1346">Az.DataLakeStore</span></span>
-
-* <span data-ttu-id="7b0da-1347">Åtgärdade avslutande snedstreck i domänen för adls-konto</span><span class="sxs-lookup"><span data-stu-id="7b0da-1347">Fix the trailing slash of the domain of adls account</span></span>
-
-### <a name="azfrontdoor"></a><span data-ttu-id="7b0da-1348">Az.FrontDoor</span><span class="sxs-lookup"><span data-stu-id="7b0da-1348">Az.FrontDoor</span></span>
-
-* <span data-ttu-id="7b0da-1349">Brutna länkar korrigerades</span><span class="sxs-lookup"><span data-stu-id="7b0da-1349">Fixed some broken links</span></span>
-    - <span data-ttu-id="7b0da-1350">I artiklarna New-AzureRmFrontDoor och Set-AzureRmFrontDoor artiklar korrigerades länken till artikeln om cmdleten New-AzureRmFrontDoorHealthProbeSettingObject.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1350">In the New-AzureRmFrontDoor and Set-AzureRmFrontDoor articles, fixed the link to the New-AzureRmFrontDoorHealthProbeSettingObject cmdlet article.</span></span>
-    - <span data-ttu-id="7b0da-1351">I artikeln New-AzureRmFrontDoorManagedRuleObject korrigerades länken till artikeln om cmdleten New-AzureRmFrontDoorRuleGroupOverrideObject.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1351">In the New-AzureRmFrontDoorManagedRuleObject article, fixed the link to the New-AzureRmFrontDoorRuleGroupOverrideObject cmdlet article.</span></span>
-
-### <a name="azrecoveryservices"></a><span data-ttu-id="7b0da-1352">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="7b0da-1352">Az.RecoveryServices</span></span>
-
-* <span data-ttu-id="7b0da-1353">Lade till valideringar på klientsidan för Azure-filresurs med återställningsåtgärder.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1353">Added client side validations for Azure File Share restore operations.</span></span>
-* <span data-ttu-id="7b0da-1354">Gjorde storageAccountName och storageAccountResourceGroupName valfritt för afs-återställning.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1354">Made storageAccountName and storageAccountResourceGroupName optional for afs restore.</span></span>
-
-### <a name="azresources"></a><span data-ttu-id="7b0da-1355">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="7b0da-1355">Az.Resources</span></span>
-
-* <span data-ttu-id="7b0da-1356">Korrigering för https://github.com/Azure/azure-powershell/issues/7679</span><span class="sxs-lookup"><span data-stu-id="7b0da-1356">Fix for https://github.com/Azure/azure-powershell/issues/7679</span></span>
-    - <span data-ttu-id="7b0da-1357">Uppdaterade Get-AzureRmRoleAssignment så att prenumerationsomfattningen används om den anges vid begäran om klassiska administratörer.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1357">Update Get-AzureRmRoleAssignment to use the subscription scope if it is provided when requesting classic administrators.</span></span>
-
-### <a name="azsql"></a><span data-ttu-id="7b0da-1358">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="7b0da-1358">Az.Sql</span></span>
-
-* <span data-ttu-id="7b0da-1359">Mindre ändringar för kommande övergång från AzureRM till Az</span><span class="sxs-lookup"><span data-stu-id="7b0da-1359">Minor changes for upcoming AzureRM to Az transition</span></span>
-* <span data-ttu-id="7b0da-1360">Korrigerade ett problem med Get-AzureRmSqlDatabaseVulnerabilityAssessment med DotNet-kärna</span><span class="sxs-lookup"><span data-stu-id="7b0da-1360">Fixed issue with using Get-AzureRmSqlDatabaseVulnerabilityAssessment with DotNet core</span></span>
-* <span data-ttu-id="7b0da-1361">Ändrade dokumentationen för hjälpmeddelanden som rör SQL Auditing-cmdletar.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1361">Modified documentation of help messages related to SQL Auditing cmdlets.</span></span>
-
-### <a name="azstorage"></a><span data-ttu-id="7b0da-1362">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="7b0da-1362">Az.Storage</span></span>
-
-* <span data-ttu-id="7b0da-1363">Lade till -EnableHierarchicalNamespace i New-AzureRmStorageAccount</span><span class="sxs-lookup"><span data-stu-id="7b0da-1363">Add -EnableHierarchicalNamespace to New-AzureRmStorageAccount</span></span>
-* <span data-ttu-id="7b0da-1364">Åtgärdade problemet med att cmdleten Copy File inte kunde återanvända källkontexten på målet om inte -DestContext angetts</span><span class="sxs-lookup"><span data-stu-id="7b0da-1364">Fix issue that Copy File cmdlet can't reuse source context in destination when not input -DestContext</span></span>
-    - <span data-ttu-id="7b0da-1365">Start-AzureStorageFileCopy</span><span class="sxs-lookup"><span data-stu-id="7b0da-1365">Start-AzureStorageFileCopy</span></span>
-* <span data-ttu-id="7b0da-1366">Stöd för statisk webbplatskonfiguration</span><span class="sxs-lookup"><span data-stu-id="7b0da-1366">Support Static Website configuration</span></span>
-    - <span data-ttu-id="7b0da-1367">Enable-AzureStorageStaticWebsite</span><span class="sxs-lookup"><span data-stu-id="7b0da-1367">Enable-AzureStorageStaticWebsite</span></span>
-    - <span data-ttu-id="7b0da-1368">Disable-AzureStorageStaticWebsite</span><span class="sxs-lookup"><span data-stu-id="7b0da-1368">Disable-AzureStorageStaticWebsite</span></span>
-
-### <a name="azwebsites"></a><span data-ttu-id="7b0da-1369">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="7b0da-1369">Az.Websites</span></span>
-
-* <span data-ttu-id="7b0da-1370">Set-AzureRmWebApp och Set-AzureRmWebAppSlot</span><span class="sxs-lookup"><span data-stu-id="7b0da-1370">Set-AzureRmWebApp and Set-AzureRmWebAppSlot</span></span> 
-    - <span data-ttu-id="7b0da-1371">Ny parameter (-AzureStoragePath) har lagts till för att ange att Azure Storage-sökvägar ska monteras i containerappar i Windows och Linux.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1371">New parameter (-AzureStoragePath) added to specify Azure Storage paths to be mounted in Windows and Linux container apps.</span></span> <span data-ttu-id="7b0da-1372">Använder utdata från den nya cmdleten New-AzureRmWebAppAzureStoragePath som en parameter för att ange sökvägar för Azure Storage.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1372">Use the output of the new cmdlet New-AzureRmWebAppAzureStoragePath as a parameter to set the Azure Storage paths.</span></span>
-
-## <a name="061---november-2018"></a><span data-ttu-id="7b0da-1373">0.6.1 – november 2018</span><span class="sxs-lookup"><span data-stu-id="7b0da-1373">0.6.1 - November 2018</span></span>
-
-### <a name="azapimanagement"></a><span data-ttu-id="7b0da-1374">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="7b0da-1374">Az.ApiManagement</span></span>
-* <span data-ttu-id="7b0da-1375">Uppdatera beroenden för problemet med typmappning</span><span class="sxs-lookup"><span data-stu-id="7b0da-1375">Update dependencies for type mapping issue</span></span>
-
-### <a name="azautomation"></a><span data-ttu-id="7b0da-1376">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="7b0da-1376">Az.Automation</span></span>
-* <span data-ttu-id="7b0da-1377">Swagger baserade Azure Automation-cmdletar</span><span class="sxs-lookup"><span data-stu-id="7b0da-1377">Swagger based Azure Automation cmdlets</span></span>
-* <span data-ttu-id="7b0da-1378">Cmdletar för Uppdateringshantering har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-1378">Added Update Management cmdlets</span></span>
-* <span data-ttu-id="7b0da-1379">Cmdletar för källkontroll har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-1379">Added Source Control cmdlets</span></span>
-* <span data-ttu-id="7b0da-1380">Remove-AzureRmAutomationHybridWorkerGroup-cmdlet har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-1380">Added Remove-AzureRmAutomationHybridWorkerGroup cmdlet</span></span>
-* <span data-ttu-id="7b0da-1381">Kommandot för DSC-registreringsnod har åtgärdats</span><span class="sxs-lookup"><span data-stu-id="7b0da-1381">Fixed the DSC Register Node command</span></span>
-
-### <a name="azcompute"></a><span data-ttu-id="7b0da-1382">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="7b0da-1382">Az.Compute</span></span>
-* <span data-ttu-id="7b0da-1383">Problem med SystemAssigned-identitet har åtgärdats</span><span class="sxs-lookup"><span data-stu-id="7b0da-1383">Fixed identity issue for SystemAssigned identity</span></span>
-* <span data-ttu-id="7b0da-1384">Uppdatera beroenden för problemet med typmappning</span><span class="sxs-lookup"><span data-stu-id="7b0da-1384">Update dependencies for type mapping issue</span></span>
-
-### <a name="azcontainerinstance"></a><span data-ttu-id="7b0da-1385">Az.ContainerInstance</span><span class="sxs-lookup"><span data-stu-id="7b0da-1385">Az.ContainerInstance</span></span>
-* <span data-ttu-id="7b0da-1386">Uppdatera beroenden för problemet med typmappning</span><span class="sxs-lookup"><span data-stu-id="7b0da-1386">Update dependencies for type mapping issue</span></span>
-
-### <a name="azmarketplaceordering"></a><span data-ttu-id="7b0da-1387">Az.MarketplaceOrdering</span><span class="sxs-lookup"><span data-stu-id="7b0da-1387">Az.MarketplaceOrdering</span></span>
-* <span data-ttu-id="7b0da-1388">uppdatera exempelbeskrivningen för marketplace-cmdletar</span><span class="sxs-lookup"><span data-stu-id="7b0da-1388">update the examples description for marketplace cmdlets</span></span>
-
-### <a name="aznetwork"></a><span data-ttu-id="7b0da-1389">Az.Network</span><span class="sxs-lookup"><span data-stu-id="7b0da-1389">Az.Network</span></span>
-* <span data-ttu-id="7b0da-1390">Cmdlet New-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayCustomError, Get-AzureRmApplicationGatewayCustomError, Set-AzureRmApplicationGatewayCustomError, Remove-AzureRmApplicationGatewayCustomErreller Add-AzureRmApplicationGatewayHttpListenerCustomError, Get-AzureRmApplicationGatewayHttpListenerCustomError, Set-AzureRmApplicationGatewayHttpListenerCustomError, Remove-AzureRmApplicationGatewayHttpListenerCustomError har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-1390">Added cmdlet New-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayCustomError, Get-AzureRmApplicationGatewayCustomError, Set-AzureRmApplicationGatewayCustomError, Remove-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayHttpListenerCustomError, Get-AzureRmApplicationGatewayHttpListenerCustomError, Set-AzureRmApplicationGatewayHttpListenerCustomError, Remove-AzureRmApplicationGatewayHttpListenerCustomError</span></span>
-* <span data-ttu-id="7b0da-1391">ICMP tillbaka till stöd för Azure Firewall-nätverksprotokoll har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-1391">Added ICMP back to supported AzureFirewall Network Protocols</span></span>
-* <span data-ttu-id="7b0da-1392">Uppdatera cmdlet Test-AzureRmNetworkWatcherConnectivity, lägga till verifiering av mål-id, adress och port.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1392">Update cmdlet Test-AzureRmNetworkWatcherConnectivity, add validation on destination id, address and port.</span></span> 
-* <span data-ttu-id="7b0da-1393">Åtgärda problem med minnesanvändning i VirtualNetwork-karta</span><span class="sxs-lookup"><span data-stu-id="7b0da-1393">Fix issues with memory usage in VirtualNetwork map</span></span>
-
-### <a name="azrecoveryservicesbackup"></a><span data-ttu-id="7b0da-1394">Az.RecoveryServices.Backup</span><span class="sxs-lookup"><span data-stu-id="7b0da-1394">Az.RecoveryServices.Backup</span></span>
-* <span data-ttu-id="7b0da-1395">Åtgärda för att ändra principen för en skyddad fildelning.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1395">Fix for modifying policy for a protected file share.</span></span>
-* <span data-ttu-id="7b0da-1396">Tidszonsprincipen har konverterats till versaler.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1396">Converted policy timezone to uppercase.</span></span>
-
-### <a name="azrecoveryservicessiterecovery"></a><span data-ttu-id="7b0da-1397">Az.RecoveryServices.SiteRecovery</span><span class="sxs-lookup"><span data-stu-id="7b0da-1397">Az.RecoveryServices.SiteRecovery</span></span>
-* <span data-ttu-id="7b0da-1398">Exempel i New-AzureRmRecoveryServicesAsrProtectableItem har åtgärdats</span><span class="sxs-lookup"><span data-stu-id="7b0da-1398">Corrected example in New-AzureRmRecoveryServicesAsrProtectableItem</span></span>
-* <span data-ttu-id="7b0da-1399">Uppdatera beroenden för problemet med typmappning</span><span class="sxs-lookup"><span data-stu-id="7b0da-1399">Update dependencies for type mapping issue</span></span>
-
-### <a name="azrelay"></a><span data-ttu-id="7b0da-1400">Az.Relay</span><span class="sxs-lookup"><span data-stu-id="7b0da-1400">Az.Relay</span></span>
-* <span data-ttu-id="7b0da-1401">Valfri parameter -KeyValue till New-AzureRmRelayKey cmdlet har lagts till, vilket gör det möjligt för användare att tillhandahålla KeyValue.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1401">Added optional Parameter -KeyValue to New-AzureRmRelayKey cmdlet, which enables user to provide KeyValue.</span></span>
-
-### <a name="azresources"></a><span data-ttu-id="7b0da-1402">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="7b0da-1402">Az.Resources</span></span>
-* <span data-ttu-id="7b0da-1403">Uppdatera hjälpdokumentation för resursidentitet kopplad till parametrar i `New-AzureRmPolicyAssignment` och `Set-AzureRmPolicyAssignment`</span><span class="sxs-lookup"><span data-stu-id="7b0da-1403">Update help documentation for resource identity related parameters in `New-AzureRmPolicyAssignment` and `Set-AzureRmPolicyAssignment`</span></span>
-* <span data-ttu-id="7b0da-1404">Lägg till ett exempel för New-AzureRmPolicyDefinition som använder -Metadata</span><span class="sxs-lookup"><span data-stu-id="7b0da-1404">Add an example for New-AzureRmPolicyDefinition that uses -Metadata</span></span>
-* <span data-ttu-id="7b0da-1405">Korrigera så att skiftläge behålls i taggnycklar i NetStandard: #7678 #7703</span><span class="sxs-lookup"><span data-stu-id="7b0da-1405">Fix to allow case preservation in Tag keys in NetStandard: #7678 #7703</span></span>
-
-### <a name="azservicefabric"></a><span data-ttu-id="7b0da-1406">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="7b0da-1406">Az.ServiceFabric</span></span>
-* <span data-ttu-id="7b0da-1407">Lägg till utfasningsmeddelanden för kommande icke-kompatibla ändringar</span><span class="sxs-lookup"><span data-stu-id="7b0da-1407">Add deprecation messages for upcoming breaking changes</span></span>
-
-### <a name="azsql"></a><span data-ttu-id="7b0da-1408">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="7b0da-1408">Az.Sql</span></span>
-* <span data-ttu-id="7b0da-1409">Nya cmdletar för CRUD-åtgärder på Azure Sql Database-hanterad instans och Azure Sql-hanterad databas</span><span class="sxs-lookup"><span data-stu-id="7b0da-1409">Added new cmdlets for CRUD operations on Azure Sql Database Managed Instance and Azure Sql Managed Database</span></span>
-    - <span data-ttu-id="7b0da-1410">Get-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="7b0da-1410">Get-AzureRmSqlInstance</span></span>
-    - <span data-ttu-id="7b0da-1411">New-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="7b0da-1411">New-AzureRmSqlInstance</span></span>
-    - <span data-ttu-id="7b0da-1412">Set-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="7b0da-1412">Set-AzureRmSqlInstance</span></span>
-    - <span data-ttu-id="7b0da-1413">Remove-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="7b0da-1413">Remove-AzureRmSqlInstance</span></span>
-    - <span data-ttu-id="7b0da-1414">Get-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="7b0da-1414">Get-AzureRmSqlInstanceDatabase</span></span>
-    - <span data-ttu-id="7b0da-1415">New-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="7b0da-1415">New-AzureRmSqlInstanceDatabase</span></span>
-    - <span data-ttu-id="7b0da-1416">Restore-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="7b0da-1416">Restore-AzureRmSqlInstanceDatabase</span></span>
-    - <span data-ttu-id="7b0da-1417">Remove-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="7b0da-1417">Remove-AzureRmSqlInstanceDatabase</span></span>
-* <span data-ttu-id="7b0da-1418">Hantering av utökad granskningsprincip på en server eller en databas har aktiverats.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1418">Enabled Extended Auditing Policy management on a server or a database.</span></span>
-    - <span data-ttu-id="7b0da-1419">Ny parameter (PredicateExpression) har lagts till för att aktivera filtrering av granskningsloggar.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1419">New parameter (PredicateExpression) was added to enable filtering of audit logs.</span></span>
-    - <span data-ttu-id="7b0da-1420">Cmdletar har ändrats så att de använder SQL-klienter i stället för äldre klienter.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1420">Cmdlets were modified to use SQL clients instead of Legacy clients.</span></span>
-    - <span data-ttu-id="7b0da-1421">Set-AzureRmSqlServerAuditing.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1421">Set-AzureRmSqlServerAuditing.</span></span>
-    - <span data-ttu-id="7b0da-1422">Get-AzureRmSqlServerAuditing.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1422">Get-AzureRmSqlServerAuditing.</span></span>
-    - <span data-ttu-id="7b0da-1423">Get-AzureRmSqlServerAuditing.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1423">Set-AzureRmSqlDatabaseAuditing.</span></span>
-    - <span data-ttu-id="7b0da-1424">Get-AzureRmSqlDatabaseAuditing.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1424">Get-AzureRmSqlDatabaseAuditing.</span></span>
-* <span data-ttu-id="7b0da-1425">Problem med att använda Update-AzureRmSqlDatabaseVulnerabilityAssessmentSettings med lagringskontots namnparameter har korrigerats</span><span class="sxs-lookup"><span data-stu-id="7b0da-1425">Fixed issue with using Update-AzureRmSqlDatabaseVulnerabilityAssessmentSettings with storage account name parameter set</span></span>
-
-## <a name="050---november-2018"></a><span data-ttu-id="7b0da-1426">0.5.0 – november 2018</span><span class="sxs-lookup"><span data-stu-id="7b0da-1426">0.5.0 - November 2018</span></span>
-#### <a name="general"></a><span data-ttu-id="7b0da-1427">Allmänt</span><span class="sxs-lookup"><span data-stu-id="7b0da-1427">General</span></span>
-* <span data-ttu-id="7b0da-1428">Lade till resurskompletterare till många kärn-cmdletar – dessa gör att du kan stega genom befintliga resursnamn med TABB vid interaktiva anrop till cmdletar</span><span class="sxs-lookup"><span data-stu-id="7b0da-1428">Added Resource Completers to many core cmdlets - these alloow you to tab through existing resource names when invoking cmdlets interactively</span></span>
-
-#### <a name="azprofile"></a><span data-ttu-id="7b0da-1429">Az.Profile</span><span class="sxs-lookup"><span data-stu-id="7b0da-1429">Az.Profile</span></span>
-* <span data-ttu-id="7b0da-1430">Uppdatera gemensam kod så att den använder den senaste versionen av ClientRuntime</span><span class="sxs-lookup"><span data-stu-id="7b0da-1430">Update common code to use latest version of ClientRuntime</span></span>
-* <span data-ttu-id="7b0da-1431">Bytte namn på parametern TenantId i cmdleten Connect-AzAccount till Tenant och lade till ett alias för TenantId</span><span class="sxs-lookup"><span data-stu-id="7b0da-1431">Rename param TenantId in cmdlet Connect-AzAccount to Tenant and add an alias for TenantId</span></span>
-* <span data-ttu-id="7b0da-1432">Uppdaterade TenantId-beskrivningen för Connect-AzAccount</span><span class="sxs-lookup"><span data-stu-id="7b0da-1432">Updated TenantId description for Connect-AzAccount</span></span>
-* <span data-ttu-id="7b0da-1433">Åtgärda felmeddelande för misslyckad inloggning när du tillhandahåller klientdomän</span><span class="sxs-lookup"><span data-stu-id="7b0da-1433">Fix error message for failed login when providing tenant domain</span></span>
+#### <a name="azhdinsight"></a><span data-ttu-id="dca39-810">Az.HDInsight</span><span class="sxs-lookup"><span data-stu-id="dca39-810">Az.HDInsight</span></span>
+* <span data-ttu-id="dca39-811">Två cmdletar har tagits bort:</span><span class="sxs-lookup"><span data-stu-id="dca39-811">Removed two cmdlets:</span></span>
+    - <span data-ttu-id="dca39-812">Grant-AzHDInsightHttpServicesAccess</span><span class="sxs-lookup"><span data-stu-id="dca39-812">Grant-AzHDInsightHttpServicesAccess</span></span>
+    - <span data-ttu-id="dca39-813">Revoke-AzHDInsightHttpServicesAccess</span><span class="sxs-lookup"><span data-stu-id="dca39-813">Revoke-AzHDInsightHttpServicesAccess</span></span>
+* <span data-ttu-id="dca39-814">En ny cmdlet har lagts till, Set-AzHDInsightGatewayCredential, som ersätter Grant-AzHDInsightHttpServicesAccess</span><span class="sxs-lookup"><span data-stu-id="dca39-814">Added a new cmdlet Set-AzHDInsightGatewayCredential to replace Grant-AzHDInsightHttpServicesAccess</span></span>
+* <span data-ttu-id="dca39-815">Uppdatera cmdleten Get-AzHDInsightJobOutput för att skilja mellan läsarrollen och HDInsight-operatörsrollen:</span><span class="sxs-lookup"><span data-stu-id="dca39-815">Update cmdlet Get-AzHDInsightJobOutput to distinguish reader role and hdinsight operator role:</span></span>
+    - <span data-ttu-id="dca39-816">Användare med läsarrollen måste uttryckligen ange parametern ”DefaultStorageAccountKey”, annars uppstår fel.</span><span class="sxs-lookup"><span data-stu-id="dca39-816">Users with reader role need to specify 'DefaultStorageAccountKey' parameter explicitly, otherwise error occurs.</span></span>
+    - <span data-ttu-id="dca39-817">Användare med HDInsight-operatörsrollen påverkas inte.</span><span class="sxs-lookup"><span data-stu-id="dca39-817">Users with hdinsight operator role will not be affected.</span></span>
+
+#### <a name="azmonitor"></a><span data-ttu-id="dca39-818">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="dca39-818">Az.Monitor</span></span>
+* <span data-ttu-id="dca39-819">Nya cmdletar för SQR API (schemalagd frågeregel)</span><span class="sxs-lookup"><span data-stu-id="dca39-819">New cmdlets for SQR API (Scheduled Query Rule)</span></span>  
+    - <span data-ttu-id="dca39-820">New-AzScheduledQueryRuleAlertingAction</span><span class="sxs-lookup"><span data-stu-id="dca39-820">New-AzScheduledQueryRuleAlertingAction</span></span>
+    - <span data-ttu-id="dca39-821">New-AzScheduledQueryRuleAznsActionGroup</span><span class="sxs-lookup"><span data-stu-id="dca39-821">New-AzScheduledQueryRuleAznsActionGroup</span></span>
+    - <span data-ttu-id="dca39-822">New-AzScheduledQueryRuleLogMetricTrigger</span><span class="sxs-lookup"><span data-stu-id="dca39-822">New-AzScheduledQueryRuleLogMetricTrigger</span></span>
+    - <span data-ttu-id="dca39-823">New-AzScheduledQueryRuleSchedule</span><span class="sxs-lookup"><span data-stu-id="dca39-823">New-AzScheduledQueryRuleSchedule</span></span>
+    - <span data-ttu-id="dca39-824">New-AzScheduledQueryRuleSource</span><span class="sxs-lookup"><span data-stu-id="dca39-824">New-AzScheduledQueryRuleSource</span></span>
+    - <span data-ttu-id="dca39-825">New-AzScheduledQueryRuleTriggerCondition</span><span class="sxs-lookup"><span data-stu-id="dca39-825">New-AzScheduledQueryRuleTriggerCondition</span></span>
+    - <span data-ttu-id="dca39-826">New-AzScheduledQueryRule</span><span class="sxs-lookup"><span data-stu-id="dca39-826">New-AzScheduledQueryRule</span></span>
+    - <span data-ttu-id="dca39-827">Get-AzScheduledQueryRule</span><span class="sxs-lookup"><span data-stu-id="dca39-827">Get-AzScheduledQueryRule</span></span>
+    - <span data-ttu-id="dca39-828">Set-AzScheduledQueryRule</span><span class="sxs-lookup"><span data-stu-id="dca39-828">Set-AzScheduledQueryRule</span></span>
+    - <span data-ttu-id="dca39-829">Update-AzScheduledQueryRule</span><span class="sxs-lookup"><span data-stu-id="dca39-829">Update-AzScheduledQueryRule</span></span>
+    - <span data-ttu-id="dca39-830">Remove-AzScheduledQueryRule</span><span class="sxs-lookup"><span data-stu-id="dca39-830">Remove-AzScheduledQueryRule</span></span>
+    - <span data-ttu-id="dca39-831">[Mer](https://docs.microsoft.com/rest/api/monitor/scheduledqueryrules) information om SQR API</span><span class="sxs-lookup"><span data-stu-id="dca39-831">[More](https://docs.microsoft.com/rest/api/monitor/scheduledqueryrules) information about SQR API</span></span>
+    - <span data-ttu-id="dca39-832">Az.Monitor.md har uppdaterats för att omfatta cmdletar för måttbaserade aviseringsregler i GenV2 (inte klassiska)</span><span class="sxs-lookup"><span data-stu-id="dca39-832">Updated Az.Monitor.md to include cmdlets for GenV2(non classic) metric-based alert rule</span></span>
+
+#### <a name="aznetwork"></a><span data-ttu-id="dca39-833">Az.Network</span><span class="sxs-lookup"><span data-stu-id="dca39-833">Az.Network</span></span>
+* <span data-ttu-id="dca39-834">Lägg till stöd för NAT Gateway-resurs</span><span class="sxs-lookup"><span data-stu-id="dca39-834">Add support for Nat Gateway Resource</span></span>
+    - <span data-ttu-id="dca39-835">Nya cmdletar</span><span class="sxs-lookup"><span data-stu-id="dca39-835">New cmdlets</span></span>
+        - <span data-ttu-id="dca39-836">New-AzNatGateway</span><span class="sxs-lookup"><span data-stu-id="dca39-836">New-AzNatGateway</span></span>
+        - <span data-ttu-id="dca39-837">Get-AzNatGateway</span><span class="sxs-lookup"><span data-stu-id="dca39-837">Get-AzNatGateway</span></span>
+        - <span data-ttu-id="dca39-838">Set-AzNatGateway</span><span class="sxs-lookup"><span data-stu-id="dca39-838">Set-AzNatGateway</span></span>
+        - <span data-ttu-id="dca39-839">Remove-AzNatGateway</span><span class="sxs-lookup"><span data-stu-id="dca39-839">Remove-AzNatGateway</span></span>
+   - <span data-ttu-id="dca39-840">Uppdaterade cmdletar</span><span class="sxs-lookup"><span data-stu-id="dca39-840">Updated cmdlets</span></span>
+        - <span data-ttu-id="dca39-841">New-AzureVirtualNetworkSubnetConfigCommand</span><span class="sxs-lookup"><span data-stu-id="dca39-841">New-AzureVirtualNetworkSubnetConfigCommand</span></span>
+        - <span data-ttu-id="dca39-842">Add-AzureVirtualNetworkSubnetConfigCommand</span><span class="sxs-lookup"><span data-stu-id="dca39-842">Add-AzureVirtualNetworkSubnetConfigCommand</span></span>
+* <span data-ttu-id="dca39-843">Nedanstående kommandon för funktionen har uppdaterats: Ange/ta bort anpassade vägar på Brooklyn Gateway.</span><span class="sxs-lookup"><span data-stu-id="dca39-843">Updated below commands for feature: Custom routes set/remove on Brooklyn Gateway.</span></span>
+    - <span data-ttu-id="dca39-844">New-AzVirtualNetworkGateway har uppdaterats: Den valfria parametern -CustomRoute har lagts till för att ställa in adressprefix som anpassade vägar för att ange gateway.</span><span class="sxs-lookup"><span data-stu-id="dca39-844">Updated New-AzVirtualNetworkGateway: Added optional parameter -CustomRoute to set the address prefixes as custom routes to set on Gateway.</span></span>
+    - <span data-ttu-id="dca39-845">Set-AzVirtualNetworkGateway har uppdaterats: Den valfria parametern -CustomRoute har lagts till för att ange adressprefix som anpassade vägar för att ange gateway.</span><span class="sxs-lookup"><span data-stu-id="dca39-845">Updated Set-AzVirtualNetworkGateway: Added optional parameter -CustomRoute to set the address prefixes as custom routes to set on Gateway.</span></span>
+
+#### <a name="azpolicyinsights"></a><span data-ttu-id="dca39-846">Az.PolicyInsights</span><span class="sxs-lookup"><span data-stu-id="dca39-846">Az.PolicyInsights</span></span>
+* <span data-ttu-id="dca39-847">Stöd för att fråga efter information om principutvärdering.</span><span class="sxs-lookup"><span data-stu-id="dca39-847">Support for querying policy evaluation details.</span></span>
+    - <span data-ttu-id="dca39-848">Lägg till parametern ”-Expand” för Get-AzPolicyState.</span><span class="sxs-lookup"><span data-stu-id="dca39-848">Add '-Expand' parameter to Get-AzPolicyState.</span></span> <span data-ttu-id="dca39-849">Stöd för -Expand PolicyEvaluationDetails.</span><span class="sxs-lookup"><span data-stu-id="dca39-849">Support '-Expand PolicyEvaluationDetails'.</span></span>
+
+#### <a name="azrecoveryservices"></a><span data-ttu-id="dca39-850">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="dca39-850">Az.RecoveryServices</span></span>
+* <span data-ttu-id="dca39-851">Stöd för att dela prenumeration mellan Azure och Azure Site Recovery.</span><span class="sxs-lookup"><span data-stu-id="dca39-851">Support for Cross subscription Azure to Azure site recovery.</span></span>
+* <span data-ttu-id="dca39-852">Markering av kommande icke-bakåtkompatibla ändringar för Azure Site Recovery.</span><span class="sxs-lookup"><span data-stu-id="dca39-852">Marking upcoming breaking changes for Azure Site Recovery.</span></span>
+* <span data-ttu-id="dca39-853">Korrigering för återställningsplan och åtgärdsplan i Azure Site Recovery.</span><span class="sxs-lookup"><span data-stu-id="dca39-853">Fix for Azure Site Recovery recovery plan end action plan.</span></span>
+* <span data-ttu-id="dca39-854">Korrigering för mappning av uppdateringsnätverk i Azure Site Recovery för Azure till Azure.</span><span class="sxs-lookup"><span data-stu-id="dca39-854">Fix for Azure Site Recovery Update network mapping for Azure to Azure.</span></span>
+* <span data-ttu-id="dca39-855">Korrigering för instruktioner för uppdateringsskydd i Azure Site Recovery för Azure till Azure för hanterade diskar.</span><span class="sxs-lookup"><span data-stu-id="dca39-855">Fix for Azure Site Recovery update protection direction for Azure to Azure for managed disk.</span></span>
+* <span data-ttu-id="dca39-856">Andra mindre korrigeringar.</span><span class="sxs-lookup"><span data-stu-id="dca39-856">Other minor fixes.</span></span>
+
+#### <a name="azrelay"></a><span data-ttu-id="dca39-857">Az.Relay</span><span class="sxs-lookup"><span data-stu-id="dca39-857">Az.Relay</span></span>
+* <span data-ttu-id="dca39-858">Korrigera stavfel i kundriktade meddelanden</span><span class="sxs-lookup"><span data-stu-id="dca39-858">Fix typos in customer-facing messages</span></span>
+
+#### <a name="azservicebus"></a><span data-ttu-id="dca39-859">Az.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="dca39-859">Az.ServiceBus</span></span>
+* <span data-ttu-id="dca39-860">Nya cmdletar har lagts till för NetworkRuleSet för namnområden</span><span class="sxs-lookup"><span data-stu-id="dca39-860">Added new cmdlets for NetworkRuleSet of Namespace</span></span>
+
+#### <a name="azstorage"></a><span data-ttu-id="dca39-861">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="dca39-861">Az.Storage</span></span>
+* <span data-ttu-id="dca39-862">Uppgradera till lagringsklientbiblioteket 10.0.1 (namnområdet för alla objekt från detta SDK ändras från ”Microsoft.WindowsAzure.Storage. *till ”Microsoft.Azure.Storage.* ”)</span><span class="sxs-lookup"><span data-stu-id="dca39-862">Upgrade to Storage Client Library 10.0.1 (the namespace of all objects from this SDK change from 'Microsoft.WindowsAzure.Storage.*' to 'Microsoft.Azure.Storage.*')</span></span>
+* <span data-ttu-id="dca39-863">Uppgradera till Microsoft.Azure.Management.Storage 11.0.0 för att stödja den nya API-versionen 2019-04-01.</span><span class="sxs-lookup"><span data-stu-id="dca39-863">Upgrade to Microsoft.Azure.Management.Storage 11.0.0, to support new API version 2019-04-01.</span></span>
+* <span data-ttu-id="dca39-864">Standardlagringskontot i Skapa lagringskonto ändras från ”Storage” till ”StorageV2”</span><span class="sxs-lookup"><span data-stu-id="dca39-864">The default Storage account Kind in Create Storage account change from 'Storage' to 'StorageV2'</span></span>
+    - <span data-ttu-id="dca39-865">New-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="dca39-865">New-AzStorageAccount</span></span>
+* <span data-ttu-id="dca39-866">Ändra lagringskontots cmdlet-utdata Sku.Name för att passa med indata-SkuName genom att lägga till ”-”. Till exempel ändras ”StandardLRS” till ”Standard_LRS”</span><span class="sxs-lookup"><span data-stu-id="dca39-866">Change the Storage account cmdlet output Sku.Name to be aligned with input SkuName by add '-', like 'StandardLRS' change to 'Standard_LRS'</span></span>
+    - <span data-ttu-id="dca39-867">New-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="dca39-867">New-AzStorageAccount</span></span>
+    - <span data-ttu-id="dca39-868">Get-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="dca39-868">Get-AzStorageAccount</span></span>
+    - <span data-ttu-id="dca39-869">Set-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="dca39-869">Set-AzStorageAccount</span></span>
+
+#### <a name="azwebsites"></a><span data-ttu-id="dca39-870">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="dca39-870">Az.Websites</span></span>
+* <span data-ttu-id="dca39-871">Egenskapen ”typ” konfigureras nu för PSSite-objekt som returneras av Get-AzWebApp</span><span class="sxs-lookup"><span data-stu-id="dca39-871">'Kind' property will now be set for PSSite objects returned by Get-AzWebApp</span></span>
+* <span data-ttu-id="dca39-872">Get-AzWebApp\*Metrics och Get-AzAppServicePlanMetrics markeras som inaktuella</span><span class="sxs-lookup"><span data-stu-id="dca39-872">Get-AzWebApp\*Metrics and Get-AzAppServicePlanMetrics marked deprecated</span></span>
+
+## <a name="180---april-2019"></a><span data-ttu-id="dca39-873">1.8.0 – april 2019</span><span class="sxs-lookup"><span data-stu-id="dca39-873">1.8.0 - April 2019</span></span>
+### <a name="highlights-since-the-last-major-release"></a><span data-ttu-id="dca39-874">Höjdpunkter sedan den senaste större uppdateringen</span><span class="sxs-lookup"><span data-stu-id="dca39-874">Highlights since the last major release</span></span>
+* <span data-ttu-id="dca39-875">Allmän tillgänglighet för `Az`-modulen</span><span class="sxs-lookup"><span data-stu-id="dca39-875">General availability of `Az` module</span></span>
+* <span data-ttu-id="dca39-876">Mer information om `Az`-modulen finns här: https://aka.ms/azps-announce</span><span class="sxs-lookup"><span data-stu-id="dca39-876">For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce</span></span>
+* <span data-ttu-id="dca39-877">Ifyllning för Location, ResourceGroup och ResourceName har lagts till: https://azure.microsoft.com/blog/completers-in-azure-powershell/</span><span class="sxs-lookup"><span data-stu-id="dca39-877">Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/</span></span>
+* <span data-ttu-id="dca39-878">Stöd för jokertecken för Get-cmdletar för Az.Compute och Az.Network har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-878">Added wildcard support to Get cmdlets for Az.Compute and Az.Network</span></span>
+* <span data-ttu-id="dca39-879">Endast interaktiv autentisering och autentisering med användarnamn/lösenord för Windows PowerShell 5.1 har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-879">Added interactive and username/password authentication for Windows PowerShell 5.1 only</span></span>
+* <span data-ttu-id="dca39-880">Stöd för Python 2-runbookflöden i Az.Automation har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-880">Added support for Python 2 runbooks in Az.Automation</span></span>
+* <span data-ttu-id="dca39-881">Az.LogicApp: Nya cmdletar för integrationskontosammansättningar och batchkonfiguration</span><span class="sxs-lookup"><span data-stu-id="dca39-881">Az.LogicApp: New cmdlets for Integration Account Assemblies and Batch Configuration</span></span>
+
+#### <a name="azaccounts"></a><span data-ttu-id="dca39-882">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="dca39-882">Az.Accounts</span></span>
+* <span data-ttu-id="dca39-883">Uppdatera Uninstall-AzureRm för att ta bort moduler i Mac på ett korrekt sätt</span><span class="sxs-lookup"><span data-stu-id="dca39-883">Update Uninstall-AzureRm to correctly delete modules in Mac</span></span>
+
+#### <a name="azbatch"></a><span data-ttu-id="dca39-884">Az.Batch</span><span class="sxs-lookup"><span data-stu-id="dca39-884">Az.Batch</span></span>
+* <span data-ttu-id="dca39-885">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="dca39-885">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azcdn"></a><span data-ttu-id="dca39-886">Az.Cdn</span><span class="sxs-lookup"><span data-stu-id="dca39-886">Az.Cdn</span></span>
+* <span data-ttu-id="dca39-887">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="dca39-887">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azcognitiveservices"></a><span data-ttu-id="dca39-888">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="dca39-888">Az.CognitiveServices</span></span>
+* <span data-ttu-id="dca39-889">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="dca39-889">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="dca39-890">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="dca39-890">Az.Compute</span></span>
+* <span data-ttu-id="dca39-891">Åtgärda problem med AEM-installationen om resurs-ID:n för diskar innehåller resourcegroups i gemener i resurs-ID:n</span><span class="sxs-lookup"><span data-stu-id="dca39-891">Fix issue with AEM installation if resource ids of disks had lowercase resourcegroups in resource id</span></span>
+* <span data-ttu-id="dca39-892">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="dca39-892">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+* <span data-ttu-id="dca39-893">Åtgärda dokumentationen för jokertecken</span><span class="sxs-lookup"><span data-stu-id="dca39-893">Fix documentation for wildcards</span></span>
+
+#### <a name="azdatafactory"></a><span data-ttu-id="dca39-894">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="dca39-894">Az.DataFactory</span></span>
+* <span data-ttu-id="dca39-895">Lägg till SsisProperties om NodeCount inte är null för hanterad integreringskörning.</span><span class="sxs-lookup"><span data-stu-id="dca39-895">Add SsisProperties if NodeCount not null for managed integration runtime.</span></span>
+
+#### <a name="azdatalakestore"></a><span data-ttu-id="dca39-896">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="dca39-896">Az.DataLakeStore</span></span>
+* <span data-ttu-id="dca39-897">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="dca39-897">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azeventgrid"></a><span data-ttu-id="dca39-898">Az.EventGrid</span><span class="sxs-lookup"><span data-stu-id="dca39-898">Az.EventGrid</span></span>
+* <span data-ttu-id="dca39-899">Hjälptexten för slutpunkten har uppdaterats för att visa att resurser ska skapas innan cmdletarna för att skapa/uppdatera händelseprenumerationer används.</span><span class="sxs-lookup"><span data-stu-id="dca39-899">Updated the help text for endpoint to indicate that resources should be created before using the create/update event subscription cmdlets.</span></span>
+
+#### <a name="azeventhub"></a><span data-ttu-id="dca39-900">Az.EventHub</span><span class="sxs-lookup"><span data-stu-id="dca39-900">Az.EventHub</span></span>
+* <span data-ttu-id="dca39-901">Nya cmdletar har lagts till för NetworkRuleSet för namnområden</span><span class="sxs-lookup"><span data-stu-id="dca39-901">Added new cmdlets for NetworkRuleSet of Namespace</span></span> 
+
+#### <a name="azhdinsight"></a><span data-ttu-id="dca39-902">Az.HDInsight</span><span class="sxs-lookup"><span data-stu-id="dca39-902">Az.HDInsight</span></span>
+* <span data-ttu-id="dca39-903">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="dca39-903">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="aziothub"></a><span data-ttu-id="dca39-904">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="dca39-904">Az.IotHub</span></span>
+* <span data-ttu-id="dca39-905">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="dca39-905">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azkeyvault"></a><span data-ttu-id="dca39-906">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="dca39-906">Az.KeyVault</span></span>
+* <span data-ttu-id="dca39-907">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="dca39-907">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+* <span data-ttu-id="dca39-908">Åtgärda dokumentationen för jokertecken</span><span class="sxs-lookup"><span data-stu-id="dca39-908">Fix documentation for wildcards</span></span>
+
+#### <a name="azmachinelearning"></a><span data-ttu-id="dca39-909">Az.MachineLearning</span><span class="sxs-lookup"><span data-stu-id="dca39-909">Az.MachineLearning</span></span>
+* <span data-ttu-id="dca39-910">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="dca39-910">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azmedia"></a><span data-ttu-id="dca39-911">Az.Media</span><span class="sxs-lookup"><span data-stu-id="dca39-911">Az.Media</span></span>
+* <span data-ttu-id="dca39-912">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="dca39-912">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azmonitor"></a><span data-ttu-id="dca39-913">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="dca39-913">Az.Monitor</span></span>
+  * <span data-ttu-id="dca39-914">Nya cmdletar för måttbaserad aviseringsregel i GenV2 (inte klassisk)</span><span class="sxs-lookup"><span data-stu-id="dca39-914">New cmdlets for GenV2(non classic) metric-based alert rule</span></span>
+      - <span data-ttu-id="dca39-915">New-AzMetricAlertRuleV2DimensionSelection</span><span class="sxs-lookup"><span data-stu-id="dca39-915">New-AzMetricAlertRuleV2DimensionSelection</span></span>
+      - <span data-ttu-id="dca39-916">New-AzMetricAlertRuleV2Criteria</span><span class="sxs-lookup"><span data-stu-id="dca39-916">New-AzMetricAlertRuleV2Criteria</span></span>
+      - <span data-ttu-id="dca39-917">Remove-AzMetricAlertRuleV2</span><span class="sxs-lookup"><span data-stu-id="dca39-917">Remove-AzMetricAlertRuleV2</span></span>
+      - <span data-ttu-id="dca39-918">Get-AzMetricAlertRuleV2</span><span class="sxs-lookup"><span data-stu-id="dca39-918">Get-AzMetricAlertRuleV2</span></span>
+      - <span data-ttu-id="dca39-919">Add-AzMetricAlertRuleV2</span><span class="sxs-lookup"><span data-stu-id="dca39-919">Add-AzMetricAlertRuleV2</span></span>
+  * <span data-ttu-id="dca39-920">Monitor SDK har uppdaterats till version 0.22.0-preview</span><span class="sxs-lookup"><span data-stu-id="dca39-920">Updated Monitor SDK to version 0.22.0-preview</span></span>
+
+#### <a name="aznetwork"></a><span data-ttu-id="dca39-921">Az.Network</span><span class="sxs-lookup"><span data-stu-id="dca39-921">Az.Network</span></span>
+* <span data-ttu-id="dca39-922">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="dca39-922">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+* <span data-ttu-id="dca39-923">Åtgärda dokumentationen för jokertecken</span><span class="sxs-lookup"><span data-stu-id="dca39-923">Fix documentation for wildcards</span></span>
+
+#### <a name="aznotificationhubs"></a><span data-ttu-id="dca39-924">Az.NotificationHubs</span><span class="sxs-lookup"><span data-stu-id="dca39-924">Az.NotificationHubs</span></span>
+* <span data-ttu-id="dca39-925">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="dca39-925">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azoperationalinsights"></a><span data-ttu-id="dca39-926">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="dca39-926">Az.OperationalInsights</span></span>
+* <span data-ttu-id="dca39-927">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="dca39-927">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azpowerbiembedded"></a><span data-ttu-id="dca39-928">Az.PowerBIEmbedded</span><span class="sxs-lookup"><span data-stu-id="dca39-928">Az.PowerBIEmbedded</span></span>
+* <span data-ttu-id="dca39-929">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="dca39-929">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azrecoveryservices"></a><span data-ttu-id="dca39-930">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="dca39-930">Az.RecoveryServices</span></span>
+* <span data-ttu-id="dca39-931">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="dca39-931">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+* <span data-ttu-id="dca39-932">Tabellformatet för SQL i virtuella Azure-datorer har uppdaterats</span><span class="sxs-lookup"><span data-stu-id="dca39-932">Updated table format for SQL in azure VM</span></span>
+* <span data-ttu-id="dca39-933">En alternativ metod för att hämta platser i AzureFileShare har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-933">Added alternate method to fetch location in AzureFileShare</span></span>
+* <span data-ttu-id="dca39-934">ScheduleRunDays i SchedulePolicy-objekt har uppdaterats enligt tidszon</span><span class="sxs-lookup"><span data-stu-id="dca39-934">Updated ScheduleRunDays in SchedulePolicy object according to timezone</span></span>
+
+#### <a name="azrediscache"></a><span data-ttu-id="dca39-935">Az.RedisCache</span><span class="sxs-lookup"><span data-stu-id="dca39-935">Az.RedisCache</span></span>
+* <span data-ttu-id="dca39-936">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="dca39-936">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="dca39-937">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="dca39-937">Az.Resources</span></span>
+* <span data-ttu-id="dca39-938">Åtgärda dokumentationen för jokertecken</span><span class="sxs-lookup"><span data-stu-id="dca39-938">Fix documentation for wildcards</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="dca39-939">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="dca39-939">Az.Sql</span></span>
+* <span data-ttu-id="dca39-940">Ersätt Monitor SDK-beroende med vanlig kod</span><span class="sxs-lookup"><span data-stu-id="dca39-940">Replace dependency on Monitor SDK with common code</span></span>
+* <span data-ttu-id="dca39-941">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="dca39-941">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+* <span data-ttu-id="dca39-942">Förbättrad process för klassificering av flera kolumner.</span><span class="sxs-lookup"><span data-stu-id="dca39-942">Enhanced process of multiple columns classification.</span></span>
+* <span data-ttu-id="dca39-943">Inkludera SKU-egenskaper (SKU-namn, serie, kapacitet) i svaret från Get-AzSqlServerServiceObjective och formatera som tabell som standard.</span><span class="sxs-lookup"><span data-stu-id="dca39-943">Include sku properties (sku name, family, capacity) in response from Get-AzSqlServerServiceObjective and format as table by default.</span></span>
+* <span data-ttu-id="dca39-944">Möjlighet att använda Get-AzSqlServerServiceObjective efter plats utan att behöva en redan befintlig server i regionen.</span><span class="sxs-lookup"><span data-stu-id="dca39-944">Ability to Get-AzSqlServerServiceObjective by location without needing a preexisting server in the region.</span></span>
+* <span data-ttu-id="dca39-945">Stöd för tidszonsparametern när hanterade instanser skapas.</span><span class="sxs-lookup"><span data-stu-id="dca39-945">Support for time zone parameter in Managed Instance create.</span></span>
+* <span data-ttu-id="dca39-946">Åtgärda dokumentationen för jokertecken</span><span class="sxs-lookup"><span data-stu-id="dca39-946">Fix documentation for wildcards</span></span>
+
+#### <a name="azwebsites"></a><span data-ttu-id="dca39-947">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="dca39-947">Az.Websites</span></span>
+* <span data-ttu-id="dca39-948">åtgärdar Set-AzWebApp och Set-AzWebAppSlot så att de inte tar bort taggar vid körning</span><span class="sxs-lookup"><span data-stu-id="dca39-948">fixes the Set-AzWebApp and Set-AzWebAppSlot to not remove the tags on execution</span></span>
+* <span data-ttu-id="dca39-949">Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.</span><span class="sxs-lookup"><span data-stu-id="dca39-949">Updated cmdlets with plural nouns to singular, and deprecated plural names.</span></span>
+* <span data-ttu-id="dca39-950">SDK för WebSites har uppdaterats.</span><span class="sxs-lookup"><span data-stu-id="dca39-950">Updated the WebSites SDK.</span></span>
+* <span data-ttu-id="dca39-951">Egenskapen AdminSiteName har tagits bort från PSAppServicePlan.</span><span class="sxs-lookup"><span data-stu-id="dca39-951">Removed the AdminSiteName property from PSAppServicePlan.</span></span>
+
+## <a name="170---april-2019"></a><span data-ttu-id="dca39-952">1.7.0 – april 2019</span><span class="sxs-lookup"><span data-stu-id="dca39-952">1.7.0 - April 2019</span></span>
+### <a name="highlights-since-the-last-major-release"></a><span data-ttu-id="dca39-953">Höjdpunkter sedan den senaste större uppdateringen</span><span class="sxs-lookup"><span data-stu-id="dca39-953">Highlights since the last major release</span></span>
+* <span data-ttu-id="dca39-954">Allmän tillgänglighet för `Az`-modulen</span><span class="sxs-lookup"><span data-stu-id="dca39-954">General availability of `Az` module</span></span>
+* <span data-ttu-id="dca39-955">Mer information om `Az`-modulen finns här: https://aka.ms/azps-announce</span><span class="sxs-lookup"><span data-stu-id="dca39-955">For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce</span></span>
+* <span data-ttu-id="dca39-956">Ifyllning för Location, ResourceGroup och ResourceName har lagts till: https://azure.microsoft.com/blog/completers-in-azure-powershell/</span><span class="sxs-lookup"><span data-stu-id="dca39-956">Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/</span></span>
+* <span data-ttu-id="dca39-957">Stöd för jokertecken för Get-cmdletar för Az.Compute och Az.Network har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-957">Added wildcard support to Get cmdlets for Az.Compute and Az.Network</span></span>
+* <span data-ttu-id="dca39-958">Endast interaktiv autentisering och autentisering med användarnamn/lösenord för Windows PowerShell 5.1 har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-958">Added interactive and username/password authentication for Windows PowerShell 5.1 only</span></span>
+* <span data-ttu-id="dca39-959">Stöd för Python 2-runbookflöden i Az.Automation har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-959">Added support for Python 2 runbooks in Az.Automation</span></span>
+* <span data-ttu-id="dca39-960">Az.LogicApp: Nya cmdletar för integrationskontosammansättningar och batchkonfiguration</span><span class="sxs-lookup"><span data-stu-id="dca39-960">Az.LogicApp: New cmdlets for Integration Account Assemblies and Batch Configuration</span></span>
+
+#### <a name="azaccounts"></a><span data-ttu-id="dca39-961">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="dca39-961">Az.Accounts</span></span>
+* <span data-ttu-id="dca39-962">Add-AzEnvironment och Set-AzEnvironment har uppdaterats för att godkänna parametern AzureAnalysisServicesEndpointResourceId</span><span class="sxs-lookup"><span data-stu-id="dca39-962">Updated Add-AzEnvironment and Set-AzEnvironment to accept parameter AzureAnalysisServicesEndpointResourceId</span></span>
+
+#### <a name="azanalysisservices"></a><span data-ttu-id="dca39-963">Az.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="dca39-963">Az.AnalysisServices</span></span>
+* <span data-ttu-id="dca39-964">ServiceClient används i cmdletar för dataplan och den ursprungliga autentiseringslogiken har tagits bort</span><span class="sxs-lookup"><span data-stu-id="dca39-964">Using ServiceClient in dataplane cmdlets and removing the original authentication logic</span></span>
+* <span data-ttu-id="dca39-965">Add-AzureASAccount används för omslutning av Connect-AzAccount för att undvika en icke-bakåtkompatibel ändring</span><span class="sxs-lookup"><span data-stu-id="dca39-965">Making Add-AzureASAccount a wrapper of Connect-AzAccount to avoid a breaking change</span></span>
+
+#### <a name="azautomation"></a><span data-ttu-id="dca39-966">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="dca39-966">Az.Automation</span></span>
+* <span data-ttu-id="dca39-967">Buggen för cmdleten New-AzAutomationSoftwareUpdateConfiguration för inkluderingar har åtgärdats.</span><span class="sxs-lookup"><span data-stu-id="dca39-967">Fixed New-AzAutomationSoftwareUpdateConfiguration cmdlet bug for Inclusions.</span></span> <span data-ttu-id="dca39-968">Nu bör parametern IncludedKbNumber och IncludedPackageNameMask fungera.</span><span class="sxs-lookup"><span data-stu-id="dca39-968">Now parameter IncludedKbNumber and IncludedPackageNameMask should work.</span></span>
+* <span data-ttu-id="dca39-969">Felkorrigering för dynamiska grupper i uppdateringshanteringen för azure automation</span><span class="sxs-lookup"><span data-stu-id="dca39-969">Bug fix for azure automation update management dynamic group</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="dca39-970">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="dca39-970">Az.Compute</span></span>
+* <span data-ttu-id="dca39-971">Lägg till parametern HyperVGeneration i New-AzDiskConfig och New-AzSnapshotConfig</span><span class="sxs-lookup"><span data-stu-id="dca39-971">Add HyperVGeneration parameter to New-AzDiskConfig and New-AzSnapshotConfig</span></span>
+* <span data-ttu-id="dca39-972">Tillåt att virtuella datorer skapas med galleribilder från andra klientorganisationer.</span><span class="sxs-lookup"><span data-stu-id="dca39-972">Allow VM creation with galley image from other tenants.</span></span> 
+
+#### <a name="azcontainerinstance"></a><span data-ttu-id="dca39-973">Az.ContainerInstance</span><span class="sxs-lookup"><span data-stu-id="dca39-973">Az.ContainerInstance</span></span>
+* <span data-ttu-id="dca39-974">Ett problem har åtgärdats i parametern -Command för New-AzContainerGroup som lade till ett avslutande tomt argument</span><span class="sxs-lookup"><span data-stu-id="dca39-974">Fixed issue in the -Command parameter of New-AzContainerGroup which added a trailing empty argument</span></span>
+
+#### <a name="azdatafactory"></a><span data-ttu-id="dca39-975">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="dca39-975">Az.DataFactory</span></span>
+* <span data-ttu-id="dca39-976">ADF .Net SDK-versionen har uppdaterats till 3.0.2</span><span class="sxs-lookup"><span data-stu-id="dca39-976">Updated ADF .Net SDK version to 3.0.2</span></span>
+* <span data-ttu-id="dca39-977">Cmdleten Set-AzDataFactoryV2 har uppdaterats med extra parametrar för inställningar som rör RepoConfiguration.</span><span class="sxs-lookup"><span data-stu-id="dca39-977">Updated Set-AzDataFactoryV2 cmdlet with extra parameters for RepoConfiguration related settings.</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="dca39-978">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="dca39-978">Az.Resources</span></span>
+* <span data-ttu-id="dca39-979">Förbättra hanteringen av providrar för Get-AzResource när parametrarna -ResourceId eller -ResourceGroupName, -Name och -ResourceType tillhandahålls</span><span class="sxs-lookup"><span data-stu-id="dca39-979">Improve handling of providers for 'Get-AzResource' when providing '-ResourceId' or '-ResourceGroupName', '-Name' and '-ResourceType' parameters</span></span>
+* <span data-ttu-id="dca39-980">Förbättra felhanteringen för ”Test-AzDeployment” och ”Test-AzResourceGroupDeployment”</span><span class="sxs-lookup"><span data-stu-id="dca39-980">Improve error handling for 'Test-AzDeployment' and 'Test-AzResourceGroupDeployment'</span></span>
+    - <span data-ttu-id="dca39-981">Hantera fel utanför distributionsvalideringen och ta med dem i kommandoutdata istället</span><span class="sxs-lookup"><span data-stu-id="dca39-981">Handle errors thrown outside of deployment validation and include them in output of command instead</span></span>
+    - <span data-ttu-id="dca39-982">Mer information här: https://github.com/Azure/azure-powershell/issues/6856</span><span class="sxs-lookup"><span data-stu-id="dca39-982">More information here: https://github.com/Azure/azure-powershell/issues/6856</span></span>
+* <span data-ttu-id="dca39-983">Lägg till växlingsparametern -IgnoreDynamicParameters till en uppsättning av cmdletar för distribution för att hoppa över fråga i skript och jobbscenarier</span><span class="sxs-lookup"><span data-stu-id="dca39-983">Add '-IgnoreDynamicParameters' switch parameter to set of deployment cmdlets to skip prompt in script and job scenarios</span></span>
+    - <span data-ttu-id="dca39-984">Mer information här: https://github.com/Azure/azure-powershell/issues/6856</span><span class="sxs-lookup"><span data-stu-id="dca39-984">More information here: https://github.com/Azure/azure-powershell/issues/6856</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="dca39-985">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="dca39-985">Az.Sql</span></span>
+* <span data-ttu-id="dca39-986">Stöd för dataklassificering av databaser.</span><span class="sxs-lookup"><span data-stu-id="dca39-986">Support Database Data Classification.</span></span>
+
+#### <a name="azstorage"></a><span data-ttu-id="dca39-987">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="dca39-987">Az.Storage</span></span>
+* <span data-ttu-id="dca39-988">Rapportera detaljfel när lagringskontext skapas med parametern -UseConnectedAccount, men utan inloggning på Azure-kontot</span><span class="sxs-lookup"><span data-stu-id="dca39-988">Report detail error when create Storage context with parameter -UseConnectedAccount, but without login Azure account</span></span>
+    - <span data-ttu-id="dca39-989">New-AzStorageContext</span><span class="sxs-lookup"><span data-stu-id="dca39-989">New-AzStorageContext</span></span>
+* <span data-ttu-id="dca39-990">Stöd för att hantera Blob Service-egenskaper för ett angivet lagringskonto med API:et för hanteringsplan</span><span class="sxs-lookup"><span data-stu-id="dca39-990">Support Manage Blob Service Properties of a specified Storage account with Management plane API</span></span>
+    - <span data-ttu-id="dca39-991">Update-AzStorageBlobServiceProperty</span><span class="sxs-lookup"><span data-stu-id="dca39-991">Update-AzStorageBlobServiceProperty</span></span>
+    - <span data-ttu-id="dca39-992">Get-AzStorageBlobServiceProperty</span><span class="sxs-lookup"><span data-stu-id="dca39-992">Get-AzStorageBlobServiceProperty</span></span>
+    - <span data-ttu-id="dca39-993">Enable-AzStorageBlobDeleteRetentionPolicy</span><span class="sxs-lookup"><span data-stu-id="dca39-993">Enable-AzStorageBlobDeleteRetentionPolicy</span></span>
+    - <span data-ttu-id="dca39-994">Disable-AzStorageBlobDeleteRetentionPolicy</span><span class="sxs-lookup"><span data-stu-id="dca39-994">Disable-AzStorageBlobDeleteRetentionPolicy</span></span>
+* <span data-ttu-id="dca39-995">Stöd för -AsJob-cmdletar för att ladda upp och ladda ned blobar och filer</span><span class="sxs-lookup"><span data-stu-id="dca39-995">-AsJob support for Blob and file upload and download cmdlets</span></span>
+    - <span data-ttu-id="dca39-996">Get-AzStorageBlobContent</span><span class="sxs-lookup"><span data-stu-id="dca39-996">Get-AzStorageBlobContent</span></span>
+    - <span data-ttu-id="dca39-997">Set-AzStorageBlobContent</span><span class="sxs-lookup"><span data-stu-id="dca39-997">Set-AzStorageBlobContent</span></span>
+    - <span data-ttu-id="dca39-998">Get-AzStorageFileContent</span><span class="sxs-lookup"><span data-stu-id="dca39-998">Get-AzStorageFileContent</span></span>
+    - <span data-ttu-id="dca39-999">Set-AzStorageFileContent</span><span class="sxs-lookup"><span data-stu-id="dca39-999">Set-AzStorageFileContent</span></span>
+
+## <a name="160---march-2019"></a><span data-ttu-id="dca39-1000">1.6.0 – mars 2019</span><span class="sxs-lookup"><span data-stu-id="dca39-1000">1.6.0 - March 2019</span></span>
+### <a name="highlights-since-the-last-major-release"></a><span data-ttu-id="dca39-1001">Höjdpunkter sedan den senaste större uppdateringen</span><span class="sxs-lookup"><span data-stu-id="dca39-1001">Highlights since the last major release</span></span>
+* <span data-ttu-id="dca39-1002">Allmän tillgänglighet för `Az`-modulen</span><span class="sxs-lookup"><span data-stu-id="dca39-1002">General availability of `Az` module</span></span>
+* <span data-ttu-id="dca39-1003">Mer information om `Az`-modulen finns här: https://aka.ms/azps-announce</span><span class="sxs-lookup"><span data-stu-id="dca39-1003">For more information about the `Az` module, please visit the following: https://aka.ms/azps-announce</span></span>
+* <span data-ttu-id="dca39-1004">Ifyllning för Location, ResourceGroup och ResourceName har lagts till: https://azure.microsoft.com/blog/completers-in-azure-powershell/</span><span class="sxs-lookup"><span data-stu-id="dca39-1004">Added Location, ResourceGroup, and ResourceName completers: https://azure.microsoft.com/blog/completers-in-azure-powershell/</span></span>
+* <span data-ttu-id="dca39-1005">Stöd för jokertecken för Get-cmdletar för Az.Compute och Az.Network har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-1005">Added wildcard support to Get cmdlets for Az.Compute and Az.Network</span></span>
+* <span data-ttu-id="dca39-1006">Endast interaktiv autentisering och autentisering med användarnamn/lösenord för Windows PowerShell 5.1 har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-1006">Added interactive and username/password authentication for Windows PowerShell 5.1 only</span></span>
+* <span data-ttu-id="dca39-1007">Stöd för Python 2-runbookflöden i Az.Automation har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-1007">Added support for Python 2 runbooks in Az.Automation</span></span>
+* <span data-ttu-id="dca39-1008">Az.LogicApp: Nya cmdletar för integrationskontosammansättningar och batchkonfiguration</span><span class="sxs-lookup"><span data-stu-id="dca39-1008">Az.LogicApp: New cmdlets for Integration Account Assemblies and Batch Configuration</span></span>
+
+#### <a name="azautomation"></a><span data-ttu-id="dca39-1009">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="dca39-1009">Az.Automation</span></span>
+* <span data-ttu-id="dca39-1010">Azure Automation – ändring av uppdateringshantering för stöd för de nya funktionerna:</span><span class="sxs-lookup"><span data-stu-id="dca39-1010">Azure automation update management change to support the following new features :</span></span>
+    * <span data-ttu-id="dca39-1011">Dynamisk gruppering</span><span class="sxs-lookup"><span data-stu-id="dca39-1011">Dynamic grouping</span></span>
+    * <span data-ttu-id="dca39-1012">För-/efterskrift</span><span class="sxs-lookup"><span data-stu-id="dca39-1012">Pre-Post script</span></span>
+    * <span data-ttu-id="dca39-1013">Inställning för omstart</span><span class="sxs-lookup"><span data-stu-id="dca39-1013">Reboot Setting</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="dca39-1014">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="dca39-1014">Az.Compute</span></span>
+* <span data-ttu-id="dca39-1015">Åtgärda problem med sökvägsmatchning i Get-AzVmBootDiagnosticsData</span><span class="sxs-lookup"><span data-stu-id="dca39-1015">Fix issue with path resolution in Get-AzVmBootDiagnosticsData</span></span>
+* <span data-ttu-id="dca39-1016">Uppdatera Compute-klientbibliotek till 25.0.0.</span><span class="sxs-lookup"><span data-stu-id="dca39-1016">Update Compute client library to 25.0.0.</span></span>
+
+#### <a name="azkeyvault"></a><span data-ttu-id="dca39-1017">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="dca39-1017">Az.KeyVault</span></span>
+* <span data-ttu-id="dca39-1018">Stöd för jokertecken för KeyVault-cmdletar har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-1018">Added wildcard support to KeyVault cmdlets</span></span>
+
+#### <a name="aznetwork"></a><span data-ttu-id="dca39-1019">Az.Network</span><span class="sxs-lookup"><span data-stu-id="dca39-1019">Az.Network</span></span>
+* <span data-ttu-id="dca39-1020">Lägg till stöd för Threat Intelligence för Azure Firewall</span><span class="sxs-lookup"><span data-stu-id="dca39-1020">Add Threat Intelligence support for Azure Firewall</span></span>
+* <span data-ttu-id="dca39-1021">Lägg till resurs för brandväggsprincip på översta nivå och anpassade regler för Application Gateway</span><span class="sxs-lookup"><span data-stu-id="dca39-1021">Add Application Gateway Firewall Policy top level resource and Custom Rules</span></span>
+
+#### <a name="azrecoveryservices"></a><span data-ttu-id="dca39-1022">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="dca39-1022">Az.RecoveryServices</span></span>
+* <span data-ttu-id="dca39-1023">SnapshotRetentionInDays har lagts till i Azure-principen för virtuella datorer för stöd av Instant RP</span><span class="sxs-lookup"><span data-stu-id="dca39-1023">Added SnapshotRetentionInDays in Azure VM policy to support Instant RP</span></span>
+* <span data-ttu-id="dca39-1024">Pipe-stöd för avregistrering av container har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-1024">Added pipe support for unregister container</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="dca39-1025">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="dca39-1025">Az.Resources</span></span>
+* <span data-ttu-id="dca39-1026">Uppdatera stöd för jokertecken för Get-AzResource och Get-AzResourceGroup</span><span class="sxs-lookup"><span data-stu-id="dca39-1026">Update wildcard support for Get-AzResource and Get-AzResourceGroup</span></span>
+* <span data-ttu-id="dca39-1027">Uppdatera autentiseringsuppgifter som används vid allmänna anrop till ARM</span><span class="sxs-lookup"><span data-stu-id="dca39-1027">Update credentials used when making generic calls to ARM</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="dca39-1028">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="dca39-1028">Az.Sql</span></span>
+* <span data-ttu-id="dca39-1029">Cmdlet-parametern (ExcludeDetectionType) för Hotidentifiering ändrades från DetectionType till sträng[] för att framtidssäkra den när nya DetectionTypes läggs till, och även för att stödja automatisk ifyllning.</span><span class="sxs-lookup"><span data-stu-id="dca39-1029">changed Threat Detection's cmdlets param (ExcludeDetectionType) from DetectionType to string[] to make it future proof when new DetectionTypes are added and to support autocomplete as well.</span></span>
+
+#### <a name="azstorage"></a><span data-ttu-id="dca39-1030">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="dca39-1030">Az.Storage</span></span>
+* <span data-ttu-id="dca39-1031">Stöd för att hämta/ange/ta bort hanteringsprincip på ett lagringskonto</span><span class="sxs-lookup"><span data-stu-id="dca39-1031">Support Get/Set/Remove Management Policy on a Storage account</span></span>
+    - <span data-ttu-id="dca39-1032">Set-AzStorageAccountManagementPolicy</span><span class="sxs-lookup"><span data-stu-id="dca39-1032">Set-AzStorageAccountManagementPolicy</span></span>
+    - <span data-ttu-id="dca39-1033">Get-AzStorageAccountManagementPolicy</span><span class="sxs-lookup"><span data-stu-id="dca39-1033">Get-AzStorageAccountManagementPolicy</span></span>
+    - <span data-ttu-id="dca39-1034">Remove-AzStorageAccountManagementPolicy</span><span class="sxs-lookup"><span data-stu-id="dca39-1034">Remove-AzStorageAccountManagementPolicy</span></span>
+    - <span data-ttu-id="dca39-1035">Add-AzStorageAccountManagementPolicyAction</span><span class="sxs-lookup"><span data-stu-id="dca39-1035">Add-AzStorageAccountManagementPolicyAction</span></span>
+    - <span data-ttu-id="dca39-1036">New-AzStorageAccountManagementPolicyFilter</span><span class="sxs-lookup"><span data-stu-id="dca39-1036">New-AzStorageAccountManagementPolicyFilter</span></span>
+    - <span data-ttu-id="dca39-1037">New-AzStorageAccountManagementPolicyRule</span><span class="sxs-lookup"><span data-stu-id="dca39-1037">New-AzStorageAccountManagementPolicyRule</span></span>
+
+#### <a name="azwebsites"></a><span data-ttu-id="dca39-1038">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="dca39-1038">Az.Websites</span></span>
+* <span data-ttu-id="dca39-1039">Åtgärda fel med ARM-mall som avbryter kloning av alla platser med 'New-AzWebApp -IncludeSourceWebAppSlots'</span><span class="sxs-lookup"><span data-stu-id="dca39-1039">Fix ARM template bug that breaks cloning all slots using 'New-AzWebApp -IncludeSourceWebAppSlots'</span></span> 
+
+## <a name="150---march-2019"></a><span data-ttu-id="dca39-1040">1.5.0 – mars 2019</span><span class="sxs-lookup"><span data-stu-id="dca39-1040">1.5.0 - March 2019</span></span>
+#### <a name="azaccounts"></a><span data-ttu-id="dca39-1041">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="dca39-1041">Az.Accounts</span></span>
+* <span data-ttu-id="dca39-1042">Lägg till kommandot Register-AzModule för stöd för AutoRest-genererade cmdletar</span><span class="sxs-lookup"><span data-stu-id="dca39-1042">Add 'Register-AzModule' command to support AutoRest generated cmdlets</span></span>
+* <span data-ttu-id="dca39-1043">Uppdatera exempel för Connect-AzAccount</span><span class="sxs-lookup"><span data-stu-id="dca39-1043">Update examples for Connect-AzAccount</span></span>
+
+#### <a name="azautomation"></a><span data-ttu-id="dca39-1044">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="dca39-1044">Az.Automation</span></span>
+* <span data-ttu-id="dca39-1045">Problem med att hämta vissa månadsscheman i flera Azure Automation-cmdletar har åtgärdats</span><span class="sxs-lookup"><span data-stu-id="dca39-1045">Fixed issue when retreiving certain monthly schedules in several Azure Automation cmdlets</span></span>
+* <span data-ttu-id="dca39-1046">Åtgärda problem med att Get-AzAutomationDscNode bara returnerar de 20 översta noderna.</span><span class="sxs-lookup"><span data-stu-id="dca39-1046">Fix Get-AzAutomationDscNode returning just top 20 nodes.</span></span> <span data-ttu-id="dca39-1047">Nu returneras alla noder</span><span class="sxs-lookup"><span data-stu-id="dca39-1047">Now it returns all nodes</span></span>
+
+#### <a name="azcdn"></a><span data-ttu-id="dca39-1048">Az.Cdn</span><span class="sxs-lookup"><span data-stu-id="dca39-1048">Az.Cdn</span></span>
+* <span data-ttu-id="dca39-1049">Nya Powershell-cmdletar för att aktivera/inaktivera anpassade domän-HTTPS har lagts till och de gamla har gjorts inaktuella</span><span class="sxs-lookup"><span data-stu-id="dca39-1049">Added new Powershell cmdlets for Enable/Disable Custom Domain Https and deprecated the old ones</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="dca39-1050">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="dca39-1050">Az.Compute</span></span>
+* <span data-ttu-id="dca39-1051">Lägg till stöd för jokertecken för Get-cmdletar</span><span class="sxs-lookup"><span data-stu-id="dca39-1051">Add wildcard support to Get cmdlets</span></span>
+
+#### <a name="azdatafactory"></a><span data-ttu-id="dca39-1052">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="dca39-1052">Az.DataFactory</span></span>
+* <span data-ttu-id="dca39-1053">ADF .Net SDK-versionen har uppdaterats till 3.0.1</span><span class="sxs-lookup"><span data-stu-id="dca39-1053">Updated ADF .Net SDK version to 3.0.1</span></span>
+
+#### <a name="azlogicapp"></a><span data-ttu-id="dca39-1054">Az.LogicApp</span><span class="sxs-lookup"><span data-stu-id="dca39-1054">Az.LogicApp</span></span>
+* <span data-ttu-id="dca39-1055">Åtgärda problemet med att ListWorkflows endast hämtar den första sidan med resultat</span><span class="sxs-lookup"><span data-stu-id="dca39-1055">Fix for ListWorkflows only retrieving the first page of results</span></span>
+
+#### <a name="aznetwork"></a><span data-ttu-id="dca39-1056">Az.Network</span><span class="sxs-lookup"><span data-stu-id="dca39-1056">Az.Network</span></span>
+* <span data-ttu-id="dca39-1057">Lägg till stöd för jokertecken för Network-cmdletar</span><span class="sxs-lookup"><span data-stu-id="dca39-1057">Add wildcard support to Network cmdlets</span></span>
+
+#### <a name="azrecoveryservices"></a><span data-ttu-id="dca39-1058">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="dca39-1058">Az.RecoveryServices</span></span>
+* <span data-ttu-id="dca39-1059">Stöd har lagts till för SQL Server i virtuella Azure-datorer</span><span class="sxs-lookup"><span data-stu-id="dca39-1059">Added Sql server in Azure VM support</span></span>
+* <span data-ttu-id="dca39-1060">SDK-uppdatering</span><span class="sxs-lookup"><span data-stu-id="dca39-1060">SDK Update</span></span>
+* <span data-ttu-id="dca39-1061">Get-ProtectableItem-incheckning i VMappContainer har tagits bort</span><span class="sxs-lookup"><span data-stu-id="dca39-1061">Removed VMappContainer check in Get-ProtectableItem</span></span>
+* <span data-ttu-id="dca39-1062">Name och ServerName har lagts till som parametrar för Get-ProtectableItem</span><span class="sxs-lookup"><span data-stu-id="dca39-1062">Added Name and ServerName as parameters for Get-ProtectableItem</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="dca39-1063">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="dca39-1063">Az.Resources</span></span>
+* <span data-ttu-id="dca39-1064">Lägg till parametern `-TemplateObject` i cmdletar för distribution</span><span class="sxs-lookup"><span data-stu-id="dca39-1064">Add `-TemplateObject` parameter to deployment cmdlets</span></span>
+    - <span data-ttu-id="dca39-1065">Mer information här: https://github.com/Azure/azure-powershell/issues/2933</span><span class="sxs-lookup"><span data-stu-id="dca39-1065">More information here: https://github.com/Azure/azure-powershell/issues/2933</span></span>
+* <span data-ttu-id="dca39-1066">Åtgärda problem med piping av resultatet i `Get-AzResource` till `Set-AzResource`</span><span class="sxs-lookup"><span data-stu-id="dca39-1066">Fix issue when piping the result of `Get-AzResource` to `Set-AzResource`</span></span>
+    - <span data-ttu-id="dca39-1067">Mer information här: https://github.com/Azure/azure-powershell/issues/8240</span><span class="sxs-lookup"><span data-stu-id="dca39-1067">More information here: https://github.com/Azure/azure-powershell/issues/8240</span></span>
+* <span data-ttu-id="dca39-1068">Åtgärda problem med ändring av JSON-datatyp när `Set-AzResource` körs</span><span class="sxs-lookup"><span data-stu-id="dca39-1068">Fix issue with JSON data type change when running `Set-AzResource`</span></span>
+    - <span data-ttu-id="dca39-1069">Mer information här: https://github.com/Azure/azure-powershell/issues/7930</span><span class="sxs-lookup"><span data-stu-id="dca39-1069">More information here: https://github.com/Azure/azure-powershell/issues/7930</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="dca39-1070">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="dca39-1070">Az.Sql</span></span>
+* <span data-ttu-id="dca39-1071">AuditingEndpointsCommunicator uppdateras.</span><span class="sxs-lookup"><span data-stu-id="dca39-1071">Updating AuditingEndpointsCommunicator.</span></span>
+    - <span data-ttu-id="dca39-1072">Åtgärdar beteendet hos ett gränsscenario när nya diagnostikinställningar skapas.</span><span class="sxs-lookup"><span data-stu-id="dca39-1072">Fixing the behavior of an edge case while creating new diagnostic settings.</span></span>
+
+#### <a name="azstorage"></a><span data-ttu-id="dca39-1073">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="dca39-1073">Az.Storage</span></span>
+* <span data-ttu-id="dca39-1074">Stöd för BlockBlobStorage när Storage-konto skapas      - New-AzStorageAccount</span><span class="sxs-lookup"><span data-stu-id="dca39-1074">Support Kind BlockBlobStorage when create Storage account      - New-AzStorageAccount</span></span>
+
+## <a name="140---february-2019"></a><span data-ttu-id="dca39-1075">1.4.0 – februari 2019</span><span class="sxs-lookup"><span data-stu-id="dca39-1075">1.4.0 - February 2019</span></span>
+#### <a name="azanalysisservices"></a><span data-ttu-id="dca39-1076">Az.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="dca39-1076">Az.AnalysisServices</span></span>
+* <span data-ttu-id="dca39-1077">Inaktuell AddAzureASAccount-cmdlet</span><span class="sxs-lookup"><span data-stu-id="dca39-1077">Deprecated AddAzureASAccount cmdlet</span></span>
+
+#### <a name="azautomation"></a><span data-ttu-id="dca39-1078">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="dca39-1078">Az.Automation</span></span>
+* <span data-ttu-id="dca39-1079">Hjälpen för Import-AzAutomationDscNodeConfiguration har uppdaterats</span><span class="sxs-lookup"><span data-stu-id="dca39-1079">Update help for Import-AzAutomationDscNodeConfiguration</span></span>
+* <span data-ttu-id="dca39-1080">Konfigurationsnamnsvalidering har lagts till i cmdleten Import-AzAutomationDscConfiguration</span><span class="sxs-lookup"><span data-stu-id="dca39-1080">Added configuration name validation to Import-AzAutomationDscConfiguration cmdlet</span></span>
+* <span data-ttu-id="dca39-1081">Förbättrad felhantering för cmdleten Import-AzAutomationDscConfiguration</span><span class="sxs-lookup"><span data-stu-id="dca39-1081">Improved error handling for Import-AzAutomationDscConfiguration cmdlet</span></span>
+
+#### <a name="azcognitiveservices"></a><span data-ttu-id="dca39-1082">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="dca39-1082">Az.CognitiveServices</span></span>
+* <span data-ttu-id="dca39-1083">CustomSubdomainName har lagts till som en ny valfri parameter för New-AzCognitiveServicesAccount, som används för att ange underdomän för resursen.</span><span class="sxs-lookup"><span data-stu-id="dca39-1083">Added CustomSubdomainName as a new optional parameter for New-AzCognitiveServicesAccount which is used to specify subdomain for the resource.</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="dca39-1084">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="dca39-1084">Az.Compute</span></span>
+* <span data-ttu-id="dca39-1085">Problemet med ID-parameteruppsättningar har åtgärdats</span><span class="sxs-lookup"><span data-stu-id="dca39-1085">Fix issue with ID parameter sets</span></span>
+* <span data-ttu-id="dca39-1086">Get-AzVMExtension har uppdaterats så att alla installerade tillägg visas om parametern Name inte har angetts</span><span class="sxs-lookup"><span data-stu-id="dca39-1086">Update Get-AzVMExtension to list all installed extension if Name parameter is not provided</span></span>
+* <span data-ttu-id="dca39-1087">Parametrarna Tag och ResourceId har lagts till i cmdleten Update-AzImage</span><span class="sxs-lookup"><span data-stu-id="dca39-1087">Add Tag and ResourceId parameters to Update-AzImage cmdlet</span></span>
+* <span data-ttu-id="dca39-1088">Get-AzVmssVM utan instans-ID och med InstanceView kan visa virtuella VMSS-datorer med instansvyn.</span><span class="sxs-lookup"><span data-stu-id="dca39-1088">Get-AzVmssVM without instance ID and with InstanceView can list VMSS VMs with instance view.</span></span>
+
+#### <a name="azdatalakestore"></a><span data-ttu-id="dca39-1089">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="dca39-1089">Az.DataLakeStore</span></span>
+* <span data-ttu-id="dca39-1090">Cmdletar har lagts till för uppräkning och återställning av borttagna objekt i ADL</span><span class="sxs-lookup"><span data-stu-id="dca39-1090">Add cmdlets for ADL deleted item enumerate and restore</span></span>
+
+#### <a name="azeventhub"></a><span data-ttu-id="dca39-1091">Az.EventHub</span><span class="sxs-lookup"><span data-stu-id="dca39-1091">Az.EventHub</span></span>
+* <span data-ttu-id="dca39-1092">Ny boolesk egenskap SkipEmptyArchives har lagts till i Skip Empty Archives i CaptureDescription-klassen i Eventhub</span><span class="sxs-lookup"><span data-stu-id="dca39-1092">Added new boolean property SkipEmptyArchives to Skip Empty Archives in CaptureDescription class of Eventhub</span></span> 
+
+#### <a name="azkeyvault"></a><span data-ttu-id="dca39-1093">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="dca39-1093">Az.KeyVault</span></span>
+* <span data-ttu-id="dca39-1094">Taggning i Set-AzKeyVaultSecret har åtgärdats</span><span class="sxs-lookup"><span data-stu-id="dca39-1094">Fix tagging on Set-AzKeyVaultSecret</span></span>
+
+#### <a name="azlogicapp"></a><span data-ttu-id="dca39-1095">Az.LogicApp</span><span class="sxs-lookup"><span data-stu-id="dca39-1095">Az.LogicApp</span></span>
+* <span data-ttu-id="dca39-1096">Grundläggande SKU har lagts till för Integrationskonton</span><span class="sxs-lookup"><span data-stu-id="dca39-1096">Add in Basic sku for Integration Accounts</span></span>
+* <span data-ttu-id="dca39-1097">XSLT 2.0, XSLT 3.0 och Flytande mappningstyper har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-1097">Add in XSLT 2.0, XSLT 3.0 and Liquid Map Types</span></span>
+* <span data-ttu-id="dca39-1098">Nya cmdletar för integrationskontosammansättningar</span><span class="sxs-lookup"><span data-stu-id="dca39-1098">New cmdlets for Integration Account Assemblies</span></span>
+    - <span data-ttu-id="dca39-1099">Get-AzIntegrationAccountAssembly</span><span class="sxs-lookup"><span data-stu-id="dca39-1099">Get-AzIntegrationAccountAssembly</span></span>
+    - <span data-ttu-id="dca39-1100">New-AzIntegrationAccountAssembly</span><span class="sxs-lookup"><span data-stu-id="dca39-1100">New-AzIntegrationAccountAssembly</span></span>
+    - <span data-ttu-id="dca39-1101">Remove-AzIntegrationAccountAssembly</span><span class="sxs-lookup"><span data-stu-id="dca39-1101">Remove-AzIntegrationAccountAssembly</span></span>
+    - <span data-ttu-id="dca39-1102">Set-AzIntegrationAccountAssembly</span><span class="sxs-lookup"><span data-stu-id="dca39-1102">Set-AzIntegrationAccountAssembly</span></span>
+* <span data-ttu-id="dca39-1103">Nya cmdletar för batchkonfiguration för integrationskonto</span><span class="sxs-lookup"><span data-stu-id="dca39-1103">New cmdlets for Integration Account Batch Configuration</span></span>
+    - <span data-ttu-id="dca39-1104">Get-AzIntegrationAccountBatchConfiguration</span><span class="sxs-lookup"><span data-stu-id="dca39-1104">Get-AzIntegrationAccountBatchConfiguration</span></span>
+    - <span data-ttu-id="dca39-1105">New-AzIntegrationAccountBatchConfiguration</span><span class="sxs-lookup"><span data-stu-id="dca39-1105">New-AzIntegrationAccountBatchConfiguration</span></span>
+    - <span data-ttu-id="dca39-1106">Remove-AzIntegrationAccountBatchConfiguration</span><span class="sxs-lookup"><span data-stu-id="dca39-1106">Remove-AzIntegrationAccountBatchConfiguration</span></span>
+    - <span data-ttu-id="dca39-1107">Set-AzIntegrationAccountBatchConfiguration</span><span class="sxs-lookup"><span data-stu-id="dca39-1107">Set-AzIntegrationAccountBatchConfiguration</span></span>
+* <span data-ttu-id="dca39-1108">Logic App-SDK har uppdaterats till version 4.1.0</span><span class="sxs-lookup"><span data-stu-id="dca39-1108">Update Logic App SDK to version 4.1.0</span></span>
+
+#### <a name="azmonitor"></a><span data-ttu-id="dca39-1109">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="dca39-1109">Az.Monitor</span></span>
+* <span data-ttu-id="dca39-1110">Hjälpen för Get-AzMetric har uppdaterats</span><span class="sxs-lookup"><span data-stu-id="dca39-1110">Update help for Get-AzMetric</span></span>
+
+#### <a name="aznetwork"></a><span data-ttu-id="dca39-1111">Az.Network</span><span class="sxs-lookup"><span data-stu-id="dca39-1111">Az.Network</span></span>
+* <span data-ttu-id="dca39-1112">Hjälpexempel för Add-AzApplicationGatewayCustomError har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-1112">Update help example for Add-AzApplicationGatewayCustomError</span></span>
+
+#### <a name="azoperationalinsights"></a><span data-ttu-id="dca39-1113">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="dca39-1113">Az.OperationalInsights</span></span>
+* <span data-ttu-id="dca39-1114">Ytterligare stöd för datakällorna New och Get ApplicationInsights.</span><span class="sxs-lookup"><span data-stu-id="dca39-1114">Additional support for New and Get ApplicationInsights data source.</span></span>
+    - <span data-ttu-id="dca39-1115">Ny ApplicationInsights-typ har lagts till för att ge stöd för ”Get specific” och ”Get all” för ApplicationInsights-datakällor för angiven arbetsyta.</span><span class="sxs-lookup"><span data-stu-id="dca39-1115">Added new 'ApplicationInsights' kind to support Get specific and Get all ApplicationInsights data sources for given workspace.</span></span> 
+    - <span data-ttu-id="dca39-1116">Cmdleten New-AzOperationalInsightsApplicationInsightsDataSource har lagts till för att skapa datakälla med angivna parametrar för Application Insights-resurs: subscription Id, resourceGroupName och name.</span><span class="sxs-lookup"><span data-stu-id="dca39-1116">Added New-AzOperationalInsightsApplicationInsightsDataSource cmdlet for creating data source by given Application-Insights resource parameters: subscription Id, resourceGroupName and name.</span></span> 
+
+#### <a name="azresources"></a><span data-ttu-id="dca39-1117">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="dca39-1117">Az.Resources</span></span>
+* <span data-ttu-id="dca39-1118">Korrigering av problemet https://github.com/Azure/azure-powershell/issues/8166</span><span class="sxs-lookup"><span data-stu-id="dca39-1118">Fix for issue https://github.com/Azure/azure-powershell/issues/8166</span></span>
+* <span data-ttu-id="dca39-1119">Korrigering av problemet https://github.com/Azure/azure-powershell/issues/8235</span><span class="sxs-lookup"><span data-stu-id="dca39-1119">Fix for issue https://github.com/Azure/azure-powershell/issues/8235</span></span>
+* <span data-ttu-id="dca39-1120">Korrigering av problemet https://github.com/Azure/azure-powershell/issues/6219</span><span class="sxs-lookup"><span data-stu-id="dca39-1120">Fix for issue https://github.com/Azure/azure-powershell/issues/6219</span></span>
+* <span data-ttu-id="dca39-1121">Fel som gör att KeyCredentials inte kan skapas upprepade gånger har åtgärdats</span><span class="sxs-lookup"><span data-stu-id="dca39-1121">Fix bug preventing repeat creation of KeyCredentials</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="dca39-1122">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="dca39-1122">Az.Sql</span></span>
+* <span data-ttu-id="dca39-1123">Lägg till stöd för hyperskalanivån för SQL DB</span><span class="sxs-lookup"><span data-stu-id="dca39-1123">Add support for SQL DB Hyperscale tier</span></span>
+* <span data-ttu-id="dca39-1124">Ett fel har åtgärdats där återställningen kunde misslyckas på grund av onödiga inställningsegenskaper i restore-förfrågan</span><span class="sxs-lookup"><span data-stu-id="dca39-1124">Fixed bug where restore could fail due to setting unnecessary properties in restore request</span></span>
+
+#### <a name="azwebsites"></a><span data-ttu-id="dca39-1125">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="dca39-1125">Az.Websites</span></span>
+* <span data-ttu-id="dca39-1126">Rätt exempel i Get-AzWebAppSlotMetrics</span><span class="sxs-lookup"><span data-stu-id="dca39-1126">Correct example in Get-AzWebAppSlotMetrics</span></span>
+
+## <a name="130---february-2019"></a><span data-ttu-id="dca39-1127">1.3.0 – februari 2019</span><span class="sxs-lookup"><span data-stu-id="dca39-1127">1.3.0 - February 2019</span></span>
+#### <a name="azaccounts"></a><span data-ttu-id="dca39-1128">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="dca39-1128">Az.Accounts</span></span>
+* <span data-ttu-id="dca39-1129">Uppdatera till den senaste versionen av ClientRuntime</span><span class="sxs-lookup"><span data-stu-id="dca39-1129">Update to latest version of ClientRuntime</span></span>
+
+#### <a name="azanalysisservices"></a><span data-ttu-id="dca39-1130">Az.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="dca39-1130">Az.AnalysisServices</span></span>
+<span data-ttu-id="dca39-1131">Allmän tillgänglighet för Az.AnalysisServices-modulen.</span><span class="sxs-lookup"><span data-stu-id="dca39-1131">General availability for Az.AnalysisServices module.</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="dca39-1132">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="dca39-1132">Az.Compute</span></span>
+* <span data-ttu-id="dca39-1133">AEM-tillägg: Lägg till stöd för UltraSSD-, P60-, P70- och P80-diskar</span><span class="sxs-lookup"><span data-stu-id="dca39-1133">AEM extension: Add support for UltraSSD and P60,P70 and P80 disks</span></span>
+* <span data-ttu-id="dca39-1134">Uppdatera hjälpbeskrivning för Set-AzVMBootDiagnostics</span><span class="sxs-lookup"><span data-stu-id="dca39-1134">Update help description for Set-AzVMBootDiagnostics</span></span>
+* <span data-ttu-id="dca39-1135">Uppdatera hjälpbeskrivning och exempel för Update-AzImage</span><span class="sxs-lookup"><span data-stu-id="dca39-1135">Update help description and example for Update-AzImage</span></span>
+
+#### <a name="azrecoveryservices"></a><span data-ttu-id="dca39-1136">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="dca39-1136">Az.RecoveryServices</span></span>
+<span data-ttu-id="dca39-1137">Allmän tillgänglighet för Az.RecoveryServices-modulen.</span><span class="sxs-lookup"><span data-stu-id="dca39-1137">General availability for Az.RecoveryServices module.</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="dca39-1138">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="dca39-1138">Az.Resources</span></span>
+* <span data-ttu-id="dca39-1139">Korrigera taggar för resursgrupper</span><span class="sxs-lookup"><span data-stu-id="dca39-1139">Fix tagging for resource groups</span></span> 
+    - <span data-ttu-id="dca39-1140">Mer information här: https://github.com/Azure/azure-powershell/issues/8166</span><span class="sxs-lookup"><span data-stu-id="dca39-1140">More information here: https://github.com/Azure/azure-powershell/issues/8166</span></span>
+* <span data-ttu-id="dca39-1141">Åtgärda problem där `Get-AzureRmRoleAssignment` inte respekterar -ErrorAction</span><span class="sxs-lookup"><span data-stu-id="dca39-1141">Fix issue where `Get-AzureRmRoleAssignment` doesn't respect -ErrorAction</span></span> 
+    - <span data-ttu-id="dca39-1142">Mer information här: https://github.com/Azure/azure-powershell/issues/8235</span><span class="sxs-lookup"><span data-stu-id="dca39-1142">More information here: https://github.com/Azure/azure-powershell/issues/8235</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="dca39-1143">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="dca39-1143">Az.Sql</span></span>
+* <span data-ttu-id="dca39-1144">Lägga till Get/Set-AzSqlDatabaseBackupShortTermRetentionPolicy</span><span class="sxs-lookup"><span data-stu-id="dca39-1144">Add Get/Set AzSqlDatabaseBackupShortTermRetentionPolicy</span></span>
+* <span data-ttu-id="dca39-1145">Åtgärda problem där ett nullref-undantag uppstår när du kör SQL-cmdletar och inte är inloggad på ett Azure-konto</span><span class="sxs-lookup"><span data-stu-id="dca39-1145">Fix issue where not being logged into Azure account would result in nullref exception when executing SQL cmdlets</span></span>
+* <span data-ttu-id="dca39-1146">Åtgärda nullref-undantag i Get-AzSqlCapability</span><span class="sxs-lookup"><span data-stu-id="dca39-1146">Fixed null ref exception in Get-AzSqlCapability</span></span>
+
+## <a name="121---january-2019"></a><span data-ttu-id="dca39-1147">1.2.1 – januari 2019</span><span class="sxs-lookup"><span data-stu-id="dca39-1147">1.2.1 - January 2019</span></span>
+#### <a name="azaccounts"></a><span data-ttu-id="dca39-1148">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="dca39-1148">Az.Accounts</span></span>
+* <span data-ttu-id="dca39-1149">Version med rätt version av autentisering</span><span class="sxs-lookup"><span data-stu-id="dca39-1149">Release with correct version of Authentication</span></span>
+
+#### <a name="azanalysisservices"></a><span data-ttu-id="dca39-1150">Az.AnalysisServices</span><span class="sxs-lookup"><span data-stu-id="dca39-1150">Az.AnalysisServices</span></span>
+* <span data-ttu-id="dca39-1151">Version med uppdaterat autentiseringsberoende</span><span class="sxs-lookup"><span data-stu-id="dca39-1151">Release with updated Authentication dependency</span></span>
+
+#### <a name="azrecoveryservices"></a><span data-ttu-id="dca39-1152">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="dca39-1152">Az.RecoveryServices</span></span>
+* <span data-ttu-id="dca39-1153">Version med uppdaterat autentiseringsberoende</span><span class="sxs-lookup"><span data-stu-id="dca39-1153">Release with updated Authentication dependency</span></span>
+
+## <a name="120---january-2019"></a><span data-ttu-id="dca39-1154">1.2.0 – januari 2019</span><span class="sxs-lookup"><span data-stu-id="dca39-1154">1.2.0 - January 2019</span></span>
+#### <a name="azaccounts"></a><span data-ttu-id="dca39-1155">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="dca39-1155">Az.Accounts</span></span>
+* <span data-ttu-id="dca39-1156">Lägga till interaktiv autentisering och autentisering med användarnamn/lösenord för endast Windows PowerShell 5.1</span><span class="sxs-lookup"><span data-stu-id="dca39-1156">Add interactive and username/password authentication for Windows PowerShell 5.1 only</span></span>
+* <span data-ttu-id="dca39-1157">Uppdatera felaktiga URL:er för onlinehjälp</span><span class="sxs-lookup"><span data-stu-id="dca39-1157">Update incorrect online help URLs</span></span>
+* <span data-ttu-id="dca39-1158">Lägga till varningsmeddelande i PS Core för Uninstall-AzureRm</span><span class="sxs-lookup"><span data-stu-id="dca39-1158">Add warning message in PS Core for Uninstall-AzureRm</span></span>
+
+#### <a name="azaks"></a><span data-ttu-id="dca39-1159">Az.Aks</span><span class="sxs-lookup"><span data-stu-id="dca39-1159">Az.Aks</span></span>
+* <span data-ttu-id="dca39-1160">Uppdatera felaktiga URL:er för onlinehjälp</span><span class="sxs-lookup"><span data-stu-id="dca39-1160">Update incorrect online help URLs</span></span>
+
+#### <a name="azautomation"></a><span data-ttu-id="dca39-1161">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="dca39-1161">Az.Automation</span></span>
+* <span data-ttu-id="dca39-1162">Stöd för Python 2-runbookflöden har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-1162">Added support for Python 2 runbooks</span></span>
+* <span data-ttu-id="dca39-1163">Uppdatera felaktiga URL:er för onlinehjälp</span><span class="sxs-lookup"><span data-stu-id="dca39-1163">Update incorrect online help URLs</span></span>
+
+#### <a name="azcdn"></a><span data-ttu-id="dca39-1164">Az.Cdn</span><span class="sxs-lookup"><span data-stu-id="dca39-1164">Az.Cdn</span></span>
+* <span data-ttu-id="dca39-1165">Uppdatera felaktiga URL:er för onlinehjälp</span><span class="sxs-lookup"><span data-stu-id="dca39-1165">Update incorrect online help URLs</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="dca39-1166">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="dca39-1166">Az.Compute</span></span>
+* <span data-ttu-id="dca39-1167">Lägga till cmdleten Invoke-AzVMReimage</span><span class="sxs-lookup"><span data-stu-id="dca39-1167">Add Invoke-AzVMReimage cmdlet</span></span>
+* <span data-ttu-id="dca39-1168">Lägga till TempDisk-parameter i Set-AzVmss</span><span class="sxs-lookup"><span data-stu-id="dca39-1168">Add TempDisk parameter to Set-AzVmss</span></span>
+* <span data-ttu-id="dca39-1169">Korrigera varningsmeddelande för New-AzVM</span><span class="sxs-lookup"><span data-stu-id="dca39-1169">Fix the warning message of New-AzVM</span></span>
+
+#### <a name="azcontainerregistry"></a><span data-ttu-id="dca39-1170">Az.ContainerRegistry</span><span class="sxs-lookup"><span data-stu-id="dca39-1170">Az.ContainerRegistry</span></span>
+* <span data-ttu-id="dca39-1171">Uppdatera felaktiga URL:er för onlinehjälp</span><span class="sxs-lookup"><span data-stu-id="dca39-1171">Update incorrect online help URLs</span></span>
+
+#### <a name="azdatafactory"></a><span data-ttu-id="dca39-1172">Az.DataFactory</span><span class="sxs-lookup"><span data-stu-id="dca39-1172">Az.DataFactory</span></span>
+* <span data-ttu-id="dca39-1173">ADF .Net SDK-versionen har uppdaterats till 3.0.0</span><span class="sxs-lookup"><span data-stu-id="dca39-1173">Updated ADF .Net SDK version to 3.0.0</span></span>
+
+#### <a name="azdatalakestore"></a><span data-ttu-id="dca39-1174">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="dca39-1174">Az.DataLakeStore</span></span>
+* <span data-ttu-id="dca39-1175">Åtgärda problem med ADLS-slutpunkt vid användning av MSI</span><span class="sxs-lookup"><span data-stu-id="dca39-1175">Fix issue with ADLS endpoint when using MSI</span></span>
+    - <span data-ttu-id="dca39-1176">Mer information här: https://github.com/Azure/azure-powershell/issues/7462</span><span class="sxs-lookup"><span data-stu-id="dca39-1176">More information here: https://github.com/Azure/azure-powershell/issues/7462</span></span>
+* <span data-ttu-id="dca39-1177">Uppdatera felaktiga URL:er för onlinehjälp</span><span class="sxs-lookup"><span data-stu-id="dca39-1177">Update incorrect online help URLs</span></span>
+
+#### <a name="aziothub"></a><span data-ttu-id="dca39-1178">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="dca39-1178">Az.IotHub</span></span>
+* <span data-ttu-id="dca39-1179">Lägga till kodningsformat i cmdleten Add-IotHubRoutingEndpoint.</span><span class="sxs-lookup"><span data-stu-id="dca39-1179">Add Encoding format to Add-IotHubRoutingEndpoint cmdlet.</span></span>
+
+#### <a name="azkeyvault"></a><span data-ttu-id="dca39-1180">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="dca39-1180">Az.KeyVault</span></span>
+* <span data-ttu-id="dca39-1181">Uppdatera felaktiga URL:er för onlinehjälp</span><span class="sxs-lookup"><span data-stu-id="dca39-1181">Update incorrect online help URLs</span></span>
+
+#### <a name="aznetwork"></a><span data-ttu-id="dca39-1182">Az.Network</span><span class="sxs-lookup"><span data-stu-id="dca39-1182">Az.Network</span></span>
+* <span data-ttu-id="dca39-1183">Uppdatera felaktiga URL:er för onlinehjälp</span><span class="sxs-lookup"><span data-stu-id="dca39-1183">Update incorrect online help URLs</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="dca39-1184">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="dca39-1184">Az.Resources</span></span>
+* <span data-ttu-id="dca39-1185">Åtgärda felaktiga exempel i referensdokumentationen ”New-AzADAppCredential” och ”New-AzADSpCredential”</span><span class="sxs-lookup"><span data-stu-id="dca39-1185">Fix incorrect examples in 'New-AzADAppCredential' and 'New-AzADSpCredential' reference documentation</span></span>
+* <span data-ttu-id="dca39-1186">Åtgärda problem där sökvägen för parametern ”-TemplateFile” inte omvandlas innan cmdletarna för distribution i resursgruppen körs</span><span class="sxs-lookup"><span data-stu-id="dca39-1186">Fix issue where path for '-TemplateFile' parameter was not being resolved before executing resource group deployment cmdlets</span></span>
+* <span data-ttu-id="dca39-1187">Az.Resources: Korrigera dokumentationen om standardvärdet för New-AzureRmPolicyDefinition -Mode</span><span class="sxs-lookup"><span data-stu-id="dca39-1187">Az.Resources: Correct documentation for New-AzureRmPolicyDefinition -Mode default value</span></span>
+* <span data-ttu-id="dca39-1188">Az.Resources: Korrigering av problemet https://github.com/Azure/azure-powershell/issues/7522</span><span class="sxs-lookup"><span data-stu-id="dca39-1188">Az.Resources: Fix for issue https://github.com/Azure/azure-powershell/issues/7522</span></span>
+* <span data-ttu-id="dca39-1189">Az.Resources: Korrigering av problemet https://github.com/Azure/azure-powershell/issues/5747</span><span class="sxs-lookup"><span data-stu-id="dca39-1189">Az.Resources: Fix for issue https://github.com/Azure/azure-powershell/issues/5747</span></span>
+* <span data-ttu-id="dca39-1190">Åtgärda formateringsproblemet med objektet ”PSResourceGroupDeployment”</span><span class="sxs-lookup"><span data-stu-id="dca39-1190">Fix formatting issue with 'PSResourceGroupDeployment' object</span></span>
+    - <span data-ttu-id="dca39-1191">Mer information här: https://github.com/Azure/azure-powershell/issues/2123</span><span class="sxs-lookup"><span data-stu-id="dca39-1191">More information here: https://github.com/Azure/azure-powershell/issues/2123</span></span>
+
+#### <a name="azservicefabric"></a><span data-ttu-id="dca39-1192">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="dca39-1192">Az.ServiceFabric</span></span>
+* <span data-ttu-id="dca39-1193">Återställ när ett certifikat läggs till i en Virtual Machine Scale Sets-modell men ett undantag genereras. Detta har gjorts för att åtgärda följande fel: https://github.com/Azure/service-fabric-issues/issues/932</span><span class="sxs-lookup"><span data-stu-id="dca39-1193">Rollback when a certificate is added to VMSS model but an exception is thrown this is to fix bug: https://github.com/Azure/service-fabric-issues/issues/932</span></span>
+* <span data-ttu-id="dca39-1194">Korrigera några felmeddelanden.</span><span class="sxs-lookup"><span data-stu-id="dca39-1194">Fix some error messages.</span></span>
+* <span data-ttu-id="dca39-1195">Korrigering av skapande av kluster med ARM-mall som är standard för New-AzServiceFabriCluster som inte fungerade med migrering till Az.</span><span class="sxs-lookup"><span data-stu-id="dca39-1195">Fix create cluster with default ARM template for New-AzServiceFabriCluster which was not working with migration to Az.</span></span>
+* <span data-ttu-id="dca39-1196">Korrigering av tilläggning av kluster/programcertifikat så att endast VM Scale Sets som motsvarar klustret läggs till genom att kontrollera ID för klustret i tillägget.</span><span class="sxs-lookup"><span data-stu-id="dca39-1196">Fix add cluster/application certificate to only add to VM Scale Sets that correspond to the cluster by checking cluster id in the extension.</span></span>
+
+#### <a name="azsignalr"></a><span data-ttu-id="dca39-1197">Az.SignalR</span><span class="sxs-lookup"><span data-stu-id="dca39-1197">Az.SignalR</span></span>
+* <span data-ttu-id="dca39-1198">Uppdatera felaktiga URL:er för onlinehjälp</span><span class="sxs-lookup"><span data-stu-id="dca39-1198">Update incorrect online help URLs</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="dca39-1199">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="dca39-1199">Az.Sql</span></span>
+* <span data-ttu-id="dca39-1200">Uppdatera felaktiga URL:er för onlinehjälp</span><span class="sxs-lookup"><span data-stu-id="dca39-1200">Update incorrect online help URLs</span></span>
+* <span data-ttu-id="dca39-1201">Uppdaterad parameterbeskrivning för LicenseType-parameter med möjliga värden</span><span class="sxs-lookup"><span data-stu-id="dca39-1201">Updated parameter description for LicenseType parameter with possible values</span></span>
+* <span data-ttu-id="dca39-1202">Korrigering för att uppdatera hanterad instansidentitet som inte fungerar när det är den enda uppdaterade egenskapen</span><span class="sxs-lookup"><span data-stu-id="dca39-1202">Fix for updating managed instance identity not working when it is the only updated property</span></span>
+* <span data-ttu-id="dca39-1203">Stöd för anpassad sortering på hanterad instans</span><span class="sxs-lookup"><span data-stu-id="dca39-1203">Support for custom collation on managed instance</span></span>
+
+#### <a name="azstorage"></a><span data-ttu-id="dca39-1204">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="dca39-1204">Az.Storage</span></span>
+* <span data-ttu-id="dca39-1205">Uppdatera felaktiga URL:er för onlinehjälp</span><span class="sxs-lookup"><span data-stu-id="dca39-1205">Update incorrect online help URLs</span></span>
+* <span data-ttu-id="dca39-1206">Tillhandahåll detaljerat felmeddelande när en användare försöker hämta/konfigurera klassisk loggning/mått på ett Premium Storage-konto eftersom Premium Storage-kontot inte har stöd för klassisk loggning/mått.</span><span class="sxs-lookup"><span data-stu-id="dca39-1206">Give detail error message when get/set classic Logging/Metric on Premium Storage Account, since Premium Storage Account not supoort classic Logging/Metric.</span></span>
+    - <span data-ttu-id="dca39-1207">Get/Set-AzStorageServiceLoggingProperty</span><span class="sxs-lookup"><span data-stu-id="dca39-1207">Get/Set-AzStorageServiceLoggingProperty</span></span>
+    - <span data-ttu-id="dca39-1208">Get/Set-AzStorageServiceMetricsProperty</span><span class="sxs-lookup"><span data-stu-id="dca39-1208">Get/Set-AzStorageServiceMetricsProperty</span></span>
+
+#### <a name="aztrafficmanager"></a><span data-ttu-id="dca39-1209">Az.TrafficManager</span><span class="sxs-lookup"><span data-stu-id="dca39-1209">Az.TrafficManager</span></span>
+* <span data-ttu-id="dca39-1210">Uppdatera felaktiga URL:er för onlinehjälp</span><span class="sxs-lookup"><span data-stu-id="dca39-1210">Update incorrect online help URLs</span></span>
+
+#### <a name="azwebsites"></a><span data-ttu-id="dca39-1211">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="dca39-1211">Az.Websites</span></span>
+* <span data-ttu-id="dca39-1212">Uppdatera felaktiga URL:er för onlinehjälp</span><span class="sxs-lookup"><span data-stu-id="dca39-1212">Update incorrect online help URLs</span></span>
+* <span data-ttu-id="dca39-1213">Korrigerar ”New-AzWebAppSSLBinding” så att certifikatet laddas upp till rätt resursgrupp och plats om appen finns i en ASE.</span><span class="sxs-lookup"><span data-stu-id="dca39-1213">Fixes 'New-AzWebAppSSLBinding' to upload the certificate to the correct resourcegroup+location if the app is hosted on an ASE.</span></span>
+* <span data-ttu-id="dca39-1214">Korrigerar ”New-AzWebAppSSLBinding” så att taggarna inte skrivs över på en bindning av ett SSL-certifikat till en app</span><span class="sxs-lookup"><span data-stu-id="dca39-1214">Fixes 'New-AzWebAppSSLBinding' to not overwrite the tags on binding an SSL certificate to an app</span></span>
+
+## <a name="110---january-2019"></a><span data-ttu-id="dca39-1215">1.1.0 – januari 2019</span><span class="sxs-lookup"><span data-stu-id="dca39-1215">1.1.0 - January 2019</span></span>
+#### <a name="azaccounts"></a><span data-ttu-id="dca39-1216">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="dca39-1216">Az.Accounts</span></span>
+* <span data-ttu-id="dca39-1217">Lade till omfattningen ”Lokal” till Enable-AzureRmAlias</span><span class="sxs-lookup"><span data-stu-id="dca39-1217">Add 'Local' Scope to Enable-AzureRmAlias</span></span>
+
+#### <a name="azcompute"></a><span data-ttu-id="dca39-1218">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="dca39-1218">Az.Compute</span></span>
+* <span data-ttu-id="dca39-1219">Namn är nu valfritt i ID-parametern för Restart/Start/Stop/Remove/Set-AzVM och Save-AzVMImage</span><span class="sxs-lookup"><span data-stu-id="dca39-1219">Name is now optional in ID parameter set for Restart/Start/Stop/Remove/Set-AzVM and Save-AzVMImage</span></span>
+* <span data-ttu-id="dca39-1220">Uppdaterade beskrivningen av ID i hjälpfiler</span><span class="sxs-lookup"><span data-stu-id="dca39-1220">Updated the description of ID in help files</span></span>
+* <span data-ttu-id="dca39-1221">Åtgärdade problemet med bakåtkompatibilitet med modulen Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="dca39-1221">Fix backward compatibility issue with Az.Accounts module</span></span>
+
+#### <a name="azdatalakestore"></a><span data-ttu-id="dca39-1222">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="dca39-1222">Az.DataLakeStore</span></span>
+* <span data-ttu-id="dca39-1223">Uppdatera sdk-versionen av dataplanet till 1.1.14 för SDK-korrigeringar.</span><span class="sxs-lookup"><span data-stu-id="dca39-1223">Update the sdk version of dataplane to 1.1.14 for SDK fixes.</span></span>
+    - <span data-ttu-id="dca39-1224">Korrigerade hanteringen av negativ accesstime och modificationtime för getfilestatus och liststatus; korrigera asynkront annulleringstoken</span><span class="sxs-lookup"><span data-stu-id="dca39-1224">Fix handling of negative acesstime and modificationtime for getfilestatus and liststatus, Fix async cancellation token</span></span>
+
+#### <a name="azeventgrid"></a><span data-ttu-id="dca39-1225">Az.EventGrid</span><span class="sxs-lookup"><span data-stu-id="dca39-1225">Az.EventGrid</span></span>
+* <span data-ttu-id="dca39-1226">Uppdaterat för användning av API-versionen 2019-01-01.</span><span class="sxs-lookup"><span data-stu-id="dca39-1226">Updated to use the 2019-01-01 API version.</span></span>
+* <span data-ttu-id="dca39-1227">Uppdaterade följande cmdletar för att stödja nytt scenario i API-versionen 2019-01-01</span><span class="sxs-lookup"><span data-stu-id="dca39-1227">Update the following cmdlets to support new scenario in 2019-01-01 API version</span></span>
+    - <span data-ttu-id="dca39-1228">New-AzureRmEventGridSubscription: Lade till ny valfria parametrar för att ange:</span><span class="sxs-lookup"><span data-stu-id="dca39-1228">New-AzureRmEventGridSubscription: Add new optional parameters for specifying:</span></span>
+        - <span data-ttu-id="dca39-1229">Time-To-Live för händelse,</span><span class="sxs-lookup"><span data-stu-id="dca39-1229">Event Time-To-Live,</span></span>
+        - <span data-ttu-id="dca39-1230">Maximalt antal leveransförsök för händelserna,</span><span class="sxs-lookup"><span data-stu-id="dca39-1230">Maximum number of delivery attempts for the events,</span></span>
+        - <span data-ttu-id="dca39-1231">Slutpunkt för obeställbar meddelanden.</span><span class="sxs-lookup"><span data-stu-id="dca39-1231">Dead letter endpoint.</span></span>
+    - <span data-ttu-id="dca39-1232">Update-AzureRmEventGridSubscription: Lade till ny valfria parametrar för att ange:</span><span class="sxs-lookup"><span data-stu-id="dca39-1232">Update-AzureRmEventGridSubscription: Add new optional parameters for specifying:</span></span>
+        - <span data-ttu-id="dca39-1233">Time-To-Live för händelse,</span><span class="sxs-lookup"><span data-stu-id="dca39-1233">Event Time-To-Live,</span></span>
+        - <span data-ttu-id="dca39-1234">Maximalt antal leveransförsök för händelserna,</span><span class="sxs-lookup"><span data-stu-id="dca39-1234">Maximum number of delivery attempts for the events,</span></span>
+        - <span data-ttu-id="dca39-1235">Slutpunkt för obeställbar meddelanden.</span><span class="sxs-lookup"><span data-stu-id="dca39-1235">Dead letter endpoint.</span></span>
+* <span data-ttu-id="dca39-1236">Lade till nya enum-värden (storageQueue och hybridConnection) för alternativet EndpointType i cmdletarna New-AzureRmEventGridSubscription och Update-AzureRmEventGridSubscription.</span><span class="sxs-lookup"><span data-stu-id="dca39-1236">Add new enum values (namely, storageQueue and hybridConnection) for EndpointType option in New-AzureRmEventGridSubscription and Update-AzureRmEventGridSubscription cmdlets.</span></span>
+* <span data-ttu-id="dca39-1237">Visa varningsmeddelanden om skapande eller uppdatering av händelseprenumerationen förväntas medföra manuell åtgärd från användaren.</span><span class="sxs-lookup"><span data-stu-id="dca39-1237">Show warning message if creating or updating the event subscription is expected to entail manual action from user.</span></span>
+
+#### <a name="aziothub"></a><span data-ttu-id="dca39-1238">Az.IotHub</span><span class="sxs-lookup"><span data-stu-id="dca39-1238">Az.IotHub</span></span>
+* <span data-ttu-id="dca39-1239">Har uppdaterats till den senaste versionen av SDK:n lotHub</span><span class="sxs-lookup"><span data-stu-id="dca39-1239">Updated to the latest version of the IotHub SDK</span></span>
+
+#### <a name="azlogicapp"></a><span data-ttu-id="dca39-1240">Az.LogicApp</span><span class="sxs-lookup"><span data-stu-id="dca39-1240">Az.LogicApp</span></span>
+* <span data-ttu-id="dca39-1241">Get-AzLogicApp visar en lista över alla som inte har angivet namn</span><span class="sxs-lookup"><span data-stu-id="dca39-1241">Get-AzLogicApp lists all without specified Name</span></span>
+
+#### <a name="azresources"></a><span data-ttu-id="dca39-1242">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="dca39-1242">Az.Resources</span></span>
+* <span data-ttu-id="dca39-1243">Åtgärdade problem med parameteruppsättningen när parametrarna -ODataQuery och -ResourceId anges för Get-AzResource</span><span class="sxs-lookup"><span data-stu-id="dca39-1243">Fix parameter set issue when providing '-ODataQuery' and '-ResourceId' parameters for 'Get-AzResource'</span></span>
+    - <span data-ttu-id="dca39-1244">Mer information här: https://github.com/Azure/azure-powershell/issues/7875</span><span class="sxs-lookup"><span data-stu-id="dca39-1244">More information here: https://github.com/Azure/azure-powershell/issues/7875</span></span>
+* <span data-ttu-id="dca39-1245">Åtgärdade hantering av parametern -Custom i New/Set-AzPolicyDefinition</span><span class="sxs-lookup"><span data-stu-id="dca39-1245">Fix handling of the -Custom parameter in New/Set-AzPolicyDefinition</span></span>
+* <span data-ttu-id="dca39-1246">Korrigerade stavfel i New-AzDeployment-dokumentationen</span><span class="sxs-lookup"><span data-stu-id="dca39-1246">Fix typo in New-AzDeployment documentation</span></span>
+* <span data-ttu-id="dca39-1247">Gjorde parametern -MailNickname obligatorisk för New-AzADUser</span><span class="sxs-lookup"><span data-stu-id="dca39-1247">Made '-MailNickname' parameter mandatory for 'New-AzADUser'</span></span>
+    - <span data-ttu-id="dca39-1248">Mer information här: https://github.com/Azure/azure-powershell/issues/8220</span><span class="sxs-lookup"><span data-stu-id="dca39-1248">More information here: https://github.com/Azure/azure-powershell/issues/8220</span></span>
+
+#### <a name="azsignalr"></a><span data-ttu-id="dca39-1249">Az.SignalR</span><span class="sxs-lookup"><span data-stu-id="dca39-1249">Az.SignalR</span></span>
+* <span data-ttu-id="dca39-1250">Åtgärdade problemet med bakåtkompatibilitet med modulen Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="dca39-1250">Fix backward compatibility issue with Az.Accounts module</span></span>
+
+#### <a name="azsql"></a><span data-ttu-id="dca39-1251">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="dca39-1251">Az.Sql</span></span>
+* <span data-ttu-id="dca39-1252">Konverterade lagringshanteringsklientens beroende av den normala SDK-implementeringen.</span><span class="sxs-lookup"><span data-stu-id="dca39-1252">Converted the Storage management client dependency to the common SDK implementation.</span></span>
+
+#### <a name="azstorage"></a><span data-ttu-id="dca39-1253">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="dca39-1253">Az.Storage</span></span>
+* <span data-ttu-id="dca39-1254">Angav StorageAccountName för lagringskontext som det verkliga namnet på lagringskontot när det skapas med Sas Token, OAuth eller Anonymous</span><span class="sxs-lookup"><span data-stu-id="dca39-1254">Set the StorageAccountName of Storage context as the real Storage Account Name, when it's created with Sas Token, OAuth or Anonymous</span></span>
+    - <span data-ttu-id="dca39-1255">New-AzStorageContext</span><span class="sxs-lookup"><span data-stu-id="dca39-1255">New-AzStorageContext</span></span>
+* <span data-ttu-id="dca39-1256">Skapade Sas Token för Blob Snapshot-objekt med parametern -FullUri, åtgärdade den returnerade URI:n så att den blir URI för ögonblicksbild</span><span class="sxs-lookup"><span data-stu-id="dca39-1256">Create Sas Token of Blob Snapshot Object with '-FullUri' parameter, fix the returned Uri to be the sanpshot Uri</span></span>
+    - <span data-ttu-id="dca39-1257">New-AzStorageBlobSASToken</span><span class="sxs-lookup"><span data-stu-id="dca39-1257">New-AzStorageBlobSASToken</span></span>
+
+#### <a name="azwebsites"></a><span data-ttu-id="dca39-1258">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="dca39-1258">Az.Websites</span></span>
+* <span data-ttu-id="dca39-1259">Åtgärdade en bugg i datumparsningen i Get-AzDeletedWebApp</span><span class="sxs-lookup"><span data-stu-id="dca39-1259">Fixed a date parsing bug in 'Get-AzDeletedWebApp'</span></span>
+* <span data-ttu-id="dca39-1260">Åtgärdade problemet med bakåtkompatibilitet med modulen Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="dca39-1260">Fix backward compatibility issue with Az.Accounts module</span></span>
+
+## <a name="100---december-2018"></a><span data-ttu-id="dca39-1261">1.0.0 – december 2018</span><span class="sxs-lookup"><span data-stu-id="dca39-1261">1.0.0 - December 2018</span></span>
+### <a name="general"></a><span data-ttu-id="dca39-1262">Allmänt</span><span class="sxs-lookup"><span data-stu-id="dca39-1262">General</span></span>
+
+- <span data-ttu-id="dca39-1263">Allmän tillgänglighet för Az-modulen</span><span class="sxs-lookup"><span data-stu-id="dca39-1263">General Availability of Az Module</span></span>
+- <span data-ttu-id="dca39-1264">Onlinehjälp för varje modul</span><span class="sxs-lookup"><span data-stu-id="dca39-1264">Online help for each module</span></span>
+- <span data-ttu-id="dca39-1265">Mer information och en översikt finns på [Az-informationssidan](https://aka.ms/azps-announce)</span><span class="sxs-lookup"><span data-stu-id="dca39-1265">For more details and a roadmap, see the [Az Announcement page](https://aka.ms/azps-announce)</span></span>
+- <span data-ttu-id="dca39-1266">Information om hur du migrerar från AzureRM finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="dca39-1266">See the [Migration Guide](https://aka.ms/azps-migration-guide) for information on migrating from AzureRM</span></span>
+
+### <a name="azaccounts"></a><span data-ttu-id="dca39-1267">Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="dca39-1267">Az.Accounts</span></span>
+- <span data-ttu-id="dca39-1268">Har ändrats från Az.Profile</span><span class="sxs-lookup"><span data-stu-id="dca39-1268">Changed from Az.Profile</span></span>
+- <span data-ttu-id="dca39-1269">Fasta tabellformat för profil- och kontexttyper</span><span class="sxs-lookup"><span data-stu-id="dca39-1269">Fixed table formats for profile and context types</span></span>
+
+### <a name="azapimanagement"></a><span data-ttu-id="dca39-1270">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="dca39-1270">Az.ApiManagement</span></span>
+- <span data-ttu-id="dca39-1271">Korrigeringar för #7002</span><span class="sxs-lookup"><span data-stu-id="dca39-1271">Fixes for #7002</span></span>
+- <span data-ttu-id="dca39-1272">Mer information om mindre icke-bakåtkompatibla ändringar finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="dca39-1272">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azbatch"></a><span data-ttu-id="dca39-1273">Az.Batch</span><span class="sxs-lookup"><span data-stu-id="dca39-1273">Az.Batch</span></span>
+- <span data-ttu-id="dca39-1274">Lade till möjligheten att se vilken version av Azure Batch Node Agent som körs på var och en av de virtuella datorerna i en pool, via den nya egenskapen `NodeAgentInformation` på `PSComputeNode`.</span><span class="sxs-lookup"><span data-stu-id="dca39-1274">Added the ability to see what version of the Azure Batch Node Agent is running on each of the VMs in a pool, via the new `NodeAgentInformation` property on `PSComputeNode`.</span></span>
+- <span data-ttu-id="dca39-1275">Standarden `Caching` för `PSDataDisk` är nu `ReadWrite` i stället för `None`.</span><span class="sxs-lookup"><span data-stu-id="dca39-1275">The `Caching` default for `PSDataDisk` is now `ReadWrite` instead of `None`.</span></span>
+- <span data-ttu-id="dca39-1276">Mer information om mindre icke-bakåtkompatibla ändringar finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="dca39-1276">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azbilling"></a><span data-ttu-id="dca39-1277">Az.Billing</span><span class="sxs-lookup"><span data-stu-id="dca39-1277">Az.Billing</span></span>
+- <span data-ttu-id="dca39-1278">Kombinerar cmdletarna för fakturering, förbrukning och UsageAggregates. Mer information finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="dca39-1278">Combines Billing, Consumption, and UsageAggregates cmdlets, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azcognitivservices"></a><span data-ttu-id="dca39-1279">Az.CognitivServices</span><span class="sxs-lookup"><span data-stu-id="dca39-1279">Az.CognitivServices</span></span>
+- <span data-ttu-id="dca39-1280">Lade till kompletterare för SkuName och Typem som är tillgängliga i New-AzureRmCognitiveServicesAccount</span><span class="sxs-lookup"><span data-stu-id="dca39-1280">Add completers for SkuName and Typem available on New-AzureRmCognitiveServicesAccount operation</span></span>
+- <span data-ttu-id="dca39-1281">Tog bort parameteruppsättningen GetSkusWithAccountParamSetName från Get-AzCognitiveServicesAccountSkus</span><span class="sxs-lookup"><span data-stu-id="dca39-1281">Removed GetSkusWithAccountParamSetName parameter set from Get-AzCognitiveServicesAccountSkus</span></span>
+
+### <a name="azcontainerinstance"></a><span data-ttu-id="dca39-1282">Az.ContainerInstance</span><span class="sxs-lookup"><span data-stu-id="dca39-1282">Az.ContainerInstance</span></span>
+- <span data-ttu-id="dca39-1283">Stöd för ManagedIdentity</span><span class="sxs-lookup"><span data-stu-id="dca39-1283">Added ManagedIdentity support</span></span>
+
+### <a name="azdatalakeanalytics"></a><span data-ttu-id="dca39-1284">Az.DataLakeAnalytics</span><span class="sxs-lookup"><span data-stu-id="dca39-1284">Az.DataLakeAnalytics</span></span>
+- <span data-ttu-id="dca39-1285">Mer information om mindre icke-bakåtkompatibla ändringar finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="dca39-1285">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azdatalakestore"></a><span data-ttu-id="dca39-1286">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="dca39-1286">Az.DataLakeStore</span></span>
+- <span data-ttu-id="dca39-1287">Mer information om mindre icke-bakåtkompatibla ändringar finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="dca39-1287">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azmonitor"></a><span data-ttu-id="dca39-1288">Az.Monitor</span><span class="sxs-lookup"><span data-stu-id="dca39-1288">Az.Monitor</span></span>
+- <span data-ttu-id="dca39-1289">Döpte om Az.Insights till Az.Monitor och andra mindre icke-bakåtkompatibla ändringar. Mer information finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="dca39-1289">Renamed Az.Insights to Az.Monitor and other minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azkeyvault"></a><span data-ttu-id="dca39-1290">Az.KeyVault</span><span class="sxs-lookup"><span data-stu-id="dca39-1290">Az.KeyVault</span></span>
+- <span data-ttu-id="dca39-1291">Tog bort den inaktuella egenskapen PurgeDisabled från utdatatyper</span><span class="sxs-lookup"><span data-stu-id="dca39-1291">Removed the deprecated 'PurgeDisabled' property from output types</span></span>
+
+### <a name="azmachinelearning"></a><span data-ttu-id="dca39-1292">Az.MachineLearning</span><span class="sxs-lookup"><span data-stu-id="dca39-1292">Az.MachineLearning</span></span>
+- <span data-ttu-id="dca39-1293">Inkluderade cmdletarna från modulen Az.MachineLearningCompute</span><span class="sxs-lookup"><span data-stu-id="dca39-1293">Included cmdlets from Az.MachineLearningCompute module</span></span>
+
+### <a name="azmedia"></a><span data-ttu-id="dca39-1294">Az.Media</span><span class="sxs-lookup"><span data-stu-id="dca39-1294">Az.Media</span></span>
+- <span data-ttu-id="dca39-1295">Tog bort inaktuella -Tags-alias från New-AzMediaService</span><span class="sxs-lookup"><span data-stu-id="dca39-1295">Remove deprecated -Tags alias from New-AzMediaService</span></span>
+
+### <a name="aznetwork"></a><span data-ttu-id="dca39-1296">Az.Network</span><span class="sxs-lookup"><span data-stu-id="dca39-1296">Az.Network</span></span>
+<span data-ttu-id="dca39-1297">Stöd har lagts till för konfiguration av RewriteRuleSets i Application Gateway</span><span class="sxs-lookup"><span data-stu-id="dca39-1297">Added support for the configuring RewriteRuleSets in the Application Gateway</span></span>
+    - <span data-ttu-id="dca39-1298">Nya cmdletar har lagts till:</span><span class="sxs-lookup"><span data-stu-id="dca39-1298">New cmdlets added:</span></span>
+        - <span data-ttu-id="dca39-1299">Add-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="dca39-1299">Add-AzureRmApplicationGatewayRewriteRuleSet</span></span>
+        - <span data-ttu-id="dca39-1300">Get-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="dca39-1300">Get-AzureRmApplicationGatewayRewriteRuleSet</span></span>
+        - <span data-ttu-id="dca39-1301">New-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="dca39-1301">New-AzureRmApplicationGatewayRewriteRuleSet</span></span>
+        - <span data-ttu-id="dca39-1302">Remove-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="dca39-1302">Remove-AzureRmApplicationGatewayRewriteRuleSet</span></span>
+        - <span data-ttu-id="dca39-1303">Set-AzureRmApplicationGatewayRewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="dca39-1303">Set-AzureRmApplicationGatewayRewriteRuleSet</span></span>
+        - <span data-ttu-id="dca39-1304">New-AzureRmApplicationGatewayRewriteRule</span><span class="sxs-lookup"><span data-stu-id="dca39-1304">New-AzureRmApplicationGatewayRewriteRule</span></span>
+        - <span data-ttu-id="dca39-1305">New-AzureRmApplicationGatewayRewriteRuleActionSet</span><span class="sxs-lookup"><span data-stu-id="dca39-1305">New-AzureRmApplicationGatewayRewriteRuleActionSet</span></span>
+        - <span data-ttu-id="dca39-1306">New-AzureRmApplicationGatewayRewriteRuleHeaderConfiguration</span><span class="sxs-lookup"><span data-stu-id="dca39-1306">New-AzureRmApplicationGatewayRewriteRuleHeaderConfiguration</span></span>
+    - <span data-ttu-id="dca39-1307">Cmdletar har uppdaterats med den valfria parametern -RewriteRuleSet</span><span class="sxs-lookup"><span data-stu-id="dca39-1307">Cmdlets updated with optional parameter -RewriteRuleSet</span></span>
+        - <span data-ttu-id="dca39-1308">New-AzureRmApplicationGateway</span><span class="sxs-lookup"><span data-stu-id="dca39-1308">New-AzureRmApplicationGateway</span></span>
+        - <span data-ttu-id="dca39-1309">New-AzureRmApplicationGatewayRequestRoutingRule</span><span class="sxs-lookup"><span data-stu-id="dca39-1309">New-AzureRmApplicationGatewayRequestRoutingRule</span></span>
+        - <span data-ttu-id="dca39-1310">Add-AzureRmApplicationGatewayRequestRoutingRule</span><span class="sxs-lookup"><span data-stu-id="dca39-1310">Add-AzureRmApplicationGatewayRequestRoutingRule</span></span>
+        - <span data-ttu-id="dca39-1311">New-AzureRmApplicationGatewayPathRuleConfig</span><span class="sxs-lookup"><span data-stu-id="dca39-1311">New-AzureRmApplicationGatewayPathRuleConfig</span></span>
+        - <span data-ttu-id="dca39-1312">Add-AzureRmApplicationGatewayUrlPathMapConfig</span><span class="sxs-lookup"><span data-stu-id="dca39-1312">Add-AzureRmApplicationGatewayUrlPathMapConfig</span></span>
+        - <span data-ttu-id="dca39-1313">New-AzureRmApplicationGatewayUrlPathMapConfig har lagt till KeyVault-stöd för Application Gateway med Identity.</span><span class="sxs-lookup"><span data-stu-id="dca39-1313">New-AzureRmApplicationGatewayUrlPathMapConfig Added KeyVault Support to Application Gateway using Identity.</span></span>
+    - <span data-ttu-id="dca39-1314">Cmdletar har uppdaterats med den valfria parametern -KeyVaultSecretId, -KeyVaultSecret</span><span class="sxs-lookup"><span data-stu-id="dca39-1314">Cmdlets updated with optonal parameter -KeyVaultSecretId, -KeyVaultSecret</span></span>
+        - <span data-ttu-id="dca39-1315">Add-AzApplicationGatewaySslCertificate</span><span class="sxs-lookup"><span data-stu-id="dca39-1315">Add-AzApplicationGatewaySslCertificate</span></span>
+        - <span data-ttu-id="dca39-1316">New-AzApplicationGatewaySslCertificate</span><span class="sxs-lookup"><span data-stu-id="dca39-1316">New-AzApplicationGatewaySslCertificate</span></span>
+        - <span data-ttu-id="dca39-1317">Set-AzApplicationGatewaySslCertificate</span><span class="sxs-lookup"><span data-stu-id="dca39-1317">Set-AzApplicationGatewaySslCertificate</span></span>
+    - <span data-ttu-id="dca39-1318">Cmdleten New-AzApplicationGateway har uppdaterats med den valfria parametern -UserAssignedIdentity</span><span class="sxs-lookup"><span data-stu-id="dca39-1318">New-AzApplicationGateway cmdlet updated with optional parameter -UserAssignedIdentity</span></span>
+- <span data-ttu-id="dca39-1319">Mer information om mindre icke-bakåtkompatibla ändringar finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="dca39-1319">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azoperationalinsights"></a><span data-ttu-id="dca39-1320">Az.OperationalInsights</span><span class="sxs-lookup"><span data-stu-id="dca39-1320">Az.OperationalInsights</span></span>
+- <span data-ttu-id="dca39-1321">Mer information om mindre icke-bakåtkompatibla ändringar finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="dca39-1321">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azprofile"></a><span data-ttu-id="dca39-1322">Az.Profile</span><span class="sxs-lookup"><span data-stu-id="dca39-1322">Az.Profile</span></span>
+- <span data-ttu-id="dca39-1323">Modulnamnet har ändrats till Az.Accounts</span><span class="sxs-lookup"><span data-stu-id="dca39-1323">Changed module name to Az.Accounts</span></span>
+
+### <a name="azrecoveryservices"></a><span data-ttu-id="dca39-1324">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="dca39-1324">Az.RecoveryServices</span></span>
+- <span data-ttu-id="dca39-1325">Mer information om mindre icke-bakåtkompatibla ändringar finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="dca39-1325">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azresources"></a><span data-ttu-id="dca39-1326">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="dca39-1326">Az.Resources</span></span>
+- <span data-ttu-id="dca39-1327">Mer information om mindre icke-bakåtkompatibla ändringar finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="dca39-1327">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azservicefabric"></a><span data-ttu-id="dca39-1328">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="dca39-1328">Az.ServiceFabric</span></span>
+- <span data-ttu-id="dca39-1329">Stöd för specificering av certifikat efter eget namn och tumavtryck</span><span class="sxs-lookup"><span data-stu-id="dca39-1329">Support specfying certificate by common name and thumbprint</span></span>
+- <span data-ttu-id="dca39-1330">Information om fler icke-bakåtkompatibla ändringar finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="dca39-1330">Mnor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azsignalr"></a><span data-ttu-id="dca39-1331">Az.SIgnalR</span><span class="sxs-lookup"><span data-stu-id="dca39-1331">Az.SIgnalR</span></span>
+- <span data-ttu-id="dca39-1332">Allmän tillgänglighet för PowerShell-cmdletar för SIgnalR</span><span class="sxs-lookup"><span data-stu-id="dca39-1332">General Availability for PowerShell cmdlets for SIgnalR</span></span>
+
+### <a name="azsql"></a><span data-ttu-id="dca39-1333">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="dca39-1333">Az.Sql</span></span>
+- <span data-ttu-id="dca39-1334">Lade till de nya identifieringstyperna Data_Exfiltration och Unsafe_Action i Threat Detection-cmdletar</span><span class="sxs-lookup"><span data-stu-id="dca39-1334">Added new Data_Exfiltration and Unsafe_Action detection types to Threat Detection's cmdlets</span></span>
+- <span data-ttu-id="dca39-1335">Uppdaterade dokumentationsexempel för Sql Auditing-cmdletar</span><span class="sxs-lookup"><span data-stu-id="dca39-1335">Updated documentation examples for Sql Auditing cmdlets</span></span>
+- <span data-ttu-id="dca39-1336">Mer information om mindre icke-bakåtkompatibla ändringar finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="dca39-1336">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azstorage"></a><span data-ttu-id="dca39-1337">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="dca39-1337">Az.Storage</span></span>
+- <span data-ttu-id="dca39-1338">Mer information om mindre icke-bakåtkompatibla ändringar finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="dca39-1338">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+### <a name="azwebsites"></a><span data-ttu-id="dca39-1339">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="dca39-1339">Az.Websites</span></span>
+- <span data-ttu-id="dca39-1340">Mer information om mindre icke-bakåtkompatibla ändringar finns i [Migreringsguiden](https://aka.ms/azps-migration-guide)</span><span class="sxs-lookup"><span data-stu-id="dca39-1340">Minor breaking changes, see the [Migration Guide](https://aka.ms/azps-migration-guide)  for details</span></span>
+
+## <a name="070---december-2018"></a><span data-ttu-id="dca39-1341">0.7.0 – december 2018</span><span class="sxs-lookup"><span data-stu-id="dca39-1341">0.7.0 - December 2018</span></span>
+
+### <a name="general"></a><span data-ttu-id="dca39-1342">Allmänt</span><span class="sxs-lookup"><span data-stu-id="dca39-1342">General</span></span>
+
+* <span data-ttu-id="dca39-1343">Mindre ändringar för kommande övergång från AzureRM till Az</span><span class="sxs-lookup"><span data-stu-id="dca39-1343">Minor changes for upcoming AzureRM to Az transition</span></span>
+
+### <a name="azcompute"></a><span data-ttu-id="dca39-1344">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="dca39-1344">Az.Compute</span></span>
+
+* <span data-ttu-id="dca39-1345">Lade till stöd för UltraSSD och Galleriavbildningar i de enkla parameteruppsättningarna för `New-AzVm(ss)`-cmdletar.</span><span class="sxs-lookup"><span data-stu-id="dca39-1345">Add support for UltraSSD and Gallery Images in the simple param sets for `New-AzVm(ss)` cmdlets.</span></span>
+
+### <a name="azdatalakestore"></a><span data-ttu-id="dca39-1346">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="dca39-1346">Az.DataLakeStore</span></span>
+
+* <span data-ttu-id="dca39-1347">Åtgärdade avslutande snedstreck i domänen för adls-konto</span><span class="sxs-lookup"><span data-stu-id="dca39-1347">Fix the trailing slash of the domain of adls account</span></span>
+
+### <a name="azfrontdoor"></a><span data-ttu-id="dca39-1348">Az.FrontDoor</span><span class="sxs-lookup"><span data-stu-id="dca39-1348">Az.FrontDoor</span></span>
+
+* <span data-ttu-id="dca39-1349">Brutna länkar korrigerades</span><span class="sxs-lookup"><span data-stu-id="dca39-1349">Fixed some broken links</span></span>
+    - <span data-ttu-id="dca39-1350">I artiklarna New-AzureRmFrontDoor och Set-AzureRmFrontDoor artiklar korrigerades länken till artikeln om cmdleten New-AzureRmFrontDoorHealthProbeSettingObject.</span><span class="sxs-lookup"><span data-stu-id="dca39-1350">In the New-AzureRmFrontDoor and Set-AzureRmFrontDoor articles, fixed the link to the New-AzureRmFrontDoorHealthProbeSettingObject cmdlet article.</span></span>
+    - <span data-ttu-id="dca39-1351">I artikeln New-AzureRmFrontDoorManagedRuleObject korrigerades länken till artikeln om cmdleten New-AzureRmFrontDoorRuleGroupOverrideObject.</span><span class="sxs-lookup"><span data-stu-id="dca39-1351">In the New-AzureRmFrontDoorManagedRuleObject article, fixed the link to the New-AzureRmFrontDoorRuleGroupOverrideObject cmdlet article.</span></span>
+
+### <a name="azrecoveryservices"></a><span data-ttu-id="dca39-1352">Az.RecoveryServices</span><span class="sxs-lookup"><span data-stu-id="dca39-1352">Az.RecoveryServices</span></span>
+
+* <span data-ttu-id="dca39-1353">Lade till valideringar på klientsidan för Azure-filresurs med återställningsåtgärder.</span><span class="sxs-lookup"><span data-stu-id="dca39-1353">Added client side validations for Azure File Share restore operations.</span></span>
+* <span data-ttu-id="dca39-1354">Gjorde storageAccountName och storageAccountResourceGroupName valfritt för afs-återställning.</span><span class="sxs-lookup"><span data-stu-id="dca39-1354">Made storageAccountName and storageAccountResourceGroupName optional for afs restore.</span></span>
+
+### <a name="azresources"></a><span data-ttu-id="dca39-1355">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="dca39-1355">Az.Resources</span></span>
+
+* <span data-ttu-id="dca39-1356">Korrigering för https://github.com/Azure/azure-powershell/issues/7679</span><span class="sxs-lookup"><span data-stu-id="dca39-1356">Fix for https://github.com/Azure/azure-powershell/issues/7679</span></span>
+    - <span data-ttu-id="dca39-1357">Uppdaterade Get-AzureRmRoleAssignment så att prenumerationsomfattningen används om den anges vid begäran om klassiska administratörer.</span><span class="sxs-lookup"><span data-stu-id="dca39-1357">Update Get-AzureRmRoleAssignment to use the subscription scope if it is provided when requesting classic administrators.</span></span>
+
+### <a name="azsql"></a><span data-ttu-id="dca39-1358">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="dca39-1358">Az.Sql</span></span>
+
+* <span data-ttu-id="dca39-1359">Mindre ändringar för kommande övergång från AzureRM till Az</span><span class="sxs-lookup"><span data-stu-id="dca39-1359">Minor changes for upcoming AzureRM to Az transition</span></span>
+* <span data-ttu-id="dca39-1360">Korrigerade ett problem med Get-AzureRmSqlDatabaseVulnerabilityAssessment med DotNet-kärna</span><span class="sxs-lookup"><span data-stu-id="dca39-1360">Fixed issue with using Get-AzureRmSqlDatabaseVulnerabilityAssessment with DotNet core</span></span>
+* <span data-ttu-id="dca39-1361">Ändrade dokumentationen för hjälpmeddelanden som rör SQL Auditing-cmdletar.</span><span class="sxs-lookup"><span data-stu-id="dca39-1361">Modified documentation of help messages related to SQL Auditing cmdlets.</span></span>
+
+### <a name="azstorage"></a><span data-ttu-id="dca39-1362">Az.Storage</span><span class="sxs-lookup"><span data-stu-id="dca39-1362">Az.Storage</span></span>
+
+* <span data-ttu-id="dca39-1363">Lade till -EnableHierarchicalNamespace i New-AzureRmStorageAccount</span><span class="sxs-lookup"><span data-stu-id="dca39-1363">Add -EnableHierarchicalNamespace to New-AzureRmStorageAccount</span></span>
+* <span data-ttu-id="dca39-1364">Åtgärdade problemet med att cmdleten Copy File inte kunde återanvända källkontexten på målet om inte -DestContext angetts</span><span class="sxs-lookup"><span data-stu-id="dca39-1364">Fix issue that Copy File cmdlet can't reuse source context in destination when not input -DestContext</span></span>
+    - <span data-ttu-id="dca39-1365">Start-AzureStorageFileCopy</span><span class="sxs-lookup"><span data-stu-id="dca39-1365">Start-AzureStorageFileCopy</span></span>
+* <span data-ttu-id="dca39-1366">Stöd för statisk webbplatskonfiguration</span><span class="sxs-lookup"><span data-stu-id="dca39-1366">Support Static Website configuration</span></span>
+    - <span data-ttu-id="dca39-1367">Enable-AzureStorageStaticWebsite</span><span class="sxs-lookup"><span data-stu-id="dca39-1367">Enable-AzureStorageStaticWebsite</span></span>
+    - <span data-ttu-id="dca39-1368">Disable-AzureStorageStaticWebsite</span><span class="sxs-lookup"><span data-stu-id="dca39-1368">Disable-AzureStorageStaticWebsite</span></span>
+
+### <a name="azwebsites"></a><span data-ttu-id="dca39-1369">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="dca39-1369">Az.Websites</span></span>
+
+* <span data-ttu-id="dca39-1370">Set-AzureRmWebApp och Set-AzureRmWebAppSlot</span><span class="sxs-lookup"><span data-stu-id="dca39-1370">Set-AzureRmWebApp and Set-AzureRmWebAppSlot</span></span> 
+    - <span data-ttu-id="dca39-1371">Ny parameter (-AzureStoragePath) har lagts till för att ange att Azure Storage-sökvägar ska monteras i containerappar i Windows och Linux.</span><span class="sxs-lookup"><span data-stu-id="dca39-1371">New parameter (-AzureStoragePath) added to specify Azure Storage paths to be mounted in Windows and Linux container apps.</span></span> <span data-ttu-id="dca39-1372">Använder utdata från den nya cmdleten New-AzureRmWebAppAzureStoragePath som en parameter för att ange sökvägar för Azure Storage.</span><span class="sxs-lookup"><span data-stu-id="dca39-1372">Use the output of the new cmdlet New-AzureRmWebAppAzureStoragePath as a parameter to set the Azure Storage paths.</span></span>
+
+## <a name="061---november-2018"></a><span data-ttu-id="dca39-1373">0.6.1 – november 2018</span><span class="sxs-lookup"><span data-stu-id="dca39-1373">0.6.1 - November 2018</span></span>
+
+### <a name="azapimanagement"></a><span data-ttu-id="dca39-1374">Az.ApiManagement</span><span class="sxs-lookup"><span data-stu-id="dca39-1374">Az.ApiManagement</span></span>
+* <span data-ttu-id="dca39-1375">Uppdatera beroenden för problemet med typmappning</span><span class="sxs-lookup"><span data-stu-id="dca39-1375">Update dependencies for type mapping issue</span></span>
+
+### <a name="azautomation"></a><span data-ttu-id="dca39-1376">Az.Automation</span><span class="sxs-lookup"><span data-stu-id="dca39-1376">Az.Automation</span></span>
+* <span data-ttu-id="dca39-1377">Swagger baserade Azure Automation-cmdletar</span><span class="sxs-lookup"><span data-stu-id="dca39-1377">Swagger based Azure Automation cmdlets</span></span>
+* <span data-ttu-id="dca39-1378">Cmdletar för Uppdateringshantering har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-1378">Added Update Management cmdlets</span></span>
+* <span data-ttu-id="dca39-1379">Cmdletar för källkontroll har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-1379">Added Source Control cmdlets</span></span>
+* <span data-ttu-id="dca39-1380">Remove-AzureRmAutomationHybridWorkerGroup-cmdlet har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-1380">Added Remove-AzureRmAutomationHybridWorkerGroup cmdlet</span></span>
+* <span data-ttu-id="dca39-1381">Kommandot för DSC-registreringsnod har åtgärdats</span><span class="sxs-lookup"><span data-stu-id="dca39-1381">Fixed the DSC Register Node command</span></span>
+
+### <a name="azcompute"></a><span data-ttu-id="dca39-1382">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="dca39-1382">Az.Compute</span></span>
+* <span data-ttu-id="dca39-1383">Problem med SystemAssigned-identitet har åtgärdats</span><span class="sxs-lookup"><span data-stu-id="dca39-1383">Fixed identity issue for SystemAssigned identity</span></span>
+* <span data-ttu-id="dca39-1384">Uppdatera beroenden för problemet med typmappning</span><span class="sxs-lookup"><span data-stu-id="dca39-1384">Update dependencies for type mapping issue</span></span>
+
+### <a name="azcontainerinstance"></a><span data-ttu-id="dca39-1385">Az.ContainerInstance</span><span class="sxs-lookup"><span data-stu-id="dca39-1385">Az.ContainerInstance</span></span>
+* <span data-ttu-id="dca39-1386">Uppdatera beroenden för problemet med typmappning</span><span class="sxs-lookup"><span data-stu-id="dca39-1386">Update dependencies for type mapping issue</span></span>
+
+### <a name="azmarketplaceordering"></a><span data-ttu-id="dca39-1387">Az.MarketplaceOrdering</span><span class="sxs-lookup"><span data-stu-id="dca39-1387">Az.MarketplaceOrdering</span></span>
+* <span data-ttu-id="dca39-1388">uppdatera exempelbeskrivningen för marketplace-cmdletar</span><span class="sxs-lookup"><span data-stu-id="dca39-1388">update the examples description for marketplace cmdlets</span></span>
+
+### <a name="aznetwork"></a><span data-ttu-id="dca39-1389">Az.Network</span><span class="sxs-lookup"><span data-stu-id="dca39-1389">Az.Network</span></span>
+* <span data-ttu-id="dca39-1390">Cmdlet New-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayCustomError, Get-AzureRmApplicationGatewayCustomError, Set-AzureRmApplicationGatewayCustomError, Remove-AzureRmApplicationGatewayCustomErreller Add-AzureRmApplicationGatewayHttpListenerCustomError, Get-AzureRmApplicationGatewayHttpListenerCustomError, Set-AzureRmApplicationGatewayHttpListenerCustomError, Remove-AzureRmApplicationGatewayHttpListenerCustomError har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-1390">Added cmdlet New-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayCustomError, Get-AzureRmApplicationGatewayCustomError, Set-AzureRmApplicationGatewayCustomError, Remove-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayHttpListenerCustomError, Get-AzureRmApplicationGatewayHttpListenerCustomError, Set-AzureRmApplicationGatewayHttpListenerCustomError, Remove-AzureRmApplicationGatewayHttpListenerCustomError</span></span>
+* <span data-ttu-id="dca39-1391">ICMP tillbaka till stöd för Azure Firewall-nätverksprotokoll har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-1391">Added ICMP back to supported AzureFirewall Network Protocols</span></span>
+* <span data-ttu-id="dca39-1392">Uppdatera cmdlet Test-AzureRmNetworkWatcherConnectivity, lägga till verifiering av mål-id, adress och port.</span><span class="sxs-lookup"><span data-stu-id="dca39-1392">Update cmdlet Test-AzureRmNetworkWatcherConnectivity, add validation on destination id, address and port.</span></span> 
+* <span data-ttu-id="dca39-1393">Åtgärda problem med minnesanvändning i VirtualNetwork-karta</span><span class="sxs-lookup"><span data-stu-id="dca39-1393">Fix issues with memory usage in VirtualNetwork map</span></span>
+
+### <a name="azrecoveryservicesbackup"></a><span data-ttu-id="dca39-1394">Az.RecoveryServices.Backup</span><span class="sxs-lookup"><span data-stu-id="dca39-1394">Az.RecoveryServices.Backup</span></span>
+* <span data-ttu-id="dca39-1395">Åtgärda för att ändra principen för en skyddad fildelning.</span><span class="sxs-lookup"><span data-stu-id="dca39-1395">Fix for modifying policy for a protected file share.</span></span>
+* <span data-ttu-id="dca39-1396">Tidszonsprincipen har konverterats till versaler.</span><span class="sxs-lookup"><span data-stu-id="dca39-1396">Converted policy timezone to uppercase.</span></span>
+
+### <a name="azrecoveryservicessiterecovery"></a><span data-ttu-id="dca39-1397">Az.RecoveryServices.SiteRecovery</span><span class="sxs-lookup"><span data-stu-id="dca39-1397">Az.RecoveryServices.SiteRecovery</span></span>
+* <span data-ttu-id="dca39-1398">Exempel i New-AzureRmRecoveryServicesAsrProtectableItem har åtgärdats</span><span class="sxs-lookup"><span data-stu-id="dca39-1398">Corrected example in New-AzureRmRecoveryServicesAsrProtectableItem</span></span>
+* <span data-ttu-id="dca39-1399">Uppdatera beroenden för problemet med typmappning</span><span class="sxs-lookup"><span data-stu-id="dca39-1399">Update dependencies for type mapping issue</span></span>
+
+### <a name="azrelay"></a><span data-ttu-id="dca39-1400">Az.Relay</span><span class="sxs-lookup"><span data-stu-id="dca39-1400">Az.Relay</span></span>
+* <span data-ttu-id="dca39-1401">Valfri parameter -KeyValue till New-AzureRmRelayKey cmdlet har lagts till, vilket gör det möjligt för användare att tillhandahålla KeyValue.</span><span class="sxs-lookup"><span data-stu-id="dca39-1401">Added optional Parameter -KeyValue to New-AzureRmRelayKey cmdlet, which enables user to provide KeyValue.</span></span>
+
+### <a name="azresources"></a><span data-ttu-id="dca39-1402">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="dca39-1402">Az.Resources</span></span>
+* <span data-ttu-id="dca39-1403">Uppdatera hjälpdokumentation för resursidentitet kopplad till parametrar i `New-AzureRmPolicyAssignment` och `Set-AzureRmPolicyAssignment`</span><span class="sxs-lookup"><span data-stu-id="dca39-1403">Update help documentation for resource identity related parameters in `New-AzureRmPolicyAssignment` and `Set-AzureRmPolicyAssignment`</span></span>
+* <span data-ttu-id="dca39-1404">Lägg till ett exempel för New-AzureRmPolicyDefinition som använder -Metadata</span><span class="sxs-lookup"><span data-stu-id="dca39-1404">Add an example for New-AzureRmPolicyDefinition that uses -Metadata</span></span>
+* <span data-ttu-id="dca39-1405">Korrigera så att skiftläge behålls i taggnycklar i NetStandard: #7678 #7703</span><span class="sxs-lookup"><span data-stu-id="dca39-1405">Fix to allow case preservation in Tag keys in NetStandard: #7678 #7703</span></span>
+
+### <a name="azservicefabric"></a><span data-ttu-id="dca39-1406">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="dca39-1406">Az.ServiceFabric</span></span>
+* <span data-ttu-id="dca39-1407">Lägg till utfasningsmeddelanden för kommande icke-kompatibla ändringar</span><span class="sxs-lookup"><span data-stu-id="dca39-1407">Add deprecation messages for upcoming breaking changes</span></span>
+
+### <a name="azsql"></a><span data-ttu-id="dca39-1408">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="dca39-1408">Az.Sql</span></span>
+* <span data-ttu-id="dca39-1409">Nya cmdletar för CRUD-åtgärder på Azure Sql Database-hanterad instans och Azure Sql-hanterad databas</span><span class="sxs-lookup"><span data-stu-id="dca39-1409">Added new cmdlets for CRUD operations on Azure Sql Database Managed Instance and Azure Sql Managed Database</span></span>
+    - <span data-ttu-id="dca39-1410">Get-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="dca39-1410">Get-AzureRmSqlInstance</span></span>
+    - <span data-ttu-id="dca39-1411">New-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="dca39-1411">New-AzureRmSqlInstance</span></span>
+    - <span data-ttu-id="dca39-1412">Set-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="dca39-1412">Set-AzureRmSqlInstance</span></span>
+    - <span data-ttu-id="dca39-1413">Remove-AzureRmSqlInstance</span><span class="sxs-lookup"><span data-stu-id="dca39-1413">Remove-AzureRmSqlInstance</span></span>
+    - <span data-ttu-id="dca39-1414">Get-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="dca39-1414">Get-AzureRmSqlInstanceDatabase</span></span>
+    - <span data-ttu-id="dca39-1415">New-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="dca39-1415">New-AzureRmSqlInstanceDatabase</span></span>
+    - <span data-ttu-id="dca39-1416">Restore-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="dca39-1416">Restore-AzureRmSqlInstanceDatabase</span></span>
+    - <span data-ttu-id="dca39-1417">Remove-AzureRmSqlInstanceDatabase</span><span class="sxs-lookup"><span data-stu-id="dca39-1417">Remove-AzureRmSqlInstanceDatabase</span></span>
+* <span data-ttu-id="dca39-1418">Hantering av utökad granskningsprincip på en server eller en databas har aktiverats.</span><span class="sxs-lookup"><span data-stu-id="dca39-1418">Enabled Extended Auditing Policy management on a server or a database.</span></span>
+    - <span data-ttu-id="dca39-1419">Ny parameter (PredicateExpression) har lagts till för att aktivera filtrering av granskningsloggar.</span><span class="sxs-lookup"><span data-stu-id="dca39-1419">New parameter (PredicateExpression) was added to enable filtering of audit logs.</span></span>
+    - <span data-ttu-id="dca39-1420">Cmdletar har ändrats så att de använder SQL-klienter i stället för äldre klienter.</span><span class="sxs-lookup"><span data-stu-id="dca39-1420">Cmdlets were modified to use SQL clients instead of Legacy clients.</span></span>
+    - <span data-ttu-id="dca39-1421">Set-AzureRmSqlServerAuditing.</span><span class="sxs-lookup"><span data-stu-id="dca39-1421">Set-AzureRmSqlServerAuditing.</span></span>
+    - <span data-ttu-id="dca39-1422">Get-AzureRmSqlServerAuditing.</span><span class="sxs-lookup"><span data-stu-id="dca39-1422">Get-AzureRmSqlServerAuditing.</span></span>
+    - <span data-ttu-id="dca39-1423">Get-AzureRmSqlServerAuditing.</span><span class="sxs-lookup"><span data-stu-id="dca39-1423">Set-AzureRmSqlDatabaseAuditing.</span></span>
+    - <span data-ttu-id="dca39-1424">Get-AzureRmSqlDatabaseAuditing.</span><span class="sxs-lookup"><span data-stu-id="dca39-1424">Get-AzureRmSqlDatabaseAuditing.</span></span>
+* <span data-ttu-id="dca39-1425">Problem med att använda Update-AzureRmSqlDatabaseVulnerabilityAssessmentSettings med lagringskontots namnparameter har korrigerats</span><span class="sxs-lookup"><span data-stu-id="dca39-1425">Fixed issue with using Update-AzureRmSqlDatabaseVulnerabilityAssessmentSettings with storage account name parameter set</span></span>
+
+## <a name="050---november-2018"></a><span data-ttu-id="dca39-1426">0.5.0 – november 2018</span><span class="sxs-lookup"><span data-stu-id="dca39-1426">0.5.0 - November 2018</span></span>
+#### <a name="general"></a><span data-ttu-id="dca39-1427">Allmänt</span><span class="sxs-lookup"><span data-stu-id="dca39-1427">General</span></span>
+* <span data-ttu-id="dca39-1428">Lade till resurskompletterare till många kärn-cmdletar – dessa gör att du kan stega genom befintliga resursnamn med TABB vid interaktiva anrop till cmdletar</span><span class="sxs-lookup"><span data-stu-id="dca39-1428">Added Resource Completers to many core cmdlets - these alloow you to tab through existing resource names when invoking cmdlets interactively</span></span>
+
+#### <a name="azprofile"></a><span data-ttu-id="dca39-1429">Az.Profile</span><span class="sxs-lookup"><span data-stu-id="dca39-1429">Az.Profile</span></span>
+* <span data-ttu-id="dca39-1430">Uppdatera gemensam kod så att den använder den senaste versionen av ClientRuntime</span><span class="sxs-lookup"><span data-stu-id="dca39-1430">Update common code to use latest version of ClientRuntime</span></span>
+* <span data-ttu-id="dca39-1431">Bytte namn på parametern TenantId i cmdleten Connect-AzAccount till Tenant och lade till ett alias för TenantId</span><span class="sxs-lookup"><span data-stu-id="dca39-1431">Rename param TenantId in cmdlet Connect-AzAccount to Tenant and add an alias for TenantId</span></span>
+* <span data-ttu-id="dca39-1432">Uppdaterade TenantId-beskrivningen för Connect-AzAccount</span><span class="sxs-lookup"><span data-stu-id="dca39-1432">Updated TenantId description for Connect-AzAccount</span></span>
+* <span data-ttu-id="dca39-1433">Åtgärda felmeddelande för misslyckad inloggning när du tillhandahåller klientdomän</span><span class="sxs-lookup"><span data-stu-id="dca39-1433">Fix error message for failed login when providing tenant domain</span></span>
     - https://github.com/Azure/azure-powershell/issues/6936
-* <span data-ttu-id="7b0da-1434">Åtgärda problem med att kontextnamn hamnar i konflikt för konton utan prenumerationer i klientorganisationen</span><span class="sxs-lookup"><span data-stu-id="7b0da-1434">Fix issue with context name clashing for accounts with no subscriptions in tenant</span></span>
+* <span data-ttu-id="dca39-1434">Åtgärda problem med att kontextnamn hamnar i konflikt för konton utan prenumerationer i klientorganisationen</span><span class="sxs-lookup"><span data-stu-id="dca39-1434">Fix issue with context name clashing for accounts with no subscriptions in tenant</span></span>
     - https://github.com/Azure/azure-powershell/issues/7453
-* <span data-ttu-id="7b0da-1435">Åtgärda problem med DataLake-slutpunkter vid användning av MSI</span><span class="sxs-lookup"><span data-stu-id="7b0da-1435">Fix issue with DataLake endpoints when using MSI</span></span>
+* <span data-ttu-id="dca39-1435">Åtgärda problem med DataLake-slutpunkter vid användning av MSI</span><span class="sxs-lookup"><span data-stu-id="dca39-1435">Fix issue with DataLake endpoints when using MSI</span></span>
     - https://github.com/Azure/azure-powershell/issues/7462
-* <span data-ttu-id="7b0da-1436">Åtgärdade problem med att Disconnect-AzAccount kastades om den inte anslöts</span><span class="sxs-lookup"><span data-stu-id="7b0da-1436">Fix issue where 'Disconnect-AzAccount' would throw if not connected</span></span>
+* <span data-ttu-id="dca39-1436">Åtgärdade problem med att Disconnect-AzAccount kastades om den inte anslöts</span><span class="sxs-lookup"><span data-stu-id="dca39-1436">Fix issue where 'Disconnect-AzAccount' would throw if not connected</span></span>
     - https://github.com/Azure/azure-powershell/issues/7167
 
-#### <a name="azcognitiveservices"></a><span data-ttu-id="7b0da-1437">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="7b0da-1437">Az.CognitiveServices</span></span>
-* <span data-ttu-id="7b0da-1438">Lade till åtgärden Get-AzCognitiveServicesAccountSkus.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1438">Add Get-AzCognitiveServicesAccountSkus operation.</span></span>
+#### <a name="azcognitiveservices"></a><span data-ttu-id="dca39-1437">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="dca39-1437">Az.CognitiveServices</span></span>
+* <span data-ttu-id="dca39-1438">Lade till åtgärden Get-AzCognitiveServicesAccountSkus.</span><span class="sxs-lookup"><span data-stu-id="dca39-1438">Add Get-AzCognitiveServicesAccountSkus operation.</span></span>
 
-#### <a name="azcompute"></a><span data-ttu-id="7b0da-1439">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="7b0da-1439">Az.Compute</span></span>
-* <span data-ttu-id="7b0da-1440">Lade till cmdletarna Add-AzVmssVMDataDisk och Remove-AzVmssVMDataDisk</span><span class="sxs-lookup"><span data-stu-id="7b0da-1440">Add Add-AzVmssVMDataDisk and Remove-AzVmssVMDataDisk cmdlets</span></span>
-* <span data-ttu-id="7b0da-1441">Get-AzVMImage visar AutomaticOSUpgradeProperties</span><span class="sxs-lookup"><span data-stu-id="7b0da-1441">Get-AzVMImage shows AutomaticOSUpgradeProperties</span></span>
-* <span data-ttu-id="7b0da-1442">Åtgärdade att värdena för alternativen SetAzVMChefExtension -BootstrapOptions och -JsonAttribute inte angavs i json-format.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1442">Fixed SetAzVMChefExtension -BootstrapOptions and -JsonAttribute option values are not setting in json format.</span></span>
+#### <a name="azcompute"></a><span data-ttu-id="dca39-1439">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="dca39-1439">Az.Compute</span></span>
+* <span data-ttu-id="dca39-1440">Lade till cmdletarna Add-AzVmssVMDataDisk och Remove-AzVmssVMDataDisk</span><span class="sxs-lookup"><span data-stu-id="dca39-1440">Add Add-AzVmssVMDataDisk and Remove-AzVmssVMDataDisk cmdlets</span></span>
+* <span data-ttu-id="dca39-1441">Get-AzVMImage visar AutomaticOSUpgradeProperties</span><span class="sxs-lookup"><span data-stu-id="dca39-1441">Get-AzVMImage shows AutomaticOSUpgradeProperties</span></span>
+* <span data-ttu-id="dca39-1442">Åtgärdade att värdena för alternativen SetAzVMChefExtension -BootstrapOptions och -JsonAttribute inte angavs i json-format.</span><span class="sxs-lookup"><span data-stu-id="dca39-1442">Fixed SetAzVMChefExtension -BootstrapOptions and -JsonAttribute option values are not setting in json format.</span></span>
 
-#### <a name="azdatalakestore"></a><span data-ttu-id="7b0da-1443">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="7b0da-1443">Az.DataLakeStore</span></span>
-* <span data-ttu-id="7b0da-1444">Uppdatera DataLake-paketet till 1.1.10.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1444">Update the DataLake package to 1.1.10.</span></span>
-* <span data-ttu-id="7b0da-1445">Lägg till standardsamtidighet för flertrådade åtgärder.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1445">Add default Concurrency to multithreaded operations.</span></span>
+#### <a name="azdatalakestore"></a><span data-ttu-id="dca39-1443">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="dca39-1443">Az.DataLakeStore</span></span>
+* <span data-ttu-id="dca39-1444">Uppdatera DataLake-paketet till 1.1.10.</span><span class="sxs-lookup"><span data-stu-id="dca39-1444">Update the DataLake package to 1.1.10.</span></span>
+* <span data-ttu-id="dca39-1445">Lägg till standardsamtidighet för flertrådade åtgärder.</span><span class="sxs-lookup"><span data-stu-id="dca39-1445">Add default Concurrency to multithreaded operations.</span></span>
 
-#### <a name="azinsights"></a><span data-ttu-id="7b0da-1446">Az.Insights</span><span class="sxs-lookup"><span data-stu-id="7b0da-1446">Az.Insights</span></span>
-* <span data-ttu-id="7b0da-1447">Åtgärdade problem #7267 (autoskalningsområde)</span><span class="sxs-lookup"><span data-stu-id="7b0da-1447">Fixed issue #7267 (Autoscale area)</span></span>
-    - <span data-ttu-id="7b0da-1448">Problem med att uppräknade parametrar inte ställdes in ordentligt när du skapade en ny autoskalningsregel (de ställdes alltid in med standardvärdet).</span><span class="sxs-lookup"><span data-stu-id="7b0da-1448">Issues with creating a new autoscale rule not properly setting enumerated parameters (would always set them to the default value).</span></span>
-* <span data-ttu-id="7b0da-1449">Åtgärdade problem #7513 [Insights] Set-AzDiagnosticSetting kräver uttrycklig specifikation av kategorier när inställningar skapas</span><span class="sxs-lookup"><span data-stu-id="7b0da-1449">Fixed issue #7513 [Insights] Set-AzDiagnosticSetting requires explicit specification of categories during creation of setting</span></span>
-    - <span data-ttu-id="7b0da-1450">Nu kräver inte cmdleten uttrycklig anvisning av kategorierna för att aktiveras under skapande, d.v.s. den fungerar enligt beskrivning</span><span class="sxs-lookup"><span data-stu-id="7b0da-1450">Now the cmdlet does not require explicit indication of the categories to enable during creation, i.e. it works as it is documented</span></span>
+#### <a name="azinsights"></a><span data-ttu-id="dca39-1446">Az.Insights</span><span class="sxs-lookup"><span data-stu-id="dca39-1446">Az.Insights</span></span>
+* <span data-ttu-id="dca39-1447">Åtgärdade problem #7267 (autoskalningsområde)</span><span class="sxs-lookup"><span data-stu-id="dca39-1447">Fixed issue #7267 (Autoscale area)</span></span>
+    - <span data-ttu-id="dca39-1448">Problem med att uppräknade parametrar inte ställdes in ordentligt när du skapade en ny autoskalningsregel (de ställdes alltid in med standardvärdet).</span><span class="sxs-lookup"><span data-stu-id="dca39-1448">Issues with creating a new autoscale rule not properly setting enumerated parameters (would always set them to the default value).</span></span>
+* <span data-ttu-id="dca39-1449">Åtgärdade problem #7513 [Insights] Set-AzDiagnosticSetting kräver uttrycklig specifikation av kategorier när inställningar skapas</span><span class="sxs-lookup"><span data-stu-id="dca39-1449">Fixed issue #7513 [Insights] Set-AzDiagnosticSetting requires explicit specification of categories during creation of setting</span></span>
+    - <span data-ttu-id="dca39-1450">Nu kräver inte cmdleten uttrycklig anvisning av kategorierna för att aktiveras under skapande, d.v.s. den fungerar enligt beskrivning</span><span class="sxs-lookup"><span data-stu-id="dca39-1450">Now the cmdlet does not require explicit indication of the categories to enable during creation, i.e. it works as it is documented</span></span>
 
-#### <a name="aznetwork"></a><span data-ttu-id="7b0da-1451">Az.Network</span><span class="sxs-lookup"><span data-stu-id="7b0da-1451">Az.Network</span></span>
-* <span data-ttu-id="7b0da-1452">PeeringType ändrades till en obligatorisk parameter för följande cmdletar:</span><span class="sxs-lookup"><span data-stu-id="7b0da-1452">Changed PeeringType to be a mandatory parameter for the following cmdlets:-</span></span>
-    - <span data-ttu-id="7b0da-1453">Get-AzExpressRouteCircuitRouteTable</span><span class="sxs-lookup"><span data-stu-id="7b0da-1453">Get-AzExpressRouteCircuitRouteTable</span></span>
-    - <span data-ttu-id="7b0da-1454">Get-AzExpressRouteCircuitARPTable</span><span class="sxs-lookup"><span data-stu-id="7b0da-1454">Get-AzExpressRouteCircuitARPTable</span></span>
-    - <span data-ttu-id="7b0da-1455">Get-AzExpressRouteCircuitRouteTableSummary</span><span class="sxs-lookup"><span data-stu-id="7b0da-1455">Get-AzExpressRouteCircuitRouteTableSummary</span></span>
-    - <span data-ttu-id="7b0da-1456">Get-AzExpressRouteCrossConnectionArpTable</span><span class="sxs-lookup"><span data-stu-id="7b0da-1456">Get-AzExpressRouteCrossConnectionArpTable</span></span>
-    - <span data-ttu-id="7b0da-1457">Get-AzExpressRouteCrossConnectionRouteTable</span><span class="sxs-lookup"><span data-stu-id="7b0da-1457">Get-AzExpressRouteCrossConnectionRouteTable</span></span>
-    - <span data-ttu-id="7b0da-1458">Get-AzExpressRouteCrossConnectionRouteTableSummary</span><span class="sxs-lookup"><span data-stu-id="7b0da-1458">Get-AzExpressRouteCrossConnectionRouteTableSummary</span></span>
+#### <a name="aznetwork"></a><span data-ttu-id="dca39-1451">Az.Network</span><span class="sxs-lookup"><span data-stu-id="dca39-1451">Az.Network</span></span>
+* <span data-ttu-id="dca39-1452">PeeringType ändrades till en obligatorisk parameter för följande cmdletar:</span><span class="sxs-lookup"><span data-stu-id="dca39-1452">Changed PeeringType to be a mandatory parameter for the following cmdlets:-</span></span>
+    - <span data-ttu-id="dca39-1453">Get-AzExpressRouteCircuitRouteTable</span><span class="sxs-lookup"><span data-stu-id="dca39-1453">Get-AzExpressRouteCircuitRouteTable</span></span>
+    - <span data-ttu-id="dca39-1454">Get-AzExpressRouteCircuitARPTable</span><span class="sxs-lookup"><span data-stu-id="dca39-1454">Get-AzExpressRouteCircuitARPTable</span></span>
+    - <span data-ttu-id="dca39-1455">Get-AzExpressRouteCircuitRouteTableSummary</span><span class="sxs-lookup"><span data-stu-id="dca39-1455">Get-AzExpressRouteCircuitRouteTableSummary</span></span>
+    - <span data-ttu-id="dca39-1456">Get-AzExpressRouteCrossConnectionArpTable</span><span class="sxs-lookup"><span data-stu-id="dca39-1456">Get-AzExpressRouteCrossConnectionArpTable</span></span>
+    - <span data-ttu-id="dca39-1457">Get-AzExpressRouteCrossConnectionRouteTable</span><span class="sxs-lookup"><span data-stu-id="dca39-1457">Get-AzExpressRouteCrossConnectionRouteTable</span></span>
+    - <span data-ttu-id="dca39-1458">Get-AzExpressRouteCrossConnectionRouteTableSummary</span><span class="sxs-lookup"><span data-stu-id="dca39-1458">Get-AzExpressRouteCrossConnectionRouteTableSummary</span></span>
 
-#### <a name="azpolicyinsights"></a><span data-ttu-id="7b0da-1459">Az.PolicyInsights</span><span class="sxs-lookup"><span data-stu-id="7b0da-1459">Az.PolicyInsights</span></span>
-* <span data-ttu-id="7b0da-1460">Cmdletar för principreparation har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-1460">Added policy remediation cmdlets</span></span>
+#### <a name="azpolicyinsights"></a><span data-ttu-id="dca39-1459">Az.PolicyInsights</span><span class="sxs-lookup"><span data-stu-id="dca39-1459">Az.PolicyInsights</span></span>
+* <span data-ttu-id="dca39-1460">Cmdletar för principreparation har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-1460">Added policy remediation cmdlets</span></span>
 
-#### <a name="azresources"></a><span data-ttu-id="7b0da-1461">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="7b0da-1461">Az.Resources</span></span>
-* <span data-ttu-id="7b0da-1462">Korrigering för https://github.com/Azure/azure-powershell/issues/7402</span><span class="sxs-lookup"><span data-stu-id="7b0da-1462">Fix for https://github.com/Azure/azure-powershell/issues/7402</span></span>
-    - <span data-ttu-id="7b0da-1463">Tillåt att resurser listas med parametern -ResourceId för Get-AzResource</span><span class="sxs-lookup"><span data-stu-id="7b0da-1463">Allow listing resources using the '-ResourceId' parameter for 'Get-AzResource'</span></span>
+#### <a name="azresources"></a><span data-ttu-id="dca39-1461">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="dca39-1461">Az.Resources</span></span>
+* <span data-ttu-id="dca39-1462">Korrigering för https://github.com/Azure/azure-powershell/issues/7402</span><span class="sxs-lookup"><span data-stu-id="dca39-1462">Fix for https://github.com/Azure/azure-powershell/issues/7402</span></span>
+    - <span data-ttu-id="dca39-1463">Tillåt att resurser listas med parametern -ResourceId för Get-AzResource</span><span class="sxs-lookup"><span data-stu-id="dca39-1463">Allow listing resources using the '-ResourceId' parameter for 'Get-AzResource'</span></span>
 
-#### <a name="azservicebus"></a><span data-ttu-id="7b0da-1464">Az.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="7b0da-1464">Az.ServiceBus</span></span>
-* <span data-ttu-id="7b0da-1465">Skrivskyddad MigrationState-egenskap har lagts till i PSServiceBusMigrationConfigurationAttributes, som hjälper till att hålla koll på migreringstillståndet.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1465">Added MigrationState read-only property to PSServiceBusMigrationConfigurationAttributes which will help to know the Migration state.</span></span>
+#### <a name="azservicebus"></a><span data-ttu-id="dca39-1464">Az.ServiceBus</span><span class="sxs-lookup"><span data-stu-id="dca39-1464">Az.ServiceBus</span></span>
+* <span data-ttu-id="dca39-1465">Skrivskyddad MigrationState-egenskap har lagts till i PSServiceBusMigrationConfigurationAttributes, som hjälper till att hålla koll på migreringstillståndet.</span><span class="sxs-lookup"><span data-stu-id="dca39-1465">Added MigrationState read-only property to PSServiceBusMigrationConfigurationAttributes which will help to know the Migration state.</span></span>
 
-#### <a name="azservicefabric"></a><span data-ttu-id="7b0da-1466">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="7b0da-1466">Az.ServiceFabric</span></span>
-* <span data-ttu-id="7b0da-1467">Åtgärda att lägga till certifikat till Linux-Vmss.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1467">Fix add certificate to Linux Vmss.</span></span>
-* <span data-ttu-id="7b0da-1468">Åtgärdade Add-AzServiceFabricClusterCertificate</span><span class="sxs-lookup"><span data-stu-id="7b0da-1468">Fix 'Add-AzServiceFabricClusterCertificate'</span></span>
-    - <span data-ttu-id="7b0da-1469">Använd rätt tumavtryck från nya certifikat (Azure/service-fabric-issues#932).</span><span class="sxs-lookup"><span data-stu-id="7b0da-1469">Using correct thumbprint from new certificate (Azure/service-fabric-issues#932).</span></span>
-    - <span data-ttu-id="7b0da-1470">Visa undantag korrekt (Azure/service-fabric-issues#1054).</span><span class="sxs-lookup"><span data-stu-id="7b0da-1470">Display exception correctly (Azure/service-fabric-issues#1054).</span></span>
-* <span data-ttu-id="7b0da-1471">Åtgärdade Update-AzServiceFabricDurability så att klusterkonfigurationen uppdateras innan Vmss-åtgärden CreateOrUpdate påbörjas.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1471">Fix 'Update-AzServiceFabricDurability' to update cluster configuration before starting Vmss CreateOrUpdate operation.</span></span>
+#### <a name="azservicefabric"></a><span data-ttu-id="dca39-1466">Az.ServiceFabric</span><span class="sxs-lookup"><span data-stu-id="dca39-1466">Az.ServiceFabric</span></span>
+* <span data-ttu-id="dca39-1467">Åtgärda att lägga till certifikat till Linux-Vmss.</span><span class="sxs-lookup"><span data-stu-id="dca39-1467">Fix add certificate to Linux Vmss.</span></span>
+* <span data-ttu-id="dca39-1468">Åtgärdade Add-AzServiceFabricClusterCertificate</span><span class="sxs-lookup"><span data-stu-id="dca39-1468">Fix 'Add-AzServiceFabricClusterCertificate'</span></span>
+    - <span data-ttu-id="dca39-1469">Använd rätt tumavtryck från nya certifikat (Azure/service-fabric-issues#932).</span><span class="sxs-lookup"><span data-stu-id="dca39-1469">Using correct thumbprint from new certificate (Azure/service-fabric-issues#932).</span></span>
+    - <span data-ttu-id="dca39-1470">Visa undantag korrekt (Azure/service-fabric-issues#1054).</span><span class="sxs-lookup"><span data-stu-id="dca39-1470">Display exception correctly (Azure/service-fabric-issues#1054).</span></span>
+* <span data-ttu-id="dca39-1471">Åtgärdade Update-AzServiceFabricDurability så att klusterkonfigurationen uppdateras innan Vmss-åtgärden CreateOrUpdate påbörjas.</span><span class="sxs-lookup"><span data-stu-id="dca39-1471">Fix 'Update-AzServiceFabricDurability' to update cluster configuration before starting Vmss CreateOrUpdate operation.</span></span>
 
-## <a name="040---october-2018"></a><span data-ttu-id="7b0da-1472">0.4.0 – oktober 2018</span><span class="sxs-lookup"><span data-stu-id="7b0da-1472">0.4.0 - October 2018</span></span>
-#### <a name="azprofile"></a><span data-ttu-id="7b0da-1473">Az.Profile</span><span class="sxs-lookup"><span data-stu-id="7b0da-1473">Az.Profile</span></span>
-* <span data-ttu-id="7b0da-1474">Åtgärdade problemet med Get-AzSubscription i CloudShell</span><span class="sxs-lookup"><span data-stu-id="7b0da-1474">Fix issue with Get-AzSubscription in CloudShell</span></span>
-* <span data-ttu-id="7b0da-1475">Uppdatera gemensam kod så att den använder den senaste versionen av ClientRuntime</span><span class="sxs-lookup"><span data-stu-id="7b0da-1475">Update common code to use latest version of ClientRuntime</span></span>
+## <a name="040---october-2018"></a><span data-ttu-id="dca39-1472">0.4.0 – oktober 2018</span><span class="sxs-lookup"><span data-stu-id="dca39-1472">0.4.0 - October 2018</span></span>
+#### <a name="azprofile"></a><span data-ttu-id="dca39-1473">Az.Profile</span><span class="sxs-lookup"><span data-stu-id="dca39-1473">Az.Profile</span></span>
+* <span data-ttu-id="dca39-1474">Åtgärdade problemet med Get-AzSubscription i CloudShell</span><span class="sxs-lookup"><span data-stu-id="dca39-1474">Fix issue with Get-AzSubscription in CloudShell</span></span>
+* <span data-ttu-id="dca39-1475">Uppdatera gemensam kod så att den använder den senaste versionen av ClientRuntime</span><span class="sxs-lookup"><span data-stu-id="dca39-1475">Update common code to use latest version of ClientRuntime</span></span>
 
-#### <a name="azcompute"></a><span data-ttu-id="7b0da-1476">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="7b0da-1476">Az.Compute</span></span>
-* <span data-ttu-id="7b0da-1477">Nya storlekar lades till i listan över godkända VM-storlekar för vilka accelererat nätverk kommer att aktiveras vid användning av den enkla parameteruppsättningen för New-AzVm</span><span class="sxs-lookup"><span data-stu-id="7b0da-1477">Added new sizes to the whitelist of VM sizes for which accelerated networking will be turned on when using the simple param set for 'New-AzVm'</span></span>
-* <span data-ttu-id="7b0da-1478">Argumentslutförare för ResourceName har lagts till i alla cmdletar.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1478">Added ResourceName argument completer to all cmdlets.</span></span>
+#### <a name="azcompute"></a><span data-ttu-id="dca39-1476">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="dca39-1476">Az.Compute</span></span>
+* <span data-ttu-id="dca39-1477">Nya storlekar lades till i listan över godkända VM-storlekar för vilka accelererat nätverk kommer att aktiveras vid användning av den enkla parameteruppsättningen för New-AzVm</span><span class="sxs-lookup"><span data-stu-id="dca39-1477">Added new sizes to the whitelist of VM sizes for which accelerated networking will be turned on when using the simple param set for 'New-AzVm'</span></span>
+* <span data-ttu-id="dca39-1478">Argumentslutförare för ResourceName har lagts till i alla cmdletar.</span><span class="sxs-lookup"><span data-stu-id="dca39-1478">Added ResourceName argument completer to all cmdlets.</span></span>
 
-#### <a name="azdatalakestore"></a><span data-ttu-id="7b0da-1479">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="7b0da-1479">Az.DataLakeStore</span></span>
-* <span data-ttu-id="7b0da-1480">Lägger till stöd för regler för virtuellt nätverk</span><span class="sxs-lookup"><span data-stu-id="7b0da-1480">Adding support for Virtual Network Rules</span></span>
-    - <span data-ttu-id="7b0da-1481">Get-AzDataLakeStoreVirtualNetworkRule: Hämtar eller listar regel för virtuellt nätverk i Azure Data Lake Store.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1481">Get-AzDataLakeStoreVirtualNetworkRule: Gets or Lists Azure Data Lake Store virtual network rule.</span></span>
-    - <span data-ttu-id="7b0da-1482">Add-AzDataLakeStoreVirtualNetworkRule: Lägger till en regel för virtuellt nätverk i det angivna Data Lake Store-kontot.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1482">Add-AzDataLakeStoreVirtualNetworkRule: Adds a virtual network rule to the specified Data Lake Store account.</span></span>
-    - <span data-ttu-id="7b0da-1483">Set-AzDataLakeStoreVirtualNetworkRule: Ändrar den angivna regeln för virtuellt nätverk i det angivna Data Lake Store-kontot.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1483">Set-AzDataLakeStoreVirtualNetworkRule: Modifies the specified virtual network rule in the specified Data Lake Store account.</span></span>
-    - <span data-ttu-id="7b0da-1484">Remove-AzDataLakeStoreVirtualNetworkRule: Tar bort en regel för virtuellt nätverk i Azure Data Lake Store.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1484">Remove-AzDataLakeStoreVirtualNetworkRule: Deletes an Azure Data Lake Store virtual network rule.</span></span>
+#### <a name="azdatalakestore"></a><span data-ttu-id="dca39-1479">Az.DataLakeStore</span><span class="sxs-lookup"><span data-stu-id="dca39-1479">Az.DataLakeStore</span></span>
+* <span data-ttu-id="dca39-1480">Lägger till stöd för regler för virtuellt nätverk</span><span class="sxs-lookup"><span data-stu-id="dca39-1480">Adding support for Virtual Network Rules</span></span>
+    - <span data-ttu-id="dca39-1481">Get-AzDataLakeStoreVirtualNetworkRule: Hämtar eller listar regel för virtuellt nätverk i Azure Data Lake Store.</span><span class="sxs-lookup"><span data-stu-id="dca39-1481">Get-AzDataLakeStoreVirtualNetworkRule: Gets or Lists Azure Data Lake Store virtual network rule.</span></span>
+    - <span data-ttu-id="dca39-1482">Add-AzDataLakeStoreVirtualNetworkRule: Lägger till en regel för virtuellt nätverk i det angivna Data Lake Store-kontot.</span><span class="sxs-lookup"><span data-stu-id="dca39-1482">Add-AzDataLakeStoreVirtualNetworkRule: Adds a virtual network rule to the specified Data Lake Store account.</span></span>
+    - <span data-ttu-id="dca39-1483">Set-AzDataLakeStoreVirtualNetworkRule: Ändrar den angivna regeln för virtuellt nätverk i det angivna Data Lake Store-kontot.</span><span class="sxs-lookup"><span data-stu-id="dca39-1483">Set-AzDataLakeStoreVirtualNetworkRule: Modifies the specified virtual network rule in the specified Data Lake Store account.</span></span>
+    - <span data-ttu-id="dca39-1484">Remove-AzDataLakeStoreVirtualNetworkRule: Tar bort en regel för virtuellt nätverk i Azure Data Lake Store.</span><span class="sxs-lookup"><span data-stu-id="dca39-1484">Remove-AzDataLakeStoreVirtualNetworkRule: Deletes an Azure Data Lake Store virtual network rule.</span></span>
 
-#### <a name="aznetwork"></a><span data-ttu-id="7b0da-1485">Az.Network</span><span class="sxs-lookup"><span data-stu-id="7b0da-1485">Az.Network</span></span>
-* <span data-ttu-id="7b0da-1486">Skicka protokollvärdet till serverdelen för att uppdatera cmdleten Test-AzNetworkWatcherConnectivity.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1486">Update cmdlet Test-AzNetworkWatcherConnectivity, pass the protocol value to backend.</span></span>
-* <span data-ttu-id="7b0da-1487">Argumentslutförare för ResourceName har lagts till i alla cmdletar.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1487">Added ResourceName argument completer to all cmdlets.</span></span>
+#### <a name="aznetwork"></a><span data-ttu-id="dca39-1485">Az.Network</span><span class="sxs-lookup"><span data-stu-id="dca39-1485">Az.Network</span></span>
+* <span data-ttu-id="dca39-1486">Skicka protokollvärdet till serverdelen för att uppdatera cmdleten Test-AzNetworkWatcherConnectivity.</span><span class="sxs-lookup"><span data-stu-id="dca39-1486">Update cmdlet Test-AzNetworkWatcherConnectivity, pass the protocol value to backend.</span></span>
+* <span data-ttu-id="dca39-1487">Argumentslutförare för ResourceName har lagts till i alla cmdletar.</span><span class="sxs-lookup"><span data-stu-id="dca39-1487">Added ResourceName argument completer to all cmdlets.</span></span>
 
-#### <a name="azresources"></a><span data-ttu-id="7b0da-1488">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="7b0da-1488">Az.Resources</span></span>
-* <span data-ttu-id="7b0da-1489">Åtgärdade problem där Get-AzRoleDefinition genererar ett oläsligt undantag (när standardprofilen inte innehåller någon prenumeration och ingen omfattning har angetts) genom att lägga till ett beskrivande undantag i scenariot.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1489">Fix isssue where Get-AzRoleDefinition throws an unintelligible exception (when the default profile has no subscription in it and no scope is specified) by adding a meaningful exception in the scenario.</span></span> <span data-ttu-id="7b0da-1490">Ställ in ”RoleDefinitionNameParameterSet” som standardparameteruppsättning.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1490">Also set the default param set to 'RoleDefinitionNameParameterSet'.</span></span>
+#### <a name="azresources"></a><span data-ttu-id="dca39-1488">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="dca39-1488">Az.Resources</span></span>
+* <span data-ttu-id="dca39-1489">Åtgärdade problem där Get-AzRoleDefinition genererar ett oläsligt undantag (när standardprofilen inte innehåller någon prenumeration och ingen omfattning har angetts) genom att lägga till ett beskrivande undantag i scenariot.</span><span class="sxs-lookup"><span data-stu-id="dca39-1489">Fix isssue where Get-AzRoleDefinition throws an unintelligible exception (when the default profile has no subscription in it and no scope is specified) by adding a meaningful exception in the scenario.</span></span> <span data-ttu-id="dca39-1490">Ställ in ”RoleDefinitionNameParameterSet” som standardparameteruppsättning.</span><span class="sxs-lookup"><span data-stu-id="dca39-1490">Also set the default param set to 'RoleDefinitionNameParameterSet'.</span></span>
 
-## <a name="030---october-2018"></a><span data-ttu-id="7b0da-1491">0.3.0 – oktober 2018</span><span class="sxs-lookup"><span data-stu-id="7b0da-1491">0.3.0 - October 2018</span></span>
-#### <a name="azurestorage"></a><span data-ttu-id="7b0da-1492">Azure.Storage</span><span class="sxs-lookup"><span data-stu-id="7b0da-1492">Azure.Storage</span></span>
-* <span data-ttu-id="7b0da-1493">Åtgärda fel där Kopiera blob/fil inte kopierar metadata när målplatsen har ett problem med metadata</span><span class="sxs-lookup"><span data-stu-id="7b0da-1493">Fix Copy Blob/File won't copy metadata when destination has metadata issue</span></span>
-    - <span data-ttu-id="7b0da-1494">Start-AzureStorageBlobCopy</span><span class="sxs-lookup"><span data-stu-id="7b0da-1494">Start-AzureStorageBlobCopy</span></span>
-    - <span data-ttu-id="7b0da-1495">Start-AzureStorageFileCopy</span><span class="sxs-lookup"><span data-stu-id="7b0da-1495">Start-AzureStorageFileCopy</span></span>
-* <span data-ttu-id="7b0da-1496">Stöd för att hämta användningsinformation om en Storage-resurs för en specifik plats och för att lägga till ett varningsmeddelande för att hämta användningsinformation om en global Storage-resurs är inaktuellt.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1496">Support get the Storage resource usage of a specific location, and add warning message for get global Storage resource usage is obsolete.</span></span>
-    - <span data-ttu-id="7b0da-1497">Get-AzStorageUsage</span><span class="sxs-lookup"><span data-stu-id="7b0da-1497">Get-AzStorageUsage</span></span>
+## <a name="030---october-2018"></a><span data-ttu-id="dca39-1491">0.3.0 – oktober 2018</span><span class="sxs-lookup"><span data-stu-id="dca39-1491">0.3.0 - October 2018</span></span>
+#### <a name="azurestorage"></a><span data-ttu-id="dca39-1492">Azure.Storage</span><span class="sxs-lookup"><span data-stu-id="dca39-1492">Azure.Storage</span></span>
+* <span data-ttu-id="dca39-1493">Åtgärda fel där Kopiera blob/fil inte kopierar metadata när målplatsen har ett problem med metadata</span><span class="sxs-lookup"><span data-stu-id="dca39-1493">Fix Copy Blob/File won't copy metadata when destination has metadata issue</span></span>
+    - <span data-ttu-id="dca39-1494">Start-AzureStorageBlobCopy</span><span class="sxs-lookup"><span data-stu-id="dca39-1494">Start-AzureStorageBlobCopy</span></span>
+    - <span data-ttu-id="dca39-1495">Start-AzureStorageFileCopy</span><span class="sxs-lookup"><span data-stu-id="dca39-1495">Start-AzureStorageFileCopy</span></span>
+* <span data-ttu-id="dca39-1496">Stöd för att hämta användningsinformation om en Storage-resurs för en specifik plats och för att lägga till ett varningsmeddelande för att hämta användningsinformation om en global Storage-resurs är inaktuellt.</span><span class="sxs-lookup"><span data-stu-id="dca39-1496">Support get the Storage resource usage of a specific location, and add warning message for get global Storage resource usage is obsolete.</span></span>
+    - <span data-ttu-id="dca39-1497">Get-AzStorageUsage</span><span class="sxs-lookup"><span data-stu-id="dca39-1497">Get-AzStorageUsage</span></span>
     
-#### <a name="azcognitiveservices"></a><span data-ttu-id="7b0da-1498">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="7b0da-1498">Az.CognitiveServices</span></span>
-* <span data-ttu-id="7b0da-1499">Stöd för Get-AzCognitiveServicesAccountSkus utan ett befintligt konto.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1499">Support Get-AzCognitiveServicesAccountSkus without an existing account.</span></span>
+#### <a name="azcognitiveservices"></a><span data-ttu-id="dca39-1498">Az.CognitiveServices</span><span class="sxs-lookup"><span data-stu-id="dca39-1498">Az.CognitiveServices</span></span>
+* <span data-ttu-id="dca39-1499">Stöd för Get-AzCognitiveServicesAccountSkus utan ett befintligt konto.</span><span class="sxs-lookup"><span data-stu-id="dca39-1499">Support Get-AzCognitiveServicesAccountSkus without an existing account.</span></span>
 
-#### <a name="azcompute"></a><span data-ttu-id="7b0da-1500">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="7b0da-1500">Az.Compute</span></span>
-* <span data-ttu-id="7b0da-1501">Åtgärdade fel där Get-AzVM -ResourceGroupName <rg> returnerar fler än 50 resultat om det behövs</span><span class="sxs-lookup"><span data-stu-id="7b0da-1501">Fix Get-AzVM -ResourceGroupName <rg> to return more than 50 results if needed</span></span>
-* <span data-ttu-id="7b0da-1502">Lade till ett exempel för SimpleParameterSet i hjälpen för cmdleten New-AzVmss.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1502">Added an example of the 'SimpleParameterSet' to New-AzVmss cmdlet help.</span></span>
-* <span data-ttu-id="7b0da-1503">Ett stavfel i förloppsmeddelandet för Azure Disk Encryption har korrigerats</span><span class="sxs-lookup"><span data-stu-id="7b0da-1503">Fixed a typo in the Azure Disk Encryption progress message</span></span>
+#### <a name="azcompute"></a><span data-ttu-id="dca39-1500">Az.Compute</span><span class="sxs-lookup"><span data-stu-id="dca39-1500">Az.Compute</span></span>
+* <span data-ttu-id="dca39-1501">Åtgärdade fel där Get-AzVM -ResourceGroupName <rg> returnerar fler än 50 resultat om det behövs</span><span class="sxs-lookup"><span data-stu-id="dca39-1501">Fix Get-AzVM -ResourceGroupName <rg> to return more than 50 results if needed</span></span>
+* <span data-ttu-id="dca39-1502">Lade till ett exempel för SimpleParameterSet i hjälpen för cmdleten New-AzVmss.</span><span class="sxs-lookup"><span data-stu-id="dca39-1502">Added an example of the 'SimpleParameterSet' to New-AzVmss cmdlet help.</span></span>
+* <span data-ttu-id="dca39-1503">Ett stavfel i förloppsmeddelandet för Azure Disk Encryption har korrigerats</span><span class="sxs-lookup"><span data-stu-id="dca39-1503">Fixed a typo in the Azure Disk Encryption progress message</span></span>
 
-#### <a name="azdatafactoryv2"></a><span data-ttu-id="7b0da-1504">Az.DataFactoryV2</span><span class="sxs-lookup"><span data-stu-id="7b0da-1504">Az.DataFactoryV2</span></span>
-* <span data-ttu-id="7b0da-1505">ADF .Net SDK-versionen har uppdaterats till 2.3.0.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1505">Updated the ADF .Net SDK version to 2.3.0.</span></span>
+#### <a name="azdatafactoryv2"></a><span data-ttu-id="dca39-1504">Az.DataFactoryV2</span><span class="sxs-lookup"><span data-stu-id="dca39-1504">Az.DataFactoryV2</span></span>
+* <span data-ttu-id="dca39-1505">ADF .Net SDK-versionen har uppdaterats till 2.3.0.</span><span class="sxs-lookup"><span data-stu-id="dca39-1505">Updated the ADF .Net SDK version to 2.3.0.</span></span>
 
-#### <a name="aznetwork"></a><span data-ttu-id="7b0da-1506">Az.Network</span><span class="sxs-lookup"><span data-stu-id="7b0da-1506">Az.Network</span></span>
-* <span data-ttu-id="7b0da-1507">Funktionalitet för NetworkProfile har lagts till.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1507">Added NetworkProfile functionality.</span></span> <span data-ttu-id="7b0da-1508">nya cmdletar har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-1508">new cmdlets added</span></span>
-    - <span data-ttu-id="7b0da-1509">Get-AzNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="7b0da-1509">Get-AzNetworkProfile</span></span>
-    - <span data-ttu-id="7b0da-1510">New-AzNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="7b0da-1510">New-AzNetworkProfile</span></span>
-    - <span data-ttu-id="7b0da-1511">Remove-AzNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="7b0da-1511">Remove-AzNetworkProfile</span></span>
-    - <span data-ttu-id="7b0da-1512">Set-AzNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="7b0da-1512">Set-AzNetworkProfile</span></span>
-    - <span data-ttu-id="7b0da-1513">New-AzContainerNicConfig</span><span class="sxs-lookup"><span data-stu-id="7b0da-1513">New-AzContainerNicConfig</span></span>
-    - <span data-ttu-id="7b0da-1514">New-AzContainerNicConfigIpConfig</span><span class="sxs-lookup"><span data-stu-id="7b0da-1514">New-AzContainerNicConfigIpConfig</span></span>
-* <span data-ttu-id="7b0da-1515">Länk för tjänstassociering på modell för undernät har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-1515">Added service association link on Subnet Model</span></span>
-* <span data-ttu-id="7b0da-1516">Cmdletarna New-AzVirtualNetworkTap, Get-AzVirtualNetworkTap, Set-AzVirtualNetworkTap och Remove-AzVirtualNetworkTap har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-1516">Added cmdlet New-AzVirtualNetworkTap, Get-AzVirtualNetworkTap, Set-AzVirtualNetworkTap, Remove-AzVirtualNetworkTap</span></span>
-* <span data-ttu-id="7b0da-1517">Cmdletarna Set-AzNEtworkInterfaceTapConfig, Get-AzNEtworkInterfaceTapConfig och Remove-AzNEtworkInterfaceTapConfig har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-1517">Added cmdlet Set-AzNEtworkInterfaceTapConfig, Get-AzNEtworkInterfaceTapConfig, Remove-AzNEtworkInterfaceTapConfig</span></span>
+#### <a name="aznetwork"></a><span data-ttu-id="dca39-1506">Az.Network</span><span class="sxs-lookup"><span data-stu-id="dca39-1506">Az.Network</span></span>
+* <span data-ttu-id="dca39-1507">Funktionalitet för NetworkProfile har lagts till.</span><span class="sxs-lookup"><span data-stu-id="dca39-1507">Added NetworkProfile functionality.</span></span> <span data-ttu-id="dca39-1508">nya cmdletar har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-1508">new cmdlets added</span></span>
+    - <span data-ttu-id="dca39-1509">Get-AzNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="dca39-1509">Get-AzNetworkProfile</span></span>
+    - <span data-ttu-id="dca39-1510">New-AzNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="dca39-1510">New-AzNetworkProfile</span></span>
+    - <span data-ttu-id="dca39-1511">Remove-AzNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="dca39-1511">Remove-AzNetworkProfile</span></span>
+    - <span data-ttu-id="dca39-1512">Set-AzNetworkProfile</span><span class="sxs-lookup"><span data-stu-id="dca39-1512">Set-AzNetworkProfile</span></span>
+    - <span data-ttu-id="dca39-1513">New-AzContainerNicConfig</span><span class="sxs-lookup"><span data-stu-id="dca39-1513">New-AzContainerNicConfig</span></span>
+    - <span data-ttu-id="dca39-1514">New-AzContainerNicConfigIpConfig</span><span class="sxs-lookup"><span data-stu-id="dca39-1514">New-AzContainerNicConfigIpConfig</span></span>
+* <span data-ttu-id="dca39-1515">Länk för tjänstassociering på modell för undernät har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-1515">Added service association link on Subnet Model</span></span>
+* <span data-ttu-id="dca39-1516">Cmdletarna New-AzVirtualNetworkTap, Get-AzVirtualNetworkTap, Set-AzVirtualNetworkTap och Remove-AzVirtualNetworkTap har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-1516">Added cmdlet New-AzVirtualNetworkTap, Get-AzVirtualNetworkTap, Set-AzVirtualNetworkTap, Remove-AzVirtualNetworkTap</span></span>
+* <span data-ttu-id="dca39-1517">Cmdletarna Set-AzNEtworkInterfaceTapConfig, Get-AzNEtworkInterfaceTapConfig och Remove-AzNEtworkInterfaceTapConfig har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-1517">Added cmdlet Set-AzNEtworkInterfaceTapConfig, Get-AzNEtworkInterfaceTapConfig, Remove-AzNEtworkInterfaceTapConfig</span></span>
 
-#### <a name="azrediscache"></a><span data-ttu-id="7b0da-1518">Az.RedisCache</span><span class="sxs-lookup"><span data-stu-id="7b0da-1518">Az.RedisCache</span></span>
-* <span data-ttu-id="7b0da-1519">Tillåt att alla strängar används som storleksparametrar framöver.</span><span class="sxs-lookup"><span data-stu-id="7b0da-1519">Allow any string as Size parameter going forward.</span></span> <span data-ttu-id="7b0da-1520">Lägg till P5 i popup-fönstret PSArgumentCompleter</span><span class="sxs-lookup"><span data-stu-id="7b0da-1520">Add P5 in PSArgumentCompleter popup</span></span>
+#### <a name="azrediscache"></a><span data-ttu-id="dca39-1518">Az.RedisCache</span><span class="sxs-lookup"><span data-stu-id="dca39-1518">Az.RedisCache</span></span>
+* <span data-ttu-id="dca39-1519">Tillåt att alla strängar används som storleksparametrar framöver.</span><span class="sxs-lookup"><span data-stu-id="dca39-1519">Allow any string as Size parameter going forward.</span></span> <span data-ttu-id="dca39-1520">Lägg till P5 i popup-fönstret PSArgumentCompleter</span><span class="sxs-lookup"><span data-stu-id="dca39-1520">Add P5 in PSArgumentCompleter popup</span></span>
 
-#### <a name="azresources"></a><span data-ttu-id="7b0da-1521">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="7b0da-1521">Az.Resources</span></span>
-* <span data-ttu-id="7b0da-1522">Parametern -Mode som saknades i Set-AzPolicyDefinition har lagts till</span><span class="sxs-lookup"><span data-stu-id="7b0da-1522">Add missing -Mode parameter to Set-AzPolicyDefinition</span></span>
-* <span data-ttu-id="7b0da-1523">Åtgärdade buggen för cmdleten Get-AzProviderOperation för åtgärder med ursprung som innehåller användare</span><span class="sxs-lookup"><span data-stu-id="7b0da-1523">Fix Get-AzProviderOperation commandlet bug for operations with Origin containing User</span></span>
+#### <a name="azresources"></a><span data-ttu-id="dca39-1521">Az.Resources</span><span class="sxs-lookup"><span data-stu-id="dca39-1521">Az.Resources</span></span>
+* <span data-ttu-id="dca39-1522">Parametern -Mode som saknades i Set-AzPolicyDefinition har lagts till</span><span class="sxs-lookup"><span data-stu-id="dca39-1522">Add missing -Mode parameter to Set-AzPolicyDefinition</span></span>
+* <span data-ttu-id="dca39-1523">Åtgärdade buggen för cmdleten Get-AzProviderOperation för åtgärder med ursprung som innehåller användare</span><span class="sxs-lookup"><span data-stu-id="dca39-1523">Fix Get-AzProviderOperation commandlet bug for operations with Origin containing User</span></span>
 
-#### <a name="azsql"></a><span data-ttu-id="7b0da-1524">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="7b0da-1524">Az.Sql</span></span>
-* <span data-ttu-id="7b0da-1525">Ett problem där vissa cmdletar för säkerhetskopiering inte kunde identifiera den aktuella azure-prenumerationen har åtgärdats</span><span class="sxs-lookup"><span data-stu-id="7b0da-1525">Fixed issue where some backup cmdlets would not recognize the current azure subscription</span></span>
+#### <a name="azsql"></a><span data-ttu-id="dca39-1524">Az.Sql</span><span class="sxs-lookup"><span data-stu-id="dca39-1524">Az.Sql</span></span>
+* <span data-ttu-id="dca39-1525">Ett problem där vissa cmdletar för säkerhetskopiering inte kunde identifiera den aktuella azure-prenumerationen har åtgärdats</span><span class="sxs-lookup"><span data-stu-id="dca39-1525">Fixed issue where some backup cmdlets would not recognize the current azure subscription</span></span>
 
-#### <a name="azwebsites"></a><span data-ttu-id="7b0da-1526">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="7b0da-1526">Az.Websites</span></span>
-* <span data-ttu-id="7b0da-1527">Ny cmdlet: Get-AzWebAppContainerContinuousDeploymentUrl – Hämtar webhook-URL:en för kontinuerlig distribution av container</span><span class="sxs-lookup"><span data-stu-id="7b0da-1527">New Cmdlet Get-AzWebAppContainerContinuousDeploymentUrl - Gets the Container Continuous Deployment Webhook URL</span></span>
-* <span data-ttu-id="7b0da-1528">Nya cmdletar: New-AzWebAppContainerPSSession och Enter-WebAppContainerPSSession – Startar en PowerShell-fjärrsession i en containerapp för windows</span><span class="sxs-lookup"><span data-stu-id="7b0da-1528">New Cmdlets New-AzWebAppContainerPSSession and Enter-WebAppContainerPSSession  - Initiates a PowerShell remote session into a windows container app</span></span>
+#### <a name="azwebsites"></a><span data-ttu-id="dca39-1526">Az.Websites</span><span class="sxs-lookup"><span data-stu-id="dca39-1526">Az.Websites</span></span>
+* <span data-ttu-id="dca39-1527">Ny cmdlet: Get-AzWebAppContainerContinuousDeploymentUrl – Hämtar webhook-URL:en för kontinuerlig distribution av container</span><span class="sxs-lookup"><span data-stu-id="dca39-1527">New Cmdlet Get-AzWebAppContainerContinuousDeploymentUrl - Gets the Container Continuous Deployment Webhook URL</span></span>
+* <span data-ttu-id="dca39-1528">Nya cmdletar: New-AzWebAppContainerPSSession och Enter-WebAppContainerPSSession – Startar en PowerShell-fjärrsession i en containerapp för windows</span><span class="sxs-lookup"><span data-stu-id="dca39-1528">New Cmdlets New-AzWebAppContainerPSSession and Enter-WebAppContainerPSSession  - Initiates a PowerShell remote session into a windows container app</span></span>
 
-## <a name="020---september-2018"></a><span data-ttu-id="7b0da-1529">0.2.0 – september 2018</span><span class="sxs-lookup"><span data-stu-id="7b0da-1529">0.2.0 - September 2018</span></span>
- <span data-ttu-id="7b0da-1530">Första versionen</span><span class="sxs-lookup"><span data-stu-id="7b0da-1530">Initial Release</span></span>
+## <a name="020---september-2018"></a><span data-ttu-id="dca39-1529">0.2.0 – september 2018</span><span class="sxs-lookup"><span data-stu-id="dca39-1529">0.2.0 - September 2018</span></span>
+ <span data-ttu-id="dca39-1530">Första versionen</span><span class="sxs-lookup"><span data-stu-id="dca39-1530">Initial Release</span></span>
