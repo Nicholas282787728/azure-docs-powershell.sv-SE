@@ -4,12 +4,12 @@ description: Så här installerar du Azure PowerShell utan PowerShellGet med MSI
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/22/2019
-ms.openlocfilehash: 0c1576d669daa63becb0197c29e623a0a26960be
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.openlocfilehash: 227c525d0625522c277d026ff10ae5a1cdcaedbe
+ms.sourcegitcommit: 9f5c7d231b069ad501729bf015a829f3fe89bc6a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83386909"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84121377"
 ---
 # <a name="install-azure-powershell-on-windows-with-msi"></a>Installera Azure PowerShell på Windows med MSI
 
@@ -17,8 +17,7 @@ Den här artikeln beskriver hur du installerar Azure PowerShell på Windows med 
 
 ## <a name="requirements"></a>Krav
 
-MSI-installationsprogrammet för Azure PowerShell fungerar __endast__ för PowerShell 5.1 på Windows. Om du vill installera på andra plattformar än Windows eller för senare versioner av PowerShell [installerar du med PowerShellGet](install-az-ps.md).
-Du kan kontrollera vilken PowerShell-version du har genom att köra kommandot:
+MSI-installationsprogrammet i Windows är utformat för att endast installera Azure PowerShell för PowerShell 5.1. Om du vill installera på andra plattformar än Windows eller för senare versioner av PowerShell [installerar du med PowerShellGet](install-az-ps.md). Du kan kontrollera vilken PowerShell-version du har genom att köra kommandot:
 
 ```powershell-interactive
 $PSVersionTable.PSVersion
@@ -26,12 +25,12 @@ $PSVersionTable.PSVersion
 
 Du måste göra följande för att använda Azure PowerShell i PowerShell 5.1:
 
-1. Uppdatera vid behov till [Windows PowerShell 5.1](/powershell/scripting/install/installing-windows-powershell#upgrading-existing-windows-powershell). Om du använder Windows 10 kan PowerShell 5.1 redan vara installerat.
+1. Uppdatera vid behov till [Windows PowerShell 5.1](/powershell/scripting/windows-powershell/install/installing-windows-powershell#upgrading-existing-windows-powershell). Om du använder Windows 10 kan PowerShell 5.1 redan vara installerat.
 2. Installera [.NET Framework 4.7.2 eller senare](/dotnet/framework/install).
 
 ## <a name="install-or-update-on-windows-using-the-msi-package"></a>Installera eller uppdatera på Windows med hjälp av MSI-paketet
 
-Azure PowerShell för Windows installeras med hjälp av MSI-filen som är tillgänglig från [GitHub](https://github.com/Azure/azure-powershell/releases/tag/v2.8.0-October2019). Om du har installerat tidigare versioner av Azure-moduler som MSI tar installationsprogrammet automatiskt bort dem. MSI-paketet installerar moduler i `${env:ProgramFiles}\WindowsPowerShell\Modules`.
+MSI-paketet för Azure PowerShell är tillgängligt från [GitHub](https://github.com/Azure/azure-powershell/releases/tag/v2.8.0-October2019). Om du har installerat tidigare versioner av Azure PowerShell med hjälp av MSI tar installationsprogrammet automatiskt bort dem. MSI-paketet installerar moduler i `${env:ProgramFiles}\WindowsPowerShell\Modules`.
 
 Börja arbeta med Azure PowerShell genom att logga in med dina autentiseringsuppgifter för Azure.
 
@@ -41,17 +40,14 @@ Connect-AzAccount
 ```
 
 > [!NOTE]
->
 > Om du har inaktiverat modulen för automatisk inläsning måste du importera modulen manuellt med `Import-Module Az`. Det kan ta upp till en minut. Det beror på hur modulen är strukturerad.
 
 Du måste upprepa det här steget för varje ny PowerShell-session du startar. Information om hur du sparar Azure-inloggningen mellan olika PowerShell-sessioner hittar du i artikeln om att [spara autentiseringsuppgifter för användare mellan olika PowerShell-sessioner](context-persistence.md).
 
 ## <a name="provide-feedback"></a>Ge feedback
 
-Om du upptäcker en bugg i Azure PowerShell kan du [öppna ett ärende på GitHub](https://github.com/Azure/azure-powershell/issues).
-Om du vill ge feedback från kommandoraden använder du cmdleten [Send-Feedback](/powershell/module/az.accounts/send-feedback).
+Om du upptäcker en bugg i Azure PowerShell kan du [öppna ett ärende på GitHub](https://github.com/Azure/azure-powershell/issues). Om du vill ge feedback från kommandoraden använder du cmdleten [Send-Feedback](/powershell/module/az.accounts/send-feedback).
 
-## <a name="next-steps"></a>Nästa steg
+## <a name="next-steps"></a>Efterföljande moment
 
-Läs informationen i [Komma igång med Azure PowerShell](get-started-azureps.md) för att komma igång med Azure PowerShell-modulerna och deras funktioner.
-Om du känner till Azure PowerShell och behöver migrera från AzureRM läser du [Migrera från AzureRM till Az](migrate-from-azurerm-to-az.md).
+Läs informationen i [Komma igång med Azure PowerShell](get-started-azureps.md) för att komma igång med Azure PowerShell-modulerna och deras funktioner. Om du känner till Azure PowerShell och behöver migrera från AzureRM läser du [Migrera från AzureRM till Az](migrate-from-azurerm-to-az.md).

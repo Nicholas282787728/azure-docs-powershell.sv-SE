@@ -4,12 +4,12 @@ description: Så här installerar du Azure PowerShell med PowerShellGet
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 11/16/2018
-ms.openlocfilehash: 0d9eab453fe8c3a0a0e05c1056fbf58d4454ce24
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.openlocfilehash: b04d4070e420f2d1e64f233eda6b3e250f8bb68c
+ms.sourcegitcommit: 9f5c7d231b069ad501729bf015a829f3fe89bc6a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83387946"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84122042"
 ---
 # <a name="install-azure-powershell-on-windows-with-powershellget"></a>Installera Azure PowerShell på Windows med PowerShellGet
 
@@ -30,7 +30,7 @@ Från och med PowerShell version 6.0 kräver Azure PowerShell version 5.0. Kör 
 $PSVersionTable.PSVersion
 ```
 
-Läs informationen om att [uppgradera befintliga Windows PowerShell](/powershell/scripting/setup/installing-windows-powershell?view=powershell-6#upgrading-existing-windows-powershell) om du har en inaktuell version.
+Läs informationen om att [uppgradera befintliga Windows PowerShell](/powershell/scripting/windows-powershell/install/installing-windows-powershell#upgrading-existing-windows-powershell) om du har en inaktuell version.
 
 > [!IMPORTANT]
 > Modulen AzureRM, som beskrivs i det här dokumentet, använder .NET Framework. Det här gör att den inte är kompatibel med PowerShell 6.0, som använder .NET Core. Om du använder PowerShell 6.0 följer du [anvisningarna för installation för Mac OS och Linux](install-azurermps-maclinux.md).
@@ -39,7 +39,7 @@ Läs informationen om att [uppgradera befintliga Windows PowerShell](/powershell
 
 Du behöver ha utökade behörigheter för att installera moduler från PowerShell-galleriet. Kör följande kommando i en upphöjd session för att installera Azure PowerShell:
 
-```powershell-interactive
+```azurepowershell-interactive
 Install-Module -Name AzureRM -AllowClobber
 ```
 
@@ -48,7 +48,7 @@ Install-Module -Name AzureRM -AllowClobber
 
 Som standard konfigureras inte PowerShell-galleriet som en betrodd lagringsplats för PowerShellGet. Första gången du använder PSGallery visas följande meddelande:
 
-```output
+```Output
 Untrusted repository
 
 You are installing the modules from an untrusted repository. If you trust this repository, change
@@ -66,21 +66,19 @@ Modulen `AzureRM` är en sammanslagen modul för Azure PowerShell-cmdletar. När
 
 Börja arbeta med Azure PowerShell genom att logga in med dina autentiseringsuppgifter för Azure.
 
-```powershell-interactive
+```azurepowershell-interactive
 # Connect to Azure with an interactive dialog for sign-in
 Connect-AzureRmAccount
 ```
 
 > [!NOTE]
->
 > Om du har inaktiverat modulen för automatisk inläsning måste du importera modulen manuellt med `Import-Module AzureRM`. Det kan ta några sekunder. Det beror på hur modulen är strukturerad.
-
 
 Du måste upprepa de här stegen för varje ny PowerShell-session du startar. Information om hur du sparar Azure-inloggningen mellan olika PowerShell-sessioner hittar du i artikeln om att [spara autentiseringsuppgifter för användare mellan olika PowerShell-sessioner](context-persistence.md).
 
 ## <a name="update-the-azure-powershell-module"></a>Uppdatera Azure PowerShell-modulen
 
-Du kan uppdatera din Azure PowerShell-installation genom att köra [Update-Module](/powershell/module/powershellget/update-module). Det här kommandot avinstallerar __inte__ tidigare versioner.
+Du kan uppdatera din Azure PowerShell-installation genom att köra [Update-Module](/powershell/module/powershellget/update-module). Det här kommandot avinstallerar **inte** tidigare versioner.
 
 ```powershell-interactive
 Update-Module -Name AzureRM
@@ -92,7 +90,7 @@ Se [Avinstallera Azure PowerShell-modulen](uninstall-azurerm-ps.md) om du vill t
 
 Det är möjligt att installera fler än en version av Azure PowerShell. Använd följande kommando för att kontrollera om du har flera versioner av Azure PowerShell installerade:
 
-```powershell-interactive
+```azurepowershell-interactive
 Get-InstalledModule -Name AzureRM -AllVersions | select Name,Version
 ```
 
@@ -100,22 +98,21 @@ Se [Avinstallera Azure PowerShell-modulen](uninstall-azurerm-ps.md) om du vill t
 
 Du kan behöva fler än en version om du arbetar med lokala Azure Stack-resurser, kör en äldre version av Windows eller använder den klassiska Azure-distributionsmodellen. Ange argumentet `-RequiredVersion` när du installerar för att installera en äldre version.
 
-```powershell-interactive
+```azurepowershell-interactive
 # Install version 2.3.0 of Azure PowerShell
 Install-Module -Name AzureRM -RequiredVersion 2.3.0
 ```
 
 När du läser in Azure PowerShell-modulen läses den senaste versionen in som standard. Ange argumentet `-RequiredVersion` för att läsa in en annan version.
 
-```powershell-interactive
+```azurepowershell-interactive
 # Load version 2.3.0 of Azure PowerShell
 Import-Module -Name AzureRM -RequiredVersion 2.3.0
 ```
 
 ## <a name="provide-feedback"></a>Ge feedback
 
-Om du upptäcker en bugg när du använder Azure PowerShell kan du [öppna ett ärende på GitHub](https://github.com/Azure/azure-powershell/issues).
-Om du vill ge feedback från kommandoraden använder du cmdleten [Send-Feedback](/powershell/module/azurerm.profile/send-feedback).
+Om du upptäcker en bugg när du använder Azure PowerShell kan du [öppna ett ärende på GitHub](https://github.com/Azure/azure-powershell/issues). Om du vill ge feedback från kommandoraden använder du cmdleten [Send-Feedback](/powershell/module/azurerm.profile/send-feedback).
 
 ## <a name="next-steps"></a>Efterföljande moment
 

@@ -4,12 +4,12 @@ description: Lär dig mer om alla de senaste uppdateringarna för Azure PowerShe
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/10/2020
-ms.openlocfilehash: c02cfaa7f7f39393f21cec31c5115f009381b19c
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: 9dd733865ba8235eed6dcef4637a63ad93999338
+ms.sourcegitcommit: 9f5c7d231b069ad501729bf015a829f3fe89bc6a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81446061"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84121921"
 ---
 # <a name="azure-powershell-release-notes"></a>Viktig information om Azure PowerShell
 ## <a name="0100-preview---april-2020"></a>0.10.0-förhandsversion – April 2020
@@ -29,7 +29,7 @@ ms.locfileid: "81446061"
   - Az.Websites
 * Tre nya PowerShell-moduler för AZ har introducerats som fungerar med Azure Stack Hub, och de är Az.Databox, Az.IotHub och Az.EventHub
 * Kommandona är i princip oförändrade, med endast mindre ändringar som att AzureRM ändras till AZ
-* En uppdaterad länk till PowerShell-dokumentationen för Azure Stack Hub finns [här](aka.ms/InstallASHPowerShell)
+* En uppdaterad länk till PowerShell-dokumentationen för Azure Stack Hub finns [här](https://aka.ms/InstallASHPowerShell)
 
 #### <a name="azaccounts"></a>Az.Accounts
 * Uppgradera från ADAL till MSAL
@@ -40,7 +40,7 @@ ms.locfileid: "81446061"
 * Åtgärdade ”Get-AzTenant”/”Get-AzDefault”/”Set-AzDefault”-utlösning av NullReferenceException när du inte är inloggad [#10292]
 
 #### <a name="azcompute"></a>Az.Compute
-* Följande parametrar har lagts till i cmdleten ”New-AzDiskConfig”: 
+* Följande parametrar har lagts till i cmdleten ”New-AzDiskConfig”:
     - DiskIOPSReadOnly, DiskMBpsReadOnly, MaxSharesCount, GalleryImageReference
 * Tillåten krypteringsegenskap till målparametern för cmdleten ”New-AzGalleryImageVersion”.
 * Åtgärdade tempDisk-problem för cmdletarna ”Set-AzVmss”-Reimage och ”Invoke-AzVMReimage”. [#11354]

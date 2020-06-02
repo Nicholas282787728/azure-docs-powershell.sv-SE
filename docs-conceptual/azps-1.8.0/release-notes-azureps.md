@@ -4,13 +4,14 @@ description: Lär dig mer om alla de senaste uppdateringarna för Azure PowerShe
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 04/30/2019
-ms.openlocfilehash: 287e9e1f066d0768e7f572ca7f5f2ee2b78931d9
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.openlocfilehash: 34b21292ccc47bb53b6609cd637ef18338a45cd3
+ms.sourcegitcommit: 9f5c7d231b069ad501729bf015a829f3fe89bc6a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83386977"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84121461"
 ---
+# <a name="azure-powershell-release-notes"></a>Viktig information om Azure PowerShell
 ## <a name="180---april-2019"></a>1.8.0 – april 2019
 ### <a name="highlights-since-the-last-major-release"></a>Höjdpunkter sedan den senaste större uppdateringen
 * Allmän tillgänglighet för `Az`-modulen
@@ -48,7 +49,7 @@ ms.locfileid: "83386977"
 * Hjälptexten för slutpunkten har uppdaterats för att visa att resurser ska skapas innan cmdletarna för att skapa/uppdatera händelseprenumerationer används.
 
 #### <a name="azeventhub"></a>Az.EventHub
-* Nya cmdletar har lagts till för NetworkRuleSet för namnområden 
+* Nya cmdletar har lagts till för NetworkRuleSet för namnområden
 
 #### <a name="azhdinsight"></a>Az.HDInsight
 * Cmdletar med pluralsubstantiv har uppdaterats till singularis och namn i plural har gjorts inaktuella.
@@ -138,7 +139,7 @@ ms.locfileid: "83386977"
 
 #### <a name="azcompute"></a>Az.Compute
 * Lägg till parametern HyperVGeneration i New-AzDiskConfig och New-AzSnapshotConfig
-* Tillåt att virtuella datorer skapas med galleribilder från andra klientorganisationer. 
+* Tillåt att virtuella datorer skapas med galleribilder från andra klientorganisationer.
 
 #### <a name="azcontainerinstance"></a>Az.ContainerInstance
 * Ett problem har åtgärdats i parametern -Command för New-AzContainerGroup som lade till ett avslutande tomt argument
@@ -220,7 +221,7 @@ ms.locfileid: "83386977"
     - New-AzStorageAccountManagementPolicyRule
 
 #### <a name="azwebsites"></a>Az.Websites
-* Åtgärda fel med ARM-mall som avbryter kloning av alla platser med 'New-AzWebApp -IncludeSourceWebAppSlots' 
+* Åtgärda fel med ARM-mall som avbryter kloning av alla platser med 'New-AzWebApp -IncludeSourceWebAppSlots'
 
 ## <a name="150---march-2019"></a>1.5.0 – mars 2019
 #### <a name="azaccounts"></a>Az.Accounts
@@ -289,7 +290,7 @@ ms.locfileid: "83386977"
 * Cmdletar har lagts till för uppräkning och återställning av borttagna objekt i ADL
 
 #### <a name="azeventhub"></a>Az.EventHub
-* Ny boolesk egenskap SkipEmptyArchives har lagts till i Skip Empty Archives i CaptureDescription-klassen i Eventhub 
+* Ny boolesk egenskap SkipEmptyArchives har lagts till i Skip Empty Archives i CaptureDescription-klassen i Eventhub
 
 #### <a name="azkeyvault"></a>Az.KeyVault
 * Taggning i Set-AzKeyVaultSecret har åtgärdats
@@ -317,8 +318,8 @@ ms.locfileid: "83386977"
 
 #### <a name="azoperationalinsights"></a>Az.OperationalInsights
 * Ytterligare stöd för datakällorna New och Get ApplicationInsights.
-    - Ny ApplicationInsights-typ har lagts till för att ge stöd för ”Get specific” och ”Get all” för ApplicationInsights-datakällor för angiven arbetsyta. 
-    - Cmdleten New-AzOperationalInsightsApplicationInsightsDataSource har lagts till för att skapa datakälla med angivna parametrar för Application Insights-resurs: subscription Id, resourceGroupName och name. 
+    - Ny ApplicationInsights-typ har lagts till för att ge stöd för ”Get specific” och ”Get all” för ApplicationInsights-datakällor för angiven arbetsyta.
+    - Cmdleten New-AzOperationalInsightsApplicationInsightsDataSource har lagts till för att skapa datakälla med angivna parametrar för Application Insights-resurs: subscription Id, resourceGroupName och name.
 
 #### <a name="azresources"></a>Az.Resources
 * Korrigering av problemet https://github.com/Azure/azure-powershell/issues/8166
@@ -349,9 +350,9 @@ Allmän tillgänglighet för Az.AnalysisServices-modulen.
 Allmän tillgänglighet för Az.RecoveryServices-modulen.
 
 #### <a name="azresources"></a>Az.Resources
-* Korrigera taggar för resursgrupper 
+* Korrigera taggar för resursgrupper
     - Mer information här: https://github.com/Azure/azure-powershell/issues/8166
-* Åtgärda problem där `Get-AzureRmRoleAssignment` inte respekterar -ErrorAction 
+* Åtgärda problem där `Get-AzureRmRoleAssignment` inte respekterar -ErrorAction
     - Mer information här: https://github.com/Azure/azure-powershell/issues/8235
 
 #### <a name="azsql"></a>Az.Sql
@@ -656,7 +657,7 @@ Stöd har lagts till för konfiguration av RewriteRuleSets i Application Gateway
 
 ### <a name="azwebsites"></a>Az.Websites
 
-* Set-AzureRmWebApp och Set-AzureRmWebAppSlot 
+* Set-AzureRmWebApp och Set-AzureRmWebAppSlot
     - Ny parameter (-AzureStoragePath) har lagts till för att ange att Azure Storage-sökvägar ska monteras i containerappar i Windows och Linux. Använder utdata från den nya cmdleten New-AzureRmWebAppAzureStoragePath som en parameter för att ange sökvägar för Azure Storage.
 
 ## <a name="061---november-2018"></a>0.6.1 – november 2018
@@ -684,7 +685,7 @@ Stöd har lagts till för konfiguration av RewriteRuleSets i Application Gateway
 ### <a name="aznetwork"></a>Az.Network
 * Cmdlet New-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayCustomError, Get-AzureRmApplicationGatewayCustomError, Set-AzureRmApplicationGatewayCustomError, Remove-AzureRmApplicationGatewayCustomErreller Add-AzureRmApplicationGatewayHttpListenerCustomError, Get-AzureRmApplicationGatewayHttpListenerCustomError, Set-AzureRmApplicationGatewayHttpListenerCustomError, Remove-AzureRmApplicationGatewayHttpListenerCustomError har lagts till
 * ICMP tillbaka till stöd för Azure Firewall-nätverksprotokoll har lagts till
-* Uppdatera cmdlet Test-AzureRmNetworkWatcherConnectivity, lägga till verifiering av mål-id, adress och port. 
+* Uppdatera cmdlet Test-AzureRmNetworkWatcherConnectivity, lägga till verifiering av mål-id, adress och port.
 * Åtgärda problem med minnesanvändning i VirtualNetwork-karta
 
 ### <a name="azrecoveryservicesbackup"></a>Az.RecoveryServices.Backup
@@ -816,7 +817,7 @@ Stöd har lagts till för konfiguration av RewriteRuleSets i Application Gateway
     - Start-AzureStorageFileCopy
 * Stöd för att hämta användningsinformation om en Storage-resurs för en specifik plats och för att lägga till ett varningsmeddelande för att hämta användningsinformation om en global Storage-resurs är inaktuellt.
     - Get-AzStorageUsage
-    
+
 #### <a name="azcognitiveservices"></a>Az.CognitiveServices
 * Stöd för Get-AzCognitiveServicesAccountSkus utan ett befintligt konto.
 
