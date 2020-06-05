@@ -4,12 +4,12 @@ description: En översikt över Azure PowerShell med länkar till installation o
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 12/20/2018
-ms.openlocfilehash: 91607252c33deb05efebb2d02608084a4b9c7b35
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.openlocfilehash: 9d1b9c35829facc34cd7c252cb450fcce18685b2
+ms.sourcegitcommit: 9f5c7d231b069ad501729bf015a829f3fe89bc6a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83385566"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84122227"
 ---
 # <a name="overview-of-azure-powershell"></a>Översikt över Azure PowerShell
 
@@ -21,17 +21,17 @@ Använd [Cloud Shell](/azure/cloud-shell/overview) för att köra Azure PowerShe
 
 Med hjälp av följande exempel kan du lära dig hur du utför vanliga scenarier med Azure PowerShell:
 
-* [Virtuella Linux-datorer](/azure/virtual-machines/virtual-machines-linux-powershell-samples?toc=/powershell/azure/toc.json)
-* [Virtuella Windows-datorer](/azure/virtual-machines/virtual-machines-windows-powershell-samples?toc=/powershell/azure/toc.json)
-* [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json)
-* [SQL-databaser](/azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json)
+- [Virtuella Linux-datorer](/azure/virtual-machines/virtual-machines-linux-powershell-samples?toc=/powershell/azure/toc.json)
+- [Virtuella Windows-datorer](/azure/virtual-machines/virtual-machines-windows-powershell-samples?toc=/powershell/azure/toc.json)
+- [Web Apps](/azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json)
+- [SQL-databaser](/azure/sql-database/sql-database-powershell-samples?toc=/powershell/azure/toc.json)
 
 ## <a name="learn-powershell-basics"></a>Lär dig grunderna i PowerShell
 
-Om du inte känner till PowerShell kan en introduktion till PowerShell vara till hjälp.
+Om du inte känner till PowerShell, kan du ta hjälp av en introduktion till PowerShell.
 
-* [Installera PowerShell](/powershell/scripting/install/installing-windows-powershell)
-* [Köra skript med PowerShell](/powershell/scripting/powershell-scripting)
+- [Installera PowerShell](/powershell/scripting/install/installing-powershell)
+- [Utbildningsresurser för PowerShell](/powershell/scripting/learn/more-powershell-learning)
 
 Du kan även se den här videon: [PowerShell-grunder: (Del 1) Komma igång med PowerShell](https://channel9.msdn.com/Blogs/Taste-of-Premier/PowerShellBasicsPart1).
 
@@ -42,7 +42,7 @@ Du kan även se den här videon: [PowerShell-grunder: (Del 1) Komma igång med P
 
 ## <a name="other-azure-powershell-modules"></a>Andra Azure PowerShell-moduler
 
-* [Azure Active Directory](/powershell/azure/active-directory/)
-* [Azure Information Protection](/powershell/azure/aip/)
-* [Azure Service Fabric](/powershell/azure/service-fabric/)
-* [Azure ElasticDB](/powershell/azure/elasticdbjobs/)
+- [Azure Active Directory](/powershell/azure/active-directory/)
+- [Azure Information Protection](/powershell/azure/aip/)
+- [Azure Service Fabric](/powershell/azure/service-fabric/)
+- [Azure ElasticDB](/powershell/azure/elasticdbjobs/)

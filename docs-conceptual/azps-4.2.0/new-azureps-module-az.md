@@ -4,12 +4,12 @@ description: Vi introducerar den nya Azure PowerShell-modulen Az, som ersätter 
 ms.date: 05/20/2020
 ms.devlang: powershell
 ms.topic: conceptual
-ms.openlocfilehash: 1626bb4bee775ac173d078cf67934ee5a22632c4
-ms.sourcegitcommit: 9f5c7d231b069ad501729bf015a829f3fe89bc6a
+ms.openlocfilehash: f051930132c6e1f1979a7cde1f75fd4856f83284
+ms.sourcegitcommit: cef87acc9f2a0d296bef74f526afd2e067e8146b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84122144"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84299017"
 ---
 # <a name="introducing-the-new-azure-powershell-az-module"></a>Introduktion till den nya Azure PowerShell Az-modulen
 
@@ -18,7 +18,7 @@ Från och med december 2018 finns Az-modulen för Azure PowerShell tillgänglig 
 > [!NOTE]
 > PowerShell 7.x och senare är den rekommenderade versionen av PowerShell för användning med Azure PowerShell på alla plattformar.
 
-Med den senaste Az-modulen fungerar Azure PowerShell med PowerShell 6.x och senare på alla plattformar, inklusive Windows, macOS och Linux. Modulen är också kompatibelt med PowerShell 5.1 i Windows.
+Med den senaste Az-modulen fungerar Azure PowerShell med PowerShell 6.2.4 och senare på alla plattformar, inklusive Windows, macOS och Linux. Modulen är också kompatibelt med PowerShell 5.1 i Windows.
 
 Az är en ny modul, så versionen har återställts till 1.0.0.
 
@@ -40,7 +40,7 @@ Genom att genomföra de här ändringarna, som krävde en ny Azure PowerShell-mo
 Om du vill dra nytta av de senaste Azure-funktionerna i PowerShell bör du migrera till Az-modulen så snart som möjligt. Om du inte är redo att ersätta AzureRM med Az-modulen finns det ett par alternativ för att experimentera med Az:
 
 - Du kan använda en `PowerShell`-miljö med [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview). Azure Cloud Shell är en webbläsarbaserad skalmiljö där Az-modulen redan är installerad och `Enable-AzureRM`-kompatibilitetsalias aktiverade.
-- Behåll AzureRM-modulen med PowerShell 5.1 för Windows, men installera Az-modulen för PowerShell 6.x och senare. PowerShell 5.1 för Windows och PowerShell 6.x använder separata modulsamlingar. Följ anvisningarna för att installera den [senaste versionen av PowerShell](/powershell/scripting/install/installing-powershell) och [installera sedan Az-modulen](install-az-ps.md) från PowerShell 6.x eller senare.
+- Behåll AzureRM-modulen med PowerShell 5.1 för Windows, men installera Az-modulen för PowerShell 6.2.4 och senare. PowerShell 5.1 för Windows och PowerShell 6.2.4 använder separata modulsamlingar. Följ anvisningarna för att installera den [senaste versionen av PowerShell](/powershell/scripting/install/installing-powershell) och [installera sedan Az-modulen](install-az-ps.md) från PowerShell 6.2.4 eller senare.
 
 Så uppgraderar du från en befintlig AzureRM-installation:
 
@@ -51,7 +51,7 @@ Så uppgraderar du från en befintlig AzureRM-installation:
 ## <a name="migrate-existing-scripts-to-az"></a>Migrera befintliga skript till Az
 
 De nya cmdlet-namnen har utformats för att vara lätta att lära sig. I stället för att använda `AzureRm` eller `Azure` i cmdlet-namn använder du `Az`. Det gamla kommandot `New-AzureRMVm` har till exempel blivit `New-AzVm`.
-Migreringen är dock mer omfattande än nya cmdlet-namn: Det finns omdöpta moduler, parametrar och andra viktiga ändringar.
+Migreringen handlar dock inte bara om att bekanta sig med nya cmdlet-namn. Det finns omdöpta moduler, parametrar och andra viktiga ändringar.
 
 Vi har flera resurser som hjälper dig att migrera från AzureRM till Az:
 

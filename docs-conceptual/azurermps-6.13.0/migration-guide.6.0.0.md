@@ -4,12 +4,12 @@ description: Den här migreringsguiden innehåller en lista över icke-bakåtkom
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/01/2018
-ms.openlocfilehash: 629cbb31f086c569d2b8961497d0255663602f54
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.openlocfilehash: ab20dd07fb0c14d8066ad12185f8245be291e7ec
+ms.sourcegitcommit: 9f5c7d231b069ad501729bf015a829f3fe89bc6a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83387215"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84122244"
 ---
 # <a name="breaking-changes-for-microsoft-azure-powershell-600"></a>Icke-bakåtkompatibla ändringar för Microsoft Azure PowerShell 6.0.0
 
@@ -20,9 +20,9 @@ Det här dokumentet fungerar både som ett meddelande om större ändringar och 
 ## <a name="table-of-contents"></a>Innehållsförteckning
 
 - [Allmänna icke-bakåtkompatibla ändringar](#general-breaking-changes)
-    - [Lägsta version av PowerShell som krävs har höjts till 5.0](#minimum-powershell-version-required-bumped-to-50)
-    - [Funktionen för att automatiskt spara kontext har aktiverats som standard](#context-autosave-enabled-by-default)
-    - [Borttagning av alias för taggar](#removal-of-tags-alias)
+  - [Lägsta version av PowerShell som krävs har höjts till 5.0](#minimum-powershell-version-required-bumped-to-50)
+  - [Funktionen för att automatiskt spara kontext har aktiverats som standard](#context-autosave-enabled-by-default)
+  - [Borttagning av alias för taggar](#removal-of-tags-alias)
 - [Icke-bakåtkompatibla ändringar i AzureRM.Compute-cmdletar](#breaking-changes-to-azurermcompute-cmdlets)
 - [Icke-bakåtkompatibla ändringar i AzureRM.DataLakeStore-cmdletar](#breaking-changes-to-azurermdatalakestore-cmdlets)
 - [Icke-bakåtkompatibla ändringar i AzureRM.Dns-cmdletar](#breaking-changes-to-azurermdns-cmdlets)
@@ -33,22 +33,23 @@ Det här dokumentet fungerar både som ett meddelande om större ändringar och 
 - [Icke-bakåtkompatibla ändringar i AzureRM.Resources-cmdletar](#breaking-changes-to-azurermresources-cmdlets)
 - [Icke-bakåtkompatibla ändringar i AzureRM.Storage-cmdletar](#breaking-changes-to-azurermstorage-cmdlets)
 - [Borttagna moduler](#removed-modules)
-    - [`AzureRM.ServerManagement`](#azurermservermanagement)
-    - [`AzureRM.SiteRecovery`](#azurermsiterecovery)
+  - [`AzureRM.ServerManagement`](#azurermservermanagement)
+  - [`AzureRM.SiteRecovery`](#azurermsiterecovery)
 
 ## <a name="general-breaking-changes"></a>Allmänna icke-bakåtkompatibla ändringar
 
 ### <a name="minimum-powershell-version-required-bumped-to-50"></a>Lägsta version av PowerShell som krävs har höjts till 5.0
 
-Tidigare krävde Azure PowerShell _minst_ version 3.0 av PowerShell för att köra en cmdlet. Det här kravet kommer att höjas till version 5.0 av PowerShell framöver. Information om hur du uppgraderar till PowerShell 5.0 finns i [den här tabellen](https://docs.microsoft.com/powershell/scripting/setup/installing-windows-powershell?view=powershell-6#upgrading-existing-windows-powershell).
+Tidigare krävde Azure PowerShell _minst_ version 3.0 av PowerShell för att köra en cmdlet. Det här kravet kommer att höjas till version 5.0 av PowerShell framöver. Information om hur du uppgraderar till PowerShell 5.0 finns i [den här tabellen](/powershell/scripting/windows-powershell/install/installing-windows-powershell#upgrading-existing-windows-powershell).
 
 ### <a name="context-autosave-enabled-by-default"></a>Funktionen för att automatiskt spara kontext har aktiverats som standard
 
-Automatiskt sparande av kontext är lagring av inloggningsinformation för Azure som kan användas mellan nya och olika PowerShell-sessioner. Mer information om att spara kontext automatiskt finns i [det här dokumentet](https://docs.microsoft.com/powershell/azure/context-persistence).
+Automatiskt sparande av kontext är lagring av inloggningsinformation för Azure som kan användas mellan nya och olika PowerShell-sessioner. Mer information om att spara kontext automatiskt finns i [det här dokumentet](/powershell/azure/context-persistence).
 
 Tidigare var funktionen för att automatiskt spara kontext inaktiverad som standard, vilket innebar att användarnas autentiseringsinformation inte lagrades mellan sessioner förrän de körde cmdleten `Enable-AzureRmContextAutosave` för att aktivera kontextpersistens. Funktionen för att automatiskt spara kontext kommer att vara aktiverad som standard hädanefter, vilket innebär att kontexten kommer att sparas automatiskt för användare _som inte har sparat några inställningar för automatiskt sparande av kontext_ nästa gång de loggar in. Användarna kan välja bort den här funktionen med hjälp av cmdleten `Disable-AzureRmContextAutosave`.
 
-_Obs_: användare som tidigare har inaktiverat automatiskt sparande av kontext och användare som har aktiverat funktionen och har befintliga kontexter påverkas inte av den här ändringen
+> [!NOTE]
+> Användare som tidigare har inaktiverat automatiskt sparande av kontext och användare som har aktiverat funktionen och har befintliga kontexter påverkas inte av den här ändringen.
 
 ### <a name="removal-of-tags-alias"></a>Borttagning av alias för taggar
 
@@ -96,6 +97,7 @@ Alias `Tags` för parametern `Tag` har tagits bort för flera cmdletar. Nedan vi
 ## <a name="breaking-changes-to-azurermcompute-cmdlets"></a>Icke-bakåtkompatibla ändringar i AzureRM.Compute-cmdletar
 
 **Övrigt**
+
 - SKU-namnegenskapen som är kapslad i typerna `PSDisk` och `PSSnapshot` har ändrats från `StandardLRS` och `PremiumLRS` till `Standard_LRS` respektive `Premium_LRS`
 
 ```powershell-interactive
@@ -114,12 +116,15 @@ $vm.StorageProfile.DataDisks[0].ManagedDisk.StorageAccountType   # This will now
 ```
 
 **Add-AzureRmImageDataDisk**
+
 - Godkända värden för parametern `StorageAccountType` har ändrats från `StandardLRS` och `PremiumLRS` till `Standard_LRS` respektive `Premium_LRS`
 
 **Add-AzureRmVMDataDisk**
+
 - Godkända värden för parametern `StorageAccountType` har ändrats från `StandardLRS` och `PremiumLRS` till `Standard_LRS` respektive `Premium_LRS`
 
 **Add-AzureRmVmssDataDisk**
+
 - Godkända värden för parametern `StorageAccountType` har ändrats från `StandardLRS` och `PremiumLRS` till `Standard_LRS` respektive `Premium_LRS`
 
 **New-AzureRmAvailabilitySet**
@@ -254,8 +259,9 @@ Remove-AzureRmDataLakeStoreItem -Account "ContosoADL" -path /myFolder -Recurse
 - Cmdleten accepterar inte längre enskilda parametrar som utgör åtkomst-token. I stället ersätter cmdleten explicita tokenparametrar, som t. ex. `Service` eller `Permissions` med en allmän `TemplateUri`-parameter som motsvarar en exempel-åtkomsttoken och som definierats någon annanstans (förmodligen med Storage PowerShell-cmdletar eller sammanställts manuellt enligt Storage-dokumentationen.) Cmdleten behåller parametern `ValidityPeriod`.
 
 Mer information om att sammanställa token för delad åtkomst för Azure Storage hittar du på följande dokumentationssidor:
-- [Skapa en tjänst-SAS](https://docs.microsoft.com/rest/api/storageservices/Constructing-a-Service-SAS)
-- [Skapa en konto-SAS](https://docs.microsoft.com/rest/api/storageservices/constructing-an-account-sas)
+
+- [Skapa en tjänst-SAS](/rest/api/storageservices/Constructing-a-Service-SAS)
+- [Skapa en konto-SAS](/rest/api/storageservices/constructing-an-account-sas)
 
 ```powershell-interactive
 # Old
@@ -282,7 +288,7 @@ $sas=Set-AzureKeyVaultManagedStorageSasDefinition -AccountName $sa.StorageAccoun
 - Behörigheten `all` har tagits bort från `PermissionsToKeys`, `PermissionsToSecrets` och `PermissionsToCertificates`.
 
 **Allmänt**
-- Egenskapen `ValueFromPipelineByPropertyName` togs bort från alla cmdletar där överföring genom `InputObject` har aktiverats.  Cmdletarna som påverkas är:
+- Egenskapen `ValueFromPipelineByPropertyName` togs bort från alla cmdletar där överföring genom `InputObject` har aktiverats. Cmdletarna som påverkas är:
     - `Add-AzureKeyVaultCertificate`
     - `Add-AzureKeyVaultCertificateContact`
     - `Add-AzureKeyVaultKey`

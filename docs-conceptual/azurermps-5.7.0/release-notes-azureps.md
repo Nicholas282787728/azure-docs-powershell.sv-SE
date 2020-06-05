@@ -1,18 +1,18 @@
 ---
-title: Ändringslogg för Azure PowerShell | Microsoft Docs
+title: Ändringslogg för Azure PowerShell
 description: Det här är en historik över de ändringar som gjorts i den senaste versionen av Azure PowerShell.
 ms.devlang: powershell
 ms.topic: conceptual
 ms.workload: ''
 ms.date: 2/20/2018
-ms.openlocfilehash: 795aa938ec179bb6d845774cf25778bd2b7c1442
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.openlocfilehash: cf8d1fc76feb07e075339255de63e09f59187dc6
+ms.sourcegitcommit: 9f5c7d231b069ad501729bf015a829f3fe89bc6a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83387764"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84122061"
 ---
-# <a name="release-notes"></a>Viktig information
+# <a name="azure-powershell-release-notes"></a>Viktig information om Azure PowerShell
 
 [!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
 
@@ -20,7 +20,7 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
 
 ---
 
-# <a name="azure-powershell-570"></a>Azure PowerShell 5.7.0
+## <a name="azure-powershell-570"></a>Azure PowerShell 5.7.0
 
 Azure PowerShell 5.7.0-installationsprogram: [länk](https://github.com/Azure/azure-powershell/releases/download/v5.7.0-April2018/azure-powershell.5.7.0.msi)
 
@@ -38,7 +38,7 @@ Om du vill uppdatera från en äldre version av `AzureRM` kör du följande komm
 Update-Module -Name AzureRM
 ```
 
-## <a name="changes-since-last-release"></a>Ändringar sedan den senaste versionen
+### <a name="changes-since-last-release"></a>Ändringar sedan den senaste versionen
 
 #### <a name="general"></a>Allmänt
 * Har uppdaterats till den senaste versionen av Azure ClientRuntime
@@ -790,17 +790,17 @@ Update-Module -Name AzureRM
 * DataLakeAnalytics
   * I migreringsguiden finns information om viktiga ändringar av DataLakeAnalytics i den här versionen
   * En av två OutputTypes i Get-AzureRmDataLakeAnalyticsAccount har ändrats
-    - List\<DataLakeAnalyticsAccount> till List\<PSDataLakeAnalyticsAccountBasic>
+    - Lista\<DataLakeAnalyticsAccount> till Lista\<PSDataLakeAnalyticsAccountBasic>
     - Egenskaperna för PSDataLakeAnalyticsAccountBasic är en strikt delmängd av egenskaperna i DataLakeAnalyticsAccount
     - Ytterligare egenskaper som finns i DataLakeAnalyticsAccount returneras inte av tjänsten.  Den här ändringen är därför till för att återspegla detta korrekt. Dessa ytterligare egenskaper är fortfarande i PSDataLakeAnalyticsAccountBasic, men de är märkta som föråldrade.
   * En av två OutputTypes i Get-AzureRmDataLakeAnalyticsJob har ändrats
-    - List\<JobInformation> till List\<PSJobInformationBasic>
+    - Lista\<JobInformation> till Lista\<PSJobInformationBasic>
     - Egenskaperna i PSJobInformationBasic är en strikt delmängd av egenskaperna i JobInformation
     - Ytterligare egenskaper som finns i JobInformation returneras inte av tjänsten.  Den här ändringen är därför till för att återspegla detta korrekt. Dessa ytterligare egenskaper är fortfarande i PSJobInformationBasic, men de är märkta som föråldrade.
 * DataLakeStore
   * I migreringsguiden finns information om viktiga ändringar av DataLakeStore i den här versionen
   * En av två OutputTypes i Get-AzureRmDataLakeStoreAccount har ändrats
-    - List\<PSDataLakeStoreAccount> till List\<PSDataLakeStoreAccountBasic>
+    - Lista\<PSDataLakeStoreAccount> till Lista\<PSDataLakeStoreAccountBasic>
     - Egenskaperna för PSDataLakeStoreAccountBasic är en strikt delmängd av egenskaperna i PSDataLakeStoreAccount
     - Ytterligare egenskaper som finns i PSDataLakeStoreAccount returneras inte av tjänsten.  Den här ändringen är därför till för att återspegla detta korrekt. Dessa ytterligare egenskaper är fortfarande i PSDataLakeStoreAccountBasic, men de är märkta som föråldrade.
 * DNS

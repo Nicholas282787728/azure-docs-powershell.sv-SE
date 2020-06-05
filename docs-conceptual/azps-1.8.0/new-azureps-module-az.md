@@ -4,16 +4,16 @@ description: Vi introducerar den nya Azure PowerShell-modulen Az, som ersätter 
 ms.date: 05/10/2019
 ms.devlang: powershell
 ms.topic: conceptual
-ms.openlocfilehash: f593f89c99d3605f9bcd33df90b3977c72daa75f
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.openlocfilehash: bef3ae8344a13e170a30889c1954fd2e9b29dcdf
+ms.sourcegitcommit: 9f5c7d231b069ad501729bf015a829f3fe89bc6a
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83386994"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84121592"
 ---
 # <a name="introducing-the-new-azure-powershell-az-module"></a>Introduktion till den nya Azure PowerShell Az-modulen
 
-Från och med december 2018 är Az för Azure PowerShell-modulen en allmän version och är nu den PowerShell-modulen som är avsedd för interaktion med Azure. Az erbjuder kortare kommandon, bättre stabilitet och stöd för flera plattformar. Az har även funktionsparitet med AzureRM, vilket underlättar migreringen.
+Från och med december 2018 finns Az-modulen för Azure PowerShell tillgänglig i en allmän version och är nu den PowerShell-modul som är avsedd för interaktion med Azure. Az erbjuder kortare kommandon, bättre stabilitet och stöd för flera plattformar. Az har även funktionsparitet med AzureRM, vilket underlättar migreringen.
 
 I och med Az-modulen är Azure PowerShell nu kompatibelt med PowerShell 5.1 på Windows och PowerShell Core 6.x och senare på alla plattformar som stöds, inklusive Windows, macOS och Linux.
 
@@ -23,7 +23,7 @@ Az är en ny modul, så versionen har återställts till 1.0.0.
 
 Det kan vara svårt att genomföra stora uppdateringar. Det är viktigt att vi förklarar varför vi introducerar en ny uppsättning moduler, med nya cmdletar, för att interagera med Azure via PowerShell.
 
-Den största och viktigaste ändringen är att PowerShell har varit en plattformsoberoende produkt ända sedan [PowerShell Core 6.x](/powershell/scripting/overview), baserat på .NET Standard-biblioteket.
+Den största och viktigaste ändringen är att PowerShell har varit en plattformsoberoende produkt ända sedan [PowerShell](/powershell/scripting/overview), baserat på .NET Standard-biblioteket.
 Vi jobbar för att Azure ska fungera med alla plattformar. Det innebär att Azure PowerShell-modulerna behövde uppdateras för att gå att använda med .NET Standard och vara kompatibla med PowerShell Core. I stället för att genomföra omfattande ändringar på den befintliga AzureRM-modulen skapade vi Az-modulen.
 
 I och med att vi skapade en ny modul kunde våra tekniker göra designen och namngivningen av cmdletarna och modulerna konsekvent. Alla moduler börjar nu med prefixet `Az.`. Alla cmdletar använder formen _Verb_-`Az`_Noun_ (verb och substantiv). Tidigare cmdlet-namn var längre och dessutom inkonsekventa.
@@ -36,15 +36,14 @@ Genom att genomföra de här ändringarna, som krävde en ny Azure PowerShell-mo
 
 Om du vill dra nytta av de senaste Azure-funktionerna i PowerShell bör du migrera till Az-modulen så snart som möjligt. Om du inte är redo att ersätta AzureRM med Az-modulen finns det ett par alternativ för att experimentera med Az:
 
-* Du kan använda en `PowerShell`-miljö med [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview).
-  Azure Cloud Shell är en webbläsarbaserad skalmiljö som medföljer installerad med Az-modulen, med `Enable-AzureRM`-kompabilitetsalias installerade.
+* Du kan använda en `PowerShell`-miljö med [Azure Cloud Shell](/azure/cloud-shell/overview). Azure Cloud Shell är en webbläsarbaserad skalmiljö som medföljer installerad med Az-modulen, med `Enable-AzureRM`-kompabilitetsalias installerade.
 * Låt AzureRM-modulen förbli installerad med PowerShell 5.1 för Windows. Installera däremot Az-modulen för PowerShell Core 6.x och senare. PowerShell 5.1 för Windows och PowerShell Core använder separata modulsamlingar. Följ instruktionerna för att [installera PowerShell Core](/powershell/scripting/install/installing-powershell-core-on-windows) och [installera sedan Az-modulen](install-az-ps.md) från en PowerShell Core-terminal.
 
 Så uppgraderar du från en befintlig AzureRM-installation:
 
 1. [Avinstallera Azure PowerShell AzureRM-modulen](/powershell/azure/uninstall-az-ps#uninstall-the-azurerm-module)
 2. [Installera Azure PowerShell Az-modulen](install-az-ps.md)
-3. __VALFRITT__: Aktivera kompatibilitetsläge för att lägga till alias för AzureRM-cmdletar med [Enable-AzureRMAlias](/powershell/module/az.accounts/enable-azurermalias) medan du bekantar dig med den nya kommandouppsättningen. Du hittar mer information i nästa avsnitt och i [Påbörja migrering från AzureRM till Az](migrate-from-azurerm-to-az.md).
+3. **VALFRITT**: Aktivera kompatibilitetsläge för att lägga till alias för AzureRM-cmdletar med [Enable-AzureRMAlias](/powershell/module/az.accounts/enable-azurermalias) medan du bekantar dig med den nya kommandouppsättningen. Du hittar mer information i nästa avsnitt och i [Påbörja migrering från AzureRM till Az](migrate-from-azurerm-to-az.md).
 
 ## <a name="migrate-existing-scripts-to-az"></a>Migrera befintliga skript till Az
 
