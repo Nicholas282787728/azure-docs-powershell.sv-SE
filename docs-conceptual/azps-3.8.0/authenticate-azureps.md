@@ -1,89 +1,97 @@
 ---
 title: Logga in med Azure PowerShell
 description: Så här loggar du in med Azure PowerShell som användare, med tjänstens huvudnamn eller med hanterade identiteter för Azure-resurser.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 09/04/2019
-ms.openlocfilehash: 0de487cc34593ceac05aa2077358d692470dc23e
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.date: 06/18/2020
+ms.openlocfilehash: f82a9e373806f2f071ae59f6aee7e0a0bd4ea13d
+ms.sourcegitcommit: e8dc404c9c09b9f6531ea4f85187598e32060014
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81740617"
+ms.lasthandoff: 06/20/2020
+ms.locfileid: "85119971"
 ---
-# <a name="sign-in-with-azure-powershell"></a><span data-ttu-id="4e7ae-103">Logga in med Azure PowerShell</span><span class="sxs-lookup"><span data-stu-id="4e7ae-103">Sign in with Azure PowerShell</span></span>
+# <a name="sign-in-with-azure-powershell"></a><span data-ttu-id="1652f-103">Logga in med Azure PowerShell</span><span class="sxs-lookup"><span data-stu-id="1652f-103">Sign in with Azure PowerShell</span></span>
 
-<span data-ttu-id="4e7ae-104">Azure PowerShell har stöd för flera autentiseringsmetoder.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-104">Azure PowerShell supports several authentication methods.</span></span> <span data-ttu-id="4e7ae-105">Det enklaste sättet att komma igång är med [Azure Cloud Shell](/azure/cloud-shell/overview), som automatiskt loggar in dig.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-105">The easiest way to get started is with [Azure Cloud Shell](/azure/cloud-shell/overview), which automatically logs you in.</span></span> <span data-ttu-id="4e7ae-106">Med en lokal installation kan du logga in interaktivt via webbläsaren.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-106">With a local install, you can sign in interactively through your browser.</span></span> <span data-ttu-id="4e7ae-107">När du skriver skript för automatisering är den rekommenderade metoden att använda ett [tjänsthuvudnamn](create-azure-service-principal-azureps.md) med de nödvändiga behörigheterna.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-107">When writing scripts for automation, the recommended approach is to use a [service principal](create-azure-service-principal-azureps.md) with the necessary permissions.</span></span> <span data-ttu-id="4e7ae-108">Du kan skydda dina Azure-resurser genom att begränsa behörigheterna för inloggning så mycket som möjligt.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-108">When you restrict sign-in permissions as much as possible for your use case, you help keep your Azure resources secure.</span></span>
+<span data-ttu-id="1652f-104">Azure PowerShell har stöd för flera autentiseringsmetoder.</span><span class="sxs-lookup"><span data-stu-id="1652f-104">Azure PowerShell supports several authentication methods.</span></span> <span data-ttu-id="1652f-105">Det enklaste sättet att komma igång är med [Azure Cloud Shell](/azure/cloud-shell/overview), som automatiskt loggar in dig.</span><span class="sxs-lookup"><span data-stu-id="1652f-105">The easiest way to get started is with [Azure Cloud Shell](/azure/cloud-shell/overview), which automatically logs you in.</span></span> <span data-ttu-id="1652f-106">Med en lokal installation kan du logga in interaktivt via webbläsaren.</span><span class="sxs-lookup"><span data-stu-id="1652f-106">With a local install, you can sign in interactively through your browser.</span></span> <span data-ttu-id="1652f-107">När du skriver skript för automatisering är den rekommenderade metoden att använda ett [tjänsthuvudnamn](create-azure-service-principal-azureps.md) med de nödvändiga behörigheterna.</span><span class="sxs-lookup"><span data-stu-id="1652f-107">When writing scripts for automation, the recommended approach is to use a [service principal](create-azure-service-principal-azureps.md) with the necessary permissions.</span></span> <span data-ttu-id="1652f-108">Du kan skydda dina Azure-resurser genom att begränsa behörigheterna för inloggning så mycket som möjligt.</span><span class="sxs-lookup"><span data-stu-id="1652f-108">When you restrict sign-in permissions as much as possible for your use case, you help keep your Azure resources secure.</span></span>
 
-<span data-ttu-id="4e7ae-109">När du har loggat in körs kommandon mot standardprenumerationen.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-109">After signing in, commands are run against your default subscription.</span></span> <span data-ttu-id="4e7ae-110">Använd cmdleten [Set-AzContext](/powershell/module/az.accounts/set-azcontext) för att ändra din aktiva prenumeration för en session.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-110">To change your active subscription for a session, use the [Set-AzContext](/powershell/module/az.accounts/set-azcontext) cmdlet.</span></span> <span data-ttu-id="4e7ae-111">Använd [Set-AzDefault](/powershell/module/az.accounts/set-azdefault) för att ändra standardprenumerationen som används när du loggar in med Azure PowerShell.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-111">To change the default subscription used when logging in with Azure PowerShell, use [Set-AzDefault](/powershell/module/az.accounts/set-azdefault).</span></span>
+<span data-ttu-id="1652f-109">När du har loggat in körs kommandon mot standardprenumerationen.</span><span class="sxs-lookup"><span data-stu-id="1652f-109">After signing in, commands are run against your default subscription.</span></span> <span data-ttu-id="1652f-110">Använd cmdleten [Set-AzContext](/powershell/module/az.accounts/set-azcontext) för att ändra din aktiva prenumeration för en session.</span><span class="sxs-lookup"><span data-stu-id="1652f-110">To change your active subscription for a session, use the [Set-AzContext](/powershell/module/az.accounts/set-azcontext) cmdlet.</span></span> <span data-ttu-id="1652f-111">Använd [Set-AzDefault](/powershell/module/az.accounts/set-azdefault) för att ändra standardprenumerationen som används när du loggar in med Azure PowerShell.</span><span class="sxs-lookup"><span data-stu-id="1652f-111">To change the default subscription used when logging in with Azure PowerShell, use [Set-AzDefault](/powershell/module/az.accounts/set-azdefault).</span></span>
 
 > [!IMPORTANT]
->
-> <span data-ttu-id="4e7ae-112">Dina autentiseringsuppgifter delas mellan flera PowerShell-sessioner så länge du är inloggad.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-112">Your credentials are shared among multiple PowerShell sessions as long as you remain signed in.</span></span>
-> <span data-ttu-id="4e7ae-113">Mer information finns i artikeln om [Beständiga autentiseringsuppgifter](context-persistence.md).</span><span class="sxs-lookup"><span data-stu-id="4e7ae-113">For more information, see the article on [Persistent Credentials](context-persistence.md).</span></span>
+> <span data-ttu-id="1652f-112">Dina autentiseringsuppgifter delas mellan flera PowerShell-sessioner så länge du är inloggad.</span><span class="sxs-lookup"><span data-stu-id="1652f-112">Your credentials are shared among multiple PowerShell sessions as long as you remain signed in.</span></span>
+> <span data-ttu-id="1652f-113">Mer information finns i artikeln om [Beständiga autentiseringsuppgifter](context-persistence.md).</span><span class="sxs-lookup"><span data-stu-id="1652f-113">For more information, see the article on [Persistent Credentials](context-persistence.md).</span></span>
 
-## <a name="sign-in-interactively"></a><span data-ttu-id="4e7ae-114">Logga in interaktivt</span><span class="sxs-lookup"><span data-stu-id="4e7ae-114">Sign in interactively</span></span>
+## <a name="sign-in-interactively"></a><span data-ttu-id="1652f-114">Logga in interaktivt</span><span class="sxs-lookup"><span data-stu-id="1652f-114">Sign in interactively</span></span>
 
-<span data-ttu-id="4e7ae-115">Använd cmdleten [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) för att logga in interaktivt.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-115">To sign in interactively, use the [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) cmdlet.</span></span>
+<span data-ttu-id="1652f-115">Använd cmdleten [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) för att logga in interaktivt.</span><span class="sxs-lookup"><span data-stu-id="1652f-115">To sign in interactively, use the [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) cmdlet.</span></span>
 
 ```azurepowershell-interactive
 Connect-AzAccount
 ```
 
-<span data-ttu-id="4e7ae-116">När du kör cmdleten visas en tokensträng.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-116">When run, this cmdlet will present a token string.</span></span> <span data-ttu-id="4e7ae-117">Kopiera den här strängen och klistra in den i https://microsoft.com/devicelogin i en webbläsare för att logga in.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-117">To sign in, copy this string and paste it into https://microsoft.com/devicelogin in a browser.</span></span> <span data-ttu-id="4e7ae-118">PowerShell-sessionen autentiseras därefter för anslutning till Azure.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-118">Your PowerShell session will be authenticated to connect to Azure.</span></span>
+<span data-ttu-id="1652f-116">När denna cmdlet körs från PowerShell version 6 och senare visar den en tokensträng.</span><span class="sxs-lookup"><span data-stu-id="1652f-116">When run from PowerShell version 6 and higher, this cmdlet presents a token string.</span></span> <span data-ttu-id="1652f-117">Logga in genom att kopiera den här strängen och klistra in den på [microsoft.com/devicelogin](https://microsoft.com/devicelogin) i en webbläsare.</span><span class="sxs-lookup"><span data-stu-id="1652f-117">To sign in, copy this string and paste it into [microsoft.com/devicelogin](https://microsoft.com/devicelogin) in a web browser.</span></span> <span data-ttu-id="1652f-118">PowerShell-sessionen autentiseras därefter för anslutning till Azure.</span><span class="sxs-lookup"><span data-stu-id="1652f-118">Your PowerShell session will be authenticated to connect to Azure.</span></span> <span data-ttu-id="1652f-119">Du kan ange att parametern `UseDeviceAuthentication` ska ta emot en tokensträng i Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="1652f-119">You can specify the `UseDeviceAuthentication` parameter to receive a token string on Windows PowerShell.</span></span>
 
 > [!IMPORTANT]
->
-> <span data-ttu-id="4e7ae-119">Auktorisering med användarnamn/lösenord har tagits bort i Azure PowerShell på grund av ändringar i auktoriseringsimplementering och säkerhetsproblem i Active Directory.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-119">Username/password credential authorization has been removed in Azure PowerShell due to changes in Active Directory authorization implementations and security concerns.</span></span>
-> <span data-ttu-id="4e7ae-120">Om du använder autentiseringsuppgifter för automation får du i stället [skapa ett huvudnamn för tjänsten](create-azure-service-principal-azureps.md).</span><span class="sxs-lookup"><span data-stu-id="4e7ae-120">If you use credential authorization for automation purposes, instead [create a service principal](create-azure-service-principal-azureps.md).</span></span>
+> <span data-ttu-id="1652f-120">Auktorisering med användarnamn/lösenord har tagits bort i Azure PowerShell på grund av ändringar i auktoriseringsimplementering och säkerhetsproblem i Active Directory.</span><span class="sxs-lookup"><span data-stu-id="1652f-120">Username/password credential authorization has been removed in Azure PowerShell due to changes in Active Directory authorization implementations and security concerns.</span></span> <span data-ttu-id="1652f-121">Om du använder autentiseringsuppgifter för automation får du i stället [skapa ett huvudnamn för tjänsten](create-azure-service-principal-azureps.md).</span><span class="sxs-lookup"><span data-stu-id="1652f-121">If you use credential authorization for automation purposes, instead [create a service principal](create-azure-service-principal-azureps.md).</span></span>
 
-## <a name="sign-in-with-a-service-principal"></a><span data-ttu-id="4e7ae-121">Logga in med ett huvudnamn för tjänsten <a name="sp-signin"/></span><span class="sxs-lookup"><span data-stu-id="4e7ae-121">Sign in with a service principal <a name="sp-signin"/></span></span>
-
-<span data-ttu-id="4e7ae-122">Tjänstens huvudnamn är icke-interaktiva Azure-konton.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-122">Service principals are non-interactive Azure accounts.</span></span> <span data-ttu-id="4e7ae-123">Precis som med andra användarkonton hanteras deras behörigheter med Azure Active Directory.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-123">Like other user accounts, their permissions are managed with Azure Active Directory.</span></span> <span data-ttu-id="4e7ae-124">Genom att endast bevilja de behörigheter som krävs för tjänstens huvudnamn skyddas dina automatiseringsskript.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-124">By granting a service principal only the permissions it needs, your automation scripts stay secure.</span></span>
-
-<span data-ttu-id="4e7ae-125">I [Skapa tjänstens huvudnamn för Azure med Azure PowerShell](create-azure-service-principal-azureps.md) finns information om hur du skapar ett huvudnamn för tjänsten som ska användas med Azure PowerShell.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-125">To learn how to create a service principal for use with Azure PowerShell, see [Create an Azure service principal with Azure PowerShell](create-azure-service-principal-azureps.md).</span></span>
-
-<span data-ttu-id="4e7ae-126">Använd argumentet `-ServicePrincipal` med cmdleten `Connect-AzAccount` för att logga in med ett huvudnamn för tjänsten.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-126">To sign in with a service principal, use the `-ServicePrincipal` argument with the `Connect-AzAccount` cmdlet.</span></span> <span data-ttu-id="4e7ae-127">Du behöver även program-ID:t för tjänstens huvudnamn, inloggningsuppgifter och det klient-ID som är associerat med tjänstens huvudnamn.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-127">You'll also need the service principal's application ID, sign-in credentials, and the tenant ID associate with the service principal.</span></span> <span data-ttu-id="4e7ae-128">Hur du loggar in med ett huvudnamn för tjänsten beror på om det har konfigurerats för lösenordsbaserad eller certifikatbaserad autentisering.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-128">How you sign in with a service principal will depend on whether it's configured for password-based or certificate-based authentication.</span></span>
-
-### <a name="password-based-authentication"></a><span data-ttu-id="4e7ae-129">Lösenordsbaserad autentisering</span><span class="sxs-lookup"><span data-stu-id="4e7ae-129">Password-based authentication</span></span>
-
-<span data-ttu-id="4e7ae-130">Använd cmdleten [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) för att hämta autentiseringsuppgifterna för tjänstens huvudnamn.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-130">To get the service principal's credentials as the appropriate object, use the [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) cmdlet.</span></span> <span data-ttu-id="4e7ae-131">Cmdleten presenterar en uppmaning om att ange användarnamn och lösenord.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-131">This cmdlet will present a prompt for a username and password.</span></span> <span data-ttu-id="4e7ae-132">Använd ID för tjänstens huvudnamn som användarnamn.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-132">Use the service principal ID for the username.</span></span>
+<span data-ttu-id="1652f-122">Använd cmdleten [Get-AzContext](/powershell/module/az.accounts/get-azcontext) för att lagra din klientorganisations ID i en variabel som ska användas i de följande två avsnitten i den här artikeln.</span><span class="sxs-lookup"><span data-stu-id="1652f-122">Use the [Get-AzContext](/powershell/module/az.accounts/get-azcontext) cmdlet to store your tenant ID in a variable to be used in the next two sections of this article.</span></span>
 
 ```azurepowershell-interactive
-$pscredential = Get-Credential
+$tenantId = (Get-AzContext).Tenant.Id
+```
+
+## <a name="sign-in-with-a-service-principal"></a><span data-ttu-id="1652f-123">Logga in med ett huvudnamn för tjänsten <a name="sp-signin"/></span><span class="sxs-lookup"><span data-stu-id="1652f-123">Sign in with a service principal <a name="sp-signin"/></span></span>
+
+<span data-ttu-id="1652f-124">Tjänstens huvudnamn är icke-interaktiva Azure-konton.</span><span class="sxs-lookup"><span data-stu-id="1652f-124">Service principals are non-interactive Azure accounts.</span></span> <span data-ttu-id="1652f-125">Precis som med andra användarkonton hanteras deras behörigheter med Azure Active Directory.</span><span class="sxs-lookup"><span data-stu-id="1652f-125">Like other user accounts, their permissions are managed with Azure Active Directory.</span></span> <span data-ttu-id="1652f-126">Genom att endast bevilja de behörigheter som krävs för tjänstens huvudnamn skyddas dina automatiseringsskript.</span><span class="sxs-lookup"><span data-stu-id="1652f-126">By granting a service principal only the permissions it needs, your automation scripts stay secure.</span></span>
+
+<span data-ttu-id="1652f-127">I [Skapa tjänstens huvudnamn för Azure med Azure PowerShell](create-azure-service-principal-azureps.md) finns information om hur du skapar ett huvudnamn för tjänsten som ska användas med Azure PowerShell.</span><span class="sxs-lookup"><span data-stu-id="1652f-127">To learn how to create a service principal for use with Azure PowerShell, see [Create an Azure service principal with Azure PowerShell](create-azure-service-principal-azureps.md).</span></span>
+
+<span data-ttu-id="1652f-128">Använd argumentet `-ServicePrincipal` med cmdleten `Connect-AzAccount` för att logga in med ett huvudnamn för tjänsten.</span><span class="sxs-lookup"><span data-stu-id="1652f-128">To sign in with a service principal, use the `-ServicePrincipal` argument with the `Connect-AzAccount` cmdlet.</span></span> <span data-ttu-id="1652f-129">Du behöver även program-ID:t för tjänstens huvudnamn, inloggningsuppgifter och det klient-ID som är associerat med tjänstens huvudnamn.</span><span class="sxs-lookup"><span data-stu-id="1652f-129">You'll also need the service principal's application ID, sign-in credentials, and the tenant ID associate with the service principal.</span></span> <span data-ttu-id="1652f-130">Hur du loggar in med ett huvudnamn för tjänsten beror på om det har konfigurerats för lösenordsbaserad eller certifikatbaserad autentisering.</span><span class="sxs-lookup"><span data-stu-id="1652f-130">How you sign in with a service principal depends on whether it's configured for password-based or certificate-based authentication.</span></span>
+
+### <a name="password-based-authentication"></a><span data-ttu-id="1652f-131">Lösenordsbaserad autentisering</span><span class="sxs-lookup"><span data-stu-id="1652f-131">Password-based authentication</span></span>
+
+<span data-ttu-id="1652f-132">Skapa ett huvudnamn för tjänsten som ska användas i exemplen i det här avsnittet.</span><span class="sxs-lookup"><span data-stu-id="1652f-132">Create a service principal to be used in the examples in this section.</span></span> <span data-ttu-id="1652f-133">Läs mer om att skapa tjänsthuvudnamn i [Skapa tjänstens huvudnamn för Azure med Azure PowerShell](/powershell/azure/create-azure-service-principal-azureps).</span><span class="sxs-lookup"><span data-stu-id="1652f-133">For more information on creating service principals, see [Create an Azure service principal with Azure PowerShell](/powershell/azure/create-azure-service-principal-azureps).</span></span>
+
+```azurepowershell-interactive
+$sp = New-AzADServicePrincipal -DisplayName ServicePrincipalName
+```
+
+<span data-ttu-id="1652f-134">Använd cmdleten [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) för att hämta autentiseringsuppgifterna för tjänstens huvudnamn.</span><span class="sxs-lookup"><span data-stu-id="1652f-134">To get the service principal's credentials as the appropriate object, use the [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) cmdlet.</span></span> <span data-ttu-id="1652f-135">Cmdleten visar en uppmaning om att ange användarnamn och lösenord.</span><span class="sxs-lookup"><span data-stu-id="1652f-135">This cmdlet presents a prompt for a username and password.</span></span> <span data-ttu-id="1652f-136">Använd tjänsthuvudnamnets `applicationID` som användarnamn och konvertera `secret` till oformaterad text för lösenordet.</span><span class="sxs-lookup"><span data-stu-id="1652f-136">Use the service principal's `applicationID` for the username and convert its `secret` to plain text for the password.</span></span>
+
+```azurepowershell-interactive
+# Retrieve the plain text password for use with `Get-Credential` in the next command.
+$sp.secret | ConvertFrom-SecureString -AsPlainText
+
+$pscredential = Get-Credential -UserName $sp.ApplicationId
 Connect-AzAccount -ServicePrincipal -Credential $pscredential -Tenant $tenantId
 ```
 
-<span data-ttu-id="4e7ae-133">I automationsscenarier måste du skapa autentiseringsuppgifter från ett användarnamn och en säker sträng:</span><span class="sxs-lookup"><span data-stu-id="4e7ae-133">For automation scenarios, you need to create credentials from a user name and secure string:</span></span>
+<span data-ttu-id="1652f-137">I automationsscenarier måste du skapa autentiseringsuppgifter från ett tjänsthuvudnamns `applicationId` och `secret`:</span><span class="sxs-lookup"><span data-stu-id="1652f-137">For automation scenarios, you need to create credentials from a service principal's `applicationId` and `secret`:</span></span>
 
 ```azurepowershell-interactive
-$passwd = ConvertTo-SecureString <use a secure password here> -AsPlainText -Force
-$pscredential = New-Object System.Management.Automation.PSCredential('service principal name/id', $passwd)
+$pscredential = New-Object -TypeName System.Management.Automation.PSCredential($sp.ApplicationId, $sp.Secret)
 Connect-AzAccount -ServicePrincipal -Credential $pscredential -Tenant $tenantId
 ```
 
-<span data-ttu-id="4e7ae-134">Se till att du använder metoder för säker lagring av lösenord vid automatisering av anslutningar med tjänstens huvudnamn.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-134">Make sure that you use good password storage practices when automating service principal connections.</span></span>
+<span data-ttu-id="1652f-138">Se till att du använder metoder för säker lagring av lösenord vid automatisering av anslutningar med tjänstens huvudnamn.</span><span class="sxs-lookup"><span data-stu-id="1652f-138">Make sure that you use good password storage practices when automating service principal connections.</span></span>
 
-### <a name="certificate-based-authentication"></a><span data-ttu-id="4e7ae-135">Certifikatbaserad autentisering</span><span class="sxs-lookup"><span data-stu-id="4e7ae-135">Certificate-based authentication</span></span>
+### <a name="certificate-based-authentication"></a><span data-ttu-id="1652f-139">Certifikatbaserad autentisering</span><span class="sxs-lookup"><span data-stu-id="1652f-139">Certificate-based authentication</span></span>
 
-<span data-ttu-id="4e7ae-136">För certifikatbaserad autentisering måste Azure PowerShell kunna hämta information från ett lokalt certifikatarkiv baserat på ett tumavtryck för certifikat.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-136">Certificate-based authentication requires that Azure PowerShell can retrieve information from a local certificate store based on a certificate thumbprint.</span></span>
+<span data-ttu-id="1652f-140">För certifikatbaserad autentisering måste Azure PowerShell kunna hämta information från ett lokalt certifikatarkiv baserat på ett tumavtryck för certifikat.</span><span class="sxs-lookup"><span data-stu-id="1652f-140">Certificate-based authentication requires that Azure PowerShell can retrieve information from a local certificate store based on a certificate thumbprint.</span></span>
 
 ```azurepowershell-interactive
 Connect-AzAccount -ApplicationId $appId -Tenant $tenantId -CertificateThumbprint <thumbprint>
 ```
 
-<span data-ttu-id="4e7ae-137">När du använder tjänstens huvudnamn i stället för ett registrerat program, lägger du till argumentet `-ServicePrincipal` och anger program-ID:t för tjänstens huvudnamn som `-ApplicationId`-parameterns värde.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-137">When using a service principal instead of a registered application, add the `-ServicePrincipal` argument and provide the service principal's Application ID as the `-ApplicationId` parameter's value.</span></span>
+<span data-ttu-id="1652f-141">När du använder tjänstens huvudnamn i stället för ett registrerat program, lägger du till argumentet `-ServicePrincipal` och anger program-ID:t för tjänstens huvudnamn som `-ApplicationId`-parameterns värde.</span><span class="sxs-lookup"><span data-stu-id="1652f-141">When using a service principal instead of a registered application, add the `-ServicePrincipal` argument and provide the service principal's Application ID as the `-ApplicationId` parameter's value.</span></span>
 
 ```azurepowershell-interactive
 Connect-AzAccount -ServicePrincipal -ApplicationId $servicePrincipalId -Tenant $tenantId -CertificateThumbprint <thumbprint>
 ```
 
-<span data-ttu-id="4e7ae-138">I PowerShell 5.1 kan certifikatarkivet hanteras och kontrolleras med [PKI](/powershell/module/pkiclient)-modulen.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-138">In PowerShell 5.1, the certificate store can be managed and inspected with the [PKI](/powershell/module/pkiclient) module.</span></span> <span data-ttu-id="4e7ae-139">I PowerShell Core 6.x och senare är processen mer komplicerad.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-139">For PowerShell Core 6.x and later, the process is more complicated.</span></span> <span data-ttu-id="4e7ae-140">Följande skript visar hur du importerar ett befintligt certifikat till det certifikatarkiv som är tillgängligt för PowerShell.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-140">The following scripts show you how to import an existing certificate into the certificate store accessible by PowerShell.</span></span>
+<span data-ttu-id="1652f-142">I PowerShell 5.1 kan certifikatarkivet hanteras och kontrolleras med [PKI](/powershell/module/pkiclient)-modulen.</span><span class="sxs-lookup"><span data-stu-id="1652f-142">In PowerShell 5.1, the certificate store can be managed and inspected with the [PKI](/powershell/module/pkiclient) module.</span></span> <span data-ttu-id="1652f-143">I PowerShell Core 6.x och senare är processen mer komplicerad.</span><span class="sxs-lookup"><span data-stu-id="1652f-143">For PowerShell Core 6.x and later, the process is more complicated.</span></span> <span data-ttu-id="1652f-144">Följande skript visar hur du importerar ett befintligt certifikat till det certifikatarkiv som är tillgängligt för PowerShell.</span><span class="sxs-lookup"><span data-stu-id="1652f-144">The following scripts show you how to import an existing certificate into the certificate store accessible by PowerShell.</span></span>
 
-#### <a name="import-a-certificate-in-powershell-51"></a><span data-ttu-id="4e7ae-141">Importera ett certifikat i PowerShell 5.1</span><span class="sxs-lookup"><span data-stu-id="4e7ae-141">Import a certificate in PowerShell 5.1</span></span>
+#### <a name="import-a-certificate-in-powershell-51"></a><span data-ttu-id="1652f-145">Importera ett certifikat i PowerShell 5.1</span><span class="sxs-lookup"><span data-stu-id="1652f-145">Import a certificate in PowerShell 5.1</span></span>
 
 ```azurepowershell-interactive
 # Import a PFX
@@ -91,54 +99,52 @@ $credentials = Get-Credential -Message "Provide PFX private key password"
 Import-PfxCertificate -FilePath <path to certificate> -Password $credentials.Password -CertStoreLocation cert:\CurrentUser\My
 ```
 
-#### <a name="import-a-certificate-in-powershell-core-6x-and-later"></a><span data-ttu-id="4e7ae-142">Importera ett certifikat i PowerShell Core 6.x och senare</span><span class="sxs-lookup"><span data-stu-id="4e7ae-142">Import a certificate in PowerShell Core 6.x and later</span></span>
+#### <a name="import-a-certificate-in-powershell-core-6x-and-later"></a><span data-ttu-id="1652f-146">Importera ett certifikat i PowerShell Core 6.x och senare</span><span class="sxs-lookup"><span data-stu-id="1652f-146">Import a certificate in PowerShell Core 6.x and later</span></span>
 
 ```azurepowershell-interactive
 # Import a PFX
-$storeName = [System.Security.Cryptography.X509Certificates.StoreName]::My 
-$storeLocation = [System.Security.Cryptography.X509Certificates.StoreLocation]::CurrentUser 
-$store = [System.Security.Cryptography.X509Certificates.X509Store]::new($storeName, $storeLocation) 
+$storeName = [System.Security.Cryptography.X509Certificates.StoreName]::My
+$storeLocation = [System.Security.Cryptography.X509Certificates.StoreLocation]::CurrentUser
+$store = [System.Security.Cryptography.X509Certificates.X509Store]::new($storeName, $storeLocation)
 $certPath = <path to certificate>
 $credentials = Get-Credential -Message "Provide PFX private key password"
-$flag = [System.Security.Cryptography.X509Certificates.X509KeyStorageFlags]::Exportable 
-$certificate = [System.Security.Cryptography.X509Certificates.X509Certificate2]::new($certPath, $credentials.Password, $flag) 
-$store.Open([System.Security.Cryptography.X509Certificates.OpenFlags]::ReadWrite) 
-$store.Add($Certificate) 
+$flag = [System.Security.Cryptography.X509Certificates.X509KeyStorageFlags]::Exportable
+$certificate = [System.Security.Cryptography.X509Certificates.X509Certificate2]::new($certPath, $credentials.Password, $flag)
+$store.Open([System.Security.Cryptography.X509Certificates.OpenFlags]::ReadWrite)
+$store.Add($Certificate)
 $store.Close()
 ```
 
-## <a name="sign-in-using-a-managed-identity"></a><span data-ttu-id="4e7ae-143">Logga in med en hanterad identitet</span><span class="sxs-lookup"><span data-stu-id="4e7ae-143">Sign in using a managed identity</span></span>
+## <a name="sign-in-using-a-managed-identity"></a><span data-ttu-id="1652f-147">Logga in med en hanterad identitet</span><span class="sxs-lookup"><span data-stu-id="1652f-147">Sign in using a managed identity</span></span>
 
-<span data-ttu-id="4e7ae-144">Hanterade identiteter är en funktion i Azure Active Directory.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-144">Managed identities are a feature of Azure Active Directory.</span></span> <span data-ttu-id="4e7ae-145">Hanterade identiteter är tjänsthuvudnamn som tilldelats till resurser som körs i Azure.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-145">Managed identities are service principals assigned to resources that run in Azure.</span></span> <span data-ttu-id="4e7ae-146">Du kan använda en hanterad identitet som tjänstens huvudnamn för att logga in och få en app-begränsad åtkomsttoken för att komma åt andra resurser.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-146">You can use a managed identity service principal for sign-in, and acquire an app-only access token to access other resources.</span></span> <span data-ttu-id="4e7ae-147">Hanterade identiteter är endast tillgängliga på resurser som körs i ett Azure-moln.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-147">Managed identities are only available on resources running in an Azure cloud.</span></span>
+<span data-ttu-id="1652f-148">Hanterade identiteter är en funktion i Azure Active Directory.</span><span class="sxs-lookup"><span data-stu-id="1652f-148">Managed identities are a feature of Azure Active Directory.</span></span> <span data-ttu-id="1652f-149">Hanterade identiteter är tjänsthuvudnamn som tilldelats till resurser som körs i Azure.</span><span class="sxs-lookup"><span data-stu-id="1652f-149">Managed identities are service principals assigned to resources that run in Azure.</span></span> <span data-ttu-id="1652f-150">Du kan använda en hanterad identitet som tjänstens huvudnamn för att logga in och få en app-begränsad åtkomsttoken för att komma åt andra resurser.</span><span class="sxs-lookup"><span data-stu-id="1652f-150">You can use a managed identity service principal for sign-in, and acquire an app-only access token to access other resources.</span></span> <span data-ttu-id="1652f-151">Hanterade identiteter är endast tillgängliga på resurser som körs i ett Azure-moln.</span><span class="sxs-lookup"><span data-stu-id="1652f-151">Managed identities are only available on resources running in an Azure cloud.</span></span>
 
-<span data-ttu-id="4e7ae-148">Det här kommandot ansluter med hjälp av den hanterade identiteten för värdmiljön.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-148">This command connects using the managed identity of the host environment.</span></span> <span data-ttu-id="4e7ae-149">Om kommandot till exempel körs på en virtuell dator med en tilldelad hanterad tjänstidentitet kan koden logga in med hjälp av den tilldelade identiteten.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-149">For example, if executed on a VirtualMachine with an assigned Managed Service Identity, this allows the code to sign in using that assigned identity.</span></span>
+<span data-ttu-id="1652f-152">Det här exemplet ansluts med hjälp av den hanterade identiteten för värdmiljön.</span><span class="sxs-lookup"><span data-stu-id="1652f-152">This example connects using the managed identity of the host environment.</span></span> <span data-ttu-id="1652f-153">Om kommandot till exempel körs på en virtuell dator med en tilldelad hanterad tjänstidentitet kan koden logga in med hjälp av den tilldelade identiteten.</span><span class="sxs-lookup"><span data-stu-id="1652f-153">For example, if executed on a VirtualMachine with an assigned Managed Service Identity, this allows the code to sign in using that assigned identity.</span></span>
 
 ```azurepowershell-interactive
- Connect-AzAccount -Identity 
+ Connect-AzAccount -Identity
 ```
 
-## <a name="sign-in-with-a-non-default-tenant-or-as-a-cloud-solution-provider-csp"></a><span data-ttu-id="4e7ae-150">Logga in med en klientorganisation som inte är standard eller som molnlösningsleverantör (CSP)</span><span class="sxs-lookup"><span data-stu-id="4e7ae-150">Sign in with a non-default tenant or as a Cloud Solution Provider (CSP)</span></span>
+## <a name="sign-in-with-a-non-default-tenant-or-as-a-cloud-solution-provider-csp"></a><span data-ttu-id="1652f-154">Logga in med en klientorganisation som inte är standard eller som molnlösningsleverantör (CSP)</span><span class="sxs-lookup"><span data-stu-id="1652f-154">Sign in with a non-default tenant or as a Cloud Solution Provider (CSP)</span></span>
 
-<span data-ttu-id="4e7ae-151">Om ditt konto är associerat med fler än en klientorganisation måste du använda parametern `-Tenant` när du ansluter för att logga in.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-151">If your account is associated with more than one tenant, sign-in requires the use of the `-Tenant` parameter when connecting.</span></span> <span data-ttu-id="4e7ae-152">Den här parametern kan användas med alla inloggningsmetoder.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-152">This parameter will work with any sign-in method.</span></span> <span data-ttu-id="4e7ae-153">När du loggar in kan det här parametervärdet antingen vara klientorganisationens objekt-ID för Azure (klient-ID) eller det fullständigt kvalificerade domännamnet för klientorganisationen.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-153">When logging in, this parameter value can either be the Azure object ID of the tenant (Tenant ID) or the fully qualified domain name of the tenant.</span></span>
+<span data-ttu-id="1652f-155">Om ditt konto är associerat med fler än en klientorganisation måste parametern `-Tenant` specificeras när du ansluter för att logga in.</span><span class="sxs-lookup"><span data-stu-id="1652f-155">If your account is associated with more than one tenant, sign-in requires the `-Tenant` parameter to be specified when connecting.</span></span> <span data-ttu-id="1652f-156">Den här parametern fungerar med alla inloggningsmetoder.</span><span class="sxs-lookup"><span data-stu-id="1652f-156">This parameter works with any sign-in method.</span></span> <span data-ttu-id="1652f-157">När du loggar in kan det här parametervärdet antingen vara klientorganisationens objekt-ID för Azure (klient-ID) eller det fullständigt kvalificerade domännamnet för klientorganisationen.</span><span class="sxs-lookup"><span data-stu-id="1652f-157">When logging in, this parameter value can either be the Azure object ID of the tenant (Tenant ID) or the fully qualified domain name of the tenant.</span></span>
 
-<span data-ttu-id="4e7ae-154">Om du är [molnlösningsleverantör (CSP)](https://azure.microsoft.com/offers/ms-azr-0145p/)**måste** värdet `-Tenant` vara ett klient-ID.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-154">If you're a [Cloud Solution Provider (CSP)](https://azure.microsoft.com/offers/ms-azr-0145p/), the `-Tenant` value **must** be a tenant ID.</span></span>
+<span data-ttu-id="1652f-158">Om du är [molnlösningsleverantör (CSP)](https://azure.microsoft.com/offers/ms-azr-0145p/)**måste** värdet `-Tenant` vara ett klient-ID.</span><span class="sxs-lookup"><span data-stu-id="1652f-158">If you're a [Cloud Solution Provider (CSP)](https://azure.microsoft.com/offers/ms-azr-0145p/), the `-Tenant` value **must** be a tenant ID.</span></span>
 
 ```azurepowershell-interactive
 Connect-AzAccount -Tenant 'xxxx-xxxx-xxxx-xxxx'
 ```
 
-## <a name="sign-in-to-another-cloud"></a><span data-ttu-id="4e7ae-155">Logga in på ett annat moln</span><span class="sxs-lookup"><span data-stu-id="4e7ae-155">Sign in to another Cloud</span></span>
+## <a name="sign-in-to-another-cloud"></a><span data-ttu-id="1652f-159">Logga in på ett annat moln</span><span class="sxs-lookup"><span data-stu-id="1652f-159">Sign in to another Cloud</span></span>
 
-<span data-ttu-id="4e7ae-156">Azures molntjänster erbjuder miljöer som följer regionala lagar för datahantering.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-156">Azure cloud services offer environments compliant with regional data-handling laws.</span></span>
-<span data-ttu-id="4e7ae-157">För konton i ett regionalt moln anger du miljön när du loggar in med argumentet `-Environment`.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-157">For accounts in a regional cloud, set the environment when you sign in with the `-Environment` argument.</span></span>
-<span data-ttu-id="4e7ae-158">Den här parametern kan användas med alla inloggningsmetoder.</span><span class="sxs-lookup"><span data-stu-id="4e7ae-158">This parameter will work with any sign-in method.</span></span> <span data-ttu-id="4e7ae-159">Om ditt konto till exempel finns i Kina-molnet:</span><span class="sxs-lookup"><span data-stu-id="4e7ae-159">For example, if your account is in the China cloud:</span></span>
+<span data-ttu-id="1652f-160">Azures molntjänster erbjuder miljöer som följer regionala lagar för datahantering.</span><span class="sxs-lookup"><span data-stu-id="1652f-160">Azure cloud services offer environments compliant with regional data-handling laws.</span></span> <span data-ttu-id="1652f-161">För konton i ett regionalt moln anger du miljön när du loggar in med argumentet `-Environment`.</span><span class="sxs-lookup"><span data-stu-id="1652f-161">For accounts in a regional cloud, set the environment when you sign in with the `-Environment` argument.</span></span> <span data-ttu-id="1652f-162">Den här parametern fungerar med alla inloggningsmetoder.</span><span class="sxs-lookup"><span data-stu-id="1652f-162">This parameter works with any sign-in method.</span></span> <span data-ttu-id="1652f-163">Om ditt konto till exempel finns i Kina-molnet:</span><span class="sxs-lookup"><span data-stu-id="1652f-163">For example, if your account is in the China cloud:</span></span>
 
 ```azurepowershell-interactive
 Connect-AzAccount -Environment AzureChinaCloud
 ```
 
-<span data-ttu-id="4e7ae-160">Följande kommando hämtar en lista över tillgängliga miljöer:</span><span class="sxs-lookup"><span data-stu-id="4e7ae-160">The following command gets a list of available environments:</span></span>
+<span data-ttu-id="1652f-164">Följande kommando hämtar en lista över tillgängliga miljöer:</span><span class="sxs-lookup"><span data-stu-id="1652f-164">The following command gets a list of available environments:</span></span>
 
 ```azurepowershell-interactive
-Get-AzEnvironment | Select-Object Name
+Get-AzEnvironment | Select-Object -Property Name
 ```
