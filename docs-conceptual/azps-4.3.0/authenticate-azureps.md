@@ -3,19 +3,19 @@ title: Logga in med Azure PowerShell
 description: Så här loggar du in med Azure PowerShell som användare, med tjänstens huvudnamn eller med hanterade identiteter för Azure-resurser.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 06/18/2020
-ms.openlocfilehash: f82a9e373806f2f071ae59f6aee7e0a0bd4ea13d
-ms.sourcegitcommit: 747769a143ddebff39e78c2cc62a182401adddb9
+ms.date: 7/7/2020
+ms.openlocfilehash: 7ac723202ca9e81c8ef4cba5e844d46b98ba4b67
+ms.sourcegitcommit: 7b368a9be1cea2ac4e7d269e1a51529271269a42
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85268393"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86098788"
 ---
 # <a name="sign-in-with-azure-powershell"></a>Logga in med Azure PowerShell
 
 Azure PowerShell har stöd för flera autentiseringsmetoder. Det enklaste sättet att komma igång är med [Azure Cloud Shell](/azure/cloud-shell/overview), som automatiskt loggar in dig. Med en lokal installation kan du logga in interaktivt via webbläsaren. När du skriver skript för automatisering är den rekommenderade metoden att använda ett [tjänsthuvudnamn](create-azure-service-principal-azureps.md) med de nödvändiga behörigheterna. Du kan skydda dina Azure-resurser genom att begränsa behörigheterna för inloggning så mycket som möjligt.
 
-När du har loggat in körs kommandon mot standardprenumerationen. Använd cmdleten [Set-AzContext](/powershell/module/az.accounts/set-azcontext) för att ändra din aktiva prenumeration för en session. Använd [Set-AzDefault](/powershell/module/az.accounts/set-azdefault) för att ändra standardprenumerationen som används när du loggar in med Azure PowerShell.
+Inledningsvis är du inloggad på den första prenumerationen Azure returnerar om du har åtkomst till fler än en prenumeration. Kommandon körs mot den här prenumerationen som standard. Använd cmdleten [Set-AzContext](/powershell/module/az.accounts/set-azcontext) för att ändra din aktiva prenumeration för en session. Använd [Select-AzContext](/powershell/module/az.accounts/select-azcontext)-cmdleten för att ändra din aktiva prenumeration och låta den vara permanent mellan sessioner på samma system.
 
 > [!IMPORTANT]
 > Dina autentiseringsuppgifter delas mellan flera PowerShell-sessioner så länge du är inloggad.
