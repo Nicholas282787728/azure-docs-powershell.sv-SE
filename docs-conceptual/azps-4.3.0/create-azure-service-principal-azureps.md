@@ -4,12 +4,12 @@ description: Lär dig hur du skapar och använder huvudnamn för tjänsten med A
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/17/2020
-ms.openlocfilehash: ebdc0783c43ccecbbeb315de5b5baebc9539b40e
-ms.sourcegitcommit: 747769a143ddebff39e78c2cc62a182401adddb9
+ms.openlocfilehash: 9d1f0e3be894a592bdf105c2070e9db0cf882921
+ms.sourcegitcommit: e324ad44921c9d8228ec7b91f3f8b333d2c520d4
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85268353"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86127761"
 ---
 # <a name="create-an-azure-service-principal-with-azure-powershell"></a>Skapa tjänstens huvudnamn för Azure med Azure PowerShell
 
@@ -149,7 +149,7 @@ Connect-AzAccount -ServicePrincipal -Credential $credentials -Tenant <tenant ID>
 För certifikatbaserad autentisering måste Azure PowerShell kunna hämta information från ett lokalt certifikatarkiv baserat på ett tumavtryck för certifikat.
 
 ```azurepowershell-interactive
-Connect-AzAccount -ServicePrincipal -Tenant <tenant ID> -CertificateThumbprint <thumbprint>
+Connect-AzAccount -ServicePrincipal -Tenant <TenantId> -CertificateThumbprint <Thumbprint> -ApplicationId <ApplicationId>
 ```
 
 Anvisningar för hur du importerar ett certifikat i ett arkiv för autentiseringsuppgifter som är tillgängliga från PowerShell finns i [Logga in med Azure PowerShell](authenticate-azureps.md#sp-signin)
