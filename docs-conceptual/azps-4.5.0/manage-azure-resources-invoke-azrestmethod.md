@@ -3,13 +3,13 @@ title: Hantera Azure-resurser med Invoke-AzRestMethod
 description: Så här använder du Azure PowerShell för att hantera resurser med cmdleten Invoke-AzRestMethod.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 08/17/2020
-ms.openlocfilehash: 380fd818a3af2474ce192c7a1da8a6798795cf21
-ms.sourcegitcommit: bd7edc4d48b6a8a8bec864edc876e16af0a49505
+ms.date: 08/24/2020
+ms.openlocfilehash: 6a267e28ec8e2540ce7d6431ffd9aab0b2090c6a
+ms.sourcegitcommit: b94a3f00c147144b0ef7f8cf8d0f151e04674b89
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88513009"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88821371"
 ---
 # <a name="manage-azure-resources-with-invoke-azrestmethod"></a>Hantera Azure-resurser med Invoke-AzRestMethod
 
@@ -19,8 +19,7 @@ Denna cmdlet är användbar när du vill hantera Azure-tjänster för funktioner
 
 ## <a name="how-to-use-invoke-azrestmethod"></a>Så här använder du Invoke-AzRestMethod
 
-Du kan exempelvis tillåta åtkomst till Azure Container Registry (ACR) endast för vissa nätverk eller neka offentlig åtkomst. Den här funktionen är inte tillgänglig än i [Az.ContainerRegistry PowerShell-modulen](/powershell/module/Az.ContainerRegistry/).
-Men under tiden kan den hanteras med `Invoke-AzRestMethod`.
+Du kan exempelvis tillåta åtkomst till Azure Container Registry (ACR) endast för vissa nätverk eller neka offentlig åtkomst. Från och med Az PowerShell-modul version 4.5.0 är funktionen är inte tillgänglig än i [Az.ContainerRegistry PowerShell-modulen](/powershell/module/Az.ContainerRegistry/). Men under tiden kan den hanteras med `Invoke-AzRestMethod`.
 
 ## <a name="using-invoke-azrestmethod-with-get-operations"></a>Använda Invoke-AzRestMethod med GET-åtgärder
 
@@ -51,7 +50,7 @@ Du hittar definitionen för ACR-versionen 2019-12-01-preview på följande plats
 
 ## <a name="using-invoke-azrestmethod-with-patch-operations"></a>Använda Invoke-AzRestMethod med PATCH-åtgärder
 
-Du kan inaktivera offentlig åtkomst till det befintliga ACR:et med namnet `myacr` i resursgruppen `myresourcegroup` med hjälp av cmdleten Invoke-AzRestMethod.
+Du kan inaktivera offentlig åtkomst till det befintliga ACR:et med namnet `myacr` i resursgruppen `myresourcegroup` med hjälp av cmdleten `Invoke-AzRestMethod`.
 
 Om du vill inaktivera offentlig nätverksåtkomst måste du göra ett **PATCH**-anrop till API:et som ändrar värdet för parametern `publicNetwokAccess` enligt följande exempel:
 
@@ -100,11 +99,11 @@ Invoke-AzRestMethod @specificIpParams
 
 ## <a name="comparison-to-get-azresource-new-azresource-and-remove-azresource"></a>Jämförelse med Get-AzResource, New-AzResource och Remove-AzResource
 
-Med `*-AzResource`-cmdletarna kan du anpassa REST API-anropet till Azure genom att ange resurstypen, API-versionen och de egenskaper som ska uppdateras. Egenskaperna måste ändå vara ett `PSObject` som lätt blir krångligt att skapa.
+Med `*-AzResource`-cmdletarna kan du anpassa REST API-anropet till Azure genom att ange resurstypen, API-versionen och de egenskaper som ska uppdateras. Men egenskaperna måste först skapas som ett `PSObject`. Den här processen medför ytterligare en nivå av komplexitet och kan enkelt bli komplicerad.
 
-Med `Invoke-AzRestMethod` får du ett enklare sätt att hantera Azure-resurser. Du kan se att nyttolasten är en JSON-sträng i det föregående exemplet. Du behöver inte kämpa med konverteringen mellan JSON och `PSObjects`.
+Med `Invoke-AzRestMethod` får du ett enkelt sätt att hantera Azure-resurser. Du kan skapa en JSON-sträng och använda den för att anpassa REST-API-anropet utan att du behöver skapa `PSObjects` i förväg (se föregående exempel).
 
-Om du redan är van vid `*-AzResource`-cmdletarna kan du fortsätta att använda dem. Vi har inga planer på att sluta stöda dem. Med `Invoke-AzRestMethod` har vi lagt till en ny cmdlet i familjen.
+Om du redan är van vid `*-AzResource`-cmdletarna kan du fortsätta att använda dem. Vi har inga planer på att sluta stöda dem. Med `Invoke-AzRestMethod` har vi lagt till en ny cmdlet i din verktygslåda.
 
 ## <a name="see-also"></a>Se även
 
