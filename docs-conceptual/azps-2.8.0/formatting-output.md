@@ -4,29 +4,30 @@ description: Så här formaterar du cmdlet-utdata för Azure PowerShell.
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 01/07/2019
-ms.openlocfilehash: dbce06569ada169cdd93ae85d40e1554a7f7fdec
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: 27acf416d118fb4e25f0f683d97f3a56fe882a1a
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83387317"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89244134"
 ---
-# <a name="format-azure-powershell-cmdlet-output"></a><span data-ttu-id="f73b7-103">Formatera cmdlet-utdata för Azure PowerShell</span><span class="sxs-lookup"><span data-stu-id="f73b7-103">Format Azure PowerShell cmdlet output</span></span>
+# <a name="format-azure-powershell-cmdlet-output"></a><span data-ttu-id="48531-103">Formatera cmdlet-utdata för Azure PowerShell</span><span class="sxs-lookup"><span data-stu-id="48531-103">Format Azure PowerShell cmdlet output</span></span>
 
-<span data-ttu-id="f73b7-104">Som standard formaterar alla Azure PowerShell-cmdletar utdata för att förbättra läsbarheten.</span><span class="sxs-lookup"><span data-stu-id="f73b7-104">By default each Azure PowerShell cmdlet formats output to be easy to read.</span></span> <span data-ttu-id="f73b7-105">Med PowerShell kan du konvertera eller formatera cmdlet-utdata genom att dirigera till en av följande cmdletar:</span><span class="sxs-lookup"><span data-stu-id="f73b7-105">PowerShell allows you to convert or format cmdlet output by piping to one of the following cmdlets:</span></span>
+<span data-ttu-id="48531-104">Som standard formaterar alla Azure PowerShell-cmdletar utdata för att förbättra läsbarheten.</span><span class="sxs-lookup"><span data-stu-id="48531-104">By default each Azure PowerShell cmdlet formats output to be easy to read.</span></span> <span data-ttu-id="48531-105">Med PowerShell kan du konvertera eller formatera cmdlet-utdata genom att dirigera till en av följande cmdletar:</span><span class="sxs-lookup"><span data-stu-id="48531-105">PowerShell allows you to convert or format cmdlet output by piping to one of the following cmdlets:</span></span>
 
-| <span data-ttu-id="f73b7-106">Formatering</span><span class="sxs-lookup"><span data-stu-id="f73b7-106">Formatting</span></span>      | <span data-ttu-id="f73b7-107">Konvertering</span><span class="sxs-lookup"><span data-stu-id="f73b7-107">Conversion</span></span>       |
+| <span data-ttu-id="48531-106">Formatering</span><span class="sxs-lookup"><span data-stu-id="48531-106">Formatting</span></span>      | <span data-ttu-id="48531-107">Konvertering</span><span class="sxs-lookup"><span data-stu-id="48531-107">Conversion</span></span>       |
 |-----------------|------------------|
-| [<span data-ttu-id="f73b7-108">Format-Custom</span><span class="sxs-lookup"><span data-stu-id="f73b7-108">Format-Custom</span></span>](/powershell/module/microsoft.powershell.utility/format-custom) | [<span data-ttu-id="f73b7-109">ConvertTo-Csv</span><span class="sxs-lookup"><span data-stu-id="f73b7-109">ConvertTo-Csv</span></span>](/powershell/module/microsoft.powershell.utility/convertto-csv)  |
-| [<span data-ttu-id="f73b7-110">Format-List</span><span class="sxs-lookup"><span data-stu-id="f73b7-110">Format-List</span></span>](/powershell/module/microsoft.powershell.utility/format-list)   | [<span data-ttu-id="f73b7-111">ConvertTo-Html</span><span class="sxs-lookup"><span data-stu-id="f73b7-111">ConvertTo-Html</span></span>](/powershell/module/microsoft.powershell.utility/convertto-html) |
-| [<span data-ttu-id="f73b7-112">Format-Table</span><span class="sxs-lookup"><span data-stu-id="f73b7-112">Format-Table</span></span>](/powershell/module/microsoft.powershell.utility/format-table)  | [<span data-ttu-id="f73b7-113">ConvertTo-Json</span><span class="sxs-lookup"><span data-stu-id="f73b7-113">ConvertTo-Json</span></span>](/powershell/module/microsoft.powershell.utility/convertto-json) |
-| [<span data-ttu-id="f73b7-114">Format-Wide</span><span class="sxs-lookup"><span data-stu-id="f73b7-114">Format-Wide</span></span>](/powershell/module/microsoft.powershell.utility/format-wide)   | [<span data-ttu-id="f73b7-115">ConvertTo-Xml</span><span class="sxs-lookup"><span data-stu-id="f73b7-115">ConvertTo-Xml</span></span>](/powershell/module/microsoft.powershell.utility/convertto-xml)  |
+| [<span data-ttu-id="48531-108">Format-Custom</span><span class="sxs-lookup"><span data-stu-id="48531-108">Format-Custom</span></span>](/powershell/module/microsoft.powershell.utility/format-custom) | [<span data-ttu-id="48531-109">ConvertTo-Csv</span><span class="sxs-lookup"><span data-stu-id="48531-109">ConvertTo-Csv</span></span>](/powershell/module/microsoft.powershell.utility/convertto-csv)  |
+| [<span data-ttu-id="48531-110">Format-List</span><span class="sxs-lookup"><span data-stu-id="48531-110">Format-List</span></span>](/powershell/module/microsoft.powershell.utility/format-list)   | [<span data-ttu-id="48531-111">ConvertTo-Html</span><span class="sxs-lookup"><span data-stu-id="48531-111">ConvertTo-Html</span></span>](/powershell/module/microsoft.powershell.utility/convertto-html) |
+| [<span data-ttu-id="48531-112">Format-Table</span><span class="sxs-lookup"><span data-stu-id="48531-112">Format-Table</span></span>](/powershell/module/microsoft.powershell.utility/format-table)  | [<span data-ttu-id="48531-113">ConvertTo-Json</span><span class="sxs-lookup"><span data-stu-id="48531-113">ConvertTo-Json</span></span>](/powershell/module/microsoft.powershell.utility/convertto-json) |
+| [<span data-ttu-id="48531-114">Format-Wide</span><span class="sxs-lookup"><span data-stu-id="48531-114">Format-Wide</span></span>](/powershell/module/microsoft.powershell.utility/format-wide)   | [<span data-ttu-id="48531-115">ConvertTo-Xml</span><span class="sxs-lookup"><span data-stu-id="48531-115">ConvertTo-Xml</span></span>](/powershell/module/microsoft.powershell.utility/convertto-xml)  |
 
-<span data-ttu-id="f73b7-116">Formatering används för visning i en PowerShell-terminal och konvertering används för att generera data som ska användas av andra skript eller program.</span><span class="sxs-lookup"><span data-stu-id="f73b7-116">Formatting is used for display in a PowerShell terminal, and conversion is used for generating data to be consumed by other scripts or programs.</span></span>
+<span data-ttu-id="48531-116">Formatering används för visning i en PowerShell-terminal och konvertering används för att generera data som ska användas av andra skript eller program.</span><span class="sxs-lookup"><span data-stu-id="48531-116">Formatting is used for display in a PowerShell terminal, and conversion is used for generating data to be consumed by other scripts or programs.</span></span>
 
-## <a name="table-output-format"></a><span data-ttu-id="f73b7-117">Format för tabellutdata</span><span class="sxs-lookup"><span data-stu-id="f73b7-117">Table output format</span></span>
+## <a name="table-output-format"></a><span data-ttu-id="48531-117">Format för tabellutdata</span><span class="sxs-lookup"><span data-stu-id="48531-117">Table output format</span></span>
 
-<span data-ttu-id="f73b7-118">Som standard är utdata från Azure PowerShell-cmdletar i tabellformatet.</span><span class="sxs-lookup"><span data-stu-id="f73b7-118">By default, Azure PowerShell cmdlets output in the table format.</span></span> <span data-ttu-id="f73b7-119">Detta format visar inte all information om den begärda resursen:</span><span class="sxs-lookup"><span data-stu-id="f73b7-119">This format doesn't display all information of the requested resource:</span></span>
+<span data-ttu-id="48531-118">Som standard är utdata från Azure PowerShell-cmdletar i tabellformatet.</span><span class="sxs-lookup"><span data-stu-id="48531-118">By default, Azure PowerShell cmdlets output in the table format.</span></span> <span data-ttu-id="48531-119">Detta format visar inte all information om den begärda resursen:</span><span class="sxs-lookup"><span data-stu-id="48531-119">This format doesn't display all information of the requested resource:</span></span>
 
 ```powershell-interactive
 Get-AzVM
@@ -40,7 +41,7 @@ QueryExample         RHELExample  westus2  Standard_D2_v3   Linux    rhelexample
 QueryExample        WinExampleVM  westus2 Standard_DS1_v2 Windows   winexamplevm268         Succeeded
 ```
 
-<span data-ttu-id="f73b7-120">Mängden data som visas av `Format-Table` kan påverkas av bredden på fönstret för PowerShell-sessionen.</span><span class="sxs-lookup"><span data-stu-id="f73b7-120">The amount of data displayed by `Format-Table` can be affected by the width of your PowerShell session window.</span></span> <span data-ttu-id="f73b7-121">Om du vill begränsa utdata till specifika egenskaper och sortera dem kan egenskapsnamn anges som argument till `Format-Table`:</span><span class="sxs-lookup"><span data-stu-id="f73b7-121">To restrict the output to specific properties and order them, property names can be provided as arguments to `Format-Table`:</span></span>
+<span data-ttu-id="48531-120">Mängden data som visas av `Format-Table` kan påverkas av bredden på fönstret för PowerShell-sessionen.</span><span class="sxs-lookup"><span data-stu-id="48531-120">The amount of data displayed by `Format-Table` can be affected by the width of your PowerShell session window.</span></span> <span data-ttu-id="48531-121">Om du vill begränsa utdata till specifika egenskaper och sortera dem kan egenskapsnamn anges som argument till `Format-Table`:</span><span class="sxs-lookup"><span data-stu-id="48531-121">To restrict the output to specific properties and order them, property names can be provided as arguments to `Format-Table`:</span></span>
 
 ```powershell-interactive
 Get-AzVM -ResourceGroupName QueryExample | Format-Table Name,ResourceGroupName,Location
@@ -54,15 +55,15 @@ RHELExample    QueryExample      westus2
 WinExampleVM   QueryExample      westus2
 ```
 
-## <a name="list-output-format"></a><span data-ttu-id="f73b7-122">Skapa lista för utdataformat</span><span class="sxs-lookup"><span data-stu-id="f73b7-122">List output format</span></span>
+## <a name="list-output-format"></a><span data-ttu-id="48531-122">Skapa lista för utdataformat</span><span class="sxs-lookup"><span data-stu-id="48531-122">List output format</span></span>
 
-<span data-ttu-id="f73b7-123">När du skapar en lista för utdataformat så skapas två kolumner med egenskapsnamn följt av värdet.</span><span class="sxs-lookup"><span data-stu-id="f73b7-123">List output format produces two columns, property names followed by the value.</span></span> <span data-ttu-id="f73b7-124">För komplexa objekt visas typen av objekt istället.</span><span class="sxs-lookup"><span data-stu-id="f73b7-124">For complex objects, the type of the object is displayed instead.</span></span>
+<span data-ttu-id="48531-123">När du skapar en lista för utdataformat så skapas två kolumner med egenskapsnamn följt av värdet.</span><span class="sxs-lookup"><span data-stu-id="48531-123">List output format produces two columns, property names followed by the value.</span></span> <span data-ttu-id="48531-124">För komplexa objekt visas typen av objekt istället.</span><span class="sxs-lookup"><span data-stu-id="48531-124">For complex objects, the type of the object is displayed instead.</span></span>
 
 ```powershell-interactive
 Get-AzVM | Format-List
 ```
 
-<span data-ttu-id="f73b7-125">I följande utdata har vissa fält tagits bort.</span><span class="sxs-lookup"><span data-stu-id="f73b7-125">The following output has some fields removed.</span></span>
+<span data-ttu-id="48531-125">I följande utdata har vissa fält tagits bort.</span><span class="sxs-lookup"><span data-stu-id="48531-125">The following output has some fields removed.</span></span>
 
 ```output
 ResourceGroupName        : QueryExample
@@ -88,7 +89,7 @@ Location                 : westus2
 ...
 ```
 
-<span data-ttu-id="f73b7-126">I likhet med `Format-Table` kan egenskapsnamn anges för att ordna och begränsa utdata:</span><span class="sxs-lookup"><span data-stu-id="f73b7-126">Like `Format-Table`, property names can be provided to order and restrict the output:</span></span>
+<span data-ttu-id="48531-126">I likhet med `Format-Table` kan egenskapsnamn anges för att ordna och begränsa utdata:</span><span class="sxs-lookup"><span data-stu-id="48531-126">Like `Format-Table`, property names can be provided to order and restrict the output:</span></span>
 
 ```powershell-interactive
 Get-AzVM | Format-List ResourceGroupName,Name,Location
@@ -108,9 +109,9 @@ Name              : WinExampleVM
 Location          : westus2
 ```
 
-## <a name="wide-output-format"></a><span data-ttu-id="f73b7-127">Brett utdataformat</span><span class="sxs-lookup"><span data-stu-id="f73b7-127">Wide output format</span></span>
+## <a name="wide-output-format"></a><span data-ttu-id="48531-127">Brett utdataformat</span><span class="sxs-lookup"><span data-stu-id="48531-127">Wide output format</span></span>
 
-<span data-ttu-id="f73b7-128">Med brett utdataformat skapas endast ett egenskapsnamn per fråga.</span><span class="sxs-lookup"><span data-stu-id="f73b7-128">Wide output format produces only one property name per query.</span></span> <span data-ttu-id="f73b7-129">Du kan kontrollera vilken egenskap som visas genom att ange en egenskap som ett argument.</span><span class="sxs-lookup"><span data-stu-id="f73b7-129">Which property is displayed can be controlled by giving a property as an argument.</span></span>
+<span data-ttu-id="48531-128">Med brett utdataformat skapas endast ett egenskapsnamn per fråga.</span><span class="sxs-lookup"><span data-stu-id="48531-128">Wide output format produces only one property name per query.</span></span> <span data-ttu-id="48531-129">Du kan kontrollera vilken egenskap som visas genom att ange en egenskap som ett argument.</span><span class="sxs-lookup"><span data-stu-id="48531-129">Which property is displayed can be controlled by giving a property as an argument.</span></span>
 
 ```powershell-interactive
 Get-AzVM | Format-Wide
@@ -130,15 +131,15 @@ QueryExample                                    QueryExample
 QueryExample
 ```
 
-## <a name="custom-output-format"></a><span data-ttu-id="f73b7-130">Anpassat utdataformat</span><span class="sxs-lookup"><span data-stu-id="f73b7-130">Custom output format</span></span>
+## <a name="custom-output-format"></a><span data-ttu-id="48531-130">Anpassat utdataformat</span><span class="sxs-lookup"><span data-stu-id="48531-130">Custom output format</span></span>
 
-<span data-ttu-id="f73b7-131">Utdatatypen `Custom-Format` är avsedd för att formatera anpassade objekt.</span><span class="sxs-lookup"><span data-stu-id="f73b7-131">The `Custom-Format` output type is meant for formatting custom objects.</span></span> <span data-ttu-id="f73b7-132">Utan några argument fungerar den som `Format-List`, men den visar egenskapsnamnen på anpassade klasser.</span><span class="sxs-lookup"><span data-stu-id="f73b7-132">Without any arguments, it behaves like `Format-List` but displays the property names of custom classes.</span></span>
+<span data-ttu-id="48531-131">Utdatatypen `Custom-Format` är avsedd för att formatera anpassade objekt.</span><span class="sxs-lookup"><span data-stu-id="48531-131">The `Custom-Format` output type is meant for formatting custom objects.</span></span> <span data-ttu-id="48531-132">Utan några argument fungerar den som `Format-List`, men den visar egenskapsnamnen på anpassade klasser.</span><span class="sxs-lookup"><span data-stu-id="48531-132">Without any arguments, it behaves like `Format-List` but displays the property names of custom classes.</span></span>
 
 ```powershell-interactive
 Get-AzVM | Format-Custom
 ```
 
-<span data-ttu-id="f73b7-133">I följande utdata har vissa fält tagits bort.</span><span class="sxs-lookup"><span data-stu-id="f73b7-133">The following output has some fields removed.</span></span>
+<span data-ttu-id="48531-133">I följande utdata har vissa fält tagits bort.</span><span class="sxs-lookup"><span data-stu-id="48531-133">The following output has some fields removed.</span></span>
 
 ```output
 ResourceGroupName : QueryExample
@@ -157,13 +158,13 @@ StorageProfile    : {ImageReference, OsDisk, DataDisks}
 ...
 ```
 
-<span data-ttu-id="f73b7-134">Ange egenskapsnamn som argument till `Custom-Format` för att visa egenskaper och värden för anpassade objekt som värden:</span><span class="sxs-lookup"><span data-stu-id="f73b7-134">Giving property names as arguments to `Custom-Format` displays the property/value pairs for custom objects set as values:</span></span>
+<span data-ttu-id="48531-134">Ange egenskapsnamn som argument till `Custom-Format` för att visa egenskaper och värden för anpassade objekt som värden:</span><span class="sxs-lookup"><span data-stu-id="48531-134">Giving property names as arguments to `Custom-Format` displays the property/value pairs for custom objects set as values:</span></span>
 
 ```powershell-interactive
 Get-AzVM | Format-Custom Name,ResourceGroupName,Location,OSProfile
 ```
 
-<span data-ttu-id="f73b7-135">I följande utdata har vissa fält tagits bort.</span><span class="sxs-lookup"><span data-stu-id="f73b7-135">The following output has some fields removed.</span></span>
+<span data-ttu-id="48531-135">I följande utdata har vissa fält tagits bort.</span><span class="sxs-lookup"><span data-stu-id="48531-135">The following output has some fields removed.</span></span>
 
 ```output
 class PSVirtualMachineList
@@ -227,11 +228,11 @@ class PSVirtualMachineList
 }
 ```
 
-## <a name="conversion-to-other-data-formats"></a><span data-ttu-id="f73b7-136">Konvertering till andra dataformat</span><span class="sxs-lookup"><span data-stu-id="f73b7-136">Conversion to other data formats</span></span>
+## <a name="conversion-to-other-data-formats"></a><span data-ttu-id="48531-136">Konvertering till andra dataformat</span><span class="sxs-lookup"><span data-stu-id="48531-136">Conversion to other data formats</span></span>
 
-<span data-ttu-id="f73b7-137">Med cmdletar i `ConvertTo-*`-serien kan du konvertera resultaten från Azure PowerShell-cmdletar till maskinläsbara format.</span><span class="sxs-lookup"><span data-stu-id="f73b7-137">The `ConvertTo-*` family of cmdlets allows for converting the results of Azure PowerShell cmdlets to machine-readable formats.</span></span> <span data-ttu-id="f73b7-138">Använd kommandot `Select-Object` i en pipeline innan du utför konverteringen för att endast hämta vissa egenskaper från Azure PowerShell-resultaten.</span><span class="sxs-lookup"><span data-stu-id="f73b7-138">To get only some properties from the Azure PowerShell results, use the `Select-Object` command in a pipe before performing the conversion.</span></span> <span data-ttu-id="f73b7-139">I följande exempel visas de olika typerna av utdata som varje konvertering producerar.</span><span class="sxs-lookup"><span data-stu-id="f73b7-139">The following examples demonstrate the different kinds of output that each conversion produces.</span></span>
+<span data-ttu-id="48531-137">Med cmdletar i `ConvertTo-*`-serien kan du konvertera resultaten från Azure PowerShell-cmdletar till maskinläsbara format.</span><span class="sxs-lookup"><span data-stu-id="48531-137">The `ConvertTo-*` family of cmdlets allows for converting the results of Azure PowerShell cmdlets to machine-readable formats.</span></span> <span data-ttu-id="48531-138">Använd kommandot `Select-Object` i en pipeline innan du utför konverteringen för att endast hämta vissa egenskaper från Azure PowerShell-resultaten.</span><span class="sxs-lookup"><span data-stu-id="48531-138">To get only some properties from the Azure PowerShell results, use the `Select-Object` command in a pipe before performing the conversion.</span></span> <span data-ttu-id="48531-139">I följande exempel visas de olika typerna av utdata som varje konvertering producerar.</span><span class="sxs-lookup"><span data-stu-id="48531-139">The following examples demonstrate the different kinds of output that each conversion produces.</span></span>
 
-### <a name="conversion-to-csv"></a><span data-ttu-id="f73b7-140">Konvertering till CSV</span><span class="sxs-lookup"><span data-stu-id="f73b7-140">Conversion to CSV</span></span>
+### <a name="conversion-to-csv"></a><span data-ttu-id="48531-140">Konvertering till CSV</span><span class="sxs-lookup"><span data-stu-id="48531-140">Conversion to CSV</span></span>
 
 ```azurepowershell-interactive
 Get-AzVM | ConvertTo-CSV
@@ -245,15 +246,15 @@ Get-AzVM | ConvertTo-CSV
 "QUERYEXAMPLE","/subscriptions/.../resourceGroups/QUERYEXAMPLE/providers/Microsoft.Compute/virtualMachines/WinExampleVM","...","WinExampleVM","Microsoft.Compute/virtualMachines","westus2",,"System.Collections.Generic.Dictionary`2[System.String,System.String]",,,"System.Collections.Generic.List`1[Microsoft.Azure.Management.Compute.Models.VirtualMachineExtension]","Microsoft.Azure.Management.Compute.Models.HardwareProfile",,"Microsoft.Azure.Management.Compute.Models.NetworkProfile","Microsoft.Azure.Management.Compute.Models.OSProfile",,"Succeeded","Microsoft.Azure.Management.Compute.Models.StorageProfile","Compact",,"System.Collections.Generic.List`1[System.String]",,,"...","OK"
 ```
 
-### <a name="conversion-to-json"></a><span data-ttu-id="f73b7-141">Konvertering till JSON</span><span class="sxs-lookup"><span data-stu-id="f73b7-141">Conversion to JSON</span></span>
+### <a name="conversion-to-json"></a><span data-ttu-id="48531-141">Konvertering till JSON</span><span class="sxs-lookup"><span data-stu-id="48531-141">Conversion to JSON</span></span>
 
-<span data-ttu-id="f73b7-142">I JSON-utdata visas inte alla egenskaper som standard.</span><span class="sxs-lookup"><span data-stu-id="f73b7-142">JSON output doesn't expand all properties by default.</span></span> <span data-ttu-id="f73b7-143">Använd argumentet `-Depth` för att ändra djupet för egenskaper som visas.</span><span class="sxs-lookup"><span data-stu-id="f73b7-143">To change the depth of properties expanded, use the `-Depth` argument.</span></span> <span data-ttu-id="f73b7-144">Som standard är expansionsdjupet `2`.</span><span class="sxs-lookup"><span data-stu-id="f73b7-144">By default, the expansion depth is `2`.</span></span>
+<span data-ttu-id="48531-142">I JSON-utdata visas inte alla egenskaper som standard.</span><span class="sxs-lookup"><span data-stu-id="48531-142">JSON output doesn't expand all properties by default.</span></span> <span data-ttu-id="48531-143">Använd argumentet `-Depth` för att ändra djupet för egenskaper som visas.</span><span class="sxs-lookup"><span data-stu-id="48531-143">To change the depth of properties expanded, use the `-Depth` argument.</span></span> <span data-ttu-id="48531-144">Som standard är expansionsdjupet `2`.</span><span class="sxs-lookup"><span data-stu-id="48531-144">By default, the expansion depth is `2`.</span></span>
 
 ```azurepowershell-interactive
 Get-AzVM|ConvertTo-JSON
 ```
 
-<span data-ttu-id="f73b7-145">I följande utdata har vissa fält tagits bort.</span><span class="sxs-lookup"><span data-stu-id="f73b7-145">The following output has some fields removed.</span></span>
+<span data-ttu-id="48531-145">I följande utdata har vissa fält tagits bort.</span><span class="sxs-lookup"><span data-stu-id="48531-145">The following output has some fields removed.</span></span>
 
 ```output
 [
@@ -296,9 +297,9 @@ Get-AzVM|ConvertTo-JSON
 ]
 ```
 
-### <a name="conversion-to-xml"></a><span data-ttu-id="f73b7-146">Konvertering till XML</span><span class="sxs-lookup"><span data-stu-id="f73b7-146">Conversion to XML</span></span>
+### <a name="conversion-to-xml"></a><span data-ttu-id="48531-146">Konvertering till XML</span><span class="sxs-lookup"><span data-stu-id="48531-146">Conversion to XML</span></span>
 
-<span data-ttu-id="f73b7-147">Cmdleten `ConvertTo-XML` konverterar Azure PowerShell-svarsobjekt till ett rent XML-objekt som kan hanteras på samma sätt som andra XML-objekt i PowerShell.</span><span class="sxs-lookup"><span data-stu-id="f73b7-147">The `ConvertTo-XML` cmdlet converts the Azure PowerShell response object into a pure XML object, which can be handled like any other XML object within PowerShell.</span></span> 
+<span data-ttu-id="48531-147">Cmdleten `ConvertTo-XML` konverterar Azure PowerShell-svarsobjekt till ett rent XML-objekt som kan hanteras på samma sätt som andra XML-objekt i PowerShell.</span><span class="sxs-lookup"><span data-stu-id="48531-147">The `ConvertTo-XML` cmdlet converts the Azure PowerShell response object into a pure XML object, which can be handled like any other XML object within PowerShell.</span></span> 
 
 ```azurepowershell-interactive
 Get-AzVM | ConvertTo-XML
@@ -310,10 +311,10 @@ xml                            Objects
 version="1.0" encoding="utf-8" Objects
 ```
 
-### <a name="conversion-to-html"></a><span data-ttu-id="f73b7-148">Konvertering till HTML</span><span class="sxs-lookup"><span data-stu-id="f73b7-148">Conversion to HTML</span></span>
+### <a name="conversion-to-html"></a><span data-ttu-id="48531-148">Konvertering till HTML</span><span class="sxs-lookup"><span data-stu-id="48531-148">Conversion to HTML</span></span>
 
-<span data-ttu-id="f73b7-149">Vid konvertering av ett objekt till HTML skapas utdata som återges som en HTML-tabell.</span><span class="sxs-lookup"><span data-stu-id="f73b7-149">Converting an object to HTML produces output that will be rendered as an HTML table.</span></span> <span data-ttu-id="f73b7-150">HTML-renderingen beror på din webbläsares beteende för rendering av tabeller som inte innehåller information om bredd.</span><span class="sxs-lookup"><span data-stu-id="f73b7-150">Rendering of the HTML will depend on your browser behavior for rendering tables which contain no width information.</span></span>
-<span data-ttu-id="f73b7-151">Inga anpassade klassobjekt visas.</span><span class="sxs-lookup"><span data-stu-id="f73b7-151">No custom class objects are expanded.</span></span>
+<span data-ttu-id="48531-149">Vid konvertering av ett objekt till HTML skapas utdata som återges som en HTML-tabell.</span><span class="sxs-lookup"><span data-stu-id="48531-149">Converting an object to HTML produces output that will be rendered as an HTML table.</span></span> <span data-ttu-id="48531-150">HTML-renderingen beror på din webbläsares beteende för rendering av tabeller som inte innehåller information om bredd.</span><span class="sxs-lookup"><span data-stu-id="48531-150">Rendering of the HTML will depend on your browser behavior for rendering tables which contain no width information.</span></span>
+<span data-ttu-id="48531-151">Inga anpassade klassobjekt visas.</span><span class="sxs-lookup"><span data-stu-id="48531-151">No custom class objects are expanded.</span></span>
 
 ```azurepowershell-interactive
 Get-AzVM | ConvertTo-HTML
