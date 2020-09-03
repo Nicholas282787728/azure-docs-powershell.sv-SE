@@ -4,16 +4,17 @@ description: Så här frågar du efter resurser i Azure och formaterar resultate
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/11/2018
-ms.openlocfilehash: 0900b060bc83392c538b0a5d1a8949c51925d66a
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: e5c0422c88f586c5578c4e42b8d9b666860c4bf9
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83387266"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89238793"
 ---
 # <a name="query-output-of-azure-powershell-cmdlets"></a>Fråga utdata från Azure PowerShell-cmdletar
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 Frågor i PowerShell kan utföras med hjälp av inbyggda cmdletar. I PowerShell har cmdlet formen **_Verb-substantiv_**. Cmdletar med verbet **_Get_** är fråge-cmdletar. Cmdletarnas substantiv är de typer av Azure-resurser som cmdletens verb agerar på.
 
