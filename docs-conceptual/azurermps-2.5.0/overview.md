@@ -8,12 +8,13 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: knithinc
 ms.date: 09/21/2018
-ms.openlocfilehash: 55f19ac5e6767df1312e0b531184e8621b60a011
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: 4b72bbd1bda93767251e0ba3d488f798575d9115
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "67038201"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89244321"
 ---
 # <a name="azurerm-module-250"></a>AzureRM-modul 2.5.0
 
@@ -65,13 +66,13 @@ Use-AzureRmProfile -Profile 2018-03-01-hybrid -Force
 ### <a name="azure-bridge"></a>Azure Bridge
 Förhandsversionen av administratörsmodulen AzureBridge i Azure Stack, där du kan publicera bilder från Azure.
 
-### <a name="backup"></a>Säkerhetskopiering
+### <a name="backup"></a>Backup
 Förhandsversionen av administratörsmodulen Backup som gör att administratörer kan:
 - Konfigurera var säkerhetskopiorna ska lagras
 - Säkerhetskopiera
 - Lista och återställda slutförda säkerhetskopior
 
-### <a name="commerce"></a>Commerce
+### <a name="commerce"></a>Detaljhandel
 Förhandsversionen av administratörsmodulen Azure Stack Commerce som innehåller funktioner för att visa sammanställd dataanvändning i hela ditt Azure Stack-system.
 
 ### <a name="compute"></a>Compute
@@ -111,12 +112,12 @@ Förhandsversion av administratörsmodulen Azure Stack Storage.  I den här vers
 - Återställning av raderade lagringskonton
 - Migrering av containrar från en resurs till en annan
 - Visning av information om enskilda lagringskomponenter
-- Visning av information om användning och prestanda
+- Visa information om användning och prestanda
 
 ### <a name="subscription-admin"></a>Prenumerationsadministration
 Förhandsversion av administratörsmodulen Azure Stack Subscription.  Den här modulen innehåller administratörsfunktioner för att:
 - Hantera avtal och erbjudanden
-- Visning av information om användning och prestanda
+- Visa information om användning och prestanda
 - Hantera RBAC
 
 ### <a name="subscription"></a>Prenumeration

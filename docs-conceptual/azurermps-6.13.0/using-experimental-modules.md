@@ -4,16 +4,17 @@ description: Förstå filosofin och användningen av experimentella Azure PowerS
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/11/2018
-ms.openlocfilehash: 2c52dec39bdc656c7a2b17c547ec5f87ac659fa1
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: 2a44d29cb0770bf1517993606358c3669b2ee982
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83387300"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89244253"
 ---
 # <a name="use-experimental-azure-powershell-modules"></a>Använda experimentella Azure PowerShell-moduler
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 Med betoning på utvecklarverktyg (i synnerhet CLI:er) i Azure experimenterar Azure PowerShell-teamet med många förbättringar av Azure PowerShell.
 

@@ -10,7 +10,7 @@ ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 09/01/2020
-ms.locfileid: "89244457"
+ms.locfileid: "89240139"
 ---
 # <a name="breaking-changes-for-az-100"></a>Icke-bakåtkompatibla ändringar för Az 1.0.0
 

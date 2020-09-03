@@ -10,7 +10,7 @@ ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 09/01/2020
-ms.locfileid: "89239544"
+ms.locfileid: "89240564"
 ---
 # <a name="migration-guide-for-az-410"></a>Migreringsguide för Az 4.1.0
 

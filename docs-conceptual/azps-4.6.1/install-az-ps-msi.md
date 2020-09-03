@@ -3,14 +3,14 @@ title: Installera Azure PowerShell med MSI
 description: Så här installerar du Azure PowerShell utan PowerShellGet med MSI
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 10/22/2019
+ms.date: 03/10/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 157031cc827f2abfa947013821bd5db5bb84c3d3
+ms.openlocfilehash: 33d9214544ddb126b717685f9e7986bed926b149
 ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 09/01/2020
-ms.locfileid: "89244117"
+ms.locfileid: "89240360"
 ---
 # <a name="install-azure-powershell-on-windows-with-msi"></a>Installera Azure PowerShell på Windows med MSI
 
@@ -31,7 +31,7 @@ Du måste göra följande för att använda Azure PowerShell i PowerShell 5.1:
 
 ## <a name="install-or-update-on-windows-using-the-msi-package"></a>Installera eller uppdatera på Windows med hjälp av MSI-paketet
 
-MSI-paketet för Azure PowerShell är tillgängligt från [GitHub](https://github.com/Azure/azure-powershell/releases/tag/v2.8.0-October2019). Om du har installerat tidigare versioner av Azure PowerShell med hjälp av MSI tar installationsprogrammet automatiskt bort dem. MSI-paketet installerar moduler i `${env:ProgramFiles}\WindowsPowerShell\Modules`.
+MSI-paketet för Azure PowerShell är tillgängligt från [GitHub](https://github.com/Azure/azure-powershell/releases/latest). Om du har installerat tidigare versioner av Azure PowerShell med hjälp av MSI tar installationsprogrammet automatiskt bort dem. MSI-paketet installerar moduler i `${env:ProgramFiles}\WindowsPowerShell\Modules`.
 
 Börja arbeta med Azure PowerShell genom att logga in med dina autentiseringsuppgifter för Azure.
 

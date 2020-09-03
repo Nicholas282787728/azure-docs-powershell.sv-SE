@@ -4,12 +4,13 @@ description: Lär dig mer om alla de senaste uppdateringarna för Azure PowerShe
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/15/2019
-ms.openlocfilehash: bcbb78809c2db63d665dc0c3d05e0614acce6045
-ms.sourcegitcommit: 9f5c7d231b069ad501729bf015a829f3fe89bc6a
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: 2929d7ebaf26e069b12c5b6451e333255ae740af
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84122164"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89244338"
 ---
 # <a name="azure-powershell-release-notes"></a>Viktig information om Azure PowerShell
 ## <a name="280---october-2019"></a>2.8.0 – oktober 2019

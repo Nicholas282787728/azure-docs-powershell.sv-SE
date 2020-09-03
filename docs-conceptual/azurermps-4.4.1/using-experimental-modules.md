@@ -4,16 +4,17 @@ description: Förstå filosofin och användningen av experimentella Azure PowerS
 ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 09/05/2017
-ms.openlocfilehash: 35e704b21e0034dffc2c9edc23977d8d6ef44661
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: fd910e124a8589c2e5e187bc5a9d2a902ae57a07
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83387385"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89243896"
 ---
 # <a name="using-experimental-azure-powershell-modules"></a>Använda experimentella Azure PowerShell-moduler
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 Med betoning på utvecklarverktyg (i synnerhet CLI:er) i Azure experimenterar Azure PowerShell-teamet med många förbättringar av Azure PowerShell.
 
@@ -66,9 +67,9 @@ Grundläggande förbättringar räknas som ”sunt förnuft” och lite experime
 
 - Kortare namn – Omfattar namnen på cmdletar (till exempel `New-AzureRmVM` => `New-AzVm`) och parameternamnen (till exempel `-ResourceGroupName` => `-Rg`). Använd alias för kompatibilitet med ”gamla” cmdletar. Tillhandahåll _bakåtkompatibla_ parameteruppsättningar.
 
-- Smarta standardvärden – Skapa smarta standardvärden för att fylla i ”obligatorisk” information. Exempel:
+- Smarta standardvärden – Skapa smarta standardvärden för att fylla i ”obligatorisk” information. Ett exempel:
   - Resursgrupp
-  - plats.
+  - Location
   - Beroende resurser
 
 ### <a name="experimental-improvements"></a>Experimentella förbättringar
