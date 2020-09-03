@@ -5,16 +5,17 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.workload: ''
 ms.date: 08/28/2018
-ms.openlocfilehash: 8aa0462af97877e0d20fe898ddd927a6d2850dea
-ms.sourcegitcommit: 7839b82f47ef8dd522eff900081c22de0d089cfc
+ms.custom: devx-track-azurepowershell
+ms.openlocfilehash: 189b360f8825b7de93b67b0b2cbe670d00187327
+ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83387334"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89241363"
 ---
 # <a name="release-notes"></a>Viktig information
 
-[!INCLUDE [migrate-to-az](../includes/migrate-to-az.md)]
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
 Det här är en lista över ändringar som har gjorts i Azure PowerShell i den här versionen.
 
@@ -46,7 +47,7 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
 #### <a name="azurermnetwork"></a>AzureRM.Network
 * Cmdlet New-AzureRmApplicationGatewayCustomError, Add-AzureRmApplicationGatewayCustomError, Get-AzureRmApplicationGatewayCustomError, Set-AzureRmApplicationGatewayCustomError, Remove-AzureRmApplicationGatewayCustomErreller Add-AzureRmApplicationGatewayHttpListenerCustomError, Get-AzureRmApplicationGatewayHttpListenerCustomError, Set-AzureRmApplicationGatewayHttpListenerCustomError, Remove-AzureRmApplicationGatewayHttpListenerCustomError har lagts till
 * ICMP tillbaka till stöd för Azure Firewall-nätverksprotokoll har lagts till
-* Uppdatera cmdlet Test-AzureRmNetworkWatcherConnectivity, lägga till verifiering av mål-id, adress och port. 
+* Uppdatera cmdlet Test-AzureRmNetworkWatcherConnectivity, lägga till verifiering av mål-id, adress och port.
 * Åtgärda problem med minnesanvändning i VirtualNetwork-karta
 
 #### <a name="azurermrecoveryservicesbackup"></a>AzureRM.RecoveryServices
@@ -231,14 +232,14 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
 #### <a name="azurermprofile"></a>AzureRM.Profile
 * Mindre ändringar i den gemensamma koden för lagring
 * Hjälpfiler har uppdaterats för att innehålla fullständiga parametertyper.
-* -ServicePrincipal har ändrats så att den inte längre är obligatorisk i parameteruppsättningen ServicePrincipalCertificateWithSubscriptionId 
+* -ServicePrincipal har ändrats så att den inte längre är obligatorisk i parameteruppsättningen ServicePrincipalCertificateWithSubscriptionId
 
 #### <a name="azurestorage"></a>Azure.Storage
-* Stöd för att skapa lagringskontext med OAuth. 
+* Stöd för att skapa lagringskontext med OAuth.
     - New-AzureStorageContext
 
 #### <a name="azurermcdn"></a>AzureRM.Cdn
-* Standard_Microsoft har lagts till i SKU:n för CDN-prissättning. 
+* Standard_Microsoft har lagts till i SKU:n för CDN-prissättning.
 
 #### <a name="azurermcompute"></a>AzureRM.Compute
 * Flytta beroenden i nyckelvalv och minne till de gemensamma beroendena
@@ -349,7 +350,7 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
 * Lägg till versionsfältet i PSSignalRResource-objektet och en anslutningssträng i PSSignalRKeys-objektet.
 
 #### <a name="azurermstorage"></a>AzureRM.Storage
-* Stöd för oföränderlighetsprincip i AzureRm.Storage 
+* Stöd för oföränderlighetsprincip i AzureRm.Storage
     - Remove-AzureRmStorageAccountNetworkRule
     - Get-AzureRmStorageContainer
     - Update-AzureRmStorageContainer
@@ -685,7 +686,7 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
 * Uppdatera exempel för New-AzureRmDisk
 * Lägg till exempel för "New-AzureRmVM"
 * Uppdatera beskrivning för Set-AzureRmVMOSDisk
-* Uppdatera Exempel 1 för Set-AzureRmVMBginfoExtension för stavningskontroll och prefix. 
+* Uppdatera Exempel 1 för Set-AzureRmVMBginfoExtension för stavningskontroll och prefix.
 
 #### <a name="azurermdatafactoryv2"></a>AzureRM.DataFactoryV2
 * ADF .Net SDK-versionen har uppdaterats till 1.1.0.
@@ -897,7 +898,7 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
 * Ytterligare information om parametern -Permissions har lagts till i hjälpfilerna.
 
 #### <a name="azurermcompute"></a>AzureRM.Compute
-* ”Get-AzureRmVmDiskEncryptionStatus” korrigerar ett problem för virtuella datorer utan datadiskar 
+* ”Get-AzureRmVmDiskEncryptionStatus” korrigerar ett problem för virtuella datorer utan datadiskar
 * Uppdatera version av klientbibliotek för Compute för att korrigera följande cmdletar
     - Grant-AzureRmDiskAccess
     - Grant-AzureRmSnapshotAccess
@@ -1020,8 +1021,8 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
 
 #### <a name="azurermdatalakestore"></a>AzureRM.DataLakeStore
 * Åtgärda exempel för Export AzureRmDataLakeStoreChildItemProperties
-* Åtgärda undantag för null-parameter för rekursivt ärende i Set-AzureRmDataLakeStoreItemAclEntry 
-* Åtgärda hjälpfilerna för Set-AzureRmDataLakeStoreItemAclEntry, Set-AzureRmDataLakeStoreItemAcl, Remove-AzureRmDataLakeStoreItemAclEntry 
+* Åtgärda undantag för null-parameter för rekursivt ärende i Set-AzureRmDataLakeStoreItemAclEntry
+* Åtgärda hjälpfilerna för Set-AzureRmDataLakeStoreItemAclEntry, Set-AzureRmDataLakeStoreItemAcl, Remove-AzureRmDataLakeStoreItemAclEntry
 
 #### <a name="azurermnetwork"></a>AzureRM.Network
 * Öka nätverkets SDK-version från förhandsversionen 18.0.0 till förhandsversionen 19.0.0
@@ -1041,7 +1042,7 @@ Det här är en lista över ändringar som har gjorts i Azure PowerShell i den h
 * Cmdletar för granskning för att ta bort AuditActions eller AuditActionGroups har uppdaterats
 * Åtgärdade problem med Set-AzureRmSqlDatabaseBackupLongTermRetentionPolicy vid konfigurering av en ny flexibel bevarandeprincip där kommandot misslyckas med ett meddelande om att konfigurering av långsiktig bevarandeprincip med Azure Recovery Service-valv och principen inte längre stöds, och att en begäran med den nya flexibla bevarandeprincipen ska skickas.
 * Uppdatera alla Azure Sql Database/ElasticPool Creation/Update-relaterade cmdletar för att använda det nya databas-API:et som stöder SKU-egenskaper för skalnings- och nivårelaterade egenskaper.
-* Cmdletar har uppdaterats, inklusive: 
+* Cmdletar har uppdaterats, inklusive:
     - New-AzureRmSqlDatabase; Set-AzureRmSqlDatabase
     - New-AzureRmSqlElasticPool; Set-AzureRmSqlElasticPool
     - New-AzureRmSqlDatabaseCopy

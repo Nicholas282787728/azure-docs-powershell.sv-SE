@@ -3,20 +3,20 @@ title: Logga in med Azure PowerShell
 description: Så här loggar du in med Azure PowerShell som användare, med tjänstens huvudnamn eller med hanterade identiteter för Azure-resurser.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 06/18/2020
+ms.date: 7/7/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 10deb367456574a29b5b9c301e0e1a6b10d95c14
+ms.openlocfilehash: 8f18af8ed67ecf2aefd353208c07bf812df732d9
 ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 09/01/2020
-ms.locfileid: "89241482"
+ms.locfileid: "89242179"
 ---
 # <a name="sign-in-with-azure-powershell"></a>Logga in med Azure PowerShell
 
 Azure PowerShell har stöd för flera autentiseringsmetoder. Det enklaste sättet att komma igång är med [Azure Cloud Shell](/azure/cloud-shell/overview), som automatiskt loggar in dig. Med en lokal installation kan du logga in interaktivt via webbläsaren. När du skriver skript för automatisering är den rekommenderade metoden att använda ett [tjänsthuvudnamn](create-azure-service-principal-azureps.md) med de nödvändiga behörigheterna. Du kan skydda dina Azure-resurser genom att begränsa behörigheterna för inloggning så mycket som möjligt.
 
-När du har loggat in körs kommandon mot standardprenumerationen. Använd cmdleten [Set-AzContext](/powershell/module/az.accounts/set-azcontext) för att ändra din aktiva prenumeration för en session. Använd [Set-AzDefault](/powershell/module/az.accounts/set-azdefault) för att ändra standardprenumerationen som används när du loggar in med Azure PowerShell.
+Inledningsvis är du inloggad på den första prenumerationen Azure returnerar om du har åtkomst till fler än en prenumeration. Kommandon körs mot den här prenumerationen som standard. Använd cmdleten [Set-AzContext](/powershell/module/az.accounts/set-azcontext) för att ändra din aktiva prenumeration för en session. Använd [Select-AzContext](/powershell/module/az.accounts/select-azcontext)-cmdleten för att ändra din aktiva prenumeration och låta den vara permanent mellan sessioner på samma system.
 
 > [!IMPORTANT]
 > Dina autentiseringsuppgifter delas mellan flera PowerShell-sessioner så länge du är inloggad.
