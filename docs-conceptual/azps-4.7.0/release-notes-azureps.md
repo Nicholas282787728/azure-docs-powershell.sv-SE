@@ -5,14 +5,176 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/10/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 52129f31202a8ae04bf80988b5aa07b12fe081b8
+ms.openlocfilehash: 98bae70dbd61c74aa92e69cb67afc89ebae23f70
 ms.sourcegitcommit: 15f21c40dcb7610e2fbaaabf264ad925e4224500
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 09/22/2020
-ms.locfileid: "90913388"
+ms.locfileid: "90928617"
 ---
 # <a name="azure-powershell-release-notes"></a>Viktig information om Azure PowerShell
+
+## <a name="470---september-2020"></a>4.7.0 – September 2020
+#### <a name="azaccounts"></a>Az.Accounts
+* Formaterat kommande meddelanden om icke-bakåtkompatibel ändring
+* Uppdaterat Azure.Core till 1.4.1
+
+#### <a name="azaks"></a>Az.Aks
+* Valideringslogiken för parametern "New-AzAksCluster", "Set-AzAksCluster" och "New-AzAksNodePool" har lagts till på klientsidan. [#12372]
+* Stöd har lagts till för tillägg i "New-AzAksCluster". [#11239]
+* Cmdlet:arna "Enable-AzAksAddOn" och "Disable-AzAksAddOn" har lagts till för tillägg. [#11239]
+* Parametern "GenerateSshKey" har lagts till för "New-AzAksCluster". [#12371]
+* API-versionen har uppdaterats till 2020-06-01.
+
+#### <a name="azcognitiveservices"></a>Az.CognitiveServices
+* Visade ytterligare juridiska villkor för vissa API:er.
+
+#### <a name="azcompute"></a>Az.Compute
+* Den valfria parametern "EncryptionType" har lagts till i "New-AzVmDiskEncryptionSetConfig"
+* Nya cmdlet:ar för ny resurs typ: DiskAccess "Get-AzDiskAccess", "New-AzDiskAccess", "Get-AzDiskAccess"
+* De valfria parametrarna "-DiskAccessId" och "-NetworkAccessPolicy" har lagts till i "New-AzSnapshotConfig"
+* De valfria parametrarna "-DiskAccessId" och "-NetworkAccessPolicy" har lagts till i "New-AzDiskConfig"
+* PatchStatus-egenskapen har lagts till i VirtualMachine-instansvyn
+* Egenskapen "VMHealth" har lagts till i den virtuella datorns instansvy, vilket är det returnerade objektet när "get-AzVm" anropas med "-Status"
+* Fältet "AssignedHost" har lagts till i instansvyerna "Get-AzVM" och "Get-AzVmss". I fältet visas resurs-ID för den virtuella datorinstansen
+* Den valfria parametern "-SupportAutomaticPlacement" har lagts till i "New-AzHostGroup" 
+* Parametern "-HostGroupId" har lagts till i "New-AzVm" och "New-AzVmss"
+
+#### <a name="azdatafactory"></a>Az.DataFactory
+* ADF .Net SDK har uppdaterats till version 4.11.0
+
+#### <a name="azeventhub"></a>Az.EventHub
+* Nya kluster-cmdlet:ar – "New-AzEventHubCluster", "Set-AzEventHubCluster", "Get-AzEventHubCluster", "Remove-AzEventHubCluster", "Get-AzEventHubClustersAvailableRegions" har lagts till.
+* Åtgärdat för ärende #10722 : Korrigering för tilldelning av enbart lyssning till AuthorizationRule-rättigheter.
+
+#### <a name="azfunctions"></a>Az.Functions
+* Möjligheten att skapa v2-funktioner i regioner som inte stöder det har tagits bort.
+* Föråldrad PowerShell 6.2. En varning har lagts till när en användare skapar en PowerShell 6.2-funktionsapp som uppmanar till att skapa en PowerShell 7.0-funktionsapp i stället.
+
+#### <a name="azhdinsight"></a>Az.HDInsight
+* Stöd för att skapa kluster med automatisk skalningskonfiguration
+    - Lägg till den nya parametern "AutoscaleConfiguration" till cmdleten ”New-AzHDInsightCluster”
+* Stöd för att använda automatisk skalningskonfiguration i kluster
+    - Lägg till ny cmdlet "Get-AzHDInsihgtClusterAutoscaleConfiguration"
+    - Lägg till ny cmdlet "New-AzHDInsihgtClusterAutoscaleConfiguration"
+    - Lägg till ny cmdlet "Set-AzHDInsihgtClusterAutoscaleConfiguration"
+    - Lägg till ny cmdlet "Remove-AzHDInsihgtClusterAutoscaleConfiguration"
+    - Lägg till ny cmdlet "New-AzHDInsihgtClusterAutoscaleScheduleCondition"
+
+#### <a name="azkeyvault"></a>Az.KeyVault
+* Stöd har lagts till för RBAC-auktorisering [#10557]
+* Förbättrad felhantering i "Set-AzKeyVaultAccessPolicy" [#4007]
+
+#### <a name="azkusto"></a>Az.Kusto
+* Allmän tillgänglighet för "Az.Kusto"-modulen
+
+#### <a name="aznetwork"></a>Az.Network
+* [Viktig ändring] Uppdaterade nedanstående cmdlets för att justera resursens virtuella router och virtuella hubb
+    - "New-AzVirtualRouter": 
+        - Parametern-HostedSubnet har lagts till för att stödja underordnad resurs för IP-konfiguration
+        - -HostedGateway och -HostedGatewayId har tagits bort
+    - 'Get-AzVirtualRouter':
+        - Parameteruppsättningen har lagts till på prenumerationsnivå
+    - "Remove-AzVirtualRouter"
+    - "Add-AzVirtualRouterPeer"
+    - "Get-AzVirtualRouterPeer"
+    - "Remove-AzVirtualRouterPeer"
+* Ny cmdlet har lagts till för Azure Express Route-port
+    - "New-AzExpressRoutePortLOA"
+* Egenskapen RemoteBgpCommunities har lagts till i VirtualNetwork Peering-resursen
+* Ändrade varningsmeddelandet för ”New-AzLoadBalancerFrontendIpConfig”, ”New-AzPublicIpAddress” och ”New-AzPublicIpPrefix”.
+* Lade till VpnGatewayIpConfigurations till "Get-AzVpnGateway"-utdata
+* Åtgärdade bugg för "Set-AzApplicationGatewaySslCertificate" [#9488]
+* Parametern "AllowActiveFTP" har lagts till i "AzureFirewall"
+* Nedanstående kommandon för funktionen har uppdaterats: Aktivera konfiguration/borttagning för Internetsäkerhet på VirtualWan P2SVpnGateway.
+- "New-AzP2sVpnGateway" har uppdaterats": Den valfria växelparametern "EnableInternetSecurityFlag" har lagts till för kunder som anger värdet true för att aktivera Internetsäkerhet på P2SVpnGateway, som ska användas för plats-till-plats-klienter.
+- "Update-AzP2sVpnGateway" har uppdaterats: De valfria växelparametrarna "EnableInternetSecurityFlag" eller "DisableInternetSecurityFlag" har lagts till för kunder som anger värdet true/false för att aktivera/inaktivera Internetsäkerhet på P2SVpnGateway, som ska användas för plats-till-plats-klienter.
+* Den nya cmdleten "Reset-AzP2sVpnGateway" har lagts till för att kunder ska kunna återställa/starta om sina VirtualWan-P2SVpnGateway för felsökning.
+* Den nya cmdleten "Reset-AzVpnGateway" har lagts till för att kunder ska kunna återställa/starta om VirtualWan VpnGateway för felsökning.
+* "Set-AzVirtualNetworkSubnetConfig" har uppdaterats
+    - Ange egenskaper för NSG och routningstabell för undernät till null om det anges explicit i parametrarna [#1548] [#9718]
+
+#### <a name="azrecoveryservices"></a>Az.RecoveryServices
+* Åtgärdat borttagningstillståndet för säkerhetskopieringsobjekt.
+
+#### <a name="azresources"></a>Az.Resources
+* Lagt till saknad kontroll för Set-AzRoleAssignment
+* Attribut som medför icke-bakåtkompatibel ändring har lagts till i parametern "SubscriptionId" i "Get-AzResourceGroupDeploymentOperation"
+* Uppdaterat What-If-cmdlets i ARM-mall så att resursändringar av typen 'Ignorera' visas sist
+* Åtgärdat serialiseringsproblem med säkra parametrar och matrisparametrar för distributionscmdlets [#12773]
+
+#### <a name="azservicefabric"></a>Az.ServiceFabric
+* Nya cmdletar har lagts till för hanterade kluster och nodtyper:
+    - "New-AzServiceFabricManagedCluster"
+    - "Get-AzServiceFabricManagedCluster"
+    - "Set-AzServiceFabricManagedCluster"
+    - "Remove-AzServiceFabricManagedCluster"
+    - "Add-AzServiceFabricManagedClusterClientCertificate"
+    - "Remove-AzServiceFabricManagedClusterClientCertificate"
+    - "New-AzServiceFabricManagedNodeType"
+    - "Get-AzServiceFabricManagedNodeType"
+    - "Set-AzServiceFabricManagedNodeType"
+    - "Remove-AzServiceFabricManagedNodeType"
+    - "Add-AzServiceFabricManagedNodeTypeVMExtension"
+    - "Add-AzServiceFabricManagedNodeTypeVMSecret"
+    - "Remove-AzServiceFabricManagedNodeTypeVMExtension"
+    - "Restart-AzServiceFabricManagedNodeTyp"
+* Service Fabric SDK har uppgraderats till version 1.2.0 som använder Service Fabric-resursprovidern med API-version 2020-03-01 för aktuell modell och 2020-01-01-förhandsversion för hanterade kluster.
+
+#### <a name="azsql"></a>Az.Sql
+* BackupStorageRedundancy har lagts till i "New-AzSqlInstance" och "Get-AzSqlInstance"
+* Cmdlet:en "Get-AzSqlServerActiveDirectoryOnlyAuthentication" har lagts till
+* Cmdlet:en "Enable-AzSqlServerActiveDirectoryOnlyAuthentication" har lagts till
+* Force-parametern har lagts till i "New-AzSqlInstance"
+* Cmdlet:ar för logguppspelningstjänst för hanterade databaser har lagts till
+    - "Start-AzSqlInstanceDatabaseLogReplay"
+    - "Get-AzSqlInstanceDatabaseLogReplay"
+    - "Complete-AzSqlInstanceDatabaseLogReplay"
+    - "Stop-AzSqlInstanceDatabaseLogReplay"
+* Cmdlet:en "Get-AzSqlInstanceActiveDirectoryOnlyAuthentication" har lagts till
+* Cmdlet:en "Enable-AzSqlInstanceActiveDirectoryOnlyAuthentication" har lagts till
+* Cmdlet:en "Disable-AzSqlInstanceActiveDirectoryOnlyAuthentication" har lagts till
+* Cmdletarna "New-AzSqlDatabaseImport" och "New-AzSqlDatabaseExport" har uppdaterats för att stödja funktioner för nätverksisolering
+* Cmdleten "New-AzSqlDatabaseImportExisting" har lagts till
+* Uppdaterade databas-cmdlet:ar som stöder typspecifikation av lagringsenhet för säkerhetskopiering
+* Force-parametern har lagts till i "New-AzSqlDatabase"
+* Varning för BackupStorageRedundancy-konfiguration har lagts till i utvalda regioner i "New-AzSqlDatabase"
+* Uppdaterade ActiveDirectoryOnlyAuthentication-cmdletar för server och instans så att de innehåller ResourceId och InputObject
+
+#### <a name="azstorage"></a>Az.Storage
+* Åtgärdade fel vid uppladdning av blob genom uppgradering till Microsoft.Azure.Storage.DataMovement 2.0.0 [#12220]
+* Stöd för återställning baserat på tidpunkt
+    - "Enable-AzStorageBlobRestorePolicy"
+    - "Disable-AzStorageBlobRestorePolicy"
+    - "New-AzStorageBlobRangeToRestore"
+    - "Restore-AzStorageBlobRange"
+* Stöd för att hämta status för blobåterställning genom att köra get-AzureRMStorageAccount med parametern -IncludeBlobRestoreStatus 
+    - "Get-AzureRMStorageAccount"
+* Meddelande om icke-bakåtkompatibel ändring för kommande ändring av cmdlet-utdata har lagts till
+    - "Get-AzStorageContainerStoredAccessPolicy"
+    - "Set-AzStorageContainerStoredAccessPolicy"
+    - "Set-AzStorageAccountManagementPolicy"
+    - "Get-AzStorageAccountManagementPolicy"
+    - "Add-AzStorageAccountManagementPolicyAction"
+    - "New-AzStorageAccountManagementPolicyRule"
+* Uppgraderade Microsoft.Azure.Cosmos.Table SDK till 1.0.8
+
+### <a name="thanks-to-our-community-contributors"></a>Tack till våra community-deltagare
+* Thomas Van Laere (@ThomVanL), Lägg till Dockerfile-alpine-3.10 (#12911) 
+* Lohith Chowdary Chilukuri (@Lochiluk), Uppdatering av Remove-AzNetworkInterfaceIpConfig.md (#12807) 
+* Roberth Strand (@roberthstrand), Get-AzResourceGroup – Nytt exempel och rensning (#12828) 
+* Ravi Mishra (@inmishrar), uppdatering av Azure Web App-körningsstack till DOTNETCORE (#12833) 
+* @jack-education, uppdaterat set-AzVirtualNetworkSubnetConfig för att tillåta att NSG och routningstabell tas bort från undernät (#12351) 
+* @hagop-globanet, uppdatering av Add-AzApplicationGatewayCustomError.md (#12784) 
+* Joshua Van Daalen (@greenSacrifice)
+  * Uppdatering av stavning av egenskaper till egenskaper (#12821) 
+  * Uppdatering av New-AzResourceLock.md-exempel (#12806)
+* Eragon Riddle (@eragonriddle), korrigerat fältnamn för parameter i exemplet (#12825) 
+* @rossifumax, åtgärdat skrivfel i New-AzConfigurationAssignment.md (#12701)
+
+## <a name="461---august-2020"></a>4.6.1 – augusti 2020
+#### <a name="azcompute"></a>Az.Compute
+* Korrigerade EncryptionAtHost-parametern i New-AzVm för att ta bort standardvärdet FALSE [#12776]
 
 ## <a name="460---august-2020"></a>4.6.0 – augusti 2020
 #### <a name="azaccounts"></a>Az.Accounts
@@ -55,7 +217,7 @@ ms.locfileid: "90913388"
 * Get-AzDeploymentManagementGroupWhatIfResult har lagts till för att hämta What-If-resultat för ARM-mall i hanteringsgruppsomfånget
 * En ny cmdlet, Get-AzTenantWhatIfResult, har lagts till för att hämta What-If-resultat för ARM-mall i klientorganisationsomfånget
 * -WhatIf och -Confirm har åsidosatts för New-AzManagementGroupDeployment och New-AzTenantDeployment för att använda What-If-resultat för ARM-mall
-* Beteenden har åtgärdats för -WhatIf och -Confirm för nya cmdletar för distribution så att de stämmer överens med $WhatIfPreference och $ConfirmPreference.
+* Beteenden har åtgärdats för -WhatIf och -Confirm för nya cmdletar för distribution så att de stämmer överens med False och 
 * Serialiseringsfel har åtgärdats för -TemplateObject och TemplateParameterObject [#1528] [#6292]
 * Attribut som medför icke-bakåtkompatibel ändring har lagts till i Get-AzResourceGroupDeploymentOperation för den kommande ändringen av utdatatyp
 
