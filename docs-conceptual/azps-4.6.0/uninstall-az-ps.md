@@ -1,16 +1,16 @@
 ---
 title: Avinstallera Azure PowerShell
 description: Så här utför du en fullständig avinstallation av Azure PowerShell
-ms.date: 05/28/2020
+ms.date: 09/15/2020
 ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 8b6a96c89b37708646b24f2f2f82a10537dd0ee5
-ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
+ms.openlocfilehash: 20859d6135676a3a4fb1e9f5d66909d157b38ac6
+ms.sourcegitcommit: 5fcf17330d6f335561640a5ee3d98c59f7baab94
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89241822"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91381402"
 ---
 # <a name="uninstall-the-azure-powershell-module"></a>Avinstallera Azure PowerShell-modulen
 
@@ -43,8 +43,6 @@ Version             Name                           Repository           Descript
 3.8.0               Az                             PSGallery            Microsoft Azure PowerShell
 4.1.0               Az                             PSGallery            Microsoft Azure PowerShell
 ```
-
-<a name="uninstall-script"/>
 
 Följande skript frågar PowerShell-galleriet efter en lista med beroende undermoduler. Sedan avinstallerar skriptet rätt version av varje undermodul. Du måste ha administratörsåtkomst för att köra det här skriptet i ett annat omfång än **Process** eller **Nuvarande användare**.
 
