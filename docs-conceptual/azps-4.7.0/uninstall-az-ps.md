@@ -5,18 +5,22 @@ ms.date: 09/15/2020
 ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 20859d6135676a3a4fb1e9f5d66909d157b38ac6
-ms.sourcegitcommit: 15f21c40dcb7610e2fbaaabf264ad925e4224500
+ms.openlocfilehash: 7f831bdf6d6144640e036d72900958847283acf1
+ms.sourcegitcommit: 5fcf17330d6f335561640a5ee3d98c59f7baab94
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90928598"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91381504"
 ---
-# <a name="uninstall-the-azure-powershell-module"></a>Avinstallera Azure PowerShell-modulen
+# <a name="how-to-uninstall-azure-powershell-modules"></a>Så här avinstallerar du Azure PowerShell-moduler
 
 Den här artikeln beskriver hur du avinstallerar en äldre version av Azure PowerShell eller tar bort det fullständigt från ditt system. Om du har bestämt dig för att avinstallera Azure PowerShell fullständigt kan du ge oss feedback genom cmdleten [Send-Feedback](/powershell/module/az.accounts/send-feedback). Om du har påträffat en bugg vill vi gärna att du [öppnar ett GitHub-supportärende](https://github.com/azure/azure-powershell/issues) så att den kan korrigeras.
 
-## <a name="uninstall-the-az-powershell-module-from-msi"></a>Avinstallera Az PowerShell-modulen från MSI
+## <a name="uninstall-the-az-module"></a>Avinstallera Az-modulen
+
+Om du har Az-modulen installerad på datorn och vill avinstallera den finns det två alternativ. Vilken metod du ska använda beror på hur du installerade Az-modulen. Om du inte känner till den ursprungliga installationsmetoden börjar du med att följa MSI-stegen för avinstallation.
+
+### <a name="option-1-uninstall-the-az-powershell-module-from-msi"></a>Alternativ 1: Avinstallera Az PowerShell-modulen från MSI
 
 Om du har installerat Az PowerShell-modulen med hjälp av MSI-paketet måste du avinstallera det via Windows-systemet i stället för PowerShell.
 
@@ -27,7 +31,7 @@ Om du har installerat Az PowerShell-modulen med hjälp av MSI-paketet måste du 
 
 På den här skärmen bör du se **Azure PowerShell** i listan över program. Det är appen som ska avinstalleras. Om det här programmet inte visas i listan så installerade du via PowerShellGet. Då följer du anvisningarna som följer.
 
-## <a name="uninstall-the-az-powershell-module-from-powershellget"></a>Avinstallera Az PowerShell-modulen från PowerShellGet
+### <a name="option-2-uninstall-the-az-powershell-module-from-powershellget"></a>Alternativ 2: Avinstallera Az PowerShell-modulen från PowerShellGet
 
 Om du vill avinstallera Az-modulerna kan du använda cmdleten [Uninstall-Module](/powershell/module/powershellget/uninstall-module). Men `Uninstall-Module` avinstallerar endast en modul. Om du vill ta bort Az PowerShell-modulen helt måste du avinstallera varje modul individuellt. Avinstallationen kan vara komplicerad om du har fler än en version av Azure PowerShell installerad.
 
@@ -174,9 +178,9 @@ $Modules | ForEach-Object {Uninstall-AzModule -Name $_.Name -Version $_.Version}
 
 ## <a name="uninstall-the-azurerm-module"></a>Avinstallera AzureRM-modulen
 
-Om du har installerat Az-modulen på datorn och vill avinstallera AzureRM finns två alternativ. Vilken metod du ska använda beror på hur du installerade AzureRM-modulen. Om du inte känner till den ursprungliga installationsmetoden börjar du med att följa anvisningarna för avinstallation av MSI.
+Om du har installerat Az-modulen på datorn och vill avinstallera AzureRM finns två alternativ. Vilken metod du ska använda beror på hur du installerade AzureRM-modulen. Om du inte känner till den ursprungliga installationsmetoden börjar du med att följa MSI-stegen för avinstallation.
 
-### <a name="uninstall-the-azurerm-powershell-module-from-msi"></a>Avinstallera AzureRM PowerShell-modulen från MSI
+### <a name="option-1-uninstall-the-azurerm-powershell-module-from-msi"></a>Alternativ 1: Avinstallera AzureRM PowerShell-modulen från MSI
 
 Om du har installerat AzureRM PowerShell-modulen med hjälp av MSI-paketet måste du avinstallera det via Windows-systemet i stället för PowerShell.
 
@@ -187,9 +191,17 @@ Om du har installerat AzureRM PowerShell-modulen med hjälp av MSI-paketet måst
 
 På den här skärmen bör du se **Azure PowerShell** eller **Microsoft Azure PowerShell – månad, år** i listan över program. Det är appen som ska avinstalleras. Om det här programmet inte visas i listan så installerade du via PowerShellGet. Då följer du anvisningarna som följer.
 
-### <a name="uninstall-the-azurerm-powershell-module-from-powershellget"></a>Avinstallera AzureRM PowerShell-modulen från PowerShellGet
+### <a name="option-2-uninstall-the-azurerm-powershell-module-from-powershellget"></a>Alternativ 2: Avinstallera AzureRM PowerShell-modulen från PowerShellGet
 
-Om du installerade AzureRM med PowerShellGet så kan du ta bort modulerna med cmdleten [Uninstall-AzureRM](/powershell/module/az.accounts/uninstall-azurerm), som är tillgängligt som en del av modulen `Az.Accounts`. Följande exempel tar bort _alla_ AzureRM-moduler från datorn. Det kräver dock administratörsbehörigheter.
+Om du installerade AzureRM med PowerShellGet så kan du ta bort modulerna med cmdleten [Uninstall-AzureRM](/powershell/module/az.accounts/uninstall-azurerm), som är tillgängligt som en del av modulen `Az.Accounts`.
+
+För att kunna använda `Az.Accounts`-modulen behöver du ha Az-modulen installerad.  Det finns inte stöd för att ha både AzureRM-modulen och Az-modulen installerade samtidigt. Däremot kan Az-modulen användas för omedelbar avinstallation av AzureRM-modulen.  Du kan installera Az-modulen och kringgå AzureRM-modulvarningen med följande kommando om du inte redan har Az-modulen installerad:
+
+```powershell-interactive
+Install-Module -Name Az -AllowClobber -Scope CurrentUser
+```
+
+När Az-modulen har installerats tar följande kommando bort _alla_ AzureRM-moduler från datorn. Det kräver dock administratörsbehörigheter.
 
 ```powershell-interactive
 Uninstall-AzureRm
