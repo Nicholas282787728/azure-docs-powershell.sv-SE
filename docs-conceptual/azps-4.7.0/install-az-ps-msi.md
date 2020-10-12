@@ -5,12 +5,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/10/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 33d9214544ddb126b717685f9e7986bed926b149
-ms.sourcegitcommit: 15f21c40dcb7610e2fbaaabf264ad925e4224500
+ms.openlocfilehash: 193e8c5d14f1bf2fe9c84a9da2defac50be97ec7
+ms.sourcegitcommit: 3d16496984a0b9fd7631aa043726060ddae3624d
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90928484"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91833275"
 ---
 # <a name="install-azure-powershell-on-windows-with-msi"></a>Installera Azure PowerShell på Windows med MSI
 
@@ -31,7 +31,14 @@ Du måste göra följande för att använda Azure PowerShell i PowerShell 5.1:
 
 ## <a name="install-or-update-on-windows-using-the-msi-package"></a>Installera eller uppdatera på Windows med hjälp av MSI-paketet
 
-MSI-paketet för Azure PowerShell är tillgängligt från [GitHub](https://github.com/Azure/azure-powershell/releases/latest). Om du har installerat tidigare versioner av Azure PowerShell med hjälp av MSI tar installationsprogrammet automatiskt bort dem. MSI-paketet installerar moduler i `${env:ProgramFiles}\WindowsPowerShell\Modules`.
+MSI-paketet för Azure PowerShell finns på [GitHub](https://github.com/Azure/azure-powershell/releases):
+
+1. Gå till https://github.com/Azure/azure-powershell/releases.
+2. Leta efter den senaste gallerimodulen för Azure PowerShell (de visas kronologiskt och är vanligtvis bara en version utan namn, som ”4.7.0”).
+3. Rulla ned till slutet av korrigeringsanteckningarna och klicka på pilen bredvid ”Assets” (tillgångar) om du vill se MSI-alternativen.
+4. Klicka på önskad Az-Cmdlets MSI för att starta nedladdningen.
+
+Om du har installerat tidigare versioner av Azure PowerShell med hjälp av MSI tar installationsprogrammet automatiskt bort dem. MSI-paketet installerar moduler i `${env:ProgramFiles}\WindowsPowerShell\Modules`.
 
 Börja arbeta med Azure PowerShell genom att logga in med dina autentiseringsuppgifter för Azure.
 
