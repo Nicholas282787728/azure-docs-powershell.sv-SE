@@ -1,14 +1,14 @@
 ###YamlMime:Landing
 title: Azure PowerShell-dokumentation
 summary: |
-  Azure PowerShell är en uppsättning cmdlets för hantering av Azure-resurser direkt från PowerShell-kommandoraden. Azure PowerShell har kraftfulla automatiseringsfunktioner men är ändå enkelt att lära sig. Azure PowerShell bygger på .NET Standard och fungerar med PowerShell 5.1 i Windows, och PowerShell 6.x och senare på alla plattformar.
+  Azure PowerShell är en uppsättning cmdletar för hantering av Azure-resurser direkt från PowerShell-kommandoraden. Azure PowerShell har kraftfulla automatiseringsfunktioner men är ändå enkelt att lära sig. Azure PowerShell bygger på .NET Standard och fungerar med PowerShell 5.1 i Windows, och PowerShell 7.x och senare på alla plattformar.
 metadata:
   title: Översikt över Azure PowerShell
   description: Kom igång med Azure PowerShell genom att installera och lära dig om dess funktioner.
   ms.topic: landing-page
-  author: sptramer
-  ms.author: sttramer
-  ms.date: 9/19/2019
+  author: mikefrobbins
+  ms.author: mirobb
+  ms.date: 10/22/2020
 landingContent:
   - title: Komma igång med Azure PowerShell
     linkLists:
@@ -41,7 +41,7 @@ landingContent:
       - linkListType: concept
         links:
           - text: Exempelskript för virtuella datorer
-            url: /azure/virtual-machines/virtual-machines-linux-powershell-samples?toc=/powershell/azure/toc.json
+            url: /azure/virtual-machines/linux/powershell-samples?toc=/powershell/azure/toc.json
           - text: Exempelskript för Azure App Service
             url: /azure/app-service-web/app-service-powershell-samples?toc=/powershell/azure/toc.json
           - text: Exempelskript för SQL-databaser
@@ -73,7 +73,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Cmdlet-referens
-            url: /powershell/module/?view=azps-2.7.0
+            url: /powershell/module/?view=azps-2.8.0
           - text: Viktig information
             url: release-notes-azureps.md
           - text: Viktiga uppdateringar i Az 2.0.0
@@ -83,8 +83,8 @@ landingContent:
       - linkListType: overview
         links:
           - text: Azure Active Directory för PowerShell
-            url: /powershell/azure/active-directory/
+            url: /powershell/module/azuread/
           - text: Azure Service Fabric för PowerShell
-            url: /powershell/azure/service-fabric/
-          - text: Azure-ElasticDB för PowerShell
-            url: /powershell/azure/elasticdbjobs/
+            url: /powershell/module/servicefabric/
+          - text: 'Cmdlet:ar för Azure SQL Database'
+            url: /powershell/module/az.sql/
