@@ -5,12 +5,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/06/2017
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 286288f83a0ad0b486cccb3543858c173a8eb087
-ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
+ms.openlocfilehash: 2860d5c7642b137c1cb14a38fa13d59ec2a4123c
+ms.sourcegitcommit: 038cb42a3bd8c009bc57c8c1c252e66fa170c84b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89241329"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523214"
 ---
 # <a name="installing-the-azure-powershell-service-management-module"></a>Installera Azure PowerShell Service Management-modulen
 
@@ -72,7 +72,7 @@ Azure PowerShell-modulerna uppdateras kontinuerligt. Om du märker att onlinehj�
 
 Om du vill ha exempelskript som kan hjälpa dig att automatisera vissa av de vanliga uppgifterna i Azure kan du se [Windows Azure Script Center](http://www.windowsazure.com/documentation/scripts/).
 
-Allmän information om installation, inlärning, användning och anpassning av Windows PowerShell finns i [Skript med Windows PowerShell](https://go.microsoft.com/fwlink/p/?linkid=320210).
+Allmän information om installation, inlärning, användning och anpassning av Windows PowerShell finns i [Skript med Windows PowerShell](/powershell/scripting/learn/ps101/00-introduction).
 
 ### <a name="how-to-get-powershellget"></a>Hämta PowerShellGet
 
@@ -80,7 +80,6 @@ Allmän information om installation, inlärning, användning och anpassning av W
 |---|---|
 |Jag har Windows 10 eller Windows Server 2016|Inbyggt i Windows Management Framework (WMF) 5.0 som ingår i operativsystemet|
 |Jag vill uppgradera till PowerShell 5|[Installera den senaste versionen av WMF](https://www.microsoft.com/download/details.aspx?id=54616)|
-|Jag använder en Windows-version med PowerShell 3 eller PowerShell 4|[Hämta PackageManagement-moduler](https://go.microsoft.com/fwlink/?LinkID=746217)|
 
 <div id="helpmechoose"/>
 
