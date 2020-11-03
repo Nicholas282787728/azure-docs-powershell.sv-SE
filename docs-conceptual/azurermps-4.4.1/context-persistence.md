@@ -5,18 +5,18 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 08/31/2017
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 9c9d6a028d3a28f99320aef5a574d868b2fd9bc1
-ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
+ms.openlocfilehash: 77f5bcc478228a9d860039983640ff0e7ff31ab2
+ms.sourcegitcommit: 038cb42a3bd8c009bc57c8c1c252e66fa170c84b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89244610"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523197"
 ---
 # <a name="persisting-user-credentials-across-powershell-sessions"></a>Spara autentiseringsuppgifter för användare mellan olika PowerShell-sessioner
 
 [!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
 
-Azure PowerShell erbjuder en funktion som kallas **Azure Context Autosave**, som ger följande funktioner:
+Azure PowerShell erbjuder en funktion som kallas **Azure Context Autosave** , som ger följande funktioner:
 
 - Bevara inloggningsinformation för återanvändning nya PowerShell-sessioner.
 - Enklare användning av bakgrundsaktiviteter för att köra tidskrävande cmdletar.
@@ -141,7 +141,7 @@ Nya cmdletar för att hantera kontext
 
 - [Add-AzureRmAccount][login] – Gör det möjligt att ange omfång för inloggningen till processen eller till den aktuella användaren.
   Gör det möjligt att ge standardkontexten ett namn efter autentisering.
-- [Import-AzureRmContext][import] – Gör det möjligt att ange omfång för inloggningen till processen eller till den aktuella användaren.
+- [Import-AzureRmContext][import] – Gör det möjligt att ange ett omfång för inloggningen till processen eller till den aktuella användaren.
 - [Set-AzureRmContext][set-context] – Gör det möjligt att välja befintliga, namngivna kontexter och ändra omfång till processen eller till den aktuella användaren.
 
 <!-- Hyperlinks -->
@@ -154,5 +154,4 @@ Nya cmdletar för att hantera kontext
 
 <!-- Updated cmdlets -->
 [login]: /powershell/module/azurerm.profile/Add-AzureRmAccount
-[import]: /powershell/module/azurerm.profile/Import-AzureRmAccount
 [set-context]: /powershell/module/azurerm.profile/Import-AzureRmContext
