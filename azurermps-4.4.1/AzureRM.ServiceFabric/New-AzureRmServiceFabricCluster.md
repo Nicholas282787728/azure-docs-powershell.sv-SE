@@ -1,0 +1,475 @@
+---
+external help file: Microsoft.Azure.Commands.ServiceFabric.dll-Help.xml
+Module Name: AzureRM.ServiceFabric
+online version: ''
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/New-AzureRmServiceFabricCluster.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/ServiceFabric/Commands.ServiceFabric/help/New-AzureRmServiceFabricCluster.md
+ms.openlocfilehash: c1f6dea6c4fb103107a052d64a82ad81eafdb8c5
+ms.sourcegitcommit: f599b50d5e980197d1fca769378df90a842b42a1
+ms.translationtype: MT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "93585307"
+---
+# New-AzureRmServiceFabricCluster
+
+## Sammanfattning
+I det här kommandot används certifikat som du tillhandahåller eller systemgenererade självsignerade certifikat för att skapa ett nytt tjänst Fabric-kluster. Den kan använda en standardmall eller en anpassad mall som du anger. Du kan välja att ange en mapp att exportera självsignerade certifikat till eller hämta dem senare från huvud valvet. 
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
+## FRÅGESYNTAXEN
+
+### ByDefaultArmTemplate (standard)
+```
+New-AzureRmServiceFabricCluster [-ResourceGroupName] <String> [-CertificateOutputFolder <String>]
+ [-CertificatePassword <SecureString>] [-KeyVaultResouceGroupName <String>] [-KeyVaultName <String>]
+ -Location <String> [-Name <String>] [-VmUserName <String>] [-ClusterSize <Int32>]
+ [-CertificateSubjectName <String>] -VmPassword <SecureString> [-OS <OperatingSystem>] [-VmSku <String>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByExistingKeyVault
+```
+New-AzureRmServiceFabricCluster [-ResourceGroupName] <String> -TemplateFile <String> -ParameterFile <String>
+ -SecretIdentifier <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### ByNewPfxAndVaultName
+```
+New-AzureRmServiceFabricCluster [-ResourceGroupName] <String> -TemplateFile <String> -ParameterFile <String>
+ [-CertificateOutputFolder <String>] [-CertificatePassword <SecureString>] [-KeyVaultResouceGroupName <String>]
+ [-KeyVaultName <String>] [-CertificateSubjectName <String>] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByExistingPfxAndVaultName
+```
+New-AzureRmServiceFabricCluster [-ResourceGroupName] <String> -TemplateFile <String> -ParameterFile <String>
+ -CertificateFile <String> [-CertificatePassword <SecureString>] [-SecondaryCertificateFile <String>]
+ [-SecondaryCertificatePassword <SecureString>] [-KeyVaultResouceGroupName <String>] [-KeyVaultName <String>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## PROBLEMBESKRIVNING
+Med det **nya AzureRmServiceFabricCluster-** kommandot används certifikat som du tillhandahåller eller systemgenererade självsignerade certifikat för att skapa ett nytt tjänst Fabric-kluster. Den mall som används kan vara en standardmall eller en anpassad mall som du anger. Du kan välja att ange en mapp för att exportera de självsignerade certifikaten eller hämta dem senare från huvud valvet.
+
+Om du anger en anpassad mall och en parameter fil behöver du inte ange certifikat informationen i parameter filen så fyller systemet i dessa parametrar.
+
+De fyra alternativen är detaljerade nedan. Rulla nedåt för att få förklaringar till alla parametrar.
+
+## BESKRIVS
+
+### Exempel 1: Ange bara kluster storleken, certifikatets ämnes namn och operativ systemet för att distribuera ett kluster.
+```
+$pass="Password#1234" | ConvertTo-SecureString -AsPlainText -Force
+$RGname="test01"
+$clusterloc="SouthCentralUS"
+$subname="{0}.{1}.cloudapp.azure.com" -f $RGname, $clusterloc
+$pfxfolder="~\Documents"
+
+Write-Output "create cluster in " $clusterloc "subject name for cert " $subname "and output the cert into " $pfxfolder
+
+New-AzureRmServiceFabricCluster -ResourceGroupName $RGname -Location $clusterloc -ClusterSize 3 -VmPassword $pwd -CertificateSubjectName $subname -CertificateOutputFolder $pfxfolder -CertificatePassword $pwd -OS WindowsServer2016Datacenter
+```
+
+Det här kommandot anger endast kluster storleken, certifikatets ämnes namn och operativ systemet för att distribuera ett kluster.
+
+### Exempel 2: Ange en befintlig certifikat resurs i ett nyckelord och en anpassad mall för att distribuera ett kluster
+```
+$RGname="test20"
+$templateParmfile="C:\service-fabric-secure-nsg-cluster-65-node-3-nodetype\azuredeploytest.parameters.json"
+$templateFile="C:\azure-quickstart-templates\service-fabric-secure-nsg-cluster-65-node-3-nodetype\azuredeploy.json"
+$secertId="https://test1.vault.azure.net:443/secrets/testcertificate4/56ec774dc61a462bbc645ffc9b4b225f"
+
+New-AzureRmServiceFabricCluster -ResourceGroupName $RGname -TemplateFile $templateFile -ParameterFile $templateParmfile -SecretIdentifier $secertId
+```
+
+Det här kommandot anger en befintlig certifikat resurs i ett nyckelord och en anpassad mall för att distribuera ett kluster.
+
+### Exempel 3: skapa ett nytt kluster med en anpassad mall. Ange det olika RG namnet på Key-valvet och låt systemet Ladda upp certifikatet till det
+```
+$pwd="Password#1234" | ConvertTo-SecureString -AsPlainText -Force
+$RGname="test20"
+$keyVaultRG="test20kvrg"
+$keyVault="test20kv"
+$clusterloc="SouthCentralUS"
+$subname="{0}.{1}.$clusterloc.cloudapp.azure.com" -f $RGName, $clusterloc
+$pfxfolder="~\Documents"
+$templateParmfile="C:\service-fabric-secure-nsg-cluster-65-node-3-nodetype\azuredeploytest.parameters.json"
+$templateFile="C:\service-fabric-secure-nsg-cluster-65-node-3-nodetype\azuredeploy.json"
+$secertId="https://test1.vault.azure.net:443/secrets/testcertificate4/55ec7c4dc61a462bbc645ffc9b4b225f"
+$thumprint="C2D7E11DD35153A702A51D10A424A3014B9B6E8B"
+
+New-AzureRmServiceFabricCluster -ResourceGroupName $RGname -TemplateFile $templateFile -ParameterFile $templateParmfile -CertificateOutputFolder $pfxfolder -CertificatePassword $pwd -KeyVaultResouceGroupName $keyVaultRG  -KeyVaultName $keyVault -CertificateSubjectName $subname
+```
+
+Det här kommandot skapar ett nytt kluster med en anpassad mall. Ange ett annat RG namn för Key Vault och låt systemet Ladda upp certifikatet till det.
+
+### Exempel 4: skaffa ett eget certifikat och en anpassad mall och skapa ett nytt kluster
+```
+$certPwd="Password#1234" | ConvertTo-SecureString -AsPlainText -Force
+$RGname="test20"
+$keyVaultRG="test20kvrg"
+$keyVault="test20kv"
+$clusterloc="SouthCentralUS"
+$pfxsourcefile="c:\Mycertificates\my2017Prodcert.pfx"
+$templateParmfile="~\Documents\GitHub\azure-quickstart-templates-parms\service-fabric-secure-nsg-cluster-65-node-3-nodetype\azuredeploytest.parameters.json"
+$templateFile="~\GitHub\azure-quickstart-templates\service-fabric-secure-nsg-cluster-65-node-3-nodetype\azuredeploy.json"
+
+New-AzureRmServiceFabricCluster -ResourceGroupName $RGname -TemplateFile $templateFile -ParameterFile $templateParmfile -CertificateSourceFile $pfxsourcefile -CertificatePassword $certpwd -KeyVaultResouceGroupName $keyVaultRG -KeyVaultName $keyVault
+```
+
+Med det här kommandot kan du föra in ett eget certifikat och en anpassad mall och skapa ett nytt kluster.
+
+## MALLPARAMETRAR
+
+### -CertificateFile
+Den befintliga certifikats fil Sök vägen för det primära kluster certifikatet.
+
+```yaml
+Type: System.String
+Parameter Sets: ByExistingPfxAndVaultName
+Aliases: Source
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -CertificateOutputFolder
+Mappen för den nya certifikat filen som ska skapas.
+
+```yaml
+Type: System.String
+Parameter Sets: ByDefaultArmTemplate, ByNewPfxAndVaultName
+Aliases: Destination
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -CertificatePassword
+Lösen ordet för certifikat filen.
+
+```yaml
+Type: System.Security.SecureString
+Parameter Sets: ByDefaultArmTemplate, ByNewPfxAndVaultName, ByExistingPfxAndVaultName
+Aliases: CertPassword
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -CertificateSubjectName
+Ämnes namnet för det certifikat som ska skapas.
+
+```yaml
+Type: System.String
+Parameter Sets: ByDefaultArmTemplate, ByNewPfxAndVaultName
+Aliases: Subject
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -ClusterSize
+Antalet noder i klustret. Standardvärden är 5 noder.
+
+```yaml
+Type: System.Int32
+Parameter Sets: ByDefaultArmTemplate
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -KeyVaultName
+Namn på Azure Key valv. Om inget anges blir det standard namnet på resurs gruppen.
+
+```yaml
+Type: System.String
+Parameter Sets: ByDefaultArmTemplate, ByNewPfxAndVaultName, ByExistingPfxAndVaultName
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -KeyVaultResouceGroupName
+Namnet på Azure Key valv-resursen. Om det inte anges blir det standard namnet på resurs gruppen.
+
+```yaml
+Type: System.String
+Parameter Sets: ByDefaultArmTemplate, ByNewPfxAndVaultName, ByExistingPfxAndVaultName
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Plats
+Resurs gruppens plats.
+
+```yaml
+Type: System.String
+Parameter Sets: ByDefaultArmTemplate
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Namn
+Ange namnet på klustret. Om det inte anges kommer det att vara samma som resurs gruppens namn.
+
+```yaml
+Type: System.String
+Parameter Sets: ByDefaultArmTemplate
+Aliases: ClusterName
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -OS
+Operativ systemet för de virtuella datorer som utgör klustret.
+
+```yaml
+Type: Microsoft.Azure.Commands.ServiceFabric.Models.OperatingSystem
+Parameter Sets: ByDefaultArmTemplate
+Aliases: VmImage
+Accepted values: WindowsServer2012R2Datacenter, WindowsServer2016Datacenter, WindowsServer2016DatacenterwithContainers, UbuntuServer1604
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ParameterFile
+Sökvägen till mallnamnet.
+
+```yaml
+Type: System.String
+Parameter Sets: ByExistingKeyVault, ByNewPfxAndVaultName, ByExistingPfxAndVaultName
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Ange namnet på resurs gruppen.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SecondaryCertificateFile
+Den befintliga certifikats fil Sök vägen för det sekundära kluster certifikatet.
+
+```yaml
+Type: System.String
+Parameter Sets: ByExistingPfxAndVaultName
+Aliases: SecSource
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -SecondaryCertificatePassword
+Lösen ordet för certifikat filen.
+
+```yaml
+Type: System.Security.SecureString
+Parameter Sets: ByExistingPfxAndVaultName
+Aliases: SecCertPassword
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -SecretIdentifier
+Den hemliga URL-adressen för Azure Key-valvet, till exempel: ' https://mykv.vault.azure.net:443/secrets/mysecrets/55ec7c4dc61a462bbc645ffc9b4b225f '.
+
+```yaml
+Type: System.String
+Parameter Sets: ByExistingKeyVault
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -TemplateFile
+Sökvägen till mallfilen.
+
+```yaml
+Type: System.String
+Parameter Sets: ByExistingKeyVault, ByNewPfxAndVaultName, ByExistingPfxAndVaultName
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -VmPassword
+Lösen ordet för den virtuella datorn.
+
+```yaml
+Type: System.Security.SecureString
+Parameter Sets: ByDefaultArmTemplate
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VmSku
+VM-SKU.
+
+```yaml
+Type: System.String
+Parameter Sets: ByDefaultArmTemplate
+Aliases: Sku
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VmUserName
+Användar namnet för loggning till VM.
+
+```yaml
+Type: System.String
+Parameter Sets: ByDefaultArmTemplate
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Bekräfta
+Du uppmanas att bekräfta innan du kör cmdleten.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Visar vad som händer om cmdleten körs. Cmdleten körs inte.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+
+## KOSTNADS
+
+### System. String
+System. Security. SecureString system. Int32 Microsoft. Azure. commands. ServiceFabric. Models. OperatingSystem
+
+## VÄRDEN
+
+### Microsoft.Azure.Commands.ServiceFabric.Models.PSDeploymentResult
+
+## ANMÄRKNINGAR
+
+## RELATERADE LÄNKAR
+
