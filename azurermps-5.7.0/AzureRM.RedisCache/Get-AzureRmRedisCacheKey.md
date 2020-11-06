@@ -1,0 +1,110 @@
+---
+external help file: Microsoft.Azure.Commands.RedisCache.dll-Help.xml
+Module Name: AzureRM.RedisCache
+ms.assetid: C0BEC701-8CE2-4B19-9F04-D32A42D9249E
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.rediscache/get-azurermrediscachekey
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RedisCache/Commands.RedisCache/help/Get-AzureRmRedisCacheKey.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/RedisCache/Commands.RedisCache/help/Get-AzureRmRedisCacheKey.md
+ms.openlocfilehash: 67ec6bdcce5121c2a80e1f76ea1081f249f15682
+ms.sourcegitcommit: f599b50d5e980197d1fca769378df90a842b42a1
+ms.translationtype: MT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "93576453"
+---
+# <span data-ttu-id="b8176-101">Get-AzureRmRedisCacheKey</span><span class="sxs-lookup"><span data-stu-id="b8176-101">Get-AzureRmRedisCacheKey</span></span>
+
+## <span data-ttu-id="b8176-102">Sammanfattning</span><span class="sxs-lookup"><span data-stu-id="b8176-102">SYNOPSIS</span></span>
+<span data-ttu-id="b8176-103">Hämtar snabb tangenterna för en Redis cache.</span><span class="sxs-lookup"><span data-stu-id="b8176-103">Gets the access keys for a Redis Cache.</span></span>
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
+## <span data-ttu-id="b8176-104">FRÅGESYNTAXEN</span><span class="sxs-lookup"><span data-stu-id="b8176-104">SYNTAX</span></span>
+
+```
+Get-AzureRmRedisCacheKey [-ResourceGroupName <String>] -Name <String>
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+## <span data-ttu-id="b8176-105">PROBLEMBESKRIVNING</span><span class="sxs-lookup"><span data-stu-id="b8176-105">DESCRIPTION</span></span>
+<span data-ttu-id="b8176-106">Cmdleten **Get-AzureRmRedisCacheKey** hämtar snabb tangenterna för Azure Redis-cachen.</span><span class="sxs-lookup"><span data-stu-id="b8176-106">The **Get-AzureRmRedisCacheKey** cmdlet gets the access keys for an Azure Redis Cache.</span></span>
+
+## <span data-ttu-id="b8176-107">BESKRIVS</span><span class="sxs-lookup"><span data-stu-id="b8176-107">EXAMPLES</span></span>
+
+### <span data-ttu-id="b8176-108">Exempel 1: Hämta snabb tangenterna för en Redis cache</span><span class="sxs-lookup"><span data-stu-id="b8176-108">Example 1: Get the access keys for a Redis Cache</span></span>
+```
+PS C:\>Get-AzureRmRedisCacheKey -ResourceGroupName "MyResourceGroup" -Name "MyCacheKey"
+PrimaryKey        : pJ+jruGKPHDKsEC8kmoybobH3TZx2njBR3ipEsquZFo=
+SecondaryKey      : sJ+jruGKPHDKsEC8kmoybobH3TZx2njBR3ipEsquZFo=
+```
+
+<span data-ttu-id="b8176-109">Det här kommandot får åtkomst nycklar som heter MyCacheKey.</span><span class="sxs-lookup"><span data-stu-id="b8176-109">This command gets the access keys named MyCacheKey.</span></span>
+
+## <span data-ttu-id="b8176-110">MALLPARAMETRAR</span><span class="sxs-lookup"><span data-stu-id="b8176-110">PARAMETERS</span></span>
+
+### <span data-ttu-id="b8176-111">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="b8176-111">-DefaultProfile</span></span>
+<span data-ttu-id="b8176-112">Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.</span><span class="sxs-lookup"><span data-stu-id="b8176-112">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b8176-113">-Namn</span><span class="sxs-lookup"><span data-stu-id="b8176-113">-Name</span></span>
+<span data-ttu-id="b8176-114">Anger namnet på en Redis-cache.</span><span class="sxs-lookup"><span data-stu-id="b8176-114">Specifies the name of a Redis Cache.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b8176-115">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="b8176-115">-ResourceGroupName</span></span>
+<span data-ttu-id="b8176-116">Anger namnet på den resurs grupp som innehåller Redis-cachen.</span><span class="sxs-lookup"><span data-stu-id="b8176-116">Specifies the name of the resource group that contains the Redis Cache.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="b8176-117">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="b8176-117">CommonParameters</span></span>
+<span data-ttu-id="b8176-118">Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="b8176-118">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="b8176-119">Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="b8176-119">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="b8176-120">KOSTNADS</span><span class="sxs-lookup"><span data-stu-id="b8176-120">INPUTS</span></span>
+
+### <span data-ttu-id="b8176-121">Ingen</span><span class="sxs-lookup"><span data-stu-id="b8176-121">None</span></span>
+<span data-ttu-id="b8176-122">Du kan ange indata för denna cmdlet efter egenskaps namn, men inte efter värde.</span><span class="sxs-lookup"><span data-stu-id="b8176-122">You can pipe input to this cmdlet by property name, but not by value.</span></span>
+
+## <span data-ttu-id="b8176-123">VÄRDEN</span><span class="sxs-lookup"><span data-stu-id="b8176-123">OUTPUTS</span></span>
+
+### <span data-ttu-id="b8176-124">Microsoft. Azure. Management. Redis. Models. RedisAccessKeys</span><span class="sxs-lookup"><span data-stu-id="b8176-124">Microsoft.Azure.Management.Redis.Models.RedisAccessKeys</span></span>
+<span data-ttu-id="b8176-125">Denna cmdlet returnerar primära och sekundära åtkomst nycklar för en Redis cache.</span><span class="sxs-lookup"><span data-stu-id="b8176-125">This cmdlet returns primary and secondary access keys for a Redis Cache.</span></span>
+
+## <span data-ttu-id="b8176-126">ANMÄRKNINGAR</span><span class="sxs-lookup"><span data-stu-id="b8176-126">NOTES</span></span>
+
+## <span data-ttu-id="b8176-127">RELATERADE LÄNKAR</span><span class="sxs-lookup"><span data-stu-id="b8176-127">RELATED LINKS</span></span>
+
+[<span data-ttu-id="b8176-128">New-AzureRmRedisCacheKey</span><span class="sxs-lookup"><span data-stu-id="b8176-128">New-AzureRmRedisCacheKey</span></span>](./New-AzureRmRedisCacheKey.md)
+
+
