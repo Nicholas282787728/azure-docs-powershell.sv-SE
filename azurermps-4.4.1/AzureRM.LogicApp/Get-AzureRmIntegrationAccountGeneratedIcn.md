@@ -1,0 +1,170 @@
+---
+external help file: Microsoft.Azure.Commands.LogicApp.dll-Help.xml
+Module Name: AzureRM.LogicApp
+online version: ''
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/LogicApp/Commands.LogicApp/help/Get-AzureRmIntegrationAccountGeneratedIcn.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/LogicApp/Commands.LogicApp/help/Get-AzureRmIntegrationAccountGeneratedIcn.md
+ms.openlocfilehash: 2855f5da15de776d7fd85bd267f6a082a85ba5c6
+ms.sourcegitcommit: f599b50d5e980197d1fca769378df90a842b42a1
+ms.translationtype: MT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "93574633"
+---
+# <span data-ttu-id="674c3-101">Get-AzureRmIntegrationAccountGeneratedIcn</span><span class="sxs-lookup"><span data-stu-id="674c3-101">Get-AzureRmIntegrationAccountGeneratedIcn</span></span>
+
+## <span data-ttu-id="674c3-102">Sammanfattning</span><span class="sxs-lookup"><span data-stu-id="674c3-102">SYNOPSIS</span></span>
+<span data-ttu-id="674c3-103">Denna cmdlet hämtar det aktuella värdet för det genererade utbytes kontroll numret per avtal.</span><span class="sxs-lookup"><span data-stu-id="674c3-103">This cmdlet retrieves the current value of the generated interchange control number per agreement.</span></span>
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
+## <span data-ttu-id="674c3-104">FRÅGESYNTAXEN</span><span class="sxs-lookup"><span data-stu-id="674c3-104">SYNTAX</span></span>
+
+```
+Get-AzureRmIntegrationAccountGeneratedIcn -ResourceGroupName <String> -Name <String> [-AgreementName <String>]
+ [-AgreementType <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+## <span data-ttu-id="674c3-105">PROBLEMBESKRIVNING</span><span class="sxs-lookup"><span data-stu-id="674c3-105">DESCRIPTION</span></span>
+<span data-ttu-id="674c3-106">Denna cmdlet är avsedd att användas vid katastrof återställning för att hämta det aktuella värdet för det genererade utbytes kontroll numret så att du kan skriva tillbaka ett ökat värde med set-AzureRmIntegrationAccountGeneratedIcn.</span><span class="sxs-lookup"><span data-stu-id="674c3-106">This cmdlet is meant to be used in disaster recovery scenarios to retrieve the current value of the generated interchange control number so to write back an increased value with Set-AzureRmIntegrationAccountGeneratedIcn.</span></span>
+<span data-ttu-id="674c3-107">Utbytes kontroll numret bör höjas för att undvika dubbel kontroll nummer för de nummer som ännu inte har repliker ATS till det passiva området när katastrofen skedde i det aktiva området.</span><span class="sxs-lookup"><span data-stu-id="674c3-107">The interchange control number should be increased to avoid duplicate interchange control numbers for the numbers that could not yet be replicated to the passive region when the disaster happened in the active region.</span></span>
+<span data-ttu-id="674c3-108">Ange om X12-eller EDIFACT kontroll nummer ska returneras med parametern "-AgreementType".</span><span class="sxs-lookup"><span data-stu-id="674c3-108">Please do provide the "-AgreementType" parameter to specify whether X12 or Edifact control numbers to return</span></span>
+
+## <span data-ttu-id="674c3-109">BESKRIVS</span><span class="sxs-lookup"><span data-stu-id="674c3-109">EXAMPLES</span></span>
+
+### <span data-ttu-id="674c3-110">Exempel 1</span><span class="sxs-lookup"><span data-stu-id="674c3-110">Example 1</span></span>
+```
+PS C:\> Get-AzureRmIntegrationAccountGeneratedIcn -AgreementType "X12" -ResourceGroupName "ResourceGroup1" -Name "IntegrationAccount1" -AgreementName "X12IntegrationAccountAgreement"
+ControlNumber            : 1000
+ControlNumberChangedTime : 2/15/2017 12:36:00 AM
+IsMessageProcessingFailed:
+```
+
+<span data-ttu-id="674c3-111">Det här kommandot får integrerings kontot som genererade X12 Interchange Control-nummer efter avtals namn.</span><span class="sxs-lookup"><span data-stu-id="674c3-111">This command gets the integration account generated X12 interchange control number by agreement name.</span></span> <span data-ttu-id="674c3-112">Kontrol lera att angivet avtal är av typen "X12"</span><span class="sxs-lookup"><span data-stu-id="674c3-112">Please make sure agreement specified is of type "X12"</span></span>
+
+### <span data-ttu-id="674c3-113">Exempel 2</span><span class="sxs-lookup"><span data-stu-id="674c3-113">Example 2</span></span>
+```
+PS C:\> Get-AzureRmIntegrationAccountGeneratedIcn -AgreementType "Edifact" -ResourceGroupName "ResourceGroup1" -Name "IntegrationAccount1" -AgreementName "EdifactIntegrationAccountAgreement"
+ControlNumber            : 1000
+ControlNumberChangedTime : 2/15/2017 12:36:00 AM
+IsMessageProcessingFailed:
+```
+
+<span data-ttu-id="674c3-114">Det här kommandot får integrerings kontot som genererade EDIFACT Interchange Control-nummer efter avtals namn.</span><span class="sxs-lookup"><span data-stu-id="674c3-114">This command gets the integration account generated Edifact interchange control number by agreement name.</span></span> <span data-ttu-id="674c3-115">Kontrol lera att angivet avtal är av typen "EDIFACT"</span><span class="sxs-lookup"><span data-stu-id="674c3-115">Please make sure agreement specified is of type "Edifact"</span></span>
+
+### <span data-ttu-id="674c3-116">Exempel 3</span><span class="sxs-lookup"><span data-stu-id="674c3-116">Example 3</span></span>
+```
+PS C:\> Get-AzureRmIntegrationAccountGeneratedIcn -AgreementType "X12" -ResourceGroupName "ResourceGroup1" -Name "IntegrationAccount1"
+ControlNumber            : 1000
+ControlNumberChangedTime : 2/22/2017 8:05:41 PM
+AgreementName            : X12IntegrationAccountAgreement1
+IsMessageProcessingFailed:
+
+ControlNumber            : 1000
+ControlNumberChangedTime : 2/22/2017 8:05:41 PM
+AgreementName            : X12IntegrationAccountAgreement2
+IsMessageProcessingFailed:
+
+ControlNumber            : No generated control number was found for this agreement.
+ControlNumberChangedTime : 1/1/0001 12:00:00 AM
+AgreementName            : X12IntegrationAccountAgreement3
+IsMessageProcessingFailed:
+```
+
+<span data-ttu-id="674c3-117">Det här kommandot får alla genererade X12 Interchange Control-nummer efter integrations konto namn.</span><span class="sxs-lookup"><span data-stu-id="674c3-117">This command gets all the generated X12 interchange control numbers by integration account name.</span></span>
+
+## <span data-ttu-id="674c3-118">MALLPARAMETRAR</span><span class="sxs-lookup"><span data-stu-id="674c3-118">PARAMETERS</span></span>
+
+### <span data-ttu-id="674c3-119">-AgreementName</span><span class="sxs-lookup"><span data-stu-id="674c3-119">-AgreementName</span></span>
+<span data-ttu-id="674c3-120">Namnet på integrerings konto avtalet.</span><span class="sxs-lookup"><span data-stu-id="674c3-120">The integration account agreement name.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="674c3-121">-Namn</span><span class="sxs-lookup"><span data-stu-id="674c3-121">-Name</span></span>
+<span data-ttu-id="674c3-122">Namn på integrations konto.</span><span class="sxs-lookup"><span data-stu-id="674c3-122">The integration account name.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: ResourceName
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="674c3-123">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="674c3-123">-ResourceGroupName</span></span>
+<span data-ttu-id="674c3-124">Namnet på integrations konto resursen.</span><span class="sxs-lookup"><span data-stu-id="674c3-124">The integration account resource group name.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="674c3-125">-AgreementType</span><span class="sxs-lookup"><span data-stu-id="674c3-125">-AgreementType</span></span>
+<span data-ttu-id="674c3-126">Avtals typen integrerings konto.</span><span class="sxs-lookup"><span data-stu-id="674c3-126">The integration account agreement type.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: MessageType
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="674c3-127">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="674c3-127">-DefaultProfile</span></span>
+<span data-ttu-id="674c3-128">Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.</span><span class="sxs-lookup"><span data-stu-id="674c3-128">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="674c3-129">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="674c3-129">CommonParameters</span></span>
+<span data-ttu-id="674c3-130">Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="674c3-130">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="674c3-131">Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="674c3-131">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="674c3-132">KOSTNADS</span><span class="sxs-lookup"><span data-stu-id="674c3-132">INPUTS</span></span>
+
+### <span data-ttu-id="674c3-133">System. String</span><span class="sxs-lookup"><span data-stu-id="674c3-133">System.String</span></span>
+
+## <span data-ttu-id="674c3-134">VÄRDEN</span><span class="sxs-lookup"><span data-stu-id="674c3-134">OUTPUTS</span></span>
+
+### <span data-ttu-id="674c3-135">Microsoft. Azure. commands. LogicApp. Utilities. IntegrationAccountClient + IntegrationAccountControlNumber</span><span class="sxs-lookup"><span data-stu-id="674c3-135">Microsoft.Azure.Commands.LogicApp.Utilities.IntegrationAccountClient+IntegrationAccountControlNumber</span></span>
+
+## <span data-ttu-id="674c3-136">ANMÄRKNINGAR</span><span class="sxs-lookup"><span data-stu-id="674c3-136">NOTES</span></span>
+
+## <span data-ttu-id="674c3-137">RELATERADE LÄNKAR</span><span class="sxs-lookup"><span data-stu-id="674c3-137">RELATED LINKS</span></span>
+
+[<span data-ttu-id="674c3-138">Set-AzureRmIntegrationAccountGeneratedIcn</span><span class="sxs-lookup"><span data-stu-id="674c3-138">Set-AzureRmIntegrationAccountGeneratedIcn</span></span>](./Set-AzureRmIntegrationAccountGeneratedIcn.md)
+
