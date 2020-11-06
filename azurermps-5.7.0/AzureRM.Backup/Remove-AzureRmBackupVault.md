@@ -1,0 +1,147 @@
+---
+external help file: Microsoft.Azure.Commands.AzureBackup.dll-Help.xml
+Module Name: AzureRM.Backup
+ms.assetid: 698DCD00-13C0-4C36-A74B-35215D608339
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.backup/remove-azurermbackupvault
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/Remove-AzureRmBackupVault.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/AzureBackup/Commands.AzureBackup/help/Remove-AzureRmBackupVault.md
+ms.openlocfilehash: 4b8098889cbec7bd313ffb2ed70c5384a7e24ef0
+ms.sourcegitcommit: f599b50d5e980197d1fca769378df90a842b42a1
+ms.translationtype: MT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "93582124"
+---
+# <span data-ttu-id="1836d-101">Remove-AzureRmBackupVault</span><span class="sxs-lookup"><span data-stu-id="1836d-101">Remove-AzureRmBackupVault</span></span>
+
+## <span data-ttu-id="1836d-102">Sammanfattning</span><span class="sxs-lookup"><span data-stu-id="1836d-102">SYNOPSIS</span></span>
+<span data-ttu-id="1836d-103">Tar bort ett säkerhets kopierings valv.</span><span class="sxs-lookup"><span data-stu-id="1836d-103">Deletes a Backup vault.</span></span>
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
+## <span data-ttu-id="1836d-104">FRÅGESYNTAXEN</span><span class="sxs-lookup"><span data-stu-id="1836d-104">SYNTAX</span></span>
+
+```
+Remove-AzureRmBackupVault [-Force] [-Vault] <AzureRMBackupVault> [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="1836d-105">PROBLEMBESKRIVNING</span><span class="sxs-lookup"><span data-stu-id="1836d-105">DESCRIPTION</span></span>
+<span data-ttu-id="1836d-106">Cmdleten **Remove-AzureRmBackupVault** tar bort ett Azure Backup-valv.</span><span class="sxs-lookup"><span data-stu-id="1836d-106">The **Remove-AzureRmBackupVault** cmdlet deletes an Azure Backup vault.</span></span>
+
+<span data-ttu-id="1836d-107">Innan du kan ta bort ett säkerhets kopierings valv måste det vara tomt.</span><span class="sxs-lookup"><span data-stu-id="1836d-107">Before you can delete a Backup vault, it must be empty.</span></span>
+<span data-ttu-id="1836d-108">Använd cmdleten **Remove-AzureRmBackupContainer** för att ta bort infrastrukturen som en tjänst (IaaS) säkerhets kopiering av data från valvet.</span><span class="sxs-lookup"><span data-stu-id="1836d-108">Use the **Remove-AzureRmBackupContainer** cmdlet to remove infrastructure as a service (IaaS) virtual machine backup data from the vault.</span></span>
+<span data-ttu-id="1836d-109">Använd cmdleten **Delete-RegisteredServer** för att ta bort andra registrerade servrar och säkerhets kopior.</span><span class="sxs-lookup"><span data-stu-id="1836d-109">Use the **Delete-RegisteredServer** cmdlet to remove other registered servers and backup data.</span></span>
+
+## <span data-ttu-id="1836d-110">BESKRIVS</span><span class="sxs-lookup"><span data-stu-id="1836d-110">EXAMPLES</span></span>
+
+### <span data-ttu-id="1836d-111">Exempel 1: ta bort ett Azure Backup-valv</span><span class="sxs-lookup"><span data-stu-id="1836d-111">Example 1: Delete an Azure Backup vault</span></span>
+```
+PS C:\>Get-AzureRmBackupVault -Name "Vault03" | Remove-AzureRmBackupVault
+```
+
+<span data-ttu-id="1836d-112">Det här kommandot får Azure Backup-valvet med namnet Vault03 med hjälp av cmdleten **Get-AzureRmBackupVault** .</span><span class="sxs-lookup"><span data-stu-id="1836d-112">This command gets the Azure Backup vault named Vault03 by using the **Get-AzureRmBackupVault** cmdlet.</span></span>
+<span data-ttu-id="1836d-113">Kommandot skickar detta valv till den aktuella cmdleten med hjälp av pipeline-operatorn.</span><span class="sxs-lookup"><span data-stu-id="1836d-113">The command passes that vault to the current cmdlet by using the pipeline operator.</span></span>
+<span data-ttu-id="1836d-114">Den aktuella cmdleten tar bort valvet.</span><span class="sxs-lookup"><span data-stu-id="1836d-114">The current cmdlet removes the vault.</span></span>
+
+## <span data-ttu-id="1836d-115">MALLPARAMETRAR</span><span class="sxs-lookup"><span data-stu-id="1836d-115">PARAMETERS</span></span>
+
+### <span data-ttu-id="1836d-116">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="1836d-116">-DefaultProfile</span></span>
+<span data-ttu-id="1836d-117">Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure</span><span class="sxs-lookup"><span data-stu-id="1836d-117">The credentials, account, tenant, and subscription used for communication with azure</span></span>
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="1836d-118">-Force</span><span class="sxs-lookup"><span data-stu-id="1836d-118">-Force</span></span>
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="1836d-119">-Valv</span><span class="sxs-lookup"><span data-stu-id="1836d-119">-Vault</span></span>
+<span data-ttu-id="1836d-120">Anger ett säkerhets kopierings valv som denna cmdlet tar bort.</span><span class="sxs-lookup"><span data-stu-id="1836d-120">Specifies a Backup vault that this cmdlet removes.</span></span>
+<span data-ttu-id="1836d-121">För att få en **AzureRmBackupVault** , Använd cmdleten Get-AzureRmBackupVault.</span><span class="sxs-lookup"><span data-stu-id="1836d-121">To obtain an **AzureRmBackupVault** , use the Get-AzureRmBackupVault cmdlet.</span></span>
+
+```yaml
+Type: AzureRMBackupVault
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="1836d-122">-Bekräfta</span><span class="sxs-lookup"><span data-stu-id="1836d-122">-Confirm</span></span>
+<span data-ttu-id="1836d-123">Du uppmanas att bekräfta innan du kör cmdleten.</span><span class="sxs-lookup"><span data-stu-id="1836d-123">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="1836d-124">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="1836d-124">-WhatIf</span></span>
+<span data-ttu-id="1836d-125">Visar vad som händer om cmdleten körs.</span><span class="sxs-lookup"><span data-stu-id="1836d-125">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="1836d-126">Cmdleten körs inte.</span><span class="sxs-lookup"><span data-stu-id="1836d-126">The cmdlet is not run.</span></span>
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="1836d-127">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="1836d-127">CommonParameters</span></span>
+<span data-ttu-id="1836d-128">Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="1836d-128">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="1836d-129">Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="1836d-129">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="1836d-130">KOSTNADS</span><span class="sxs-lookup"><span data-stu-id="1836d-130">INPUTS</span></span>
+
+### <span data-ttu-id="1836d-131">AzureRMBackupVault</span><span class="sxs-lookup"><span data-stu-id="1836d-131">AzureRMBackupVault</span></span>
+
+## <span data-ttu-id="1836d-132">VÄRDEN</span><span class="sxs-lookup"><span data-stu-id="1836d-132">OUTPUTS</span></span>
+
+### <span data-ttu-id="1836d-133">Ingen</span><span class="sxs-lookup"><span data-stu-id="1836d-133">None</span></span>
+
+## <span data-ttu-id="1836d-134">ANMÄRKNINGAR</span><span class="sxs-lookup"><span data-stu-id="1836d-134">NOTES</span></span>
+* <span data-ttu-id="1836d-135">Ingen</span><span class="sxs-lookup"><span data-stu-id="1836d-135">None</span></span>
+
+## <span data-ttu-id="1836d-136">RELATERADE LÄNKAR</span><span class="sxs-lookup"><span data-stu-id="1836d-136">RELATED LINKS</span></span>
+
+[<span data-ttu-id="1836d-137">Get-AzureRmBackupVault</span><span class="sxs-lookup"><span data-stu-id="1836d-137">Get-AzureRmBackupVault</span></span>](./Get-AzureRmBackupVault.md)
+
+[<span data-ttu-id="1836d-138">New-AzureRmBackupVault</span><span class="sxs-lookup"><span data-stu-id="1836d-138">New-AzureRmBackupVault</span></span>](./New-AzureRmBackupVault.md)
+
+[<span data-ttu-id="1836d-139">Set-AzureRmBackupVault</span><span class="sxs-lookup"><span data-stu-id="1836d-139">Set-AzureRmBackupVault</span></span>](./Set-AzureRmBackupVault.md)
+
+
