@@ -1,0 +1,209 @@
+---
+external help file: Microsoft.Azure.Commands.Sql.dll-Help.xml
+Module Name: AzureRM.Sql
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.sql/get-azurermsqlsyncmember
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Get-AzureRmSqlSyncMember.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/Sql/Commands.Sql/help/Get-AzureRmSqlSyncMember.md
+ms.openlocfilehash: c17daaf714154d24322111497841a1814dfb5773
+ms.sourcegitcommit: f599b50d5e980197d1fca769378df90a842b42a1
+ms.translationtype: MT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "93755235"
+---
+# <span data-ttu-id="10ab5-101">Get-AzureRmSqlSyncMember</span><span class="sxs-lookup"><span data-stu-id="10ab5-101">Get-AzureRmSqlSyncMember</span></span>
+
+## <span data-ttu-id="10ab5-102">Sammanfattning</span><span class="sxs-lookup"><span data-stu-id="10ab5-102">SYNOPSIS</span></span>
+<span data-ttu-id="10ab5-103">Returnerar information om synkronisering av Azure SQL Database-medlemmar.</span><span class="sxs-lookup"><span data-stu-id="10ab5-103">Returns information about Azure SQL Database Sync Members.</span></span>
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
+## <span data-ttu-id="10ab5-104">FRÅGESYNTAXEN</span><span class="sxs-lookup"><span data-stu-id="10ab5-104">SYNTAX</span></span>
+
+```
+Get-AzureRmSqlSyncMember [-Name <String>] [-SyncGroupName] <String> [-ServerName] <String>
+ [-DatabaseName] <String> [-ResourceGroupName] <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
+```
+
+## <span data-ttu-id="10ab5-105">PROBLEMBESKRIVNING</span><span class="sxs-lookup"><span data-stu-id="10ab5-105">DESCRIPTION</span></span>
+<span data-ttu-id="10ab5-106">Cmdleten **Get-AzureRmSqlSyncMember** returnerar information om en eller flera synkroniserade Azure SQL Database-medlemmar.</span><span class="sxs-lookup"><span data-stu-id="10ab5-106">The **Get-AzureRmSqlSyncMember** cmdlet returns information about one or more Azure SQL Database Sync Members.</span></span>
+<span data-ttu-id="10ab5-107">Ange namnet på en synkroniserad medlem för att visa information för enbart den synkroniserade medlemmen.</span><span class="sxs-lookup"><span data-stu-id="10ab5-107">Specify the name of a sync member to see information for only that sync member.</span></span>
+
+## <span data-ttu-id="10ab5-108">BESKRIVS</span><span class="sxs-lookup"><span data-stu-id="10ab5-108">EXAMPLES</span></span>
+
+### <span data-ttu-id="10ab5-109">Exempel 1: få alla instanser av Azure SQL Sync-medlem kopplade till en synkroniseringsresurs</span><span class="sxs-lookup"><span data-stu-id="10ab5-109">Example 1: Get all instances of Azure SQL Sync Member assigned to a sync group</span></span>
+```
+PS C:\>Get-AzureRmSqlSyncMember -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -SyncGroupName "SyncGroup01" | Format-List
+ResourceId                  : subscriptions/{subscriptionId}/resourceGroups/{ResourceGroup01}/servers/{Server01}/databases/{Database01}/syncGroups/{SyncGroup01}/syncMembers/{SyncMember01}
+ResourceGroupName           : ResourceGroup01
+ServerName                  : Server01
+DatabaseName                : Database01
+SyncGroupName               : SyncGroup01
+SyncMemberName              : SyncMember01
+SyncDirection               : OneWayMemberToHub
+MemberDatabaseType:         : AzureSqlDatabase
+SyncAgentId                 : 
+SqlServerDatabaseId         : 
+MemberServerName            : memberServer01.full.dns.name
+MemberDatabaseName          : memberDatabase01
+MemberDatabaseUserName      : myAccount
+MemberDatabasePassword      : 
+SyncState                   : Good 
+
+ResourceId                  : subscriptions/{subscriptionId}/resourceGroups/{ResourceGroup01}/servers/{Server01}/databases/{Database01}/syncGroups/{SyncGroup01}/syncMembers/{SyncMember02}
+ResourceGroupName           : ResourceGroup01
+ServerName                  : Server01
+DatabaseName                : Database01
+SyncGroupName               : SyncGroup01
+SyncMemberName              : SyncMember02
+SyncDirection               : OneWayMemberToHub
+MemberDatabaseType:         : AzureSqlDatabase
+SyncAgentId                 : 
+SqlServerDatabaseId         : 
+MemberServerName            : memberServer01.full.dns.name
+MemberDatabaseName          : memberDatabase01
+MemberDatabaseUserName      : myAccount
+MemberDatabasePassword      :  
+SyncState                   : Good
+```
+
+<span data-ttu-id="10ab5-110">Med det här kommandot får du information om alla synkroniserade Azure SQL Database-medlemmar till SyncGroup01.</span><span class="sxs-lookup"><span data-stu-id="10ab5-110">This command gets information about all the Azure SQL Database Sync Member assigned to the sync group SyncGroup01.</span></span>
+
+### <span data-ttu-id="10ab5-111">Exempel 2: Hämta information om synkronisering av en Azure SQL-databas</span><span class="sxs-lookup"><span data-stu-id="10ab5-111">Example 2: Get information about an Azure SQL Database Sync Member</span></span>
+```
+PS C:\>Get-AzureRmSqlSyncMember -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -SyncGroupName "SyncGroup01" -Name "SyncMember01" | Format-List
+ResourceId                  : subscriptions/{subscriptionId}/resourceGroups/{ResourceGroup01}/servers/{Server01}/databases/{Database01}/syncGroups/{SyncGroup01}/syncMembers/{SyncMember01}
+ResourceGroupName           : ResourceGroup01
+ServerName                  : Server01
+DatabaseName                : Database01
+SyncGroupName               : SyncGroup01
+SyncMemberName              : SyncMember01
+SyncDirection               : OneWayMemberToHub
+MemberDatabaseType:         : AzureSqlDatabase
+SyncAgentId                 : 
+SqlServerDatabaseId         : 
+MemberServerName            : memberServer01.full.dns.name
+MemberDatabaseName          : memberDatabase01
+MemberDatabaseUserName      : myAccount
+MemberDatabasePassword      : 
+SyncState                   : Good
+```
+
+<span data-ttu-id="10ab5-112">Det här kommandot får information om synkroniserings medlemmen av Azure SQL Database med namnet "SyncMember01"</span><span class="sxs-lookup"><span data-stu-id="10ab5-112">This command gets information about the Azure SQL Database Sync Member with name "SyncMember01"</span></span>
+
+## <span data-ttu-id="10ab5-113">MALLPARAMETRAR</span><span class="sxs-lookup"><span data-stu-id="10ab5-113">PARAMETERS</span></span>
+
+### <span data-ttu-id="10ab5-114">-DatabaseName</span><span class="sxs-lookup"><span data-stu-id="10ab5-114">-DatabaseName</span></span>
+<span data-ttu-id="10ab5-115">Namnet på Azure SQL-databasen.</span><span class="sxs-lookup"><span data-stu-id="10ab5-115">The name of the Azure SQL Database.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="10ab5-116">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="10ab5-116">-DefaultProfile</span></span>
+<span data-ttu-id="10ab5-117">Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure</span><span class="sxs-lookup"><span data-stu-id="10ab5-117">The credentials, account, tenant, and subscription used for communication with azure</span></span>
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="10ab5-118">-Namn</span><span class="sxs-lookup"><span data-stu-id="10ab5-118">-Name</span></span>
+<span data-ttu-id="10ab5-119">Synkroniserat medlems namn.</span><span class="sxs-lookup"><span data-stu-id="10ab5-119">The sync member name.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: SyncMemberName
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="10ab5-120">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="10ab5-120">-ResourceGroupName</span></span>
+<span data-ttu-id="10ab5-121">Namnet på resurs gruppen.</span><span class="sxs-lookup"><span data-stu-id="10ab5-121">The name of the resource group.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="10ab5-122">-ServerName</span><span class="sxs-lookup"><span data-stu-id="10ab5-122">-ServerName</span></span>
+<span data-ttu-id="10ab5-123">Namnet på Azure SQL Server.</span><span class="sxs-lookup"><span data-stu-id="10ab5-123">The name of the Azure SQL Server.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="10ab5-124">-SyncGroupName</span><span class="sxs-lookup"><span data-stu-id="10ab5-124">-SyncGroupName</span></span>
+<span data-ttu-id="10ab5-125">Namnet på synkroniseringsresursen.</span><span class="sxs-lookup"><span data-stu-id="10ab5-125">The sync group name.</span></span>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="10ab5-126">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="10ab5-126">CommonParameters</span></span>
+<span data-ttu-id="10ab5-127">Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="10ab5-127">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="10ab5-128">Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .</span><span class="sxs-lookup"><span data-stu-id="10ab5-128">For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="10ab5-129">KOSTNADS</span><span class="sxs-lookup"><span data-stu-id="10ab5-129">INPUTS</span></span>
+
+### <span data-ttu-id="10ab5-130">Ingen</span><span class="sxs-lookup"><span data-stu-id="10ab5-130">None</span></span>
+<span data-ttu-id="10ab5-131">Denna cmdlet accepterar inte indata.</span><span class="sxs-lookup"><span data-stu-id="10ab5-131">This cmdlet does not accept any input.</span></span>
+
+## <span data-ttu-id="10ab5-132">VÄRDEN</span><span class="sxs-lookup"><span data-stu-id="10ab5-132">OUTPUTS</span></span>
+
+### <span data-ttu-id="10ab5-133">Microsoft. Azure. commands. SQL. DataSync. Model. AzureSqlSyncMemberModel</span><span class="sxs-lookup"><span data-stu-id="10ab5-133">Microsoft.Azure.Commands.Sql.DataSync.Model.AzureSqlSyncMemberModel</span></span>
+
+## <span data-ttu-id="10ab5-134">ANMÄRKNINGAR</span><span class="sxs-lookup"><span data-stu-id="10ab5-134">NOTES</span></span>
+
+## <span data-ttu-id="10ab5-135">RELATERADE LÄNKAR</span><span class="sxs-lookup"><span data-stu-id="10ab5-135">RELATED LINKS</span></span>
+
+[<span data-ttu-id="10ab5-136">New-AzureRmSqlSyncMember</span><span class="sxs-lookup"><span data-stu-id="10ab5-136">New-AzureRmSqlSyncMember</span></span>](./New-AzureRmSqlSyncMember.md)
+
+[<span data-ttu-id="10ab5-137">Update-AzureRmSqlSyncMember</span><span class="sxs-lookup"><span data-stu-id="10ab5-137">Update-AzureRmSqlSyncMember</span></span>](./Update-AzureRmSqlSyncMember.md)
+
+[<span data-ttu-id="10ab5-138">Remove-AzureRmSqlSyncMember</span><span class="sxs-lookup"><span data-stu-id="10ab5-138">Remove-AzureRmSqlSyncMember</span></span>](./Remove-AzureRmSqlSyncMember.md)
+
