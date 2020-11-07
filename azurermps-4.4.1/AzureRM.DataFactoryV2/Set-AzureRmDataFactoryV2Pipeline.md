@@ -1,0 +1,212 @@
+---
+external help file: Microsoft.Azure.Commands.DataFactoryV2.dll-Help.xml
+Module Name: AzureRM.DataFactoryV2
+online version: ''
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactoryV2/help/Set-AzureRmDataFactoryV2Pipeline.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/DataFactories/Commands.DataFactoryV2/help/Set-AzureRmDataFactoryV2Pipeline.md
+gitcommit: https://github.com/Azure/azure-powershell/blob/7fe7039e96038b4a91513dfda26026ad8e0a352b
+ms.openlocfilehash: 2a936b9a75e9fc1053e2202950a6a6b4c49bd3a7
+ms.sourcegitcommit: f599b50d5e980197d1fca769378df90a842b42a1
+ms.translationtype: MT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "93758416"
+---
+# Set-AzureRmDataFactoryV2Pipeline
+
+## Sammanfattning
+Skapar en pipeline i data fabriken.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
+## FRÅGESYNTAXEN
+
+### ByFactoryName (standard)
+```
+Set-AzureRmDataFactoryV2Pipeline [-Name] <String> [-DefinitionFile] <String> [-ResourceGroupName] <String>
+ [-DataFactoryName] <String> [-Force] [-WhatIf] [-Confirm]
+```
+
+### ByResourceId
+```
+Set-AzureRmDataFactoryV2Pipeline [-DefinitionFile] <String> [-ResourceId] <String> [-Force] [-WhatIf]
+ [-Confirm]
+```
+
+## PROBLEMBESKRIVNING
+Set-AzureRmDataFactoryV2Pipeline-cmdleten skapar en pipeline i Azure Data Factory.
+Om du anger ett namn för en pipeline som redan finns ber cmdleten dig om bekräftelse innan den ersätter pipelinen.
+Om du anger parametern Force ersätter cmdlet den befintliga pipeline utan bekräftelse.
+
+Utför dessa operationer i följande ordning:
+
+        -- Create a data factory.
+        -- Create linked services.
+        -- Create datasets.
+        -- Create a pipeline.
+
+Om det redan finns en pipeline med samma namn i data fabriken uppmanas du att bekräfta om du vill skriva över den befintliga pipeline med den nya pipelinen.
+Om du bekräftar att det befintliga pipeline ska skrivas över ersätts även försäljnings förlopps definitionen.
+
+## BESKRIVS
+
+### Exempel 1: skapa en rörledning
+```
+PS C:\> Set-AzureRmDataFactoryV2Pipeline -ResourceGroupName "ADF" -Name "DPWikisample" -DataFactoryName "WikiADF" -File "C:\DPWikisample.json"
+
+    PipelineName      : DPWikisample
+    ResourceGroupName : ADF
+    DataFactoryName   : WikiADF11
+    Activities        : {MyCopyActivity_0_0, MyCopyActivity_1_0}
+    Parameters        : {[OutputBlobName, Microsoft.Azure.Management.DataFactory.Models.ParameterSpecification]}
+
+```
+
+Det här kommandot skapar en pipeline med namnet DPWikisample i data fabriken med namnet ADF.
+Kommandot baserar sig på informationen i DPWikisample.jsi filen.
+Den här filen innehåller information om aktiviteter som kopierings aktivitet och HDInsight-aktivitet i pipeline.
+
+## MALLPARAMETRAR
+
+### -Bekräfta
+Du uppmanas att bekräfta innan du kör cmdleten.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DataFactoryName
+Anger namnet på en data fabrik.
+Denna cmdlet skapar en pipeline för data fabriken som den här parametern anger.
+
+```yaml
+Type: String
+Parameter Sets: ByFactoryName
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefinitionFile
+Sökvägen till JSON-filen.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: File
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Anger att denna cmdlet ersätter en befintlig pipeline utan att du behöver bekräfta.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Namn
+Anger namnet på den pipeline som ska skapas.
+
+```yaml
+Type: String
+Parameter Sets: ByFactoryName
+Aliases: PipelineName
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Anger namnet på en Azure-adressresurs.
+Denna cmdlet skapar en pipeline för gruppen som den här parametern anger.
+
+```yaml
+Type: String
+Parameter Sets: ByFactoryName
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceId
+ID för Azure-resursen.
+
+```yaml
+Type: String
+Parameter Sets: ByResourceId
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Visar vad som händer om cmdleten körs men inte kör cmdleten.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+## KOSTNADS
+
+### System. String
+
+
+## VÄRDEN
+
+### Microsoft. Azure. commands. DataFactoryV2. Models. PSPipeline
+
+
+## ANMÄRKNINGAR
+Nyckelord: Azure, azurerm, arm, resurs, hantering, chef, data, faktorer
+
+## RELATERADE LÄNKAR
+[Get-AzureRmDataFactoryV2Pipeline]()
+
+[Remove-AzureRmDataFactoryV2Pipeline]()
+
+[Invoke-AzureRmDataFactoryV2Pipeline]()
