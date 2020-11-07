@@ -1,0 +1,156 @@
+---
+external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+Module Name: AzureRM.Network
+ms.assetid: 5358C08F-A1EB-457E-85B1-7F12396A873A
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.network/add-azurermapplicationgatewayipconfiguration
+schema: 2.0.0
+ms.openlocfilehash: 17938a8fe4ee5a279554758cc36cc7a234a359ce
+ms.sourcegitcommit: b9b2dea3441d1532a5564ddca3dced45424fe2d6
+ms.translationtype: MT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "93930562"
+---
+# Add-AzureRmApplicationGatewayIPConfiguration
+
+## Sammanfattning
+Lägger till en IP-konfiguration till en Programgateway.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
+## FRÅGESYNTAXEN
+
+### SetByResourceId
+```
+Add-AzureRmApplicationGatewayIPConfiguration -ApplicationGateway <PSApplicationGateway> -Name <String>
+ [-SubnetId <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### SetByResource
+```
+Add-AzureRmApplicationGatewayIPConfiguration -ApplicationGateway <PSApplicationGateway> -Name <String>
+ [-Subnet <PSSubnet>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+## PROBLEMBESKRIVNING
+Cmdleten **Add-AzureRmApplicationGatewayIPConfiguration** lägger till en IP-konfiguration till en Programgateway.
+IP-konfigurationer innehåller det undernät där Application Gateway distribueras.
+
+## BESKRIVS
+
+### Exempel 1: lägga till en virtuell nätverks konfiguration i en Programgateway
+```
+PS C:\>$Vnet = Get-AzureRmVirtualNetwork -Name "Vnet01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $Subnet = Get-AzureRmVirtualNetworkSubnetConfig -Name "Subnet01" -VirtualNetwork $Vnet 
+PS C:\> $AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $AppGw = Add-AzureRmApplicationGatewayIPConfiguration -ApplicationGateway $AppGw -Name "Appgwsubnet01" -Subnet $Subnet
+```
+
+Det första kommandot skapar ett virtuellt nätverk.
+Det andra kommandot skapar ett undernät med det skapade virtuella nätverket.
+Det tredje kommandot får programgatewayen och lagras i $AppGw variabel.
+Med kommandot fouth lägger du till IP-konfigurationen till den Programgateway som lagras i $AppGw.
+
+## MALLPARAMETRAR
+
+### -ApplicationGateway
+Anger den Programgateway som denna cmdlet lägger till en IP-konfiguration för.
+
+```yaml
+Type: PSApplicationGateway
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Namn
+Anger namnet på den IP-konfiguration som ska läggas till.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Undernät
+Anger ett undernät.
+Det här är det undernät där Application Gateway distribueras.
+
+```yaml
+Type: PSSubnet
+Parameter Sets: SetByResource
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SubnetId
+Anger ett nät-ID.
+Det här är det undernät där Application Gateway distribueras.
+
+```yaml
+Type: String
+Parameter Sets: SetByResourceId
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+
+## KOSTNADS
+
+### System. String
+
+## VÄRDEN
+
+### Microsoft. Azure. commands. Networks. Models. PSApplicationGateway
+
+## ANMÄRKNINGAR
+
+## RELATERADE LÄNKAR
+
+[Get-AzureRmApplicationGatewayIPConfiguration](./Get-AzureRmApplicationGatewayIPConfiguration.md)
+
+[New-AzureRmApplicationGatewayIPConfiguration](./New-AzureRmApplicationGatewayIPConfiguration.md)
+
+[Remove-AzureRmApplicationGatewayIPConfiguration](./Remove-AzureRmApplicationGatewayIPConfiguration.md)
+
+[Set-AzureRmApplicationGatewayIPConfiguration](./Set-AzureRmApplicationGatewayIPConfiguration.md)
+
+

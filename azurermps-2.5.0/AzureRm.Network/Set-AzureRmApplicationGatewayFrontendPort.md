@@ -1,0 +1,127 @@
+---
+external help file: Microsoft.Azure.Commands.Network.dll-Help.xml
+Module Name: AzureRM.Network
+ms.assetid: 85C0A1C3-FC6D-496A-B6B5-8DC2A73B8032
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.network/set-azurermapplicationgatewayfrontendport
+schema: 2.0.0
+ms.openlocfilehash: 83c29e3c059664d7848fe66bd8ad7bcc005a8d47
+ms.sourcegitcommit: b9b2dea3441d1532a5564ddca3dced45424fe2d6
+ms.translationtype: MT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "93931153"
+---
+# Set-AzureRmApplicationGatewayFrontendPort
+
+## Sammanfattning
+Ändrar frontend-port för en Programgateway.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
+## FRÅGESYNTAXEN
+
+```
+Set-AzureRmApplicationGatewayFrontendPort -ApplicationGateway <PSApplicationGateway> -Name <String>
+ -Port <Int32> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+## PROBLEMBESKRIVNING
+Cmdleten **set-AzureRmApplicationGatewayFrontendPort** ändrar en front port för en Programgateway.
+
+## BESKRIVS
+
+### Exempel 1: Ange front-end-port för Application Gateway till 80
+```
+PS C:\> $AppGw = Get-AzureRmApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+PS C:\> $AppGw = Set-AzureRmApplicationGatewayFrontendPort -ApplicationGateway $AppGw -Name "FrontEndPort01" -Port 80
+```
+
+Det första kommandot hämtar den Programgateway som heter ApplicationGateway01 som tillhör resurs gruppen med namnet ResourceGroup01 och lagrar den i $AppGw variabeln.
+
+Det andra kommandot ändrar gatewayen i $AppGw så att port 80 används för front porten som heter FrontEndPort01.
+
+## MALLPARAMETRAR
+
+### -ApplicationGateway
+Anger det Application Gateway-objekt som denna cmdlet associerar fram porten med.
+
+```yaml
+Type: PSApplicationGateway
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Namn
+Anger namnet på den frontend-port som ska ändras.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Port
+Anger vilket port nummer som ska användas för front porten.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+
+## KOSTNADS
+
+### PSApplicationGateway
+Parametern ' ApplicationGateway ' godkänner värdet av typen ' PSApplicationGateway ' från pipeline
+
+## VÄRDEN
+
+### Microsoft. Azure. commands. Networks. Models. PSApplicationGateway
+
+## ANMÄRKNINGAR
+
+## RELATERADE LÄNKAR
+
+[Add-AzureRmApplicationGatewayFrontendPort](./Add-AzureRmApplicationGatewayFrontendPort.md)
+
+[Get-AzureRmApplicationGatewayFrontendPort](./Get-AzureRmApplicationGatewayFrontendPort.md)
+
+[New-AzureRmApplicationGatewayFrontendPort](./New-AzureRmApplicationGatewayFrontendPort.md)
+
+[Remove-AzureRmApplicationGatewayFrontendPort](./Remove-AzureRmApplicationGatewayFrontendPort.md)
