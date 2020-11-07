@@ -1,0 +1,111 @@
+---
+external help file: Microsoft.Azure.Commands.Websites.dll-Help.xml
+Module Name: AzureRM.WebSites
+ms.assetid: 2D83D38F-3A5C-40DB-BE8B-D52E5CAFCF6E
+online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.websites/get-azurermwebappcertificate
+schema: 2.0.0
+ms.openlocfilehash: dcdba23de872ed0f1518188387c6f7e2d357c909
+ms.sourcegitcommit: b9b2dea3441d1532a5564ddca3dced45424fe2d6
+ms.translationtype: MT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "93929193"
+---
+# Get-AzureRmWebAppCertificate
+
+## Sammanfattning
+Hämtar ett Azure Web App-certifikat.
+
+[!INCLUDE [migrate-to-az-banner](../../includes/migrate-to-az-banner.md)]
+
+## FRÅGESYNTAXEN
+
+```
+Get-AzureRmWebAppCertificate [[-ResourceGroupName] <String>] [[-Thumbprint] <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+## PROBLEMBESKRIVNING
+Cmdleten **Get-AzureRmWebAppCertificate** hämtar information om Azure Web App-certifikat som är associerade med en viss resurs grupp.
+Om du känner till tumavtryck för certifikatet kan du även använda denna cmdlet för att få information om ett visst certifikat.
+
+## BESKRIVS
+
+### Exempel 1: Hämta webb program certifikat i en resurs grupp
+```
+PS C:\>Get-AzureRmWebAppCertificate -ResourceGroupName "ContosoResourceGroup"
+```
+
+Det här kommandot returnerar information om de laddade webb program certifikat som är kopplade till resurs gruppen ContosoResourceGroup.
+
+### Exempel 2: Hämta ett angivet webb program certifikat
+```
+PS C:\>Get-AzureRmWebAppCertificate -ResourceGroupName "ContosoResourceGroup" -Thumbprint "E3A38EBA60CAA1C162785A2E1C44A15AD450199C3"
+```
+
+Det här kommandot får ContosoResourceGroup-certifikatet med tumavtrycket E3A38EBA60CAA1C162785A2E1C44A15AD450199C3.
+
+## MALLPARAMETRAR
+
+### -DefaultProfile
+Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+
+```yaml
+Type: IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Anger namnet på resurs gruppen som certifikatet har tilldelats till.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Tumavtryck
+Anger det unika ID: t för certifikatet.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+
+## KOSTNADS
+
+### Ingen
+Denna cmdlet accepterar inte indata.
+
+## VÄRDEN
+
+## ANMÄRKNINGAR
+
+## RELATERADE LÄNKAR
+
+[Get-AzureRmWebAppSSLBinding](./Get-AzureRmWebAppSSLBinding.md)
+
+
