@@ -5,12 +5,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/17/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 3c876454560e4ad421e6d32a8ca8b30a651fd8af
-ms.sourcegitcommit: b4a38bcb0501a9016a4998efd377aa75d3ef9ce8
+ms.openlocfilehash: 20a58253e3f9435a9d33c700435f77fbb42df7ea
+ms.sourcegitcommit: 375232b84336ef5e13052504deaa43f5bd4b7f65
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92754036"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93365151"
 ---
 # <a name="create-an-azure-service-principal-with-azure-powershell"></a>Skapa tjänstens huvudnamn för Azure med Azure PowerShell
 
@@ -19,6 +19,11 @@ Automatiserade verktyg som använder Azure-tjänster bör alltid ha begränsad b
 Ett huvudnamn för tjänsten i Azure är en identitet som skapas för användning med program, värdbaserade tjänster och automatiserade verktyg för att tillgång till Azure-resurser. Åtkomsten begränsas av de roller som tilldelas tjänstens huvudnamn, vilket ger dig kontroll över vilka resurser som kan nås och på vilken nivå. Av säkerhetsskäl rekommenderar vi att du alltid använder tjänstens huvudnamn med automatiserade verktyg i stället för att tillåta inloggning med en användaridentitet.
 
 Den här artikeln visar hur du skapar, hämtar information om och återställer ett tjänsthuvudnamn med Azure PowerShell.
+
+> [!WARNING]
+> När du skapar tjänstens huvudnamn med kommandot [New-AzADServicePrincipal](/powershell/module/Az.Resources/New-AzADServicePrincipal) innehåller utdata autentiseringsuppgifter som du måste skydda. Se till att du inte inkluderar dessa autentiseringsuppgifter i din kod eller kontrollera autentiseringsuppgifterna i källkontrollen. Alternativt bör du överväga att använda [hanterade identiteter](/azure/active-directory/managed-identities-azure-resources/overview) för att undvika att behöva använda autentiseringsuppgifter.
+>
+> Som standard tilldelar [New-AzADServicePrincipal](/powershell/module/Az.Resources/New-AzADServicePrincipal) [deltagarrollen](/azure/role-based-access-control/built-in-roles#contributor) till tjänstens huvudnamn i prenumerationsomfånget. Om du vill minska risken för att tjänstens huvudnamn komprometteras tilldelar du en mer specifik roll och begränsar omfånget för en resurs eller resursgrupp. Mer information finns i [Steg för tillägg av en rolltilldelning](/azure/role-based-access-control/role-assignments-steps).
 
 ## <a name="create-a-service-principal"></a>Skapa ett huvudnamn för tjänsten
 
@@ -33,7 +38,7 @@ Det finns två typer av autentisering för tjänstens huvudnamn: lösenordsbaser
 ### <a name="password-based-authentication"></a>Lösenordsbaserad autentisering
 
 > [!IMPORTANT]
-> Standardrollen för ett huvudnamn för tjänsten för lösenordsbaserad autentisering är **Deltagare** . Den här rollen har fullständig behörighet att läsa och skriva till ett Azure-konto. Information om hur du hanterar rolltilldelningar finns i [Hantera roller för tjänstens huvudnamn](#manage-service-principal-roles).
+> Standardrollen för ett huvudnamn för tjänsten för lösenordsbaserad autentisering är **Deltagare**. Den här rollen har fullständig behörighet att läsa och skriva till ett Azure-konto. Information om hur du hanterar rolltilldelningar finns i [Hantera roller för tjänstens huvudnamn](#manage-service-principal-roles).
 
 Om inga andra autentiseringsparametrar finns används lösenordsbaserad autentisering, och ett slumpmässigt lösenord skapas åt dig. Om du vill använda lösenordsbaserad autentisering rekommenderas den här metoden.
 
@@ -112,7 +117,7 @@ Azure PowerShell har följande cmdletar för hantering av rolltilldelningar:
 - [New-AzRoleAssignment](/powershell/module/az.resources/new-azroleassignment)
 - [Remove-AzRoleAssignment](/powershell/module/az.resources/remove-azroleassignment)
 
-Standardrollen för ett huvudnamn för tjänsten för lösenordsbaserad autentisering är **Deltagare** . Den här rollen har fullständig behörighet att läsa och skriva till ett Azure-konto. Rollen **Läsare** är mer begränsad och ger endast läsåtkomst. Mer information om rollbaserad åtkomstkontroll (RBAC) och roller finns i [RBAC: inbyggda roller](/azure/active-directory/role-based-access-built-in-roles).
+Standardrollen för ett huvudnamn för tjänsten för lösenordsbaserad autentisering är **Deltagare**. Den här rollen har fullständig behörighet att läsa och skriva till ett Azure-konto. Rollen **Läsare** är mer begränsad och ger endast läsåtkomst. Mer information om rollbaserad åtkomstkontroll (RBAC) och roller finns i [RBAC: inbyggda roller](/azure/active-directory/role-based-access-built-in-roles).
 
 Det här exemplet lägger till rollen **Läsare** och tar bort rollen **Deltagare** :
 
