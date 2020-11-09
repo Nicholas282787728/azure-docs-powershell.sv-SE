@@ -5,12 +5,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/10/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 913532fa5a8937f7ba4cc1ce21c5879f3920fc7f
-ms.sourcegitcommit: b4a38bcb0501a9016a4998efd377aa75d3ef9ce8
+ms.openlocfilehash: 4ab5639cfb997c5f9ee1286e6eacb97ef775239a
+ms.sourcegitcommit: 63181e0af0e4468b0530fdb0495ed4d44bdfd1c8
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92753849"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93134870"
 ---
 # <a name="azure-powershell-release-notes"></a>Viktig information om Azure PowerShell
 
@@ -46,7 +46,7 @@ ms.locfileid: "92753849"
 * Lade till de valfria parametrarna ”Tier”, ”MaxSharesCount”, ”DiskIOPSReadOnly” och ”DiskMBpsReadOnly” till cmdleten ”New-AzDiskUpdateConfig”. 
 
 #### <a name="azcontainerregistry"></a>Az.ContainerRegistry
-* [Icke-bakåtkompatibel ändring] Uppdaterar API-versionen till 2020-05-01
+* [Icke-bakåtkompatibel ändring] Uppdaterar API-versionen till 2019-05-01
 * [Icke-bakåtkompatibel ändring] Tog bort SKU:n ”Classic” och parametern ”StorageAccountName” från ”New-AzContainerRegistry”
 * Lade till nya cmdletar: ”Connect-AzContainerRegistry”, ”Import-AzContainerRegistry”, ”Get-AzContainerRegistryUsage”, ”New-AzContainerRegistryNetworkRule”, ”Set-AzContainerRegistryNetworkRule”
 * Lade till den nya parametern ”NetworkRuleSet” till ”Update-AzContainerRegistry”
