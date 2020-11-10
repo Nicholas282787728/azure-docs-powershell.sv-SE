@@ -5,21 +5,21 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.eventgrid/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/EventGrid/EventGrid/help/New-AzEventGridSubscription.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/EventGrid/EventGrid/help/New-AzEventGridSubscription.md
-ms.openlocfilehash: c1eff968bf72c77e6b4e1c2aedfe50459ec3faef
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: 44441fa364c43242a7a4454ccdf62f920cb321e5
+ms.sourcegitcommit: 7aaa37edc9681b643946505bcbc3cc6435f1d7ca
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94262720"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94395330"
 ---
-# <span data-ttu-id="04de1-101">New-AzEventGridSubscription</span><span class="sxs-lookup"><span data-stu-id="04de1-101">New-AzEventGridSubscription</span></span>
+# <span data-ttu-id="dc3f0-101">New-AzEventGridSubscription</span><span class="sxs-lookup"><span data-stu-id="dc3f0-101">New-AzEventGridSubscription</span></span>
 
-## <span data-ttu-id="04de1-102">Sammanfattning</span><span class="sxs-lookup"><span data-stu-id="04de1-102">SYNOPSIS</span></span>
-<span data-ttu-id="04de1-103">Skapar en ny händelse prenumeration för Azure händelse rutnät till ett ämne, Azure Resource, Azure-abonnemang eller resurs grupp.</span><span class="sxs-lookup"><span data-stu-id="04de1-103">Creates a new Azure Event Grid Event Subscription to a topic, Azure resource, Azure subscription or Resource Group.</span></span>
+## <span data-ttu-id="dc3f0-102">Sammanfattning</span><span class="sxs-lookup"><span data-stu-id="dc3f0-102">SYNOPSIS</span></span>
+<span data-ttu-id="dc3f0-103">Skapar en ny händelse prenumeration för Azure händelse rutnät till ett ämne, Azure Resource, Azure-abonnemang eller resurs grupp.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-103">Creates a new Azure Event Grid Event Subscription to a topic, Azure resource, Azure subscription or Resource Group.</span></span>
 
-## <span data-ttu-id="04de1-104">FRÅGESYNTAXEN</span><span class="sxs-lookup"><span data-stu-id="04de1-104">SYNTAX</span></span>
+## <span data-ttu-id="dc3f0-104">FRÅGESYNTAXEN</span><span class="sxs-lookup"><span data-stu-id="dc3f0-104">SYNTAX</span></span>
 
-### <span data-ttu-id="04de1-105">ResourceGroupNameParameterSet (standard)</span><span class="sxs-lookup"><span data-stu-id="04de1-105">ResourceGroupNameParameterSet (Default)</span></span>
+### <span data-ttu-id="dc3f0-105">ResourceGroupNameParameterSet (standard)</span><span class="sxs-lookup"><span data-stu-id="dc3f0-105">ResourceGroupNameParameterSet (Default)</span></span>
 ```
 New-AzEventGridSubscription [-EventSubscriptionName] <String> [-Endpoint] <String>
  [[-ResourceGroupName] <String>] [-EndpointType <String>] [-SubjectBeginsWith <String>]
@@ -31,7 +31,7 @@ New-AzEventGridSubscription [-EventSubscriptionName] <String> [-Endpoint] <Strin
  [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="04de1-106">ResourceIdEventSubscriptionParameterSet</span><span class="sxs-lookup"><span data-stu-id="04de1-106">ResourceIdEventSubscriptionParameterSet</span></span>
+### <span data-ttu-id="dc3f0-106">ResourceIdEventSubscriptionParameterSet</span><span class="sxs-lookup"><span data-stu-id="dc3f0-106">ResourceIdEventSubscriptionParameterSet</span></span>
 ```
 New-AzEventGridSubscription [-ResourceId] <String> [-EventSubscriptionName] <String> [-Endpoint] <String>
  [-EndpointType <String>] [-SubjectBeginsWith <String>] [-SubjectEndsWith <String>] [-SubjectCaseSensitive]
@@ -42,7 +42,7 @@ New-AzEventGridSubscription [-ResourceId] <String> [-EventSubscriptionName] <Str
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="04de1-107">EventSubscriptionCustomTopicInputObjectParameterSet</span><span class="sxs-lookup"><span data-stu-id="04de1-107">EventSubscriptionCustomTopicInputObjectParameterSet</span></span>
+### <span data-ttu-id="dc3f0-107">EventSubscriptionCustomTopicInputObjectParameterSet</span><span class="sxs-lookup"><span data-stu-id="dc3f0-107">EventSubscriptionCustomTopicInputObjectParameterSet</span></span>
 ```
 New-AzEventGridSubscription [-InputObject] <PSTopic> [-EventSubscriptionName] <String> [-Endpoint] <String>
  [-EndpointType <String>] [-SubjectBeginsWith <String>] [-SubjectEndsWith <String>] [-SubjectCaseSensitive]
@@ -53,7 +53,7 @@ New-AzEventGridSubscription [-InputObject] <PSTopic> [-EventSubscriptionName] <S
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="04de1-108">EventSubscriptionDomainInputObjectParameterSet</span><span class="sxs-lookup"><span data-stu-id="04de1-108">EventSubscriptionDomainInputObjectParameterSet</span></span>
+### <span data-ttu-id="dc3f0-108">EventSubscriptionDomainInputObjectParameterSet</span><span class="sxs-lookup"><span data-stu-id="dc3f0-108">EventSubscriptionDomainInputObjectParameterSet</span></span>
 ```
 New-AzEventGridSubscription [-DomainInputObject] <PSDomain> [-EventSubscriptionName] <String>
  [-Endpoint] <String> [-EndpointType <String>] [-SubjectBeginsWith <String>] [-SubjectEndsWith <String>]
@@ -65,7 +65,7 @@ New-AzEventGridSubscription [-DomainInputObject] <PSDomain> [-EventSubscriptionN
  [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="04de1-109">EventSubscriptionDomainTopicInputObjectParameterSet</span><span class="sxs-lookup"><span data-stu-id="04de1-109">EventSubscriptionDomainTopicInputObjectParameterSet</span></span>
+### <span data-ttu-id="dc3f0-109">EventSubscriptionDomainTopicInputObjectParameterSet</span><span class="sxs-lookup"><span data-stu-id="dc3f0-109">EventSubscriptionDomainTopicInputObjectParameterSet</span></span>
 ```
 New-AzEventGridSubscription [-DomainTopicInputObject] <PSDomainTopic> [-EventSubscriptionName] <String>
  [-Endpoint] <String> [-EndpointType <String>] [-SubjectBeginsWith <String>] [-SubjectEndsWith <String>]
@@ -77,7 +77,7 @@ New-AzEventGridSubscription [-DomainTopicInputObject] <PSDomainTopic> [-EventSub
  [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="04de1-110">CustomTopicEventSubscriptionParameterSet</span><span class="sxs-lookup"><span data-stu-id="04de1-110">CustomTopicEventSubscriptionParameterSet</span></span>
+### <span data-ttu-id="dc3f0-110">CustomTopicEventSubscriptionParameterSet</span><span class="sxs-lookup"><span data-stu-id="dc3f0-110">CustomTopicEventSubscriptionParameterSet</span></span>
 ```
 New-AzEventGridSubscription [-EventSubscriptionName] <String> [-Endpoint] <String>
  [-ResourceGroupName] <String> [-TopicName] <String> [-EndpointType <String>] [-SubjectBeginsWith <String>]
@@ -89,7 +89,7 @@ New-AzEventGridSubscription [-EventSubscriptionName] <String> [-Endpoint] <Strin
  [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="04de1-111">DomainEventSubscriptionParameterSet</span><span class="sxs-lookup"><span data-stu-id="04de1-111">DomainEventSubscriptionParameterSet</span></span>
+### <span data-ttu-id="dc3f0-111">DomainEventSubscriptionParameterSet</span><span class="sxs-lookup"><span data-stu-id="dc3f0-111">DomainEventSubscriptionParameterSet</span></span>
 ```
 New-AzEventGridSubscription [-EventSubscriptionName] <String> [-Endpoint] <String>
  [-ResourceGroupName] <String> [-DomainName] <String> [-EndpointType <String>] [-SubjectBeginsWith <String>]
@@ -101,7 +101,7 @@ New-AzEventGridSubscription [-EventSubscriptionName] <String> [-Endpoint] <Strin
  [-Confirm] [<CommonParameters>]
 ```
 
-### <span data-ttu-id="04de1-112">DomainTopicEventSubscriptionParameterSet</span><span class="sxs-lookup"><span data-stu-id="04de1-112">DomainTopicEventSubscriptionParameterSet</span></span>
+### <span data-ttu-id="dc3f0-112">DomainTopicEventSubscriptionParameterSet</span><span class="sxs-lookup"><span data-stu-id="dc3f0-112">DomainTopicEventSubscriptionParameterSet</span></span>
 ```
 New-AzEventGridSubscription [-EventSubscriptionName] <String> [-Endpoint] <String>
  [-ResourceGroupName] <String> [-DomainName] <String> -DomainTopicName <String> [-EndpointType <String>]
@@ -113,63 +113,63 @@ New-AzEventGridSubscription [-EventSubscriptionName] <String> [-Endpoint] <Strin
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## <span data-ttu-id="04de1-113">PROBLEMBESKRIVNING</span><span class="sxs-lookup"><span data-stu-id="04de1-113">DESCRIPTION</span></span>
-<span data-ttu-id="04de1-114">Skapa en ny händelse prenumeration i ett avsnitt i ett Azure-evenemang, en Azure-resurs som stöds, en Azure-prenumeration eller resurs grupp.</span><span class="sxs-lookup"><span data-stu-id="04de1-114">Create a new event subscription to an Azure Event Grid topic, a supported Azure resource, an Azure subscription or Resource Group.</span></span>
-<span data-ttu-id="04de1-115">Om du vill skapa en händelse prenumeration för det markerade Azure-abonnemanget anger du händelse prenumerationens namn och mål slut punkten.</span><span class="sxs-lookup"><span data-stu-id="04de1-115">To create an event subscription to the currently selected Azure subscription, specify the event subscription name and the destination endpoint.</span></span>
-<span data-ttu-id="04de1-116">Om du vill skapa en händelse prenumeration i en resurs grupp anger du resurs gruppens namn förutom händelse prenumerationens namn och mål slut punkten.</span><span class="sxs-lookup"><span data-stu-id="04de1-116">To create an event subscription to a resource group, specify the resource group name in addition to the event subscription name and the destination endpoint.</span></span>
-<span data-ttu-id="04de1-117">Om du vill skapa en händelse prenumeration i ett avsnitt i ett Azure-evenemang kan du ange ämnets namn.</span><span class="sxs-lookup"><span data-stu-id="04de1-117">To create an event subscription to an Azure Event Grid topic, specify the topic name as well.</span></span>
-<span data-ttu-id="04de1-118">Om du vill skapa en händelse prenumeration till en Azure-resurs som stöds anger du resursens fullständiga resurs-ID.</span><span class="sxs-lookup"><span data-stu-id="04de1-118">To create an event subscription to a supported Azure resource, specify the full resource ID of the resource.</span></span> <span data-ttu-id="04de1-119">Kör cmdleten Get-AzEventGridTopicType om du vill visa listan över typer som stöds.</span><span class="sxs-lookup"><span data-stu-id="04de1-119">To view the list of supported types, run the Get-AzEventGridTopicType cmdlet.</span></span>
+## <span data-ttu-id="dc3f0-113">PROBLEMBESKRIVNING</span><span class="sxs-lookup"><span data-stu-id="dc3f0-113">DESCRIPTION</span></span>
+<span data-ttu-id="dc3f0-114">Skapa en ny händelse prenumeration i ett avsnitt i ett Azure-evenemang, en Azure-resurs som stöds, en Azure-prenumeration eller resurs grupp.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-114">Create a new event subscription to an Azure Event Grid topic, a supported Azure resource, an Azure subscription or Resource Group.</span></span>
+<span data-ttu-id="dc3f0-115">Om du vill skapa en händelse prenumeration för det markerade Azure-abonnemanget anger du händelse prenumerationens namn och mål slut punkten.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-115">To create an event subscription to the currently selected Azure subscription, specify the event subscription name and the destination endpoint.</span></span>
+<span data-ttu-id="dc3f0-116">Om du vill skapa en händelse prenumeration i en resurs grupp anger du resurs gruppens namn förutom händelse prenumerationens namn och mål slut punkten.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-116">To create an event subscription to a resource group, specify the resource group name in addition to the event subscription name and the destination endpoint.</span></span>
+<span data-ttu-id="dc3f0-117">Om du vill skapa en händelse prenumeration i ett avsnitt i ett Azure-evenemang kan du ange ämnets namn.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-117">To create an event subscription to an Azure Event Grid topic, specify the topic name as well.</span></span>
+<span data-ttu-id="dc3f0-118">Om du vill skapa en händelse prenumeration till en Azure-resurs som stöds anger du resursens fullständiga resurs-ID.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-118">To create an event subscription to a supported Azure resource, specify the full resource ID of the resource.</span></span> <span data-ttu-id="dc3f0-119">Kör cmdleten Get-AzEventGridTopicType om du vill visa listan över typer som stöds.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-119">To view the list of supported types, run the Get-AzEventGridTopicType cmdlet.</span></span>
 
-## <span data-ttu-id="04de1-120">BESKRIVS</span><span class="sxs-lookup"><span data-stu-id="04de1-120">EXAMPLES</span></span>
+## <span data-ttu-id="dc3f0-120">BESKRIVS</span><span class="sxs-lookup"><span data-stu-id="dc3f0-120">EXAMPLES</span></span>
 
-### <span data-ttu-id="04de1-121">Exempel 1</span><span class="sxs-lookup"><span data-stu-id="04de1-121">Example 1</span></span>
+### <span data-ttu-id="dc3f0-121">Exempel 1</span><span class="sxs-lookup"><span data-stu-id="dc3f0-121">Example 1</span></span>
 ```powershell
 PS C:\> New-AzEventGridSubscription -ResourceGroup MyResourceGroup -TopicName Topic1 -Endpoint https://requestb.in/19qlscd1 -EventSubscriptionName EventSubscription1
 ```
 
-<span data-ttu-id="04de1-122">Skapar en ny händelse prenumerations \` EventSubscription1 \` till ett ämne i en Azure- \` Ämne1 \` i resurs grupps \` MyResourceGroupName \` med webhookens destinations slut punkt https://requestb.in/19qlscd1 .</span><span class="sxs-lookup"><span data-stu-id="04de1-122">Creates a new event subscription \`EventSubscription1\` to an Azure Event Grid topic \`Topic1\` in resource group \`MyResourceGroupName\` with the webhook destination endpoint https://requestb.in/19qlscd1.</span></span> <span data-ttu-id="04de1-123">Den här händelse prenumerationen använder standard filter.</span><span class="sxs-lookup"><span data-stu-id="04de1-123">This event subscription uses default filters.</span></span>
+<span data-ttu-id="dc3f0-122">Skapar en ny händelse prenumerations \` EventSubscription1 \` till ett ämne i en Azure- \` Ämne1 \` i resurs grupps \` MyResourceGroupName \` med webhookens destinations slut punkt `https://requestb.in/19qlscd1` .</span><span class="sxs-lookup"><span data-stu-id="dc3f0-122">Creates a new event subscription \`EventSubscription1\` to an Azure Event Grid topic \`Topic1\` in resource group \`MyResourceGroupName\` with the webhook destination endpoint `https://requestb.in/19qlscd1`.</span></span> <span data-ttu-id="dc3f0-123">Den här händelse prenumerationen använder standard filter.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-123">This event subscription uses default filters.</span></span>
 
-### <span data-ttu-id="04de1-124">Exempel 2</span><span class="sxs-lookup"><span data-stu-id="04de1-124">Example 2</span></span>
+### <span data-ttu-id="dc3f0-124">Exempel 2</span><span class="sxs-lookup"><span data-stu-id="dc3f0-124">Example 2</span></span>
 ```powershell
 PS C:\> New-AzEventGridSubscription -ResourceGroup MyResourceGroupName -Endpoint https://requestb.in/19qlscd1 -EventSubscriptionName EventSubscription1
 ```
 
-<span data-ttu-id="04de1-125">Skapar en ny händelse prenumerations- \` EventSubscription1 \` till en resurs grupp \` MyResourceGroupName \` med slut punkten för webhook-destinationen https://requestb.in/19qlscd1 .</span><span class="sxs-lookup"><span data-stu-id="04de1-125">Creates a new event subscription \`EventSubscription1\` to a resource group \`MyResourceGroupName\` with the webhook destination endpoint https://requestb.in/19qlscd1.</span></span> <span data-ttu-id="04de1-126">Den här händelse prenumerationen använder standard filter.</span><span class="sxs-lookup"><span data-stu-id="04de1-126">This event subscription uses default filters.</span></span>
+<span data-ttu-id="dc3f0-125">Skapar en ny händelse prenumerations- \` EventSubscription1 \` till en resurs grupp \` MyResourceGroupName \` med slut punkten för webhook-destinationen `https://requestb.in/19qlscd1` .</span><span class="sxs-lookup"><span data-stu-id="dc3f0-125">Creates a new event subscription \`EventSubscription1\` to a resource group \`MyResourceGroupName\` with the webhook destination endpoint `https://requestb.in/19qlscd1`.</span></span> <span data-ttu-id="dc3f0-126">Den här händelse prenumerationen använder standard filter.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-126">This event subscription uses default filters.</span></span>
 
-### <span data-ttu-id="04de1-127">Exempel 3</span><span class="sxs-lookup"><span data-stu-id="04de1-127">Example 3</span></span>
+### <span data-ttu-id="dc3f0-127">Exempel 3</span><span class="sxs-lookup"><span data-stu-id="dc3f0-127">Example 3</span></span>
 ```powershell
 PS C:\> New-AzEventGridSubscription -Endpoint https://requestb.in/19qlscd1 -EventSubscriptionName EventSubscription1
 ```
 
-<span data-ttu-id="04de1-128">Skapar en ny händelse prenumerations- \` EventSubscription1 \` till det markerade Azure-abonnemanget med webhook-destinationens slut punkt https://requestb.in/19qlscd1 .</span><span class="sxs-lookup"><span data-stu-id="04de1-128">Creates a new event subscription \`EventSubscription1\` to the currently selected Azure subscription with the webhook destination endpoint https://requestb.in/19qlscd1.</span></span> <span data-ttu-id="04de1-129">Den här händelse prenumerationen använder standard filter.</span><span class="sxs-lookup"><span data-stu-id="04de1-129">This event subscription uses default filters.</span></span>
+<span data-ttu-id="dc3f0-128">Skapar en ny händelse prenumerations- \` EventSubscription1 \` till det markerade Azure-abonnemanget med webhook-destinationens slut punkt `https://requestb.in/19qlscd1` .</span><span class="sxs-lookup"><span data-stu-id="dc3f0-128">Creates a new event subscription \`EventSubscription1\` to the currently selected Azure subscription with the webhook destination endpoint `https://requestb.in/19qlscd1`.</span></span> <span data-ttu-id="dc3f0-129">Den här händelse prenumerationen använder standard filter.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-129">This event subscription uses default filters.</span></span>
 
-### <span data-ttu-id="04de1-130">Exempel 4</span><span class="sxs-lookup"><span data-stu-id="04de1-130">Example 4</span></span>
+### <span data-ttu-id="dc3f0-130">Exempel 4</span><span class="sxs-lookup"><span data-stu-id="dc3f0-130">Example 4</span></span>
 ```powershell
 PS C:\> $includedEventTypes = "Microsoft.Resources.ResourceWriteFailure", "Microsoft.Resources.ResourceWriteSuccess"
 PS C:\> $labels = "Finance", "HR"
 PS C:\> New-AzEventGridSubscription -Endpoint https://requestb.in/19qlscd1 -EventSubscriptionName EventSubscription1 -SubjectBeginsWith "TestPrefix" -SubjectEndsWith "TestSuffix" -IncludedEventType $includedEventTypes -Label $labels
 ```
 
-<span data-ttu-id="04de1-131">Skapar en ny händelse prenumerations- \` EventSubscription1 \` till det markerade Azure-abonnemanget med webhook-destinationens slut punkt https://requestb.in/19qlscd1 .</span><span class="sxs-lookup"><span data-stu-id="04de1-131">Creates a new event subscription \`EventSubscription1\` to the currently selected Azure subscription with the webhook destination endpoint https://requestb.in/19qlscd1.</span></span> <span data-ttu-id="04de1-132">Den här händelse prenumerationen anger ytterligare filter för händelse typer och ämne, och endast händelser som matchar dessa filter skickas till mål slut punkten.</span><span class="sxs-lookup"><span data-stu-id="04de1-132">This event subscription specifies the additional filters for event types and subject, and only events matching those filters will be delivered to the destination endpoint.</span></span>
+<span data-ttu-id="dc3f0-131">Skapar en ny händelse prenumerations- \` EventSubscription1 \` till det markerade Azure-abonnemanget med webhook-destinationens slut punkt `https://requestb.in/19qlscd1` .</span><span class="sxs-lookup"><span data-stu-id="dc3f0-131">Creates a new event subscription \`EventSubscription1\` to the currently selected Azure subscription with the webhook destination endpoint `https://requestb.in/19qlscd1`.</span></span> <span data-ttu-id="dc3f0-132">Den här händelse prenumerationen anger ytterligare filter för händelse typer och ämne, och endast händelser som matchar dessa filter skickas till mål slut punkten.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-132">This event subscription specifies the additional filters for event types and subject, and only events matching those filters will be delivered to the destination endpoint.</span></span>
 
-### <span data-ttu-id="04de1-133">Exempel 5</span><span class="sxs-lookup"><span data-stu-id="04de1-133">Example 5</span></span>
+### <span data-ttu-id="dc3f0-133">Exempel 5</span><span class="sxs-lookup"><span data-stu-id="dc3f0-133">Example 5</span></span>
 ```powershell
 PS C:\> New-AzEventGridSubscription -EventSubscriptionName EventSubscription1 -EndpointType "eventhub" -Endpoint "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1"
 ```
 
-<span data-ttu-id="04de1-134">Skapar en ny händelse- \` EventSubscription1 \` till det markerade Azure-abonnemanget med den angivna händelsehubben som mål för händelser.</span><span class="sxs-lookup"><span data-stu-id="04de1-134">Creates a new event subscription \`EventSubscription1\` to the currently selected Azure subscription with the specified event hub as the destination for events.</span></span> <span data-ttu-id="04de1-135">Den här händelse prenumerationen använder standard filter.</span><span class="sxs-lookup"><span data-stu-id="04de1-135">This event subscription uses default filters.</span></span>
+<span data-ttu-id="dc3f0-134">Skapar en ny händelse- \` EventSubscription1 \` till det markerade Azure-abonnemanget med den angivna händelsehubben som mål för händelser.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-134">Creates a new event subscription \`EventSubscription1\` to the currently selected Azure subscription with the specified event hub as the destination for events.</span></span> <span data-ttu-id="dc3f0-135">Den här händelse prenumerationen använder standard filter.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-135">This event subscription uses default filters.</span></span>
 
-### <span data-ttu-id="04de1-136">Exempel 6</span><span class="sxs-lookup"><span data-stu-id="04de1-136">Example 6</span></span>
+### <span data-ttu-id="dc3f0-136">Exempel 6</span><span class="sxs-lookup"><span data-stu-id="dc3f0-136">Example 6</span></span>
 ```powershell
 PS C:\> New-AzEventGridSubscription -ResourceId "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace" -Endpoint https://requestb.in/19qlscd1 -EventSubscriptionName EventSubscription1
 ```
 
-<span data-ttu-id="04de1-137">Skapar en ny händelse prenumerations- \` EventSubscription1 \` till ett EventHub-namnområde med den angivna webhook-destinationens slut punkt https://requestb.in/19qlscd1 .</span><span class="sxs-lookup"><span data-stu-id="04de1-137">Creates a new event subscription \`EventSubscription1\` to an EventHub namespace with the specified webhook destination endpoint https://requestb.in/19qlscd1.</span></span> <span data-ttu-id="04de1-138">Den här händelse prenumerationen använder standard filter.</span><span class="sxs-lookup"><span data-stu-id="04de1-138">This event subscription uses default filters.</span></span>
+<span data-ttu-id="dc3f0-137">Skapar en ny händelse prenumerations- \` EventSubscription1 \` till ett EventHub-namnområde med den angivna webhook-destinationens slut punkt `https://requestb.in/19qlscd1` .</span><span class="sxs-lookup"><span data-stu-id="dc3f0-137">Creates a new event subscription \`EventSubscription1\` to an EventHub namespace with the specified webhook destination endpoint `https://requestb.in/19qlscd1`.</span></span> <span data-ttu-id="dc3f0-138">Den här händelse prenumerationen använder standard filter.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-138">This event subscription uses default filters.</span></span>
 
-## <span data-ttu-id="04de1-139">MALLPARAMETRAR</span><span class="sxs-lookup"><span data-stu-id="04de1-139">PARAMETERS</span></span>
+## <span data-ttu-id="dc3f0-139">MALLPARAMETRAR</span><span class="sxs-lookup"><span data-stu-id="dc3f0-139">PARAMETERS</span></span>
 
-### <span data-ttu-id="04de1-140">-AdvancedFilter</span><span class="sxs-lookup"><span data-stu-id="04de1-140">-AdvancedFilter</span></span>
-<span data-ttu-id="04de1-141">Avancerat filter som anger en matris med flera hash-värden som används för serverbaserad filtrering.</span><span class="sxs-lookup"><span data-stu-id="04de1-141">Advanced filter that specifies an array of multiple Hashtable values that are used for the attribute-based filtering.</span></span> <span data-ttu-id="04de1-142">Varje hash-värde har följande nycklar-värde info: operation, nyckel och värde eller värden.</span><span class="sxs-lookup"><span data-stu-id="04de1-142">Each Hashtable value has the following keys-value info: Operation, Key and Value or Values.</span></span> <span data-ttu-id="04de1-143">Operatorn kan vara något av följande värden: numberin, NumberNotIn, NumberLessThan, NumberGreaterThan, NumberLessThanOrEquals, NumberGreaterThanOrEquals, BoolEquals, Stringin, StringNotIn, StringBeginsWith, StringEndsWith eller StringContains.</span><span class="sxs-lookup"><span data-stu-id="04de1-143">Operator can be one of the following values: NumberIn, NumberNotIn, NumberLessThan, NumberGreaterThan, NumberLessThanOrEquals, NumberGreaterThanOrEquals, BoolEquals, StringIn, StringNotIn, StringBeginsWith, StringEndsWith or StringContains.</span></span> <span data-ttu-id="04de1-144">Nyckel representerar egenskapen nytto Last där de avancerade filtrerings principerna tillämpas.</span><span class="sxs-lookup"><span data-stu-id="04de1-144">Key represents the payload property where the advanced filtering policies are applied.</span></span> <span data-ttu-id="04de1-145">Till sist representerar värdet eller värdena värdena som ska matchas.</span><span class="sxs-lookup"><span data-stu-id="04de1-145">Finally, Value or Values represent the value or set of values to be matched.</span></span> <span data-ttu-id="04de1-146">Det kan vara ett enskilt värde av motsvarande typ eller en matris med värden.</span><span class="sxs-lookup"><span data-stu-id="04de1-146">This can be a single value of the corresponding type or an array of values.</span></span> <span data-ttu-id="04de1-147">Som exempel på avancerade filter parametrar: $AdvancedFilters = @ ($AdvFilter 1, $AdvFilter 2) där $AdvFilter 1 = @ {Operator = "Nummerin"; Key = "data. KEY1"; Värden = @ (1, 2)} och $AdvFilter 2 = @ {Operator = "StringBringsWith"; Key = "ämne"; Värden = @ ("SubjectPrefix1", "SubjectPrefix2")}</span><span class="sxs-lookup"><span data-stu-id="04de1-147">As an example of the advanced filter parameters: $AdvancedFilters=@($AdvFilter1, $AdvFilter2) where $AdvFilter1=@{operator="NumberIn"; key="Data.Key1"; Values=@(1,2)} and $AdvFilter2=@{operator="StringBringsWith"; key="Subject"; Values=@("SubjectPrefix1","SubjectPrefix2")}</span></span>
+### <span data-ttu-id="dc3f0-140">-AdvancedFilter</span><span class="sxs-lookup"><span data-stu-id="dc3f0-140">-AdvancedFilter</span></span>
+<span data-ttu-id="dc3f0-141">Avancerat filter som anger en matris med flera hash-värden som används för serverbaserad filtrering.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-141">Advanced filter that specifies an array of multiple Hashtable values that are used for the attribute-based filtering.</span></span> <span data-ttu-id="dc3f0-142">Varje hash-värde har följande nycklar-värde info: operation, nyckel och värde eller värden.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-142">Each Hashtable value has the following keys-value info: Operation, Key and Value or Values.</span></span> <span data-ttu-id="dc3f0-143">Operatorn kan vara något av följande värden: numberin, NumberNotIn, NumberLessThan, NumberGreaterThan, NumberLessThanOrEquals, NumberGreaterThanOrEquals, BoolEquals, Stringin, StringNotIn, StringBeginsWith, StringEndsWith eller StringContains.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-143">Operator can be one of the following values: NumberIn, NumberNotIn, NumberLessThan, NumberGreaterThan, NumberLessThanOrEquals, NumberGreaterThanOrEquals, BoolEquals, StringIn, StringNotIn, StringBeginsWith, StringEndsWith or StringContains.</span></span> <span data-ttu-id="dc3f0-144">Nyckel representerar egenskapen nytto Last där de avancerade filtrerings principerna tillämpas.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-144">Key represents the payload property where the advanced filtering policies are applied.</span></span> <span data-ttu-id="dc3f0-145">Till sist representerar värdet eller värdena värdena som ska matchas.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-145">Finally, Value or Values represent the value or set of values to be matched.</span></span> <span data-ttu-id="dc3f0-146">Det kan vara ett enskilt värde av motsvarande typ eller en matris med värden.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-146">This can be a single value of the corresponding type or an array of values.</span></span> <span data-ttu-id="dc3f0-147">Som exempel på avancerade filter parametrar: $AdvancedFilters = @ ($AdvFilter 1, $AdvFilter 2) där $AdvFilter 1 = @ {Operator = "Nummerin"; Key = "data. KEY1"; Värden = @ (1, 2)} och $AdvFilter 2 = @ {Operator = "StringBringsWith"; Key = "ämne"; Värden = @ ("SubjectPrefix1", "SubjectPrefix2")}</span><span class="sxs-lookup"><span data-stu-id="dc3f0-147">As an example of the advanced filter parameters: $AdvancedFilters=@($AdvFilter1, $AdvFilter2) where $AdvFilter1=@{operator="NumberIn"; key="Data.Key1"; Values=@(1,2)} and $AdvFilter2=@{operator="StringBringsWith"; key="Subject"; Values=@("SubjectPrefix1","SubjectPrefix2")}</span></span>
 
 ```yaml
 Type: System.Collections.Hashtable[]
@@ -183,8 +183,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04de1-148">-AzureActiveDirectoryApplicationIdOrUri</span><span class="sxs-lookup"><span data-stu-id="04de1-148">-AzureActiveDirectoryApplicationIdOrUri</span></span>
-<span data-ttu-id="04de1-149">ID eller URI för Azure Active Directory-programmet (AAD) för att hämta åtkomst-token som ska inkluderas som Bearer-token i leverans förfrågningar. Gäller bara webhook som mål.</span><span class="sxs-lookup"><span data-stu-id="04de1-149">The Azure Active Directory (AAD) Application Id or Uri to get the access token that will be included as the bearer token in delivery requests.Applicable only for webhook as a destination.</span></span>
+### <span data-ttu-id="dc3f0-148">-AzureActiveDirectoryApplicationIdOrUri</span><span class="sxs-lookup"><span data-stu-id="dc3f0-148">-AzureActiveDirectoryApplicationIdOrUri</span></span>
+<span data-ttu-id="dc3f0-149">ID eller URI för Azure Active Directory-programmet (AAD) för att hämta åtkomst-token som ska inkluderas som Bearer-token i leverans förfrågningar. Gäller bara webhook som mål.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-149">The Azure Active Directory (AAD) Application Id or Uri to get the access token that will be included as the bearer token in delivery requests.Applicable only for webhook as a destination.</span></span>
 
 ```yaml
 Type: System.String
@@ -210,8 +210,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04de1-150">-AzureActiveDirectoryTenantId</span><span class="sxs-lookup"><span data-stu-id="04de1-150">-AzureActiveDirectoryTenantId</span></span>
-<span data-ttu-id="04de1-151">Klient-ID: t för Azure Active Directory (AAD) för att få åtkomsttoken som kommer att inkluderas som Bearer-token i leverans förfrågningar. Gäller bara webhook som mål.</span><span class="sxs-lookup"><span data-stu-id="04de1-151">The Azure Active Directory (AAD) Tenant Id to get the access token that will be included as the bearer token in delivery requests.Applicable only for webhook as a destination.</span></span>
+### <span data-ttu-id="dc3f0-150">-AzureActiveDirectoryTenantId</span><span class="sxs-lookup"><span data-stu-id="dc3f0-150">-AzureActiveDirectoryTenantId</span></span>
+<span data-ttu-id="dc3f0-151">Klient-ID: t för Azure Active Directory (AAD) för att få åtkomsttoken som kommer att inkluderas som Bearer-token i leverans förfrågningar. Gäller bara webhook som mål.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-151">The Azure Active Directory (AAD) Tenant Id to get the access token that will be included as the bearer token in delivery requests.Applicable only for webhook as a destination.</span></span>
 
 ```yaml
 Type: System.String
@@ -237,8 +237,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04de1-152">-DeadLetterEndpoint</span><span class="sxs-lookup"><span data-stu-id="04de1-152">-DeadLetterEndpoint</span></span>
-<span data-ttu-id="04de1-153">Slut punkten som används för att lagra ej levererade händelser.</span><span class="sxs-lookup"><span data-stu-id="04de1-153">The endpoint used for storing undelivered events.</span></span> <span data-ttu-id="04de1-154">Ange Azure Resource ID för en lagrings-BLOB-behållare.</span><span class="sxs-lookup"><span data-stu-id="04de1-154">Specify the Azure resource ID of a Storage blob container.</span></span> <span data-ttu-id="04de1-155">Till exempel:/Subscriptions/[SubscriptionId]/resourceGroups/[ResourceGroupName]/providers/Microsoft.Storage/storageAccounts/[StorageAccountName]/blobServices/default/containers/[ContainerName].</span><span class="sxs-lookup"><span data-stu-id="04de1-155">For example: /subscriptions/[SubscriptionId]/resourceGroups/[ResourceGroupName]/providers/Microsoft.Storage/storageAccounts/[StorageAccountName]/blobServices/default/containers/[ContainerName].</span></span>
+### <span data-ttu-id="dc3f0-152">-DeadLetterEndpoint</span><span class="sxs-lookup"><span data-stu-id="dc3f0-152">-DeadLetterEndpoint</span></span>
+<span data-ttu-id="dc3f0-153">Slut punkten som används för att lagra ej levererade händelser.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-153">The endpoint used for storing undelivered events.</span></span> <span data-ttu-id="dc3f0-154">Ange Azure Resource ID för en lagrings-BLOB-behållare.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-154">Specify the Azure resource ID of a Storage blob container.</span></span> <span data-ttu-id="dc3f0-155">Till exempel:/Subscriptions/[SubscriptionId]/resourceGroups/[ResourceGroupName]/providers/Microsoft.Storage/storageAccounts/[StorageAccountName]/blobServices/default/containers/[ContainerName].</span><span class="sxs-lookup"><span data-stu-id="dc3f0-155">For example: /subscriptions/[SubscriptionId]/resourceGroups/[ResourceGroupName]/providers/Microsoft.Storage/storageAccounts/[StorageAccountName]/blobServices/default/containers/[ContainerName].</span></span>
 
 ```yaml
 Type: System.String
@@ -264,8 +264,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04de1-156">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="04de1-156">-DefaultProfile</span></span>
-<span data-ttu-id="04de1-157">Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure</span><span class="sxs-lookup"><span data-stu-id="04de1-157">The credentials, account, tenant, and subscription used for communication with azure</span></span>
+### <span data-ttu-id="dc3f0-156">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="dc3f0-156">-DefaultProfile</span></span>
+<span data-ttu-id="dc3f0-157">Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure</span><span class="sxs-lookup"><span data-stu-id="dc3f0-157">The credentials, account, tenant, and subscription used for communication with azure</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -279,8 +279,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04de1-158">-DeliverySchema</span><span class="sxs-lookup"><span data-stu-id="04de1-158">-DeliverySchema</span></span>
-<span data-ttu-id="04de1-159">Schemat som ska användas när du levererar händelser till målet.</span><span class="sxs-lookup"><span data-stu-id="04de1-159">The schema to be used when delivering events to the destination.</span></span> <span data-ttu-id="04de1-160">Möjliga värden är: eventgridschema, CustomInputSchema eller cloudeventv01schema.</span><span class="sxs-lookup"><span data-stu-id="04de1-160">The possible values are: eventgridschema, CustomInputSchema, or cloudeventv01schema.</span></span> <span data-ttu-id="04de1-161">Standardvärdet är CustomInputSchema.</span><span class="sxs-lookup"><span data-stu-id="04de1-161">Default value is CustomInputSchema.</span></span>
+### <span data-ttu-id="dc3f0-158">-DeliverySchema</span><span class="sxs-lookup"><span data-stu-id="dc3f0-158">-DeliverySchema</span></span>
+<span data-ttu-id="dc3f0-159">Schemat som ska användas när du levererar händelser till målet.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-159">The schema to be used when delivering events to the destination.</span></span> <span data-ttu-id="dc3f0-160">Möjliga värden är: eventgridschema, CustomInputSchema eller cloudeventv01schema.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-160">The possible values are: eventgridschema, CustomInputSchema, or cloudeventv01schema.</span></span> <span data-ttu-id="dc3f0-161">Standardvärdet är CustomInputSchema.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-161">Default value is CustomInputSchema.</span></span>
 
 ```yaml
 Type: System.String
@@ -308,8 +308,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04de1-162">-DomainInputObject</span><span class="sxs-lookup"><span data-stu-id="04de1-162">-DomainInputObject</span></span>
-<span data-ttu-id="04de1-163">EventGrid.</span><span class="sxs-lookup"><span data-stu-id="04de1-163">EventGrid Domain object.</span></span>
+### <span data-ttu-id="dc3f0-162">-DomainInputObject</span><span class="sxs-lookup"><span data-stu-id="dc3f0-162">-DomainInputObject</span></span>
+<span data-ttu-id="dc3f0-163">EventGrid.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-163">EventGrid Domain object.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.EventGrid.Models.PSDomain
@@ -323,8 +323,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04de1-164">-Domän namn</span><span class="sxs-lookup"><span data-stu-id="04de1-164">-DomainName</span></span>
-<span data-ttu-id="04de1-165">Namnet på den domän i händelse rutnätet där händelse prenumerationen ska skapas.</span><span class="sxs-lookup"><span data-stu-id="04de1-165">The name of the Event Grid domain to which the event subscription should be created.</span></span>
+### <span data-ttu-id="dc3f0-164">-Domän namn</span><span class="sxs-lookup"><span data-stu-id="dc3f0-164">-DomainName</span></span>
+<span data-ttu-id="dc3f0-165">Namnet på den domän i händelse rutnätet där händelse prenumerationen ska skapas.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-165">The name of the Event Grid domain to which the event subscription should be created.</span></span>
 
 ```yaml
 Type: System.String
@@ -338,8 +338,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04de1-166">-DomainTopicInputObject</span><span class="sxs-lookup"><span data-stu-id="04de1-166">-DomainTopicInputObject</span></span>
-<span data-ttu-id="04de1-167">EventGrid Domain-objekt.</span><span class="sxs-lookup"><span data-stu-id="04de1-167">EventGrid Domain Topic object.</span></span>
+### <span data-ttu-id="dc3f0-166">-DomainTopicInputObject</span><span class="sxs-lookup"><span data-stu-id="dc3f0-166">-DomainTopicInputObject</span></span>
+<span data-ttu-id="dc3f0-167">EventGrid Domain-objekt.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-167">EventGrid Domain Topic object.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.EventGrid.Models.PSDomainTopic
@@ -353,8 +353,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04de1-168">-DomainTopicName</span><span class="sxs-lookup"><span data-stu-id="04de1-168">-DomainTopicName</span></span>
-<span data-ttu-id="04de1-169">Namnet på den domän där händelse prenumerationen ska skapas.</span><span class="sxs-lookup"><span data-stu-id="04de1-169">The name of the domain topic to which the event subscription should be created.</span></span>
+### <span data-ttu-id="dc3f0-168">-DomainTopicName</span><span class="sxs-lookup"><span data-stu-id="dc3f0-168">-DomainTopicName</span></span>
+<span data-ttu-id="dc3f0-169">Namnet på den domän där händelse prenumerationen ska skapas.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-169">The name of the domain topic to which the event subscription should be created.</span></span>
 
 ```yaml
 Type: System.String
@@ -368,9 +368,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04de1-170">-Slut punkt</span><span class="sxs-lookup"><span data-stu-id="04de1-170">-Endpoint</span></span>
-<span data-ttu-id="04de1-171">Destinations slut punkt för händelse prenumeration.</span><span class="sxs-lookup"><span data-stu-id="04de1-171">Event subscription destination endpoint.</span></span>
-<span data-ttu-id="04de1-172">Detta kan vara en webhook-URL eller Azure-resurs-ID för en EventHub, lagringsprovider, hybridconnection eller servicebusqueue.</span><span class="sxs-lookup"><span data-stu-id="04de1-172">This can be a webhook URL, or the Azure resource ID of an EventHub, storage queue, hybridconnection or servicebusqueue.</span></span> <span data-ttu-id="04de1-173">Resurs-ID för en hybrid anslutning har till exempel följande form:/Subscriptions/[Azure Subscription ID]/resourceGroups/[ResourceGroupName]/providers/Microsoft.Relay/namespaces/[NamespaceName]/hybridConnections/[HybridConnectionName].</span><span class="sxs-lookup"><span data-stu-id="04de1-173">For example, the resource ID for a hybrid connection takes the following form: /subscriptions/[Azure Subscription ID]/resourceGroups/[ResourceGroupName]/providers/Microsoft.Relay/namespaces/[NamespaceName]/hybridConnections/[HybridConnectionName].</span></span> <span data-ttu-id="04de1-174">Det förväntas att mål slut punkten skapas och är tillgänglig för användning innan ett händelse rutnät körs.</span><span class="sxs-lookup"><span data-stu-id="04de1-174">It is expected that the destination endpoint to be created and available for use before executing any Event Grid cmdlets.</span></span>
+### <span data-ttu-id="dc3f0-170">-Slut punkt</span><span class="sxs-lookup"><span data-stu-id="dc3f0-170">-Endpoint</span></span>
+<span data-ttu-id="dc3f0-171">Destinations slut punkt för händelse prenumeration.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-171">Event subscription destination endpoint.</span></span>
+<span data-ttu-id="dc3f0-172">Detta kan vara en webhook-URL eller Azure-resurs-ID för en EventHub, lagringsprovider, hybridconnection eller servicebusqueue.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-172">This can be a webhook URL, or the Azure resource ID of an EventHub, storage queue, hybridconnection or servicebusqueue.</span></span> <span data-ttu-id="dc3f0-173">Resurs-ID för en hybrid anslutning har till exempel följande form:/Subscriptions/[Azure Subscription ID]/resourceGroups/[ResourceGroupName]/providers/Microsoft.Relay/namespaces/[NamespaceName]/hybridConnections/[HybridConnectionName].</span><span class="sxs-lookup"><span data-stu-id="dc3f0-173">For example, the resource ID for a hybrid connection takes the following form: /subscriptions/[Azure Subscription ID]/resourceGroups/[ResourceGroupName]/providers/Microsoft.Relay/namespaces/[NamespaceName]/hybridConnections/[HybridConnectionName].</span></span> <span data-ttu-id="dc3f0-174">Det förväntas att mål slut punkten skapas och är tillgänglig för användning innan ett händelse rutnät körs.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-174">It is expected that the destination endpoint to be created and available for use before executing any Event Grid cmdlets.</span></span>
 
 
 ```yaml
@@ -397,9 +397,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04de1-175">-EndpointType</span><span class="sxs-lookup"><span data-stu-id="04de1-175">-EndpointType</span></span>
-<span data-ttu-id="04de1-176">Typ av slut punkt.</span><span class="sxs-lookup"><span data-stu-id="04de1-176">Endpoint Type.</span></span>
-<span data-ttu-id="04de1-177">Det här kan vara webhook, eventhub, storagequeue, hybridconnection eller servicebusqueue.</span><span class="sxs-lookup"><span data-stu-id="04de1-177">This can be webhook, eventhub, storagequeue, hybridconnection or servicebusqueue.</span></span> <span data-ttu-id="04de1-178">Standardvärdet är webhook.</span><span class="sxs-lookup"><span data-stu-id="04de1-178">Default value is webhook.</span></span>
+### <span data-ttu-id="dc3f0-175">-EndpointType</span><span class="sxs-lookup"><span data-stu-id="dc3f0-175">-EndpointType</span></span>
+<span data-ttu-id="dc3f0-176">Typ av slut punkt.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-176">Endpoint Type.</span></span>
+<span data-ttu-id="dc3f0-177">Det här kan vara webhook, eventhub, storagequeue, hybridconnection eller servicebusqueue.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-177">This can be webhook, eventhub, storagequeue, hybridconnection or servicebusqueue.</span></span> <span data-ttu-id="dc3f0-178">Standardvärdet är webhook.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-178">Default value is webhook.</span></span>
 
 ```yaml
 Type: System.String
@@ -427,8 +427,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04de1-179">-EventSubscriptionName</span><span class="sxs-lookup"><span data-stu-id="04de1-179">-EventSubscriptionName</span></span>
-<span data-ttu-id="04de1-180">Namnet på händelse prenumerationen</span><span class="sxs-lookup"><span data-stu-id="04de1-180">The name of the event subscription</span></span>
+### <span data-ttu-id="dc3f0-179">-EventSubscriptionName</span><span class="sxs-lookup"><span data-stu-id="dc3f0-179">-EventSubscriptionName</span></span>
+<span data-ttu-id="dc3f0-180">Namnet på händelse prenumerationen</span><span class="sxs-lookup"><span data-stu-id="dc3f0-180">The name of the event subscription</span></span>
 
 ```yaml
 Type: System.String
@@ -454,8 +454,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04de1-181">-EventTtl</span><span class="sxs-lookup"><span data-stu-id="04de1-181">-EventTtl</span></span>
-<span data-ttu-id="04de1-182">Tid i minuter för händelse leverans.</span><span class="sxs-lookup"><span data-stu-id="04de1-182">The time in minutes for the event delivery.</span></span> <span data-ttu-id="04de1-183">Värdet måste vara mellan 1 och 1440</span><span class="sxs-lookup"><span data-stu-id="04de1-183">This value must be between 1 and 1440</span></span>
+### <span data-ttu-id="dc3f0-181">-EventTtl</span><span class="sxs-lookup"><span data-stu-id="dc3f0-181">-EventTtl</span></span>
+<span data-ttu-id="dc3f0-182">Tid i minuter för händelse leverans.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-182">The time in minutes for the event delivery.</span></span> <span data-ttu-id="dc3f0-183">Värdet måste vara mellan 1 och 1440</span><span class="sxs-lookup"><span data-stu-id="dc3f0-183">This value must be between 1 and 1440</span></span>
 
 ```yaml
 Type: System.Int32
@@ -481,8 +481,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04de1-184">-Förfallo</span><span class="sxs-lookup"><span data-stu-id="04de1-184">-ExpirationDate</span></span>
-<span data-ttu-id="04de1-185">Avgör förfallo dag/tid för händelse prenumerationen efter vilken händelse prenumerationen dras tillbaka.</span><span class="sxs-lookup"><span data-stu-id="04de1-185">Determines the expiration DateTime for the event subscription after which event subscription will retire.</span></span>
+### <span data-ttu-id="dc3f0-184">-Förfallo</span><span class="sxs-lookup"><span data-stu-id="dc3f0-184">-ExpirationDate</span></span>
+<span data-ttu-id="dc3f0-185">Avgör förfallo dag/tid för händelse prenumerationen efter vilken händelse prenumerationen dras tillbaka.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-185">Determines the expiration DateTime for the event subscription after which event subscription will retire.</span></span>
 
 ```yaml
 Type: System.DateTime
@@ -496,8 +496,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04de1-186">-IncludedEventType</span><span class="sxs-lookup"><span data-stu-id="04de1-186">-IncludedEventType</span></span>
-<span data-ttu-id="04de1-187">Filter som anger en lista över händelse typer som ska ingå. Om inget anges tas alla händelse typer med.</span><span class="sxs-lookup"><span data-stu-id="04de1-187">Filter that specifies a list of event types to include.If not specified, all event types will be included.</span></span>
+### <span data-ttu-id="dc3f0-186">-IncludedEventType</span><span class="sxs-lookup"><span data-stu-id="dc3f0-186">-IncludedEventType</span></span>
+<span data-ttu-id="dc3f0-187">Filter som anger en lista över händelse typer som ska ingå. Om inget anges tas alla händelse typer med.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-187">Filter that specifies a list of event types to include.If not specified, all event types will be included.</span></span>
 
 ```yaml
 Type: System.String[]
@@ -523,8 +523,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04de1-188">-InputObject</span><span class="sxs-lookup"><span data-stu-id="04de1-188">-InputObject</span></span>
-<span data-ttu-id="04de1-189">EventGrid ämne.</span><span class="sxs-lookup"><span data-stu-id="04de1-189">EventGrid Topic object.</span></span>
+### <span data-ttu-id="dc3f0-188">-InputObject</span><span class="sxs-lookup"><span data-stu-id="dc3f0-188">-InputObject</span></span>
+<span data-ttu-id="dc3f0-189">EventGrid ämne.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-189">EventGrid Topic object.</span></span>
 
 ```yaml
 Type: Microsoft.Azure.Commands.EventGrid.Models.PSTopic
@@ -538,8 +538,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04de1-190">-Etikett</span><span class="sxs-lookup"><span data-stu-id="04de1-190">-Label</span></span>
-<span data-ttu-id="04de1-191">Etiketter för händelse abonnemanget</span><span class="sxs-lookup"><span data-stu-id="04de1-191">Labels for the event subscription</span></span>
+### <span data-ttu-id="dc3f0-190">-Etikett</span><span class="sxs-lookup"><span data-stu-id="dc3f0-190">-Label</span></span>
+<span data-ttu-id="dc3f0-191">Etiketter för händelse abonnemanget</span><span class="sxs-lookup"><span data-stu-id="dc3f0-191">Labels for the event subscription</span></span>
 
 ```yaml
 Type: System.String[]
@@ -565,8 +565,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04de1-192">-MaxDeliveryAttempt</span><span class="sxs-lookup"><span data-stu-id="04de1-192">-MaxDeliveryAttempt</span></span>
-<span data-ttu-id="04de1-193">Maximalt antal försök att leverera händelsen.</span><span class="sxs-lookup"><span data-stu-id="04de1-193">The maximum number of attempts to deliver the event.</span></span> <span data-ttu-id="04de1-194">Värdet måste vara mellan 1 och 30</span><span class="sxs-lookup"><span data-stu-id="04de1-194">This value must be between 1 and 30</span></span>
+### <span data-ttu-id="dc3f0-192">-MaxDeliveryAttempt</span><span class="sxs-lookup"><span data-stu-id="dc3f0-192">-MaxDeliveryAttempt</span></span>
+<span data-ttu-id="dc3f0-193">Maximalt antal försök att leverera händelsen.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-193">The maximum number of attempts to deliver the event.</span></span> <span data-ttu-id="dc3f0-194">Värdet måste vara mellan 1 och 30</span><span class="sxs-lookup"><span data-stu-id="dc3f0-194">This value must be between 1 and 30</span></span>
 
 ```yaml
 Type: System.Int32
@@ -592,8 +592,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04de1-195">-MaxEventsPerBatch</span><span class="sxs-lookup"><span data-stu-id="04de1-195">-MaxEventsPerBatch</span></span>
-<span data-ttu-id="04de1-196">Maximalt antal händelser i en grupp.</span><span class="sxs-lookup"><span data-stu-id="04de1-196">The maximum number of events in a batch.</span></span> <span data-ttu-id="04de1-197">Värdet måste vara mellan 1 och 5000.</span><span class="sxs-lookup"><span data-stu-id="04de1-197">This value must be between 1 and 5000.</span></span> <span data-ttu-id="04de1-198">Den här parametern är giltig när Endpint-typen endast är webhook.</span><span class="sxs-lookup"><span data-stu-id="04de1-198">This parameter is valid when Endpint Type is webhook only.</span></span>
+### <span data-ttu-id="dc3f0-195">-MaxEventsPerBatch</span><span class="sxs-lookup"><span data-stu-id="dc3f0-195">-MaxEventsPerBatch</span></span>
+<span data-ttu-id="dc3f0-196">Maximalt antal händelser i en grupp.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-196">The maximum number of events in a batch.</span></span> <span data-ttu-id="dc3f0-197">Värdet måste vara mellan 1 och 5000.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-197">This value must be between 1 and 5000.</span></span> <span data-ttu-id="dc3f0-198">Den här parametern är giltig när Endpint-typen endast är webhook.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-198">This parameter is valid when Endpint Type is webhook only.</span></span>
 
 ```yaml
 Type: System.Int32
@@ -619,8 +619,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04de1-199">-PreferredBatchSizeInKiloBytes</span><span class="sxs-lookup"><span data-stu-id="04de1-199">-PreferredBatchSizeInKiloBytes</span></span>
-<span data-ttu-id="04de1-200">Önskad batchstorlek i kilobyte.</span><span class="sxs-lookup"><span data-stu-id="04de1-200">The preferred batch size in kilobytes.</span></span> <span data-ttu-id="04de1-201">Värdet måste vara mellan 1 och 1024.</span><span class="sxs-lookup"><span data-stu-id="04de1-201">This value must be between 1 and 1024.</span></span> <span data-ttu-id="04de1-202">Den här parametern är giltig när Endpint-typen endast är webhook.</span><span class="sxs-lookup"><span data-stu-id="04de1-202">This parameter is valid when Endpint Type is webhook only.</span></span>
+### <span data-ttu-id="dc3f0-199">-PreferredBatchSizeInKiloBytes</span><span class="sxs-lookup"><span data-stu-id="dc3f0-199">-PreferredBatchSizeInKiloBytes</span></span>
+<span data-ttu-id="dc3f0-200">Önskad batchstorlek i kilobyte.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-200">The preferred batch size in kilobytes.</span></span> <span data-ttu-id="dc3f0-201">Värdet måste vara mellan 1 och 1024.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-201">This value must be between 1 and 1024.</span></span> <span data-ttu-id="dc3f0-202">Den här parametern är giltig när Endpint-typen endast är webhook.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-202">This parameter is valid when Endpint Type is webhook only.</span></span>
 
 ```yaml
 Type: System.Int32
@@ -646,8 +646,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04de1-203">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="04de1-203">-ResourceGroupName</span></span>
-<span data-ttu-id="04de1-204">Ämnets resurs grupp.</span><span class="sxs-lookup"><span data-stu-id="04de1-204">The resource group of the topic.</span></span>
+### <span data-ttu-id="dc3f0-203">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="dc3f0-203">-ResourceGroupName</span></span>
+<span data-ttu-id="dc3f0-204">Ämnets resurs grupp.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-204">The resource group of the topic.</span></span>
 
 ```yaml
 Type: System.String
@@ -673,8 +673,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04de1-205">-ResourceId</span><span class="sxs-lookup"><span data-stu-id="04de1-205">-ResourceId</span></span>
-<span data-ttu-id="04de1-206">ID för den resurs som händelse prenumerationen ska skapas för.</span><span class="sxs-lookup"><span data-stu-id="04de1-206">The identifier of the resource to which the event subscription should be created.</span></span>
+### <span data-ttu-id="dc3f0-205">-ResourceId</span><span class="sxs-lookup"><span data-stu-id="dc3f0-205">-ResourceId</span></span>
+<span data-ttu-id="dc3f0-206">ID för den resurs som händelse prenumerationen ska skapas för.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-206">The identifier of the resource to which the event subscription should be created.</span></span>
 
 ```yaml
 Type: System.String
@@ -688,9 +688,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04de1-207">-SubjectBeginsWith</span><span class="sxs-lookup"><span data-stu-id="04de1-207">-SubjectBeginsWith</span></span>
-<span data-ttu-id="04de1-208">Filter som anger att endast händelser som matchar det angivna prefixet för subjektet kommer att ingå.</span><span class="sxs-lookup"><span data-stu-id="04de1-208">Filter that specifies that only events matching the specified subject prefix will be included.</span></span>
-<span data-ttu-id="04de1-209">Om inget anges inkluderas händelser med alla ämnes prefix.</span><span class="sxs-lookup"><span data-stu-id="04de1-209">If not specified, events with all subject prefixes will be included.</span></span>
+### <span data-ttu-id="dc3f0-207">-SubjectBeginsWith</span><span class="sxs-lookup"><span data-stu-id="dc3f0-207">-SubjectBeginsWith</span></span>
+<span data-ttu-id="dc3f0-208">Filter som anger att endast händelser som matchar det angivna prefixet för subjektet kommer att ingå.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-208">Filter that specifies that only events matching the specified subject prefix will be included.</span></span>
+<span data-ttu-id="dc3f0-209">Om inget anges inkluderas händelser med alla ämnes prefix.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-209">If not specified, events with all subject prefixes will be included.</span></span>
 
 ```yaml
 Type: System.String
@@ -716,9 +716,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04de1-210">-SubjectCaseSensitive</span><span class="sxs-lookup"><span data-stu-id="04de1-210">-SubjectCaseSensitive</span></span>
-<span data-ttu-id="04de1-211">Filter som anger att ämnes fältet ska jämföras på ett skift läge.</span><span class="sxs-lookup"><span data-stu-id="04de1-211">Filter that specifies that the subject field should be compared in a case sensitive manner.</span></span>
-<span data-ttu-id="04de1-212">Om det inte anges jämförs ämnet med ett skift läges okänsligt.</span><span class="sxs-lookup"><span data-stu-id="04de1-212">If not specified, subject will be compared in a case insensitive manner.</span></span>
+### <span data-ttu-id="dc3f0-210">-SubjectCaseSensitive</span><span class="sxs-lookup"><span data-stu-id="dc3f0-210">-SubjectCaseSensitive</span></span>
+<span data-ttu-id="dc3f0-211">Filter som anger att ämnes fältet ska jämföras på ett skift läge.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-211">Filter that specifies that the subject field should be compared in a case sensitive manner.</span></span>
+<span data-ttu-id="dc3f0-212">Om det inte anges jämförs ämnet med ett skift läges okänsligt.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-212">If not specified, subject will be compared in a case insensitive manner.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -732,9 +732,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04de1-213">-SubjectEndsWith</span><span class="sxs-lookup"><span data-stu-id="04de1-213">-SubjectEndsWith</span></span>
-<span data-ttu-id="04de1-214">Filter som anger att endast händelser som matchar det angivna ämnes tillägget tas med.</span><span class="sxs-lookup"><span data-stu-id="04de1-214">Filter that specifies that only events matching the specified subject suffix will be included.</span></span>
-<span data-ttu-id="04de1-215">Om inget anges inkluderas händelser med alla ämnes suffix.</span><span class="sxs-lookup"><span data-stu-id="04de1-215">If not specified, events with all subject suffixes will be included.</span></span>
+### <span data-ttu-id="dc3f0-213">-SubjectEndsWith</span><span class="sxs-lookup"><span data-stu-id="dc3f0-213">-SubjectEndsWith</span></span>
+<span data-ttu-id="dc3f0-214">Filter som anger att endast händelser som matchar det angivna ämnes tillägget tas med.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-214">Filter that specifies that only events matching the specified subject suffix will be included.</span></span>
+<span data-ttu-id="dc3f0-215">Om inget anges inkluderas händelser med alla ämnes suffix.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-215">If not specified, events with all subject suffixes will be included.</span></span>
 
 ```yaml
 Type: System.String
@@ -760,8 +760,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04de1-216">-TopicName</span><span class="sxs-lookup"><span data-stu-id="04de1-216">-TopicName</span></span>
-<span data-ttu-id="04de1-217">Namnet på ämnet där händelse prenumerationen ska skapas.</span><span class="sxs-lookup"><span data-stu-id="04de1-217">The name of the topic to which the event subscription should be created.</span></span>
+### <span data-ttu-id="dc3f0-216">-TopicName</span><span class="sxs-lookup"><span data-stu-id="dc3f0-216">-TopicName</span></span>
+<span data-ttu-id="dc3f0-217">Namnet på ämnet där händelse prenumerationen ska skapas.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-217">The name of the topic to which the event subscription should be created.</span></span>
 
 ```yaml
 Type: System.String
@@ -775,8 +775,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04de1-218">-Bekräfta</span><span class="sxs-lookup"><span data-stu-id="04de1-218">-Confirm</span></span>
-<span data-ttu-id="04de1-219">Du uppmanas att bekräfta innan du kör cmdleten.</span><span class="sxs-lookup"><span data-stu-id="04de1-219">Prompts you for confirmation before running the cmdlet.</span></span>
+### <span data-ttu-id="dc3f0-218">-Bekräfta</span><span class="sxs-lookup"><span data-stu-id="dc3f0-218">-Confirm</span></span>
+<span data-ttu-id="dc3f0-219">Du uppmanas att bekräfta innan du kör cmdleten.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-219">Prompts you for confirmation before running the cmdlet.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -790,9 +790,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04de1-220">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="04de1-220">-WhatIf</span></span>
-<span data-ttu-id="04de1-221">Visar vad som händer om cmdleten körs.</span><span class="sxs-lookup"><span data-stu-id="04de1-221">Shows what would happen if the cmdlet runs.</span></span>
-<span data-ttu-id="04de1-222">Cmdleten körs inte.</span><span class="sxs-lookup"><span data-stu-id="04de1-222">The cmdlet is not run.</span></span>
+### <span data-ttu-id="dc3f0-220">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="dc3f0-220">-WhatIf</span></span>
+<span data-ttu-id="dc3f0-221">Visar vad som händer om cmdleten körs.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-221">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="dc3f0-222">Cmdleten körs inte.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-222">The cmdlet is not run.</span></span>
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -806,27 +806,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### <span data-ttu-id="04de1-223">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="04de1-223">CommonParameters</span></span>
-<span data-ttu-id="04de1-224">Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="04de1-224">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="04de1-225">Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="04de1-225">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+### <span data-ttu-id="dc3f0-223">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="dc3f0-223">CommonParameters</span></span>
+<span data-ttu-id="dc3f0-224">Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="dc3f0-224">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="dc3f0-225">Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="dc3f0-225">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
 
-## <span data-ttu-id="04de1-226">KOSTNADS</span><span class="sxs-lookup"><span data-stu-id="04de1-226">INPUTS</span></span>
+## <span data-ttu-id="dc3f0-226">KOSTNADS</span><span class="sxs-lookup"><span data-stu-id="dc3f0-226">INPUTS</span></span>
 
-### <span data-ttu-id="04de1-227">System. String</span><span class="sxs-lookup"><span data-stu-id="04de1-227">System.String</span></span>
+### <span data-ttu-id="dc3f0-227">System. String</span><span class="sxs-lookup"><span data-stu-id="dc3f0-227">System.String</span></span>
 
-### <span data-ttu-id="04de1-228">Microsoft. Azure. commands. EventGrid. Models. PSTopic</span><span class="sxs-lookup"><span data-stu-id="04de1-228">Microsoft.Azure.Commands.EventGrid.Models.PSTopic</span></span>
+### <span data-ttu-id="dc3f0-228">Microsoft. Azure. commands. EventGrid. Models. PSTopic</span><span class="sxs-lookup"><span data-stu-id="dc3f0-228">Microsoft.Azure.Commands.EventGrid.Models.PSTopic</span></span>
 
-### <span data-ttu-id="04de1-229">Microsoft.Azure.Commands.EventGrid.Models.PSDomain</span><span class="sxs-lookup"><span data-stu-id="04de1-229">Microsoft.Azure.Commands.EventGrid.Models.PSDomain</span></span>
+### <span data-ttu-id="dc3f0-229">Microsoft.Azure.Commands.EventGrid.Models.PSDomain</span><span class="sxs-lookup"><span data-stu-id="dc3f0-229">Microsoft.Azure.Commands.EventGrid.Models.PSDomain</span></span>
 
-### <span data-ttu-id="04de1-230">Microsoft.Azure.Commands.EventGrid.Models.PSDomainTopic</span><span class="sxs-lookup"><span data-stu-id="04de1-230">Microsoft.Azure.Commands.EventGrid.Models.PSDomainTopic</span></span>
+### <span data-ttu-id="dc3f0-230">Microsoft.Azure.Commands.EventGrid.Models.PSDomainTopic</span><span class="sxs-lookup"><span data-stu-id="dc3f0-230">Microsoft.Azure.Commands.EventGrid.Models.PSDomainTopic</span></span>
 
-### <span data-ttu-id="04de1-231">System. string []</span><span class="sxs-lookup"><span data-stu-id="04de1-231">System.String[]</span></span>
+### <span data-ttu-id="dc3f0-231">System. string []</span><span class="sxs-lookup"><span data-stu-id="dc3f0-231">System.String[]</span></span>
 
-### <span data-ttu-id="04de1-232">System. Int32</span><span class="sxs-lookup"><span data-stu-id="04de1-232">System.Int32</span></span>
+### <span data-ttu-id="dc3f0-232">System. Int32</span><span class="sxs-lookup"><span data-stu-id="dc3f0-232">System.Int32</span></span>
 
-## <span data-ttu-id="04de1-233">VÄRDEN</span><span class="sxs-lookup"><span data-stu-id="04de1-233">OUTPUTS</span></span>
+## <span data-ttu-id="dc3f0-233">VÄRDEN</span><span class="sxs-lookup"><span data-stu-id="dc3f0-233">OUTPUTS</span></span>
 
-### <span data-ttu-id="04de1-234">Microsoft. Azure. commands. EventGrid. Models. PSEventSubscription</span><span class="sxs-lookup"><span data-stu-id="04de1-234">Microsoft.Azure.Commands.EventGrid.Models.PSEventSubscription</span></span>
+### <span data-ttu-id="dc3f0-234">Microsoft. Azure. commands. EventGrid. Models. PSEventSubscription</span><span class="sxs-lookup"><span data-stu-id="dc3f0-234">Microsoft.Azure.Commands.EventGrid.Models.PSEventSubscription</span></span>
 
-## <span data-ttu-id="04de1-235">ANMÄRKNINGAR</span><span class="sxs-lookup"><span data-stu-id="04de1-235">NOTES</span></span>
+## <span data-ttu-id="dc3f0-235">ANMÄRKNINGAR</span><span class="sxs-lookup"><span data-stu-id="dc3f0-235">NOTES</span></span>
 
-## <span data-ttu-id="04de1-236">RELATERADE LÄNKAR</span><span class="sxs-lookup"><span data-stu-id="04de1-236">RELATED LINKS</span></span>
+## <span data-ttu-id="dc3f0-236">RELATERADE LÄNKAR</span><span class="sxs-lookup"><span data-stu-id="dc3f0-236">RELATED LINKS</span></span>
