@@ -6,12 +6,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/ad
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Add-AzVMSecret.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Add-AzVMSecret.md
-ms.openlocfilehash: 281b74aa14431a0bcfe0d138a78db73e28bcfeb4
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.openlocfilehash: f17da705ed65484e789a803308bcaddb60e409f3
+ms.sourcegitcommit: 7aaa37edc9681b643946505bcbc3cc6435f1d7ca
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "93925322"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94395143"
 ---
 # Add-AzVMSecret
 
@@ -30,7 +30,7 @@ Cmdleten **Add-AzVMSecret** lägger till en hemlighet till en virtuell dator.
 Med det här värdet kan du lägga till ett certifikat till den virtuella datorn.
 Hemligheten måste lagras i ett nyckel valv.
 Mer information om viktiga valv finns i [Vad är Azure Key Vault?](https://azure.microsoft.com/en-us/documentation/articles/key-vault-whatis/).
-Mer information om cmdletar finns i cmdlets för [Azure Key vaulting](https://msdn.microsoft.com/library/azure/dn868052.aspx) i Microsoft Developer Network Library eller cmdleten [set-AzureKeyVaultSecret](/powershell/module/azurerm.keyvault/set-azurekeyvaultsecret) .
+Mer information om cmdletar finns i cmdletarna för [Azure Key Vault](/powershell/module/az.keyvault) eller cmdleten [set-AzKeyVaultSecret](/powershell/module/az.keyvault/set-azkeyvaultsecret) .
 
 ## BESKRIVS
 
@@ -90,7 +90,7 @@ Anger URL-adressen som pekar på en nyckel valv hemlighet som innehåller ett ce
 
 Certifikatet är base64-kodning av följande JSON-objekt (Java Object Notation), som är kodat i UTF-8:
 
-{"data": " \< Base64-kodad-fil \> "," datatyp ":" \< fil format \> "," lösen ord ":" \< PFX-File-Password \> "}
+{"data": " \<Base64-encoded-file\> ", "datatyp": " \<file-format\> ", "lösen ord": " \<pfx-file-password\> "}
 
 
 För närvarande accepterar data typen bara. PFX-filer.

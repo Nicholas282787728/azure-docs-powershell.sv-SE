@@ -6,12 +6,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/ad
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Add-AzVMSecret.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Add-AzVMSecret.md
-ms.openlocfilehash: b6d5d7b68726d1e5121491a6b4c5b371a9ec7cec
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 4c9a1c544b08f0bed4dbade12e0f75d28f3ba24a
+ms.sourcegitcommit: 7aaa37edc9681b643946505bcbc3cc6435f1d7ca
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93917513"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94395296"
 ---
 # Add-AzVMSecret
 
@@ -30,7 +30,7 @@ Cmdleten **Add-AzVMSecret** lägger till en hemlighet till en virtuell dator.
 Med det här värdet kan du lägga till ett certifikat till den virtuella datorn.
 Hemligheten måste lagras i ett nyckel valv.
 Mer information om viktiga valv finns i [Vad är Azure Key Vault?](https://azure.microsoft.com/en-us/documentation/articles/key-vault-whatis/).
-Mer information om cmdletar finns i cmdlets för [Azure Key vaulting](https://msdn.microsoft.com/library/azure/dn868052.aspx) i Microsoft Developer Network Library eller cmdleten [set-AzKeyVaultSecret](/powershell/module/az.keyvault/set-azkeyvaultsecret) .
+Mer information om cmdletar finns i cmdletarna för [Azure Key Vault](/powershell/module/az.keyvault) eller cmdleten [set-AzKeyVaultSecret](/powershell/module/az.keyvault/set-azkeyvaultsecret) .
 
 ## BESKRIVS
 
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 
 ### -CertificateUrl
 Anger URL-adressen som pekar på en nyckel valv hemlighet som innehåller ett certifikat.
-Certifikatet är base64-kodningen för följande JavaScript-objekt, som är kodade i UTF-8: {"data": " \< Base64-kodad-fil \> ", "datatyp": " \< fil format \> ", "lösen ord": " \< PFX-File-Password \> "} för närvarande endast accepterar. PFX-filer.
+Certifikatet är base64-kodningen för följande JavaScript-objekt, som är kodade i UTF-8: {"data": " \<Base64-encoded-file\> ", "datatyp": " \<file-format\> ", "lösen ord": " \<pfx-file-password\> "}, för närvarande accepterar data typen bara. PFX-filer.
 
 ```yaml
 Type: System.String
