@@ -5,12 +5,13 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 05/14/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: a263f1d363b3d1a1cce433a6112c55afe65262a4
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.service: azure-powershell
+ms.openlocfilehash: f7a1658cdcafd1e8d6cba51ead26f9ddaa8c4c56
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92002189"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93407396"
 ---
 # <a name="install-azure-powershell"></a>Installera Azure PowerShell
 
@@ -63,7 +64,7 @@ You are installing the modules from an untrusted repository. If you trust this r
 its InstallationPolicy value by running the `Set-PSRepository` cmdlet.
 
 Are you sure you want to install the modules from 'PSGallery'?
-[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"):
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"):
 ```
 
 Svara `Yes` eller `Yes to All` för att fortsätta med installationen.
@@ -134,7 +135,7 @@ Du måste upprepa de här stegen för varje ny PowerShell-session du startar. In
 
 Om du vill uppdatera en PowerShell-modul ska du använda samma metod som för att installera modulen. Om du ursprungligen till exempel använde `Install-Module` använder du [Update-Module](/powershell/module/powershellget/update-module) för att hämta den senaste versionen. Om du ursprungligen använde MSI-paketet laddar du ned och installerar det nya MSI-paketet.
 
-PowerShellGet-cmdletar kan inte uppdatera moduler som har installerats från ett MSI-paket. MSI-paket uppdaterar inte moduler som har installerats med PowerShellGet. Om du har problem med att uppdatera med PowershellGet bör du **installera om**, i stället för **uppdatera**. Ominstallation görs på samma sätt som när du installerar, men du behöver lägga till parametern `-Force`:
+PowerShellGet-cmdletar kan inte uppdatera moduler som har installerats från ett MSI-paket. MSI-paket uppdaterar inte moduler som har installerats med PowerShellGet. Om du har problem med att uppdatera med PowershellGet bör du **installera om** , i stället för **uppdatera**. Ominstallation görs på samma sätt som när du installerar, men du behöver lägga till parametern `-Force`:
 
 ```powershell
 if ($PSVersionTable.PSEdition -eq 'Desktop' -and (Get-Module -Name AzureRM -ListAvailable)) {

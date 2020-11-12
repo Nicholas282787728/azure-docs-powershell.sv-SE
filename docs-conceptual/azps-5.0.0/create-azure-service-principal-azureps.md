@@ -3,14 +3,15 @@ title: Använd huvudnamn för tjänsten i Azure med Azure PowerShell
 description: Lär dig hur du skapar och använder huvudnamn för tjänsten med Azure PowerShell.
 ms.devlang: powershell
 ms.topic: conceptual
+ms.service: azure-powershell
 ms.date: 06/17/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 20a58253e3f9435a9d33c700435f77fbb42df7ea
-ms.sourcegitcommit: 375232b84336ef5e13052504deaa43f5bd4b7f65
+ms.openlocfilehash: a5640ded6fc8c6478084374f7808450f6a99d6e5
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93365151"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93407654"
 ---
 # <a name="create-an-azure-service-principal-with-azure-powershell"></a>Skapa tjänstens huvudnamn för Azure med Azure PowerShell
 

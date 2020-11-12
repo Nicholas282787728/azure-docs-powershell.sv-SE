@@ -5,12 +5,13 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/10/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 4ab5639cfb997c5f9ee1286e6eacb97ef775239a
-ms.sourcegitcommit: 63181e0af0e4468b0530fdb0495ed4d44bdfd1c8
+ms.service: azure-powershell
+ms.openlocfilehash: 27073db862b83c5b95f2364355037c1ebd34a3b5
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93134870"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93407501"
 ---
 # <a name="azure-powershell-release-notes"></a>Viktig information om Azure PowerShell
 
@@ -140,7 +141,6 @@ ms.locfileid: "93134870"
 * Tog bort parametern ”ApiVersion” från cmdletarna ”*-AzDeployment”.
 
 #### <a name="azsql"></a>Az.Sql
-* Lade till DiffBackupIntervalInHours till ”Set-AzSqlDatabaseBackupShortTermRetentionPolicy” 
 * Korrigerade ett problem där New-AzSqlDatabaseExport misslyckas om networkIsolation inte har angetts [#13097]
 * Korrigerade ett problem där New-AzSqlDatabaseExport och New-AzSqlDatabaseImport inte returnerade OperationStatusLink i resultatobjektet [#13097]
 * Uppdatera webbadresser för Azure-kopplade regioner i redundansvarningar för Backup Storage 

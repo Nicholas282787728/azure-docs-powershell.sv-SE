@@ -5,12 +5,13 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/21/2019
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: b75382d09e01dc242acf37a1652ec265266eaf7f
-ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
+ms.service: azure-powershell
+ms.openlocfilehash: e428106fcc525cc8836af954897faa3f6c169990
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89243012"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93408810"
 ---
 # <a name="azure-powershell-context-objects"></a>Azure PowerShell-kontextobjekt
 
@@ -23,10 +24,10 @@ Den här artikeln beskriver hur du hanterar Azure-kontexter, inte hantering av p
 Azure-kontexter är PowerShell-objekt som representerar din aktiva prenumeration för att köra kommandon och den autentiseringsinformation som krävs för att ansluta till ett Azure-moln. Med Azure-kontexter behöver Azure PowerShell inte autentisera ditt konto varje gången du byter prenumerationer. En Azure-kontext består av följande:
 
 * Det _konto_ som användes för att logga in på Azure med [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount). Azure-kontexter behandlar användare, program-ID:n och tjänsters huvudnamn från ett kontoperspektiv.
-* Den aktiva _prenumerationen_, ett serviceavtal med Microsoft om att skapa och köra Azure-resurser som är kopplade till en _klientorganisation_. Klientorganisationer kallas ofta _organisationer_ i dokumentationen eller när du arbetar med Active Directory.
-* En referens till en _tokencache_, en lagrad autentiseringstoken för åtkomst till ett Azure-moln. Var denna token lagras och hur länge bestäms av [inställningen för att spara kontext automatiskt](#save-azure-contexts-across-powershell-sessions).
+* Den aktiva _prenumerationen_ , ett serviceavtal med Microsoft om att skapa och köra Azure-resurser som är kopplade till en _klientorganisation_. Klientorganisationer kallas ofta _organisationer_ i dokumentationen eller när du arbetar med Active Directory.
+* En referens till en _tokencache_ , en lagrad autentiseringstoken för åtkomst till ett Azure-moln. Var denna token lagras och hur länge bestäms av [inställningen för att spara kontext automatiskt](#save-azure-contexts-across-powershell-sessions).
 
-Mer information om de här villkoren finns i [Azure Active Directory-terminologi](/azure/active-directory/fundamentals/active-directory-whatis#terminology). Autentiseringstokens som används av Azure-kontexter är samma som andra lagrade tokens som ingår i en beständig session. 
+Mer information om de här villkoren finns i [Azure Active Directory-terminologi](/azure/active-directory/fundamentals/active-directory-whatis#terminology). Autentiseringstokens som används av Azure-kontexter är samma som andra lagrade tokens som ingår i en beständig session.
 
 När du loggar in med `Connect-AzAccount` skapas minst en Azure-kontext för din standardprenumeration. Objektet som returneras av `Connect-AzAccount` är standardkontexten som används för resten av PowerShell-sessionen.
 
@@ -47,11 +48,11 @@ $context = Get-Context -Name "mycontext"
 Kontextnamn får vara ett annat än namnet på den associerade prenumerationen.
 
 > [!IMPORTANT]
-> De tillgängliga Azure-kontexterna __är inte__ alltid dina tillgängliga prenumerationer. Azure-kontexter representerar endast lokalt lagrad information. Du kan hämta dina prenumerationer med cmdleten [Get-AzSubscription](/powershell/module/Az.Accounts/Get-AzSubscription?view=azps-1.8.0).
+> De tillgängliga Azure-kontexterna __är inte__ alltid dina tillgängliga prenumerationer. Azure-kontexter representerar endast lokalt lagrad information. Du kan hämta dina prenumerationer med cmdleten [Get-AzSubscription](/powershell/module/Az.Accounts/Get-AzSubscription).
 
 ## <a name="create-a-new-azure-context-from-subscription-information"></a>Skapa en ny Azure-kontext från prenumerationsinformation
 
-Cmdleten [set-AzContext](/powershell/module/Az.Accounts/Set-AzContext?view=azps-1.8.0) används både för att skapa nya Azure-kontexter och ange dem som aktiv kontext.
+Cmdleten [set-AzContext](/powershell/module/Az.Accounts/Set-AzContext) används både för att skapa nya Azure-kontexter och ange dem som aktiv kontext.
 Det enklaste sättet att skapa en ny Azure-kontext är att använda befintlig prenumerationsinformation. Cmdleten är utformad för att ta utdataobjektet från `Get-AzSubscription` som ett pipelinevärde och konfigurera en ny Azure-kontext:
 
 ```azurepowershell-interactive
@@ -68,7 +69,7 @@ Om argumentet `-Name` utelämnas används prenumerationens namn och ID som konte
 
 ## <a name="change-the-active-azure-context"></a>Ändra den aktiva Azure-kontexten
 
-Både `Set-AzContext` och [Select-AzContext](/powershell/module/az.accounts/set-azcontext?view=azps-1.8.0) kan användas för att ändra den aktiva Azure-kontexten. Som vi beskriver i [Skapa en ny Azure-kontext](#create-a-new-azure-context-from-subscription-information) skapar `Set-AzContext` en ny Azure-kontext för en prenumeration om den inte finns, och växlar sedan till att använda den kontexten som den aktiva.
+Både `Set-AzContext` och [Select-AzContext](/powershell/module/az.accounts/set-azcontext) kan användas för att ändra den aktiva Azure-kontexten. Som vi beskriver i [Skapa en ny Azure-kontext](#create-a-new-azure-context-from-subscription-information) skapar `Set-AzContext` en ny Azure-kontext för en prenumeration om den inte finns, och växlar sedan till att använda den kontexten som den aktiva.
 
 `Select-AzContext` är avsedd att användas med befintliga Azure-kontexter och fungerar på liknande sätt som med `Set-AzContext -Context`, men är utformad för användning med pipeline:
 
@@ -134,7 +135,7 @@ Så här rensar du Azure-kontexter och autentiseringsuppgifter:
   Du kan logga ut från ett konto antingen via konto eller kontext:
 
   ```azurepowershell-interactive
-  Disconnect-AzAccount # Disconnect active account 
+  Disconnect-AzAccount # Disconnect active account
   Disconnect-AzAccount -Username "user@contoso.com" # Disconnect by account name
 
   Disconnect-AzAccount -ContextName "subscription2" # Disconnect by context name
@@ -144,7 +145,7 @@ Så här rensar du Azure-kontexter och autentiseringsuppgifter:
   Vid frånkoppling tas alltid lagrade autentiseringstokens bort och alla sparade kontexter som är kopplade till den frånkopplade användaren eller kontexten tas bort.
 * Använd [Clear-AzContext](/powershell/module/az.accounts/Clear-AzContext). Den här cmdleten garanterar att lagrade kontexter och autentiseringstoken tas bort. Dessutom blir du utloggad.
 * Ta bort en kontext med [Remove-AzContext](/powershell/module/az.accounts/remove-azcontext):
-  
+
   ```azurepowershell-interactive
   Remove-AzContext -Name "mycontext" # Remove by name
   Get-AzContext -Name "mycontext" | Remove-AzContext # Remove by piping Azure context object

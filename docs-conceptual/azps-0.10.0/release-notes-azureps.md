@@ -5,12 +5,13 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/10/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: f0a8c70ac16c99235b9497cddd03ec4796b40482
-ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
+ms.service: azure-powershell
+ms.openlocfilehash: 2e824dbbf593e0da9a2a8735aaa094b1944e306c
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89239357"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93408878"
 ---
 # <a name="azure-powershell-release-notes"></a>Viktig information om Azure PowerShell
 ## <a name="0100-preview---april-2020"></a>0.10.0-förhandsversion – April 2020
@@ -279,7 +280,7 @@ ms.locfileid: "89239357"
 
 #### <a name="azapimanagement"></a>Az.ApiManagement
 * **Get-AzApiManagementApiSchema** Hämtning av Open-Api-schema som är associerat med ett API har åtgärdats   https://github.com/Azure/azure-powershell/issues/10626
-* **New-AzApiManagementProduct*** och **Set-AzApiManagementProduct**
+* **New-AzApiManagementProduct** _ och _ *Set-AzApiManagementProduct**
   - Åtgärda dokumentation för https://github.com/Azure/azure-powershell/issues/10472
 * **Set-AzApiManagementApi** Exempel för att visa hur ServiceUrl uppdateras med hjälp av cmdleten har lagts till
 
@@ -576,13 +577,13 @@ ms.locfileid: "89239357"
 * `CoreQuota` på `BatchAccountContext` har bytt namn till `DedicatedCoreQuota`. Det finns även en ny `LowPriorityCoreQuota`.
   - Detta påverkar **Get-AzBatchAccount**.
 * **New-AzBatchTask** `-ResourceFile`-parametern tar nu en samling `PSResourceFile`-objekt som kan skapas med hjälp av den nya cmdleten **New-AzBatchResourceFile**.
-* Ny **New-AzBatchResourceFile**-cmdlet för att skapa `PSResourceFile`-objekt. Dessa kan tillhandahållas till **New-AzBatchTask** på `-ResourceFile`-parametern.
+* Ny **New-AzBatchResourceFile** -cmdlet för att skapa `PSResourceFile`-objekt. Dessa kan tillhandahållas till **New-AzBatchTask** på `-ResourceFile`-parametern.
   - Detta stöder två nya typer av resursfiler förutom det befintliga sättet med `HttpUrl`:
     - `AutoStorageContainerName`-baserade resursfiler laddar ned en hel container för automatisk lagring till Batch-noden.
     - `StorageContainerUrl`-baserade resursfiler laddar ned containern som anges i webbadressen till Batch-noden.
 * Tog bort egenskapen `ApplicationPackages` för `PSApplication` som returnerades av **Get-AzBatchApplication**.
   - Specifika paket i ett program kan nu hämtas med hjälp av **Get-AzBatchApplicationPackage**. Till exempel: `Get-AzBatchApplication -AccountName myaccount -ResourceGroupName myresourcegroup -ApplicationId myapplication`.
-* Bytt namn på `ApplicationId` till `ApplicationName` på **Get-AzBatchApplicationPackage**, **New-AzBatchApplicationPackage**, **Remove-AzBatchApplicationPackage**, **Get-AzBatchApplication**, **New-AzBatchApplication**, **Remove-AzBatchApplication** och **Set-AzBatchApplication**.
+* Bytt namn på `ApplicationId` till `ApplicationName` på **Get-AzBatchApplicationPackage** , **New-AzBatchApplicationPackage** , **Remove-AzBatchApplicationPackage** , **Get-AzBatchApplication** , **New-AzBatchApplication** , **Remove-AzBatchApplication** och **Set-AzBatchApplication**.
   - `ApplicationId` är nu ett alias för `ApplicationName`.
 * Ny `PSWindowsUserConfiguration`-egenskap till `PSUserAccount` lades till.
 * Bytte namn på `Version` till `Name` på `PSApplicationPackage`.
@@ -891,10 +892,10 @@ ms.locfileid: "89239357"
 #### <a name="azmonitor"></a>Az.Monitor
 * Pekar på den senaste Monitor SDK:n, dvs. 0.24.1-preview
    - Lägger till bakåtkompatibla ändringar i Metrics-cmdletarna, dvs. enhetsuppräkningen stöder flera nya värden. Detta är skrivskyddade cmdletar, så det förekommer inga ändringar i inmatningen för cmdletarna.
-   - API-versionen för **ActionGroups**-begäranden är nu **2019-06-01**. Tidigare var den **2018-03-01**. Test av scenarier har uppdaterats för att anpassas till den här ändringen.
+   - API-versionen för **ActionGroups** -begäranden är nu **2019-06-01**. Tidigare var den **2018-03-01**. Test av scenarier har uppdaterats för att anpassas till den här ändringen.
    - Ett nytt obligatoriskt argument har lagts till för konstruktorerna för klasserna **EmailReceiver** och **WebhookReceiver** – ett booleskt värde med namnet **useCommonAlertSchema**. Värdet är för närvarande fast till **false** så att den här icke-bakåtkompatibla ändringen är dold från cmdletarna. **Obs!** Det här är en tillfällig ändring som måste verifieras av Alerts-teamet.
-   - Ordningen på argumenten för konstruktorn för klassen **Source** (relaterad till klassen **ScheduledQueryRuleSource**) har ändrats från den tidigare SDK:n. Den här ändringen krävde korrigering av två enhetstest: de kompilerades, men testerna skickades inte.
-   - Ordningen på argumenten för konstruktorn för klassen **AlertingAction** (relaterad till klassen **ScheduledQueryRuleSource**) har ändrats från den tidigare SDK:n. Den här ändringen krävde korrigering av två enhetstest: de kompilerades, men testerna skickades inte.
+   - Ordningen på argumenten för konstruktorn för klassen **Source** (relaterad till klassen **ScheduledQueryRuleSource** ) har ändrats från den tidigare SDK:n. Den här ändringen krävde korrigering av två enhetstest: de kompilerades, men testerna skickades inte.
+   - Ordningen på argumenten för konstruktorn för klassen **AlertingAction** (relaterad till klassen **ScheduledQueryRuleSource** ) har ändrats från den tidigare SDK:n. Den här ändringen krävde korrigering av två enhetstest: de kompilerades, men testerna skickades inte.
 * Stöd för kriterier för dynamiskt tröskelvärde för måttavisering v2
     - New-AzMetricAlertRuleV2Criteria: skapar nu även kriterier för dynamiskt tröskelvärde
     - Add-AzMetricAlertRuleV2: accepterar nu även kriterier för dynamiskt tröskelvärde
