@@ -5,12 +5,13 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 06/17/2020
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 3c876454560e4ad421e6d32a8ca8b30a651fd8af
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.service: azure-powershell
+ms.openlocfilehash: 61d32c2154712679cda48a7b5f6b815cd5c2c29e
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92002318"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93410085"
 ---
 # <a name="create-an-azure-service-principal-with-azure-powershell"></a>Skapa tjänstens huvudnamn för Azure med Azure PowerShell
 
@@ -19,6 +20,11 @@ Automatiserade verktyg som använder Azure-tjänster bör alltid ha begränsad b
 Ett huvudnamn för tjänsten i Azure är en identitet som skapas för användning med program, värdbaserade tjänster och automatiserade verktyg för att tillgång till Azure-resurser. Åtkomsten begränsas av de roller som tilldelas tjänstens huvudnamn, vilket ger dig kontroll över vilka resurser som kan nås och på vilken nivå. Av säkerhetsskäl rekommenderar vi att du alltid använder tjänstens huvudnamn med automatiserade verktyg i stället för att tillåta inloggning med en användaridentitet.
 
 Den här artikeln visar hur du skapar, hämtar information om och återställer ett tjänsthuvudnamn med Azure PowerShell.
+
+> [!WARNING]
+> När du skapar tjänstens huvudnamn med kommandot [New-AzADServicePrincipal](/powershell/module/Az.Resources/New-AzADServicePrincipal) innehåller utdata autentiseringsuppgifter som du måste skydda. Se till att du inte inkluderar dessa autentiseringsuppgifter i din kod eller kontrollera autentiseringsuppgifterna i källkontrollen. Alternativt bör du överväga att använda [hanterade identiteter](/azure/active-directory/managed-identities-azure-resources/overview) för att undvika att behöva använda autentiseringsuppgifter.
+>
+> Som standard tilldelar [New-AzADServicePrincipal](/powershell/module/Az.Resources/New-AzADServicePrincipal) [deltagarrollen](/azure/role-based-access-control/built-in-roles#contributor) till tjänstens huvudnamn i prenumerationsomfånget. Om du vill minska risken för att tjänstens huvudnamn komprometteras tilldelar du en mer specifik roll och begränsar omfånget för en resurs eller resursgrupp. Mer information finns i [Steg för tillägg av en rolltilldelning](/azure/role-based-access-control/role-assignments-steps).
 
 ## <a name="create-a-service-principal"></a>Skapa ett huvudnamn för tjänsten
 
@@ -114,7 +120,7 @@ Azure PowerShell har följande cmdletar för hantering av rolltilldelningar:
 
 Standardrollen för ett huvudnamn för tjänsten för lösenordsbaserad autentisering är **Deltagare**. Den här rollen har fullständig behörighet att läsa och skriva till ett Azure-konto. Rollen **Läsare** är mer begränsad och ger endast läsåtkomst. Mer information om rollbaserad åtkomstkontroll (RBAC) och roller finns i [RBAC: inbyggda roller](/azure/active-directory/role-based-access-built-in-roles).
 
-Det här exemplet lägger till rollen **Läsare** och tar bort rollen **Deltagare**:
+Det här exemplet lägger till rollen **Läsare** och tar bort rollen **Deltagare** :
 
 ```azurepowershell-interactive
 New-AzRoleAssignment -ApplicationId <service principal application ID> -RoleDefinitionName 'Reader'

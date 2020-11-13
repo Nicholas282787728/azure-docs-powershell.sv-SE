@@ -5,12 +5,13 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 10/15/2019
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 2929d7ebaf26e069b12c5b6451e333255ae740af
-ms.sourcegitcommit: 8b3126b5c79f453464d90669f0046ba86b7a3424
+ms.service: azure-powershell
+ms.openlocfilehash: c6880e4c09339ec6a3e192480fde9e1f85cbca5f
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89244338"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93409507"
 ---
 # <a name="azure-powershell-release-notes"></a>Viktig information om Azure PowerShell
 ## <a name="280---october-2019"></a>2.8.0 – oktober 2019
@@ -135,10 +136,10 @@ ms.locfileid: "89244338"
 #### <a name="azmonitor"></a>Az.Monitor
 * Pekar på den senaste Monitor SDK:n, dvs. 0.24.1-preview
    - Lägger till bakåtkompatibla ändringar i Metrics-cmdletarna, dvs. enhetsuppräkningen stöder flera nya värden. Detta är skrivskyddade cmdletar, så det förekommer inga ändringar i inmatningen för cmdletarna.
-   - API-versionen för **ActionGroups**-begäranden är nu **2019-06-01**. Tidigare var den **2018-03-01**. Test av scenarier har uppdaterats för att anpassas till den här ändringen.
+   - API-versionen för **ActionGroups** -begäranden är nu **2019-06-01**. Tidigare var den **2018-03-01**. Test av scenarier har uppdaterats för att anpassas till den här ändringen.
    - Ett nytt obligatoriskt argument har lagts till för konstruktorerna för klasserna **EmailReceiver** och **WebhookReceiver** – ett booleskt värde med namnet **useCommonAlertSchema**. Värdet är för närvarande fast till **false** så att den här icke-bakåtkompatibla ändringen är dold från cmdletarna. **Obs!** Det här är en tillfällig ändring som måste verifieras av Alerts-teamet.
-   - Ordningen på argumenten för konstruktorn för klassen **Source** (relaterad till klassen **ScheduledQueryRuleSource**) har ändrats från den tidigare SDK:n. Den här ändringen krävde korrigering av två enhetstest: de kompilerades, men testerna skickades inte.
-   - Ordningen på argumenten för konstruktorn för klassen **AlertingAction** (relaterad till klassen **ScheduledQueryRuleSource**) har ändrats från den tidigare SDK:n. Den här ändringen krävde korrigering av två enhetstest: de kompilerades, men testerna skickades inte.
+   - Ordningen på argumenten för konstruktorn för klassen **Source** (relaterad till klassen **ScheduledQueryRuleSource** ) har ändrats från den tidigare SDK:n. Den här ändringen krävde korrigering av två enhetstest: de kompilerades, men testerna skickades inte.
+   - Ordningen på argumenten för konstruktorn för klassen **AlertingAction** (relaterad till klassen **ScheduledQueryRuleSource** ) har ändrats från den tidigare SDK:n. Den här ändringen krävde korrigering av två enhetstest: de kompilerades, men testerna skickades inte.
 * Stöd för kriterier för dynamiskt tröskelvärde för måttavisering v2
     - New-AzMetricAlertRuleV2Criteria: skapar nu även kriterier för dynamiskt tröskelvärde
     - Add-AzMetricAlertRuleV2: accepterar nu även kriterier för dynamiskt tröskelvärde

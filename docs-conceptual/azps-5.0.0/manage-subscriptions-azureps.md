@@ -5,12 +5,13 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 02/04/2019
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 96b94ffcb5075764eb5d2dcaec7b13c5933b83da
-ms.sourcegitcommit: b4a38bcb0501a9016a4998efd377aa75d3ef9ce8
+ms.service: azure-powershell
+ms.openlocfilehash: 4f48e009d9769cba671ea54e8f619a9ad40603d1
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92753960"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93410221"
 ---
 # <a name="use-multiple-azure-subscriptions"></a>Använda flera Azure-prenumerationer
 
@@ -20,7 +21,7 @@ Detaljerad information om prenumerationer, fakturering och kostnadshantering fin
 
 ## <a name="tenants-users-and-subscriptions"></a>Klienter, användare och prenumerationer
 
-Du kanske funderar över skillnaden mellan klienter, användare och prenumerationer i Azure. En _klient_ är den Azure Active Directory-enhet som omfattar hela organisationen. Klienten har minst en _prenumeration_ och _användare_ . En användare är en person och är endast associerad till en klient, vilken är organisationen som användaren tillhör. Användare är de konton som loggar in på Azure för att skapa, hantera och använda resurser.
+Du kanske funderar över skillnaden mellan klienter, användare och prenumerationer i Azure. En _klient_ är den Azure Active Directory-enhet som omfattar hela organisationen. Klienten har minst en _prenumeration_ och _användare_. En användare är en person och är endast associerad till en klient, vilken är organisationen som användaren tillhör. Användare är de konton som loggar in på Azure för att skapa, hantera och använda resurser.
 En användare kan ha åtkomst till flera _prenumerationer_ , som är avtal med Microsoft för användning av molntjänster, inklusive Azure. Varje resurs är associerad med en prenumeration.
 
 Om du vill veta mer om skillnaderna mellan klienter, användare och prenumerationer kan du läsa [ordlistan för molnterminologi i Azure](/azure/azure-glossary-cloud-terminology).  Om du vill lära dig att lägga till en ny prenumeration till din Azure Active Directory-klientorganisation läser du [Associera eller lägg till en Azure-prenumeration till din Azure Active Directory-klientorganisation](/azure/active-directory/active-directory-how-subscriptions-associated-directory).

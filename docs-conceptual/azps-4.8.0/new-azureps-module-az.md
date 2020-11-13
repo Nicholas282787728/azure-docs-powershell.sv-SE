@@ -5,12 +5,13 @@ ms.date: 05/20/2020
 ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 0771bc474f43d8bbf392f2eba10da2e320d30556
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.service: azure-powershell
+ms.openlocfilehash: 2643c1fbbe9be06112d2a1a377838a8cb1e7737b
+ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92002153"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93409592"
 ---
 # <a name="introducing-the-new-azure-powershell-az-module"></a>Introduktion till den nya Azure PowerShell Az-modulen
 
@@ -47,7 +48,7 @@ Så uppgraderar du från en befintlig AzureRM-installation:
 
 1. [Avinstallera Azure PowerShell AzureRM-modulen](/powershell/azure/uninstall-az-ps#uninstall-the-azurerm-module)
 2. [Installera Azure PowerShell Az-modulen](install-az-ps.md)
-3. **VALFRITT**: Aktivera kompatibilitetsläge för att lägga till alias för AzureRM-cmdletar med [Enable-AzureRMAlias](/powershell/module/az.accounts/enable-azurermalias) medan du bekantar dig med den nya kommandouppsättningen. Du hittar mer information i nästa avsnitt och i [Påbörja migrering från AzureRM till Az](migrate-from-azurerm-to-az.md).
+3. **VALFRITT** : Aktivera kompatibilitetsläge för att lägga till alias för AzureRM-cmdletar med [Enable-AzureRMAlias](/powershell/module/az.accounts/enable-azurermalias) medan du bekantar dig med den nya kommandouppsättningen. Du hittar mer information i nästa avsnitt och i [Påbörja migrering från AzureRM till Az](migrate-from-azurerm-to-az.md).
 
 ## <a name="migrate-existing-scripts-to-az"></a>Migrera befintliga skript till Az
 
