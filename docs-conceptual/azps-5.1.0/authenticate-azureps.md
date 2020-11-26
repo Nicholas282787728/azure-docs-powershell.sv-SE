@@ -3,15 +3,15 @@ title: Logga in med Azure PowerShell
 description: Så här loggar du in med Azure PowerShell som användare, med tjänstens huvudnamn eller med hanterade identiteter för Azure-resurser.
 ms.devlang: powershell
 ms.topic: conceptual
-ms.date: 7/7/2020
+ms.date: 11/23/2020
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: 2ec432ae2823bb59f32ca7801a44a9da48db9fac
-ms.sourcegitcommit: d81c3b0f0f7289104be03869eb675128b61db7d3
+ms.openlocfilehash: 46e5e84b6718cc7a700ef2df4e82647e8cb60941
+ms.sourcegitcommit: 25eca7b5f5480758aa2cd830458900cf91cf673c
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94715722"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95515117"
 ---
 # <a name="sign-in-with-azure-powershell"></a>Logga in med Azure PowerShell
 
@@ -31,7 +31,7 @@ Använd cmdleten [Connect-AzAccount](/powershell/module/az.accounts/connect-azac
 Connect-AzAccount
 ```
 
-När denna cmdlet körs från PowerShell version 6 och senare visar den en tokensträng. Logga in genom att kopiera den här strängen och klistra in den på [microsoft.com/devicelogin](https://microsoft.com/devicelogin) i en webbläsare. PowerShell-sessionen autentiseras därefter för anslutning till Azure. Du kan ange att parametern `UseDeviceAuthentication` ska ta emot en tokensträng i Windows PowerShell.
+Från och med AZ PowerShell-modulens version 5.0.0 visar denna cmdlet en interaktiv webbläsarbaserad inloggningsprompt som standard. Du kan ange parametern `UseDeviceAuthentication` för att få en tokensträng som tidigare var standard för PowerShell version 6 och senare.
 
 > [!IMPORTANT]
 > Auktorisering med användarnamn/lösenord har tagits bort i Azure PowerShell på grund av ändringar i auktoriseringsimplementering och säkerhetsproblem i Active Directory. Om du använder autentiseringsuppgifter för automation får du i stället [skapa ett huvudnamn för tjänsten](create-azure-service-principal-azureps.md).
