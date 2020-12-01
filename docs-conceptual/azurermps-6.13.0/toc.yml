@@ -11,7 +11,7 @@
 - name: Kom igång
   href: get-started-azureps.md
 - name: Cloud Shell
-  href: 'https://docs.microsoft.com/azure/cloud-shell/overview'
+  href: /azure/cloud-shell/overview
 - name: Logga in
   items:
     - name: Autentiseringsmetoder
@@ -34,7 +34,7 @@
       href: /azure/azure-resource-manager/resource-manager-export-template-powershell
     - name: Distribuera privata Resource Manager-mallar
       href: /azure/azure-resource-manager/resource-manager-powershell-sas-token
-- name: Koncept
+- name: Begrepp
   items:
     - name: Experimentella moduler
       href: using-experimental-modules.md
@@ -50,7 +50,7 @@
       href: /azure/virtual-machines/linux/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json
     - name: Virtuella Windows-datorer
       href: /azure/virtual-machines/windows/powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json
-    - name: Webbappar
+    - name: Web Apps
       href: /azure/app-service-web/app-service-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json
     - name: SQL Databases
       href: /azure/sql-database/sql-database-powershell-samples?toc=%2fpowershell%2fmodule%2ftoc.json
