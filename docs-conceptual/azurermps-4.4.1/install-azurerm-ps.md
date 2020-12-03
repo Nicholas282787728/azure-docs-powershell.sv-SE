@@ -5,12 +5,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/27/2018
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 3f4b05352ef5e5c7f32495d002a78aadd3e056e1
-ms.sourcegitcommit: 038cb42a3bd8c009bc57c8c1c252e66fa170c84b
+ms.openlocfilehash: c4aa030a7d95f5b22ceeff9438af506ced5c8cb5
+ms.sourcegitcommit: 071b8c40c837ed4b2d65ce778339110d9e0899ab
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523299"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96428048"
 ---
 # <a name="install-azure-powershell-on-windows-with-powershellget"></a>Installera Azure PowerShell på Windows med PowerShellGet
 
@@ -149,7 +149,7 @@ Precis som felmeddelandet säger så behöver du använda parametern -AllowClobb
 Install-Module -Name AzureRM -AllowClobber
 ```
 
-Mer information finns i hjälpavsnittet för [Install-Module](https://msdn.microsoft.com/powershell/reference/5.1/PowerShellGet/install-module).
+Mer information finns i hjälpavsnittet för [Install-Module](/powershell/module/powershellget/install-module).
 
 ### <a name="installing-module-versions-side-by-side"></a>Installera modulversioner sida vid sida
 
@@ -167,7 +167,7 @@ Import-Module -Name AzureRM -RequiredVersion 2.3.0
 ```
 
 > [!NOTE]
-> Version 2.1.0 och 1.2.6 är de första modulversionerna som är avsedda att installeras och användas sida vid sida. När du laddar en tidigare version av Azure PowerShell, laddas inkompatibla versioner av modulen **AzureRM.Profile** . Det gör att cmdletarna ber dig logga in när du kör en av dem.
+> Version 2.1.0 och 1.2.6 är de första modulversionerna som är avsedda att installeras och användas sida vid sida. När du laddar en tidigare version av Azure PowerShell, laddas inkompatibla versioner av modulen **AzureRM.Profile**. Det gör att cmdletarna ber dig logga in när du kör en av dem.
 
 ### <a name="other-installation-methods"></a>Andra installationsmetoder
 

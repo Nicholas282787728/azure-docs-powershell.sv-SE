@@ -8,12 +8,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: knithinc
 ms.date: 08/06/2020
-ms.openlocfilehash: 754038a312a20e0dd87075bdeb51b13a1f1810a1
-ms.sourcegitcommit: 09eb4dbfcad6fce303b793dafe9bebdef589db03
+ms.openlocfilehash: 10eaf23e5134ea9788a81477038d735fe3bd59e0
+ms.sourcegitcommit: 071b8c40c837ed4b2d65ce778339110d9e0899ab
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88022986"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96426994"
 ---
 # <a name="azure-stack-hub-module-202"></a>Azure Stack Hub-modul 2.0.2
 
@@ -21,7 +21,7 @@ ms.locfileid: "88022986"
 
 Den lägsta versionen av Azure Stack Hub som stöds är 2002.
 
-Obs! Tidigare versioner av Azure Stack finns på [Installera Azure Stack PowerShell](https://docs.microsoft.com/azure/azure-stack/azure-stack-powershell-install#install-azure-stack-powershell)
+Obs! Tidigare versioner av Azure Stack finns på [Installera Azure Stack PowerShell](/azure/azure-stack/azure-stack-powershell-install#install-azure-stack-powershell)
 
 ## <a name="install"></a>Installera
 
@@ -45,4 +45,4 @@ Install-Module -Name AzureStack -RequiredVersion 2.0.2-preview -AllowPrerelease
 
 * Stöds med 2002-uppdateringen.  
 
-  Azure Stack Hub 2.0.0 är en icke-bakåtkompatibel ändring. Modulen använder AZ-modulen i stället för AzureRM-modulen. Du hittar en migrationsguide och en lista över de icke-bakåtkompatibla ändringarna i [Migrera från AzureRM till Azure PowerShell AZ i Azure Stack Hub](https://aka.ms/AA7qsji).
+  Azure Stack Hub 2.0.0 är en icke-bakåtkompatibel ändring. Modulen använder AZ-modulen i stället för AzureRM-modulen. Du hittar en migrationsguide och en lista över de icke-bakåtkompatibla ändringarna i [Migrera från AzureRM till Azure PowerShell AZ i Azure Stack Hub](/azure-stack/operator/azure-stack-powershell-install).

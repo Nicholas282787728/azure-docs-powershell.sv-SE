@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.date: 03/10/2020
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: ea374b23e85c16393e5de16b043ae0c28545cb61
-ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
+ms.openlocfilehash: 805928a0ecae0982826d961435744c29691d191b
+ms.sourcegitcommit: 071b8c40c837ed4b2d65ce778339110d9e0899ab
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93408079"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96427946"
 ---
 # <a name="azure-powershell-release-notes"></a>Viktig information om Azure PowerShell
 
@@ -515,7 +515,7 @@ ms.locfileid: "93408079"
 * Ett problem har åtgärdats som kan orsaka att ”Connect-AzAccount” misslyckas vid körning av flera trådar [#11201]
 
 #### <a name="azaks"></a>Az.Aks
-* Användning av gamla [AccessProfile API](https://docs.microsoft.com/rest/api/aks/managedclusters/getaccessprofile) ersattes med anrop till API:erna [ListClusterAdmin](https://docs.microsoft.com/rest/api/aks/managedclusters/listclusteradmincredentials) och [ListClusterUser](https://docs.microsoft.com/rest/api/aks/managedclusters/listclusterusercredentials)
+* Användning av gamla [AccessProfile API](/rest/api/aks/managedclusters/getaccessprofile) ersattes med anrop till API:erna [ListClusterAdmin](/rest/api/aks/managedclusters/listclusteradmincredentials) och [ListClusterUser](/rest/api/aks/managedclusters/listclusterusercredentials)
 
 #### <a name="azbatch"></a>Az.Batch
 * Az.Batch har uppdaterats att använda ”Microsoft.Azure.Management.Batch” SDK till och med version 11.0.0.
@@ -1033,7 +1033,7 @@ ms.locfileid: "93408079"
 
 ## <a name="0100-preview---april-2020"></a>0.10.0-förhandsversion – April 2020
 ### <a name="general"></a>Allmänt
-* Az-moduler är nu tillgängliga i förhandsversion på Azure Stack Hub. Därmed möjliggörs kompatibilitet för flera plattformar med Linux och macOs. Azure Stack Hub stöder nu PowerShell Core med AZ-moduler. Mer information finns [här](https://aka.ms/az4AzureStack)
+* Az-moduler är nu tillgängliga i förhandsversion på Azure Stack Hub. Därmed möjliggörs kompatibilitet för flera plattformar med Linux och macOs. Azure Stack Hub stöder nu PowerShell Core med AZ-moduler. Mer information finns [här](/azure-stack/operator/powershell-install-az-module)
 * Supportprofil för AZ-moduler 2019-03-01-hybrid:
   - Az.Billing
   - Az.Compute
@@ -1048,7 +1048,7 @@ ms.locfileid: "93408079"
   - Az.Websites
 * Tre nya PowerShell-moduler för AZ har introducerats som fungerar med Azure Stack Hub, och de är Az.Databox, Az.IotHub och Az.EventHub
 * Kommandona är i princip oförändrade, med endast mindre ändringar som att AzureRM ändras till AZ
-* En uppdaterad länk till PowerShell-dokumentationen för Azure Stack Hub finns [här](https://aka.ms/InstallASHPowerShell)
+* En uppdaterad länk till PowerShell-dokumentationen för Azure Stack Hub finns [här](/azure-stack/operator/powershell-install-az-module)
 
 ## <a name="370---march-2020"></a>3.7.0 – mars 2020
 #### <a name="azaccounts"></a>Az.Accounts
@@ -1590,13 +1590,13 @@ ms.locfileid: "93408079"
 * `CoreQuota` på `BatchAccountContext` har bytt namn till `DedicatedCoreQuota`. Det finns även en ny `LowPriorityCoreQuota`.
   - Detta påverkar **Get-AzBatchAccount**.
 * **New-AzBatchTask** `-ResourceFile`-parametern tar nu en samling `PSResourceFile`-objekt som kan skapas med hjälp av den nya cmdleten **New-AzBatchResourceFile**.
-* Ny **New-AzBatchResourceFile** -cmdlet för att skapa `PSResourceFile`-objekt. Dessa kan tillhandahållas till **New-AzBatchTask** på `-ResourceFile`-parametern.
+* Ny **New-AzBatchResourceFile**-cmdlet för att skapa `PSResourceFile`-objekt. Dessa kan tillhandahållas till **New-AzBatchTask** på `-ResourceFile`-parametern.
   - Detta stöder två nya typer av resursfiler förutom det befintliga sättet med `HttpUrl`:
     - `AutoStorageContainerName`-baserade resursfiler laddar ned en hel container för automatisk lagring till Batch-noden.
     - `StorageContainerUrl`-baserade resursfiler laddar ned containern som anges i webbadressen till Batch-noden.
 * Tog bort egenskapen `ApplicationPackages` för `PSApplication` som returnerades av **Get-AzBatchApplication**.
   - Specifika paket i ett program kan nu hämtas med hjälp av **Get-AzBatchApplicationPackage**. Till exempel: `Get-AzBatchApplication -AccountName myaccount -ResourceGroupName myresourcegroup -ApplicationId myapplication`.
-* Bytt namn på `ApplicationId` till `ApplicationName` på **Get-AzBatchApplicationPackage** , **New-AzBatchApplicationPackage** , **Remove-AzBatchApplicationPackage** , **Get-AzBatchApplication** , **New-AzBatchApplication** , **Remove-AzBatchApplication** och **Set-AzBatchApplication**.
+* Bytt namn på `ApplicationId` till `ApplicationName` på **Get-AzBatchApplicationPackage**, **New-AzBatchApplicationPackage**, **Remove-AzBatchApplicationPackage**, **Get-AzBatchApplication**, **New-AzBatchApplication**, **Remove-AzBatchApplication** och **Set-AzBatchApplication**.
   - `ApplicationId` är nu ett alias för `ApplicationName`.
 * Ny `PSWindowsUserConfiguration`-egenskap till `PSUserAccount` lades till.
 * Bytte namn på `Version` till `Name` på `PSApplicationPackage`.
@@ -1905,10 +1905,10 @@ ms.locfileid: "93408079"
 #### <a name="azmonitor"></a>Az.Monitor
 * Pekar på den senaste Monitor SDK:n, dvs. 0.24.1-preview
    - Lägger till bakåtkompatibla ändringar i Metrics-cmdletarna, dvs. enhetsuppräkningen stöder flera nya värden. Detta är skrivskyddade cmdletar, så det förekommer inga ändringar i inmatningen för cmdletarna.
-   - API-versionen för **ActionGroups** -begäranden är nu **2019-06-01**. Tidigare var den **2018-03-01**. Test av scenarier har uppdaterats för att anpassas till den här ändringen.
+   - API-versionen för **ActionGroups**-begäranden är nu **2019-06-01**. Tidigare var den **2018-03-01**. Test av scenarier har uppdaterats för att anpassas till den här ändringen.
    - Ett nytt obligatoriskt argument har lagts till för konstruktorerna för klasserna **EmailReceiver** och **WebhookReceiver** – ett booleskt värde med namnet **useCommonAlertSchema**. Värdet är för närvarande fast till **false** så att den här icke-bakåtkompatibla ändringen är dold från cmdletarna. **Obs!** Det här är en tillfällig ändring som måste verifieras av Alerts-teamet.
-   - Ordningen på argumenten för konstruktorn för klassen **Source** (relaterad till klassen **ScheduledQueryRuleSource** ) har ändrats från den tidigare SDK:n. Den här ändringen krävde korrigering av två enhetstest: de kompilerades, men testerna skickades inte.
-   - Ordningen på argumenten för konstruktorn för klassen **AlertingAction** (relaterad till klassen **ScheduledQueryRuleSource** ) har ändrats från den tidigare SDK:n. Den här ändringen krävde korrigering av två enhetstest: de kompilerades, men testerna skickades inte.
+   - Ordningen på argumenten för konstruktorn för klassen **Source** (relaterad till klassen **ScheduledQueryRuleSource**) har ändrats från den tidigare SDK:n. Den här ändringen krävde korrigering av två enhetstest: de kompilerades, men testerna skickades inte.
+   - Ordningen på argumenten för konstruktorn för klassen **AlertingAction** (relaterad till klassen **ScheduledQueryRuleSource**) har ändrats från den tidigare SDK:n. Den här ändringen krävde korrigering av två enhetstest: de kompilerades, men testerna skickades inte.
 * Stöd för kriterier för dynamiskt tröskelvärde för måttavisering v2
     - New-AzMetricAlertRuleV2Criteria: skapar nu även kriterier för dynamiskt tröskelvärde
     - Add-AzMetricAlertRuleV2: accepterar nu även kriterier för dynamiskt tröskelvärde
@@ -2631,7 +2631,7 @@ ms.locfileid: "93408079"
     - Set-AzScheduledQueryRule
     - Update-AzScheduledQueryRule
     - Remove-AzScheduledQueryRule
-    - [Mer](https://docs.microsoft.com/rest/api/monitor/scheduledqueryrules) information om SQR API
+    - [Mer](/rest/api/monitor/scheduledqueryrules) information om SQR API
     - Az.Monitor.md har uppdaterats för att omfatta cmdletar för måttbaserade aviseringsregler i GenV2 (inte klassiska)
 
 #### <a name="aznetwork"></a>Az.Network

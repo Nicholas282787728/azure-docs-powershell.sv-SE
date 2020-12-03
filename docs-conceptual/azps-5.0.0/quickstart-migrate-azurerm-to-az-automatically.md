@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.custom: devx-track-azurepowershell
 ms.author: mirobb
 ms.date: 09/11/2020
-ms.openlocfilehash: d342ca65baf7664f430de3b7d294c0fc9815c0a0
-ms.sourcegitcommit: b4a38bcb0501a9016a4998efd377aa75d3ef9ce8
+ms.openlocfilehash: 5945b573d467f1ff64e327c52124ffed1e4305aa
+ms.sourcegitcommit: 071b8c40c837ed4b2d65ce778339110d9e0899ab
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92753921"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96427844"
 ---
 # <a name="quickstart-automatically-migrate-powershell-scripts-from-azurerm-to-the-az-powershell-module"></a>Snabbstart: Migrera PowerShell-skript automatiskt från AzureRM till Az PowerShell-modulen
 
@@ -70,7 +70,7 @@ Uppgraderingsplanen utförs när du kör cmdleten `Invoke-AzUpgradeModulePlan`. 
 Det här kommandot kräver att du anger om filerna ska ändras på plats eller om nya filer ska sparas vid sidan av dina ursprungliga filer (de ursprungliga filerna lämnas oförändrade).
 
 > [!CAUTION]
-> Detta går inte att ångra. Se alltid till att du har en säkerhetskopia av dina PowerShell-skript och moduler som du tänker uppgradera.
+> Detta går inte att ångra. Se alltid till att du har en säkerhetskopia av de PowerShell-skript och moduler som du tänker uppgradera.
 
 > [!WARNING]
 > Cmdleten `Invoke-AzUpgradeModulePlan` är destruktiv när alternativet `-FileEditMode ModifyExistingFiles` har angetts! Den ändrar dina skript och funktioner på plats enligt den moduluppgraderingsplan som skapades av cmdleten `New-AzUpgradeModulePlan`. Som icke-destruktivt alternativ anger du i stället `-FileEditMode SaveChangesToNewFiles`.
@@ -103,4 +103,4 @@ $Results | Where-Object UpgradeResult -ne UpgradeCompleted | Format-List
 
 ## <a name="next-steps"></a>Nästa steg
 
-Du kan läsa mer om Azure PowerShell-modulen i [Azure PowerShell-dokumentationen](https://docs.microsoft.com/powershell/azure/)
+Du kan läsa mer om Azure PowerShell-modulen i [Azure PowerShell-dokumentationen](/powershell/azure/)
