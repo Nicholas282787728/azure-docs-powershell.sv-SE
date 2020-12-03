@@ -6,12 +6,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: d7f5b75f195f6315fc65666647c407795f5c6956
-ms.sourcegitcommit: cd243c8f6dc02dbd6234e764b065643dfd31dd8b
+ms.openlocfilehash: a3b74531ff71ed0e9ac473831b71efb6f29d6e66
+ms.sourcegitcommit: 7887e040bdeb2f55c035a3169cd0d9d807ab186e
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 12/02/2020
-ms.locfileid: "96502614"
+ms.locfileid: "96536552"
 ---
 # <a name="introducing-the-azure-az-powershell-module"></a>Introduktion till Azure Az PowerShell-modulen
 
@@ -34,7 +34,7 @@ Az PowerShell-modulen har följande fördelar:
 
 * Säkerhet och stabilitet
   * Kryptering av tokencache
-  * Stöd för ADKS 2019
+  * Stöd för ADFS 2019
   * Säkerhetsmekanism som förhindrar man-i-mitten-attacker
   * Stöd för funktioner som Kontinuerlig tillgänglighetskontroll (kommer 2021)
 * Stöd för alla Azure-tjänster

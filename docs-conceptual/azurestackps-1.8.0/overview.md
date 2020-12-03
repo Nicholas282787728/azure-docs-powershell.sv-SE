@@ -8,12 +8,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.manager: knithinc
 ms.date: 02/24/2020
-ms.openlocfilehash: ec406c80de6b457f7e340a23fe8caf2ab83be46a
-ms.sourcegitcommit: d661f38bec34e65bf73913db59028e11fd78b131
+ms.openlocfilehash: e19fea440025e7a00a037e360ac95ff8e0e62129
+ms.sourcegitcommit: 071b8c40c837ed4b2d65ce778339110d9e0899ab
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "78264418"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96428018"
 ---
 # <a name="azure-stack-module-180"></a>Azure Stack Module 1.8.0
 
@@ -21,7 +21,7 @@ ms.locfileid: "78264418"
 
 Den lägsta versionen av Azure Stack som stöds är 1910.
 
-Obs! Tidigare versioner av Azure Stack finns på [Installera Azure Stack PowerShell](https://docs.microsoft.com/azure/azure-stack/azure-stack-powershell-install#install-azure-stack-powershell)
+Obs! Tidigare versioner av Azure Stack finns på [Installera Azure Stack PowerShell](/azure/azure-stack/azure-stack-powershell-install#install-azure-stack-powershell)
 
 ## <a name="install"></a>Installera
 
@@ -40,7 +40,7 @@ Install-Module -Name AzureStack -RequiredVersion 1.8.0
 ## <a name="release-notes"></a>Viktig information
 
 * Stöds med 1910-uppdateringen
-* Exempel på några av ändringarna är:
+* Ändringarna omfattar:
 
     - **Ny DRP Admin-modul**: DRP (Deployment Resource Provider) kan användas för att orkestrera distributioner av resursprovidrar till Azure Stack Hub. Dessa kommandon interagerar med DRP via Azure Resource Manager-skiktet.
 
