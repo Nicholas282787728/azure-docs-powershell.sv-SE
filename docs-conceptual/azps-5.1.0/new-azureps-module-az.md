@@ -6,12 +6,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: a3b74531ff71ed0e9ac473831b71efb6f29d6e66
-ms.sourcegitcommit: 7887e040bdeb2f55c035a3169cd0d9d807ab186e
+ms.openlocfilehash: d922affd608ebfce41f9608ec82d565d6afe9f7f
+ms.sourcegitcommit: 3ef9f7f6c20af98282a0499b1527c291ee54011b
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96536552"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96617727"
 ---
 # <a name="introducing-the-azure-az-powershell-module"></a>Introduktion till Azure Az PowerShell-modulen
 
@@ -77,7 +77,7 @@ Om dina skript fortfarande baseras på AzureRM-modulen har vi flera resurser som
 
 Az är den mest aktuella PowerShell-modulen för Azure. Problem eller önskemål om funktioner kan loggas direkt på [GitHub-lagringsplatsen](https://github.com/Azure/azure-powershell) eller via Microsofts support om du har ett supportavtal. Nya efterfrågade funktioner implementeras i den senaste versionen av Az. Korrigeringar av kritiska problem implementeras i de två senaste versionerna av Az.
 
-Inga nya cmdletar eller funktioner kommer att ges ut för AzureRM, Officiellt underhålls AzureRM-modulen fortfarande och kritiska korrigeringar erbjuds till slutet av februari 2020.
+Inga nya cmdletar eller funktioner kommer att ges ut för AzureRM, Officiellt underhålls AzureRM-modulen fortfarande och kritiska korrigeringar erbjuds till slutet av februari 2021.
 
 ## <a name="data-collection"></a>Datainsamling
 
