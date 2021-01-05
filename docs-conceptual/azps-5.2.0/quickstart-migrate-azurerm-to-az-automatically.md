@@ -6,20 +6,17 @@ ms.service: azure-powershell
 ms.topic: quickstart
 ms.custom: devx-track-azurepowershell
 ms.author: mirobb
-ms.date: 12/10/2020
-ms.openlocfilehash: 6752fa0376c2f8887511455f56add0859f8961c8
-ms.sourcegitcommit: 076ff98abc48e072eb1727532817487bac7507c6
+ms.date: 12/18/2020
+ms.openlocfilehash: 3a26dfbb89f83a9d1983ea8d69cd47c9f74eab38
+ms.sourcegitcommit: dd90c54d8794109fa7984543649bb3faa0cbb544
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97488538"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97701297"
 ---
 # <a name="quickstart-automatically-migrate-powershell-scripts-from-azurerm-to-the-az-powershell-module"></a>Snabbstart: Migrera PowerShell-skript automatiskt från AzureRM till Az PowerShell-modulen
 
-I den här artikeln får du lära dig hur du uppgraderar dina PowerShell-skript och skriptmoduler från AzureRM till Az PowerShell-modulen automatiskt med hjälp av PowerShell-modulen Az.Tools.Migration.
-
-> [!IMPORTANT]
-> PowerShell-modulen Az.Tools.Migration finns för närvarande som allmänt tillgänglig förhandsversion. Förhandsversionen tillhandahålls utan serviceavtal. Den rekommenderas inte för produktionsarbetsbelastningar. Vissa funktioner kanske inte stöds eller kan vara begränsade. Mer information finns i [Kompletterande villkor för användning av Microsoft Azure-förhandsversioner](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
+I den här artikeln får du lära dig hur du uppgraderar dina PowerShell-skript och skriptmoduler från AzureRM till Az PowerShell-modulen automatiskt med hjälp av PowerShell-modulen Az.Tools.Migration. Fler migreringsalternativ finns i [Migrera Azure PowerShell från AzureRM till Az](/powershell/azure/migrate-from-azurerm-to-az).
 
 ## <a name="requirements"></a>Krav
 

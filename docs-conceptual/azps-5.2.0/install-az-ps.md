@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.date: 05/14/2020
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: f7a1658cdcafd1e8d6cba51ead26f9ddaa8c4c56
-ms.sourcegitcommit: 04221336bc9eed46c05ed1e828a6811534d4b4ab
+ms.openlocfilehash: ae26b84ecf02ff90ddfbbc2960aed448f37f2a6a
+ms.sourcegitcommit: e4f2cb406f0ea7bcdb48e130966eabba4d0f9a67
 ms.translationtype: HT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96856817"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97665447"
 ---
 # <a name="install-azure-powershell"></a>Installera Azure PowerShell
 
@@ -44,6 +44,8 @@ Använda Azure PowerShell i PowerShell 5.1 på Windows:
 > [!WARNING]
 > Det går inte att ha både modulen AzureRM och modulen Az installerade samtidigt för PowerShell 5.1 för Windows. Om du vill behålla AzureRM på datorn installerar du Az-modulen för PowerShell 6.2.4 eller senare.
 
+### <a name="install-for-current-user"></a>Installera för aktuell användare
+
 Att använda PowerShellGet-cmdletar är den installationsmetod som föredras. Installera Az-modulen endast för den aktuella användaren. Detta är det rekommenderade installationsomfånget. Den här metoden fungerar på samma sätt för plattformarna Windows, macOS och Linux. Kör följande kommando från en PowerShell-session:
 
 ```powershell-interactive
@@ -68,6 +70,8 @@ Are you sure you want to install the modules from 'PSGallery'?
 ```
 
 Svara `Yes` eller `Yes to All` för att fortsätta med installationen.
+
+### <a name="install-for-all-users"></a>Installera för alla användare
 
 Att installera modulen för alla användare i ett system kräver förhöjd behörighet. Starta PowerShell-sessionen med **Kör som administratör** i Windows eller använd kommandot `sudo` på macOS eller Linux:
 
