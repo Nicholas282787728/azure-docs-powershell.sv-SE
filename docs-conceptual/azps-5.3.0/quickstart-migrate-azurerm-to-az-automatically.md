@@ -12,7 +12,7 @@ ms.sourcegitcommit: 68451baa389791703e666d95469602c5652609ee
 ms.translationtype: HT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 01/05/2021
-ms.locfileid: "97893336"
+ms.locfileid: "97894062"
 ---
 # <a name="quickstart-automatically-migrate-powershell-scripts-from-azurerm-to-the-az-powershell-module"></a>Snabbstart: Migrera PowerShell-skript automatiskt från AzureRM till Az PowerShell-modulen
 
