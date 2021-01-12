@@ -3,12 +3,12 @@ external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
 ms.assetid: FBB55071-454D-4473-93BA-D97F33067785
 online version: ''
 schema: 2.0.0
-ms.openlocfilehash: 0f83489d21fba97bb50145de1fedc1ac9a7195a1
-ms.sourcegitcommit: 56ed085a868afa8263f8eb0f755b5822f5c29532
+ms.openlocfilehash: 768eff2dda32c6dfa0bad14f028338d3c5fa1abd
+ms.sourcegitcommit: 87730c7ea4f98f628d3fe1b40aa4a9d2885e1c75
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "94099414"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98110486"
 ---
 # New-AzureWebsite
 
@@ -19,7 +19,7 @@ Skapa en ny webbplats som ska köras i Azure.
 
 ```
 New-AzureWebsite [-Location <String>] [-Hostname <String>] [-PublishingUsername <String>] [-Git] [-GitHub]
- [-GithubCredentials <PSCredential>] [-GithubRepository <String>] [-Name <String>] [-Slot <String>]
+ [-GitHubCredentials <PSCredential>] [-GitHubRepository <String>] [-Name <String>] [-Slot <String>]
  [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
@@ -40,7 +40,7 @@ I det här exemplet skapas en ny webbplats i Azure och en lokal Git-databas som 
 
 ### Exempel 2: skapa webbplats integrerad med GitHub
 ```
-PS C:\> New-AzureWebsite mysite -Github -GithubRepository myaccount/myrepo
+PS C:\> New-AzureWebsite mysite -GitHub -GitHubRepository myaccount/myrepo
 ```
 
 I det här exemplet skapas en ny webbplats som är länkad till en GitHub-databas som heter myrepo.
@@ -80,7 +80,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -GithubCredentials
+### -GitHubCredentials
 Anger användar namn och lösen ords uppgifter för att ansluta till GitHub.
 
 ```yaml
@@ -95,7 +95,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -GithubRepository
+### -GitHubRepository
 Anger det fullständiga namnet på den GitHub-databas som du vill länka till webbplatsen.
 Till exempel `myaccount/myrepo` .
 
