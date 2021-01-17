@@ -1,0 +1,366 @@
+---
+external help file: ''
+Module Name: Az.DesktopVirtualization
+online version: https://docs.microsoft.com/en-us/powershell/module/az.desktopvirtualization/new-azwvdapplication
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DesktopVirtualization/help/New-AzWvdApplication.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DesktopVirtualization/help/New-AzWvdApplication.md
+ms.openlocfilehash: 724e1877b924829560112f926b75bd1c523c8f18
+ms.sourcegitcommit: 04221336bc9eed46c05ed1e828a6811534d4b4ab
+ms.translationtype: MT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "98398736"
+---
+# <span data-ttu-id="5bbcd-101">New-AzWvdApplication</span><span class="sxs-lookup"><span data-stu-id="5bbcd-101">New-AzWvdApplication</span></span>
+
+## <span data-ttu-id="5bbcd-102">Sammanfattning</span><span class="sxs-lookup"><span data-stu-id="5bbcd-102">SYNOPSIS</span></span>
+<span data-ttu-id="5bbcd-103">Skapa eller uppdatera ett program.</span><span class="sxs-lookup"><span data-stu-id="5bbcd-103">Create or update an application.</span></span>
+
+## <span data-ttu-id="5bbcd-104">FRÅGESYNTAXEN</span><span class="sxs-lookup"><span data-stu-id="5bbcd-104">SYNTAX</span></span>
+
+### <span data-ttu-id="5bbcd-105">CreateExpanded (standard)</span><span class="sxs-lookup"><span data-stu-id="5bbcd-105">CreateExpanded (Default)</span></span>
+```
+New-AzWvdApplication -CommandLineSetting <CommandLineSetting> -GroupName <String> -Name <String>
+ -ResourceGroupName <String> [-Description <String>] [-FriendlyName <String>] [-ShowInPortal]
+ [-SubscriptionId <String>] [-ApplicationType <RemoteApplicationType>] [-CommandLineArgument <String>]
+ [-FilePath <String>] [-IconIndex <Int32>] [-IconPath <String>] [-MsixPackageApplicationId <String>]
+ [-MsixPackageFamilyName <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
+```
+
+### <span data-ttu-id="5bbcd-106">AppAlias</span><span class="sxs-lookup"><span data-stu-id="5bbcd-106">AppAlias</span></span>
+```
+New-AzWvdApplication -AppAlias <String> -CommandLineSetting <CommandLineSetting> -GroupName <String>
+ -Name <String> -ResourceGroupName <String> [-Description <String>] [-FriendlyName <String>] [-ShowInPortal]
+ [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
+```
+
+## <span data-ttu-id="5bbcd-107">PROBLEMBESKRIVNING</span><span class="sxs-lookup"><span data-stu-id="5bbcd-107">DESCRIPTION</span></span>
+<span data-ttu-id="5bbcd-108">Skapa eller uppdatera ett program.</span><span class="sxs-lookup"><span data-stu-id="5bbcd-108">Create or update an application.</span></span>
+
+## <span data-ttu-id="5bbcd-109">BESKRIVS</span><span class="sxs-lookup"><span data-stu-id="5bbcd-109">EXAMPLES</span></span>
+
+### <span data-ttu-id="5bbcd-110">Exempel 1: skapa ett virtuellt Skriv bords program för Windows</span><span class="sxs-lookup"><span data-stu-id="5bbcd-110">Example 1: Create a Windows Virtual Desktop Application</span></span>
+```powershell
+PS C:\> New-AzWvdApplication -ResourceGroupName ResourceGroupName `
+                             -GroupName ApplicationGroupName `
+                             -Name ApplicationName `
+                             -FilePath 'C:\windows\system32\mspaint.exe' `
+                             -FriendlyName 'Friendly name' `
+                             -Description 'Description' `
+                             -IconIndex 0 `
+                             -IconPath 'C:\windows\system32\mspaint.exe' `
+                             -CommandLineSetting 'Allow' `
+                             -ShowInPortal:$true
+
+Name                                 Type
+----                                 ----
+ApplicationGroupName/ApplicationName Microsoft.DesktopVirtualization/applicationgroups/applications
+```
+
+<span data-ttu-id="5bbcd-111">Det här kommandot skapar ett virtuellt Windows-program i en applicaton-grupp.</span><span class="sxs-lookup"><span data-stu-id="5bbcd-111">This command creates a Windows Virtual Desktop Application in an applicaton Group.</span></span>
+
+## <span data-ttu-id="5bbcd-112">MALLPARAMETRAR</span><span class="sxs-lookup"><span data-stu-id="5bbcd-112">PARAMETERS</span></span>
+
+### <span data-ttu-id="5bbcd-113">-AppAlias</span><span class="sxs-lookup"><span data-stu-id="5bbcd-113">-AppAlias</span></span>
+<span data-ttu-id="5bbcd-114">Program Ali Aset från Start-menyn</span><span class="sxs-lookup"><span data-stu-id="5bbcd-114">App Alias from start menu item</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: AppAlias
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5bbcd-115">-ApplicationType</span><span class="sxs-lookup"><span data-stu-id="5bbcd-115">-ApplicationType</span></span>
+<span data-ttu-id="5bbcd-116">Resurs typ för program.</span><span class="sxs-lookup"><span data-stu-id="5bbcd-116">Resource Type of Application.</span></span>
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Support.RemoteApplicationType
+Parameter Sets: CreateExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5bbcd-117">-CommandLineArgument</span><span class="sxs-lookup"><span data-stu-id="5bbcd-117">-CommandLineArgument</span></span>
+<span data-ttu-id="5bbcd-118">Kommando rads argument för programmet.</span><span class="sxs-lookup"><span data-stu-id="5bbcd-118">Command Line Arguments for Application.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: CreateExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5bbcd-119">-CommandLineSetting</span><span class="sxs-lookup"><span data-stu-id="5bbcd-119">-CommandLineSetting</span></span>
+<span data-ttu-id="5bbcd-120">Anger om det här publicerade programmet kan startas med kommando rads argument som tillhandahålls av klienten, kommando rads argument som angetts vid publicerings tillfället eller inga kommando rads argument alls.</span><span class="sxs-lookup"><span data-stu-id="5bbcd-120">Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all.</span></span>
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Support.CommandLineSetting
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5bbcd-121">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="5bbcd-121">-DefaultProfile</span></span>
+<span data-ttu-id="5bbcd-122">Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.</span><span class="sxs-lookup"><span data-stu-id="5bbcd-122">The credentials, account, tenant, and subscription used for communication with Azure.</span></span>
+
+```yaml
+Type: System.Management.Automation.PSObject
+Parameter Sets: (All)
+Aliases: AzureRMContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5bbcd-123">-Beskrivning</span><span class="sxs-lookup"><span data-stu-id="5bbcd-123">-Description</span></span>
+<span data-ttu-id="5bbcd-124">Beskrivning av program.</span><span class="sxs-lookup"><span data-stu-id="5bbcd-124">Description of Application.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5bbcd-125">-Sökväg</span><span class="sxs-lookup"><span data-stu-id="5bbcd-125">-FilePath</span></span>
+<span data-ttu-id="5bbcd-126">Anger en sökväg till den körbara filen för programmet.</span><span class="sxs-lookup"><span data-stu-id="5bbcd-126">Specifies a path for the executable file for the application.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: CreateExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5bbcd-127">-FriendlyName</span><span class="sxs-lookup"><span data-stu-id="5bbcd-127">-FriendlyName</span></span>
+<span data-ttu-id="5bbcd-128">Eget namn på programmet.</span><span class="sxs-lookup"><span data-stu-id="5bbcd-128">Friendly name of Application.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5bbcd-129">-Grupp namn</span><span class="sxs-lookup"><span data-stu-id="5bbcd-129">-GroupName</span></span>
+<span data-ttu-id="5bbcd-130">Namnet på program gruppen</span><span class="sxs-lookup"><span data-stu-id="5bbcd-130">The name of the application group</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: ApplicationGroupName
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5bbcd-131">-IconIndex</span><span class="sxs-lookup"><span data-stu-id="5bbcd-131">-IconIndex</span></span>
+<span data-ttu-id="5bbcd-132">Index för ikonen.</span><span class="sxs-lookup"><span data-stu-id="5bbcd-132">Index of the icon.</span></span>
+
+```yaml
+Type: System.Int32
+Parameter Sets: CreateExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5bbcd-133">-IconPath</span><span class="sxs-lookup"><span data-stu-id="5bbcd-133">-IconPath</span></span>
+<span data-ttu-id="5bbcd-134">Ikonen Path.</span><span class="sxs-lookup"><span data-stu-id="5bbcd-134">Path to icon.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: CreateExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5bbcd-135">-MsixPackageApplicationId</span><span class="sxs-lookup"><span data-stu-id="5bbcd-135">-MsixPackageApplicationId</span></span>
+<span data-ttu-id="5bbcd-136">Anger paket programmets ID för MSIX-program</span><span class="sxs-lookup"><span data-stu-id="5bbcd-136">Specifies the package application Id for MSIX applications</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: CreateExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5bbcd-137">-MsixPackageFamilyName</span><span class="sxs-lookup"><span data-stu-id="5bbcd-137">-MsixPackageFamilyName</span></span>
+<span data-ttu-id="5bbcd-138">Anger namnet på paket familjen för MSIX-program</span><span class="sxs-lookup"><span data-stu-id="5bbcd-138">Specifies the package family name for MSIX applications</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: CreateExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5bbcd-139">-Namn</span><span class="sxs-lookup"><span data-stu-id="5bbcd-139">-Name</span></span>
+<span data-ttu-id="5bbcd-140">Namnet på programmet i den angivna program gruppen</span><span class="sxs-lookup"><span data-stu-id="5bbcd-140">The name of the application within the specified application group</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: ApplicationName
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5bbcd-141">-ResourceGroupName</span><span class="sxs-lookup"><span data-stu-id="5bbcd-141">-ResourceGroupName</span></span>
+<span data-ttu-id="5bbcd-142">Namnet på resurs gruppen.</span><span class="sxs-lookup"><span data-stu-id="5bbcd-142">The name of the resource group.</span></span>
+<span data-ttu-id="5bbcd-143">Namnet är Skift läges okänsligt.</span><span class="sxs-lookup"><span data-stu-id="5bbcd-143">The name is case insensitive.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5bbcd-144">-ShowInPortal</span><span class="sxs-lookup"><span data-stu-id="5bbcd-144">-ShowInPortal</span></span>
+<span data-ttu-id="5bbcd-145">Anger om RemoteApp-programmet ska visas i servern för webb åtkomst för fjärr skrivbord.</span><span class="sxs-lookup"><span data-stu-id="5bbcd-145">Specifies whether to show the RemoteApp program in the RD Web Access server.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5bbcd-146">-SubscriptionId</span><span class="sxs-lookup"><span data-stu-id="5bbcd-146">-SubscriptionId</span></span>
+<span data-ttu-id="5bbcd-147">ID för mål prenumerationen.</span><span class="sxs-lookup"><span data-stu-id="5bbcd-147">The ID of the target subscription.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: (Get-AzContext).Subscription.Id
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5bbcd-148">-Bekräfta</span><span class="sxs-lookup"><span data-stu-id="5bbcd-148">-Confirm</span></span>
+<span data-ttu-id="5bbcd-149">Du uppmanas att bekräfta innan du kör cmdleten.</span><span class="sxs-lookup"><span data-stu-id="5bbcd-149">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5bbcd-150">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="5bbcd-150">-WhatIf</span></span>
+<span data-ttu-id="5bbcd-151">Visar vad som händer om cmdleten körs.</span><span class="sxs-lookup"><span data-stu-id="5bbcd-151">Shows what would happen if the cmdlet runs.</span></span>
+<span data-ttu-id="5bbcd-152">Cmdleten körs inte.</span><span class="sxs-lookup"><span data-stu-id="5bbcd-152">The cmdlet is not run.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="5bbcd-153">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="5bbcd-153">CommonParameters</span></span>
+<span data-ttu-id="5bbcd-154">Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="5bbcd-154">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="5bbcd-155">Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="5bbcd-155">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="5bbcd-156">KOSTNADS</span><span class="sxs-lookup"><span data-stu-id="5bbcd-156">INPUTS</span></span>
+
+## <span data-ttu-id="5bbcd-157">VÄRDEN</span><span class="sxs-lookup"><span data-stu-id="5bbcd-157">OUTPUTS</span></span>
+
+### <span data-ttu-id="5bbcd-158">Microsoft. Azure. PowerShell. cmdletar. DesktopVirtualization. Models. Api20201019Preview. IApplication</span><span class="sxs-lookup"><span data-stu-id="5bbcd-158">Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20201019Preview.IApplication</span></span>
+
+## <span data-ttu-id="5bbcd-159">ANMÄRKNINGAR</span><span class="sxs-lookup"><span data-stu-id="5bbcd-159">NOTES</span></span>
+
+<span data-ttu-id="5bbcd-160">ALIAS</span><span class="sxs-lookup"><span data-stu-id="5bbcd-160">ALIASES</span></span>
+
+## <span data-ttu-id="5bbcd-161">RELATERADE LÄNKAR</span><span class="sxs-lookup"><span data-stu-id="5bbcd-161">RELATED LINKS</span></span>
+
