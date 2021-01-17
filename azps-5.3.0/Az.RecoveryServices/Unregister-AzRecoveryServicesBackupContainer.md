@@ -1,0 +1,163 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
+Module Name: Az.RecoveryServices
+ms.assetid: A10DC2A2-A732-416F-9C68-6533C143AE8F
+online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryservices/unregister-azrecoveryservicesbackupcontainer
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Unregister-AzRecoveryServicesBackupContainer.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Unregister-AzRecoveryServicesBackupContainer.md
+ms.openlocfilehash: 20e0c403656cc7fd714981f73b2a5a8c1335f9b0
+ms.sourcegitcommit: 68451baa389791703e666d95469602c5652609ee
+ms.translationtype: MT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "98421240"
+---
+# <span data-ttu-id="32699-101">Unregister-AzRecoveryServicesBackupContainer</span><span class="sxs-lookup"><span data-stu-id="32699-101">Unregister-AzRecoveryServicesBackupContainer</span></span>
+
+## <span data-ttu-id="32699-102">Sammanfattning</span><span class="sxs-lookup"><span data-stu-id="32699-102">SYNOPSIS</span></span>
+<span data-ttu-id="32699-103">Avregistrerar en Windows-Server eller annan behållare från valvet.</span><span class="sxs-lookup"><span data-stu-id="32699-103">Unregisters a Windows Server or other container from the vault.</span></span>
+
+## <span data-ttu-id="32699-104">FRÅGESYNTAXEN</span><span class="sxs-lookup"><span data-stu-id="32699-104">SYNTAX</span></span>
+
+```
+Unregister-AzRecoveryServicesBackupContainer [-Container] <ContainerBase> [-PassThru] [-VaultId <String>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## <span data-ttu-id="32699-105">PROBLEMBESKRIVNING</span><span class="sxs-lookup"><span data-stu-id="32699-105">DESCRIPTION</span></span>
+<span data-ttu-id="32699-106">Med cmdleten **Unregistered-AzRecoveryServicesBackupContainer** avregistrerar du en Windows Server eller annan säkerhets kopierings behållare från valvet.</span><span class="sxs-lookup"><span data-stu-id="32699-106">The **Unregister-AzRecoveryServicesBackupContainer** cmdlet unregisters a Windows Server or other Backup container from the vault.</span></span>
+<span data-ttu-id="32699-107">Denna cmdlet tar bort referenser till en behållare från valvet.</span><span class="sxs-lookup"><span data-stu-id="32699-107">This cmdlet removes references to a container from the vault.</span></span>
+<span data-ttu-id="32699-108">Innan du kan avregistrera en behållare måste du ta bort alla skyddade data som är kopplade till den behållaren.</span><span class="sxs-lookup"><span data-stu-id="32699-108">Before you can unregister a container, you must delete any protected data associated with that container.</span></span>
+<span data-ttu-id="32699-109">Ställ in valv kontexten med hjälp av Set-AzRecoveryServicesVaultContext cmdlet innan du använder den aktuella cmdleten.</span><span class="sxs-lookup"><span data-stu-id="32699-109">Set the vault context by using the Set-AzRecoveryServicesVaultContext cmdlet before you use the current cmdlet.</span></span>
+
+## <span data-ttu-id="32699-110">BESKRIVS</span><span class="sxs-lookup"><span data-stu-id="32699-110">EXAMPLES</span></span>
+
+### <span data-ttu-id="32699-111">Exempel 1: avregistrera en Windows Server från valvet</span><span class="sxs-lookup"><span data-stu-id="32699-111">Example 1: Unregister a Windows Server from the vault</span></span>
+```powershell
+PS C:\>$Cont = Get-AzRecoveryServicesBackupContainer -ContainerType "Windows" -BackupManagementType MARS -Name "server01.contoso.com"
+PS C:\> Unregister-AzRecoveryServicesBackupContainer -Container $Cont
+```
+
+<span data-ttu-id="32699-112">Det första kommandot hämtar Windows-behållaren med namnet server01.contoso.com som är registrerad i valvet och lagrar det sedan i $Cont variabel.</span><span class="sxs-lookup"><span data-stu-id="32699-112">The first command gets the Windows container named server01.contoso.com that is registered in the vault, and then stores it in the $Cont variable.</span></span>
+<span data-ttu-id="32699-113">Det andra kommandot avregistrerar den angivna Windows-servern från Azure Backup-valvet.</span><span class="sxs-lookup"><span data-stu-id="32699-113">The second command unregisters the specified Windows Server from the Azure Backup vault.</span></span>
+
+### <span data-ttu-id="32699-114">Exempel 2</span><span class="sxs-lookup"><span data-stu-id="32699-114">Example 2</span></span>
+
+<span data-ttu-id="32699-115">Avregistrerar en Windows-Server eller annan behållare från valvet.</span><span class="sxs-lookup"><span data-stu-id="32699-115">Unregisters a Windows Server or other container from the vault.</span></span> <span data-ttu-id="32699-116">(automatiskt genererat)</span><span class="sxs-lookup"><span data-stu-id="32699-116">(autogenerated)</span></span>
+
+```powershell <!-- Aladdin Generated Example --> 
+Unregister-AzRecoveryServicesBackupContainer -Container $Cont -VaultId $vault.ID
+```
+
+## <span data-ttu-id="32699-117">MALLPARAMETRAR</span><span class="sxs-lookup"><span data-stu-id="32699-117">PARAMETERS</span></span>
+
+### <span data-ttu-id="32699-118">-Container</span><span class="sxs-lookup"><span data-stu-id="32699-118">-Container</span></span>
+<span data-ttu-id="32699-119">Anger ett säkerhets kopierings objekt som ska avregistreras.</span><span class="sxs-lookup"><span data-stu-id="32699-119">Specifies a Backup container object to unregister.</span></span>
+<span data-ttu-id="32699-120">För att hämta ett **BackupContainer** -objekt, Använd cmdleten Get-AzRecoveryServicesBackupContainer.</span><span class="sxs-lookup"><span data-stu-id="32699-120">To obtain a **BackupContainer** object, use the Get-AzRecoveryServicesBackupContainer cmdlet.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ContainerBase
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="32699-121">-DefaultProfile</span><span class="sxs-lookup"><span data-stu-id="32699-121">-DefaultProfile</span></span>
+<span data-ttu-id="32699-122">Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.</span><span class="sxs-lookup"><span data-stu-id="32699-122">The credentials, account, tenant, and subscription used for communication with azure.</span></span>
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="32699-123">-PassThru</span><span class="sxs-lookup"><span data-stu-id="32699-123">-PassThru</span></span>
+<span data-ttu-id="32699-124">Returnera behållaren som ska tas bort.</span><span class="sxs-lookup"><span data-stu-id="32699-124">Return the container to be deleted.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="32699-125">-VaultId</span><span class="sxs-lookup"><span data-stu-id="32699-125">-VaultId</span></span>
+<span data-ttu-id="32699-126">ARM-ID för Recovery Services-valvet.</span><span class="sxs-lookup"><span data-stu-id="32699-126">ARM ID of the Recovery Services Vault.</span></span>
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="32699-127">-Bekräfta</span><span class="sxs-lookup"><span data-stu-id="32699-127">-Confirm</span></span>
+<span data-ttu-id="32699-128">Du uppmanas att bekräfta innan du kör cmdleten.</span><span class="sxs-lookup"><span data-stu-id="32699-128">Prompts you for confirmation before running the cmdlet.</span></span>
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="32699-129">-WhatIf</span><span class="sxs-lookup"><span data-stu-id="32699-129">-WhatIf</span></span>
+<span data-ttu-id="32699-130">Visar vad som händer om cmdleten körs.</span><span class="sxs-lookup"><span data-stu-id="32699-130">Shows what would happen if the cmdlet runs.</span></span> 
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### <span data-ttu-id="32699-131">CommonParameters</span><span class="sxs-lookup"><span data-stu-id="32699-131">CommonParameters</span></span>
+<span data-ttu-id="32699-132">Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable.</span><span class="sxs-lookup"><span data-stu-id="32699-132">This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.</span></span> <span data-ttu-id="32699-133">Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span><span class="sxs-lookup"><span data-stu-id="32699-133">For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).</span></span>
+
+## <span data-ttu-id="32699-134">KOSTNADS</span><span class="sxs-lookup"><span data-stu-id="32699-134">INPUTS</span></span>
+
+### <span data-ttu-id="32699-135">System. String</span><span class="sxs-lookup"><span data-stu-id="32699-135">System.String</span></span>
+
+## <span data-ttu-id="32699-136">VÄRDEN</span><span class="sxs-lookup"><span data-stu-id="32699-136">OUTPUTS</span></span>
+
+### <span data-ttu-id="32699-137">Microsoft. Azure. kommando. RecoveryServices. backup. cmdletar. Models. ContainerBase</span><span class="sxs-lookup"><span data-stu-id="32699-137">Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ContainerBase</span></span>
+
+## <span data-ttu-id="32699-138">ANMÄRKNINGAR</span><span class="sxs-lookup"><span data-stu-id="32699-138">NOTES</span></span>
+
+## <span data-ttu-id="32699-139">RELATERADE LÄNKAR</span><span class="sxs-lookup"><span data-stu-id="32699-139">RELATED LINKS</span></span>
+
+[<span data-ttu-id="32699-140">Get-AzRecoveryServicesBackupContainer</span><span class="sxs-lookup"><span data-stu-id="32699-140">Get-AzRecoveryServicesBackupContainer</span></span>](./Get-AzRecoveryServicesBackupContainer.md)
+
+
