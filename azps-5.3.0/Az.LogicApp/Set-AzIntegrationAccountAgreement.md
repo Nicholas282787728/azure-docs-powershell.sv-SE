@@ -1,0 +1,358 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
+Module Name: Az.LogicApp
+ms.assetid: 5FDD6C6A-9F6A-44C3-B332-B528F648DFDB
+online version: https://docs.microsoft.com/en-us/powershell/module/az.logicapp/set-azintegrationaccountagreement
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/LogicApp/LogicApp/help/Set-AzIntegrationAccountAgreement.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/LogicApp/LogicApp/help/Set-AzIntegrationAccountAgreement.md
+ms.openlocfilehash: ac0e5e89706e648d714e3f09ebad5dee7d7b4416
+ms.sourcegitcommit: 68451baa389791703e666d95469602c5652609ee
+ms.translationtype: MT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "98521188"
+---
+# Set-AzIntegrationAccountAgreement
+
+## Sammanfattning
+Ändrar ett integrerings konto avtal.
+
+## FRÅGESYNTAXEN
+
+```
+Set-AzIntegrationAccountAgreement -ResourceGroupName <String> -Name <String> -AgreementName <String>
+ [-AgreementType <String>] [-GuestPartner <String>] [-HostPartner <String>] [-GuestIdentityQualifier <String>]
+ [-GuestIdentityQualifierValue <String>] [-HostIdentityQualifier <String>]
+ [-HostIdentityQualifierValue <String>] [-AgreementContent <String>] [-AgreementContentFilePath <String>]
+ [-Metadata <Object>] [-Force] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+## PROBLEMBESKRIVNING
+Cmdleten **set-AzIntegrationAccountAgreement** ändrar ett integrerings konto avtal.
+Denna cmdlet returnerar ett objekt som representerar integrerings konto avtalet.
+Ange integrerings konto namn, resurs grupps namn och avtals namn.
+De fil värden för mallfiler som du anger i kommando raden har högre prioritet än värden för Mallkategorier i ett Template parameter-objekt.
+Den här modulen stöder dynamiska parametrar.
+Om du vill använda en dynamisk parameter skriver du den i kommandot.
+Om du vill söka efter namn på dynamiska parametrar skriver du ett bindestreck (-) efter cmdlet-namnet och trycker sedan på TABB-tangenten flera gånger för att växla mellan de tillgängliga parametrarna.
+Om du utelämnar en obligatorisk mallparameter frågar cmdleten efter värdet.
+
+## BESKRIVS
+
+### Exempel 1: uppdatera ett integrerings konto avtal
+```powershell
+PS C:\>Set-AzIntegrationAccountAgreement -Name "IntegrationAccount31"-ResourceGroupName "ResourceGroup11" -AgreementName "IntegrationAccountAgreement06" -AgreementType "X12" -GuestPartner "GuestPartner" -HostPartner "HostPartner" -GuestIdentityQualifier "BB" -HostIdentityQualifier "AA" -AgreementContentFilePath "C:\temp\AgreementContent.json"
+Id                     : /subscriptions/<SubscriptionId>/resourceGroups/ResourceGroup11/providers/Microsoft.Logic/integrationAccounts/IntegrationAccount31/agreements/IntegrationAccountAgreement06
+Name                   : IntegrationAccountAgreement06
+Type                   : Microsoft.Logic/integrationAccounts/agreements
+CreatedTime            : 3/26/2016 6:43:52 PM
+ChangedTime            : 3/26/2016 6:43:52 PM
+AgreementType          : X12
+HostPartner            : HostPartner
+GuestPartner           : GuestPartner
+HostIdentityQualifier  : AA
+HostIdentityValue      : AA
+GuestIdentityQualifier : BB
+GuestIdentityValue     : BB
+Content                : {"AS2":null,"X12":{"ReceiveAgreement":{"SenderBusinessIdentity":{"Qualifier":"AA","Value":"AA"},"ReceiverBusinessIdentity":{"Qualifier":"ZZ","Valu
+                         e":"ZZ"},"ProtocolSettings":{"ValidationSettings":{"ValidateCharacterSet":true,"CheckDuplicateInterchangeControlNumber":false,"InterchangeControlN
+                         . . .
+```
+
+Det här kommandot uppdaterar ett integrerings konto avtal i den angivna Azure resurs gruppen.
+
+### Exempel 2
+
+Ändrar ett integrerings konto avtal. (automatiskt genererat)
+
+```powershell <!-- Aladdin Generated Example --> 
+Set-AzIntegrationAccountAgreement -AgreementContentFilePath 'C:\temp\AgreementContent.json' -AgreementName 'IntegrationAccountAgreement06' -GuestIdentityQualifier 'BB' -GuestIdentityQualifierValue <String> -GuestPartner 'GuestPartner' -HostIdentityQualifier 'AA' -HostIdentityQualifierValue <String> -HostPartner 'HostPartner' -Metadata <Object> -Name 'IntegrationAccount31' -ResourceGroupName 'ResourceGroup11'
+```
+
+## MALLPARAMETRAR
+
+### -AgreementContent
+Anger avtalets innehåll i JSON-format (Java Object Notation) för avtalet.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AgreementContentFilePath
+Anger fil Sök vägen för avtalets innehåll.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AgreementName
+Anger namnet på integrerings konto avtalet.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AgreementType
+Anger avtals typen för integrerings kontot.
+De acceptabla värdena för den här parametern är:
+- X12 
+- AS2
+- Edifact
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+Accepted values: X12, AS2, Edifact
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Tvingar kommandot att köras utan att fråga efter bekräftelse.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GuestIdentityQualifier
+Anger en namn avgränsare för företags identitet för gäst partnern.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GuestIdentityQualifierValue
+Integrations konto avtalets värde för gäst identitet.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GuestPartner
+Anger namnet på gäst partnern.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HostIdentityQualifier
+Anger en namn avgränsare för företags identitet för värd partnern.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HostIdentityQualifierValue
+Integrerings värde för värden för värd identitet för integrations konto avtal.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HostPartner
+Anger namnet på värd partnern.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Metadata
+Anger ett metadataobjekt för avtalet.
+
+```yaml
+Type: System.Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Namn
+Anger namnet på ett integrations konto.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: IntegrationAccountName, ResourceName
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Anger namnet på en resurs grupp.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Bekräfta
+Du uppmanas att bekräfta innan du kör cmdleten.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Visar vad som händer om cmdleten körs.
+Cmdleten körs inte.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
+
+## KOSTNADS
+
+### System. String
+
+## VÄRDEN
+
+### Microsoft. Azure. Management. Logic. Models. IntegrationAccountAgreement
+
+## ANMÄRKNINGAR
+
+## RELATERADE LÄNKAR
+
+[Get-AzIntegrationAccountAgreement](./Get-AzIntegrationAccountAgreement.md)
+
+[New-AzIntegrationAccountAgreement](./New-AzIntegrationAccountAgreement.md)
+
+[Remove-AzIntegrationAccountAgreement](./Remove-AzIntegrationAccountAgreement.md)
+
+
