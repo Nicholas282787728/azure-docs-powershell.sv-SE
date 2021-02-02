@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/New-AzADServicePrincipal.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/New-AzADServicePrincipal.md
-ms.openlocfilehash: 9db3e3d0fcb52869a53b4bd2b76603d2935c4dd0
-ms.sourcegitcommit: 375232b84336ef5e13052504deaa43f5bd4b7f65
+ms.openlocfilehash: aa46a09eec134797f1dcacfeb0541769c4569e9e
+ms.sourcegitcommit: e680033f216d86cd91a1dfdb8328d32f4c99d21a
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93758474"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251751"
 ---
 # New-AzADServicePrincipal
 
-## Sammanfattning
-Skapar ett nytt objekt i Azure Active Directory-tjänsten.
+## SYNOPSIS
+Skapar ett nytt azure Active Directory-tjänsthuvudnamn.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### SimpleParameterSet (standard)
 ```
@@ -117,19 +117,19 @@ New-AzADServicePrincipal -ApplicationObject <PSADApplication> -KeyCredential <PS
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Skapar ett nytt objekt i Azure Active Directory-tjänsten. Standard parameter uppsättningen använder standardvärden för parametrar om användaren inte anger något för dem. Mer information om standardvärden som används finns i beskrivningen av de angivna parametrarna nedan.
-Denna cmdlet har möjlighet att tilldela tjänstens huvud namn rollen `Role` och `Scope` parametrarna, om ingen av dessa parametrar anges tilldelas tjänstens huvud konto. Standardvärdena för `Role` parametrarna och `Scope` är "deltagare" och det aktuella abonnemanget ( _Obs!_ de standardvärden används endast när användaren tillhandahåller ett värde för en av de två parametrarna, men inte på den andra).
-Cmdleten skapar också implicit ett program och anger dess egenskaper (om ApplicationId inte finns). Använd Set-AzADApplication cmdlet för att uppdatera de programspecifika parametrarna.
+## BESKRIVNING
+Skapar ett nytt azure Active Directory-tjänsthuvudnamn. Standardparameteruppsättningen använder standardvärden för parametrar om användaren inte anger något för dem. Mer information om standardvärdena som används finns i beskrivningen för de angivna parametrarna nedan.
+Den här cmdleten har möjlighet att tilldela en roll till tjänstens huvudnamn med och parametrarna. Om ingen av dessa parametrar tillhandahålls kommer ingen roll att tilldelas `Role` `Scope` till tjänstens huvudnamn. Standardvärdena för och parametrarna är "Deltagare" respektive aktuell prenumeration (obs! Standardvärdena används endast när användaren anger ett värde för en av de två parametrarna, men inte för den `Role` `Scope` andra).
+Cmdleten skapar också implicit ett program och anger dess egenskaper (om ApplicationId inte anges). Om du vill uppdatera programmets specifika parametrar använder du Set-AzADApplication cmdlet.
 
 > [!WARNING]
-> När du skapar ett tjänst huvud med kommandot **New-AzADServicePrincipal** innehåller utdata de autentiseringsuppgifter du måste skydda. Se till att du inte tar med de här uppgifterna i koden eller kontrol lera uppgifterna i käll kontrollen. Som ett alternativ bör du överväga att använda [hanterade identiteter](/azure/active-directory/managed-identities-azure-resources/overview) för att undvika att behöva använda autentiseringsuppgifter.
+> När du skapar en tjänsts **huvudnamn med kommandot New-AzADServicePrincipal** innehåller utdata autentiseringsuppgifter som du måste skydda. Alternativt kan du överväga att använda [hanterade identiteter för](/azure/active-directory/managed-identities-azure-resources/overview) att undvika att behöva använda autentiseringsuppgifter.
 >
-> Som standard tilldelar **AzADServicePrincipal** rollen [deltagare](/azure/role-based-access-control/built-in-roles#contributor) till tjänstens huvud namn i prenumerations omfattningen. För att minska risken för en komprometterad tjänstens huvud konto tilldelar du en mer specifik roll och begränsar omfattningen till en resurs eller resurs grupp. Mer information finns i [steg för att lägga till en roll tilldelning](/azure/role-based-access-control/role-assignments-steps) .
+> Som standard **tilldelar New-AzADServicePrincipal** rollen [Deltagare](/azure/role-based-access-control/built-in-roles#contributor) till tjänstens huvudnamn i prenumerationens omfattning. För att minska risken för ett komprometterat tjänsthuvudnamn, tilldelar du en mer specifik roll och begränsar omfattningen till en resurs eller resursgrupp. Mer information [finns i Steg för att lägga till](/azure/role-based-access-control/role-assignments-steps) en rolltilldelning.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1 – enkelt att skapa AD-tjänstens huvud objekt
+### Exempel 1 – Enkel huvudskapning av AD-tjänst
 
 ```
 PS C:\> New-AzADServicePrincipal
@@ -142,9 +142,9 @@ Id                    : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
 Type                  : ServicePrincipal
 ```
 
-Med kommandot ovan skapas ett AD-huvudobjekt med standardvärden för parametrar som inte tillhandahålls. Eftersom inget program-ID har angetts skapades ett program för tjänstens huvud namn. Eftersom inga värden angavs för `Role` eller `Scope` så har det skapade tjänstens huvud namn inte någon behörighet.
+Med kommandot ovan skapas ett AD-tjänsts huvudnamn med standardvärden för parametrar som inte anges. Eftersom inget program-ID tillhandahölls skapades ett program för tjänstens huvudnamn. Eftersom inga värden har angetts `Role` för, eller `Scope` så har den skapade tjänstens huvudnamn inga behörigheter.
 
-### Exempel 2 – Simple skapa AD-tjänstens huvud objekt med en viss roll och standard omfattning
+### Exempel 2 – Enkel skapande av huvudnamn för AD-tjänsten med en angiven roll och standardomfattning
 
 ```
 PS C:\> New-AzADServicePrincipal -Role Reader
@@ -159,9 +159,9 @@ Type                  : ServicePrincipal
 WARNING: Assigning role 'Reader' over scope '/subscriptions/zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz' to the new service principal.
 ```
 
-Med kommandot ovan skapas ett AD-huvudobjekt med standardvärdena för parametrar som inte har angetts. Eftersom program-ID inte har angetts skapades ett program för tjänstens huvud namn. Tjänstens huvud namn skapades med "läsare"-behörigheter under den aktuella prenumerationen (sedan inget värde angavs för `Scope` parametern).
+Kommandot ovan skapar ett AD-tjänsthuvudnamn med standardvärdena för parametrar som inte anges. Eftersom program-ID:t inte tillhandahölls skapades ett program för tjänstens huvudnamn. Tjänstens huvudnamn skapades med behörigheten "Läsare" över den aktuella prenumerationen (eftersom inget värde angavs för `Scope` parametern).
 
-### Exempel 3 – enkelt att skapa AD-UPN med ett angivet omfång och standard roll
+### Exempel 3 – Enkel huvudskapning av AD-tjänsten med en angiven omfattning och standardroll
 
 ```
 PS C:\> New-AzADServicePrincipal -Scope /subscriptions/zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz/resourceGroups/myResourceGroup
@@ -176,9 +176,9 @@ Type                  : ServicePrincipal
 WARNING: Assigning role 'Contributor' over scope '/subscriptions/zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz/resourceGroups/myResourceGroup' to the new service principal.
 ```
 
-Med kommandot ovan skapas ett AD-huvudobjekt med standardvärdena för parametrar som inte har angetts. Eftersom program-ID inte har angetts skapades ett program för tjänstens huvud namn. Tjänstens huvud namn skapades med behörigheter för "deltagare" (sedan inget värde angavs för `Role` parametern) över den tillhandahållna resurs gruppens omfattning.
+Kommandot ovan skapar ett AD-tjänsthuvudnamn med standardvärdena för parametrar som inte anges. Eftersom program-ID:t inte tillhandahölls skapades ett program för tjänstens huvudnamn. Tjänstens huvudnamn skapades med behörigheten "Deltagare" (eftersom inget värde har angetts för `Role` parametern) över den angivna resursgruppens omfattning.
 
-### Exempel 4 – Simple skapa AD-tjänstens huvud objekt med ett angivet omfång och en viss roll
+### Exempel 4 – Enkel huvudskapning av AD-tjänsten med en angiven omfattning och roll
 
 ```
 PS C:\> New-AzADServicePrincipal -Role Reader -Scope /subscriptions/zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz/resourceGroups/myResourceGroup
@@ -193,9 +193,9 @@ Type                  : ServicePrincipal
 WARNING: Assigning role 'Reader' over scope '/subscriptions/zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz/resourceGroups/myResourceGroup' to the new service principal.
 ```
 
-Med kommandot ovan skapas ett AD-huvudobjekt med standardvärdena för parametrar som inte har angetts. Eftersom program-ID inte har angetts skapades ett program för tjänstens huvud namn. Tjänstens huvud namn skapades med "läsare"-behörigheter via den tillhandahållna resurs gruppens omfattning.
+Kommandot ovan skapar ett AD-tjänsthuvudnamn med standardvärdena för parametrar som inte anges. Eftersom program-ID:t inte tillhandahölls skapades ett program för tjänstens huvudnamn. Tjänstens huvudnamn skapades med läsbehörigheter över den angivna resursgruppomfattningen.
 
-### Exempel 5 – skapa ett nytt AD tjänst-huvudobjekt med program-ID med roll tilldelning
+### Exempel 5 – Skapa ett nytt AD-tjänsthuvudnamn med program-ID med rolltilldelning
 
 ```
 PS C:\> New-AzADServicePrincipal -ApplicationId 34a28ad2-dec4-4a41-bc3b-d22ddf90000e
@@ -207,22 +207,22 @@ Id                    : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
 Type                  : ServicePrincipal
 ```
 
-Skapar en ny AD service-huvudprincip för programmet med program-ID ' 34a28ad2-dec4-4a41-bc3b-d22ddf90000e '. Eftersom inga värden angavs för `Role` eller `Scope` så har det skapade tjänstens huvud namn inte någon behörighet.
+Skapar ett nytt AD-tjänsthuvudnamn för programmet med program-id '34a28ad2-dec4-4a41-bc3b-d22ddf90000e'. Eftersom inga värden har angetts för, eller `Role` så har den skapade `Scope` tjänstens huvudnamn inga behörigheter.
 
-### Exempel 6 – skapa ett nytt AD service-huvudobjekt med ledning
+### Exempel 6 – Skapa ett nytt AD-tjänsthuvudnamn med rörledning
 
 ```
 PS C:\> Get-AzADApplication -ObjectId 3ede3c26-b443-4e0b-9efc-b05e68338dc3 | New-AzADServicePrincipal
 ```
 
-Hämtar programmet med objekt-ID ' 3ede3c26-B443-4e0b-9efc-b05e68338dc3 ' och pipes till New-AzADServicePrincipal cmdlet för att skapa en ny AD-huvudtjänst för det programmet.
+Hämtar programmet med objekt-ID '3ede3c26-b443-4e0b-9efc-b05e68338dc3' och rör som till New-AzADServicePrincipal-cmdleten för att skapa ett nytt AD-tjänsthuvudnamn för programmet.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -ApplicationId
-Unikt program-ID för tjänstens huvud namn i en klient organisation.
-Det går inte att ändra egenskapen när den har skapats.
-Om inget program-ID anges genereras ett.
+Det unika program-ID:t för en tjänsts huvudnamn i en klientorganisation.
+När du skapat den här egenskapen kan den här egenskapen inte ändras.
+Om ett program-ID inte anges genereras ett.
 
 ```yaml
 Type: System.Guid
@@ -249,7 +249,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationObject
-Det objekt som representerar det program som tjänstens huvud namn skapas för.
+Det objekt som representerar programmet som tjänstens huvudnamn skapas för.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ActiveDirectory.PSADApplication
@@ -264,8 +264,8 @@ Accept wildcard characters: False
 ```
 
 ### -CertValue
-Värdet för autentiseringstypen "asymmetrisk".
-Den representerar det grundläggande 64-kodade certifikatet.
+Värdet för den asymmetriska autentiseringstypen.
+Den representerar det 64-kodade bascertifikatet.
 
 ```yaml
 Type: System.String
@@ -292,7 +292,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -307,7 +307,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-Eget namn på tjänstens huvud konto. Om inget visnings namn anges används det här värdet som standard "Azure-PowerShell-MM-DD-yyyy-HH-SS", där suffixet är det datum då programmet skapades.
+Eget namn på tjänstens huvudnamn. Om inget visningsnamn anges används det här värdet som standard för azure-powershell-MM-dd-yyyy-HH-mm-ss, där suffixet är tidpunkten då programmet skapades.
 
 ```yaml
 Type: System.String
@@ -334,8 +334,8 @@ Accept wildcard characters: False
 ```
 
 ### -EndDate
-Slutdatum för användning av autentiseringsuppgifter.
-Standardvärdet för slutdatumet är ett år från idag. För en "asymmetrisk" typ autentiseringsuppgift måste detta ställas in på eller före det datum då X509-certifikatet är giltigt.
+Slutdatumet för autentiseringsanvändningen.
+Standardvärdet för slutdatum är ett år från i dag. För en "asymmetrisk" typ av autentiseringsuppgifter måste detta anges till på eller före datumet som X509-certifikatet är giltigt.
 
 ```yaml
 Type: System.DateTime
@@ -361,8 +361,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Inloggnings uppgifter
-Insamling av viktiga autentiseringsuppgifter associerade med programmet.
+### -KeyCredential
+Samlingen med viktiga autentiseringsuppgifter som är kopplade till programmet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ActiveDirectory.PSADKeyCredential[]
@@ -389,7 +389,7 @@ Accept wildcard characters: False
 ```
 
 ### -PasswordCredential
-Den uppsättning autentiseringsuppgifter för lösen ord som är associerad med programmet.
+Den samling med lösenordsuppgifter som är kopplade till programmet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ActiveDirectory.PSADPasswordCredential[]
@@ -415,8 +415,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Roll
-Rollen som tjänstens huvud namn har. Om ett värde `Scope` är angivet, men inget värde är angivet för `Role` , `Role` används rollen "deltagare" som standard.
+### -Role
+Den roll som tjänstens huvudnamn har över omfattningen. Om ett värde anges, men inget värde anges för, får deltagarerollen som `Scope` `Role` `Role` standard.
 
 ```yaml
 Type: System.String
@@ -431,7 +431,7 @@ Accept wildcard characters: False
 ```
 
 ### -Omfattning
-Omfattningen som tjänstens huvud namn har behörighet för. Om ett värde `Role` är angivet men inget värde är angivet för `Scope` `Scope` det aktuella abonnemanget.
+Omfattningen som tjänstens huvudnamn har behörigheter för. Om ett värde `Role` anges, men inget värde anges, används `Scope` den aktuella `Scope` prenumerationen som standard.
 
 ```yaml
 Type: System.String
@@ -446,7 +446,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipAssignment
-Om den här inställningen är aktive rad kommer du inte att skapa standard roll tilldelning för tjänstens huvud objekt.
+Om detta anges hoppar du över att skapa standardrolltilldelningen för tjänstens huvudnamn.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -460,9 +460,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -StartDate
-Start datum för användning av autentiseringsuppgifter.
-Standardvärdet för start datum är idag. För en "asymmetrisk" typ autentiseringsuppgift måste detta ställas in på eller efter det datum då X509-certifikatet är giltigt från.
+### -Startdatum
+Startdatumet för autentiseringsanvändningen.
+Standardinställningen för startdatum är idag. För en "asymmetrisk" typ av autentiseringsuppgifter måste detta anges till på eller efter datumet som X509-certifikatet är giltigt från.
 
 ```yaml
 Type: System.DateTime
@@ -489,7 +489,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -504,7 +504,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs.
+Visar vad som skulle hända om cmdleten körs.
 Cmdleten körs inte.
 
 ```yaml
@@ -520,30 +520,30 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-### System. GUID
+### System.Guid
 
-### System. String
+### System.String
 
-### Microsoft. Azure. commands. ActiveDirectory. PSADApplication
+### Microsoft.Azure.Commands.ActiveDirectory.PSADApplication
 
-### Microsoft. Azure. commands. ActiveDirectory. PSADPasswordCredential []
+### Microsoft.Azure.Commands.ActiveDirectory.PSADPasswordCredential[]
 
-### Microsoft. Azure. commands. ActiveDirectory. PSADKeyCredential []
+### Microsoft.Azure.Commands.ActiveDirectory.PSADKeyCredential[]
 
-### System. DateTime
+### System.DateTime
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. ActiveDirectory. PSADServicePrincipal
+### Microsoft.Azure.Commands.ActiveDirectory.PSADServicePrincipal
 
-### Microsoft. Azure. kommandon. sources. Models. Authorization. PSADServicePrincipalWrapper
+### Microsoft.Azure.Commands.Resources.Models.Authorization.PSADServicePrincipalWra azure
 
-## ANMÄRKNINGAR
-Nyckelord: Azure, azurerm, arm, resurs, hantering, chef, resurs, grupp, Mall, distribution
+## ANTECKNINGAR
+Nyckelord: azure, azurerm, arm, resurs, hantering, chef, resurs, grupp, mall, distribution
 
 ## RELATERADE LÄNKAR
 
