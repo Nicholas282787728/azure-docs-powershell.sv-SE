@@ -3,22 +3,21 @@ external help file: Microsoft.Azure.Commands.DeploymentManager.dll-Help.xml
 Module Name: AzureRM.DeploymentManager
 online version: https://docs.microsoft.com/en-us/powershell/module/azurerm.deploymentmanager/get-azurermdeploymentmanagerservice
 schema: 2.0.0
-content_git_url: ''
-ms.openlocfilehash: 655cfeeae35d1b48bbfe2149fd4262dffe72ae09
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 4a91c2f8fdda1d2cda7c75f0cf7cfab165701f3d
+ms.sourcegitcommit: e57be0da5162efeb0a01f396e2343dd137920063
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93572440"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99572113"
 ---
 # Get-AzureRmDeploymentManagerService
 
-## Sammanfattning
-Hämtar en tjänst i en tjänst sto pol Ogin.
+## SYNOPSIS
+Hämtar en tjänst i en tjänstetopologi.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
-### Interaktivt (standard)
+### Interaktiv (standard)
 ```
 Get-AzureRmDeploymentManagerService [-ResourceGroupName] <String> [-ServiceTopologyName] <String>
  [-Name] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
@@ -36,7 +35,7 @@ Get-AzureRmDeploymentManagerService [-ResourceGroupName] <String> [-Name] <Strin
  [-ServiceTopologyResourceId] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-### ID
+### ResourceId
 ```
 Get-AzureRmDeploymentManagerService [-ResourceId] <String> [-DefaultProfile <IAzureContextContainer>]
  [<CommonParameters>]
@@ -48,39 +47,39 @@ Get-AzureRmDeploymentManagerService [-Service] <PSServiceResource> [-DefaultProf
  [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Get-AzureRmDeploymentManagerService** får en tjänst under en tjänstmall och returnerar ett objekt som representerar den tjänsten.
-Ange tjänsten med dess namn, topologi den är i och resurs gruppens namn. Du kan också ange serviceobjektet eller ResourceId.
+## BESKRIVNING
+Cmdleten **Get-AzureRmDeploymentManagerService** får en tjänst under en tjänsttopologi och returnerar ett objekt som representerar den tjänsten.
+Ange tjänsten efter dess namn, tjänsttopologi som den finns i och resursgruppnamnet. Alternativt kan du ange tjänstobjektet eller Resurs-ID:t.
 
-Du kan ändra det här objektet lokalt och sedan tillämpa ändringarna på tjänsten genom att använda Set-AzureRmDeploymentManagerService cmdlet.
+Du kan ändra objektet lokalt och sedan tillämpa ändringar på tjänsten med hjälp av Set-AzureRmDeploymentManagerService cmdleten.
 
-## BESKRIVS
+## EXEMPEL
 
 ### Exempel 1
 ```powershell
 PS C:\> Get-AzureRmDeploymentManagerService -ResourceGroupName ContosoResourceGroup -ServiceTopologyName ContosoServiceTopology -Name ContosoService1
 ```
 
-Det här kommandot får en tjänst som heter ContosoService1 i en tjänstmall som heter ContosoServiceTopology i ContosoResourceGroup.
+Det här kommandot får en tjänst med namnet ContosoService1 i en tjänstetopologi med namnet ContosoServiceTopology i ContosoResourceGroup.
 
-### Exempel 2: Hämta en tjänst med resurs-ID.
+### Exempel 2: Hämta en tjänst med resursidentifieraren.
 ```powershell
 PS C:\> Get-AzureRmDeploymentManagerService -ResourceId "/subscriptions/subscriptionId/resourcegroups/ContosoResourceGroup/providers/Microsoft.DeploymentManager/serviceTopologies/ContosoServiceTopology/services/ContosoService1"
 ```
 
-Det här kommandot får en tjänst som heter ContosoService1 i en tjänstmall som heter ContosoServiceTopology i ContosoResourceGroup.
+Det här kommandot får en tjänst med namnet ContosoService1 i en tjänstetopologi med namnet ContosoServiceTopology i ContosoResourceGroup.
 
-### Exempel 3: Hämta en tjänst med serviceobjektet.
+### Exempel 3: Hämta en tjänst med hjälp av tjänstobjektet.
 ```powershell
 PS C:\> Get-AzureRmDeploymentManagerService -Service $serviceObject
 ```
 
-Det här kommandot får en tjänst vars namn, namn och ResourceGroup matchar namn, ServiceTopologyName och $serviceObject ResourceGroupName.
+Det här kommandot hämtar en tjänst vars namn, tjänsttopologinamn och ResourceGroup matchar egenskaperna Namn, ServiceTopologyName och ResourceGroupName för $serviceObject respektive.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer
@@ -94,7 +93,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Namn
+### -Name
 Namnet på tjänsten.
 
 ```yaml
@@ -110,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resurs gruppen.
+Resursgruppen.
 
 ```yaml
 Type: System.String
@@ -125,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Resurs-ID.
+Resursidentifieraren.
 
 ```yaml
 Type: System.String
@@ -140,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -Service
-Service objekt.
+Tjänstobjekt.
 
 ```yaml
 Type: Microsoft.Azure.Commands.DeploymentManager.Models.PSServiceResource
@@ -155,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceTopology
-Den tjänst Topology-objekt där tjänsten ska skapas.
+Tjänsttopologiobjektet där tjänsten ska skapas.
 
 ```yaml
 Type: Microsoft.Azure.Commands.DeploymentManager.Models.PSServiceTopologyResource
@@ -170,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceTopologyName
-Namnet på tjänst sto pol Ogin.
+Namnet på tjänsttopologin.
 
 ```yaml
 Type: System.String
@@ -185,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceTopologyResourceId
-Resurs-ID för tjänste topologi där tjänsten ska skapas.
+Resursidentifieraren för tjänsttopologi där tjänsten ska skapas.
 
 ```yaml
 Type: System.String
@@ -200,17 +199,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
 ### Ingen
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. DeploymentManager. Models. PSServiceResource
+### Microsoft.Azure.Commands.DeploymentManager.Models.PSServiceResource
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
