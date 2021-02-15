@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/Update
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Update-AzSqlDatabaseAdvancedThreatProtectionSetting.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Update-AzSqlDatabaseAdvancedThreatProtectionSetting.md
-ms.openlocfilehash: 1bd5906ac4736fc2aace122070edfebe1e59fe3f
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: baa3e3d4b272bccab5fe33b9af05edc9ed254236
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "93927058"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100402549"
 ---
 # Update-AzSqlDatabaseAdvancedThreatProtectionSetting
 
-## Sammanfattning
-Anger ett avancerat skydds inställningar för en databas.
+## SYNOPSIS
+Anger en avancerad inställning för skydd mot hot i en databas.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 Update-AzSqlDatabaseAdvancedThreatProtectionSetting [-PassThru] [-NotificationRecipientsEmails <String>]
@@ -27,25 +27,25 @@ Update-AzSqlDatabaseAdvancedThreatProtectionSetting [-PassThru] [-NotificationRe
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Update-AzSqlDatabaseAdvancedThreatProtectionSetting** anger ett avancerat skydds inställningar för en Azure SQL-databas.
-För att aktivera avancerat skydd för en databas måste gransknings inställningar aktive ras för databasen.
-Använd den här cmdleten genom att ange parametrarna *ResourceGroupName* , *servername* och *databasename* för att identifiera databasen.
-Denna cmdlet stöds också av SQL Server utsträckt databas tjänst på Azure.
+## BESKRIVNING
+**Cmdleten Update-AzSqlDatabaseAdvancedThreatProtectionSetting** ställer in en avancerad inställning för skydd mot hot i en Azure SQL-databas.
+För att kunna aktivera avancerat skydd för en databas måste granskningsinställningar aktiveras i den databasen.
+Om du vill använda den här cmdleten anger du parametrarna *ResourceGroupName,* *ServerName* och *DatabaseName* för att identifiera databasen.
+Den här cmdleten stöds också av tjänsten Stretcha databas för SQL Server i Azure.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: Ange inställningar för avancerat skydd för en databas
+### Exempel 1: Ange avancerade inställningar för skydd mot hot för en databas
 ```
 PS C:\>Update-AzSqlDatabaseAdvancedThreatProtectionSetting -ResourceGroupName "ResourceGroup11" -ServerName "Server01" -DatabaseName "Database01" -NotificationRecipientsEmails "admin01@contoso.com;secadmin@contoso.com" -EmailAdmins $False -ExcludedDetectionType "Sql_Injection_Vulnerability", "SQL_Injection" -StorageAccountName "mystorageAccount"
 ```
 
-Det här kommandot anger de avancerade inställningarna för skydd mot en databas som heter Database01 på den server som heter Server01.
+Det här kommandot anger avancerade inställningar för skydd mot hot för en databas med namnet Database01 på servern Server01.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DatabaseName
-Anger namnet på den databas där inställningarna är inställda.
+Anger namnet på databasen där inställningarna anges.
 
 ```yaml
 Type: System.String
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAdmins
-Anger om avancerade inställningar för skydd mot kontakter kontaktar administratörer via e-post.
+Anger om administratörer för avancerade skydd mot hot ska använda e-post.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -90,11 +90,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludedDetectionType
-Anger en matris med identifierings typer som ska undantas från inställningarna.
-De acceptabla värdena för den här parametern är:
-- Sql_Injection 
-- Sql_Injection_Vulnerability 
-- Access_Anomaly 
+Anger en matris med identifieringstyper som ska undantas från inställningarna.
+De godtagbara värdena för den här parametern är:
+- Sql_Injection
+- Sql_Injection_Vulnerability
+- Access_Anomaly
 - Ingen
 
 ```yaml
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationRecipientsEmails
-Anger en semikolonavgränsad lista med e-postadresser som inställningarna skickar aviseringar till.
+Anger en semikolonavgränsad lista med e-postadresser som aviseringarna skickas till via inställningarna.
 
 ```yaml
 Type: System.String
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 Returnerar ett objekt som representerar det objekt som du arbetar med.
-Denna cmdlet genererar som standard inga utdata.
+Som standard genererar inte den här cmdleten några utdata.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Anger namnet på den resurs grupp som servern är tilldelad till.
+Anger namnet på den resursgrupp som servern är tilldelad till.
 
 ```yaml
 Type: System.String
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionInDays
-Antalet bevarande dagar för gransknings loggar
+Antalet kvarhållningsdagar för granskningsloggarna
 
 ```yaml
 Type: System.Nullable`1[System.UInt32]
@@ -170,7 +170,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ServerName
+### -Servernamn
 Anger namnet på servern.
 
 ```yaml
@@ -186,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountName
-Anger namnet på det lagrings konto som ska användas. Jokertecken är inte tillåtna. Denna parameter är inte obligatorisk. Om du inte anger den här parametern används det lagrings konto som har definierats tidigare som en del av databasens avancerade skydds inställningar. Om det är första gången som en avancerad inställning för databasens avancerade skydds inställningar är definierad och den här parametern inte anges, Miss lyckas cmdleten.
+Anger namnet på lagringskontot som ska användas. Jokertecken tillåts inte. Den här parametern är inte obligatorisk. När den här parametern inte tillhandahålls använder cmdleten det lagringskonto som definierades tidigare som en del av de avancerade inställningarna för skydd mot hot i databasen. Om det är första gången en databas avancerade skyddsinställningar definieras och den här parametern inte tillhandahålls kommer cmdleten att misslyckas.
 
 ```yaml
 Type: System.String
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs.
+Visar vad som skulle hända om cmdleten körs.
 Cmdleten körs inte.
 
 ```yaml
@@ -232,30 +232,24 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-### System. Nullable ' 1 [[system. Boolean, system. privat. CoreLib, version = 4.0.0.0, Culture = neutralt, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Nullable'1[[System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-### Microsoft. Azure. commands. SQL. ThreatDetection. Model. DetectionType []
+### Microsoft.Azure.Commands.Sql.ThreatDetection.Model.DetectionType[]
 
-### System. Nullable ' 1 [[system. UInt32, system. privat. CoreLib, version = 4.0.0.0, Culture = neutralt, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Nullable'1[[System.UInt32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. SQL. ThreatDetection. Model. DatabaseThreatDetectionsettingsModel
+### Microsoft.Azure.Commands.Sql.ThreatDetection.Model.DatabaseThreatDetectionsettingsModel
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Get-AzSqlDatabaseThreatDetectionsettings](./Get-AzSqlServerThreatDetectionsettings.md)
-
-[Remove-AzSqlDatabaseThreatDetectionsettings](./Remove-AzSqlDatabaseThreatDetectionsettings.md)
-
-[Dokumentation för SQL-databaser](https://docs.microsoft.com/azure/sql-database/)
-
-
+[Dokumentation om SQL-databaser](https://docs.microsoft.com/azure/sql-database/)
