@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.frontdoor/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorCustomRuleObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorCustomRuleObject.md
-ms.openlocfilehash: 19f8215f8feaa1765da871f0fa38cc0120d842ea
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 8602bd4636e3e6034552f48a6f6514a453b816a0
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93916750"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100400679"
 ---
 # New-AzFrontDoorCustomRuleObject
 
-## Sammanfattning
-Skapa CustomRule-objekt för WAF-princip
+## SYNOPSIS
+Skapa CustomRule-objekt för skapande av WAF-princip
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 New-AzFrontDoorCustomRuleObject -Name <String> -RuleType <PSCustomRuleType>
@@ -26,10 +26,10 @@ New-AzFrontDoorCustomRuleObject -Name <String> -RuleType <PSCustomRuleType>
  [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Skapa CustomRule-objekt för WAF-princip
+## BESKRIVNING
+Skapa CustomRule-objekt för skapande av WAF-princip
 
-## BESKRIVS
+## EXEMPEL
 
 ### Exempel 1
 ```powershell
@@ -42,11 +42,11 @@ Rule1 MatchRule  Block        2                          1
 
 Skapa ett CustomRule-objekt
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -Åtgärd
 Typ av åtgärder.
-Möjliga värden inkluderar: "Tillåt", "blockera", "log"
+Möjliga värden omfattar: "Tillåt", "Block", "Log"
 
 ```yaml
 Type: Microsoft.Azure.Commands.FrontDoor.Models.PSAction
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -MatchCondition
-Lista över matchnings villkor.
+Lista över matchningsvillkor.
 
 ```yaml
 Type: Microsoft.Azure.Commands.FrontDoor.Models.PSMatchCondition[]
@@ -91,8 +91,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Namn
-Namn på regeln
+### -Name
+Namnet på regeln
 
 ```yaml
 Type: System.String
@@ -106,7 +106,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Prioritet
+### -Priority
 Beskriver prioriteten för regeln.
 
 ```yaml
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -RateLimitDurationInMinutes
-Hastighets gräns. Standard-1 minut
+Varaktighet för prisgräns. Standard – 1 minut
 
 ```yaml
 Type: System.Int32
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -RateLimitThreshold
-Frekvens gräns thresold
+Prisgräns, sla
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -152,8 +152,8 @@ Accept wildcard characters: False
 ```
 
 ### -RuleType
-Typ av regel.
-Möjliga värden är: ' MatchRule ', ' RateLimitRule '
+Typen av regel.
+Möjliga värden är: 'MatchRule', 'RateLimitRule'
 
 ```yaml
 Type: Microsoft.Azure.Commands.FrontDoor.Models.PSCustomRuleType
@@ -169,19 +169,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
 ### Ingen
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. FrontDoor. Models. PSCustomRule
+### Microsoft.Azure.Commands.frontDoor.Models.PSCustomrule
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
 [New-AzFrontDoorFireWallPolicy](./New-AzFrontDoorFireWallPolicy.md) 
- [Set-AzFrontDoorFireWallPolicy](./Set-AzFrontDoorFireWallPolicy.md)
+ [Update-AzFrontDoorFireWallPolicy](./Update-AzFrontDoorFireWallPolicy.md)

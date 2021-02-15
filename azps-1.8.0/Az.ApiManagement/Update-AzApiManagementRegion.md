@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Update-AzApiManagementRegion.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Update-AzApiManagementRegion.md
-ms.openlocfilehash: fce2d356b7da56d2b93fa8634e737f96f54da178
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 3f9c88177d3f791acdd0be5c81eec2fb5bc6911c
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93917650"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100400713"
 ---
 # Update-AzApiManagementRegion
 
-## Sammanfattning
-Uppdaterar det befintliga distributions området i PsApiManagement-instansen.
+## SYNOPSIS
+Uppdaterar befintlig distributionsregion i PsApiManagement-instansen.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 Update-AzApiManagementRegion -ApiManagement <PsApiManagement> -Location <String> -Sku <PsApiManagementSku>
@@ -26,14 +26,14 @@ Update-AzApiManagementRegion -ApiManagement <PsApiManagement> -Location <String>
  [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Update-AzApiManagementRegion** uppdaterar en befintlig instans av typen **Microsoft. Azure. commands. ApiManagement. Models. PsApiManagementRegion** i en samling **AdditionalRegions** -objekt av en angiven instans av typen **Microsoft. Azure. commands. ApiManagement. Models. PsApiManagement**.
-Denna cmdlet distribuerar inte något men uppdaterar inte en instans av **PsApiManagement** i minnet.
-Om du vill uppdatera en distribution av en API-hantering använder du den ändrade **PsApiManagementInstance** till cmdleten Update-AzApiManagementDeployment.
+## BESKRIVNING
+Cmdleten **Update-AzApiManagementRegion** uppdaterar en befintlig instans av typen **Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementRegion** i en samling **AdditionalRegions-objekt** för en a provided-instans av typen **Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement.**
+Den här cmdleten distribuerar ingenting men uppdaterar en instans av **PsApiManagement** i minnet.
+Om du vill uppdatera en distribution av en API-hantering använder du den modifierade **PsApiManagementInstance** till cmdleten Set-AzApiManagement.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: ökar kapaciteten för ytterligare områden i en PsApiManagement-instans
+### Exempel 1: Ökar kapaciteten för ytterligare region i en PsApiManagement-instans
 ```powershell
 PS C:\>$apimService = Get-AzApiManagement -ResourceGroupName $resourceGroupName -Name $apiManagementName
 PS C:\>$apimService = Update-AzApiManagementRegion -ApiManagement $apimService -Location "North Central US" -Capacity 2 -Sku Premium
@@ -42,12 +42,12 @@ PS C:\>$apimService = Update-AzApiManagementRegion -ApiManagement $apimService -
 PS C:\>$updatedService = Set-AzApiManagement -InputObject $apimService -PassThru
 ```
 
-Det här kommandot får API Management Premium SKU-tjänsten med regioner i södra centrala USA och norra centrala USA. Därefter ökar kapaciteten för Nord Central USA-regionen till 2 via **Update-AzApiManagementRegion**. Nästa cmdlet Set-AzApiManagement tillämpar konfigurations ändringen för API-hanterings tjänsten.
+Det här kommandot får API Management Premium-SKU-tjänsten, med regioner i södra centrala USA och centrala USA. Därefter ökar kapaciteten i området i centrala USA till 2 med hjälp av **Update-AzApiManagementRegion.** Nästa cmdlet Set-AzApiManagement konfigurationsändringen för tjänsten Api Management.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -ApiManagement
-Anger den **PsApiManagement** -instans som du vill uppdatera ett befintligt distributions område i.
+Anger **PsApiManagement-instansen** som en befintlig distributionsregion ska uppdateras i.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement
@@ -61,8 +61,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -Kapacitet
-Anger det nya värdet för SKU-kapacitet för distributions området.
+### -Capacity
+Anger det nya SKU-kapacitetsvärdet för distributionsområdet.
 
 ```yaml
 Type: System.Int32
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifterna, kontot, klientorganisationen och prenumerationen som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -92,9 +92,9 @@ Accept wildcard characters: False
 ```
 
 ### -Plats
-Anger platsen för det distributions område som ska uppdateras.
-Anger platsen för det nya distributions området bland de regioner som stöds för API-hanterings tjänsten.
-För att få giltiga platser, Använd cmdleten Get-AzResourceProvider-ProviderNamespace "Microsoft. ApiManagement" | där {$ _. ResourceTypes [0]. ResourceTypeName-EQ "tjänst"} | Select-Object platser
+Anger platsen för distributionsområdet som ska uppdateras.
+Anger platsen för den nya distributionsområdet i den region som stöds för api-hanteringstjänsten.
+För att få giltiga platser använder du cmdleten Get-AzResourceProvider -ProviderNamespace "Microsoft.ApiManagement" | där {$_. ResourceTypes[0]. ResourceTypeName -eq "service"} | Select-Object platser
 
 ```yaml
 Type: System.String
@@ -109,11 +109,11 @@ Accept wildcard characters: False
 ```
 
 ### -SKU
-Anger det nya nivå svärdet för distributions området.
+Anger det nya nivåvärdet för distributionsområdet.
 Giltiga värden är:
-- Utvecklar
-- Standar
-- Beta
+- Utvecklare
+- Standard
+- Premium
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSku
@@ -129,8 +129,8 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetwork
-Anger en virtuell nätverks konfiguration för distributions området.
-Om du överför $null tas nätverkets konfiguration för området bort.
+Anger en konfiguration av ett virtuellt nätverk för distributionsområdet.
+Passerar $null tar bort virtuell nätverkskonfiguration för regionen.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVirtualNetwork
@@ -145,30 +145,30 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-### Microsoft. Azure. commands. ApiManagement. Models. PsApiManagement
+### Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement
 
-### System. String
+### System.String
 
-### Microsoft. Azure. commands. ApiManagement. Models. PsApiManagementSku
+### Microsoft.Azure.Commands.ApiManagement.Models.PsapiManagementSku
 
-### System. Int32
+### System.Int32
 
-### Microsoft. Azure. commands. ApiManagement. Models. PsApiManagementVirtualNetwork
+### Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVirtualNetwork
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. ApiManagement. Models. PsApiManagement
+### Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Add-AzApiManagementRegion](./Add-AzApiManagementRegion.md)
+[Add-AzapiManagementRegion](./Add-AzApiManagementRegion.md)
 
-[Remove-AzApiManagementRegion](./Remove-AzApiManagementRegion.md)
+[Remove-AzapiManagementRegion](./Remove-AzApiManagementRegion.md)
 
-[Update-AzApiManagementDeployment](./Update-AzApiManagementDeployment.md)
+[Set-AzapiManagement](./Set-AzApiManagement.md)
