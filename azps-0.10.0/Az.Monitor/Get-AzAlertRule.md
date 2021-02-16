@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/Get-AzAlertRule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/Get-AzAlertRule.md
-ms.openlocfilehash: 01774d80ce422c1ac0a48df61d44328b6b5b0105
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.openlocfilehash: c48a3fcf2441c7818d087e42b1271939963936ce
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "93922633"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100399064"
 ---
 # Get-AzAlertRule
 
-## Sammanfattning
-Hämtar notifieringsregler.
+## SYNOPSIS
+Får aviseringsregler.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### GetByResourceGroup
 ```
@@ -38,39 +38,39 @@ Get-AzAlertRule -ResourceGroupName <String> -TargetResourceId <String> [-Detaile
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Get-AzAlertRule** hämtar en notifieringsregel efter dess namn eller URI, eller alla notifieringsregler från en viss resurs grupp.
+## BESKRIVNING
+Cmdleten **Get-AzAlertRule** får en aviseringsregel efter namn eller URI, eller alla aviseringsregler från en angiven resursgrupp.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: Hämta notifieringsregler för en resurs grupp
+### Exempel 1: Få aviseringsregler för en resursgrupp
 ```
 PS C:\>Get-AzAlertRule -ResourceGroup "Default-Web-CentralUS"
 ```
 
-Med det här kommandot får du alla notifieringsregler för resurs gruppen standard-Web-centrala.
-Utdata innehåller inte information om reglerna eftersom parametern *DetailedOutput* inte har angetts.
+Med det här kommandot får du alla aviseringsregler för resursgruppen Default-Web-CentralUS.
+Utdata innehåller inte information om reglerna eftersom *parametern DetailedOutput* inte har angetts.
 
-### Exempel 2: Hämta en notifieringsregel efter namn
+### Exempel 2: Få en aviseringsregel efter namn
 ```
 PS C:\>Get-AzAlertRule -ResourceGroup "Default-Web-CentralUS" -Name "myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8"
 ```
 
-Det här kommandot får notifieringsregeln med namnet avisering-7da64548-214d-42CA-b12b-b245bb8f0ac8.
-Eftersom parametern *DetailedOutput* inte anges innehåller utdata bara grundläggande information om notifieringsregeln.
+Med det här kommandot får du aviseringsregeln myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8.
+Eftersom *parametern DetailedOutput* inte har angetts innehåller utdata bara grundläggande information om aviseringsregeln.
 
-### Exempel 3: Hämta en notifieringsregel efter namn med detaljerad utskrift
+### Exempel 3: Få en aviseringsregel efter namn med detaljerade utdata
 ```
 PS C:\>Get-AzAlertRule -ResourceGroup "Default-Web-CentralUS" -Name "myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8" -DetailedOutput
 ```
 
-Det här kommandot får notifieringsregeln med namnet avisering-7da64548-214d-42CA-b12b-b245bb8f0ac8.
+Med det här kommandot får du aviseringsregeln myalert-7da64548-214d-42ca-b12b-b245bb8f0ac8.
 Parametern *DetailedOutput* anges så att utdata är detaljerad.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -DetailedOutput
-Visar alla detaljer i resultatet.
+Visar fullständig information i resultatet.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -99,8 +99,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Namn
-Anger namnet på den notifieringsregel som ska visas.
+### -Name
+Anger namnet på den aviseringsregel som ska fås.
 
 ```yaml
 Type: System.String
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Anger namnet på resurs gruppen.
+Anger namnet på resursgruppen.
 
 ```yaml
 Type: System.String
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetResourceId
-Anger ID för mål resursen.
+Anger MÅLresursens ID.
 
 ```yaml
 Type: System.String
@@ -145,23 +145,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-### System. Management. Automation. SwitchParameter
+### System.Management.Automation.SwitchParameter
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. Insights. OutputClasses. PSAlertRule
+### Microsoft.Azure.Commands.Insights.OutputClasses.PSAlertRule
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Add-AzLogAlertRule](./Add-AzLogAlertRule.md)
 
 [Add-AzMetricAlertRule](./Add-AzMetricAlertRule.md)
 
