@@ -6,49 +6,49 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.notificati
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/NotificationHubs/NotificationHubs/help/Get-AzNotificationHubListKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/NotificationHubs/NotificationHubs/help/Get-AzNotificationHubListKey.md
-ms.openlocfilehash: 6b9aa676e00d137612908955e88558b4cefb0eb8
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 7ce6c3c08c1794e2bed794186203a5c6c0d1fdea
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93919411"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100413769"
 ---
 # Get-AzNotificationHubListKey
 
-## Sammanfattning
-Hämtar de primära och sekundära anslutnings strängar som är associerade med en auktoriseringsregel för en aviserings hubb.
+## SYNOPSIS
+Hämtar de primära och sekundära anslutningssträngarna som är kopplade till en auktoriseringsregel för meddelandehubben.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 Get-AzNotificationHubListKey [-ResourceGroup] <String> [-Namespace] <String> [-NotificationHub] <String>
  [-AuthorizationRule] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Get-AzNotificationHubListKey** returnerar de primära och sekundära anslutnings strängarna för en auktoriseringsregel för en aviserings nav med delad åtkomst-signatur.
-Auktoriseringsregler hantera användar rättigheter för navet.
-Varje regel innehåller en primär och en sekundär anslutnings sträng.
-Följande anslutnings strängar:
-- Peka användare i en resurs.
-- Inkludera ett token som innehåller frågeparametrar.
-En av dessa parametrar, signaturen används för att autentisera användaren och ange den angivna åtkomst nivån.
+## BESKRIVNING
+Cmdleten **Get-AzNotificationHubListKey** returnerar de primära och sekundära anslutningssträngarna för en auktoriseringsregel för meddelandehubben SAS (Shared Access Signature).
+Auktoriseringsregler hanterar användarrättigheter till hubben.
+Varje regel innehåller en primär och en sekundär anslutningssträng.
+Följande anslutningssträngar (URI:er) utförs:
+- Peka användare till en resurs.
+- Ta med en token som innehåller frågeparametrar.
+En av dessa parametrar, signaturen, används för att autentisera användaren och ange angiven åtkomstnivå.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: Hämta primära och sekundära anslutnings strängar för en auktoriseringsregel
+### Exempel 1: Hämta de primära och sekundära anslutningssträngarna för en auktoriseringsregel
 ```
 PS C:\>Get-AzNotificationHubListKey -Namespace "ContosoNamespace" -NotificationHub "ContosoInternalHub" -ResourceGroup "ContosoNotificationsGroup" -AuthorizationRule "ListenRule"
 ```
 
-Det här kommandot hämtar de primära och sekundära anslutnings strängarna för auktoriseringsregeln ListenRule, en regel som tilldelats meddelande navet för ContosoInternalHub.
-Kommandot måste innehålla hubb namn området och resurs gruppen.
+Det här kommandot hämtar de primära och sekundära anslutningssträngarna för auktoriseringsregeln ListenRule, en regel som tilldelas till meddelandehubben ContosoInternalHub.
+Kommandot måste innehålla navets namnområde och resursgrupp.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -AuthorizationRule
-Anger namnet på en autentiseringsprincip för en delad Access-signatur.
-Dessa regler bestämmer vilken typ av åtkomst användare har till meddelande navet.
+Anger namnet på en SAS-autentiseringsregel (Shared Access Signature).
+Dessa regler avgör vilken typ av åtkomst användarna har till meddelandehubben.
 
 ```yaml
 Type: System.String
@@ -63,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -77,9 +77,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Namnrymd
-Anger namn området som meddelande navet tilldelats till.
-Med namn utrymmen kan du gruppera och kategorisera meddelande nav.
+### -Namespace
+Anger det namnområde som meddelandehubben är tilldelat till.
+Namnområden är ett sätt att gruppera och kategorisera meddelandehubben.
 
 ```yaml
 Type: System.String
@@ -94,8 +94,8 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationHub
-Anger meddelandets hubb som denna cmdlet tilldelar en auktoriseringsregel till.
-Meddelande nav används för att skicka push-meddelanden till flera klienter oavsett vilken plattform som används av dessa klienter.
+Anger meddelandehubben som den här cmdleten tilldelar en auktoriseringsregel.
+Meddelandehubben används för att skicka push-meddelanden till flera klienter oavsett vilken plattform som används av dessa klienter.
 
 ```yaml
 Type: System.String
@@ -110,8 +110,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Anger den resurs grupp som meddelande navet tilldelats till.
-Resurs grupper organiserar objekt som namn områden, aviserings nav och auktoriseringsregler på olika sätt som underlättar lager hantering och Azure-administrationen.
+Anger den resursgrupp som meddelandehubben är tilldelad till.
+Resursgrupper organiserar objekt som namnområden, meddelandehubben och auktoriseringsregler på sätt som hjälper dig med lagerhantering och Azure-administration.
 
 ```yaml
 Type: System.String
@@ -126,20 +126,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. Management. NotificationHubs. Models. ResourceListKeys
+### Microsoft.Azure.Management.NotificationHubs.Models.ResourceListKeys
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Get-AzNotificationHubAuthorizationRules](./Get-AzNotificationHubAuthorizationRules.md)
 
 
