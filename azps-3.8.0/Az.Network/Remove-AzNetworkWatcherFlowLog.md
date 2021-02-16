@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/re
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Remove-AzNetworkWatcherFlowLog.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Remove-AzNetworkWatcherFlowLog.md
-ms.openlocfilehash: 8a5f911529a4fc6f1ceb4e242b0e751e5f1a528f
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 5c8532502e4e74b94a9d0c1e252c8d1cea9ddad8
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94091788"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100398604"
 ---
 # Remove-AzNetworkWatcherFlowLog
 
-## Sammanfattning
-Tar bort den angivna flödes logg resursen.
+## SYNOPSIS
+Tar bort den angivna flödesloggresursen.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### SetByName (standard)
 ```
@@ -49,20 +49,20 @@ Remove-AzNetworkWatcherFlowLog -InputObject <PSFlowLogResource> [-PassThru] [-As
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Tar bort den angivna flödes logg resursen.
+## BESKRIVNING
+Tar bort den angivna flödesloggresursen.
 
-## BESKRIVS
+## EXEMPEL
 
 ### Exempel 1
 ```powershell
 PS C:\> Remove-AzNetworkWatcherFlowLog -Location eastus -Name pstest
 ```
 
-## MALLPARAMETRAR
+## PARAMETERS
 
-### -AsJob
-Kör cmdlet i bakgrunden
+### -As Ent fån
+Kör cmdleten i bakgrunden
 
 ```yaml
 Type: SwitchParameter
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure.
 
 ```yaml
 Type: IAzureContextContainer
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Flödes logg objekt.
+Flödesloggobjekt.
 
 ```yaml
 Type: PSFlowLogResource
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -Plats
-Nätverks Bevakningens plats.
+Plats för nätverksbevakningen.
 
 ```yaml
 Type: String
@@ -121,8 +121,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Namn
-Flödets logg namn.
+### -Name
+Namn på flödesloggen.
 
 ```yaml
 Type: String
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkWatcher
-Nätverks bevaknings resursen.
+Nätverksbevakningsresursen.
 
 ```yaml
 Type: PSNetworkWatcher
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkWatcherName
-Nätverks Bevakningens namn.
+Namnet på nätverksbevakningen.
 
 ```yaml
 Type: String
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{Fill PassThru Description}}
+{{ Fill PassThru Description }}
 
 ```yaml
 Type: SwitchParameter
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Namnet på nätverks bevaknings resurs gruppen.
+Namnet på resursgruppen för nätverksbevakning.
 
 ```yaml
 Type: String
@@ -212,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: SwitchParameter
@@ -227,7 +227,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs.
+Visar vad som skulle hända om cmdleten körs.
 Cmdleten körs inte.
 
 ```yaml
@@ -243,21 +243,21 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### Microsoft. Azure. commands. Networks. Models. PSNetworkWatcher
+### Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher
 
-### System. String
+### System.String
 
-### Microsoft. Azure. commands. Networks. Models. PSFlowLogResource
+### Microsoft.Azure.Commands.Network.Models.PSFlowLogResource
 
-## VÄRDEN
+## UTDATA
 
-### System. Boolean
+### System.Boolean
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
@@ -283,7 +283,7 @@ Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,
 
 [Remove-AzNetworkWatcherPacketCapture](./Remove-AzNetworkWatcherPacketCapture.md)
 
-[Stopp-AzNetworkWatcherPacketCapture](./Stop-AzNetworkWatcherPacketCapture.md)
+[Stop-AzNetworkWatcherPacketCapture](./Stop-AzNetworkWatcherPacketCapture.md)
 
 [New-AzNetworkWatcherProtocolConfiguration](./New-AzNetworkWatcherProtocolConfiguration.md)
 
@@ -291,7 +291,7 @@ Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,
 
 [Test-AzNetworkWatcherConnectivity](./Test-AzNetworkWatcherConnectivity.md)
 
-[Stopp-AzNetworkWatcherConnectionMonitor](./Stop-AzNetworkWatcherConnectionMonitor.md)
+[Stop-AzNetworkWatcherConnectionMonitor](./Stop-AzNetworkWatcherConnectionMonitor.md)
 
 [Start-AzNetworkWatcherConnectionMonitor](./Start-AzNetworkWatcherConnectionMonitor.md)
 
@@ -311,12 +311,12 @@ Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,
 
 [Get-AzNetworkWatcherFlowLogStatus](./Get-AzNetworkWatcherFlowLogStatus.md)
 
-[Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport)
+[Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport.md)
 
-[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor)
+[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor.md)
 
-[New-AzNetworkWatcherFlowLog](./New-AzNetworkWatcherFlowLog)
+[New-AzNetworkWatcherFlowLog](./New-AzNetworkWatcherFlowLog.md)
 
-[Set-AzNetworkWatcherFlowLog](./Set-AzNetworkWatcherFlowLog)
+[Set-AzNetworkWatcherFlowLog](./Set-AzNetworkWatcherFlowLog.md)
 
-[Get-AzNetworkWatcherFlowLog](./Get-AzNetworkWatcherFlowLog)
+[Get-AzNetworkWatcherFlowLog](./Get-AzNetworkWatcherFlowLog.md)

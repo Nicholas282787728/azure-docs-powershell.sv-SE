@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/g
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Get-AzKeyVaultKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Get-AzKeyVaultKey.md
-ms.openlocfilehash: 21d2f6efa039dbd9b229562fcefd53c715f400fe
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: a934b1d96b260a6615acfbe02b15c80e6d3bfae5
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93916325"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100400560"
 ---
 # Get-AzKeyVaultKey
 
-## Sammanfattning
-Hämtar nyckel valv nycklar.
+## SYNOPSIS
+Hämtar nyckelvalvsnycklar.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### ByVaultName (standard)
 ```
@@ -74,13 +74,13 @@ Get-AzKeyVaultKey [-ResourceId] <String> [-Name] <String> [-IncludeVersions]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Get-AzKeyVaultKey** hämtar nyckel valv för Azure.
-Denna cmdlet hämtar ett specifikt **Microsoft. Azure.-kommandon. Key valv. Key Vault.-paket** eller en lista över alla **paket** -objekt i ett nyckelord eller efter version.
+## BESKRIVNING
+Cmdleten **Get-AzKeyVaultKey** får Azure Key Vault-nycklar.
+Den här cmdleten får en viss **Microsoft.Azure.Commands.KeyVault.Models.KeyDle** eller en lista över alla **KeyDle-objekt** i ett nyckelvalv eller per version.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: Hämta alla nycklar i ett nyckel valv
+### Exempel 1: Hämta alla nycklar i ett nyckelvalv
 ```powershell
 PS C:\> Get-AzKeyVaultKey -VaultName 'contoso'
 
@@ -109,9 +109,9 @@ Purge Disabled : False
 Tags           :
 ```
 
-Det här kommandot får alla nycklar i nyckel valvet contoso.
+Det här kommandot hämtar alla nycklar i nyckelvalvet Contoso.
 
-### Exempel 2: hämta den aktuella versionen av en-tangenten
+### Exempel 2: Hämta den aktuella versionen av en nyckel
 ```powershell
 PS C:\> Get-AzKeyVaultKey -VaultName 'contoso' -KeyName 'test1'
 
@@ -128,9 +128,9 @@ Purge Disabled : False
 Tags           :
 ```
 
-Med det här kommandot får du den aktuella versionen av den Key som heter TEST1 i nyckelordet contoso.
+Det här kommandot hämtar den aktuella versionen av nyckeln som heter test1 i nyckelvalvet Contoso.
 
-### Exempel 3: Hämta alla versioner av en viktig
+### Exempel 3: Hämta alla versioner av en nyckel
 ```powershell
 PS C:\> Get-AzKeyVaultKey -VaultName 'contoso' -KeyName 'test1' -IncludeVersions
 
@@ -159,9 +159,9 @@ Purge Disabled : False
 Tags           :
 ```
 
-Det här kommandot får alla versioner som heter ITPfx i vaultnamed contoso.
+Med det här kommandot får du alla versioner av nyckeln ITPfx i nyckelvalvet Contoso.
 
-### Exempel 4: skaffa en specifik version av en
+### Exempel 4: Hämta en specifik version av en nyckel
 ```powershell
 PS C:\> Get-AzKeyVaultKey -VaultName 'contoso' -KeyName 'test1' -Version 'e4e95940e669407fbdb4298bc21a3e1d'
 
@@ -178,10 +178,10 @@ Purge Disabled : False
 Tags           :
 ```
 
-Det här kommandot får en specifik version av den Key som heter TEST1 i nyckelordet contoso.
-När du har kört det här kommandot kan du kontrol lera olika egenskaper för tangenten genom att navigera $Key-objektet.
+Det här kommandot får en specifik version av nyckeln som heter test1 i nyckelvalvet Contoso.
+När du har kört det här kommandot kan du kontrollera olika egenskaper för nyckeln genom att navigera $Key objektet.
 
-### Exempel 5: Hämta alla de nycklar som har tagits bort men inte rensats för detta nyckel valv.
+### Exempel 5: Hämta alla nycklar som har tagits bort men inte rensats för det här nyckelvalvet.
 ```powershell
 PS C:\> Get-AzKeyVaultKey -VaultName 'contoso' -InRemovedState
 
@@ -199,9 +199,9 @@ Purge Disabled       : False
 Tags                 :
 ```
 
-Det här kommandot får alla de nycklar som tidigare tagits bort, men inte rensats, i nyckel valvet med namnet contoso.
+Med det här kommandot får du alla nycklar som tidigare har tagits bort, men inte rensats, i nyckelvalvet Contoso.
 
-### Exempel 6: hämtar det ITPfx som har tagits bort men inte rensats för detta nyckeltal.
+### Exempel 6: Hämtar nyckeln ITPfx som har tagits bort men inte rensats för det här nyckelvalvet.
 ```powershell
 PS C:\> Get-AzKeyVaultKey -VaultName 'contoso' -KeyName 'test3' -InRemovedState
 
@@ -219,10 +219,10 @@ Purge Disabled       : False
 Tags                 :
 ```
 
-Det här kommandot får den test3 som du har tagit bort tidigare, men inte rensat, i det viktigaste valvet med namnet contoso.
-Det här kommandot returnerar metadata som borttagnings datum och det schemalagda rensnings datumet för den här borttagna tangenten.
+Det här kommandot får nyckeltest3 som tidigare har tagits bort, men inte rensats, i nyckelvalvet Contoso.
+Det här kommandot returnerar metadata, till exempel borttagningsdatum, och det schemalagda rensningsdatumet för den här borttagna nyckeln.
 
-### Exempel 7: Hämta alla nycklar i ett nyckel valv med hjälp av filtrering
+### Exempel 7: Hämta alla nycklar i ett nyckelvalv med hjälp av filtrering
 ```powershell
 PS C:\> Get-AzKeyVaultKey -VaultName 'contoso' -KeyName "test*"
 
@@ -251,12 +251,12 @@ Purge Disabled : False
 Tags           :
 ```
 
-Det här kommandot får alla nycklar i nyckel valvet contoso som börjar med "test".
+Med det här kommandot får du alla nycklar i nyckelvalvet Contoso som börjar med "test".
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -271,10 +271,10 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeVersions
-Anger att denna cmdlet får alla versioner av en viktig.
-Den aktuella versionen av en Key är den första som visas i listan.
-Om du anger den här parametern måste du också ange parametrarna *namn* och *VaultName* .
-Om du inte anger parametern *IncludeVersions* får denna cmdlet den aktuella versionen av nycklarna med det angivna *namnet*.
+Anger att denna cmdlet hämtar alla versioner av en nyckel.
+Den aktuella versionen av en nyckel är den första i listan.
+Om du anger den här parametern måste du också ange *parametrarna Namn* *och VaultName.*
+Om du inte anger *parametern IncludeVersions* hämtar den här cmdleten den aktuella versionen av nyckeln med det angivna *namnet.*
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -289,7 +289,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Valv objekt.
+KeyVault-objekt.
 
 ```yaml
 Type: Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault
@@ -304,7 +304,7 @@ Accept wildcard characters: False
 ```
 
 ### -InRemovedState
-Anger om tidigare borttagna nycklar ska visas i resultatet
+Anger om de tidigare borttagna nycklarna ska visas i utdata
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -318,8 +318,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Namn
-Anger namnet på det Key-paket som ska visas.
+### -Name
+Anger namnet på nyckelpaketet som ska hämtas.
 
 ```yaml
 Type: System.String
@@ -346,7 +346,7 @@ Accept wildcard characters: True
 ```
 
 ### -ResourceId
-Resurs-ID för valv.
+KeyVault Resource Id.
 
 ```yaml
 Type: System.String
@@ -361,8 +361,8 @@ Accept wildcard characters: False
 ```
 
 ### -VaultName
-Anger namnet på det nyckel valv från vilket denna cmdlet hämtar nycklar.
-Denna cmdlet konstruerar det fullständigt kvalificerade domän namnet (FQDN) för ett Key valv baserat på namnet som den här parametern anger och din valda miljö.
+Anger namnet på nyckelvalvet som den här cmdleten hämtar nycklar från.
+Den här cmdleten skapar det fullständigt kvalificerade domännamnet (FQDN) för ett nyckelvalv baserat på namnet som den här parametern anger och din valda miljö.
 
 ```yaml
 Type: System.String
@@ -377,8 +377,8 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-Anger huvud versionen.
-Denna cmdlet konstruerar FQDN för en nycklar baserat på Key valv-namnet, den valda miljön, namnet på knappen och huvud versionen.
+Anger nyckelversionen.
+Den här cmdleten skapar FQDN för en nyckel baserat på nyckelvalvets namn, den valda miljön, nyckelnamnet och nyckelversionen.
 
 ```yaml
 Type: System.String
@@ -393,25 +393,25 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### Microsoft. Azure. commands. valv. Models. PSKeyVault
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. valv. Models. PSKeyVaultKeyIdentityItem
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKeyIdentityItem
 
-### Microsoft. Azure. commands. valv. Models. PSKeyVaultKey
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKey
 
 ### Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultKeyIdentityItem
 
 ### Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultKey
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
@@ -419,7 +419,6 @@ Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,
 
 [Remove-AzKeyVaultKey](./Remove-AzKeyVaultKey.md)
 
-[Ångra-AzKeyVaultKeyRemoval](./Undo-AzKeyVaultKeyRemoval.md)
+[Undo-AzKeyVaultKeyRemoval](./Undo-AzKeyVaultKeyRemoval.md)
 
-[Set-AzKeyVaultKeyAttribute](./Set-AzKeyVaultKeyAttribute.md)
 

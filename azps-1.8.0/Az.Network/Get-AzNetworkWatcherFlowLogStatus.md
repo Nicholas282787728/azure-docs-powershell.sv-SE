@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzNetworkWatcherFlowLogStatus.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzNetworkWatcherFlowLogStatus.md
-ms.openlocfilehash: cdc97ff5e528e58aa088950f5272e7689f35b10e
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 8a2bde41d0e7e09acc1ad10a9901f0cf26334d02
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93748249"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100400509"
 ---
 # Get-AzNetworkWatcherFlowLogStatus
 
-## Sammanfattning
-Hämtar status för flödes loggning för en resurs.
+## SYNOPSIS
+Hämtar status för flödesloggning för en resurs.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### SetByResource (standard)
 ```
@@ -37,12 +37,14 @@ Get-AzNetworkWatcherFlowLogStatus -Location <String> -TargetResourceId <String> 
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Get-AzNetworkWatcherFlowLogStatus cmdlet får statusen för flödes loggning för en resurs. Statusen inkluderar om flödes loggning är aktiverat för den angivna resursen, det konfigurerade lagrings kontot för att skicka loggar och bevarande princip för loggarna. För närvarande stöds nätverks säkerhets grupper för flödes loggning. 
+## BESKRIVNING
+Cmdlet Get-AzNetworkWatcherFlowLogStatus hämtar status för flödesloggning för en resurs.
+Statusen omfattar huruvida flödesloggning är aktiverad för resursen, det konfigurerade lagringskontot för att skicka loggar och kvarhållningsprincipen för loggarna.
+Nätverkssäkerhetsgrupper stöds för flödesloggning.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: få loggnings status för flödet för ett angivet NSG
+### Exempel 1: Hämta status för flödesloggning för en angiven NSG
 ```
 PS C:\> $NW = Get-AzNetworkWatcher -ResourceGroupName NetworkWatcherRg -Name NetworkWatcher_westcentralus
 PS C:\> $nsg = Get-AzNetworkSecurityGroup -ResourceGroupName NSGRG -Name appNSG
@@ -64,9 +66,9 @@ Properties       : {
                    }
 ```
 
-I det här exemplet får du status för flödes loggning för en nätverks säkerhets grupp. Den angivna NSG har flödes loggning aktive rad, standard format och ingen bevarande princip uppsättning.
+I det här exemplet får vi status för flödesloggning för en nätverkssäkerhetsgrupp. Den angivna NSG-funktionen har flödesloggning aktiverad, standardformat och ingen bevarandeprincip har angetts.
 
-### Exempel 2: Hämta flödes loggning och trafik analys för en viss NSG
+### Exempel 2: Hämta status för Flödesloggning och Trafikanalys för en viss NSG
 ```
 PS C:\> $NW = Get-AzNetworkWatcher -ResourceGroupName NetworkWatcherRg -Name NetworkWatcher_westcentralus
 PS C:\> $nsg = Get-AzNetworkSecurityGroup -ResourceGroupName NSGRG -Name appNSG
@@ -95,12 +97,12 @@ FlowAnalyticsConfiguration : {
           }
 ```
 
-I det här exemplet får du en säkerhets grupp för flödes loggning och trafik analys. Den angivna NSG har flödes loggning och Traffic Analytics aktive rad, standard format och ingen bevarande princip uppsättning.
+I det här exemplet får vi flödesloggning och trafikanalysstatus för en nätverkssäkerhetsgrupp. Den angivna NSG-funktionen har flödesloggning och Trafikanalys aktiverat, standardformat och ingen bevarandeprincip har angetts.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
-### -AsJob
-Kör cmdlet i bakgrunden
+### -As Ent fån
+Kör cmdleten i bakgrunden
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -115,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifterna, kontot, klientorganisationen och prenumerationen som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -130,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -Plats
-Nätverks Bevakningens plats.
+Plats för nätverksbevakningen.
 
 ```yaml
 Type: System.String
@@ -145,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkWatcher
-Nätverks bevaknings resursen.
+Nätverksbevakningsresursen.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher
@@ -160,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkWatcherName
-Nätverks Bevakningens namn.
+Namnet på nätverksbevakningen.
 
 ```yaml
 Type: System.String
@@ -175,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Namnet på nätverks bevaknings resurs gruppen.
+Namnet på resursgruppen för nätverksbevakning.
 
 ```yaml
 Type: System.String
@@ -190,7 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetResourceId
-Mål resurs-ID.
+Målresurs-ID.
 
 ```yaml
 Type: System.String
@@ -205,20 +207,20 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### Microsoft. Azure. commands. Networks. Models. PSNetworkWatcher
+### Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. Networks. Models. PSFlowLog
+### Microsoft.Azure.Commands.Network.Models.PSFlowLog
 
-## ANMÄRKNINGAR
-Nyckelord: Azure, azurerm, arm, resurs, hantering, chef, nätverk, nätverk, Watcher, flöde, loggar, flowlog, loggning
+## ANTECKNINGAR
+Nyckelord: azure, azurerm, arm, resource, management, manager, network, networking, watcher, flow, logs, flowlog, logging
 
 ## RELATERADE LÄNKAR
 
@@ -244,7 +246,7 @@ Nyckelord: Azure, azurerm, arm, resurs, hantering, chef, nätverk, nätverk, Wat
 
 [Remove-AzNetworkWatcherPacketCapture](./Remove-AzNetworkWatcherPacketCapture.md)
 
-[Stopp-AzNetworkWatcherPacketCapture](./Stop-AzNetworkWatcherPacketCapture.md)
+[Stop-AzNetworkWatcherPacketCapture](./Stop-AzNetworkWatcherPacketCapture.md)
 
 [New-AzNetworkWatcherProtocolConfiguration](./New-AzNetworkWatcherProtocolConfiguration.md)
 
@@ -252,7 +254,7 @@ Nyckelord: Azure, azurerm, arm, resurs, hantering, chef, nätverk, nätverk, Wat
 
 [Test-AzNetworkWatcherConnectivity](./Test-AzNetworkWatcherConnectivity.md)
 
-[Stopp-AzNetworkWatcherConnectionMonitor](./Stop-AzNetworkWatcherConnectionMonitor.md)
+[Stop-AzNetworkWatcherConnectionMonitor](./Stop-AzNetworkWatcherConnectionMonitor.md)
 
 [Start-AzNetworkWatcherConnectionMonitor](./Start-AzNetworkWatcherConnectionMonitor.md)
 
@@ -272,6 +274,6 @@ Nyckelord: Azure, azurerm, arm, resurs, hantering, chef, nätverk, nätverk, Wat
 
 [Get-AzNetworkWatcherFlowLogStatus](./Get-AzNetworkWatcherFlowLogStatus.md)
 
-[Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport)
+[Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport.md)
 
-[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor)
+[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor.md)
