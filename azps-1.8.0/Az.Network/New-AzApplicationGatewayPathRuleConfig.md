@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/ne
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzApplicationGatewayPathRuleConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzApplicationGatewayPathRuleConfig.md
-ms.openlocfilehash: a73233908f37463c591aeb2e3d6b00eeb3c511ed
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 94fbc1e9a4ae8b7befe6961a9648174770458583
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93748126"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100400220"
 ---
 # New-AzApplicationGatewayPathRuleConfig
 
-## Sammanfattning
-Skapar en Sök vägs regel för Programgateway.
+## SYNOPSIS
+Skapar en regel för sökväg till programgateway.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### SetByResourceId
 ```
@@ -37,12 +37,12 @@ New-AzApplicationGatewayPathRuleConfig -Name <String> -Paths <String[]>
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **New-AzApplicationGatewayPathRuleConfig** skapar en Sök vägs regel för Programgateway.
-Regler som skapas av denna cmdlet kan läggas till i en uppsättning konfigurations inställningar för URL-sökvägar och sedan tilldelas en gateway.
-Konfigurations inställningar för Sök vägs karta används för belastnings utjämning i Application Gateway.
+## BESKRIVNING
+**Cmdleten New-AzApplicationGatewayPathRuleConfig** skapar en sökvägsregel för programgateway.
+Regler som skapas av den här cmdleten kan läggas till i en samling konfigurationsinställningar för URL-sökvägskarta och sedan tilldelas till en gateway.
+Konfigurationsinställningar för sökvägar används vid belastningsutjämning för programgateway.
 
-## BESKRIVS
+## EXEMPEL
 
 ### Exempel 1
 ```
@@ -53,24 +53,24 @@ PS C:\> $PathRuleConfig = New-AzApplicationGatewayPathRuleConfig -Name "base" -P
 PS C:\> Add-AzApplicationGatewayUrlPathMapConfig -ApplicationGateway $Gateway -Name "ContosoUrlPathMap" -PathRules $PathRuleConfig -DefaultBackendAddressPool $AddressPool -DefaultBackendHttpSettings $HttpSettings
 ```
 
-De här kommandona skapar en ny Application Gateway Sök vägs regel och använder sedan cmdleten **Add-AzApplicationGatewayUrlPathMapConfig** för att tilldela den regeln till en Programgateway.
-För att göra detta skapar det första kommandot en objekt referens till gateway-ContosoApplicationGateway.
-Denna objekt referens lagras i en variabel som heter $Gateway.
-Nästa två kommandon skapar en adresspool och ett objekt med HTTP-inställningar för en server del. de här objekten (lagrade i variabeln $AddressPool och $HttpSettings) behövs för att skapa ett Sök vägs regel objekt.
-Det fjärde kommandot skapar Sök vägs regel objekt och lagras i en variabel som heter $PathRuleConfig.
-Med det femte kommandot används **Add-AzApplicationGatewayUrlPathMapConfig** för att lägga till konfigurations inställningarna och den nya Sök vägs regeln i dessa inställningar för ContosoApplicationGateway.
+Dessa kommandon skapar en ny sökvägsregel för programgateway och använder sedan cmdleten **Add-AzApplicationGatewayUrlPathMapConfig** för att tilldela regeln till en programgateway.
+Det gör du genom att det första kommandot skapar en objektreferens till gatewayen ContosoApplicationGateway.
+Den här objektreferensen lagras i en variabel med namnet $Gateway.
+Följande två kommandon skapar en adresspool för backend och ett HTTP-inställningsobjekt för backend. Dessa objekt (lagrade i variablerna $AddressPool och $HttpSettings) behövs för att skapa ett sökvägsregelobjekt.
+Det fjärde kommandot skapar sökvägsregelobjektet och lagras i en variabel med namnet $PathRuleConfig.
+Det femte kommandot använder **Add-AzApplicationGatewayUrlPathMapConfig** för att lägga till konfigurationsinställningarna och den nya sökvägsregeln som finns i inställningarna i ContosoApplicationGateway.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -BackendAddressPool
-Anger en objekt referens till en samling inställningar för adresspool som ska läggas till i inställningar för gateway-sökvägar.
-Du kan skapa denna objekt referens genom att använda New-AzApplicationGatewayBackendAddressPool cmdlet och syntax som liknar den här: `$AddressPool = New-AzApplicationGatewayBackendAddressPool -Name "ContosoAddressPool" -BackendIPAddresses "192.168.1.1", "192.168.1.2"`
-Med föregående kommando läggs två IP-adresser (192.16.1.1 och 192.168.1.2) till i adresspoolen.
-Observera att IP-adressen omges av citat tecken och avgränsas med kommatecken.
-Den resulterande variabeln $AddressPool och kan sedan användas som parameter värde för parametern *DefaultBackendAddressPool* .
-Server delens adresspool representerar IP-adresserna på backend-servrarna.
-Dessa IP-adresser ska antingen tillhöra det virtuella nätverkets undernät eller vara offentliga IP-adresser.
-Om du använder den här parametern kan du inte använda parametern *DefaultBackendAddressPoolId* i samma kommando.
+Anger en objektreferens till en samling konfigurationsinställningar för backend-adresspool som ska läggas till i konfigurationsinställningarna för gatewaysökvägsregler.
+Du kan skapa den här objektreferensen med hjälp New-AzApplicationGatewayBackendAddressPool cmdlet och syntax ungefär så här: `$AddressPool = New-AzApplicationGatewayBackendAddressPool -Name "ContosoAddressPool" -BackendIPAddresses "192.168.1.1", "192.168.1.2"`
+Med föregående kommando läggs två IP-adresser (192.16.1.1 och 192.168.1.2) till adresspoolen.
+Observera att IP-adressen omges av citattecken och avgränsas med kommatecken.
+Den resulterande variabeln $AddressPool sedan användas som parametervärde för parametervärdet för parametern *DefaultBackendAddressPool.*
+Backend-adresspoolen representerar IP-adresserna på backend-servrarna.
+Dessa IP-adresser bör antingen tillhöra det virtuella nätverkets undernät eller vara offentliga IP-adresser.
+Om du använder den här parametern kan du inte använda *parametern DefaultBackendAddressPoolId* i samma kommando.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendAddressPool
@@ -85,11 +85,11 @@ Accept wildcard characters: False
 ```
 
 ### -BackendAddressPoolId
-Anger ID för en befintlig backend-adresspool som kan läggas till i inställningar för gateway-brandväggsregel.
-Adresspool-ID: n kan returneras med Get-AzApplicationGatewayBackendAddressPool cmdlet.
-När du har ID-numret kan du använda parametern *DefaultBackendAddressPoolId* i stället för parametern *DefaultBackendAddressPool* .
-Till exempel:-DefaultBackendAddressPoolId "/subscriptions/39c54063-01d3-4abf-8f4c-234777bc1f10/resourceGroups/appgw-rg/providers/Microsoft.Network/applicationGateways/appgwtest/backendAddressPools/ContosoAddressPool" adresspoolen representerar IP-adresserna på backend-servrarna.
-Dessa IP-adresser ska antingen tillhöra det virtuella nätverkets undernät eller vara offentliga IP-adresser.
+Anger ID för en befintlig serverlägesadresspool som kan läggas till i konfigurationsinställningarna för gatewaysökvägsregeln.
+Adresspool-IP:n kan returneras med hjälp Get-AzApplicationGatewayBackendAddressPool cmdlet.
+När du har ID:t kan du sedan använda parametern *DefaultBackendAddressPoolId* i stället för *parametern DefaultBackendAddressPool.*
+Till exempel: -DefaultBackendAddressPoolId "/subscriptions/39c54063-01d3-4abf-8f4c-234777bc1f10/resourceGroups/appgw-rg/providers/Microsoft.Network/applicationGateway/appgwtest/backendAddressPools/ContosoAddressPool" Backend-adresspoolen representerar IP-adresserna på backend-servrarna.
+Dessa IP-adresser bör antingen tillhöra det virtuella nätverkets undernät eller vara offentliga IP-adresser.
 
 ```yaml
 Type: System.String
@@ -104,9 +104,9 @@ Accept wildcard characters: False
 ```
 
 ### -BackendHttpSettings
-Anger en objekt referens till en samling av Server dels HTTP-inställningar som ska läggas till i konfigurations inställningarna för gateway-brandväggsregel.
-Du kan skapa denna objekt referens genom att använda New-AzApplicationGatewayBackendHttpSettings cmdlet och syntax som liknar den här: $HttpSettings = New-AzApplicationGatewayBackendHttpSettings-namn "ContosoHttpSetings"-port 80-Protocol "http"-CookieBasedAffinity "Disabled" variabeln $HttpSettings, kan sedan användas som parameter värde för parametern *DefaultBackendAddressPool* :-DefaultBackendHttpSettings $HttpSettings Server DELENS http-inställningar konfigurera egenskaper som port, protokoll och cookie-baserad tillhörighet för en server del.
-Om du använder den här parametern kan du inte använda parametern *DefaultBackendHttpSettingsId* i samma kommando.
+Anger en objektreferens till en samling http-inställningar för server serveruppsättning som ska läggas till i konfigurationsinställningarna för gatewaysökvägsregeln.
+Du kan skapa den här objektreferensen med hjälp av cmdleten New-AzApplicationGatewayBackendHttpSettings och syntaxen ungefär så här: $HttpSettings = New-AzApplicationGatewayBackendHttpSettings -Name "ContosoHttpSetings" -Port 80 -Protocol "Http" -CookieBasedAffinity "Disabled" The resulting variable, $HttpSettings kan sedan användas som parametervärde för parametervärdet för *parametern DefaultBackendAddressPool:* -DefaultBackendHttpSettings $HttpSettings HTTP-inställningarna för backend konfigurerar egenskaper som port, protokoll och cookie-baserad tillhörighet för en backend-pool.
+Om du använder den här parametern kan du inte använda *parametern DefaultBackendHttpSettingsId* i samma kommando.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendHttpSettings
@@ -121,11 +121,11 @@ Accept wildcard characters: False
 ```
 
 ### -BackendHttpSettingsId
-Anger ID för en befintlig HTTP-konfigurationsfil i Server delen som kan läggas till i inställningarna för gateway-brandväggsregel.
-HTTP inställnings-ID: n kan returneras med Get-AzApplicationGatewayBackendHttpSettings cmdlet.
-När du har ID-numret kan du använda parametern *DefaultBackendHttpSettingsId* i stället för parametern *DefaultBackendHttpSettings* .
-Till exempel:-DefaultBackendSettings ID "/subscriptions/39c54063-01d3-4abf-8f4c-234777bc1f10/resourceGroups/appgw-rg/providers/Microsoft.Network/applicationGateways/appgwtest/backendHttpSettingsCollection/ContosoHttpSettings" Konfigurera egenskaper som port, protokoll och cookie-baserad tillhörighet för en server del.
-Om du använder den här parametern kan du inte använda parametern *DefaultBackendHttpSettings* i samma kommando.
+Anger ID för en befintlig HTTP-inställningssamling för server serveruppsättning som kan läggas till i konfigurationsinställningarna för gatewaysökvägsregeln.
+HTTP-inställnings-IDs kan returneras med hjälp Get-AzApplicationGatewayBackendHttpSettings cmdlet.
+När du har ett ID kan du sedan använda parametern *DefaultBackendHttpSettingsId* i stället för *parametern DefaultBackendHttpSettings.*
+Till exempel: -DefaultBackendSettings Id "/subscriptions/39c54063-01d3-4abf-8f4c-234777bc1f10/resourceGroups/appgw-rg/providers/Microsoft.Network/applicationGateway/appgwtest/backendHttpSettingsCollection/ContosoHttpSettings" HTTP-inställningarna för backend konfigurerar egenskaper som port, protocol, och cookiebaserad tillhörighet till en backendpool.
+Om du använder den här parametern kan du inte använda *parametern DefaultBackendHttpSettings* i samma kommando.
 
 ```yaml
 Type: System.String
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifterna, kontot, klientorganisationen och prenumerationen som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -154,8 +154,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Namn
-Anger namnet på den Sök vägs regel som den här cmdleten skapar.
+### -Name
+Anger namnet på konfigurationen av sökvägsregeln som cmdleten skapar.
 
 ```yaml
 Type: System.String
@@ -169,8 +169,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Banor
-Anger en eller flera Sök vägs regler för Application Gateway.
+### -Paths
+Anger en eller flera regler för sökvägar till programgateway.
 
 ```yaml
 Type: System.String[]
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -RedirectConfiguration
-RedirectConfiguration för Application Gateway
+RedirectConfiguration för programgateway
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRedirectConfiguration
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -RedirectConfigurationId
-ID för Application Gateway RedirectConfiguration
+ID för RedirectConfiguration för programgateway
 
 ```yaml
 Type: System.String
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -RewriteRuleSet
-RewriteRuleSet för Application Gateway
+Application gateway RewriteRuleSet
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRewriteRuleSet
@@ -230,7 +230,7 @@ Accept wildcard characters: False
 ```
 
 ### -RewriteRuleSetId
-ID för Application Gateway RewriteRuleSet
+ID för programmets gateway RewriteRuleSet
 
 ```yaml
 Type: System.String
@@ -245,17 +245,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
 ### Ingen
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. Networks. Models. PSApplicationGatewayPathRule
+### Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayPathrule
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
@@ -267,7 +267,6 @@ Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,
 
 [New-AzApplicationGatewayBackendAddressPool](./New-AzApplicationGatewayBackendAddressPool.md)
 
-[New-AzApplicationGatewayBackendHttpSettings](./New-AzApplicationGatewayBackendHttpSettings.md)
 
 [New-AzApplicationGatewayPathRuleConfig](./New-AzApplicationGatewayPathRuleConfig.md)
 
