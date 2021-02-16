@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.datafactor
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Set-AzDataFactoryV2DataFlow.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Set-AzDataFactoryV2DataFlow.md
-ms.openlocfilehash: a563d6b0e72c60632d99df2668552b649ffb1662
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 7938a4b9b96cbbd61d0bb484ddc3129dfd23f215
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93744696"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100411525"
 ---
 # Set-AzDataFactoryV2DataFlow
 
-## Sammanfattning
-Skapar ett data flöde i data fabriken.
+## SYNOPSIS
+Skapar ett dataflöde i Data Factory.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### ByFactoryName (standard)
 ```
@@ -32,12 +32,12 @@ Set-AzDataFactoryV2DataFlow [-DefinitionFile] <String> [-Force] [-ResourceId] <S
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Set-AzDataFactoryV2DataFlow-cmdleten skapar ett data flöde eller uppdaterar ett befintligt data flöde i Azure Data Factory.
+## BESKRIVNING
+Med Set-AzDataFactoryV2DataFlow-cmdleten skapas ett dataflöde eller ett befintligt dataflöde uppdateras i Azure Data Factory.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: skapa ett data flöde
+### Exempel 1: Skapa ett dataflöde
 ```powershell
 PS C:\> Set-AzDataFactoryV2DataFlow -ResourceGroupName "ADF" -DataFactoryName "WikiADF" -Name "TaxiDemo1" -DefinitionFile "C:\\samples\\WikiSample\\TaxiDemo1.json"
 
@@ -46,13 +46,13 @@ DataFlowName           DataFactoryName ResourceGroupName                        
 TaxiDemo1                      WikiADF               adf Microsoft.Azure.Management.DataFactory.Models.MappingDataFlow
 ```
 
-Det här kommandot skapar ett data flöde med namnet TaxiDemo1 i data fabriken med namnet WikiADF.
-Kommandot baserar data flödet på informationen i TaxiDemo1.jsi filen.
+Det här kommandot skapar ett dataflöde med namnet TaxiDemo1 i data factory med namnet WikiADF.
+Kommandot baserar dataflödet på information i TaxiDemo1.jsfilen.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DataFactoryName
-Namnet på data fabriken.
+Data factory-namnet.
 
 ```yaml
 Type: System.String
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefinitionFile
-Sökvägen till JSON-filen.
+JSON-sökvägen.
 
 ```yaml
 Type: System.String
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Fråga inte efter bekräftelse.
+Be inte om bekräftelse.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -111,8 +111,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Namn
-Data flödes namn.
+### -Name
+Namnet på dataflödet.
 
 ```yaml
 Type: System.String
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resurs gruppens namn.
+Resursgruppens namn.
 
 ```yaml
 Type: System.String
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-ID för Azure-resursen.
+Azure-resurs-ID.
 
 ```yaml
 Type: System.String
@@ -157,7 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs.
+Visar vad som skulle hända om cmdleten körs.
 Cmdleten körs inte.
 
 ```yaml
@@ -188,21 +188,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
 ### Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFlow
 
-## ANMÄRKNINGAR
-Nyckelord: Azure, azurerm, arm, resurs, hantering, chef, data, faktorer
+## ANTECKNINGAR
+Nyckelord: azure, azurerm, arm, resource, management, manager, data, factories
 
 ## RELATERADE LÄNKAR
 
-[Get-AzDataFactoryDataFlow](./Get-AzDataFactoryDataFlow.md)
 
-[Remove-AzDataFactoryDataFlow](./Remove-AzDataFactoryDataFlow.md)
