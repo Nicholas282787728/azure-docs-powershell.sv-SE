@@ -1,48 +1,47 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-aznetworkwatcher
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/new-azpacketcapturefilterconfig
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzNetworkWatcher.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzNetworkWatcher.md
-ms.openlocfilehash: dbc1f3e942a95adf0cb56721ec1a2666da9b9188
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzPacketCaptureFilterConfig.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzPacketCaptureFilterConfig.md
+ms.openlocfilehash: d7dac006abf09ec7c80d4a7e7659405936a8d20e
 ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 02/14/2021
-ms.locfileid: "100414279"
+ms.locfileid: "100414228"
 ---
-# New-AzNetworkWatcher
+# New-AzPacketCaptureFilterConfig
 
 ## SYNOPSIS
-Skapar en ny nätverksbevakningsresurs.
+Skapar ett nytt paketinspelningsfilterobjekt.
 
 ## SYNTAX
 
 ```
-New-AzNetworkWatcher -Name <String> -ResourceGroupName <String> -Location <String> [-Tag <Hashtable>]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-AzPacketCaptureFilterConfig [-Protocol <String>] [-RemoteIPAddress <String>] [-LocalIPAddress <String>]
+ [-LocalPort <String>] [-RemotePort <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## BESKRIVNING
-Med New-AzNetworkWatcher-cmdleten skapas en ny Network Watcher-resurs.
+Med New-AzPacketCaptureFilterConfig-cmdleten skapas ett nytt paketinspelningsfilterobjekt. Det här objektet används för att begränsa typen av paket som fångas under en paketinspelningssession med de angivna villkoren. CmdletNew-AzNetworkWatcherPacketCapture kan acceptera flera filterobjekt för att aktivera tänkbara inspelningssessioner.
 
 ## EXEMPEL
 
-### Exempel 1: Skapa en nätverksbevakning
+### Exempel 1: Skapa en paketinspelning med flera filter
 ```
-New-AzResourceGroup -Name NetworkWatcherRG -Location westcentralus
-New-AzNetworkWatcher -Name NetworkWatcher_westcentralus -ResourceGroup NetworkWatcherRG
+$nw = Get-AzResource | Where {$_.ResourceType -eq "Microsoft.Network/networkWatchers" -and $_.Location -eq "WestCentralUS" } 
+$networkWatcher = Get-AzNetworkWatcher -Name $nw.Name -ResourceGroupName $nw.ResourceGroupName 
 
-Name              : NetworkWatcher_westcentralus
-Id                : /subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/NetworkWatcherRG/providers/Microsoft.Network/networkWatchers/NetworkWatcher_westcentralus
-Etag              : W/"7cf1f2fe-8445-4aa7-9bf5-c15347282c39"
-Location          : westcentralus
-Tags              :
-ProvisioningState : Succeeded
+$storageAccount = Get-AzStorageAccount -ResourceGroupName contosoResourceGroup -Name contosostorage123
+
+$filter1 = New-AzPacketCaptureFilterConfig -Protocol TCP -RemoteIPAddress "1.1.1.1-255.255.255" -LocalIPAddress "10.0.0.3" -LocalPort "1-65535" -RemotePort "20;80;443"
+$filter2 = New-AzPacketCaptureFilterConfig -Protocol UDP 
+New-AzNetworkWatcherPacketCapture -NetworkWatcher $networkWatcher -TargetVirtualMachineId $vm.Id -PacketCaptureName "PacketCaptureTest" -StorageAccountId $storageAccount.id -TimeLimitInSeconds 60 -Filters $filter1, $filter2
 ```
 
-I det här exemplet skapas en ny nätverksbevakning i en ny resursgrupp. Observera att du bara kan skapa en Nätverksbevakning per region per prenumeration.
+I det här exemplet skapar vi en paketinspelning med namnet "PacketCaptureTest" med flera filter och en tidsgräns. När sessionen är klar sparas den på det angivna lagringskontot. Obs! Azure Network Watcher-tillägget måste installeras på den virtuella måldatorn för att kunna skapa paketinspelningar.
 
 ## PARAMETERS
 
@@ -61,56 +60,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Plats
-Plats.
+### -LocalIPAddress
+Anger den lokala IP-adressen som ska filtreras.
+Exempelinmatningar: "127.0.0.1" för en enskild adresspost.
+"127.0.0.1-127.0.0.255" för intervall.
+"127.0.0.1;127.0.0.5;" för flera poster.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Nätverksbevakningens namn.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases: ResourceName
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceGroupName
-Resursgruppens namn.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Tag
-Nyckelvärdepar i form av en hash-tabell. Exempel: @{key0="value0";key1=$null;key2="value2"}
-
-```yaml
-Type: System.Collections.Hashtable
 Parameter Sets: (All)
 Aliases:
 
@@ -121,34 +78,72 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Bekräfta
-Frågar dig om bekräftelse innan du kör cmdleten.
+### -LocalPort
+Anger den lokala IP-adressen som ska filtreras.
+Exempelinmatningar: "127.0.0.1" för en enskild adresspost.
+"127.0.0.1-127.0.0.255" för intervall.
+"127.0.0.1;127.0.0.5;" för flera poster.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: System.String
 Parameter Sets: (All)
-Aliases: cf
+Aliases:
 
 Required: False
 Position: Named
-Default value: False
-Accept pipeline input: False
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Visar vad som skulle hända om cmdleten körs.
-Cmdleten körs inte.
+### -Protocol
+Anger det protokoll som filtret ska filtreras på. Godtagbara värden "TCP","UDP","Any"
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: System.String
 Parameter Sets: (All)
-Aliases: wi
+Aliases:
 
 Required: False
 Position: Named
-Default value: False
-Accept pipeline input: False
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -RemoteIPAddress
+Anger den fjärr-IP-adress som ska filtreras.
+Exempelinmatningar: "127.0.0.1" för en enskild adresspost.
+"127.0.0.1-127.0.0.255" för intervall.
+"127.0.0.1;127.0.0.5;" för flera poster.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RemotePort
+Anger den fjärrport som filtret ska vara på.
+Exempelindata för fjärrport: "80" för en enskild portinmatning.
+"80-85" för intervall.
+"80;443;" för flera poster.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -159,14 +154,12 @@ Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariab
 
 ### System.String
 
-### System.Collections.Hashtable
-
 ## UTDATA
 
-### Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher
+### Microsoft.Azure.Commands.Network.Models.PSPacketCaptureFilter
 
 ## ANTECKNINGAR
-Nyckelord: azure, azurerm, arm, resurs, hantering, chef, nätverk, nätverk, nätverksbevakning
+Nyckelord: azure, azurerm, arm, resource, management, manager, network, networking, watcher, packet, capture, traffic, filter 
 
 ## RELATERADE LÄNKAR
 

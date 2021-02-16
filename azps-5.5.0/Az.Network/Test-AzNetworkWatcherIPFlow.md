@@ -1,65 +1,64 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
 Module Name: Az.Network
-online version: https://docs.microsoft.com/en-us/powershell/module/az.network/get-aznetworkwatchernexthop
+online version: https://docs.microsoft.com/en-us/powershell/module/az.network/test-aznetworkwatcheripflow
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzNetworkWatcherNextHop.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzNetworkWatcherNextHop.md
-ms.openlocfilehash: 2de9b483e6458278da7fcccc942fd7bf0e0e796c
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Test-AzNetworkWatcherIPFlow.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Test-AzNetworkWatcherIPFlow.md
+ms.openlocfilehash: b16b405162a87c54c25f47b7e2a977a8e0022df5
 ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
 ms.lasthandoff: 02/14/2021
-ms.locfileid: "100414398"
+ms.locfileid: "100414160"
 ---
-# Get-AzNetworkWatcherNextHop
+# Test-AzNetworkWatcherIPFlow
 
 ## SYNOPSIS
-Får nästa hopp från en VM.
+Returnerar om paketet tillåts eller nekas till eller från en viss destination.
 
 ## SYNTAX
 
 ### SetByResource (standard)
 ```
-Get-AzNetworkWatcherNextHop -NetworkWatcher <PSNetworkWatcher> -TargetVirtualMachineId <String>
- -DestinationIPAddress <String> -SourceIPAddress <String> [-TargetNetworkInterfaceId <String>] [-AsJob]
+Test-AzNetworkWatcherIPFlow -NetworkWatcher <PSNetworkWatcher> -TargetVirtualMachineId <String>
+ -Direction <String> -Protocol <String> -RemoteIPAddress <String> -LocalIPAddress <String> -LocalPort <String>
+ [-RemotePort <String>] [-TargetNetworkInterfaceId <String>] [-AsJob]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### SetByName
 ```
-Get-AzNetworkWatcherNextHop -NetworkWatcherName <String> -ResourceGroupName <String>
- -TargetVirtualMachineId <String> -DestinationIPAddress <String> -SourceIPAddress <String>
- [-TargetNetworkInterfaceId <String>] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Test-AzNetworkWatcherIPFlow -NetworkWatcherName <String> -ResourceGroupName <String>
+ -TargetVirtualMachineId <String> -Direction <String> -Protocol <String> -RemoteIPAddress <String>
+ -LocalIPAddress <String> -LocalPort <String> [-RemotePort <String>] [-TargetNetworkInterfaceId <String>]
+ [-AsJob] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### SetByLocation
 ```
-Get-AzNetworkWatcherNextHop -Location <String> -TargetVirtualMachineId <String> -DestinationIPAddress <String>
- -SourceIPAddress <String> [-TargetNetworkInterfaceId <String>] [-AsJob]
+Test-AzNetworkWatcherIPFlow -Location <String> -TargetVirtualMachineId <String> -Direction <String>
+ -Protocol <String> -RemoteIPAddress <String> -LocalIPAddress <String> -LocalPort <String>
+ [-RemotePort <String>] [-TargetNetworkInterfaceId <String>] [-AsJob]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ## BESKRIVNING
-Den Get-AzNetworkWatcherNextHop cmdleten får nästa hopp från en VM. Med nästa hopp kan du visa typen av Azure-resurs, den associerade IP-adressen för resursen och routningstabellregeln som ansvarar för routningen.
+CmdletTest-AzNetworkWatcherIPFlow för en angiven VM-resurs och ett paket med angiven riktning med lokal och fjärransluten, IP-adresser och portar returnerar om paketet är tillåtet eller nekat.
 
 ## EXEMPEL
 
-### Exempel 1: Skaffa nästa hopp när du kommunicerar med en Internet-IP
+### Exempel 1: Kör Test-AzNetworkWatcherIPFlow
 ```
 $nw = Get-AzResource | Where {$_.ResourceType -eq "Microsoft.Network/networkWatchers" -and $_.Location -eq "WestCentralUS" } 
 $networkWatcher = Get-AzNetworkWatcher -Name $nw.Name -ResourceGroupName $nw.ResourceGroupName 
-$VM = Get-AzVM -ResourceGroupName ContosoResourceGroup -Name VM0
-$Nics = Get-AzNetworkInterface | Where {$_.Id -eq $vm.NetworkInterfaceIDs.ForEach({$_})}
-Get-AzNetworkWatcherNextHop -NetworkWatcher $networkWatcher -TargetVirtualMachineId $VM.Id -SourceIPAddress $nics[0].IpConfigurations[0].PrivateIpAddress  -DestinationIPAddress 204.79.197.200
+$VM = Get-AzVM -ResourceGroupName testResourceGroup -Name VM0 
+$Nics = Get-AzNetworkInterface | Where-Object { $vm.NetworkProfile.NetworkInterfaces.Id -contains $_.Id }
 
-
-NextHopIpAddress NextHopType RouteTableId
----------------- ----------- ------------
-                 Internet    System Route
+Test-AzNetworkWatcherIPFlow -NetworkWatcher $networkWatcher -TargetVirtualMachineId $VM.Id -Direction Outbound -Protocol TCP -LocalIPAddress $nics[0].IpConfigurations[0].PrivateIpAddress -LocalPort 6895 -RemoteIPAddress 204.79.197.200 -RemotePort 80
 ```
 
-Hämtar nästa hopp för utgående kommunikation från det primära nätverksgränssnittet på den angivna virtuella datorn till 204.79.197.200 (www.bing.com)
+Hämtar Nätverksbevakning i Västra centrala USA för den här prenumerationen och hämtar sedan den virtuella datorn och dess tillhörande nätverksgränssnitt. För det första nätverksgränssnittet körs sedan Test-AzNetworkWatcherIPFlow första IP-adressen från det första nätverksgränssnittet för en utgående anslutning till en IP på Internet.
 
 ## PARAMETERS
 
@@ -93,8 +92,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DestinationIPAddress
-Mål-IP-adress.
+### -Direction
+Riktning.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+Accepted values: Inbound, Outbound
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LocalIPAddress
+Lokal IP-adress.
 
 ```yaml
 Type: System.String
@@ -104,7 +119,22 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -LocalPort
+Lokal port.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -153,6 +183,52 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -Protocol
+Protokoll.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+Accepted values: TCP, UDP
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoteIPAddress
+Fjärr-IP-adress.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RemotePort
+Fjärrport.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ResourceGroupName
 Namnet på resursgruppen för nätverksbevakning.
 
@@ -165,21 +241,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SourceIPAddress
-Käll-IP-adress.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -214,7 +275,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
 
 ## INDATA
 
@@ -224,10 +285,10 @@ Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariab
 
 ## UTDATA
 
-### Microsoft.Azure.Commands.Network.Models.PSNextHopResult
+### Microsoft.Azure.Commands.Network.Models.PSIPFlowVerifyResult
 
 ## ANTECKNINGAR
-Nyckelord: azure, azurerm, arm, resource, management, manager, network, networking, network watcher, next, hop 
+Nyckelord: azure, azurerm, arm, resource, management, manager, network, networking, network watcher, flow, ip 
 
 ## RELATERADE LÄNKAR
 

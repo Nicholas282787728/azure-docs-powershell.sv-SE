@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.frontdoor/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorWafCustomRuleObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorWafCustomRuleObject.md
-ms.openlocfilehash: d352f70d28b9bfafae46697fb6d69dc50c739b19
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 4612f1ef1dac22d87b6794e35f9541a39f6312ea
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94091564"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100403994"
 ---
 # New-AzFrontDoorWafCustomRuleObject
 
-## Sammanfattning
-Skapa CustomRule-objekt för WAF-princip
+## SYNOPSIS
+Skapa CustomRule-objekt för skapande av WAF-princip
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 New-AzFrontDoorWafCustomRuleObject -Name <String> -RuleType <String> -MatchCondition <PSMatchCondition[]>
@@ -25,10 +25,10 @@ New-AzFrontDoorWafCustomRuleObject -Name <String> -RuleType <String> -MatchCondi
  [-EnabledState <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Skapa CustomRule-objekt för WAF-princip
+## BESKRIVNING
+Skapa CustomRule-objekt för skapande av WAF-princip
 
-## BESKRIVS
+## EXEMPEL
 
 ### Exempel 1
 ```powershell
@@ -41,11 +41,11 @@ Rule1 MatchRule  Block        2                          1
 
 Skapa ett CustomRule-objekt
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -Åtgärd
 Typ av åtgärder.
-Möjliga värden inkluderar: "Tillåt", "blockera", "log"
+Möjliga värden omfattar: "Tillåt", "Block", "Log"
 
 ```yaml
 Type: System.String
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledState
-Aktiverat läge. Möjliga värden inkluderar: "Enabled", "Disabled".
+Aktiverad status. Möjliga värden är: "Aktiverad", "Inaktiverad".
 
 ```yaml
 Type: System.String
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -MatchCondition
-Lista över matchnings villkor.
+Lista över matchningsvillkor.
 
 ```yaml
 Type: Microsoft.Azure.Commands.FrontDoor.Models.PSMatchCondition[]
@@ -104,8 +104,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Namn
-Namn på regeln
+### -Name
+Namnet på regeln
 
 ```yaml
 Type: System.String
@@ -119,7 +119,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Prioritet
+### -Priority
 Beskriver prioriteten för regeln.
 
 ```yaml
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -RateLimitDurationInMinutes
-Hastighets gräns. Standard-1 minut
+Varaktighet för prisgräns. Standard – 1 minut
 
 ```yaml
 Type: System.Int32
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -RateLimitThreshold
-Tröskelvärde för kvot gräns
+Tröskelvärde för prisgräns
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -165,8 +165,8 @@ Accept wildcard characters: False
 ```
 
 ### -RuleType
-Typ av regel.
-Möjliga värden är: ' MatchRule ', ' RateLimitRule '
+Typen av regel.
+Möjliga värden är: 'MatchRule', 'RateLimitRule'
 
 ```yaml
 Type: System.String
@@ -181,19 +181,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
 ### Ingen
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. FrontDoor. Models. PSCustomRule
+### Microsoft.Azure.Commands.frontDoor.Models.PSCustomrule
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
 [New-AzFrontDoorWafPolicy](./New-AzFrontDoorWafPolicy.md) 
- [Set-AzFrontDoorWafPolicy](./Set-AzFrontDoorWafPolicy.md)
+ [Update-AzFrontDoorWafPolicy](./Update-AzFrontDoorWafPolicy.md)
