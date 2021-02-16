@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Remove-AzResource.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Remove-AzResource.md
-ms.openlocfilehash: ecd70916f1ddb6e365fb9f880db9974f6c9ae771
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: 9e8eea48238bd177f3a8556691db48686a57dd99
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94258672"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100414874"
 ---
 # Remove-AzResource
 
-## Sammanfattning
+## SYNOPSIS
 Tar bort en resurs.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### ByResourceId (standard)
 ```
@@ -41,26 +41,26 @@ Remove-AzResource [-AsJob] -ResourceName <String> -ResourceType <String> [-Exten
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
+## BESKRIVNING
 Cmdleten **Remove-AzResource** tar bort en Azure-resurs.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: ta bort en webbplats resurs
+### Exempel 1: Ta bort en webbplatsresurs
 ```
 PS C:\>Remove-AzResource -ResourceId "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup11/providers/Microsoft.Web/sites/ContosoSite" -Force
 ```
 
-Det här kommandot tar bort webbplats resursen som heter ContosoSite.
-I exemplet används ett platshållarfält för prenumerations-ID.
-Kommandot anger parametern *Force* .
-Därför behöver du inte bekräfta.
+Med det här kommandot tas webbplatsresursen ContosoSite bort.
+I exemplet används ett platshållarvärde för prenumerations-ID: t.
+Kommandot anger *force-parametern.*
+Därför uppmanas du inte att bekräfta.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -ApiVersion
-Anger vilken version av API för Resource provider som ska användas.
-Om du inte anger en version använder denna cmdlet den senaste tillgängliga versionen.
+Anger vilken version av API:t för resursleverantören som ska användas.
+Om du inte anger en version använder den här cmdleten den senaste tillgängliga versionen.
 
 ```yaml
 Type: System.String
@@ -74,8 +74,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-Kör cmdlet i bakgrunden
+### -As Ent fån
+Kör cmdleten i bakgrunden
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -105,8 +105,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionResourceName
-Anger namnet på en tilläggs resurs för den resurs som denna cmdlet tar bort.
-Om du till exempel vill ange en databas använder du följande format: Server namn `/` databas namn
+Anger namnet på en tilläggsresurs för resursen som cmdleten tar bort.
+Om du till exempel vill ange en databas använder du följande format: servernamn `/` databasnamn
 
 ```yaml
 Type: System.String
@@ -121,8 +121,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionResourceType
-Anger resurs typen för en tilläggs resurs.
-Anger resurs typen för tilläggs resursen för resursen.
+Anger resurstypen för en tilläggsresurs.
+Anger resursens förlängningsresurstyp.
 Till exempel: `Microsoft.Sql/Servers/Databases`
 
 ```yaml
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Tvingar kommandot att köras utan att fråga efter bekräftelse.
+Tvingar kommandot att köras utan att användaren uppmanas att bekräfta.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -153,8 +153,8 @@ Accept wildcard characters: False
 ```
 
 ### -ODataQuery
-Anger ett filter för Open data Protocol (OData).
-Denna cmdlet lägger till det här värdet till begäran utöver eventuella andra filter.
+Anger ett formatfilter för Open Data Protocol (OData).
+Den här cmdleten lägger till det här värdet i begäran utöver eventuella andra filter.
 
 ```yaml
 Type: System.String
@@ -168,8 +168,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -För
-Visar att denna cmdlet betraktar för hands version API-versioner när den automatiskt avgör vilken version som ska användas.
+### -Pre
+Anger att denna cmdlet tar hänsyn till förhandsversioner av API-versioner när den automatiskt avgör vilken version som ska användas.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -184,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Anger namnet på den resurs grupp från vilken denna cmdlet tar bort en resurs.
+Anger namnet på den resursgrupp som cmdleten tar bort en resurs från.
 
 ```yaml
 Type: System.String
@@ -199,8 +199,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Anger det fullständigt kvalificerade resurs-ID: t för resursen som denna cmdlet tar bort.
-Detta ID inkluderar abonnemanget, som i följande exempel: `/subscriptions/` prenumerations-ID`/providers/Microsoft.Sql/servers/ContosoServer/databases/ContosoDatabase`
+Anger det fullständigt kvalificerade resurs-ID:t för resursen som cmdleten tar bort.
+ID:t innehåller prenumerationen, som i följande exempel: `/subscriptions/` prenumerations-ID`/providers/Microsoft.Sql/servers/ContosoServer/databases/ContosoDatabase`
 
 ```yaml
 Type: System.String
@@ -215,8 +215,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceName
-Anger namnet på den resurs som denna cmdlet tar bort.
-Om du till exempel vill ange en databas använder du följande format: `ContosoServer/ContosoDatabase`
+Anger namnet på resursen som cmdleten tar bort.
+Om du till exempel vill ange en databas ska du använda följande format: `ContosoServer/ContosoDatabase`
 
 ```yaml
 Type: System.String
@@ -231,8 +231,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceType
-Anger typen för den resurs som denna cmdlet tar bort.
-För en databas är exempelvis resurs typen följande: `Microsoft.Sql/Servers/Databases`
+Anger typen för resursen som cmdleten tar bort.
+För en databas är resurstypen till exempel följande: `Microsoft.Sql/Servers/Databases`
 
 ```yaml
 Type: System.String
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 ```
 
 ### -TenantLevel
-Anger att denna cmdlet fungerar på klient nivån.
+Anger att denna cmdlet fungerar på klientorganisationsnivå.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -262,7 +262,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -277,7 +277,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs.
+Visar vad som skulle hända om cmdleten körs.
 Cmdleten körs inte.
 
 ```yaml
@@ -293,21 +293,20 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### System. Boolean
+### System.Boolean
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Sök-AzResource](./Find-AzResource.md)
 
 [Get-AzResource](./Get-AzResource.md)
 

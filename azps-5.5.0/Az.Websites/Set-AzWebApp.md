@@ -6,12 +6,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.websites/s
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Websites/Websites/help/Set-AzWebApp.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Websites/Websites/help/Set-AzWebApp.md
-ms.openlocfilehash: 2028132e427bdba3fd49c20b9e7944eff90a9aa5
-ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.openlocfilehash: 5594e43b2e6c67e9df5b526f753557edd8a4d5ea
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100231295"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100414738"
 ---
 # Set-AzWebApp
 
@@ -125,7 +125,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -As Ent
+### -As Ent fån
 Kör cmdleten i bakgrunden
 
 ```yaml
@@ -276,7 +276,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure.
+Autentiseringsuppgifterna, kontot, klientorganisationen och prenumerationen som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -457,7 +457,7 @@ Accept wildcard characters: False
 ```
 
 ### -NumberOfWorkers
-Antalet medarbetare som ska tilldelas
+Antalet anställda som ska tilldelas
 
 ```yaml
 Type: System.Int32
@@ -597,4 +597,3 @@ Ersätt värdena i Default-Web-WestUS med resursgruppnamnet för webbappen och C
 
 [Stop-AzWebApp](./Stop-AzWebApp.md)
 
-[New-AzResource](./New-AzResource.md)
