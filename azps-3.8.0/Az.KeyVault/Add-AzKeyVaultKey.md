@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/a
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Add-AzKeyVaultKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Add-AzKeyVaultKey.md
-ms.openlocfilehash: d0f26dda6e5fd79f20713dff61ed299a995d6fd3
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 3d0f7267d1dbe899de0e0414c52a395985f09bfd
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "93927630"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100412545"
 ---
 # Add-AzKeyVaultKey
 
-## Sammanfattning
-Skapar en Key i ett nyckelord eller importerar en Key till ett Key Vault.
+## SYNOPSIS
+Skapar en nyckel i ett nyckelvalv eller importerar en nyckel till ett nyckelvalv.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### InteractiveCreate (standard)
 ```
@@ -65,22 +65,22 @@ Add-AzKeyVaultKey [-ResourceId] <String> [-Name] <String> -KeyFilePath <String>
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Add-AzKeyVaultKey** skapar en Key i ett nyckelord i ett nyckeltal i Azure Key Vault, eller importerar en till en Key Vault.
-Använd denna cmdlet för att lägga till nycklar på något av följande sätt:
-- Skapa en knapp i en maskinvarubaserad säkerhetsmodul (HSM) i Key valv-tjänsten.
-- Skapa en under program vara i Key valv-tjänsten.
-- Importera en knapp från din egen Hardware säkerhetsmodul (HSM) till HSMs i Key valv-tjänsten.
-- Importera en från en. pfx-fil på datorn.
-- Importera en knapp från en. pfx-fil på datorn till HSMs (Hardware Security modules) i Key valv-tjänsten.
+## BESKRIVNING
+Cmdleten **Add-AzKeyVaultKey** skapar en nyckel i ett nyckelvalv i Azure-nyckelvalv eller importerar en nyckel till ett nyckelvalv.
+Använd den här cmdleten för att lägga till nycklar med någon av följande metoder:
+- Skapa en nyckel i en maskinvarusäkerhetsmodul (HSM) i nyckelvalvtjänsten.
+- Skapa en nyckel i programvaran i nyckelvalvtjänsten.
+- Importera en nyckel från din egen maskinvarusäkerhetsmodul (HSM) till HSMs i nyckelvalvtjänsten.
+- Importera en nyckel från en PFX-fil på datorn.
+- Importera en nyckel från en PFX-fil på datorn till maskinvarusäkerhetsmoduler (HSMs) i nyckelvalvtjänsten.
 Du kan ange nyckelattribut eller acceptera standardinställningar för de här åtgärderna.
-Om du skapar eller importerar en nycklar som har samma namn som en befintlig nycklar i ditt nyckelord uppdateras den ursprungliga tangenten med de värden som du anger för den nya. Du kan komma åt föregående värden med den version-specifika URI för den versionen av den här tangenten. Mer information om nyckel versioner och URI-strukturen finns i [om nycklar och hemligheter](http://go.microsoft.com/fwlink/?linkid=518560) i övriga API-dokumentation för nyckel valvet.
-Obs! Du måste först skapa ett BYOK-paket (en fil med fil namns tillägget. BYOK) med hjälp av BYOK-verktyg för Azure Key valv för att importera en nyckeln från din egen säkerhets modul för maskin vara. Mer information finns i [hur du skapar och överför HSM-Protected nycklar för Azure Key Vault](http://go.microsoft.com/fwlink/?LinkId=522252).
-Vi rekommenderar att du säkerhetskopierar din-tangenten efter att den har skapats eller uppdaterats genom att använda Backup-AzKeyVaultKey cmdlet. Det finns inga funktioner för att ångra borttagning, så om du råkar ta bort en eller flera rader och sedan ändrar dig kan du inte återställa den, såvida du inte har en säkerhets kopia av den.
+Om du skapar eller importerar en nyckel som har samma namn som en befintlig nyckel i nyckelvalvet uppdateras den ursprungliga nyckeln med de värden som du anger för den nya nyckeln. Du kan komma åt de tidigare värdena genom att använda den versionsspecifika URI:en för den versionen av nyckeln. Mer information om viktiga versioner och URI-strukturen finns i [dokumentationen om Om nycklar](http://go.microsoft.com/fwlink/?linkid=518560) och hemligheter i REST API-dokumentationen för nyckelvalv.
+Obs! Om du vill importera en nyckel från din egen maskinvarusäkerhetsmodul måste du först generera ett BYOK-paket (en fil med filnamnstillägget .byok) med hjälp av BYOK-verktyguppsättningen för Azure-nyckelvalv. Mer information finns i Skapa [och överföra HSM-Protected nyckelnycklar för Azure Key Vault.](http://go.microsoft.com/fwlink/?LinkId=522252)
+Det är en bra metod att backa upp nyckeln efter att den har skapats eller uppdaterats, med hjälp av cmdleten Backup-AzKeyVaultKey. Det finns inga ouppklarade funktioner. Om du tar bort eller tar bort nyckeln av misstag och sedan ändrar dig är nyckeln inte återställningsbar om du inte har en säkerhetskopia av den som du kan återställa.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: skapa en-tangenten
+### Exempel 1: Skapa en nyckel
 ```powershell
 PS C:\> Add-AzKeyVaultKey -VaultName 'contoso' -Name 'ITSoftware' -Destination 'Software'
 
@@ -97,9 +97,9 @@ Purge Disabled : False
 Tags           :
 ```
 
-Det här kommandot skapar en programskyddad nycklar med namnet ITSoftware i det nyckelord som heter Contoso.
+Det här kommandot skapar en programvaruskyddad nyckel med namnet ITSoftware i nyckelvalvet Contoso.
 
-### Exempel 2: skapa en HSM-skyddad nycklar
+### Exempel 2: Skapa en HSM-skyddad nyckel
 ```powershell
 PS C:\> Add-AzKeyVaultKey -VaultName 'contoso' -Name 'ITHsm' -Destination 'HSM'
 
@@ -116,9 +116,9 @@ Purge Disabled : False
 Tags           :
 ```
 
-Det här kommandot skapar en HSM-skyddad nycklar i det nyckelord som heter Contoso.
+Det här kommandot skapar en HSM-skyddad nyckel i nyckelvalvet Contoso.
 
-### Exempel 3: skapa en transparens med icke-standardvärden
+### Exempel 3: Skapa en nyckel med värden som inte är standardvärden
 ```powershell
 PS C:\> $KeyOperations = 'decrypt', 'verify'
 PS C:\> $Expires = (Get-Date).AddYears(2).ToUniversalTime()
@@ -141,13 +141,13 @@ Tags           : Name        Value
                  Accounting  true
 ```
 
-Med det första kommandot lagras värdena dekryptera och verifiera i $KeyOperations variabeln.
-Det andra kommandot skapar ett **datetime** -objekt, DEFINIERAT i UTC, med hjälp av cmdleten **Get-date** .
-Detta objekt anger en tid två år framåt i tiden. I kommandot lagras datumet i $Expires variabel. Om du vill ha mer information skriver du `Get-Help Get-Date` .
-Det tredje kommandot skapar ett **datetime** -objekt med hjälp av cmdleten **Get-date** . Det objektet anger den aktuella UTC-tiden. I kommandot lagras datumet i $NotBefore variabel.
-Med kommandot slut skapas en Key med namnet ITHsmNonDefault som är en HSM-skyddad. Kommandot anger värden för tillåtna operationer som lagras $KeyOperations. Kommandot anger tider för parametrarna *Expires* och *NotBefore* som skapats i föregående kommandon och taggar för hög allvarlighets grad och det. Den nya knappen är inaktive rad. Du kan aktivera den med cmdleten **set-AzKeyVaultKey** .
+Det första kommandot lagrar värdena dekryptera och verifierar i $KeyOperations variabeln.
+Det andra kommandot skapar ett **DateTime-objekt** som definierats i UTC med cmdleten **Get-Date.**
+Objektet anger en tid två år i framtiden. Kommandot lagrar det datumet i den $Expires variabeln. Om du vill ha mer information skriver du `Get-Help Get-Date` .
+Det tredje kommandot skapar ett **DateTime-objekt** med **cmdleten Get-Date.** Objektet anger aktuell UTC-tid. Kommandot lagrar det datumet i den $NotBefore variabeln.
+Det slutliga kommandot skapar en nyckel med namnet ITHsmNonDefault som är en HSM-skyddad nyckel. Kommandot anger värden för tillåtna nyckelåtgärder som lagras $KeyOperations. Kommandot anger tider för  parametrarna Förfallotid och *NotBefore* som skapats i tidigare kommandon samt taggar för hög allvarlighetsgrad och IT. Den nya nyckeln är inaktiverad. Du kan aktivera det med hjälp av **cmdleten Set-AzKeyVaultKey.**
 
-### Exempel 4: importera en HSM-skyddad nycklar
+### Exempel 4: Importera en HSM-skyddad nyckel
 ```powershell
 PS C:\> Add-AzKeyVaultKey -VaultName 'contoso' -Name 'ITByok' -KeyFilePath 'C:\Contoso\ITByok.byok' -Destination 'HSM'
 
@@ -164,11 +164,11 @@ Purge Disabled : False
 Tags           :
 ```
 
-Det här kommandot importerar den nycklar som heter ITByok från platsen som parametern för *fil Sök vägen* anger. Den importerade knappen är en HSM-skyddad.
-Du måste först skapa ett BYOK-paket (en fil med fil namns tillägget. BYOK) med hjälp av BYOK-verktyg för Azure Key valv för att importera en nyckeln från din egen säkerhets modul för maskin vara.
-Mer information finns i [hur du skapar och överför HSM-Protected nycklar för Azure Key Vault](http://go.microsoft.com/fwlink/?LinkId=522252).
+Det här kommandot importerar nyckeln med namnet ITByok från den plats som *KeyFilePath-parametern* anger. Den importerade nyckeln är en HSM-skyddad nyckel.
+Om du vill importera en nyckel från din egen maskinvarusäkerhetsmodul måste du först generera ett BYOK-paket (en fil med filnamnstillägget .byok) med hjälp av AZURE-nyckelvalv BYOK-verktyguppsättningen.
+Mer information finns i Skapa [och överföra HSM-Protected nyckelnycklar för Azure Key Vault.](http://go.microsoft.com/fwlink/?LinkId=522252)
 
-### Exempel 5: importera en skyddad program vara
+### Exempel 5: Importera en programvaruskyddad nyckel
 ```powershell
 PS C:\> $Password = ConvertTo-SecureString -String 'Password' -AsPlainText -Force
 PS C:\> Add-AzKeyVaultKey -VaultName 'contoso' -Name 'ITPfx' -KeyFilePath 'C:\Contoso\ITPfx.pfx' -KeyFilePassword $Password
@@ -186,11 +186,11 @@ Purge Disabled : False
 Tags           :
 ```
 
-Det första kommandot konverterar en sträng till en skyddad sträng med hjälp av cmdleten **ConvertTo-SecureString** och lagrar sedan strängen i $Password variabel. Om du vill ha mer information skriver du `Get-Help
+Det första kommandot konverterar en sträng till en säker sträng med hjälp av cmdleten **ConvertTo-SecureString** och lagrar sedan strängen i $Password variabeln. Om du vill ha mer information skriver du `Get-Help
 ConvertTo-SecureString` .
-Det andra kommandot skapar ett program varu lösen ord i ett contoso-valv. Kommandot anger platsen för den och det lösen ord som lagras i $Password.
+Det andra kommandot skapar ett programvarulösenord i Contosos nyckelvalv. Kommandot anger platsen för nyckeln och lösenordet som lagras i $Password.
 
-### Exempel 6: importera en nycklar och tilldela attribut
+### Exempel 6: Importera en nyckel och tilldela attribut
 ```powershell
 PS C:\> $Password = ConvertTo-SecureString -String 'password' -AsPlainText -Force
 PS C:\> $Expires = (Get-Date).AddYears(2).ToUniversalTime()
@@ -212,15 +212,15 @@ Tags           : Name        Value
                  Accounting  true
 ```
 
-Det första kommandot konverterar en sträng till en skyddad sträng med hjälp av cmdleten **ConvertTo-SecureString** och lagrar sedan strängen i $Password variabel.
-Det andra kommandot skapar ett **datetime** -objekt med hjälp av cmdleten **Get-date** och lagrar sedan objektet i $expires variabeln.
-Det tredje kommandot skapar $tags variabel för att ställa in taggar för hög allvarlighets grad och det.
-Med kommandot slut importeras en nycklar som en HSM-tangenten från den angivna platsen. Kommandot anger den förfallo tid som är lagrad i $Expires och lösen ord som lagras i $Password och tillämpar taggarna som lagras i $tags.
+Det första kommandot konverterar en sträng till en säker sträng med hjälp av cmdleten **ConvertTo-SecureString** och lagrar sedan strängen i $Password variabeln.
+Det andra kommandot skapar ett **DateTime-objekt** med cmdleten **Get-Date** och lagrar sedan objektet i $Expires variabeln.
+Det tredje kommandot skapar den $tags för att ange taggar för hög allvarlighetsgrad och IT.
+Det sista kommandot importerar en nyckel som en HSM-nyckel från den angivna platsen. Kommandot anger förfallotiden som lagras i $Expires och lösenord som lagras i $Password, och de taggar som lagras i $tags.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -234,13 +234,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Mål
-Anger om du vill lägga till en nycklar som en programvarubaserad eller en HSM-skyddad nycklar i Key valv-tjänsten.
-Giltiga värden är: HSM och program vara.
-Obs! Om du vill använda HSM som mål måste du ha ett huvud valv som stöder HSMs. Mer information om tjänst nivåer och funktioner för Azure Key Vault finns på [webbplatsen för Azure Key Vault prissättning](http://go.microsoft.com/fwlink/?linkid=512521).
-Den här parametern är obligatorisk när du skapar en ny. Om du importerar en fil med parametern *sökväg* är denna parameter valfri:
-- Om du inte anger den här parametern och den här cmdleten importerar en fil som har namns tillägget. BYOK importeras den till en HSM-skyddad nycklar. Cmdleten kan inte importera den här tangenten som program skyddad.
-- Om du inte anger den här parametern och den här cmdleten importerar en fil med namn tillägget. pfx importeras den som en programskyddad Server.
+### -Destination
+Anger om nyckeln ska läggas till som en programvaruskyddad nyckel eller en HSM-skyddad nyckel i nyckelvalvtjänsten.
+Giltiga värden är: HSM och programvara.
+Obs! Om du vill använda HSM som destination måste du ha ett nyckelvalv som har stöd för HSMs. Mer information om tjänstnivåer och funktioner för Azure-nyckelvalv finns på webbplatsen för priser för [Azure-nyckelvalv.](http://go.microsoft.com/fwlink/?linkid=512521)
+Den här parametern krävs när du skapar en ny nyckel. Om du importerar en nyckel med hjälp av *KeyFilePath-parametern* är den här parametern valfri:
+- Om du inte anger den här parametern och den här cmdleten importerar en nyckel som har filnamnstillägget .byok importeras den nyckeln som en HSM-skyddad nyckel. Cmdleten kan inte importera den nyckeln som en programvaruskyddad nyckel.
+- Om du inte anger den här parametern och denna cmdlet importerar en nyckel som har filnamnstillägget .pfx importeras nyckeln som en programvaruskyddad nyckel.
 
 ```yaml
 Type: System.String
@@ -268,8 +268,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Inaktivera
-Visar att den aktuella knappen är inaktive rad. Alla försök att använda den här knappen fungerar inte. Använd den här parametern om du har förinstallerat de nycklar du tänker aktivera senare.
+### -Disable
+Anger att nyckeln du lägger till är inställd på ett inaktiverat initialt tillstånd. Alla försök att använda nyckeln misslyckas. Använd den här parametern om du förinstallerar nycklar som du tänker aktivera senare.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -283,8 +283,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Upphör
-Anger förfallo tid, som ett **datetime** -objekt, för den Key som denna cmdlet lägger till. Den här parametern använder koordinerad Universal Time (UTC). Använd cmdleten **Get-date** för att hämta ett **datetime** -objekt. Om du vill ha mer information skriver du `Get-Help Get-Date` . Om du inte anger den här parametern upphör inte den att gälla.
+### -Förfaller
+Anger förfallotiden som ett **DateTime-objekt** för nyckeln som denna cmdlet lägger till. Den här parametern använder UTC (Coordinated Universal Time). Om du vill **hämta ett DateTime-objekt** använder du cmdleten **Get-Date.** Om du vill ha mer information skriver du `Get-Help Get-Date` . Om du inte anger den här parametern förfaller inte nyckeln.
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -299,7 +299,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Valv objekt.
+Valv-objekt.
 
 ```yaml
 Type: Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault
@@ -314,7 +314,7 @@ Accept wildcard characters: False
 ```
 
 ### -KeyFilePassword
-Anger ett lösen ord för den importerade filen som ett **SecureString** -objekt. För att få ett **SecureString** -objekt, Använd cmdleten **ConvertTo-SecureString** . Om du vill ha mer information skriver du `Get-Help ConvertTo-SecureString` . Du måste ange lösen ordet för att importera en fil med fil namns tillägget. pfx.
+Anger ett lösenord för den importerade filen som ett **SecureString-objekt.** Om du vill **hämta ett SecureString-objekt** använder du **cmdleten ConvertTo-SecureString.** Om du vill ha mer information skriver du `Get-Help ConvertTo-SecureString` . Du måste ange det här lösenordet om du vill importera en fil med filnamnstillägget .pfx.
 
 ```yaml
 Type: System.Security.SecureString
@@ -328,12 +328,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Fil Sök väg
-Anger sökvägen till en lokal fil som innehåller nyckel material som denna cmdlet importerar.
-De giltiga fil namns tilläggen är. BYOK och. pfx.
-- Om filen är en. BYOK-fil skyddas tangenten automatiskt av HSMs efter importen och du kan inte åsidosätta denna standard.
-- Om filen är en. pfx-fil skyddas den automatiskt av program vara efter importen. Om du vill åsidosätta denna standard ställer du in *mål* parametern på HSM så att tangenten är HSM-skyddad.
-Om du anger den här parametern är *mål* parametern valfri.
+### -KeyFilePath
+Anger sökvägen till en lokal fil som innehåller nyckelmaterial som cmdleten importerar.
+Giltiga filnamnstillägg är .byok och .pfx.
+- Om filen är en .byok-fil skyddas nyckeln automatiskt av HSMs efter importen och du kan inte åsidosätta den här standardinställningen.
+- Om filen är en PFX-fil skyddas nyckeln automatiskt av programvaran efter importen. Om du vill åsidosätta standardinställningen anger du *målparametern* till HSM så att nyckeln är HSM-skyddad.
+När du anger den här parametern är *målparametern* valfri.
 
 ```yaml
 Type: System.String
@@ -348,15 +348,15 @@ Accept wildcard characters: False
 ```
 
 ### -KeyOps
-Anger en matris med åtgärder som kan utföras med hjälp av den här cmdleten som läggs till.
-Om du inte anger den här parametern kan alla operationer utföras.
-De acceptabla värdena för den här parametern är en kommaavgränsad lista med viktiga åtgärder som definieras av [JSON Web Key (JWK)-specifikationen](http://go.microsoft.com/fwlink/?LinkID=613300):
-- Inträffade
+Anger en matris med åtgärder som kan utföras med hjälp av nyckeln som denna cmdlet adderar.
+Om du inte anger den här parametern kan alla åtgärder utföras.
+Godtagbara värden för den här parametern är en kommaavgränsad lista med nyckelåtgärder som definieras i [specifikationen JSON Web Key (JWK):](http://go.microsoft.com/fwlink/?LinkID=613300)
+- Kryptera
 - Dekryptera
-- Ska
-- Unwrap
-- Logga in
-- Kontroll
+- Radbryt
+- Ta bort brytningar
+- Signera
+- Verifiera
 
 ```yaml
 Type: System.String[]
@@ -370,8 +370,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Namn
-Anger namnet på den som ska läggas till i nyckelordet. Denna cmdlet konstruerar det fullständigt kvalificerade domän namnet (FQDN) för en nycklar baserat på namnet som den här parametern anger, namnet på Key-valvet och din nuvarande miljö. Namnet måste vara en sträng på mellan 1 och 63 tecken som bara innehåller 0-9, a-z, A-Z och-(streck symbolen).
+### -Name
+Anger namnet på nyckeln som ska läggas till i nyckelvalvet. Den här cmdleten skapar det fullständigt kvalificerade domännamnet (FQDN) för en nyckel baserat på namnet som den här parametern anger, namnet på nyckelvalvet och den aktuella miljön. Namnet måste vara en sträng med en teckenlängd på 1 till 63 tecken som bara innehåller 0-9, a-z, A-Ö och - (strecksymbolen).
 
 ```yaml
 Type: System.String
@@ -386,7 +386,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotBefore
-Anger tiden, som ett **datetime** -objekt, innan det inte går att använda tangenten. Den här parametern använder UTC. Använd cmdleten **Get-date** för att hämta ett **datetime** -objekt. Om du inte anger den här parametern kan du använda den direkt.
+Anger tiden, som ett **DateTime-objekt,** före vilken nyckeln inte kan användas. Den här parametern använder UTC. Om du vill **hämta ett DateTime-objekt** använder du cmdleten **Get-Date.** Om du inte anger den här parametern kan nyckeln användas direkt.
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -401,7 +401,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Valv resurs-ID.
+Resurs-ID för valv.
 
 ```yaml
 Type: System.String
@@ -415,8 +415,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Storlek
-RSA-nyckelbaserad storlek, i bitar. Om det inte anges ger tjänsten ett säkert standardvärde.
+### -Size
+RSA-tangentstorlek, i bitar. Om detta inte anges anges en säker standard för tjänsten.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -430,8 +430,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tagg
-Par med nyckelord i form av en hash-tabell. Till exempel: @ {key0 = "value0"; KEY1 = $null; key2 = "värde2"}
+### -Tag
+Nyckelvärdepar i form av en hash-tabell. Exempel: @{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -446,7 +446,7 @@ Accept wildcard characters: False
 ```
 
 ### -VaultName
-Anger namnet på det nyckelord som den här cmdleten lägger till. Denna cmdlet konstruerar FQDN för ett Key valv baserat på namnet som den här parametern anger och din nuvarande miljö.
+Anger namnet på nyckelvalvet som denna cmdlet lägger till nyckeln för. Den här cmdleten skapar FQDN för ett nyckelvalv baserat på namnet som den här parametern anger och din aktuella miljö.
 
 ```yaml
 Type: System.String
@@ -461,7 +461,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -476,7 +476,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs.
+Visar vad som skulle hända om cmdleten körs.
 Cmdleten körs inte.
 
 ```yaml
@@ -492,26 +492,25 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### Microsoft. Azure. commands. valv. Models. PSKeyVault
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. valv. Models. PSKeyVaultKey
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKey
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Säkerhets kopiering-AzKeyVaultKey](./Backup-AzKeyVaultKey.md)
+[Backup-AzKeyVaultKey](./Backup-AzKeyVaultKey.md)
 
 [Get-AzKeyVaultKey](./Get-AzKeyVaultKey.md)
 
 [Remove-AzKeyVaultKey](./Remove-AzKeyVaultKey.md)
 
-[Set-AzKeyVaultKeyAttribute](./Set-AzKeyVaultKeyAttribute.md)
