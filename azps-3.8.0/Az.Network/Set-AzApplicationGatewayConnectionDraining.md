@@ -5,29 +5,29 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/se
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzApplicationGatewayConnectionDraining.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzApplicationGatewayConnectionDraining.md
-ms.openlocfilehash: 76c017589afd5f8ef0abb6f016dbc80bb5bc30d1
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 238c5974871379a3552d6b0d23b696bb513dc21f
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94089089"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100415112"
 ---
 # Set-AzApplicationGatewayConnectionDraining
 
-## Sammanfattning
-Ändrar anslutningen tömning av ett objekt för HTTP-inställningsobjektet.
+## SYNOPSIS
+Ändrar konfigurationen av anslutningsav tömningen av ett HTTP-inställningsobjekt i backend.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 Set-AzApplicationGatewayConnectionDraining -BackendHttpSettings <PSApplicationGatewayBackendHttpSettings>
  -Enabled <Boolean> -DrainTimeoutInSec <Int32> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **set-AzApplicationGatewayWebApplicationFirewallConfiguration** ändrar anslutningen som tömmer konfigurationen för ett objekt med http-inställningar för backend.
+## BESKRIVNING
+Cmdleten **Set-AzApplicationGatewayWebApplicationFirewallConfiguration** ändrar konfiguration av anslutningen som tar bort anslutningen för ett HTTP-inställningsobjekt i backend.
 
-## BESKRIVS
+## EXEMPEL
 
 ### Exempel 1
 ```
@@ -36,14 +36,14 @@ PS C:\> $Settings  = Get-AzApplicationGatewayBackendHttpSettings -Name "Settings
 PS C:\> Set-AzApplicationGatewayConnectionDraining -BackendHttpSettings $poolSetting02 -Enabled $False -DrainTimeoutInSec 3600
 ```
 
-Det första kommandot får den Programgateway som heter ApplicationGateway01 i resurs gruppen som heter ResourceGroup01 och lagrar den i $AppGw variabeln.
-Det andra kommandot får de backend-HTTP-inställningarna "Settings01" för $AppGw och lagrar inställningarna i $Settings-variabeln.
-Det senaste kommandot ändrar anslutningen tömning av det backend-HTTP-Setting-objekt som är lagrat i $Settings genom att aktivera till false och DrainTimeoutInSec till 3600.
+Det första kommandot hämtar programgatewayen med namnet ApplicationGateway01 i resursgruppen ResourceGroup01 och lagrar den i $AppGw variabeln.
+Det andra kommandot hämtar HTTP-inställningarna i backend med namnet Settings01 för $AppGw lagrar inställningarna i $Settings variabeln.
+Det senaste kommandot ändrar konfigurationen av anslutningsdummering för HTTP-inställningsobjektet i backend som lagras i $Settings genom att ange Enabled to False och DrainTimeoutInSec till 3600.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -BackendHttpSettings
-Server delens http-inställningar
+Backend http-inställningar
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendHttpSettings
@@ -58,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifterna, kontot, klientorganisationen och prenumerationen som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -73,8 +73,8 @@ Accept wildcard characters: False
 ```
 
 ### -DrainTimeoutInSec
-Antalet sekunder som anslutningen är aktiv.
-Godkända värden är mellan 1 sekund och 3600 sekunder.
+Antalet sekunder som anslutningen töms är aktiv.
+Godtagbara värden är från 1 sekund till 3600 sekunder.
 
 ```yaml
 Type: System.Int32
@@ -88,8 +88,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Aktiverad
-Om anslutning är aktiverat eller inte.
+### -Enabled
+Om anslutningsavkoppling är aktiverat eller inte.
 
 ```yaml
 Type: System.Boolean
@@ -104,23 +104,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-### Microsoft. Azure. commands. Networks. Models. PSApplicationGatewayBackendHttpSettings
+### Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendHttpSettings
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. Networks. Models. PSApplicationGatewayBackendHttpSettings
+### Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendHttpSettings
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
 [Get-AzApplicationGateway](./Get-AzApplicationGateway.md)
 
-[Get-AzApplicationGatewayBackendHttpSettings](./Get-AzApplicationGatewayBackendHttpSettings.md)
 
 [Get-AzApplicationGatewayConnectionDraining](./Get-AzApplicationGatewayConnectionDraining.md)
 
