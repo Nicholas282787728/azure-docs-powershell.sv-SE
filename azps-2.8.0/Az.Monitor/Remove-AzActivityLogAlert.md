@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/re
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Remove-AzActivityLogAlert.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Remove-AzActivityLogAlert.md
-ms.openlocfilehash: 1f1e6aa3d90bbb2569f4381b3ea047bce9e483ee
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 80b8bce24968a3b2daef459ac892a219a8d7fd6e
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93918903"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100411576"
 ---
 # Remove-AzActivityLogAlert
 
-## Sammanfattning
-Tar bort en aktivitets loggs avisering.
+## SYNOPSIS
+Tar bort en aktivitetsloggavisering.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### RemoveByNameAndResourceGroup
 ```
@@ -38,14 +38,14 @@ Remove-AzActivityLogAlert -ResourceId <String> [-DefaultProfile <IAzureContextCo
  [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Remove-AzActivityLogAlert** tar bort en aktivitets logg.
-Denna cmdlet implementerar ShouldProcess-mönstret, dvs. den kan begära bekräftelse från användaren innan han eller hon korrigerar resursen.
-Denna cmdlet implementerar ShouldProcess-mönstret, t. ex. det kan begära bekräftelse från användaren innan de skapar, ändrar eller tar bort resursen.
+## BESKRIVNING
+Cmdleten **Remove-AzActivityLogAlert** tar bort en aktivitetsloggavisering.
+Den här cmdleten implementerar mönstret ShouldProcess, dvs. den kan begära bekräftelse från användaren innan den korrigerar resursen.
+Den här cmdleten implementerar mönstret ShouldProcess, dvs. den kan begära bekräftelse från användaren innan den faktiskt skapar, ändrar eller tar bort resursen.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: ta bort en aktivitets logg varning
+### Exempel 1: Ta bort en aktivitetsloggavisering
 ```
 PS C:\>Remove-AzActivityLogAlert -ResourceGroup "Default-Web-CentralUS" -Name "myalert"
 RequestId                                                                                                    StatusCode
@@ -53,9 +53,9 @@ RequestId                                                                       
 2c6c159b-0e73-4a01-a67b-c32c1a0008a3                                                                                 OK
 ```
 
-Tar bort en aktivitets logg varning med namn-och resurs grupp namn som indata.
+Tar bort en aktivitetsloggavisering med namn och resursgruppsnamn som indata.
 
-### Exempel 2: ta bort en aktivitets logg varning med en PSActivityLogAlertResource som indata
+### Exempel 2: Ta bort en aktivitetsloggavisering med hjälp av en PSActivityLogAlertResource som inmatning
 ```
 PS C:\>Get-AzActivityLogAlert -ResourceGroup "Default-activityLogAlerts" -Name "alert1" | Remove-AzActivityLogAlert 
 RequestId                                                                                                    StatusCode
@@ -63,19 +63,19 @@ RequestId                                                                       
 5c371547-80b0-4185-9b95-700b129de9d4                                                                                 OK
 ```
 
-Tar bort en aktivitets logg varning med en PSActivityLogAlertResource som indata.
+Tar bort en aktivitetsloggavisering med hjälp av PSActivityLogAlertResource som indata.
 
-### Exempel 3: ta bort ActivityLogAlert med parametern ResourceId
+### Exempel 3: Ta bort ActivityLogAlert med parametern ResourceId
 ```
 PS C:\>Get-AzResource -ResourceGroupName "myResourceGroup" -Name "myLogAlert" | Remove-AzActivityLogAlert
 ```
 
-Det här kommandot tar bort ActivityLogAlert med hjälp av ResourceId-parametern från en pipe.
+Det här kommandot tar bort ActivityLogAlert med parametern ResourceId från pipe.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Anger egenskapen InputObject Tags för samtalet för att extrahera namnet och resurs gruppens namn-egenskaper.
+Anger egenskapen InputObject-taggar för samtalet för att extrahera det obligatoriska namnet och namnegenskaperna för resursgruppen.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Insights.OutputClasses.PSActivityLogAlertResource
@@ -104,8 +104,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -Namn
-Namnet på aktivitets logg varningen.
+### -Name
+Namnet på aktivitetsloggaviseringen.
 
 ```yaml
 Type: System.String
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Namnet på resurs gruppen där aviserings resursen finns.
+Namnet på resursgruppen där aviseringsresursen finns.
 
 ```yaml
 Type: System.String
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Anger egenskapen ResourceId-taggar för samtalet för att extrahera namnet, resurs gruppens namn-egenskaper.
+Anger egenskapen ResourceId-taggar för samtalet för att extrahera obligatoriskt namn, namnegenskaper för resursgrupp.
 
 ```yaml
 Type: System.String
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs. Cmdleten körs inte.
+Visar vad som skulle hända om cmdleten körs. Cmdleten körs inte.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -180,19 +180,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-### Microsoft. Azure. commands. Insights. OutputClasses. PSActivityLogAlertResource
+### Microsoft.Azure.Commands.Insights.OutputClasses.PSActivityLogAlertResource
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. AzureOperationResponse
+### Microsoft.Azure.AzureOperationResponse
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
@@ -206,5 +206,5 @@ Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,
 
 [New-AzActionGroup](./New-AzActionGroup.md)
 
-[New-AzActivityLogAlertCondition](./Get-AzActivityLogAlertCondition.md)
+
 

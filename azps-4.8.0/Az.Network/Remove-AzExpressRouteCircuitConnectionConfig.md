@@ -6,58 +6,58 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/re
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Remove-AzExpressRouteCircuitConnectionConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Remove-AzExpressRouteCircuitConnectionConfig.md
-ms.openlocfilehash: 0e8a4eeaad1f033377ab11d7361d71c8a63a9dc2
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: fb82b00f998ed0c2b7473d4a3e0bcb9b3dc60630
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94261827"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100397857"
 ---
 # Remove-AzExpressRouteCircuitConnectionConfig
 
-## Sammanfattning
-Tar bort en ExpressRoute.
+## SYNOPSIS
+Tar bort en ExpressRoute-kretsanslutningskonfiguration.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 Remove-AzExpressRouteCircuitConnectionConfig [-Name] <String> [-ExpressRouteCircuit] <PSExpressRouteCircuit>
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Remove-AzExpressRouteCircuitConnectionConfig** tar bort en konfiguration för ExpressRoute-anslutning som är kopplad till en given ExpressRoute-krets.
+## BESKRIVNING
+Cmdleten **Remove-AzExpressRouteCircuitConnectionConfig** tar bort en ExpressRoute-kretsanslutningskonfiguration kopplad till en viss Express Route-krets.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: ta bort en kabel anslutnings konfiguration från en ExpressRoute-krets
+### Exempel 1: Ta bort en kretsanslutningskonfiguration från en ExpressRoute-krets
 ```
 $circuit_init = Get-AzExpressRouteCircuit -Name $initiatingCircuitName -ResourceGroupName $rg
 Remove-AzExpressRouteCircuitConnectionConfig -Name $circuitConnectionName -ExpressRouteCircuit $circuit_init
 Set-AzExpressRouteCircuit -ExpressRouteCircuit $circuit_init
 ```
 
-### Exempel 2: ta bort en anslutnings konfiguration för en krets med ledning från en ExpressRoute-krets
+### Exempel 2: Ta bort en kretsanslutningskonfiguration med Piping från en ExpressRoute-krets
 ```
 Get-AzExpressRouteCircuit -Name $initiatingCircuitName -ResourceGroupName $rg|Remove-AzExpressRouteCircuitConnectionConfig -Name $circuitConnectionName|Set-AzExpressRouteCircuit
 ```
 
-### Exempel 3: ta bort en kabel anslutning från en ExpressRoute-krets för en viss adress familj
+### Exempel 3: Ta bort en kretsanslutningskonfiguration från en ExpressRoute-krets för en viss adressfamilj
 ```
 $circuit_init = Get-AzExpressRouteCircuit -Name $initiatingCircuitName -ResourceGroupName $rg
 Remove-AzExpressRouteCircuitConnectionConfig -Name $circuitConnectionName -ExpressRouteCircuit $circuit_init -AddressPrefixType IPv4
 Set-AzExpressRouteCircuit -ExpressRouteCircuit $circuit_init
 ```
 
-### Exempel 4: ta bort en kabel anslutnings konfiguration med hjälp av rör dragning från en ExpressRoute-krets för en viss adress familj
+### Exempel 4: Ta bort en kretsanslutningskonfiguration med Piping från en ExpressRoute-krets för en viss adressfamilj
 ```
 Get-AzExpressRouteCircuit -Name $initiatingCircuitName -ResourceGroupName $rg|Remove-AzExpressRouteCircuitConnectionConfig -Name $circuitConnectionName -AddressPrefixType IPv6|Set-AzExpressRouteCircuit
 ```
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifterna, kontot, klientorganisationen och prenumerationen som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpressRouteCircuit
-ExpressRoute-kretsen som innehåller peering-konfigurationen som ska tas bort.
+ExpressRoute-kretsen som innehåller peeringkonfigurationen som ska tas bort.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit
@@ -86,8 +86,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -Namn
-Namnet på den krets som ska tas bort.
+### -Name
+Namnet på kretsanslutningskonfigurationen som ska tas bort.
 
 ```yaml
 Type: System.String
@@ -101,7 +101,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -AddressPrefixType
-Anger den adress familjen som ska tas bort från config 
+Anger adressfamiljen som måste tas bort från konfiguration 
 
 ```yaml
 Type: System.String
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs. Cmdleten körs inte.
+Visar vad som skulle hända om cmdleten körs. Cmdleten körs inte.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -147,17 +147,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-### Microsoft. Azure. commands. Networks. Models. PSExpressRouteCircuit
+### Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. Networks. Models. PSExpressRouteCircuit
+### Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
@@ -169,7 +169,7 @@ Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,
 
 [Set-AzExpressRouteCircuitConnectionConfig](Set-AzExpressRouteCircuitConnectionConfig.md)
 
-[New-AzExpressRouteCircuitConnectionConfig](New-AzExpressRouteCircuitConnectionConfig.md)
+
 
 [Set-AzExpressRouteCircuit](Set-AzExpressRouteCircuit.md)
 

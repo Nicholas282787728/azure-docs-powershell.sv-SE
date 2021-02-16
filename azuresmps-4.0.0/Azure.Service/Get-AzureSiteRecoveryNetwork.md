@@ -3,30 +3,30 @@ external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
 ms.assetid: 615D2C5D-AB31-45DB-9535-9B9C8E957322
 online version: ''
 schema: 2.0.0
-ms.openlocfilehash: 96b51b49d76093be96eeab26417f4a70f70c4627
-ms.sourcegitcommit: 56ed085a868afa8263f8eb0f755b5822f5c29532
+ms.openlocfilehash: 4a5701fc6308f1884bbf0237887a223a62a58669
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "94093318"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100411593"
 ---
 # Get-AzureSiteRecoveryNetwork
 
-## Sammanfattning
-Hämtar information om nätverken som hanteras av webbplats återställning för det aktuella valvet.
+## SYNOPSIS
+Hämtar information om nätverken som hanteras av Webbplatsåterställning för det aktuella valvet.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 Get-AzureSiteRecoveryNetwork -Server <ASRServer> [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Get-AzureSiteRecoveryNetwork** hämtar information om Azure Site Recovery-nätverk för det aktuella Site Recovery-valvet.
+## BESKRIVNING
+Cmdleten **Get-AzureSiteRecoveryNetwork** hämtar information om Azure-nätverk för webbplatsåterställning för det aktuella valv för webbplatsåterställning.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: skaffa webbplats återställnings nätverk
+### Exempel 1: Hämta nätverk för webbplatsåterställning
 ```
 PS C:\> $Servers = Get-AzureSiteRecoveryServer
 PS C:\> Get-AzureSiteRecoveryNetwork -Server $Servers[0]
@@ -47,16 +47,16 @@ FabricType          : VMM
 VmNetworkSubnetList : {}
 ```
 
-Den första kommando cmdleten hämtar servrar för det aktuella Azure Site Recovery-valvet med cmdleten **Get-AzureSiteRecoveryServer** .
-Kommandot lagrar webbplats återställnings servrarna i $Servers mat ris variabel.
+Den första cmdleten får servrar för det aktuella Azure Site Recovery-valvet med cmdleten **Get-AzureSiteRecoveryServer.**
+Kommandot lagrar webbplatsåterställningsservrarna i den $Servers matrisvariabeln.
 
-Det andra kommandot får webbplatsen för webbplats återställning för den första servern i $Servers matris.
+Det andra kommandot får nätverket för webbplatsåterställning för den första servern i $Servers matrisen.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
-### -Profil
-Anger den Azure-profil från vilken denna cmdlet läser.
-Om du inte anger en profil läser denna cmdlet från den lokala standard profilen.
+### -Profile
+Anger den Azure-profil som cmdleten läser upp.
+Om du inte anger en profil läser den här cmdleten från den lokala standardprofilen.
 
 ```yaml
 Type: AzureSMProfile
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-Anger en återställnings Server för webbplatser.
+Anger en webbplatsåterställningsserver.
 
 ```yaml
 Type: ASRServer
@@ -86,16 +86,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-## VÄRDEN
+## UTDATA
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Azure Site Recovery Services-cmdletar](./Azure.SiteRecoveryServices.md)
+
 
 
