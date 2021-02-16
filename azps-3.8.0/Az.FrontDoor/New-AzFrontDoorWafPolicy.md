@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.frontdoor/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorWafPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/FrontDoor/FrontDoor/help/New-AzFrontDoorWafPolicy.md
-ms.openlocfilehash: 2e78b132019b19725a5261d58a760b3eb9988bb2
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 2d3811b5605b6f4923abd58c64d8d870ede8d334
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94092081"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100403858"
 ---
 # New-AzFrontDoorWafPolicy
 
-## Sammanfattning
-Skapa WAF policy
+## SYNOPSIS
+Skapa WAF-princip
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 New-AzFrontDoorWafPolicy -ResourceGroupName <String> -Name <String> [-EnabledState <PSEnabledState>]
@@ -26,12 +26,12 @@ New-AzFrontDoorWafPolicy -ResourceGroupName <String> -Name <String> [-EnabledSta
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **New-AzFrontDoorWafPolicy** skapar en ny Azure WAF-princip i den angivna resurs gruppen under aktuell prenumeration
+## BESKRIVNING
+Cmdleten **New-AzFrontDoorWafPolicy** skapar en ny Azure WAF-princip i den angivna resursgruppen under aktuell prenumeration
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: skapa WAF policy
+### Exempel 1: Skapa WAF-princip
 ```powershell
 PS C:\> New-AzFrontDoorWafPolicy -Name $policyName -ResourceGroupName $resourceGroupName -Customrule $customRule1,$customRule2 -ManagedRule $managedRule1 -EnabledState Enabled -Mode Prevention -RedirectUrl "https://www.bing.com/" -CustomBlockResponseStatusCode 405 -CustomBlockResponseBody "<html><head><title>You are blocked!</title></head><body></body></html>"
 
@@ -40,12 +40,12 @@ Name         PolicyMode PolicyEnabledState RedirectUrl
 {policyName} Prevention            Enabled https://www.bing.com/
 ```
 
-Skapa WAF policy
+Skapa WAF-princip
 
-## MALLPARAMETRAR
+## PARAMETERS
 
-### -CustomBlockResponseBody
-Anpassat svar
+### -CustomBlockResponse Ent
+Anpassad svarstext
 
 ```yaml
 Type: System.String
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomBlockResponseStatusCode
-Anpassad svars status kod
+Anpassad svarsstatuskod
 
 ```yaml
 Type: System.Int32
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -Customrule
-Anpassade regler inuti policyn
+Anpassade regler i principen
 
 ```yaml
 Type: Microsoft.Azure.Commands.FrontDoor.Models.PSCustomRule[]
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -105,8 +105,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledState
-Om principen är aktiverat eller inte.
-Möjliga värden är: ' disabled ', ' Enabled '
+Om principen är i aktiverat eller inaktiverat läge.
+Möjliga värden är: "Inaktiverad", "Aktiverad"
 
 ```yaml
 Type: Microsoft.Azure.Commands.FrontDoor.Models.PSEnabledState
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedRule
-Hanterade regler inuti policyn
+Hanterade regler i principen
 
 ```yaml
 Type: Microsoft.Azure.Commands.FrontDoor.Models.PSManagedRule[]
@@ -136,9 +136,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Mode
-Beskriver om den är i identifierings läge eller i läget förhindra på princip nivå.
-Möjliga värden är: "förebygga", "identifiering"
+### -Läge
+Här beskrivs om det är i identifieringsläge eller skyddsläge på principnivå.
+Möjliga värden är:'Skydd', 'Identifiering'
 
 ```yaml
 Type: System.String
@@ -152,8 +152,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Namn
-WebApplicationFireWallPolicy namn.
+### -Name
+WebApplicationFireWallPolicy-namn.
 
 ```yaml
 Type: System.String
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -RedirectUrl
-Omdirigera URL
+Omdirigerings-URL
 
 ```yaml
 Type: System.String
@@ -183,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resurs gruppens namn
+Resursgruppens namn
 
 ```yaml
 Type: System.String
@@ -198,7 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -213,7 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs.
+Visar vad som skulle hända om cmdleten körs.
 Cmdleten körs inte.
 
 ```yaml
@@ -229,22 +229,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
 ### Ingen
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. FrontDoor. Models. PSPolicy
+### Microsoft.Azure.Commands.frontDoor.Models.PSPolicy
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Set-AzFrontDoorWafPolicy](./Set-AzFrontDoorWafPolicy.md) 
- [Get-AzFrontDoorWafPolicy](./Get-AzFrontDoorWafPolicy.md) 
+[Get-AzFrontDoorWafPolicy](./Get-AzFrontDoorWafPolicy.md) 
  [Remove-AzFrontDoorWafPolicy](./Remove-AzFrontDoorWafPolicy.md) 
+ [Update-AzFrontDoorWafPolicy](./Update-AzFrontDoorWafPolicy.md) 
  [New-AzFrontDoorWafManagedRuleObject](./New-AzFrontDoorWafManagedRuleObject.md) 
  [New-AzFrontDoorWafCustomRuleObject](./New-AzFrontDoorWafManagedRuleObject.md)

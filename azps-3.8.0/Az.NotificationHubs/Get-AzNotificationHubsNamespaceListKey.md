@@ -6,45 +6,45 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.notificati
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/NotificationHubs/NotificationHubs/help/Get-AzNotificationHubsNamespaceListKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/NotificationHubs/NotificationHubs/help/Get-AzNotificationHubsNamespaceListKey.md
-ms.openlocfilehash: 90e617f35442470cef2d11c2de032679698ea167
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 5244602a6b6266ebabf02bbb927facda93e61d8b
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "93927274"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100403807"
 ---
 # Get-AzNotificationHubsNamespaceListKey
 
-## Sammanfattning
-Hämtar de primära och sekundära anslutnings strängar som är associerade med en auktoriseringsregel för ett namn område för en aviserings hubb.
+## SYNOPSIS
+Hämtar de primära och sekundära anslutningssträngarna som är kopplade till en namnområdesauktoriseringsregel för meddelandehubben.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 Get-AzNotificationHubsNamespaceListKey [-ResourceGroup] <String> [-Namespace] <String>
  [-AuthorizationRule] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Get-AzNotificationHubsNamespaceListKey** returnerar de primära och sekundära anslutnings strängarna för en auktoriseringsregel för en delad Access-signatur som tilldelats ett namn område i en aviserings hubb.
-Auktoriseringsregler hanterar användar rättigheter till ett namn område för aviseringar.
-Varje regel innehåller en primär och en sekundär anslutnings sträng.
+## BESKRIVNING
+Cmdleten **Get-AzNotificationHubsNamespaceListKey** returnerar de primära och sekundära anslutningssträngarna för en SAS-auktoriseringsregel (Shared Access Signature) som tilldelats till ett meddelandehubbens namnområde.
+Auktoriseringsregler hanterar användarrättigheter till ett namnområde för meddelandehubben.
+Varje regel innehåller en primär och en sekundär anslutningssträng.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: Hämta primära och sekundära anslutnings strängar för en auktoriseringsregel
+### Exempel 1: Hämta de primära och sekundära anslutningssträngarna för en auktoriseringsregel
 ```
 PS C:\>Get-AzNotificationHubsNamespaceListKey -Namespace "ContosoNamespace" -ResourceGroup "ContosoNotificationsGroup" -AuthorizationRule "ListenRule"
 ```
 
-Det här kommandot returnerar de primära och sekundära anslutnings strängarna för auktoriseringsregeln som heter ListenRule tilldelade till ContosoNamespace namn området.
-När du kör det här kommandot måste du ange namnet på den resurs grupp som namn området är tilldelat till.
+Det här kommandot returnerar de primära och sekundära anslutningssträngarna för auktoriseringsregeln med namnet ListenRule som tilldelats contosoNamespace-namnområdet.
+När du kör det här kommandot måste du inkludera namnet på den resursgrupp som namnområdet är tilldelat till.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -AuthorizationRule
-Anger namnet på en SAS-autentiseringsprocess.
-Dessa regler bestämmer vilken typ av åtkomst användare har till meddelande navet.
+Anger namnet på en SAS-autentiseringsregel.
+Dessa regler avgör vilken typ av åtkomst användarna har till meddelandehubben.
 
 ```yaml
 Type: System.String
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -73,8 +73,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Namnrymd
-Anger namn området som innehåller de anslutnings strängar som den här cmdleten får.
+### -Namespace
+Anger namnområdet som innehåller de anslutningssträngar som denna cmdlet hämtar.
 
 ```yaml
 Type: System.String
@@ -89,8 +89,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Anger den resurs grupp som namn området tilldelats till.
-Resurs grupper organiserar objekt som namn områden, aviserings nav och auktoriseringsregler på olika sätt som underlättar lager hantering och Azure-administrationen.
+Anger den resursgrupp som namnområdet är tilldelat till.
+Resursgrupper organiserar objekt som namnområden, meddelandehubben och auktoriseringsregler på sätt som hjälper dig med lagerhantering och Azure-administration.
 
 ```yaml
 Type: System.String
@@ -105,22 +105,21 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. Management. NotificationHubs. Models. ResourceListKeys
+### Microsoft.Azure.Management.NotificationHubs.Models.ResourceListKeys
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
 [Get-AzNotificationHubsNamespace](./Get-AzNotificationHubsNamespace.md)
 
-[Get-AzNotificationHubsNamespaceAuthorizationRules](./Get-AzNotificationHubsNamespaceAuthorizationRules.md)
 
 
