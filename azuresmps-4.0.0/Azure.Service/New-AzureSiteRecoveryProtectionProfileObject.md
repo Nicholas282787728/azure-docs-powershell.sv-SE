@@ -3,19 +3,19 @@ external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
 ms.assetid: 853D5585-2A92-4B65-BA8C-EC06BEE8C237
 online version: ''
 schema: 2.0.0
-ms.openlocfilehash: 63274c772c6085fc8c491557851673a38056aa77
-ms.sourcegitcommit: 56ed085a868afa8263f8eb0f755b5822f5c29532
+ms.openlocfilehash: d7681631d98f80def1076a04ab57f1774bad245c
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "94099121"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100403654"
 ---
 # New-AzureSiteRecoveryProtectionProfileObject
 
-## Sammanfattning
-Skapar ett profil objekt för webbplats återställnings skydd.
+## SYNOPSIS
+Skapar ett profilobjekt för webbplatsåterställningsskydd.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### EnterpriseToAzure (standard)
 ```
@@ -35,13 +35,13 @@ New-AzureSiteRecoveryProtectionProfileObject [-Name <String>] -ReplicationProvid
  [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **New-AzureSiteRecoveryProtectionProfileObject** skapar ett Azure Site Recovery Protection-profil objekt.
-Denna cmdlet skapar ett **ASRProtectionProfile** -objekt som ska användas med andra cmdletar.
+## BESKRIVNING
+**Cmdleten New-AzureSiteRecoveryProtectionProfileObject** skapar ett profilobjekt för Azure-webbplatsåterställningsskydd.
+Den här cmdleten skapar **ett ASRProtectionProfile-objekt** som ska användas med andra cmdlets.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: skapa en skydds profil
+### Exempel 1: Skapa en profil för skydd
 ```
 PS C:\> New-AzureSiteRecoveryProtectionProfileObject -ReplicationProvider "HyperVReplica" -AllowReplicaDeletion -ApplicationConsistentSnapshotFrequencyInHours 1 -CompressionEnabled -RecoveryPoints 2 -ReplicationFrequencyInSeconds 30 -ReplicationMethod "Online" -ReplicationPort 8085 -ReplicationStartTime 1
 Name                                     : 
@@ -51,9 +51,9 @@ HyperVReplicaProviderSettingsObject      : Microsoft.Azure.Portal.RecoveryServic
 HyperVReplicaAzureProviderSettingsObject :
 ```
 
-Det här kommandot skapar ett skydds profil objekt.
+Det här kommandot skapar ett skyddprofilobjekt.
 
-### Exempel 2: skapa en skydds profil för HyperVReplicaAzure-leverantören
+### Exempel 2: Skapa en skyddsprofil för HyperVReplicaAzure-leverantören
 ```
 PS C:\> New-AzureSiteRecoveryProtectionProfileObject -Name "ProtectionProfile" -ReplicationProvider "HyperVReplicaAzure" -RecoveryAzureSubscription "cb53d0c3-bd59-4721-89bc-06916a9147ef" -RecoveryAzureStorageAccount "Contoso01" -ReplicationFrequencyInSeconds 30 -RecoveryPoints 1 -Force
 Name                                     : ProtectionProfile
@@ -63,12 +63,12 @@ HyperVReplicaProviderSettingsObject      :
 HyperVReplicaAzureProviderSettingsObject : Microsoft.Azure.Portal.RecoveryServices.Models.Common.HyperVReplicaAzureProviderSettings
 ```
 
-Det här kommandot skapar en skydds profil för en HyperVReplicaAzure-leverantör.
+Det här kommandot skapar en skyddsprofil för en HyperVReplicaAzure-leverantör.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -AllowReplicaDeletion
-Anger att skydds profilen tillåter borttagning av replik enheter.
+Anger att skyddsprofilen aktiverar borttagning av replikenheter.
 
 ```yaml
 Type: SwitchParameter
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationConsistentSnapshotFrequencyInHours
-Anger frekvensen i timmar för programspecifika stillbilder.
+Anger hur ofta ögonblicksbilder som ska säkerställas i timmar för program konsekventa ögonblicksbilder.
 
 ```yaml
 Type: Int32
@@ -97,9 +97,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Inloggningsautentisering
-Anger vilken typ av verifikation som ska användas.
-De acceptabla värdena för den här parametern är: certifikat och Kerberos.
+### -Autentisering
+Anger vilken typ av autentisering som ska användas.
+De godtagbara värdena för den här parametern är: Certifikat och Kerberos.
 
 ```yaml
 Type: String
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -CompressionEnabled
-Anger att skydds profilen aktiverar komprimering.
+Anger att skyddsprofilen aktiverar komprimering.
 
 ```yaml
 Type: SwitchParameter
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Tvingar kommandot att köras utan att fråga efter bekräftelse.
+Tvingar kommandot att köras utan att användaren uppmanas att bekräfta.
 
 ```yaml
 Type: SwitchParameter
@@ -143,8 +143,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Namn
-Anger ett namn på skydds profilen.
+### -Name
+Anger ett namn för skyddsprofilen.
 
 ```yaml
 Type: String
@@ -158,9 +158,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Profil
-Anger den Azure-profil från vilken denna cmdlet läser.
-Om du inte anger en profil läser denna cmdlet från den lokala standard profilen.
+### -Profile
+Anger den Azure-profil som cmdleten läser upp.
+Om du inte anger en profil läser den här cmdleten från den lokala standardprofilen.
 
 ```yaml
 Type: AzureSMProfile
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryAzureStorageAccount
-Anger namnet på ett Azure Storage-konto där du vill att Azure Replica-enheten ska lagras.
+Anger namnet på ett Azure Storage-konto för vilket du lagrar Azure-kopiantitet.
 
 ```yaml
 Type: String
@@ -190,8 +190,8 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryAzureSubscription
-Anger ID för ett Azure-abonnemang för ett lagrings konto.
-Den här parametern refererar till det konto som du vill att Azure Replica-enheten ska lagras på.
+Anger ID för en Azure-prenumeration för ett lagringskonto.
+Den här parametern refererar till kontot för vilket du lagrar Azure-kopiantitet.
 
 ```yaml
 Type: String
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryPoints
-Anger antalet timmar som återställnings punkter ska sparas i.
+Anger antalet timmar som återställningspunkter ska behållas.
 
 ```yaml
 Type: Int32
@@ -221,9 +221,9 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationFrequencyInSeconds
-Anger frekvens intervallet, i sekunder, för replikering. De acceptabla värdena för den här parametern är:
+Anger frekvensintervallet i sekunder för replikering. De godtagbara värdena för den här parametern är:
 
-- halvtimme 
+- 30 
 - 300 
 - 900
 
@@ -240,11 +240,11 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationMethod
-Anger replikeringsfrekvensen. De acceptabla värdena för den här parametern är:
+Anger replikeringsmetoden. De godtagbara värdena för den här parametern är:
 
-- Support.
-Replikering via nätverket.
-- Arbetade.
+- Online.
+Replikering över nätverket.
+- Offline.
 
 ```yaml
 Type: String
@@ -259,7 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationPort
-Anger numret på den port som replikeringen utförs på.
+Anger numret på den port där replikeringen sker.
 
 ```yaml
 Type: UInt16
@@ -274,7 +274,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationProvider
-Anger typen av replikeringsprovider. De acceptabla värdena för den här parametern är: HyperVReplica och HyperVReplicaAzure.
+Anger typen av replikeringsprovider. De godtagbara värdena för den här parametern är: HyperVReplica och HyperVReplicaAzure.
 
 ```yaml
 Type: String
@@ -289,8 +289,8 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationStartTime
-Anger start tiden för replikeringen.
-Ange en tid inom 24 timmar efter att du har startat jobbet.
+Anger replikeringens starttid.
+Ange en tid inom 24 timmar efter att du startar jobbet.
 
 ```yaml
 Type: TimeSpan
@@ -305,16 +305,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-## VÄRDEN
+## UTDATA
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Azure Site Recovery Services-cmdletar](./Azure.SiteRecoveryServices.md)
+
 
 

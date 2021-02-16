@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/g
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Get-AzKeyVaultCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Get-AzKeyVaultCertificate.md
-ms.openlocfilehash: 5935706c341fac5f0b26d3e4965f226342c3dfc8
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: ccd2762449e24f881a3308c0d11476a1e4626fed
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93743932"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100403586"
 ---
 # Get-AzKeyVaultCertificate
 
-## Sammanfattning
-Hämtar ett certifikat från ett nyckelord.
+## SYNOPSIS
+Hämtar ett certifikat från ett nyckelvalv.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### ByName (standard)
 ```
@@ -74,12 +74,12 @@ Get-AzKeyVaultCertificate [-ResourceId] <String> [-Name] <String> [-IncludeVersi
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Get-AzKeyVaultCertificate** hämtar det angivna certifikatet eller versionerna av ett certifikat från ett nyckelord i Azure Key Vault.
+## BESKRIVNING
+Cmdleten **Get-AzKeyVaultCertificate** får det angivna certifikatet eller versionerna av ett certifikat från ett nyckelvalv i Azure Key Vault.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: skaffa ett certifikat
+### Exempel 1: Skaffa ett certifikat
 ```powershell
 PS C:\> Get-AzKeyVaultCertificate -VaultName "ContosoKV01" -Name "TestCert01"
 Name        : testCert01
@@ -108,9 +108,9 @@ Created     : 2/8/2016 11:21:45 PM
 Updated     : 2/8/2016 11:21:45 PM
 ```
 
-Det här kommandot hämtar certifikatet med namnet TestCert01 från Key-valvet med namnet ContosoKV01.
+Det här kommandot får certifikatet TestCert01 från nyckelvalvet ContosoKV01.
 
-### Exempel 2: Hämta alla certifikat som har tagits bort men inte rensats för detta huvud valv.
+### Exempel 2: Hämta alla certifikat som har tagits bort men inte rensats för det här nyckelvalvet.
 ```powershell
 PS C:\> Get-AzKeyVaultCertificate -VaultName 'contoso' -InRemovedState
 
@@ -140,9 +140,9 @@ Version            :
 Id                 : https://contoso.vault.azure.net:443/certificates/test2
 ```
 
-Det här kommandot får alla certifikat som tidigare har tagits bort, men inte rensats, i det nyckelord som heter Contoso.
+Det här kommandot hämtar alla certifikat som tidigare har tagits bort, men inte rensats, i nyckelvalvet Contoso.
 
-### Exempel 3: hämtar certifikatet mina certifikat som har tagits bort men inte rensats för detta huvud valv.
+### Exempel 3: Hämtar certifikatet MyCert som har tagits bort men inte rensats för det här nyckelvalvet.
 ```powershell
 PS C:\> Get-AzKeyVaultCertificate -VaultName 'contoso' -Name 'test1' -InRemovedState
 
@@ -182,10 +182,10 @@ Version            : 7fe415d5518240c1a6fce89986b8d334
 Id                 : https://contoso.vault.azure.net:443/certificates/test1/7fe415d5518240c1a6fce89986b8d334
 ```
 
-Det här kommandot hämtar certifikatet med namnet "cert" som tidigare har tagits bort, men inte rensat, i det viktigaste valvet med namnet contoso.
-Det här kommandot returnerar metadata, till exempel borttagnings datum och det schemalagda rensnings datumet för det här borttagna certifikatet.
+Det här kommandot får certifikatet med namnet "MyCert" som tidigare har tagits bort, men inte rensats, i nyckelvalvet Contoso.
+Det här kommandot returnerar metadata, till exempel borttagningsdatum, och schemalagt rensningsdatum för det här borttagna certifikatet.
 
-### Exempel 4: ange certifikat med hjälp av filtrering
+### Exempel 4: Listcertifikat med filtrering
 ```powershell
 PS C:\> Get-AzKeyVaultCertificate -VaultName "ContosoKV01" -Name "test*"
 
@@ -214,10 +214,10 @@ Id        : https://ContosoKV01.vault.azure.net:443/certificates/test2
 This command gets all certificates starting with "test" from the key vault named ContosoKV01.
 ```
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -232,7 +232,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludePending
-Anger om väntande certifikat ska tas med i resultatet
+Anger om väntande certifikat ska inkluderas i utdata
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeVersions
-Anger att den här åtgärden får alla versioner av certifikatet.
+Anger att den här åtgärden hämtar alla versioner av certifikatet.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -262,7 +262,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Valv objekt.
+KeyVault-objekt.
 
 ```yaml
 Type: Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault
@@ -277,7 +277,7 @@ Accept wildcard characters: False
 ```
 
 ### -InRemovedState
-Anger om tidigare borttagna certifikat ska tas med i resultatet
+Anger om du vill ta med tidigare borttagna certifikat i utdata
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -291,8 +291,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Namn
-Anger namnet på det certifikat som ska erhållas.
+### -Name
+Anger namnet på det certifikat som ska hämtas.
 
 ```yaml
 Type: System.String
@@ -319,7 +319,7 @@ Accept wildcard characters: True
 ```
 
 ### -ResourceId
-Resurs-ID för valv.
+KeyVault Resource Id.
 
 ```yaml
 Type: System.String
@@ -334,7 +334,7 @@ Accept wildcard characters: False
 ```
 
 ### -VaultName
-Anger namnet på ett nyckelord.
+Anger namnet på ett nyckelvalv.
 
 ```yaml
 Type: System.String
@@ -349,7 +349,7 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-Anger ett certifikats version.
+Anger versionen av ett certifikat.
 
 ```yaml
 Type: System.String
@@ -364,25 +364,25 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### Microsoft. Azure. commands. valv. Models. PSKeyVault
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. valv. Models. PSKeyVaultCertificateIdentityItem
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultCertificateIdentityItem
 
-### Microsoft. Azure. commands. valv. Models. PSKeyVaultCertificate
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultCertificate
 
 ### Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultCertificate
 
 ### Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultCertificateIdentityItem
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
@@ -392,4 +392,3 @@ Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,
 
 [Remove-AzKeyVaultCertificate](./Remove-AzKeyVaultCertificate.md)
 
-[Ångra-AzKeyVaultSecretCertificate](./Undo-AzKeyVaultSecretCertificate.md)

@@ -3,19 +3,19 @@ external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
 ms.assetid: 3EC274C9-9BF6-4B39-BC70-C7F9D780805D
 online version: ''
 schema: 2.0.0
-ms.openlocfilehash: a4081d6d072aadd6a4ae7d09ff57748a8f2cb697
-ms.sourcegitcommit: 56ed085a868afa8263f8eb0f755b5822f5c29532
+ms.openlocfilehash: 79b61501a56913fedb2a003d7aea1a041bfab4d5
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "94093306"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100412290"
 ---
 # Get-AzureSiteRecoveryServer
 
-## Sammanfattning
-Får webbplats återställnings servrar registrerade ett återställnings valv för webbplatser.
+## SYNOPSIS
+Får webbplatsåterställningsservrar registrerade ett valv för webbplatsåterställning.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### Standard (standard)
 ```
@@ -32,12 +32,12 @@ Get-AzureSiteRecoveryServer -Id <String> [-Profile <AzureSMProfile>] [<CommonPar
 Get-AzureSiteRecoveryServer -Name <String> [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Get-AzureSiteRecoveryServer** hämtar information om Azure Site Recovery-servrar registrerade till det aktuella Site Recovery-valvet.
+## BESKRIVNING
+Cmdleten **Get-AzureSiteRecoveryServer** hämtar information om Azure Site Recovery-servrar som är registrerade på det aktuella valv för webbplatsåterställning.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: Hämta information om en webbplats återställnings Server
+### Exempel 1: Få information om en webbplatsåterställningsserver
 ```
 PS C:\> Get-AzureSiteRecoveryServer
 ID              : cd7dec80-1144-4531-9ab3-888b8ab39bee
@@ -53,11 +53,11 @@ ProviderVersion : 3.5
 ServerVersion   : 3.2.7510.0
 ```
 
-Det här kommandot får information om en Azure Site Recovery-Server.
+Det här kommandot hämtar information om en Azure Site Recovery-server.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
-### -ID
+### -Id
 Anger ID för en server.
 
 ```yaml
@@ -72,7 +72,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Namn
+### -Name
 Anger namnet på en server.
 
 ```yaml
@@ -87,9 +87,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Profil
-Anger den Azure-profil från vilken denna cmdlet läser.
-Om du inte anger en profil läser denna cmdlet från den lokala standard profilen.
+### -Profile
+Anger den Azure-profil som cmdleten läser upp.
+Om du inte anger en profil läser den här cmdleten från den lokala standardprofilen.
 
 ```yaml
 Type: AzureSMProfile
@@ -104,16 +104,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-## VÄRDEN
+## UTDATA
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Azure Site Recovery Services-cmdletar](./Azure.SiteRecoveryServices.md)
+
 
 

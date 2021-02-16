@@ -6,21 +6,21 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.websites/s
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Websites/Websites/help/Set-AzWebApp.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Websites/Websites/help/Set-AzWebApp.md
-ms.openlocfilehash: 0120bd19d1c8930129796e47758bd9f91dccfd5d
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: 46c5dae54bf4f59556e62256797a43221d0650b7
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94102525"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100412358"
 ---
 # Set-AzWebApp
 
-## Sammanfattning
-Ändrar ett Azure Web App.
+## SYNOPSIS
+Ändrar en Azure Web App.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
-### S
+### S1
 ```
 Set-AzWebApp [[-AppServicePlan] <String>] [[-DefaultDocuments] <String[]>] [[-NetFrameworkVersion] <String>]
  [[-PhpVersion] <String>] [[-RequestTracingEnabled] <Boolean>] [[-HttpLoggingEnabled] <Boolean>]
@@ -41,17 +41,17 @@ Set-AzWebApp [[-Use32BitWorkerProcess] <Boolean>] [[-AutoSwapSlotName] <String>]
  [-AsJob] [-WebApp] <PSSite> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **set-AzWebApp** anger en Azure Web App.
+## BESKRIVNING
+Cmdleten **Set-AzWebApp** anger en Azure Web App.
 
-## BESKRIVS
+## EXEMPEL
 
 ### Exempel 1
 ```powershell
 PS C:\> Set-AzWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -AppServicePlan "ContosoPlan"
 ```
 
-Det här kommandot ändrar det AppService-abonnemang som är kopplat till Web App-ContosoWebApp som är kopplat till resurs gruppens standard-väst. Använd länken för att lära dig mer om hur du ändrar AppService plan och vilka villkor som är associerade med den.
+Med det här kommandot ändras den appserviceplan som är kopplad till Web App ContosoWebApp som är kopplad till resursgruppen Default-Web-WestUS. Använd länken om du vill veta mer om hur du ändrar planen för tjänsten och begränsningar som hör till den.
 https://docs.microsoft.com/en-us/azure/app-service/app-service-plan-manage#move-an-app-to-another-app-service-plan
 
 ### Exempel 2
@@ -59,20 +59,20 @@ https://docs.microsoft.com/en-us/azure/app-service/app-service-plan-manage#move-
 PS C:\> Set-AzWebApp -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -HttpLoggingEnabled $true
 ```
 
-Det här kommandot anger HttpLoggingEnabled till sant för Web App-ContosoWebApp som är kopplat till resurs gruppens standard-väst
+Med det här kommandot anges HttpLoggingEnabled till true för Web App ContosoWebApp som är kopplad till resursgruppen Default-Web-WestUS
 
 ### Exempel 3
 
-Ändrar ett Azure Web App. (automatiskt genererat)
+Ändrar en Azure Web App. (autogenererat)
 
 ```powershell <!-- Aladdin Generated Example --> 
 Set-AzWebApp -AppSettings <Hashtable> -Name 'ContosoWebApp' -ResourceGroupName 'Default-Web-WestUS'
 ```
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -AlwaysOn
-Se till att webb programmet läses in hela tiden, i stället är inaktiverat.
+Se till att webbappen läses in hela tiden, i stället för inaktiverad när den har varit inaktiv.
 
 ```yaml
 Type: System.Boolean
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppServicePlan
-Namn på App Service-abonnemang
+Namn på apptjänstplan
 
 ```yaml
 Type: System.String
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -AppSettings
-App Settings-hash. Befintliga program inställningar ersätts och tar bort alla inställningar som inte tillhandahålls.
+HashTabell för appinställningar. Befintliga appinställningar ersätts och alla inställningar som inte tillhandahålls tas bort.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -116,8 +116,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-Kör cmdlet i bakgrunden
+### -As Ent fån
+Kör cmdleten i bakgrunden
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssignIdentity
-Aktivera/inaktivera MSI på en befintlig Azure webapp eller functionapp
+Aktivera/inaktivera MSI för en befintlig Azure WebApp eller functionapp
 
 ```yaml
 Type: System.Boolean
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoSwapSlotName
-Mål plats namn för automatisk växling
+Namn på målplats för automatiskt byte
 
 ```yaml
 Type: System.String
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -AzureStoragePath
-Azure-lagring för montering i en Web App för container. Använda New-AzureRmWebAppAzureStoragePath för att skapa den
+Azure Storage att sätta i ett Web App för behållare. Använda New-AzureRmWebAppAzureStoragePath för att skapa den
 
 ```yaml
 Type: Microsoft.Azure.Commands.WebApps.Models.WebAppAzureStoragePath[]
@@ -176,8 +176,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ConnectionString
-Anslutnings strängar-hash
+### -ConnectionStrings
+HashTabell för anslutningssträngar
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -192,7 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContainerImageName
-Bild namn för behållare
+Bildnamn för behållare
 
 ```yaml
 Type: System.String
@@ -207,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContainerRegistryPassword
-Lösen ord för privat behållare
+Registerlösenord för privat behållare
 
 ```yaml
 Type: System.Security.SecureString
@@ -222,7 +222,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContainerRegistryUrl
-Webb adress för privat behållarens register Server
+Url till registerservern för privat behållare
 
 ```yaml
 Type: System.String
@@ -237,7 +237,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContainerRegistryUser
-Användar namn för privat behållare
+Användarnamn för registerpost för privat behållare
 
 ```yaml
 Type: System.String
@@ -252,7 +252,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultDocuments
-Matris för standard dokument
+Strängmatris för standarddokument
 
 ```yaml
 Type: System.String[]
@@ -267,7 +267,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifterna, kontot, klientorganisationen och prenumerationen som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -282,7 +282,7 @@ Accept wildcard characters: False
 ```
 
 ### -DetailedErrorLoggingEnabled
-Detaljerad fel loggning aktiverat boolesk
+Boolesk boolesk med detaljerad felloggning
 
 ```yaml
 Type: System.Boolean
@@ -312,7 +312,7 @@ Accept wildcard characters: False
 ```
 
 ### -FtpsState
-Ange FTPS tillstånds värde för ett program. Tillåtna värden [AllAllowed | Disabled | FtpsOnly].
+Ställ in värdet för ftps för ett program. Tillåtna värden [Tillåtna | Inaktiverad | FtpsOnly].
 
 ```yaml
 Type: System.String
@@ -327,7 +327,7 @@ Accept wildcard characters: False
 ```
 
 ### -HandlerMappings
-Hanterar mappningar IList
+Handler Mappings IList
 
 ```yaml
 Type: System.Collections.Generic.IList`1[Microsoft.Azure.Management.WebSites.Models.HandlerMapping]
@@ -341,8 +341,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Värdnamn
-Matris för WebApp-värdnamn
+### -HostNames
+WebApp HostNames String Array
 
 ```yaml
 Type: System.String[]
@@ -372,7 +372,7 @@ Accept wildcard characters: False
 ```
 
 ### -HttpsOnly
-Aktivera/inaktivera omdirigering av all trafik till HTTPS på en befintlig Azure webapp eller functionapp
+Aktivera/inaktivera omdirigering av all trafik till HTTPS på en befintlig Azure WebApp eller functionapp
 
 ```yaml
 Type: System.Boolean
@@ -387,7 +387,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedPipelineMode
-Namn på hanterat pipeline-läge
+Namn på hanterat rörledningsläge
 
 ```yaml
 Type: System.String
@@ -403,7 +403,7 @@ Accept wildcard characters: False
 ```
 
 ### -MinTlsVersion
-Den minsta versionen av TLS som krävs för SSL-begäranden. Tillåtna värden [1,0 | 1,1 | 1,2].
+Den lägsta versionen av TLS som krävs för SSL-begäranden. Tillåtna värden [1,0 | 1,1 | 1,2].
 
 ```yaml
 Type: System.String
@@ -417,7 +417,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Namn
+### -Name
 WebApp-namn
 
 ```yaml
@@ -433,7 +433,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetFrameworkVersion
-NET Framework-version
+Net Framework-version
 
 ```yaml
 Type: System.String
@@ -448,7 +448,7 @@ Accept wildcard characters: False
 ```
 
 ### -NumberOfWorkers
-Antalet arbetare som ska tilldelas
+Antalet medarbetare som ska tilldelas
 
 ```yaml
 Type: System.Int32
@@ -478,7 +478,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequestTracingEnabled
-Begäran om spårning aktive rad
+Spårning av begäran aktiverad
 
 ```yaml
 Type: System.Boolean
@@ -493,7 +493,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resurs grupps namn
+Resursgruppnamn
 
 ```yaml
 Type: System.String
@@ -508,7 +508,7 @@ Accept wildcard characters: False
 ```
 
 ### -Use32BitWorkerProcess
-Använda 32-bitars boolesk arbets process
+Använd boolesk 32-bitars arbetsprocess
 
 ```yaml
 Type: System.Boolean
@@ -553,26 +553,26 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### System. Int32
+### System.Int32
 
-### System. String
+### System.String
 
-### Microsoft. Azure. commands. webapps. Models. PSSite
+### Microsoft.Azure.Commands.WebApps.Models.PSSite
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. webapps. Models. PSSite
+### Microsoft.Azure.Commands.WebApps.Models.PSSite
 
-## ANMÄRKNINGAR
-Under angiven cmdlet kan du uppdatera Azure Web App till **DOTNETCORE**
+## ANTECKNINGAR
+Nedanstående cmdlet hjälper dig att uppdatera Azure Web App till **DOTNETCORE**
 
-$PropertiesObject = @ {"CURRENT_STACK" = "dotnetcore"} New-AzResource-PropertyObject $PropertiesObject-ResourceGroupName "default-Web-West"-ResourceType Microsoft. Web/Sites/config-ResourceName "ContosoWebApp/metadata" – ApiVersion 2018-02-01-Force
+$PropertiesObject = @{ "CURRENT_STACK" = "dotnetcore" } New-AzResource -PropertyObject $PropertiesObject -ResourceGroupName "Default-Web-WestUS" -ResourceType Microsoft.Web/sites/config -ResourceName "ContosoWebApp/metadata" -ApiVersion 2018-02-01 -Force
 
-Ersätt värdena som standard-väst med ditt resurs grupp namn för webapp and ContosoWebApp med webapp-namnet.
+Ersätt värdena i Default-Web-WestUS med resursgruppnamnet för webbappen och ContosoWebApp med webbappens namn.
  
 ## RELATERADE LÄNKAR
 
@@ -586,6 +586,5 @@ Ersätt värdena som standard-väst med ditt resurs grupp namn för webapp and C
 
 [Start-AzWebApp](./Start-AzWebApp.md)
 
-[Stopp-AzWebApp](./Stop-AzWebApp.md)
+[Stop-AzWebApp](./Stop-AzWebApp.md)
 
-[New-AzResource](./New-AzResource.md)
