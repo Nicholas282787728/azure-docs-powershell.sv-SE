@@ -6,21 +6,21 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzActionGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzActionGroup.md
-ms.openlocfilehash: da277d72dfd0e1ec2a31d0727047368da100b233
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: fe85fd3d3fd2638933097f73fdc06e6ff2b43460
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93743593"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100406459"
 ---
 # Get-AzActionGroup
 
-## Sammanfattning
-Hämtar åtgärds grupper.
+## SYNOPSIS
+Hämtar åtgärdsgrupp(er).
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
-### BySubscriptionOrResourceGroup (standard)
+### BySubscriptionOrResourceGroup (Standard)
 ```
 Get-AzActionGroup [-ResourceGroupName <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
@@ -31,36 +31,36 @@ Get-AzActionGroup -ResourceGroupName <String> -Name <String> [-DefaultProfile <I
  [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Get-AzActionGroup** hämtar en eller flera åtgärds grupper.
+## BESKRIVNING
+Cmdleten **Get-AzActionGroup** får en eller flera åtgärdsgrupper.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: Hämta en åtgärds grupp efter abonnemangs-ID
+### Exempel 1: Hämta en åtgärdsgrupp genom prenumerations-ID
 ```
 PS C:\>Get-AzActionGroup
 ```
 
-Det här kommandot listar alla åtgärds grupper för det aktuella abonnemanget.
+Det här kommandot listar hela åtgärdsgruppen för den aktuella prenumerationen.
 
-### Exempel 2: Hämta åtgärds grupper för den angivna resurs gruppen
+### Exempel 2: Hämta åtgärdsgrupper för den givna resursgruppen
 ```
 PS C:\>Get-AzActionGroup -ResourceGroup "Default-activityLogAlerts"
 ```
 
-Det här kommandot visar åtgärds grupper för den angivna resurs gruppen.
+Det här kommandot visar åtgärdsgrupper för den givna resursgruppen.
 
-### Exempel 3: Hämta en åtgärds grupp.
+### Exempel 3: Hämta en åtgärdsgrupp.
 ```
 PS C:\>Get-AzActionGroup -ResourceGroup "Default-activityLogAlerts" -Name "actionGroup1"
 ```
 
-Det här kommandot listar en (en lista med en enda element)-åtgärds grupp.
+Det här kommandot listar en åtgärdsgrupp (en lista med ett enda element).
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -74,8 +74,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Namn
-Namnet på åtgärds gruppen.
+### -Name
+Namnet på åtgärdsgruppen.
 
 ```yaml
 Type: System.String
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resurs gruppens namn
+Resursgruppens namn
 
 ```yaml
 Type: System.String
@@ -117,20 +117,20 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. Insights. OutputClasses. PSActionGroupResource
+### Microsoft.Azure.Commands.Insights.OutputClasses.PSActionGroupResource
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
 [Set-AzActionGroup](./Set-AzActionGroup.md) 
  [Remove-AzActionGroup](./Remove-AzActionGroup.md) 
- [New-AzActionGroupReceiver](./AzureRmActionGroupReceiver.md)
+ [New-AzActionGroupReceiver](./New-AzActionGroupReceiver.md)

@@ -6,87 +6,86 @@ Help Version: 4.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventHub/Commands.EventHub/help/AzureRM.EventHub.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/ResourceManager/EventHub/Commands.EventHub/help/AzureRM.EventHub.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/28baa4a53a4efceb1197c032a8db08e199f0858d
-ms.openlocfilehash: 5d5c9343fc994d94ff9456ca35b5a155a01497f0
-ms.sourcegitcommit: f599b50d5e980197d1fca769378df90a842b42a1
+ms.openlocfilehash: a416d32f52850f2a3e5c4e024b247a2596bd4eef
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "93585623"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100398384"
 ---
-# AzureRM. EventHub-modul
-## Problembeskrivning
-I det här avsnittet visas hjälp för Azure Event Hub PowerShell Resource Manager-cmdletar.
+# AzureRM.EventHub-modul
+## Beskrivning
+I det här avsnittet visas hjälp för Azure Event Hubs PowerShell-resurshanterarens cmdlets.
 
-## AzureRM. EventHub-cmdletar
+## AzureRM.EventHub-cmdlets
 ### [Get-AzureRmEventHub](Get-AzureRmEventHub.md)
-Hämtar information om en enkel Event-hubb eller hämtar en lista över händelse nav.
+Hämtar information om ett enskilt händelsenav eller får en lista över händelsehubben.
 
-### [Get-AzureRmEventHubAuthorizationRule](Get-AzureRmEventHubAuthorizationRule.md)
-Hämtar information om en auktoriseringsregel eller hämtar en lista över auktoriseringsregler.
+### [Get-AzureRmEventHubauthorizationRule](Get-AzureRmEventHubAuthorizationRule.md)
+Hämtar information om en auktoriseringsregel eller får en lista över auktoriseringsregler.
 
 ### [Get-AzureRmEventHubConsumerGroup](Get-AzureRmEventHubConsumerGroup.md)
-Hämtar information om en viss konsument grupp för händelse nav eller hämtar en lista över konsument grupper i en Händelsehubben.
+Hämtar information om en viss konsumentgrupp för händelsehubben eller får en lista över konsumentgrupper i ett händelsenav.
 
 ### [Get-AzureRmEventHubKey](Get-AzureRmEventHubKey.md)
-Hämtar primär nyckelinformation för de angivna auktoriseringsregeln för Event Hub.
+Hämtar primärnyckelinformationen för den angivna auktoriseringsregeln för Händelsehubben.
 
 ### [Get-AzureRmEventHubNamespace](Get-AzureRmEventHubNamespace.md)
-Hämtar information om namn området för en händelse hubb eller hämtar en lista över alla namn rymder för händelser i det aktuella Azure-abonnemanget.
+Hämtar information om ett namnområde i Händelsehubben eller hämtar en lista över alla namnområden i Händelsehubben i den aktuella Azure-prenumerationen.
 
 ### [Get-AzureRmEventHubNamespaceAuthorizationRule](Get-AzureRmEventHubNamespaceAuthorizationRule.md)
-Hämtar information om en auktoriseringsregel för ett namn område för en händelse, eller hämtar en lista över auktoriseringsregler.
+Hämtar information om en namnområdesauktoriseringsregel för Händelsehubben eller får en lista över auktoriseringsregler.
 
 ### [Get-AzureRmEventHubNamespaceKey](Get-AzureRmEventHubNamespaceKey.md)
-Hämtar primär nyckelinformation för den angivna regeln för auktoriseringsregeln för händelse nav.
+Hämtar primärnyckelinformationen för den angivna namnområdesauktoriseringsregeln för Händelsehubben.
 
 ### [New-AzureRmEventHub](New-AzureRmEventHub.md)
-Skapar en ny händelsehubben.
+Skapar ett nytt händelsenav.
 
-### [New-AzureRmEventHubAuthorizationRule](New-AzureRmEventHubAuthorizationRule.md)
-Skapar en ny auktoriseringsregel för Event Hub.
+### [New-AzureRmeventHubauthorizationrule](New-AzureRmEventHubAuthorizationRule.md)
+Skapar en ny auktoriseringsregel för Händelsehubben.
 
 ### [New-AzureRmEventHubConsumerGroup](New-AzureRmEventHubConsumerGroup.md)
-Skapar en ny konsument grupp för den angivna Händelsehubben.
+Skapar en ny konsumentgrupp för det angivna händelsehubben.
 
 ### [New-AzureRmEventHubKey](New-AzureRmEventHubKey.md)
-Skapar en ny primär eller sekundär nycklar för den angivna auktoriseringsregeln för Event Hub.
+Skapar en ny primärnyckel eller sekundär nyckel för den angivna auktoriseringsregeln för Händelsehubben.
 
 ### [New-AzureRmEventHubNamespace](New-AzureRmEventHubNamespace.md)
-Skapar ett namn område för Event Hub.
+Skapar ett namnområde för händelsehubben.
 
-### [New-AzureRmEventHubNamespaceAuthorizationRule](New-AzureRmEventHubNamespaceAuthorizationRule.md)
-Skapar en ny auktoriseringsregel i det angivna namn området.
+### [New-AzureRmEventHubNamespaceauthorizationRule](New-AzureRmEventHubNamespaceAuthorizationRule.md)
+Skapar en ny auktoriseringsregel i det angivna namnområdet.
 
 ### [New-AzureRmEventHubNamespaceKey](New-AzureRmEventHubNamespaceKey.md)
-Tar bort den angivna händelsehubben.
+Tar bort det angivna händelsehubben.
 
 ### [Remove-AzureRmEventHub](Remove-AzureRmEventHub.md)
-Tar bort den angivna händelsehubben.
+Tar bort det angivna händelsehubben.
 
-### [Remove-AzureRmEventHubAuthorizationRule](Remove-AzureRmEventHubAuthorizationRule.md)
+### [Remove-AzureRmEventHubauthorizationRule](Remove-AzureRmEventHubAuthorizationRule.md)
 Tar bort den angivna auktoriseringsregeln för Händelsehubben.
 
 ### [Remove-AzureRmEventHubConsumerGroup](Remove-AzureRmEventHubConsumerGroup.md)
-Tar bort den angivna konsument gruppen Event Hubs.
+Tar bort den angivna konsumentgruppen Händelsehubben.
 
 ### [Remove-AzureRmEventHubNamespace](Remove-AzureRmEventHubNamespace.md)
-Tar bort det angivna namn området för Event Hubs.
+Tar bort det angivna namnområdet för Händelsehubben.
 
 ### [Remove-AzureRmEventHubNamespaceAuthorizationRule](Remove-AzureRmEventHubNamespaceAuthorizationRule.md)
-Tar bort den angivna auktoriseringsregeln för de angivna namn rymderna för Event Hub.
+Tar bort den angivna auktoriseringsregeln i det givna händelsehubbens namnområde.
 
 ### [Set-AzureRmEventHub](Set-AzureRmEventHub.md)
 Uppdaterar den angivna händelsehubben.
 
-### [Set-AzureRmEventHubAuthorizationRule](Set-AzureRmEventHubAuthorizationRule.md)
-Uppdaterar den angivna auktoriseringsregeln i en Händelsehubben.
+### [Set-AzureRmEventHubauthorizationRule](Set-AzureRmEventHubAuthorizationRule.md)
+Uppdaterar den angivna auktoriseringsregeln i ett händelsenav.
 
 ### [Set-AzureRmEventHubConsumerGroup](Set-AzureRmEventHubConsumerGroup.md)
-Uppdaterar den angivna konsument gruppen för händelse nav.
+Uppdaterar den angivna konsumentgruppen Händelsehubben.
 
 ### [Set-AzureRmEventHubNamespace](Set-AzureRmEventHubNamespace.md)
-Uppdaterar namn området för de angivna Event Hub.
+Uppdaterar det angivna namnområdet för Händelsehubben.
 
 ### [Set-AzureRmEventHubNamespaceAuthorizationRule](Set-AzureRmEventHubNamespaceAuthorizationRule.md)
-Uppdaterar auktoriseringsregeln för de angivna namn rymderna för Event Hub.
+Uppdaterar auktoriseringsregeln i det angivna namnområdet för Händelsehubben.

@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.datafactor
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Get-AzDataFactoryV2DataFlow.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Get-AzDataFactoryV2DataFlow.md
-ms.openlocfilehash: b4af5eae61e47d8617eb270451f406f349162f50
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 7bd25d444a4277e2aa423026be551fab1c5f360e
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "93927886"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100398418"
 ---
 # Get-AzDataFactoryV2DataFlow
 
-## Sammanfattning
-Hämtar information om data flöden i data fabrik.
+## SYNOPSIS
+Hämtar information om dataflöden i Data Factory.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### ByFactoryName (standard)
 ```
@@ -37,13 +37,13 @@ Get-AzDataFactoryV2DataFlow [-ResourceId] <String> [-DefaultProfile <IAzureConte
  [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Get-AzDataFactoryV2DataFlow cmdlet får information om data flöden i Azure Data Factory.
-Om du anger namnet på ett data flöde får denna cmdlet information om det data flödet.
-Om du inte anger ett namn hämtas den här cmdleten information om alla data flöden i data fabriken.
+## BESKRIVNING
+Den Get-AzDataFactoryV2DataFlow cmdleten hämtar information om dataflöden i Azure Data Factory.
+Om du anger namnet på ett dataflöde hämtar den här cmdleten information om dataflödet.
+Om du inte anger ett namn hämtar den här cmdleten information om alla dataflöden i data factory.
 
-## BESKRIVS
-### Exempel 1: få information om alla data flöden
+## EXEMPEL
+### Exempel 1: Få information om alla dataflöden
 ```powershell
 PS C:\> Get-AzDataFactoryV2DataFlow -ResourceGroupName "ADF" -DataFactoryName "WikiADF"
 
@@ -54,9 +54,9 @@ dataflow1                      WikiADF               adf Microsoft.Azure.Managem
 dataflow3                      WikiADF               adf Microsoft.Azure.Management.DataFactory.Models.MappingDataFlow
 ```
 
-Det här kommandot får information om alla data flöden i data fabriken med namnet WikiADF.
+Det här kommandot hämtar information om alla dataflöden i data factory med namnet WikiADF.
 
-### Exempel 2: Hämta information om ett specifikt data flöde
+### Exempel 2: Hämta information om ett visst dataflöde
 ```powershell
 PS C:\> Get-AzDataFactoryV2DataFlow -ResourceGroupName "ADF" -DataFactoryName "WikiADF" -Name "dataflow1"
 
@@ -65,12 +65,12 @@ DataFlowName           DataFactoryName ResourceGroupName                        
 TaxiDemo1                      WikiADF               adf Microsoft.Azure.Management.DataFactory.Models.MappingDataFlow
 ```
 
-Med det här kommandot får du information om data flödet med namnet dataflow1 i data fabriken med namnet WikiADF.
+Det här kommandot hämtar information om dataflödet med namnet dataflöde1 i data factory med namnet WikiADF.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DataFactory
-Data fabriks objekt.
+Data factory-objektet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFactory
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -DataFactoryName
-Namnet på data fabriken.
+Data factory-namnet.
 
 ```yaml
 Type: System.String
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -114,8 +114,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Namn
-Data flödes namn.
+### -Name
+Namnet på dataflödet.
 
 ```yaml
 Type: System.String
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resurs gruppens namn.
+Resursgruppens namn.
 
 ```yaml
 Type: System.String
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-ID för Azure-resursen.
+Azure-resurs-ID.
 
 ```yaml
 Type: System.String
@@ -160,23 +160,21 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
 ### Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFactory
 
-## VÄRDEN
+## UTDATA
 
 ### Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFlow
 
-## ANMÄRKNINGAR
-Nyckelord: Azure, azurerm, arm, resurs, hantering, chef, data, faktorer
+## ANTECKNINGAR
+Nyckelord: azure, azurerm, arm, resource, management, manager, data, factories
 
 ## RELATERADE LÄNKAR
 
-[Set-AzDataFactoryDataFlow](./Set-AzDataFactoryDataFlow.md)
 
-[Remove-AzDataFactoryDataFlow](./Remove-AzDataFactoryDataFlow.md)

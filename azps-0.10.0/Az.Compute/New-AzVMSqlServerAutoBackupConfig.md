@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/ne
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/New-AzVMSqlServerAutoBackupConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/New-AzVMSqlServerAutoBackupConfig.md
-ms.openlocfilehash: 1ff53a29fa26ebe7ac78cac5140a9105b43bb27d
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.openlocfilehash: ecff02643dd6d0e017d56af01792a06dc7b8d998
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "93925045"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100398282"
 ---
 # New-AzVMSqlServerAutoBackupConfig
 
-## Sammanfattning
-Skapar ett konfigurations objekt för automatisk säkerhets kopiering av SQL Server.
+## SYNOPSIS
+Skapar ett konfigurationsobjekt för automatisk säkerhetskopiering av SQL Server.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### StorageUriSqlServerAutoBackup (standard)
 ```
@@ -39,12 +39,12 @@ New-AzVMSqlServerAutoBackupConfig [-ResourceGroupName] <String> [-Enable]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **New-AzVMSqlServerAutoBackupConfig** skapar ett konfigurations objekt för automatisk säkerhets kopiering av SQL Server.
+## BESKRIVNING
+Cmdleten **New-AzVMSqlServerAutoBackupConfig** skapar ett konfigurationsobjekt för automatisk säkerhetskopiering av SQL Server.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: skapa en automatisk säkerhets kopierings konfiguration med lagrings-URI och konto nycklar
+### Exempel 1: Skapa en automatisk säkerhetskopieringskonfiguration med lagrings-URI och kontonyckel
 ```
 PS C:\> $AutoBackupConfig = New-AzVMSqlServerAutoBackupConfig -Enable -RetentionPeriod 10 -StorageUri "\\contoso\StorageGeneral" -StorageKey "< Storage Key for ContosoGeneral >"
 Enable                : True
@@ -52,12 +52,12 @@ EnableEncryption      : False
 RetentionPeriodInDays : 10
 ```
 
-Det här kommandot skapar ett automatiskt konfigurations objekt för säkerhets kopior genom att ange lagrings-URI och konto nycklar.
-Automatisk säkerhets kopiering är aktive rad och automatisk säkerhets kopiering sparas i 10 dagar.
-Resultatet sparas i $AutoBackupConfig variabel.
+Med det här kommandot skapas ett automatiskt konfigurationsobjekt för säkerhetskopiering genom att lagrings-URI och kontonyckel anges.
+Automatisk säkerhetskopiering aktiveras och automatisk säkerhetskopiering sparas i 10 dagar.
+Kommandot lagrar resultatet i den $AutoBackupConfig variabeln.
 Du kan ange det här konfigurationsobjektet för andra cmdlets, till exempel Set-AzVMSqlServerExtension cmdlet.
 
-### Exempel 2: skapa en automatisk säkerhets kopierings konfiguration med lagrings kontext
+### Exempel 2: Skapa en automatisk säkerhetskopieringskonfiguration med hjälp av lagringskontext
 ```
 PS C:\> $StorageContext = New-AzureStorageContext -StorageAccountName "ContosoGeneral" -StorageAccountKey "< Storage Key for ContosoGeneral >"
 PS C:\> $AutoBackupConfig = New-AzVMSqlServerAutoBackupConfig -StorageContext $StorageContext -Enable -RetentionPeriod 10
@@ -66,13 +66,13 @@ EnableEncryption      : False
 RetentionPeriodInDays : 10
 ```
 
-Det första kommandot skapar en lagrings kontext och lagrar den sedan i $StorageContext variabel.
+Det första kommandot skapar ett lagringskontext och lagrar det sedan i $StorageContext variabeln.
 Mer information finns i New-AzureStorageContext.
 
-Det andra kommandot skapar ett automatiskt konfigurations objekt genom att ange lagrings kontexten i $StorageContext.
-Automatisk säkerhets kopiering är aktive rad och automatisk säkerhets kopiering sparas i 10 dagar.
+Det andra kommandot skapar ett automatiskt konfigurationsobjekt för säkerhetskopiering genom att ange lagringskontexten i $StorageContext.
+Automatisk säkerhetskopiering aktiveras och automatisk säkerhetskopiering sparas i 10 dagar.
 
-### Exempel 3: skapa en automatisk säkerhets kopierings konfiguration med lagrings kontext med kryptering och lösen ord
+### Exempel 3: Skapa en automatisk säkerhetskopieringskonfiguration med lagringskontext med kryptering och lösenord
 ```
 PS C:\> $StorageContext = New-AzVMSqlServerAutoBackupConfig -StorageContext $StorageContext -Enable -RetentionPeriod 10 -EnableEncryption -CertificatePassword $CertificatePassword
 Enable                : True
@@ -80,21 +80,21 @@ EnableEncryption      : True
 RetentionPeriodInDays : 10
 ```
 
-Det här kommandot skapar och lagrar ett automatiskt konfigurations objekt för säkerhets kopiering.
-Kommandot anger den lagrings kontext som skapades i ett tidigare exempel.
-Kommandot aktiverar kryptering med lösen ord.
-Lösen ordet har sparats som en säker sträng i $CertificatePassword variabel.
-Om du vill skapa en skyddad sträng använder du ConvertTo-SecureString cmdleten.
+Med det här kommandot skapas och lagras ett konfigurationsobjekt för automatisk säkerhetskopiering.
+Kommandot anger vilken lagringskontext som skapades i ett tidigare exempel.
+Kommandot aktiverar kryptering med lösenord.
+Lösenordet lagrades tidigare som en säker sträng i den $CertificatePassword variabeln.
+Om du vill skapa en säker sträng använder du ConvertTo-SecureString-cmdleten.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -BackupScheduleType
-Schema typ för säkerhets kopiering, manuell eller automatisk
+Schematyp för säkerhetskopiering, manuellt eller automatiskt
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Manual, Automated
 
 Required: False
@@ -105,12 +105,12 @@ Accept wildcard characters: False
 ```
 
 ### -BackupSystemDbs
-Säkerhetskopiera system databaser
+Säkerhetskopiera systemdatabaser
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -120,12 +120,12 @@ Accept wildcard characters: False
 ```
 
 ### -CertificatePassword
-Anger ett lösen ord för att kryptera certifikatet som används för att utföra SQL Server-krypterade säkerhets kopieringar.
+Anger ett lösenord för att kryptera certifikatet som används för att utföra krypterade säkerhetskopior i SQL Server.
 
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifterna, kontot, klientorganisationen och prenumerationen som används för kommunikation med Azure.
 
 ```yaml
 Type: IAzureContextContainer
@@ -149,15 +149,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Aktivera
-Anger att automatisk säkerhets kopiering för den virtuella SQL Server-datorn är aktive rad.
-Om du anger den här parametern ställer automatisk säkerhets kopiering ett schema för säkerhets kopiering för alla befintliga och nya databaser.
-Då uppdateras de hanterade säkerhets kopierings inställningarna efter detta schema.
+### -Enable
+Anger att automatisk säkerhetskopiering av den virtuella SQL Server-datorn är aktiverad.
+Om du anger den här parametern skapar automatisk säkerhetskopiering ett säkerhetskopieringsschema för alla aktuella och nya databaser.
+Det här uppdaterar inställningarna för hanterad säkerhetskopiering så att schemat följer det här schemat.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -167,12 +167,12 @@ Accept wildcard characters: False
 ```
 
 ### -EnableEncryption
-Anger att denna cmdlet aktiverar kryptering.
+Anger att den här cmdleten aktiverar kryptering.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -182,12 +182,12 @@ Accept wildcard characters: False
 ```
 
 ### -FullBackupFrequency
-Frekvens för fullständig säkerhets kopiering av SQL Server, varje dag eller varje vecka
+Frekvens för fullständig säkerhetskopiering i Sql Server, dagligen eller veckovis
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Daily, Weekly
 
 Required: False
@@ -198,12 +198,12 @@ Accept wildcard characters: False
 ```
 
 ### -FullBackupStartHour
-Timme på dagen (0-23) när fullständig säkerhets kopiering av SQL Server startar
+Timme på dagen (0–23) då fullständig säkerhetskopiering av Sql Server ska starta
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -213,12 +213,12 @@ Accept wildcard characters: False
 ```
 
 ### -FullBackupWindowInHours
-Fönstret full säkerhets kopiering i timmar i SQL Server
+Fönstret Fullständig säkerhetskopiering i Sql Server på flera timmar
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -228,12 +228,12 @@ Accept wildcard characters: False
 ```
 
 ### -LogBackupFrequencyInMinutes
-Säkerhets kopierings frekvens för SQL Server-loggning, en gång var 1-60 minuter
+Säkerhetskopieringsfrekvens för Sql Server-logg var 1:60:e minut
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -243,12 +243,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Anger namnet på den virtuella datorns resurs grupp.
+Anger namnet på resursgruppen för den virtuella datorn.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -258,12 +258,12 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionPeriodInDays
-Anger antalet dagar som en säkerhets kopia ska behållas.
+Anger antalet dagar som en säkerhetskopia ska sparas.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -273,14 +273,14 @@ Accept wildcard characters: False
 ```
 
 ### -StorageContext
-Anger det lagrings konto som ska användas för att lagra säkerhets kopior.
-Använd New-AzureStorageContext cmdlet för att få ett **AzureStorageContext** -objekt.
-Standardvärdet är det lagrings konto som är kopplat till den virtuella SQL Server-datorn.
+Anger vilket lagringskonto som ska användas för att lagra säkerhetskopior.
+Om du vill **hämta ett AzureStorageContext-objekt** använder du New-AzureStorageContext-cmdleten.
+Standardinställningen är det lagringskonto som är kopplat till den virtuella SQL Server-datorn.
 
 ```yaml
 Type: IStorageContext
 Parameter Sets: StorageContextSqlServerAutoBackup
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -290,12 +290,12 @@ Accept wildcard characters: False
 ```
 
 ### -StorageKey
-Anger lagrings Key för Blob Storage-kontot.
+Anger lagringsnyckeln för blob-lagringskontot.
 
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -305,12 +305,12 @@ Accept wildcard characters: False
 ```
 
 ### -StorageUri
-Anger URI (Uniform Resource Identifier) för Blob Storage-kontot.
+Anger URI (Uniform Resource Identifier) för blob-lagringskontot.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -320,22 +320,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
 ### Ingen
-Denna cmdlet accepterar inte indata.
+Den här cmdleten accepterar inte några indata.
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. Compute. AutoBackupSettings
+### Microsoft.Azure.Commands.Compute.AutoBackupSettings
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[New-AzureVMSqlServerAutoPatchingConfig](./New-AzureVMSqlServerAutoPatchingConfig.md)
+[New-AzureVMSqlServerAutoPatchingConfig](./New-AzVMSqlServerAutoPatchingConfig.md)
 
 [Set-AzVMSqlServerExtension](./Set-AzVMSqlServerExtension.md)
 
