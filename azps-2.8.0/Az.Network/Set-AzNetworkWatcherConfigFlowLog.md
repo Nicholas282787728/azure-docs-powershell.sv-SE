@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/se
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzNetworkWatcherConfigFlowLog.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Set-AzNetworkWatcherConfigFlowLog.md
-ms.openlocfilehash: f2e063e6870ebfe41034441b7b3134694d9a85a7
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 55e98b23f4da1adf641bcf2a3ce7ced95cf5befd
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93919389"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100402685"
 ---
 # Set-AzNetworkWatcherConfigFlowLog
 
-## Sammanfattning
-Konfigurerar flödes loggning för en mål resurs.
+## SYNOPSIS
+Konfigurerar flödesloggning för en målresurs.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### SetFlowlogByResourceWithoutTA (standard)
 ```
@@ -99,12 +99,12 @@ Set-AzNetworkWatcherConfigFlowLog -Location <String> -TargetResourceId <String> 
  [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Set-AzNetworkWatcherConfigFlowLog konfigurerar flödes loggning för en mål resurs. Konfigurera med egenskaper: om flödes loggning är aktiverat för den angivna resursen, det konfigurerade lagrings kontot för att skicka loggar, flödes loggnings format och bevarande princip för loggarna. För närvarande stöds nätverks säkerhets grupper för flödes loggning. 
+## BESKRIVNING
+Med Set-AzNetworkWatcherConfigFlowLog konfigurerar du flödesloggning för en målresurs. Egenskaper att konfigurera är: huruvida flödesloggning är aktiverad för resursen, det konfigurerade lagringskontot för att skicka loggar, formatet för flödesloggning och kvarhållningsprincipen för loggarna. Nätverkssäkerhetsgrupper stöds för flödesloggning. 
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: Konfigurera flödes loggning för en angiven NSG
+### Exempel 1: Konfigurera flödesloggning för en viss NSG
 ```
 PS C:\> $NW = Get-AzNetworkWatcher -ResourceGroupName NetworkWatcherRg -Name NetworkWatcher_westcentralus
 PS C:\> $nsg = Get-AzNetworkSecurityGroup -ResourceGroupName NSGRG -Name appNSG
@@ -126,9 +126,9 @@ Format           : {
                    }
 ```
 
-I det här exemplet konfigurerar vi loggnings status för flödet för en nätverks säkerhets grupp. I svaret ser vi att den angivna NSG har flödes loggning aktive rad, standardinställningar och ingen bevarande princip uppsättning.
+I det här exemplet konfigurerar vi status för flödesloggning för en nätverkssäkerhetsgrupp. I svaret ser vi att den angivna NSG-funktionen har flödesloggning aktiverad, standardformat och ingen bevarandeprincip har angetts.
 
-### Exempel 2: Konfigurera flödes loggning för en angiven NSG och ange versionen för flödes loggning till 2.
+### Exempel 2: Konfigurera flödesloggning för en viss NSG och ställ in version av flödesloggning på 2.
 ```
 PS C:\> $NW = Get-AzNetworkWatcher -ResourceGroupName NetworkWatcherRg -Name NetworkWatcher_westcentralus
 PS C:\> $nsg = Get-AzNetworkSecurityGroup -ResourceGroupName NSGRG -Name appNSG
@@ -150,9 +150,9 @@ Format           : {
                    }
 ```
 
-I det här exemplet konfigurerar vi flödes loggning på en nätverks säkerhets grupp (NSG) med version 2-loggar angiven. I svaret ser vi att den angivna NSG har flödes loggning aktive rad, att formatet är angivet och att ingen bevarande princip har kon figurer ATS. Om regionen inte har stöd för den version som du har angett skrivs den standard version som stöds i regionen.
+I det här exemplet konfigurerar vi flödesloggning för en NSG-grupp (Network Security Group) med version 2 angivna loggar. I svaret ser vi att den angivna NSG-funktionen har flödesloggning aktiverad, att formatet är inställt och att det inte finns någon bevarandeprincip konfigurerad. Om regionen inte stöder version du angav skriver Network Watcher standardversionen som stöds i regionen.
 
-### Exempel 3: Konfigurera flödes loggning och trafik analys för en viss NSG
+### Exempel 3: Konfigurera flödesloggning och trafikanalys för en viss NSG
 ```
 PS C:\> $NW = Get-AzNetworkWatcher -ResourceGroupName NetworkWatcherRg -Name NetworkWatcher_westcentralus
 PS C:\> $nsg = Get-AzNetworkSecurityGroup -ResourceGroupName NSGRG -Name appNSG
@@ -184,12 +184,12 @@ FlowAnalyticsConfiguration : {
           }
 ```
 
-I det här exemplet konfigurerar vi status för flödes loggning och trafik analys för en nätverks säkerhets grupp. I svaret ser vi att den angivna NSG har flödes loggning och Traffic Analytics aktive rad, standard format och ingen bevarande princip uppsättning.
+I det här exemplet konfigurerar vi status för flödesloggning och Trafikanalys för en nätverkssäkerhetsgrupp. I svaret ser vi att den angivna NSG-funktionen har flödesloggning och trafikanalys aktiverat, standardformat och ingen bevarandeprincip har angetts.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
-### -AsJob
-Kör cmdlet i bakgrunden
+### -As Ent
+Kör cmdleten i bakgrunden
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -204,7 +204,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifterna, kontot, klientorganisationen och prenumerationen som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -219,7 +219,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFlowLog
-Flagga för att aktivera/inaktivera flödes loggning.
+Flagga för att aktivera/inaktivera flödesloggning.
 
 ```yaml
 Type: System.Boolean
@@ -264,7 +264,7 @@ Accept wildcard characters: False
 ```
 
 ### -FormatType
-Typ av flödes logg format.
+Typ av flödesloggformat.
 
 ```yaml
 Type: System.String
@@ -279,7 +279,7 @@ Accept wildcard characters: False
 ```
 
 ### -FormatVersion
-Version av flödes logg format.
+Version av flödesloggformat.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -294,7 +294,7 @@ Accept wildcard characters: False
 ```
 
 ### -Plats
-Nätverks Bevakningens plats.
+Plats för nätverksbevakningen.
 
 ```yaml
 Type: System.String
@@ -309,7 +309,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkWatcher
-Nätverks bevaknings resursen.
+Nätverksbevakningsresursen.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher
@@ -324,7 +324,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkWatcherName
-Nätverks Bevakningens namn.
+Namnet på nätverksbevakningen.
 
 ```yaml
 Type: System.String
@@ -339,7 +339,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Namnet på nätverks bevaknings resurs gruppen.
+Namnet på resursgruppen för nätverksbevakning.
 
 ```yaml
 Type: System.String
@@ -354,7 +354,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionInDays
-Antalet dagar som flödes logg poster ska bevaras.
+Antal dagar för att behålla flödesloggposter.
 
 ```yaml
 Type: System.Int32
@@ -369,7 +369,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountId
-ID för det lagrings konto som används för att lagra flödes loggen.
+ID för lagringskontot som används för att lagra flödesloggen.
 
 ```yaml
 Type: System.String
@@ -384,7 +384,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetResourceId
-Mål resurs-ID.
+Detta är målresurs-ID.
 
 ```yaml
 Type: System.String
@@ -399,7 +399,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrafficAnalyticsInterval
-Hämtar eller anger intervallet (i minuter) som bestämmer hur ofta du ska TA till tjänst ska utföra flödes analys.
+Hämtar eller anger intervallet (i minuter) som bestämmer hur ofta ta-tjänsten ska göra flödesanalyser.
 
 ```yaml
 Type: System.Int32
@@ -413,8 +413,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Arbets yta
-Det WS-objekt som används för att lagra trafikanalys data.
+### -Workspace
+WS-objektet som används för att lagra trafikanalysdata.
 
 ```yaml
 Type: Microsoft.Azure.Management.Internal.Network.Common.IOperationalInsightWorkspace
@@ -441,7 +441,7 @@ Accept wildcard characters: False
 ```
 
 ### -WorkspaceGUID
-GUID för WS som används för att lagra trafikanalys data.
+GUID för WS som används för att lagra trafikanalysdata.
 
 ```yaml
 Type: System.String
@@ -456,7 +456,7 @@ Accept wildcard characters: False
 ```
 
 ### -WorkspaceLocation
-Azure-regionen i WS som används för att lagra trafikanalys data.
+Azure-regionen för WS som används för att lagra trafikanalysdata.
 
 ```yaml
 Type: System.String
@@ -471,7 +471,7 @@ Accept wildcard characters: False
 ```
 
 ### -WorkspaceResourceId
-Abonnemang på WS som används för att lagra trafikanalys data.
+Prenumeration på WS som används för att lagra trafikanalysdata.
 
 ```yaml
 Type: System.String
@@ -486,7 +486,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -501,7 +501,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs. Cmdleten körs inte.
+Visar vad som skulle hända om cmdleten körs. Cmdleten körs inte.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -516,28 +516,28 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-### Microsoft. Azure. commands. Networks. Models. PSNetworkWatcher
+### Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher
 
-### System. String
+### System.String
 
-### System. Boolean
+### System.Boolean
 
-### System. Int32
+### System.Int32
 
-### System. Nullable ' 1 [[system. Int32, system. privat. CoreLib, version = 4.0.0.0, Culture = neutralt, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Nullable'1[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-### Microsoft. Azure. Management. Internal. Network. Common. IOperationalInsightWorkspace
+### Microsoft.Azure.Management.Internal.Network.Common.IOperationalInsightWorkspace
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. Networks. Models. PSFlowLog
+### Microsoft.Azure.Commands.Network.Models.PSFlowLog
 
-## ANMÄRKNINGAR
-Nyckelord: Azure, azurerm, arm, resurs, hantering, chef, nätverk, nätverk, Watcher, flöde, loggar, flowlog, loggning
+## ANTECKNINGAR
+Nyckelord: azure, azurerm, arm, resource, management, manager, network, networking, watcher, flow, logs, flowlog, logging
 
 ## RELATERADE LÄNKAR
 
@@ -563,7 +563,7 @@ Nyckelord: Azure, azurerm, arm, resurs, hantering, chef, nätverk, nätverk, Wat
 
 [Remove-AzNetworkWatcherPacketCapture](./Remove-AzNetworkWatcherPacketCapture.md)
 
-[Stopp-AzNetworkWatcherPacketCapture](./Stop-AzNetworkWatcherPacketCapture.md)
+[Stop-AzNetworkWatcherPacketCapture](./Stop-AzNetworkWatcherPacketCapture.md)
 
 [New-AzNetworkWatcherProtocolConfiguration](./New-AzNetworkWatcherProtocolConfiguration.md)
 
@@ -571,7 +571,7 @@ Nyckelord: Azure, azurerm, arm, resurs, hantering, chef, nätverk, nätverk, Wat
 
 [Test-AzNetworkWatcherConnectivity](./Test-AzNetworkWatcherConnectivity.md)
 
-[Stopp-AzNetworkWatcherConnectionMonitor](./Stop-AzNetworkWatcherConnectionMonitor.md)
+[Stop-AzNetworkWatcherConnectionMonitor](./Stop-AzNetworkWatcherConnectionMonitor.md)
 
 [Start-AzNetworkWatcherConnectionMonitor](./Start-AzNetworkWatcherConnectionMonitor.md)
 
@@ -591,6 +591,6 @@ Nyckelord: Azure, azurerm, arm, resurs, hantering, chef, nätverk, nätverk, Wat
 
 [Get-AzNetworkWatcherFlowLogStatus](./Get-AzNetworkWatcherFlowLogStatus.md)
 
-[Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport)
+[Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport.md)
 
-[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor)
+[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor.md)
