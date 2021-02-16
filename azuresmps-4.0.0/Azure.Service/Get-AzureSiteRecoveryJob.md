@@ -3,19 +3,19 @@ external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
 ms.assetid: 2957C0DE-3A2F-4337-A778-2B95654972E7
 online version: ''
 schema: 2.0.0
-ms.openlocfilehash: d0b272732cf6c1e1b2025c8e7f48b58e4807cdb3
-ms.sourcegitcommit: 56ed085a868afa8263f8eb0f755b5822f5c29532
+ms.openlocfilehash: 8a7c99e2ce307d700e43094ffa9be47e5449acc0
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "94093321"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100411661"
 ---
 # Get-AzureSiteRecoveryJob
 
-## Sammanfattning
-Hämtar åtgärds informationen för ett webbplats återställnings valv.
+## SYNOPSIS
+Hämtar åtgärdsinformationen för ett valv för webbplatsåterställning.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### ByParam (standard)
 ```
@@ -33,13 +33,13 @@ Get-AzureSiteRecoveryJob -Id <String> [-Profile <AzureSMProfile>] [<CommonParame
 Get-AzureSiteRecoveryJob -Job <ASRJob> [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Get-AzureSiteRecoveryJob** får Azure Site Recovery-jobb.
-Du kan använda denna cmdlet för att Visa åtgärds informationen för det aktuella Site Recovery-valvet.
+## BESKRIVNING
+Cmdleten **Get-AzureSiteRecovery Enl.** får Azure Site Recovery-jobb.
+Du kan använda den här cmdleten för att visa åtgärdsinformationen för det aktuella webbplatsåterställningsvalvet.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: Hämta ett jobb genom att ange ett ID
+### Exempel 1: Få ett jobb genom att ange ett ID
 ```
 PS C:\> Get-AzureSiteRecoveryJob -Id "033785cc-9f72-4f07-8e78-e4d1e942a7ae" 
 Name             : SaveRecoveryPlan
@@ -57,9 +57,9 @@ Tasks            : {Save a recovery plan task}
 Errors           : {}
 ```
 
-Det här kommandot får Azure Site Recovery-jobbet med angivet ID.
+Det här kommandot hämtar Azure-webbplatsåterställningsjobbet som har det angivna ID:t.
 
-### Exempel 2: hämtar ett jobb baserat på tid
+### Exempel 2: Får ett jobb baserat på tid
 ```
 PS C:\> Get-AzureSiteRecoveryJob -StartTime "20-02-2015 01:00:00" -EndTime "21-02-2015 01:00:00"
 Name             : SaveRecoveryPlan
@@ -77,14 +77,14 @@ Tasks            : {Save a recovery plan task}
 Errors           : {}
 ```
 
-Det här kommandot får plats återställnings jobb som faller mellan angiven start tid och slut tid.
+Med det här kommandot får du Jobb för webbplatsåterställning som faller mellan den angivna starttiden och sluttiden.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
-### -Slut tid
-Anger slut tiden för jobben.
-Denna cmdlet hämtar alla jobb som startade före angiven tid.
-Använd cmdleten **Get-date** för att hämta ett **datetime** -objekt.
+### -EndTime
+Anger sluttiden för jobben.
+Med den här cmdleten får du alla jobb som startats före den angivna tiden.
+Om du vill **hämta ett DateTime-objekt** använder du cmdleten **Get-Date.**
 Om du vill ha mer information skriver du `Get-Help Get-Date` .
 
 ```yaml
@@ -99,8 +99,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ID
-Anger ID för det jobb som ska visas.
+### -Id
+Anger ID för ett jobb som ska fås.
 
 ```yaml
 Type: String
@@ -114,8 +114,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Jobb
-Anger ett jobb som ska visas.
+### -Job
+Anger ett jobb som ska fås.
 
 ```yaml
 Type: ASRJob
@@ -129,9 +129,9 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -Profil
-Anger den Azure-profil från vilken denna cmdlet läser.
-Om du inte anger en profil läser denna cmdlet från den lokala standard profilen.
+### -Profile
+Anger den Azure-profil som cmdleten läser upp.
+Om du inte anger en profil läser den här cmdleten från den lokala standardprofilen.
 
 ```yaml
 Type: AzureSMProfile
@@ -146,8 +146,8 @@ Accept wildcard characters: False
 ```
 
 ### -StartTime
-Anger start tiden för jobben.
-Denna cmdlet hämtar alla jobb som startas efter den angivna tiden.
+Anger starttiden för jobben.
+Med den här cmdleten får du alla jobb som startats efter den angivna tiden.
 
 ```yaml
 Type: DateTime
@@ -161,18 +161,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -State
-Anger inmatnings läget för ett webbplats återställnings jobb.
-Denna cmdlet hämtar alla jobb som matchar det angivna tillståndet.
-De acceptabla värdena för den här parametern är:
+### -Delstat
+Anger indatatillståndet för ett Webbplatsåterställning-jobb.
+Den här cmdleten hämtar alla jobb som matchar det angivna tillståndet.
+De godtagbara värdena för den här parametern är:
 
 - NotStarted
-- Inaktive
-- Utför
-- Övrigt
-- Startade
-- Annullerats
-- Hängande
+- InProgress
+- Lyckades
+- Annat
+- Misslyckades
+- Annullerad
+- Pausad
 
 ```yaml
 Type: String
@@ -187,7 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetObjectId
-Anger ID för det objekt som är inriktat för jobbet.
+Anger ID för det objekt som jobbet har som mål.
 
 ```yaml
 Type: String
@@ -202,22 +202,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-## VÄRDEN
+## UTDATA
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Azure Site Recovery Services-cmdletar](./Azure.SiteRecoveryServices.md)
 
-[Restart-AzureSiteRecoveryJob](./Restart-AzureSiteRecoveryJob.md)
 
-[Resume-AzureSiteRecoveryJob](./Resume-AzureSiteRecoveryJob.md)
+[Restart-AzureSiteRecovery Etti](./Restart-AzureSiteRecoveryJob.md)
 
-[Stopp-AzureSiteRecoveryJob](./Stop-AzureSiteRecoveryJob.md)
+[Resume-AzureSiteRecovery Eni](./Resume-AzureSiteRecoveryJob.md)
+
+[Stop-AzureSiteRecovery Etti](./Stop-AzureSiteRecoveryJob.md)
 
 
