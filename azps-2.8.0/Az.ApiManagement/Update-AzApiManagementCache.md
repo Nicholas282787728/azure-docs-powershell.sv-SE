@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Update-AzApiManagementCache.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Update-AzApiManagementCache.md
-ms.openlocfilehash: c912bc82f579bdd099ec63d2e09c4e762684329c
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: c8c535168a86607daab27ab89340d231bb4e4bd3
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93745641"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100406901"
 ---
 # Update-AzApiManagementCache
 
-## Sammanfattning
-uppdaterar ett cacheminne i API Management Service.
+## SYNOPSIS
+uppdaterar en cache i tjänsten Api Management.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### ExpandedParameter (standard)
 ```
@@ -40,12 +40,12 @@ Update-AzApiManagementCache -ResourceId <String> [-ConnectionString <String>] [-
  [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdlet **Update-AzApiManagementCache** uppdaterar en cache i ApiManagement-tjänsten.
+## BESKRIVNING
+**Cmdlet-Update-AzApiManagementCache** uppdaterar en cache i ApiManagement-tjänsten.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: uppdaterar beskrivningen av cachen i Central
+### Exempel 1: Uppdaterar beskrivningen av cachen i centralus
 ```powershell
 PS D:\github\azure-powershell> $context=New-AzApiManagementContext -ResourceGroupName Api-Default-Central-US -ServiceName contoso
 PS D:\github\azure-powershell> Update-AzApiManagementCache -Context $context -CacheId centralus -Description "Team new cache" -PassThru
@@ -61,13 +61,13 @@ ResourceGroupName    : Api-Default-Central-US
 ServiceName          : contoso
 ```
 
-Uppdaterar beskrivningen av cachen i Central USA.
+Uppdaterar beskrivningen av cachen i centrala USA.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -AzureRedisResourceId
-Arm-ResourceId för Azure Redis.
-Denna parameter är valfri.
+Arm ResourceId för Azure Redis-cacheinstansen.
+Den här parametern är valfri.
 
 ```yaml
 Type: System.String
@@ -82,8 +82,8 @@ Accept wildcard characters: False
 ```
 
 ### -CacheId
-ID för ny cache.
-Denna parameter är obligatorisk.
+Identifierare för ny cache.
+Den här parametern är obligatorisk.
 
 ```yaml
 Type: System.String
@@ -98,8 +98,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionString
-Redis anslutnings sträng.
-Denna parameter är valfri.
+Redis-anslutningssträng.
+Den här parametern är valfri.
 
 ```yaml
 Type: System.String
@@ -113,9 +113,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Kontext
+### -Sammanhang
 Instans av PsApiManagementContext.
-Denna parameter är obligatorisk.
+Den här parametern är obligatorisk.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -145,8 +145,8 @@ Accept wildcard characters: False
 ```
 
 ### -Beskrivning
-Cachestorlek.
-Denna parameter är valfri.
+Cachebeskrivning.
+Den här parametern är valfri.
 
 ```yaml
 Type: System.String
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Instans av PsApiManagementCache.
-Denna parameter är obligatorisk.
+Den här parametern är obligatorisk.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementCache
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Om det här anges kommer instansen av Microsoft. Azure. commands. ApiManagement. ServiceManagement. Models. PsApiManagementCache typ som representerar den ändrade cachen att skrivas till output.
+Om den angivna instansen av Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementCache-typen som representerar den modifierade cachen skrivs till utdata.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -192,8 +192,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Arm ResourceId för cacheminnet.
-Denna parameter är obligatorisk.
+Arm ResourceId för cache.
+Den här parametern är obligatorisk.
 
 ```yaml
 Type: System.String
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -223,7 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs.
+Visar vad som skulle hända om cmdleten körs.
 Cmdleten körs inte.
 
 ```yaml
@@ -239,28 +239,28 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### Microsoft. Azure. commands. ApiManagement. ServiceManagement. Models. PsApiManagementContext
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsapiManagementContext
 
-### System. String
+### System.String
 
-### Microsoft. Azure. commands. ApiManagement. ServiceManagement. Models. PsApiManagementCache
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsapiManagementCache
 
-### System. Management. Automation. SwitchParameter
+### System.Management.Automation.SwitchParameter
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. ApiManagement. ServiceManagement. Models. PsApiManagementCache
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsapiManagementCache
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[New-AzApiManagementCache](./New-AzApiManagementCache)
+[New-AzapiManagementCache](./New-AzApiManagementCache.md)
 
-[Get-AzApiManagementCache](./Get-AzApiManagementCache.md)
+[Get-AzapiManagementCache](./Get-AzApiManagementCache.md)
 
-[Remove-AzApiManagementCache](./Remove-AzApiManagementCache.md)
+[Remove-AzapiManagementCache](./Remove-AzApiManagementCache.md)

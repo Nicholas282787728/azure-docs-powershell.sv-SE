@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/ne
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzNetworkWatcherFlowLog.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzNetworkWatcherFlowLog.md
-ms.openlocfilehash: 1fe3cb8227751553ac748fb99cf08baa044a6f0d
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: 3828318840d10e5d88ebda6327ad17b9126bf03d
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94262092"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100406833"
 ---
 # New-AzNetworkWatcherFlowLog
 
-## Sammanfattning
-Skapa eller uppdatera en flödes logg resurs för den angivna nätverks säkerhets gruppen.
+## SYNOPSIS
+Skapa eller uppdatera en flödesloggresurs för den angivna nätverkssäkerhetsgruppen.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### SetByName (standard)
 ```
@@ -70,31 +70,31 @@ New-AzNetworkWatcherFlowLog -Location <String> -Name <String> -TargetResourceId 
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-New-AzNetworkWatcherFlowLog kommando skapar eller uppdaterar en flödes logg resurs för den angivna nätverks säkerhets gruppen.
+## BESKRIVNING
+New-AzNetworkWatcherFlowLog skapar eller uppdaterar en flödesloggresurs för den angivna nätverkssäkerhetsgruppen.
 
-## BESKRIVS
+## EXEMPEL
 
 ### Exempel 1
 ```powershell
 PS C:\> New-AzNetworkWatcherFlowLog -Location eastus -Name pstest -TargetResourceId /subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/MyFlowLog/providers/Microsoft.Network/networkSecurityGroups/MyNSG -StorageId /subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/FlowLogsV2Demo/providers/Microsoft.Storage/storageAccounts/MyStorage -Enabled $true -EnableRetention $true -RetentionPolicyDays 5 -FormatVersion 2 -EnableTrafficAnalytics -TrafficAnalyticsWorkspaceId /subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourcegroups/flowlogsv2demo/providers/Microsoft.OperationalInsights/workspaces/MyWorkspace
 ```
 
-Namn: pstest ID:/subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/NetworkWatcherRG/provid inspirerar/Microsoft. Network/networkWatchers/NetworkWatcher_eastus/FlowLogs/pstest etag: W/"f6047360-d797-4ca6-a9ec-28b5aec5c768" ProvisioningState: lyckades plats: öster TargetResourceId:/subscriptions/56abfbd6-ec72-4ce9-831f-bc2b6f2c5505/resourceGroups/MyFlowLog/provide RS/Microsoft. Network/networkSecurityGroups/MyNSG StorageId:/subscriptions/56abfbd6-ec72-4ce9-831f-bc2b6f2c5505/resourceGroups/FlowLogsV2Demo/provider s/Microsoft. Storage/storageAccounts/nonstorage Enabled: true RetentionPolicy: {"Days": 5, "Enabled": true} format: {"typ": "JSON", "version": 2} FlowAnalyticsConfiguration: {"networkWatcherFlowAnalyticsConfiguration": {"Enabled": true, "workspaceId": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb", "workspaceRegion": "öster", "workspaceResourceId": "/Subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourcegr Oups/FlowLogsV2Demo/providers/Microsoft. OperationalInsights/arbets ytan", "trafficAnalyticsInterval": 60}}
+Name : pstest Id : /subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/NetworkWatcherRG/provid ers/Microsoft.Network/networkWatchers/NetworkWatcher_eastus/FlowLogs/pstest Etag : W/"f6047360-d797-4ca6-a9ec-28b5aec5c768" ProvisioningState : Succeeded Location : eastus TargetResourceId : /subscriptions/56abfbd6-ec72-4ce9-831f-bc2b6f2c5505/resourceGroups/MyFlowLog/provide rs/Microsoft.Network/networkSecurityGroups/MyNSG StorageId : /subscriptions/56abfbd6-ec72-4ce9-831f-bc2b6f2c5505/resourceGroups/FlowLogsV2Demo/provider s/Microsoft.Storage/storageAccounts/MySTorage Enabled : True RetentionPolicy : { "Days": 5, "Enabled": true } Format : { "Type": "JSON", "Version": 2 } FlowAnalyticsConfiguration : { "networkWatcherFlowAnalyticsConfiguration": { "enabled": true, "workspaceId": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb", "workspaceRegion": "eastus", "workspaceResourceId": "/subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourcegr oups/flowlogsv2demo/providers/Microsoft.OperationalInsights/workspaces/MyWorkspace", "trafficAnalyticsInterval": 60 } }
 
 ### Exempel 2
 ```powershell
 PS C:\> New-AzNetworkWatcherFlowLog -Location eastus -Name pstest -TargetResourceId /subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/MyFlowLog/providers/Microsoft.Network/networkSecurityGroups/MyNSG -StorageId /subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/FlowLogsV2Demo/providers/Microsoft.Storage/storageAccounts/MyStorage -Enabled $false -EnableTrafficAnalytics:$false
 ```
 
-Om du vill inaktivera flowLog-resursen för vilken TrafficAnalytics är konfigurerad, måste du även inaktivera TrafficAnalytics. Det kan du göra som i exempel 2.
+Om du vill inaktivera flowLog-resurs som TrafficAnalytics är konfigurerad för, måste du även inaktivera TrafficAnalytics. Det kan du göra som i exempel 2.
 
-Namn: pstest ID:/subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb/resourceGroups/NetworkWatcherRG/provid inspirerar/Microsoft. Network/networkWatchers/NetworkWatcher_eastus/FlowLogs/pstest etag: W/"f6047360-d797-4ca6-a9ec-28b5aec5c768" ProvisioningState: lyckad plats: öster TargetResourceId:/subscriptions/56abfbd6-ec72-4ce9-831f-bc2b6f2c5505/resourceGroups/MyFlowLog/provide RS/Microsoft. Network/networkSecurityGroups/MyNSG StorageId:/subscriptions/56abfbd6-ec72-4ce9-831f-bc2b6f2c5505/resourceGroups/FlowLogsV2Demo/provider s/Microsoft. Storage/storageAccounts/nonstorage Enabled: false RetentionPolicy: {"dagar": 0, "aktiverat": false} format: {"typ": "JSON", "version": 1} FlowAnalyticsConfiguration: {"networkWatcherFlowAnalyticsConfiguration": {"Enabled": false, "trafficAnalyticsInterval": 60}}
+Namn: pstest Id: /subscriptions/bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbb/resourceGroups/NetworkWatcherRG/provid ers/Microsoft.Network/networkWatchers/NetworkWatcher_eastus/FlowLogs/pstest Etag : W/"f6047360-d797-4ca6-a9ec-28b5aec5c768" ProvisioningState : Succeeded Location : eastus TargetResourceId : /subscriptions/56abfbd6-ec72-4ce9-831f-bc2b6f2c5505/resourceGroups/MyFlowLog/provide rs/Microsoft.Network/networkSecurityGroups/MyNSG StorageId : /subscriptions/56abfbd6-ec72-4ce9-831f-bc2b6f2c5505/resourceGroups/FlowLogsV2Demo/provider s/Microsoft.Storage/storageAccounts/MySTorage Enabled : False RetentionPolicy: { "Days": 0, "Enabled": false } Format: { "Type": "JSON", "Version": 1 } FlowAnalyticsConfiguration : { "networkWatcherFlowAnalyticsConfiguration": { "enabled": false, "trafficAnalyticsInterval": 60 } } }
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure.
 
 ```yaml
 Type: IAzureContextContainer
@@ -108,8 +108,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Aktiverad
-Flagga för att aktivera/inaktivera flödes loggning.
+### -Enabled
+Flagga för att aktivera/inaktivera flödesloggning.
 
 ```yaml
 Type: Boolean
@@ -154,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Fråga inte efter bekräftelse om du vill skriva över en resurs
+Be inte om bekräftelse om du vill skriva över en resurs
 
 ```yaml
 Type: SwitchParameter
@@ -169,8 +169,8 @@ Accept wildcard characters: False
 ```
 
 ### -FormatType
-Fil typen för flödes loggen.
-Det enda värde som stöds är nu "JSON".
+Filtyp för flödeslogg.
+Det enda värde som nu stöds är "JSON".
 
 ```yaml
 Type: String
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -FormatVersion
-Version (revision) av flödes loggen.
+Version (revision) av flödesloggen.
 
 ```yaml
 Type: Int32
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -Plats
-Nätverks Bevakningens plats.
+Plats för nätverksbevakningen.
 
 ```yaml
 Type: String
@@ -214,8 +214,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Namn
-Flödets logg namn.
+### -Name
+Namn på flödesloggen.
 
 ```yaml
 Type: String
@@ -230,7 +230,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkWatcher
-Nätverks bevaknings resursen.
+Nätverksbevakningsresursen.
 
 ```yaml
 Type: PSNetworkWatcher
@@ -245,7 +245,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkWatcherName
-Nätverks Bevakningens namn.
+Namnet på nätverksbevakningen.
 
 ```yaml
 Type: String
@@ -260,7 +260,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Namnet på nätverks bevaknings resurs gruppen.
+Namnet på resursgruppen för nätverksbevakning.
 
 ```yaml
 Type: String
@@ -275,7 +275,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionPolicyDays
-Antalet dagar som flödes logg poster ska bevaras.
+Antal dagar för att behålla flödesloggposter.
 
 ```yaml
 Type: Int32
@@ -290,7 +290,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageId
-ID för det lagrings konto som används för att lagra flödes loggen.
+ID för lagringskontot som används för att lagra flödesloggen.
 
 ```yaml
 Type: String
@@ -304,8 +304,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tagg
-En hash som representerar resurs koder.
+### -Tag
+En hashtabell som representerar resurstaggar.
 
 ```yaml
 Type: Hashtable
@@ -320,7 +320,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetResourceId
-ID för nätverks säkerhets grupp som flödes logg ska användas för.
+ID för nätverkssäkerhetsgrupp som flödesloggen ska tillämpas på.
 
 ```yaml
 Type: String
@@ -335,7 +335,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrafficAnalyticsInterval
-Det intervall i minuter som skulle avgöra hur ofta TA-tjänsten ska utföra flödes analys.
+Intervallet i minuter som skulle bestämma hur ofta tjänsten för service med tjänstefunktioner ska göra flödesanalyser.
 
 ```yaml
 Type: Int32
@@ -350,7 +350,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrafficAnalyticsWorkspaceId
-Resurs-ID för den anslutna arbets ytan.
+Resurs-ID för den bifogade arbetsytan.
 
 ```yaml
 Type: String
@@ -365,7 +365,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: SwitchParameter
@@ -380,7 +380,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs.
+Visar vad som skulle hända om cmdleten körs.
 Cmdleten körs inte.
 
 ```yaml
@@ -396,17 +396,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### Microsoft. Azure. commands. Networks. Models. PSNetworkWatcher
+### Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. Networks. Models. PSFlowLogResource
+### Microsoft.Azure.Commands.Network.Models.PSFlowLogResource
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
@@ -432,7 +432,7 @@ Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,
 
 [Remove-AzNetworkWatcherPacketCapture](./Remove-AzNetworkWatcherPacketCapture.md)
 
-[Stopp-AzNetworkWatcherPacketCapture](./Stop-AzNetworkWatcherPacketCapture.md)
+[Stop-AzNetworkWatcherPacketCapture](./Stop-AzNetworkWatcherPacketCapture.md)
 
 [New-AzNetworkWatcherProtocolConfiguration](./New-AzNetworkWatcherProtocolConfiguration.md)
 
@@ -440,7 +440,7 @@ Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,
 
 [Test-AzNetworkWatcherConnectivity](./Test-AzNetworkWatcherConnectivity.md)
 
-[Stopp-AzNetworkWatcherConnectionMonitor](./Stop-AzNetworkWatcherConnectionMonitor.md)
+[Stop-AzNetworkWatcherConnectionMonitor](./Stop-AzNetworkWatcherConnectionMonitor.md)
 
 [Start-AzNetworkWatcherConnectionMonitor](./Start-AzNetworkWatcherConnectionMonitor.md)
 
@@ -462,9 +462,9 @@ Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,
 
 [Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport.md)
 
-[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor)
+[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor.md)
 
-[Get-AzNetworkWatcherFlowLog](./Get-AzNetworkWatcherFlowLog)
+[Get-AzNetworkWatcherFlowLog](./Get-AzNetworkWatcherFlowLog.md)
 
 [Set-AzNetworkWatcherFlowLog](./Set-AzNetworkWatcherFlowLog.md)
 

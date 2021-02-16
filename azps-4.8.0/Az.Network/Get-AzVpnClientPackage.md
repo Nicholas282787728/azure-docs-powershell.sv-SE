@@ -6,45 +6,45 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzVpnClientPackage.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzVpnClientPackage.md
-ms.openlocfilehash: 8eba8d26bcac5de16be3e2cda5e8ca80356aea11
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: ec91fecd41138238bc4d89fa81d77bae4730c770
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94103155"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100406850"
 ---
 # Get-AzVpnClientPackage
 
-## Sammanfattning
-Hämtar information om ett VPN-klient paket.
+## SYNOPSIS
+Hämtar information om ett VPN-klientpaket.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 Get-AzVpnClientPackage -ResourceGroupName <String> -VirtualNetworkGatewayName <String>
  -ProcessorArchitecture <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Get-AzVpnClientPackage** hämtar information om de VPN-klient paket som är tillgängliga från en virtuell nätverksgateway.
-Klient paket innehåller konfigurations data som gör att en klient dator kan göra en VPN-anslutning till ett virtuellt Azure-nätverk. klient datorerna måste ha rätt konfigurations paket installerat för att kunna ringa en VPN-anslutning.
-Olika konfigurations paket finns tillgängliga baserat på klient datorns version av Windows (till exempel Windows 7 eller Windows 10) och på klient datorns processor arkitektur (AMD64 eller x86).
-Du måste ange arkitektur typen när du kör **Get-AzVpnClientPackage**.
+## BESKRIVNING
+Cmdleten **Get-AzVpnClientPackage** hämtar information om VPN-klientpaket som är tillgängliga från en virtuell nätverksgateway.
+Klientpaket innehåller konfigurationsdata som gör det möjligt för en klientdator att upprätta en VPN-anslutning till ett virtuellt Azure-nätverk. klientdatorer måste ha rätt konfigurationspaket installerat för att kunna upprätta en VPN-anslutning.
+Olika konfigurationspaket är tillgängliga beroende på klientdatorns version av Windows (till exempel Windows 7 eller Windows 10) och på klientdatorns processorarkitektur (AMD64 eller x86).
+Du måste ange arkitekturtypen när du kör **Get-AzVpnClientPackage.**
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: Hämta information om ett processor arkitektur för VPN-klienter
+### Exempel 1: Få information om ett VPN-klientpaket för processorarkitektur
 ```
 PS C:\>Get-AzVpnClientPackage -ProcessorArchitecture -VirtualNetworkGatewayName "ContosoVirtualNetworkGateway" -ResourceGroupName "ContosoResourceGroup" -ProcessorArchitecture "Amd64"
 ```
 
-Med det här kommandot får du information om de AMD64 VPN-klient paket som lagras på den virtuella Nätverksgatewayen med namnet ContosoVirtualNetworkGateway.
-Om du vill ha information om x86-klient paketen ställer du in värdet på *processorArchitecture* -parametern till x86.
+Det här kommandot hämtar information om AMD64 VPN-klientpaketen som lagras på den virtuella nätverksgatewayen ContosoVirtualNetworkGateway.
+Om du vill ha information om x86-klientpaketen anger du värdet för *parametern ProcessorArchitecture* till x86.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifterna, kontot, klientorganisationen och prenumerationen som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -59,8 +59,8 @@ Accept wildcard characters: False
 ```
 
 ### -ProcessorArchitecture
-Anger vilken typ av CPU-arkitektur som klient paketet är avsett för.
-Giltiga värden är amd64 och x86.
+Anger vilken typ av CPU-arkitektur som klientpaketet är avsett för.
+Giltiga värden är Amd64 och X86.
 
 ```yaml
 Type: System.String
@@ -76,8 +76,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Anger namnet på den resurs grupp som den virtuella Nätverksgatewayen är tilldelad till.
-Resurs grupper kategoriserar artiklar för att förenkla lager hantering och allmän Azure-administration.
+Anger namnet på resursgruppen som den virtuella nätverksgatewayen är tilldelad till.
+Resursgrupper kategoriserar objekt för att förenkla lagerhantering och allmän Azure-administration.
 
 ```yaml
 Type: System.String
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetworkGatewayName
-Anger namnet på den virtuella nätverksgateway där klient paket informationen lagras.
+Anger namnet på den virtuella nätverksgatewayen där informationen om klientpaketet lagras.
 
 ```yaml
 Type: System.String
@@ -107,22 +107,21 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### System. String
+### System.String
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Ändra storlek – AzVirtualNetworkGateway](./Resize-AzVirtualNetworkGateway.md)
+[Resize-AzVirtualNetworkGateway](./Resize-AzVirtualNetworkGateway.md)
 
-[Set-AzVirtualNetworkGatewayVpnClientConfig](./Set-AzVirtualNetworkGatewayVpnClientConfig.md)
 
 

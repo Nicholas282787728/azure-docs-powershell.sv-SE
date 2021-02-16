@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/ad
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Add-AzRouteFilterRuleConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Add-AzRouteFilterRuleConfig.md
-ms.openlocfilehash: 910b432382eb24f6c5eaf77d3e0c7fe3dc547413
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.openlocfilehash: ded23a30c078cd1d474310d73d94717d050f6824
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "93922374"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100399285"
 ---
 # Add-AzRouteFilterRuleConfig
 
-## Sammanfattning
-Lägger till en regel för flödes filter i ett väg filter.
+## SYNOPSIS
+Lägger till en routefilterregel i ett routefilter.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 Add-AzRouteFilterRuleConfig -RouteFilter <PSRouteFilter> [-Force] -Name <String> -Access <String>
@@ -25,24 +25,24 @@ Add-AzRouteFilterRuleConfig -RouteFilter <PSRouteFilter> [-Force] -Name <String>
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Add-AzRouteFilterRuleConfig cmdlet lägger till en regel för flödes filter i ett Azure Route-filter.
+## BESKRIVNING
+Med Add-AzRouteFilterRuleConfig-cmdleten läggs en routefilterregel till i ett Azure-routefilter.
 
-## BESKRIVS
+## EXEMPEL
 
-### --------------------------Exempel 1: lägga till en rutt filter regel i ett väg filter--------------------------
+### -------------------------- Exempel 1: Lägga till en routefilterregel i ett --------------------------
 ```
 PS C:\>$RouteFilter = Get-AzRouteFilter -ResourceGroupName "ResourceGroup11" -Name "routefilter01"
                       PS C:\> Add-AzRouteFilterRuleConfig -Name "rule13" -Access Allow -RouteFilterRuleType Community -RouteFilter $RouteFilter
 ```
 
-Det första kommandot får ett väg filter med namnet routefilter01 med hjälp av Get-AzRouteFilter cmdlet.
-Kommandot lagrar filtret i $RouteFilter variabel.
+Det första kommandot får ett routefilter med namnet routefilter01 med hjälp Get-AzRouteFilter cmdleten.
+Kommandot lagrar filtret i den $RouteFilter variabeln.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
-### -Åtkomst
-Anger åtkomst för regeln för flödes filter, giltiga värden är neka eller Tillåt.
+### -Access
+Anger åtkomsten för routefilterregeln, giltiga värden är Neka eller Tillåt.
 
 ```yaml
 Type: String
@@ -58,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -CommunityList
-Listan över community-värden som routing filter filtrerar efter
+Listan med communityvärde som routefiltret filtrerar efter
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifterna, kontot, klientorganisationen och prenumerationen som används för kommunikation med Azure.
 
 ```yaml
 Type: IAzureContextContainer
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Fråga inte efter bekräftelse om du vill overrite en resurs
+Be inte om bekräftelse om du vill skriva över en resurs
 
 ```yaml
 Type: SwitchParameter
@@ -102,8 +102,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Namn
-Anger ett namn på den väg filter regel som ska läggas till i väg filtret.
+### -Name
+Anger ett namn på den routefilterregel som ska läggas till i routefiltret.
 
 ```yaml
 Type: String
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -RouteFilter
-Anger det väg filter där denna cmdlet lägger till en regel för flödes filter.
+Anger det routefilter som den här cmdleten lägger till en routefilterregel för.
 
 ```yaml
 Type: PSRouteFilter
@@ -133,8 +133,8 @@ Accept wildcard characters: False
 ```
 
 ### -RouteFilterRuleType
-Anger regel typen för flödes filter.
-Giltiga värden är: community
+Anger typen av vägfilterregel.
+Giltiga värden är: Community
 
 ```yaml
 Type: String
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: SwitchParameter
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs. Cmdleten körs inte.
+Visar vad som skulle hända om cmdleten körs. Cmdleten körs inte.
 
 ```yaml
 Type: SwitchParameter
@@ -180,19 +180,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
 ### PSRouteFilter
-Parametern ' RouteFilter ' godkänner värdet av typen ' PSRouteFilter ' från pipeline
+Parametern RouteFilter accepterar värdet för typen 'PSRouteFilter' från pipelinen
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. Networks. Models. PSRouteFilter
+### Microsoft.Azure.Commands.Network.Models.PSRouteFilter
 
-## ANMÄRKNINGAR
-Nyckelord: Azure, azurerm, arm, resurs, hantering, chef, nätverk, nätverk
+## ANTECKNINGAR
+Nyckelord: azure, azurerm, arm, resource, management, manager, nätverk, nätverk
 
 ## RELATERADE LÄNKAR
 
@@ -200,11 +200,8 @@ Nyckelord: Azure, azurerm, arm, resurs, hantering, chef, nätverk, nätverk
 
 [Get-AzRouteFilter](./Get-AzRouteFilter.md)
 
-[New-AzRouteFilterRuleConfigConfig](./New-AzRouteFilterRuleConfigConfig.md)
 
-[Remove-AzRouteFilterRuleConfigConfig](./Remove-AzRouteFilterRuleConfigConfig.md)
 
-[Set-AzRouteFilterRuleConfigConfig](./Set-AzRouteFilterRuleConfigConfig.md)
 
 [Set-AzRouteFilter](./Set-AzRouteFilter.md)
 

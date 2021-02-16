@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.kusto/get-
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Kusto/Kusto/help/Get-AzKustoCluster.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Kusto/Kusto/help/Get-AzKustoCluster.md
-ms.openlocfilehash: a68604e9701a6ae2c251edf3f2a0935df5ffa94f
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: c5c7cdffc8b329fdff426f48f60869ca6821f32d
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93916162"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100399234"
 ---
 # Get-AzKustoCluster
 
-## Sammanfattning
-Lista alla Kusto-kluster i en resurs grupp eller skaffa ett visst Kusto-kluster.
+## SYNOPSIS
+Lista alla Kusto-kluster i en resursgrupp eller få ett särskilt Kusto-kluster.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### ByClusterOrResourceGroupOrSubscription (standard)
 ```
@@ -30,25 +30,25 @@ Get-AzKustoCluster -ResourceGroupName <String> [-Name <String>] [-DefaultProfile
 Get-AzKustoCluster -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Lista alla Kusto-kluster i en resurs grupp eller skaffa ett visst Kusto-kluster.
+## BESKRIVNING
+Lista alla Kusto-kluster i en resursgrupp eller få ett särskilt Kusto-kluster.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1 – lista alla Kusto-kluster i en resurs grupp
+### Exempel 1 : Lista alla Kusto-kluster i en resursgrupp
 
-Skriv: Microsoft. Kusto/kluster-ID:/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/testrg/providers/Microsoft.Kusto/Clusters/mykustocluster1 ResourceGroup: testrg namn: mykustocluster1 plats: Central USA-kapacitet: 3 SKU: D13_v2 ProvisioningState: lyckades: kör tagg: {} URI: https://mykustocluster1.centralus.kusto.windows.net DataIngestionUri: https://ingest-mykustocluster1.centralus.kusto.windows.net
+Typ: Microsoft.Kusto/Clusters Id: /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/testrg/providers/Microsoft.Kusto/Clusters/mykustocluster1 ResourceGroup: testrg Name: mykustocluster1 Location : Central US Capacity : 3 SKU : D13_v2 ProvisioningState : Succeeded State: Running Tag : {} Uri : `https://mykustocluster1.centralus.kusto.windows.net` DataIngestionUri: `https://ingest-mykustocluster1.centralus.kusto.windows.net`
 
-Skriv: Microsoft. Kusto/kluster-ID:/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/testrg/providers/Microsoft.Kusto/Clusters/mykustocluster2 ResourceGroup: testrg namn: mykustocluster2 plats: Central USA-kapacitet: 5 SKU: D13_v2 ProvisioningState: lyckades: kör tagg: {} URI: https://mykustocluster2.centralus.kusto.windows.net DataIngestionUri: https://ingest-mykustocluster2.centralus.kusto.windows.net
+Typ: Microsoft.Kusto/Clusters Id: /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/testrg/providers/Microsoft.Kusto/Clusters/mykustocluster2 ResourceGroup: testrg Name: mykustocluster2 Location : Central US Capacity : 5 SKU : D13_v2 ProvisioningState : Succeeded State: Running Tag : {} Uri : `https://mykustocluster2.centralus.kusto.windows.net` DataIngestionUri: `https://ingest-mykustocluster2.centralus.kusto.windows.net`
 
 
 ```
 PS C:\> Get-AzKustoCluster -ResourceGroupName testrg
 ```
 
-Kommandot ovan visar alla Kusto-kluster i resurs gruppen "testrg".
+Kommandot ovan listar alla Kusto-kluster i resursgruppen "testrg".
 
-### Exempel 2 – få ett specifikt Kusto-kluster med namn
+### Exempel 2 – Hämta ett särskilt Kusto-kluster efter namn
 
 ```
 PS C:\> Get-AzKustoCluster -ResourceGroupName testrg -Name mykustocluster
@@ -67,9 +67,9 @@ Uri               : https://mykustocluster.centralus.kusto.windows.net
 DataIngestionUri  : https://ingest-mykustocluster.centralus.kusto.windows.net
 ```
 
-Kommandot ovan returnerar Kusto-klustret med namnet "mykustocluster" i resurs gruppen "testrg".
+Kommandot ovan returnerar Kusto-klustret med namnet "mykustocluster" i resursgruppen "testrg".
 
-### Exempel 3 – skaffa ett specifikt Kusto-kluster efter resurs-ID
+### Exempel 3 – Hämta ett specifikt Kusto-kluster efter resurs-ID
 
 ```
 PS C:\> Get-AzKustoCluster -ResourceId /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/testrg/providers/Microsoft.Kusto/clusters/mykustocluster
@@ -87,12 +87,12 @@ Uri               : https://mykustocluster.centralus.kusto.windows.net
 DataIngestionUri  : https://ingest-mykustocluster.centralus.kusto.windows.net
 ```
 
-Kommandot ovan returnerar Kusto-klustret med namnet "mykustocluster" i resurs gruppen "testrg".
+Kommandot ovan returnerar Kusto-klustret med namnet "mykustocluster" i resursgruppen "testrg".
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -106,8 +106,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Namn
-Namn på ett specifikt kluster.
+### -Name
+Namnet på ett visst kluster.
 
 ```yaml
 Type: System.String
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Namnet på den resurs grupp som användaren vill hämta klustret under.
+Namn på resursgrupp som användaren vill hämta klustret under.
 
 ```yaml
 Type: System.String
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Kusto-kluster-ResourceID.
+Resurs-ID för Kusto-kluster.
 
 ```yaml
 Type: System.String
@@ -152,16 +152,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. Kusto. Models. PSKustoCluster
+### Microsoft.Azure.Commands.Kusto.Models.PSKustoCluster
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
