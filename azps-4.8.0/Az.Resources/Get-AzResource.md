@@ -6,20 +6,20 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzResource.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzResource.md
-ms.openlocfilehash: e1748bb3dbb5c2bb86f02ef9ec58d0d1eec55ba9
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: 2926aa351e7e9f1f9251c5a6e6a2292b27ef93b0
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94259673"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100398197"
 ---
 # Get-AzResource
 
-## Sammanfattning
+## SYNOPSIS
 
 Hämtar resurser.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### ByTagNameValueParameterSet (standard)
 ```
@@ -41,13 +41,13 @@ Get-AzResource [-Name <String>] [-ResourceType <String>] [-ODataQuery <String>] 
  [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
+## BESKRIVNING
 
 Cmdleten **Get-AzResource** får Azure-resurser.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: Hämta alla resurser i det aktuella abonnemanget
+### Exempel 1: Hämta alla resurser i den aktuella prenumerationen
 
 ```
 PS C:\> Get-AzResource | ft
@@ -65,9 +65,9 @@ storage otherResourceGroup Microsoft.Storage/storageAccounts       eastus
 testVM2 otherResourceGroup Microsoft.Compute/virtualMachines       eastus
 ```
 
-Det här kommandot får alla resurser i det aktuella abonnemanget.
+Med det här kommandot får du alla resurser i den aktuella prenumerationen.
 
-### Exempel 2: Hämta alla resurser i en resurs grupp
+### Exempel 2: Hämta alla resurser i en resursgrupp
 
 ```
 PS C:\> Get-AzResource -ResourceGroupName testRG | ft
@@ -82,9 +82,9 @@ ip     testRG            Microsoft.Network/publicIPAddresses     westus
 vnet   testRG            Microsoft.Network/virtualNetworks       westus
 ```
 
-Det här kommandot får alla resurser i resurs gruppen "testRG".
+Med det här kommandot får du alla resurser i resursgruppen "testRG".
 
-### Exempel 3: Hämta alla resurser vars resurs grupp matchar det tillhandahållna jokertecken
+### Exempel 3: Hämta alla resurser vars resursgrupp matchar det angivna jokertecknet
 
 ```
 PS C:\> Get-AzResource -ResourceGroupName other* | ft
@@ -96,9 +96,9 @@ storage otherResourceGroup Microsoft.Storage/storageAccounts eastus
 testVM2 otherResourceGroup Microsoft.Compute/virtualMachines eastus
 ```
 
-Det här kommandot får alla resurser vars resurs grupp de tillhör "annat".
+Med det här kommandot får du alla resurser vars resursgrupp de tillhör i fråga om "annat".
 
-### Exempel 4: Hämta alla resurser med ett angivet namn
+### Exempel 4: Hämta alla resurser med ett visst namn
 
 ```
 PS C:\> Get-AzResource -Name testVM | fl
@@ -116,9 +116,9 @@ Tags              :
                     Status  Approved
 ```
 
-Det här kommandot får alla resurser vars resurs namn är "testVM".
+Med det här kommandot får du alla resurser vars resursnamn är "testVM".
 
-### Exempel 5: Hämta alla resurser vars namn matchar det tillhandahållna jokertecken
+### Exempel 5: Hämta alla resurser vars namn matchar det angivna jokertecknet
 
 ```
 PS C:\> Get-AzResource -Name test* | ft
@@ -130,9 +130,9 @@ testKV  otherRG            Microsoft.KeyVault/vaults         eastus
 testVM2 otherResourceGroup Microsoft.Compute/virtualMachines eastus
 ```
 
-Det här kommandot får alla resurser vars resurs namn börjar med "test".
+Med det här kommandot får du alla resurser vars resursnamn börjar med "test".
 
-### Exempel 6: Hämta alla resurser av en viss resurs typ
+### Exempel 6: Hämta alla resurser av en viss resurstyp
 
 ```
 PS C:\> Get-AzResource -ResourceType Microsoft.Compute/virtualMachines | ft
@@ -143,7 +143,7 @@ testVM  testRG             Microsoft.Compute/virtualMachines westus
 testVM2 otherResourceGroup Microsoft.Compute/virtualMachines eastus
 ```
 
-Det här kommandot får alla resurser i de aktuella prenumerationerna som är virtuella datorer.
+Med det här kommandot får du alla resurser i de aktuella prenumerationerna som är virtuella datorer.
 
 ### Exempel 7: Hämta en resurs efter resurs-ID
 
@@ -163,9 +163,9 @@ Tags              :
                     Status  Approved
 ```
 
-Med det här kommandot får du resursen ett angivet resurs-ID, som är en virtuell dator som heter "testVM" i resurs gruppen "testRG".
+Det här kommandot hämtar resursen med det angivna resurs-ID:t, som är en virtuell dator som kallas "testVM" i resursgruppen "testRG".
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -ApiVersion
 
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -197,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpandProperties
-Expanderar egenskaper för resursen.
+När det anges expanderas resursens egenskaper.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -211,8 +211,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Namn
-Namnet på den eller de resurser som ska hämtas. Den här parametern har stöd för jokertecken i början och/eller slutet av strängen.
+### -Name
+Namnet på de resurser som ska hämtas. Den här parametern stöder jokertecken i början och/eller slutet av strängen.
 
 ```yaml
 Type: System.String
@@ -240,7 +240,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -För
+### -Pre
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -255,7 +255,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Den resurs grupp som har hämtats. Den här parametern har stöd för jokertecken i början och/eller slutet av strängen.
+Resursgruppen som de resurser som hämtas tillhör. Den här parametern stöder jokertecken i början och/eller slutet av strängen.
 
 ```yaml
 Type: System.String
@@ -270,7 +270,7 @@ Accept wildcard characters: True
 ```
 
 ### -ResourceId
-Anger det fullständiga resurs-ID: t, som i följande exempel `/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.Compute/virtualMachines`
+Anger det fullständigt kvalificerade resurs-ID:t, som i följande exempel `/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.Compute/virtualMachines`
 
 ```yaml
 Type: System.String
@@ -285,7 +285,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceType
-Resurs typen för de resurser som ska hämtas. Till exempel Microsoft. Compute/virtualMachines
+Resurstypen för de resurser som ska hämtas. Till exempel Microsoft.Compute/virtualMachines
 
 ```yaml
 Type: System.String
@@ -299,9 +299,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tagg
+### -Tag
 
-Hämtar resurser som har den angivna Azure-taggen. Ange en hash-tabell med en namn nyckel eller namn-och värde nycklar. Jokertecken stöds inte. En "tagg" är ett namn värde par som du kan använda för resurser och resurs grupper. Använd taggar för att kategorisera dina resurser, till exempel efter avdelning eller kostnads ställe, eller för att spåra anteckningar eller kommentarer om resurserna. Om du vill lägga till en tagg till en resurs använder du parametern tagg för New-AzResource eller Set-AzResource cmdletar. Använd New-AzTag cmdlet för att skapa en fördefinierad tagg. Om du behöver hjälp med hash-tabeller i Windows PowerShell kör du "Get-Help about_Hashtables".
+Hämtar resurser som har den angivna Azure-taggen. Ange en hash-tabell med en namnnyckel eller namn- och värdenycklar. Jokertecken stöds inte. En "tagg" är ett namnvärdespar som du kan använda för resurser och resursgrupper. Använd taggar för att kategorisera dina resurser, till exempel efter avdelning eller kostnadsställe, eller för att spåra anteckningar eller kommentarer om resurserna. Om du vill lägga till en tagg i en resurs använder du taggparametern för New-AzResource eller Set-AzResource cmdlets. Om du vill skapa en fördefinierad tagg använder New-AzTag-cmdleten. Om du behöver hjälp med hash-tabeller i Windows PowerShell kör du "Get-Help about_Hashtables".
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -316,7 +316,7 @@ Accept wildcard characters: False
 ```
 
 ### -TagName
-Den grundläggande flaggan för de resurser som ska hämtas.
+Nyckeln i taggen för de resurser som ska hämtas.
 
 ```yaml
 Type: System.String
@@ -346,21 +346,20 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. kommandon. ResourceManager. cmdlets. SdkModels. PSResource
+### Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.PSResource
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Sök-AzResource](./Find-AzResource.md)
 
 [Move-AzResource](./Move-AzResource.md)
 

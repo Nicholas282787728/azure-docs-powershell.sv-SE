@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/ne
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/New-AzVMSqlServerAutoPatchingConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/New-AzVMSqlServerAutoPatchingConfig.md
-ms.openlocfilehash: 0ce851373ac31aaef4c5664db7085f345e9b947d
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.openlocfilehash: 3ba7ab00076a3a0634a0d4394270fe4a83ec8ede
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "93925034"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100398265"
 ---
 # New-AzVMSqlServerAutoPatchingConfig
 
-## Sammanfattning
-Skapar ett konfigurations objekt för automatisk korrigering på en virtuell dator.
+## SYNOPSIS
+Skapar ett konfigurationsobjekt för automatisk korrigering på en virtuell dator.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 New-AzVMSqlServerAutoPatchingConfig [-Enable] [-DayOfWeek <String>]
@@ -26,12 +26,12 @@ New-AzVMSqlServerAutoPatchingConfig [-Enable] [-DayOfWeek <String>]
  [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **New-AzVMSqlServerAutoPatchingConfig** skapar ett konfigurations objekt för automatisk korrigering på en virtuell dator.
+## BESKRIVNING
+Cmdleten **New-AzVMSqlServerAutoPatchingConfig** skapar ett konfigurationsobjekt för automatisk korrigering på en virtuell dator.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: skapa ett konfigurations objekt för att konfigurera automatisk korrigering
+### Exempel 1: Skapa ett konfigurationsobjekt för att konfigurera automatisk korrigering
 ```
 PS C:\> $AutoPatchingConfig = New-AzVMSqlServerAutoPatchingConfig -Enable -DayOfWeek "Thursday" -MaintenanceWindowStartingHour 11 -MaintenanceWindowDuration 120 -PatchCategory "Important"
 Enable                        : True
@@ -41,32 +41,32 @@ MaintenanceWindowDuration     : 120
 PatchCategory                 : Important
 ```
 
-Det här kommandot skapar konfigurations objekt för korrigering.
-Kommandot anger vecko dagen och fönstret underhåll.
-Denna konfiguration möjliggör en korrigering som använder dessa värden.
-Resultatet sparas i $AutoBackupConfig variabel.
+Det här kommandot skapar konfigurationsobjekt för korrigeringar.
+Kommandot anger veckodagen och definierar underhållsfönstret.
+Den här konfigurationen aktiverar korrigeringar som använder dessa värden.
+Kommandot lagrar resultatet i den $AutoBackupConfig variabeln.
 Du kan ange det här konfigurationsobjektet för andra cmdlets, till exempel Set-AzVMSqlServerExtension cmdlet.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DayOfWeek
 Anger den dag i veckan då uppdateringar ska installeras.
 
-De acceptabla värdena för den här parametern är:
+De godtagbara värdena för den här parametern är:
 
-- Lördag
-- Dagarna
-- Torsdag
-- Onsdagen
+- söndag
+- Måndag
+- Tisdag
+- Onsdag
 - Torsdag
 - Fredag
-- Afton
-- Vardaglig
+- Lördag
+- Varje dag
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Everyday
 
 Required: False
@@ -76,15 +76,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Aktivera
-Anger att automatisk korrigering för den virtuella datorn är aktive rad.
-Om du aktiverar automatisk korrigering av cmdleten placeras Windows Update i interaktivt läge.
-Om du inaktiverar automatisk uppdatering ändras inte Windows Update-inställningarna.
+### -Enable
+Anger att automatisk korrigering för den virtuella datorn är aktiverad.
+Om du aktiverar automatisk korrigering placerar cmdleten Windows Update i interaktivt läge.
+Om du inaktiverar automatisk korrigering ändras inte Windows Update-inställningarna.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -94,14 +94,14 @@ Accept wildcard characters: False
 ```
 
 ### -MaintenanceWindowDuration
-Anger längden i minuter för underhålls fönstret.
-Automatisk korrigering undvikr att utföra en åtgärd som kan påverka en virtuell dator tillgänglighet utanför det fönstret.
+Anger underhållsfönstrets varaktighet i minuter.
+Med automatiska korrigeringar undviker du att utföra en åtgärd som kan påverka tillgängligheten för virtuella maskiner utanför fönstret.
 Ange en multipel av 30 minuter.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -111,13 +111,13 @@ Accept wildcard characters: False
 ```
 
 ### -MaintenanceWindowStartingHour
-Anger den timme i dag då underhålls fönstret startar.
-Den här tiden anger när uppdateringar börjar installera.
+Anger vilken timme under dagen som underhållsfönstret startar.
+Den här gången definieras när uppdateringar ska installeras.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -132,7 +132,7 @@ Anger om viktiga uppdateringar ska ingå.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Important
 
 Required: False
@@ -143,23 +143,23 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
 ### Ingen
-Denna cmdlet accepterar inte indata.
+Den här cmdleten accepterar inte några indata.
 
-## VÄRDEN
+## UTDATA
 
 ### AutoPatchingSettings
-Den här cmdleten returnerar objekt som innehåller inställningar för automatisk korrigering.
+Den här cmdleten returnerar objektet innehåller inställningar för automatisk korrigering.
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[New-AzureVMSqlServerAutoBackupConfig](./New-AzureVMSqlServerAutoBackupConfig.md)
+[New-AzureVMSqlServerAutoBackupConfig](./New-AzVMSqlServerAutoBackupConfig.md)
 
 [Set-AzVMSqlServerExtension](./Set-AzVMSqlServerExtension.md)
 

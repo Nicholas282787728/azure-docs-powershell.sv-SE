@@ -5,29 +5,29 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/re
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Remove-AzApplicationGatewayConnectionDraining.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Remove-AzApplicationGatewayConnectionDraining.md
-ms.openlocfilehash: 5357b8a0a59fade3e9ff7439da9ac1eeb63f6035
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: cba24e2da43bce34c42a17c9717ed8c2314a00b1
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93919050"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100406357"
 ---
 # Remove-AzApplicationGatewayConnectionDraining
 
-## Sammanfattning
-Tar bort anslutningen tömning av ett objekt för HTTP-inställningar för backend.
+## SYNOPSIS
+Tar bort konfigurationen av anslutningsdränering för ett HTTP-inställningsobjekt i backend.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 Remove-AzApplicationGatewayConnectionDraining -BackendHttpSettings <PSApplicationGatewayBackendHttpSettings>
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Remove-AzApplicationGatewayConnectionDraining** tar bort anslutningen som tömmer konfigurationen för ett objekt med http-inställningar för backend.
+## BESKRIVNING
+Cmdleten **Remove-AzApplicationGatewayConnectionDraining** tar bort konfiguration av anslutningsavgång för HTTP-inställningsobjekt i backend-delen.
 
-## BESKRIVS
+## EXEMPEL
 
 ### Exempel 1
 ```
@@ -36,14 +36,14 @@ PS C:\> $Settings  = Get-AzApplicationGatewayBackendHttpSettings -Name "Settings
 PS C:\> Remove-AzApplicationGatewayConnectionDraining -BackendHttpSettings $Settings
 ```
 
-Det första kommandot får den Programgateway som heter ApplicationGateway01 i resurs gruppen som heter ResourceGroup01 och lagrar den i $AppGw variabeln.
-Det andra kommandot får de backend-HTTP-inställningarna "Settings01" för $AppGw och lagrar inställningarna i $Settings-variabeln.
-Med kommandot senaste tar du bort anslutningen tömning av backend HTTP-inställningar som lagras i $Settings.
+Det första kommandot hämtar programgatewayen med namnet ApplicationGateway01 i resursgruppen ResourceGroup01 och lagrar den i $AppGw variabeln.
+Det andra kommandot hämtar HTTP-inställningarna i backend med namnet Settings01 för $AppGw lagrar inställningarna i $Settings variabeln.
+Det senaste kommandot tar bort konfigurationen av anslutningsavring för HTTP-inställningarna i server slutet som lagras i $Settings.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -BackendHttpSettings
-Server delens http-inställningar
+Backend http-inställningar
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendHttpSettings
@@ -58,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifterna, kontot, klientorganisationen och prenumerationen som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -73,23 +73,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-### Microsoft. Azure. commands. Networks. Models. PSApplicationGatewayBackendHttpSettings
+### Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendHttpSettings
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. Networks. Models. PSApplicationGatewayBackendHttpSettings
+### Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendHttpSettings
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
 [Get-AzApplicationGateway](./Get-AzApplicationGateway.md)
 
-[Get-AzApplicationGatewayBackendHttpSettings](./Get-AzApplicationGatewayBackendHttpSettings.md)
 
 [Get-AzApplicationGatewayConnectionDraining](./Get-AzApplicationGatewayConnectionDraining.md)
 
