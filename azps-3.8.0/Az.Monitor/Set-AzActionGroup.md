@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/se
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Set-AzActionGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Set-AzActionGroup.md
-ms.openlocfilehash: bcec58094fc124d3dd49fc2536a9427ed72d07a2
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: da050b069ee77ce73b2325a600ac06f4d0fb919c
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "93925681"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100399217"
 ---
 # Set-AzActionGroup
 
-## Sammanfattning
-Skapar en ny eller uppdaterar en befintlig åtgärds grupp.
+## SYNOPSIS
+Skapar en ny eller uppdaterar en befintlig åtgärdsgrupp.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### ByPropertyName (standard)
 ```
@@ -44,12 +44,12 @@ Set-AzActionGroup [-ShortName <String>] [-DisableGroup]
  [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **set-AzActionGroup** skapar en ny eller uppdaterar en befintlig åtgärds grupp
+## BESKRIVNING
+Cmdleten **Set-AzActionGroup** skapar en ny eller uppdaterar en befintlig åtgärdsgrupp
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: skapa en åtgärds grupp
+### Exempel 1: Skapa en åtgärdsgrupp
 ```
 PS C:\>$email1 = New-AzActionGroupReceiver -Name 'user1' -EmailReceiver -EmailAddress 'user1@example.com'
 PS C:\>$sms1 = New-AzActionGroupReceiver -Name 'user2' -SmsReceiver -CountryCode '1' -PhoneNumber '5555555555'
@@ -57,12 +57,12 @@ PS C:\>Set-AzActionGroup -Name $actionGroupName -ResourceGroup $resourceGroupNam
 ```
 
 De två första kommandona skapar två mottagare.
-Med kommandot slut skapas en åtgärds grupp, inklusive de två mottagarna.
+Det slutliga kommandot skapar en åtgärdsgrupp med de två mottagarna.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableGroup
-Inaktiverar åtgärds gruppen.
+Inaktiverar åtgärdsgruppen.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Resurs för åtgärds grupp
+Åtgärdsgruppsresursen
 
 ```yaml
 Type: Microsoft.Azure.Commands.Insights.OutputClasses.PSActionGroupResource
@@ -118,8 +118,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -Namn
-Namnet på åtgärds gruppen.
+### -Name
+Namnet på åtgärdsgruppen.
 
 ```yaml
 Type: System.String
@@ -133,8 +133,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Mottagare
-Listan över mottagare av åtgärds gruppen.
+### -Receiver
+Listan över mottagare för åtgärdsgruppen.
 
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Insights.OutputClasses.PSActionGroupReceiverBase]
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resurs gruppen
+Resursgruppens namn
 
 ```yaml
 Type: System.String
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShortName
-Kort namnet på åtgärds gruppen.
+Åtgärdsgruppens kortnamn.
 
 ```yaml
 Type: System.String
@@ -205,8 +205,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Tagg
-Taggarna för åtgärds grupp resursen
+### -Tag
+Taggarna för åtgärdsgruppens resurs
 
 ```yaml
 Type: System.Collections.Generic.IDictionary`2[System.String,System.String]
@@ -233,7 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -248,7 +248,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs. Cmdleten körs inte.
+Visar vad som skulle hända om cmdleten körs. Cmdleten körs inte.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -263,28 +263,28 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-### System. Collections. Generic. list ' 1 [[Microsoft. Azure. commands. Insights. OutputClasses. PSActionGroupReceiverBase, Microsoft. Azure. PowerShell. cmdletar. Monitor, version = 1.0.0.0, Culture = neutral, PublicKeyToken = null]]
+### System.Collections.Generic.List'1[[Microsoft.Azure.Commands.Insights.OutputClasses.PSActionGroupReceiverBase, Microsoft.Azure.PowerShell.Cmdlets.Monitor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
 
-### System. Management. Automation. SwitchParameter
+### System.Management.Automation.SwitchParameter
 
-### System. Collections. Generic. IDictionary ' 2 [[system. String, system. privat. CoreLib, version = 4.0.0.0, Culture = neutralt, PublicKeyToken = 7cec85d7bea7798e], [system. String, system. Private. CoreLib, version = 4.0.0.0, Culture = neutralt, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Collections.Generic.IDictionary'2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-### Microsoft. Azure. commands. Insights. OutputClasses. PSActionGroupResource
+### Microsoft.Azure.Commands.Insights.OutputClasses.PSActionGroupResource
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. Insights. OutputClasses. PSActionGroupResource
+### Microsoft.Azure.Commands.Insights.OutputClasses.PSActionGroupResource
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
 [Get-AzActionGroup](./Get-AzActionGroup.md) 
- [Remove-AzActionGroup](./Remove-AzActionGroup.md) 
- [New-AzActionGroupReceiver](./AzureRmActionGroupReceiver.md)
+ [Remove-AzActionGroup](./Remove-AzActionGroup.md)
+
