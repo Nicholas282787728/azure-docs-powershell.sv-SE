@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryse
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesAsrProtectableItem.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesAsrProtectableItem.md
-ms.openlocfilehash: 4ea8bcb0e27c9ca44cc30f36005bdcccdbd20d61
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 31dc0a5e7fb9bba20aea6fb6395ec59ba54d0e2c
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93919779"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100412120"
 ---
 # Get-AzRecoveryServicesAsrProtectableItem
 
-## Sammanfattning
-Få skydds bara objekt i en system skydds behållare.
+## SYNOPSIS
+Hämta de skyddbara objekten i en ASR-skyddsbehållare.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### ByObject (standard)
 ```
@@ -37,17 +37,17 @@ Get-AzRecoveryServicesAsrProtectableItem -FriendlyName <String> -ProtectionConta
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Get-AzRecoveryServicesAsrProtectableItem** hämtar de objekt som skyddas i en behållare för Azure Site Recovery-skydd.
+## BESKRIVNING
+Cmdleten **Get-AzRecoveryServicesAsrProtectableItem** får de skyddbara objekten i en Azure Site Recovery Protection Container.
 
-## BESKRIVS
+## EXEMPEL
 
 ### Exempel 1
 ```
 PS C:\> $ProtectableItems = Get-AzRecoveryServicesAsrProtectableItem -ProtectionContainer $Container
 ```
 
-Hämtar alla objekt som skyddas i angiven ASR-skydds behållare.
+Hämtar alla skyddbara objekt i den angivna ASR-skyddsbehållaren.
 
 ### Exempel 2
 ```
@@ -70,7 +70,7 @@ ReplicationProtectedItemId    :
 SupportedReplicationProviders : {InMage, InMageAzureV2}
 ```
 
-Få skydd bara objekt i angiven ASR-skydds behållare och med angivet eget namn.
+Hämta de skyddbara objekten i angiven ASR-skyddsbehållare och med ett visst eget namn.
 
 ### Exempel 3
 ```
@@ -93,12 +93,12 @@ ReplicationProtectedItemId    :
 SupportedReplicationProviders : {InMage, InMageAzureV2}
 ```
 
-Hämtar alla objekt som skyddas i angiven ASR-skydds behållare.
+Hämtar alla skyddbara objekt i den angivna ASR-skyddsbehållaren.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure.
 
 
 ```yaml
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -FriendlyName
-Anger det egna namnet på det skrivskyddade ASR-objektet.
+Anger eget namn på det ASR-skyddbara objektet.
 
 ```yaml
 Type: System.String
@@ -128,8 +128,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Namn
-Anger namnet på objektet som skyddas av säkerhets system.
+### -Name
+Anger namnet på det ASR-skyddbara objektet.
 
 ```yaml
 Type: System.String
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProtectionContainer
-Anger objekt för objektet för Azure Site Recovery-skyddet.
+Anger Azure Site Recovery Protection Container-objektet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRProtectionContainer
@@ -159,20 +159,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-### Microsoft. Azure. commands. RecoveryServices. SiteRecovery. ASRProtectionContainer
+### Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRProtectionContainer
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. RecoveryServices. SiteRecovery. ASRProtectableItem
+### Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRProtectableItem
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Get-AzRecoveryServicesAsrProtectionEntity](./Get-AzRecoveryServicesAsrProtectionEntity.md)
 
-[Set-AzRecoveryServicesAsrProtectionEntity](./Set-AzRecoveryServicesAsrProtectionEntity.md)
