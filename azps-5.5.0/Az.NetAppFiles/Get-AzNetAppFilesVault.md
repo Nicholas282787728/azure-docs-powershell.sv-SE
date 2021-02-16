@@ -1,0 +1,143 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.NetAppFiles.dll-Help.xml
+Module Name: Az.NetAppFiles
+online version: https://docs.microsoft.com/en-us/powershell/module/az.netappfiles/get-aznetappfilesvault
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/NetAppFiles/NetAppFiles/help/Get-AzNetAppFilesVault.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/NetAppFiles/NetAppFiles/help/Get-AzNetAppFilesVault.md
+ms.openlocfilehash: 9779db097028710aa8aeddc7a5a1c5bdea85a30a
+ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.translationtype: MT
+ms.contentlocale: sv-SE
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100252516"
+---
+# Get-AzNetAppFilesVault
+
+## SYNOPSIS
+Hämtar listan över säkerhetskopierade Azure NetApp-filer (ANF)-konton.
+
+## SYNTAX
+
+### ByFieldsParameterSet (standard)
+```
+Get-AzNetAppFilesVault -ResourceGroupName <String> [-AccountName <String>]
+ [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+### ByParentObjectParameterSet
+```
+Get-AzNetAppFilesVault -AccountObject <PSNetAppFilesAccount> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
+```
+
+### ByResourceIdParameterSet
+```
+Get-AzNetAppFilesVault -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+```
+
+## BESKRIVNING
+Cmdleten **Get-AzNetAppFilesVault** får en lista över säkerhetskopieringsvalv för ANF-konton.
+
+## EXEMPEL
+
+### Exempel 1
+```powershell
+PS C:\> Get-AzNetAppFilesVault -ResourceGroupName "MyRG" -AccountName "MyAnfAccount"
+```
+
+Det här kommandot hämtar en lista över säkerhetskopieringsvalven för Azure NetappFiles-kontot (ANF) "MyAnfAccount".
+
+## PARAMETERS
+
+### -AccountName
+Namnet på ANF-kontot
+
+```yaml
+Type: System.String
+Parameter Sets: ByFieldsParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AccountObject
+Kontot för det nya säkerhetskopian
+
+```yaml
+Type: Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesAccount
+Parameter Sets: ByParentObjectParameterSet
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+Resursgruppen för ANF-kontot
+
+```yaml
+Type: System.String
+Parameter Sets: ByFieldsParameterSet
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceId
+Resurs-ID för ANF-poolen
+
+```yaml
+Type: System.String
+Parameter Sets: ByResourceIdParameterSet
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### CommonParameters
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
+
+## INDATA
+
+### Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesAccount
+
+### System.String
+
+## UTDATA
+
+### Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesBackupPolicy
+
+## ANTECKNINGAR
+
+## RELATERADE LÄNKAR
