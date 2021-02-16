@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/new-az
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/New-AzSqlSyncGroup.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/New-AzSqlSyncGroup.md
-ms.openlocfilehash: 9cdf4ac6fb7e388357dbcb7ad202d4286077c443
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: f89054dad3fa4c66f845e3cdd9a309563efa9e44
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93920290"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100398180"
 ---
 # New-AzSqlSyncGroup
 
-## Sammanfattning
-Skapar en synkroniseringsresurs för Azure SQL Database.
+## SYNOPSIS
+Skapar en Azure SQL Database Sync-grupp.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 New-AzSqlSyncGroup [-Name] <String> -SyncDatabaseName <String> -SyncDatabaseServerName <String>
@@ -27,12 +27,12 @@ New-AzSqlSyncGroup [-Name] <String> -SyncDatabaseName <String> -SyncDatabaseServ
  [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **New-AzSqlSyncGroup** skapar en synkroniseringsresurs för en Azure SQL-databas.
+## BESKRIVNING
+Cmdleten **New-AzSqlSyncGroup** skapar en Azure SQL Database Sync Group.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: skapa en synkroniseringsresurs för en Azure SQL-databas.
+### Exempel 1: Skapa en synkroniseringsgrupp för en Azure SQL-databas.
 ```
 PS C:\> $credential = Get-Credential
 PS C:\> New-AzSqlSyncGroup -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -Name "SyncGroup01" -ConflictResolutionPolicy "HubWin"
@@ -53,12 +53,12 @@ LastSyncTime                : 1/1/0001 12:00:00 AM
 Schema                      :
 ```
 
-Det här kommandot skapar en synkroniseringsresurs för en Azure SQL-databas. "schema.jsär en fil på den lokala hård disken. Den innehåller schemats nytto Last i JSON-format. Ett exempel på schema-JSON är: {"tabeller": [{"Columns": [{"QuotedName": "b3ee3a7f-7614-4644-ad07-afa832620b4bManualTestsm4column1"}, {"QuotedName": "b3ee3a7f-7614-4644-ad07-afa832620b4bManualTestsm4column2"}], "QuotedName": "MayQuotedTable1"}, {"kolumner": [{"QuotedName": "b3ee3a7f-7614-4644-ad07-afa832620b4bManualTestsm4column1"}, {"QuotedName": "b3ee3a7f-7614-4644-ad07-afa832620b4bManualTestsm4column2"}], "QuotedName": "MayQuotedTable2"}]; "MasterSyncMemberName": null}
+Med det här kommandot skapas en synkroniseringsgrupp för en Azure SQL-databas. "schema.jspå" är en fil på den lokala hårddisken. Den innehåller schemats nyttolast i json-format. Ett exempel på schema-json är: {"Tables": [{"Columns": [{"QuotedName": "b3ee3a7f-7614-4644-ad07-afa832620b4bManualTestsm4column1"}, {"QuotedName": "b3ee3a7f-7614-4644-ad07-afa832620b4bManualTestsm4column2"}], "QuotedName": "MayQuotedTable1"}, {"Columns": [{"QuotedName": "b3ee3a7f-7614-4644-ad07-afa832620b4bManualTestsm4column1"}, {"QuotedName": "b3ee3a7f-7614-4644-ad07-afa832620b4bManualTestsm4column2"}], "QuotedName": "MayQuotedTable2"}], "MasterSyncMemberName": null }
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -ConflictResolutionPolicy
-Principen för att lösa konflikter mellan nav och medlems databas i synkroniseringsresursen.
+Principen för att lösa konflikter mellan nav- och medlemsdatabasen i synkroniseringsgruppen.
 
 ```yaml
 Type: System.String
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseCredential
-Autentiseringsuppgifter för SQL-autentisering för NAV databasen.
+SQL-autentiseringsautentiseringsautentiseringarna för navdatabasen.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -119,8 +119,8 @@ Accept wildcard characters: False
 ```
 
 ### -IntervalInSeconds
-Frekvens (i sekunder) vid synkronisering av data.
-Standard är-1, vilket innebär att den automatiska synkroniseringen inte är aktive rad.
+Frekvensen (i sekunder) för datasynkronisering.
+Standardvärdet är -1, vilket innebär att automatisk synkronisering inte är aktiverad.
 
 ```yaml
 Type: System.Int32
@@ -134,8 +134,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Namn
-Namnet på synkroniseringsresursen.
+### -Name
+Synkroniseringsgruppens namn.
 
 ```yaml
 Type: System.String
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Namnet på resurs gruppen.
+Namnet på resursgruppen.
 
 ```yaml
 Type: System.String
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -SchemaFile
-Sökvägen till schema filen.
+Sökvägen till schemafilen.
 
 ```yaml
 Type: System.String
@@ -179,7 +179,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ServerName
+### -Servernamn
 Namnet på Azure SQL Server.
 
 ```yaml
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncDatabaseName
-Databasen som används för att lagra synkroniserade metadata.
+Den databas som används för att lagra synkroniseringsrelaterade metadata.
 
 ```yaml
 Type: System.String
@@ -210,7 +210,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncDatabaseResourceGroupName
-Den resurs grupp som databasen för synkade metadata tillhör.
+Resursgruppen som synkroniseringshanteraren metadata-databas tillhör.
 
 ```yaml
 Type: System.String
@@ -225,7 +225,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncDatabaseServerName
-Den server där databasen med synkrona data hanteras.
+Den server där metadata-databas finns.
 
 ```yaml
 Type: System.String
@@ -240,7 +240,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -255,7 +255,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs.
+Visar vad som skulle hända om cmdleten körs.
 Cmdleten körs inte.
 
 ```yaml
@@ -271,21 +271,20 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. SQL. DataSync. Model. AzureSqlSyncGroupModel
+### Microsoft.Azure.Commands.sql.DataSync.Model.AzureSqlSyncGroupModel
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Set-AzSqlSyncGroup](./Set-AzSqlSyncGroup.md)
 
 [Remove-AzSqlSyncGroup](./Remove-AzSqlSyncGroup.md)
 
