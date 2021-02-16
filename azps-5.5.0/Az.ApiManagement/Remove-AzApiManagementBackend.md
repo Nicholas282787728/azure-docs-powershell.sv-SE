@@ -1,59 +1,49 @@
 ---
 external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
 Module Name: Az.ApiManagement
-online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/remove-azapimanagementapirelease
+online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagement/remove-azapimanagementbackend
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementApiRelease.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementApiRelease.md
-ms.openlocfilehash: 9673df14bdd0f5b7d0e946170a155231e8c4e751
-ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
+content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementBackend.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Remove-AzApiManagementBackend.md
+ms.openlocfilehash: 073b32936be1e1614e495ca680a250498742ba66
+ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100412664"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100233807"
 ---
-# Remove-AzApiManagementApiRelease
+# Remove-AzApiManagementBackend
 
 ## SYNOPSIS
-Tar bort en viss API-version
+Tar bort en backend.
 
 ## SYNTAX
 
-### ByApiReleaseId (standard)
 ```
-Remove-AzApiManagementApiRelease -Context <PsApiManagementContext> -ApiId <String> -ReleaseId <String>
- [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ByInputObject
-```
-Remove-AzApiManagementApiRelease -InputObject <PsApiManagementApiRelease> [-PassThru]
+Remove-AzApiManagementBackend -Context <PsApiManagementContext> -BackendId <String> [-PassThru]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## BESKRIVNING
-
-Cmdleten **Remove-AzAzureRmApiManagementApiRelease** tar bort en befintlig API-version.
+Tar bort en backend som anges av identifieraren från API-hantering.
 
 ## EXEMPEL
 
-### Exempel 1: Ta bort en API-version
+### Exempel 1: Ta bort Backend 123
 ```powershell
 PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
-PS C:\>Remove-AzAzureRmApiManagementApiRelease -Context $apimContext -ApiId "echo-api" -ReleaseId "2"
+PS C:\>Remove-AzApiManagementBackend -Context $apimContext -BackendId 123 -PassThru
 ```
-
-Det här kommandot tar bort API-versionen med angivet ApiId och ReleaseId.
 
 ## PARAMETERS
 
-### -ApiId
-IDENTIFIERARe för API:t.
+### -BackendId
+Identifierare för befintlig backend.
 Den här parametern är obligatorisk.
 
 ```yaml
 Type: System.String
-Parameter Sets: ByApiReleaseId
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -69,7 +59,7 @@ Den här parametern är obligatorisk.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
-Parameter Sets: ByApiReleaseId
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -80,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure.
+Autentiseringsuppgifterna, kontot, klientorganisationen och prenumerationen som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -94,24 +84,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InputObject
-Instans av PsApiManagementApiRelease. Den här parametern är obligatorisk.
-
-```yaml
-Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiRelease
-Parameter Sets: ByInputObject
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -PassThru
 Om angiven kommer att skrivas som sant om åtgärden lyckas.
 Den här parametern är valfri.
+Standardvärdet är falskt.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -119,22 +95,6 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ReleaseId
-Identifierare för API-utgåvan.
-Den här parametern är obligatorisk.
-
-```yaml
-Type: System.String
-Parameter Sets: ByApiReleaseId
-Aliases:
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -157,8 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som skulle hända om cmdleten körs.
-Cmdleten körs inte.
+Visar vad som skulle hända om cmdleten körs. Cmdleten körs inte.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -179,9 +138,9 @@ Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariab
 
 ### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsapiManagementContext
 
-### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.psapiManagementapiRelease
-
 ### System.String
+
+### System.Management.Automation.SwitchParameter
 
 ## UTDATA
 
@@ -191,8 +150,12 @@ Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariab
 
 ## RELATERADE LÄNKAR
 
-[Get-AzapiManagementApiRelease](./Get-AzApiManagementApiRelease.md)
+[Get-AzApiManagementBackend](./Get-AzApiManagementBackend.md)
 
-[New-AzapiManagementApiRelease](./New-AzApiManagementApiRelease.md)
+[New-AzApiManagementBackend](./New-AzApiManagementBackend.md)
 
-[Update-AzapiManagementApiRelease](./Update-AzApiManagementApiRelease.md)
+[New-AzApiManagementBackendCredential](./New-AzApiManagementBackendCredential.md)
+
+[New-AzApiManagementBackendProxy](./New-AzApiManagementBackendProxy.md)
+
+[Set-AzApiManagementBackend](./Set-AzApiManagementBackend.md)
