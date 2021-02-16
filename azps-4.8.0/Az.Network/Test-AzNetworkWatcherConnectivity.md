@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/te
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Test-AzNetworkWatcherConnectivity.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Test-AzNetworkWatcherConnectivity.md
-ms.openlocfilehash: 8d3a714f2798c4866df39cd63c664228f078c37c
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: e717c32b817dc86de2bfa1b9de09b95121609f28
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94259241"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100416166"
 ---
 # Test-AzNetworkWatcherConnectivity
 
-## Sammanfattning
-Returnerar anslutnings information för en angiven källa för en virtuell dator och en destination.
+## SYNOPSIS
+Returnerar anslutningsinformation för en viss käll-VM och ett mål.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### SetByResource (standard)
 ```
@@ -43,12 +43,12 @@ Test-AzNetworkWatcherConnectivity -Location <String> -SourceId <String> [-Source
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Den Test-AzNetworkWatcherConnectivity cmdleten returnerar anslutnings information för en viss angiven källa och ett mål. Om det inte går att upprätta anslutningen mellan källan och målet returnerar cmdleten information om problemet.
+## BESKRIVNING
+Cmdleten Test-AzNetworkWatcherConnectivity returnerar anslutningsinformation för en viss käll-VM och en destination. Om anslutningen mellan källan och målet inte kan upprättas returnerar cmdleten information om problemet.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: testa nätverks Watchers anslutning från en virtuell dator till en webbplats
+### Exempel 1: Testa nätverksanslutningen för nätverks watcher från en VM till en webbplats
 ```powershell
 Test-AzNetworkWatcherConnectivity -NetworkWatcherName NetworkWatcher -ResourceGroupName NetworkWatcherRG -SourceId "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ContosoRG/providers/Microsoft.Compute/virtualMachines/MultiTierApp0" -DestinationAddress "bing.com" -DestinationPort 80
 
@@ -81,21 +81,21 @@ Hops             : [
                    ]
 ```
 
-I det här exemplet testar vi anslutningen från en VM i Azure till www.bing.com.
+I det här exemplet testar vi anslutning från en VM i Azure till www.bing.com.
 
 ### Exempel 2
 
-Returnerar anslutnings information för en angiven källa för en virtuell dator och en destination. (automatiskt genererat)
+Returnerar anslutningsinformation för en viss käll-VM och ett mål. (autogenererat)
 
 <!-- Aladdin Generated Example -->
 ```powershell
 Test-AzNetworkWatcherConnectivity -DestinationAddress 'bing.com' -DestinationPort 80 -NetworkWatcher <PSNetworkWatcher> -SourceId '/subscriptions/00000000-0000-0000-0000-00000000000000000/resourceGroups/ContosoRG/providers/Microsoft.Compute/virtualMachines/MultiTierApp0'
 ```
 
-## MALLPARAMETRAR
+## PARAMETERS
 
-### -AsJob
-Kör cmdlet i bakgrunden
+### -As Ent fån
+Kör cmdleten i bakgrunden
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifterna, kontot, klientorganisationen och prenumerationen som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationAddress
-Den IP-adress eller URI som resursen som ett anslutnings försök ska göras till.
+IP-adressen eller URI:en som ett anslutningsförsök ska göras till.
 
 ```yaml
 Type: System.String
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationId
-ID för den resurs som ett anslutnings försök ska skapas från.
+ID för resursen som ett anslutningsförsök ska göras till.
 
 ```yaml
 Type: System.String
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationPort
-Den port som kontroll anslutningen ska utföras på.
+Port där anslutningskontrollen utförs.
 
 ```yaml
 Type: System.Int32
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -Plats
-Nätverks Bevakningens plats.
+Plats för nätverksbevakningen.
 
 ```yaml
 Type: System.String
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkWatcher
-Nätverks bevaknings resursen.
+Nätverksbevakningsresursen.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkWatcherName
-Nätverks Bevakningens namn.
+Namnet på nätverksbevakningen.
 
 ```yaml
 Type: System.String
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProtocolConfiguration
-Protokoll konfiguration som kontroll anslutning ska utföras på.
+Protokollkonfiguration där anslutningskontrollen utförs.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSNetworkWatcherProtocolConfiguration
@@ -230,7 +230,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Namnet på nätverks bevaknings resurs gruppen.
+Namnet på resursgruppen för nätverksbevakning.
 
 ```yaml
 Type: System.String
@@ -245,7 +245,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceId
-ID för resursen som en anslutnings kontroll kommer att startas från.
+ID för resursen som en anslutningskontroll initieras från.
 
 ```yaml
 Type: System.String
@@ -260,7 +260,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourcePort
-Käll porten från vilken en anslutnings kontroll utförs.
+Källporten som en anslutningskontroll utförs från.
 
 ```yaml
 Type: System.Int32
@@ -275,22 +275,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-### Microsoft. Azure. commands. Networks. Models. PSNetworkWatcher
+### Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher
 
-### System. String
+### System.String
 
-### System. Int32
+### System.Int32
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. Networks. Models. PSConnectivityInformation
+### Microsoft.Azure.Commands.Network.Models.PSConnectivityInformation
 
-## ANMÄRKNINGAR
-Nyckelord: Azure, azurerm, arm, resurs, anslutning, hantering, chef, nätverk, nätverk, nätverks bevakning
+## ANTECKNINGAR
+Nyckelord: azure, azurerm, arm, resurs, anslutning, hantering, chef, nätverk, nätverk, nätverksbevakning
 
 ## RELATERADE LÄNKAR
 
@@ -307,14 +307,14 @@ Nyckelord: Azure, azurerm, arm, resurs, anslutning, hantering, chef, nätverk, n
  [New-AzPacketCaptureFilterConfig](./New-AzPacketCaptureFilterConfig.md) 
  [Get-AzNetworkWatcherPacketCapture](./Get-AzNetworkWatcherPacketCapture.md) 
  [Remove-AzNetworkWatcherPacketCapture](./Remove-AzNetworkWatcherPacketCapture.md) 
- [Stopp-AzNetworkWatcherPacketCapture](./Stop-AzNetworkWatcherPacketCapture.md)
+ [Stop-AzNetworkWatcherPacketCapture](./Stop-AzNetworkWatcherPacketCapture.md)
 
 
 [Start-AzNetworkWatcherResourceTroubleshooting](./Start-AzNetworkWatcherResourceTroubleshooting.md) 
  [New-AzNetworkWatcherProtocolConfiguration](./New-AzNetworkWatcherProtocolConfiguration.md) 
  [Test-AzNetworkWatcherIPFlow](./Test-AzNetworkWatcherIPFlow.md) 
  [Test-AzNetworkWatcherConnectivity](./Test-AzNetworkWatcherConnectivity.md) 
- [Stopp-AzNetworkWatcherConnectionMonitor](./Stop-AzNetworkWatcherConnectionMonitor.md) 
+ [Stop-AzNetworkWatcherConnectionMonitor](./Stop-AzNetworkWatcherConnectionMonitor.md) 
  [Start-AzNetworkWatcherConnectionMonitor](./Start-AzNetworkWatcherConnectionMonitor.md) 
  [Set-AzNetworkWatcherConnectionMonitor](./Set-AzNetworkWatcherConnectionMonitor.md) 
  [Set-AzNetworkWatcherConfigFlowLog](./Set-AzNetworkWatcherConfigFlowLog.md) 
@@ -324,4 +324,4 @@ Nyckelord: Azure, azurerm, arm, resurs, anslutning, hantering, chef, nätverk, n
  [Get-AzNetworkWatcherReachabilityProvidersList](./Get-AzNetworkWatcherReachabilityProvidersList.md) 
  [Get-AzNetworkWatcherFlowLogStatus](./Get-AzNetworkWatcherFlowLogStatus.md) 
  [Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport.md) 
- [Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor)
+ [Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor.md)

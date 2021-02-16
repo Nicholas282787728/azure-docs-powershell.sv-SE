@@ -5,41 +5,41 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.recoveryse
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Import-AzRecoveryServicesAsrVaultSettingsFile.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/RecoveryServices/RecoveryServices/help/Import-AzRecoveryServicesAsrVaultSettingsFile.md
-ms.openlocfilehash: f630c8392ccfe68a399db80b7d55aef787fb48ef
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 68ae9b9ad54772ba4157e02ebe602f35b2b5fe64
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93919722"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100406561"
 ---
 # Import-AzRecoveryServicesAsrVaultSettingsFile
 
-## Sammanfattning
-Importerar den angivna inställnings filen för ASR-valvet för att ange valv kontexten (PowerShell-arbetspass) för efterföljande ASR-åtgärder i PowerShell-sessionen. 
+## SYNOPSIS
+Importerar den angivna ASR-valvinställningsfilen för att ange valvkontexten (PowerShell-sessionskontext) för efterföljande ASR-åtgärder i PowerShell-sessionen. 
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 Import-AzRecoveryServicesAsrVaultSettingsFile [-Path] <String> [-DefaultProfile <IAzureContextContainer>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **import-AzRecoveryServicesAsrVaultSettingsFile** importerar inställnings filen för Azure Site Recovery Vault. Valv inställnings filen används för att ange valv kontexten för efterföljande Azure Site Recovery-operationer i den aktuella sessionen.
+## BESKRIVNING
+Cmdleten **Import-AzRecoveryServicesAsrVaultSettingsFile importerar inställningsfilen** för Azure Site Recovery-valv. Inställningsfilen för valv används för att ange valvkontexten för efterföljande Azure Site Recovery-åtgärder i den aktuella sessionen.
 
-## BESKRIVS
+## EXEMPEL
 
 ### Exempel 1
 ```
 PS C:\> $VaultSettings = Import-AzRecoveryServicesAsrVaultSettingsFile -Path $FilePath
 ```
 
-Importerar den angivna inställnings filen för Recovery Services-valvet och returnerar inställningarna för det importerade valvet.
+Importerar den angivna inställningsfilen för Recovery Services-valv och returnerar inställningarna för det importerade valvet.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure.
 
 
 ```yaml
@@ -55,8 +55,8 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Anger mappsökvägen för filen ASR valv inställningar.
-Den här filen kan hämtas från återställnings tjänstens valv Portal och lagras lokalt.
+Anger mappsökvägen för inställningsfilen för ASR-valv.
+Den här filen kan laddas ned från Recovery Services-valvportalen och lagras lokalt.
 
 ```yaml
 Type: System.String
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs. Cmdleten körs inte.
+Visar vad som skulle hända om cmdleten körs. Cmdleten körs inte.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -101,18 +101,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. RecoveryServices. SiteRecovery. ASRVaultSettings
+### Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRVaultSettings
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Get-AzRecoveryServicesAsrVaultSettingsFile](./Get-AzRecoveryServicesAsrVaultSettingsFile.md)
