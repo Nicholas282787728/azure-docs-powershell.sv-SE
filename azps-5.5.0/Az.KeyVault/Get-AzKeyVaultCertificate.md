@@ -6,12 +6,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/g
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Get-AzKeyVaultCertificate.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Get-AzKeyVaultCertificate.md
-ms.openlocfilehash: ccd2762449e24f881a3308c0d11476a1e4626fed
-ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
+ms.openlocfilehash: 002cfba4a5660fa8996c30ff83a1011da669539b
+ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100402413"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100226455"
 ---
 # Get-AzKeyVaultCertificate
 
@@ -101,6 +101,8 @@ Certificate : [Subject]
               [Thumbprint] 
                 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
+KeyId       : https://contoso.vault.azure.net:443/keys/TestCert01/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+SecretId    : https://contoso.vault.azure.net:443/secrets/TestCert01/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 Thumbprint  : XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 Tags        : 
 Enabled     : True
@@ -108,9 +110,22 @@ Created     : 2/8/2016 11:21:45 PM
 Updated     : 2/8/2016 11:21:45 PM
 ```
 
-Det här kommandot får certifikatet TestCert01 från nyckelvalvet ContosoKV01.
+### Exempel 2: Skaffa ett certifikat och spara det som pfx
+Det här kommandot får certifikatet TestCert01 från nyckelvalvet ContosoKV01. Om du vill ladda ned certifikatet som pfx-fil kör du följande kommando. Med de här kommandona kommer du åt SecretId och sparar sedan innehållet som en pfx-fil.
 
-### Exempel 2: Hämta alla certifikat som har tagits bort men inte rensats för det här nyckelvalvet.
+```powershell
+$cert = Get-AzKeyVaultCertificate -VaultName "ContosoKV01" -Name "TestCert01"
+$secret = Get-AzKeyVaultSecret -VaultName $vaultName -Name $cert.Name -AsPlainText
+$secretByte = [Convert]::FromBase64String($secret)
+$x509Cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2($secretByte, "", "Exportable,PersistKeySet")
+$type = [System.Security.Cryptography.X509Certificates.X509ContentType]::Pfx
+$pfxFileByte = $x509Cert.Export($type, $password)
+
+# Write to a file
+[System.IO.File]::WriteAllBytes("KeyVault.pfx", $pfxFileByte)
+```
+
+### Exempel 3: Hämta alla certifikat som har tagits bort men inte rensats för det här nyckelvalvet.
 ```powershell
 PS C:\> Get-AzKeyVaultCertificate -VaultName 'contoso' -InRemovedState
 
@@ -142,7 +157,7 @@ Id                 : https://contoso.vault.azure.net:443/certificates/test2
 
 Det här kommandot hämtar alla certifikat som tidigare har tagits bort, men inte rensats, i nyckelvalvet Contoso.
 
-### Exempel 3: Hämtar certifikatet MyCert som har tagits bort men inte rensats för det här nyckelvalvet.
+### Exempel 4: Hämtar certifikatet MyCert som har tagits bort men inte rensats för det här nyckelvalvet.
 ```powershell
 PS C:\> Get-AzKeyVaultCertificate -VaultName 'contoso' -Name 'test1' -InRemovedState
 
@@ -185,7 +200,7 @@ Id                 : https://contoso.vault.azure.net:443/certificates/test1/7fe4
 Det här kommandot får certifikatet med namnet "MyCert" som tidigare har tagits bort, men inte rensats, i nyckelvalvet Contoso.
 Det här kommandot returnerar metadata, till exempel borttagningsdatum, och schemalagt rensningsdatum för det här borttagna certifikatet.
 
-### Exempel 4: Listcertifikat med filtrering
+### Exempel 5: Listcertifikat med filtrering
 ```powershell
 PS C:\> Get-AzKeyVaultCertificate -VaultName "ContosoKV01" -Name "test*"
 
@@ -364,7 +379,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
 ## INDATA
 
@@ -392,3 +407,4 @@ Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariab
 
 [Remove-AzKeyVaultCertificate](./Remove-AzKeyVaultCertificate.md)
 
+[Undo-AzKeyVaultSecretCertificate](./Undo-AzKeyVaultSecretCertificate.md)

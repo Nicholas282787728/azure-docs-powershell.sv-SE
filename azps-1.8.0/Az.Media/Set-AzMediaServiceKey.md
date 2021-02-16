@@ -6,48 +6,48 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.media/set-
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Media/Media/help/Set-AzMediaServiceKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Media/Media/help/Set-AzMediaServiceKey.md
-ms.openlocfilehash: e9d117e9e81ee1189031b9e1f2f0a4094e9b9fcf
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: c80c9b411d360de0b46cd051a3f786bb740b26f2
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93915746"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100402362"
 ---
 # Set-AzMediaServiceKey
 
-## Sammanfattning
-Återskapar en nyckeln som används för att komma åt den REST-slutpunkt som är associerad med medie tjänsten.
+## SYNOPSIS
+Återskapar en nyckel som används för åtkomst till REST-slutpunkten som är kopplad till medietjänsten.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 Set-AzMediaServiceKey [-ResourceGroupName] <String> [-AccountName] <String> [-KeyType] <KeyType>
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **set-AzMediaServiceKey** återskapar en nyckeln som används för att öppna den ompresentations tillstånds överföring (rest) som är associerad med medie tjänsten.
+## BESKRIVNING
+Cmdleten **Set-AzMediaServiceKey** återskapar en nyckel som används för åtkomst till REST-slutpunkten (Representational State Transfer) som är kopplad till medietjänsten.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: återskapa den primära nyckeln som används för åtkomst till medie tjänsten
+### Exempel 1: Skapa om primärnyckeln som används för åtkomst till medietjänsten
 ```
 PS C:\>Set-AzMediaServiceKey -ResourceGroupName "ResourceGroup004" -AccountName "MediaService001" -KeyType Primary
 ```
 
-Det här kommandot återskapar primär nyckeln för medie tjänsten som heter MediaService001 som tillhör resurs gruppen med namnet ResourceGroup004.
+Det här kommandot återskapar primärnyckeln för medietjänsten med namnet MediaService001 som tillhör resursgruppen ResourceGroup004.
 
-### Exempel 2: återskapa den sekundära nyckeln som används för åtkomst till medie tjänsten
+### Exempel 2: Återskapar sekundärnyckeln som används för åtkomst till medietjänsten
 ```
 PS C:\>Set-AzMediaServiceKey -ResourceGroupName "Resourcegroup123" -AccountName "MediaService002" -KeyType Secondary
 ```
 
-Det här kommandot återskapar den sekundära nyckeln för medie tjänsten som heter MediaService002 som tillhör resurs gruppen med namnet Resourcegroup123.
+Det här kommandot återskapar sekundärnyckeln för medietjänsten med namnet MediaService002 som tillhör resursgruppen Resourcegroup123.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -AccountName
-Anger namnet på den medie tjänst som denna cmdlet ska återskapa.
+Anger namnet på medietjänsten som cmdleten återskapar.
 
 ```yaml
 Type: System.String
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -76,9 +76,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Värdetyp
-Anger medie tjänstens medietyp.
-De acceptabla värdena för den här parametern är: primär eller sekundär.
+### -KeyType
+Anger nyckeltypen för medietjänsten.
+De godtagbara värdena för den här parametern är: Primär eller Sekundär.
 
 ```yaml
 Type: Microsoft.Azure.Management.Media.Models.KeyType
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Anger namnet på den resurs grupp som innehåller medie tjänsten.
+Anger namnet på resursgruppen som innehåller medietjänsten.
 
 ```yaml
 Type: System.String
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs.
+Visar vad som skulle hända om cmdleten körs.
 Cmdleten körs inte.
 
 ```yaml
@@ -140,20 +140,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. Media. Models. PSServiceKey
+### Microsoft.Azure.Commands.Media.Models.PSServiceKey
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Get-AzMediaServiceKeys](./Get-AzMediaServiceKeys.md)
 
 

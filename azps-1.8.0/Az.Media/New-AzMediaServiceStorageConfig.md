@@ -6,31 +6,31 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.media/new-
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Media/Media/help/New-AzMediaServiceStorageConfig.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Media/Media/help/New-AzMediaServiceStorageConfig.md
-ms.openlocfilehash: 8fb6e4a683decc8b5615a7cf0c8088681578f8ec
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: ec411d7e1afd71849ec2d490ee70eeb0283303ca
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93915762"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100402396"
 ---
 # New-AzMediaServiceStorageConfig
 
-## Sammanfattning
-Skapa en lagrings konto konfiguration för medie tjänstens cmdletar.
+## SYNOPSIS
+Skapa en konfiguration av ett lagringskonto för cmdlets för medietjänsten.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 New-AzMediaServiceStorageConfig [-DefaultProfile <IAzureContextContainer>] [-StorageAccountId] <String>
  [-IsPrimary] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **New-AzMediaServiceStorageConfig** skapar en lagrings konto konfiguration för medie tjänstens cmdletar.
+## BESKRIVNING
+Cmdleten **New-AzMediaServiceStorageConfig** skapar en konfiguration av lagringskonto för cmdlets för medietjänsten.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: skapa en lagrings konto konfiguration för medie tjänstens cmdletar
+### Exempel 1: Skapa en konfiguration för lagringskonto för cmdlets för medietjänster
 ```
 PS C:\>
 $StorageAccount = New-AzStorageAccount -ResourceGroupName $ResourceGroupName -Name "Storage1" -Location "East US" -Type "Standard_GRS"
@@ -38,14 +38,14 @@ $StorageAccount = New-AzStorageAccount -ResourceGroupName $ResourceGroupName -Na
 PS C:\> New-AzMediaServiceStorageConfig -StorageAccountId $StorageAccount.Id -IsPrimary
 ```
 
-Det första kommandot skapar ett lagrings konto objekt genom att använda cmdlet **New-AzStorageAccount** .
-Kommandot namnger detta lagrings konto Storage1 och typen heter Standard_GRS och lagrar resultatet i variabeln som heter $StorageAccount.
-Det andra kommandot skapar ett Storage-konfigurationsobjekt som det primära lagrings kontot som är kopplat till medie tjänsten med hjälp av lagrings konto information som lagras i $StorageAccount variabeln.
+Det första kommandot skapar ett lagringskontoobjekt med cmdleten **New-AzStorageAccount.**
+Kommandot namnger lagringskontot Lagring1 och typen heter Standard_GRS lagrar resultatet i variabeln med namnet $StorageAccount.
+Det andra kommandot skapar ett lagringskonfigurationsobjekt som det primära lagringskonto som är kopplat till medietjänsten med den ID-information för lagringskontot som lagras i den $StorageAccount variabeln.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsPrimary
-Anger att cmdleten skapar lagrings kontot som primär lagring för medie tjänsten.
+Anger att cmdleten skapar lagringskontot som primär lagring för medietjänsten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountId
-Anger ID för lagrings kontot.
+Anger ID för lagringskontot.
 
 ```yaml
 Type: System.String
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs.
+Visar vad som skulle hända om cmdleten körs.
 Cmdleten körs inte.
 
 ```yaml
@@ -121,20 +121,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. Media. Models. PSStorageAccount
+### Microsoft.Azure.Commands.Media.Models.PSStorageAccount
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Sync-AzMediaServiceStorageKeys](./Sync-AzMediaServiceStorageKeys.md)
 
 
