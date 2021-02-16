@@ -6,52 +6,52 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/ne
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzAlertRuleEmail.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/New-AzAlertRuleEmail.md
-ms.openlocfilehash: 30447992cd8159f56ae08d6cb2baf659c9ed7bb4
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: e7ba5bc42e08ce73fcfac5fcbb7ea614a43f2b3e
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93918611"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100397891"
 ---
 # New-AzAlertRuleEmail
 
-## Sammanfattning
-Skapar en e-poståtgärd för en notifieringsregel.
+## SYNOPSIS
+Skapar en e-poståtgärd för en aviseringsregel.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 New-AzAlertRuleEmail [[-CustomEmail] <String[]>] [-SendToServiceOwner]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **New-AzAlertRuleEmail** skapar en e-poståtgärd för en notifieringsregel.
+## BESKRIVNING
+Cmdleten **New-AzAlertRuleEmail** skapar en e-poståtgärd för en aviseringsregel.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: skapa en e-poståtgärd för aviserings regeln för tjänst ägare
+### Exempel 1: Skapa en e-poståtgärd för aviseringsregel för tjänstägare
 ```
 PS C:\>New-AzAlertRuleEmail -SendToServiceOwners
 ```
 
-Det här kommandot skapar en e-poståtgärd för aviserings regeln för att skicka till sina tjänst ägare när en notifieringsregel utlöses.
+Med det här kommandot skapas en e-poståtgärd för aviseringsregel som skickas till dess tjänstägare när en aviseringsregel är en aviseringsregel.
 
-### Exempel 2: skapa en e-poståtgärd för aviserings regeln för icke-tjänste ägare
+### Exempel 2: Skapa en e-poståtgärd för aviseringsregel för ägare som inte är tjänstägare
 ```
 PS C:\>New-AzAlertRuleEmail -CustomEmail pattif@contoso.com,davidchew@contoso.net
 ```
 
-Det här kommandot skapar en e-poståtgärd för aviserings regeln för de angivna e-postadresserna, men inte för tjänste ägarna.
+Med det här kommandot skapas en e-poståtgärd för aviseringsregel för de angivna e-postadresserna, men inte för tjänstägarna.
 
-### Exempel 3: skapa en e-poståtgärd för tjänste ägare och ägare som inte tillhör en aviserings regel
+### Exempel 3: Skapa en e-poståtgärd för aviseringsregel för tjänstägare och icke-tjänstägare
 ```
 PS C:\>New-AzAlertRuleEmail -CustomEmail pattif@contoso.net -SendToServiceOwners
 ```
 
-Det här kommandot skapar en e-poståtgärd för aviserings regeln för den angivna adressen och dess tjänste ägare.
+Med det här kommandot skapas en e-poståtgärd för aviseringsregel för den angivna adressen och för dess tjänstägare.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -CustomEmail
 Anger en lista med kommaavgränsade e-postadresser.
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendToServiceOwner
-Anger att den här åtgärden skickar ett e-postmeddelande till tjänste ägarna när regeln utlöses.
+Anger att den här åtgärden skickar ett e-postmeddelande till tjänstägarna när regeln brandar.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -99,23 +99,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### System. string []
+### System.String[]
 
-### System. Management. Automation. SwitchParameter
+### System.Management.Automation.SwitchParameter
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. Management. Monitoring. Management. Models. RuleEmailAction
+### Microsoft.Azure.Management.monitor.Management.Models.ruleemailAction
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Add-AzLogAlertRule](./Add-AzLogAlertRule.md)
 
 [Add-AzMetricAlertRule](./Add-AzMetricAlertRule.md)
 
