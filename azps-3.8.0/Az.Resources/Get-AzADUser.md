@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzADUser.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzADUser.md
-ms.openlocfilehash: d0391b47e4060b2b93206c8e4d2722ca682a0db4
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 80df38532d5d5ce14b27f40bed04678e80752fca
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "93927370"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100407003"
 ---
 # Get-AzADUser
 
-## Sammanfattning
+## SYNOPSIS
 Filtrerar Active Directory-användare.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### EmptyParameterSet (standard)
 ```
@@ -56,47 +56,47 @@ Get-AzADUser -Mail <String> [-DefaultProfile <IAzureContextContainer>] [-Include
  [-First <UInt64>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
+## BESKRIVNING
 Filtrerar Active Directory-användare.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1 – Visa alla användare
+### Exempel 1 – Lista alla användare
 
 ```
 PS C:\> Get-AzADUser
 ```
 
-Visar alla AD-användare i en klient organisation.
+Listar alla AD-användare i en klientorganisation.
 
-### Exempel 2 – Visa alla användare som använder sid indelning
+### Exempel 2 : Lista alla användare med hjälp av sidinring
 
 ```
 PS C:\> Get-AzADUser -First 100
 ```
 
-Visar de första 100 AD-användarna i en klient organisation.
+Visar de första 100 AD-användarna i en klientorganisation.
 
-### Exempel 3 – få annons användare via användarens huvud namn
+### Exempel 3 – Hämta AD-användare efter huvudnamn
 
 ```
 PS C:\> Get-AzADUser -UserPrincipalName foo@domain.com
 ```
 
-Får AD-användare med UPN " foo@domain.com ".
+Hämtar AD-användaren med huvudnamnet " foo@domain.com ".
 
-### Exempel 4-lista efter Sök sträng
+### Exempel 4 : Lista efter söksträng
 
 ```
 PS C:\> Get-AzADUser -SearchString Joe
 ```
 
-Visar alla AD-användare vars visnings namn börjar med "Johan".
+Här listas alla AD-användare vars visningsnamn börjar med "Johan".
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-Användarens visnings namn.
+Användarens visningsnamn.
 
 ```yaml
 Type: System.String
@@ -125,7 +125,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -E-post
+### -Mail
 Användarens e-post.
 
 ```yaml
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartsWith
-Används för att hitta användare som börjar med angiven sträng.
+Används för att hitta användare som börjar med den angivna strängen.
 
 ```yaml
 Type: System.String
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-Användarens UPN.
+ANVÄNDARENs UPN.
 
 ```yaml
 Type: System.String
@@ -198,7 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeTotalCount
-Rapporterar antalet objekt i data uppsättningen. För närvarande tar den här parametern ingenting.
+Rapporterar antalet objekt i datauppsättningen. För närvarande gör den här parametern ingenting.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -212,8 +212,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Hoppa över
-Ignorerar de första N objekten och hämtar sedan återstående objekt.
+### -Skip
+Ignorerar de första N-objekten och hämtar sedan de återstående objekten.
 
 ```yaml
 Type: System.UInt64
@@ -227,8 +227,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Först
-Det maximala antalet objekt som ska returneras.
+### -First
+Maximalt antal objekt som ska returneras.
 
 ```yaml
 Type: System.UInt64
@@ -243,23 +243,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. ActiveDirectory. PSADUser
+### Microsoft.Azure.Commands.ActiveDirectory.PSADUser
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
 [New-AzADUser](./New-AzADUser.md)
 
-[Set-AzADUser](./Set-AzADUser.md)
 
 [Remove-AzADUser](./Remove-AzADUser.md)
 

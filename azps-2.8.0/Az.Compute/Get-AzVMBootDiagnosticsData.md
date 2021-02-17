@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.compute/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Get-AzVMBootDiagnosticsData.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Compute/Compute/help/Get-AzVMBootDiagnosticsData.md
-ms.openlocfilehash: 94e5a1087f870f8dbbe099962e69d83b64f52ed3
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: ee210b5b9408f3de2b9e92213fafe4846ea8c3e1
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93745179"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100407105"
 ---
 # Get-AzVMBootDiagnosticsData
 
-## Sammanfattning
-Hämtar startdiagnostik-data för en virtuell dator.
+## SYNOPSIS
+Hämtar diagnostikdata för start för en virtuell dator.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### WindowsParamSet (standard)
 ```
@@ -32,24 +32,24 @@ Get-AzVMBootDiagnosticsData [-ResourceGroupName] <String> [-Name] <String> [-Lin
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Get-AzVMBootDiagnosticsData** hämtar startdiagnostik-data för en virtuell dator.
+## BESKRIVNING
+Cmdleten **Get-AzVMBootDiagnosticsData** hämtar startdiagnostikdata för en virtuell dator.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: Hämta data från startdiagnostik
+### Exempel 1: Hämta diagnostikdata för start
 ```
 PS C:\> Get-AzVMBootDiagnosticsData -ResourceGroupName "ResourceGroup11" -Name "ContosoVM07" -Windows -LocalPath "C:\Contoso\BootDiagnostics"
 ```
 
-Det här kommandot får Boot Diagnostics-data för den virtuella datorn med namnet ContosoVM07.
-Denna virtuella dator kör operativ systemet Windows.
-Kommandot lagrar data i angiven lokal sökväg.
+Det här kommandot hämtar diagnostikdata för start för den virtuella datorn som heter ContosoVM07.
+Den här virtuella datorn kör Windows-operativsystemet.
+Kommandot lagrar data i den angivna lokala sökvägen.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifterna, kontot, klientorganisationen och prenumerationen som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalPath
-Anger den lokala sökvägen för startdiagnostikens data.
+Anger den lokala sökvägen för startdiagnostikdata.
 
 ```yaml
 Type: System.String
@@ -105,8 +105,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Namn
-Anger namnet på den virtuella dator för vilken denna cmdlet hämtar diagnostikdata.
+### -Name
+Anger namnet på den virtuella datorn som den här cmdleten hämtar diagnostikdata för.
 
 ```yaml
 Type: System.String
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Anger namnet på den virtuella datorns resurs grupp.
+Anger namnet på resursgruppen för den virtuella datorn.
 
 ```yaml
 Type: System.String
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -Windows
-Anger att operativ systemet Windows körs på den virtuella datorn.
+Anger att den virtuella datorn kör Windows-operativsystemet.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -151,22 +151,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. Compute. Models. PSVirtualMachine
+### Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine
 
-### Microsoft. Azure. commands. Compute. Models. PSVirtualMachineInstanceView
+### Microsoft.Azure.Commands.Compute.Models.PSVirtualMachineInstanceView
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Set-AzVMBootDiagnostics](./Set-AzVMBootDiagnostics.md)
+[Set-AzVMBootDiagnostic](./Set-AzVMBootDiagnostic.md)
 
 

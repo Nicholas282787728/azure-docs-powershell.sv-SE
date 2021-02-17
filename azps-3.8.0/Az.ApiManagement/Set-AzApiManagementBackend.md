@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Set-AzApiManagementBackend.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Set-AzApiManagementBackend.md
-ms.openlocfilehash: 30947e52e5a7afaa8bf2890b95f48f6bb6f36bce
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 8631120178a256aa1ec5b817727f9362f6d8f076
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94091585"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100407292"
 ---
 # Set-AzApiManagementBackend
 
-## Sammanfattning
-Uppdaterar en server del.
+## SYNOPSIS
+Uppdaterar en backend.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### ContextParameterSet (standard)
 ```
@@ -38,22 +38,22 @@ Set-AzApiManagementBackend -InputObject <PsApiManagementBackend> [-Protocol <Str
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Uppdaterar en befintlig server del i API-hanteringen.
+## BESKRIVNING
+Uppdaterar en befintlig backend i API-hantering.
 
-## BESKRIVS
+## EXEMPEL
 
-### Uppdaterar beskrivningen av Server delen 123
+### Uppdaterar beskrivningen av Backend 123
 ```powershell
 PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
 PS C:\>Set-AzApiManagementBackend -Context $apimContext -BackendId 123 -Description "updated description" -PassThru
 ```
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -BackendId
-Identifierare för ny server.
-Denna parameter är obligatorisk.
+Identifierare för ny backend.
+Den här parametern är obligatorisk.
 
 ```yaml
 Type: System.String
@@ -67,9 +67,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Kontext
+### -Sammanhang
 Instans av PsApiManagementContext.
-Denna parameter är obligatorisk.
+Den här parametern är obligatorisk.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -83,9 +83,9 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -Autentiseringsuppgift
-Autentiseringsuppgifter som ska användas när du pratar med Server delen.
-Denna parameter är valfri.
+### -Credential
+Autentiseringsinformation som ska användas när du talar med backend.
+Den här parametern är valfri.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackendCredential
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifterna, kontot, klientorganisationen och prenumerationen som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -115,8 +115,8 @@ Accept wildcard characters: False
 ```
 
 ### -Beskrivning
-Server delens beskrivning.
-Denna parameter är valfri.
+Beskrivning av backend.
+Den här parametern är valfri.
 
 ```yaml
 Type: System.String
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Instans av PsApiManagementBackend. Denna parameter är obligatorisk.
+Instans av PsApiManagementBackend. Den här parametern är obligatorisk.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackend
@@ -160,8 +160,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Protokoll
-Backend Communication Protocol (http eller SOAP).
+### -Protocol
+Backend Communication Protocol (http eller soap).
 Den här parametern är valfri
 
 ```yaml
@@ -178,8 +178,8 @@ Accept wildcard characters: False
 ```
 
 ### -Proxy
-Information om proxyserver för användning när du skickar begäran till Server delen.
-Denna parameter är valfri.
+Proxyserverinformation som ska användas när begäran skickas till serverbackend.
+Den här parametern är valfri.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackendProxy
@@ -194,9 +194,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Hanterings-URI för resursen i det externa systemet.
-Denna parameter är valfri.
-URL-adressen kan vara resurs-ID för logiska appar, Function-appar eller API-appar.
+Hanterings-Uri för resursen i externt system.
+Den här parametern är valfri.
+Den här URL:en kan vara armresurs-ID för logikappar, funktionsappar eller API-program.
 
 ```yaml
 Type: System.String
@@ -211,7 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceFabricCluster
-Information om tjänstens infrastruktur Server. Denna parameter är valfri.
+Backend-information om servicekluster. Den här parametern är valfri.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementServiceFabric
@@ -226,8 +226,8 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateChainValidation
-Om du vill hoppa över verifiering av certifikat kedjan när du pratar med Server delen.
-Denna parameter är valfri.
+Om du vill hoppa över certifikatkedjeverifiering när du talar med backend.
+Den här parametern är valfri.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -242,8 +242,8 @@ Accept wildcard characters: False
 ```
 
 ### -SkipCertificateNameValidation
-Om du vill hoppa över verifiering av certifikat namn när du pratar med Server delen.
-Denna parameter är valfri.
+Om du vill hoppa över verifiering av certifikatnamn när du talar med backend.
+Den här parametern är valfri.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -257,9 +257,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Rubrik
-Rubrik på Server delen.
-Denna parameter är valfri.
+### -Titel
+Backend-titel.
+Den här parametern är valfri.
 
 ```yaml
 Type: System.String
@@ -274,8 +274,8 @@ Accept wildcard characters: False
 ```
 
 ### -URL
-Runtime-URL för Server delen.
-Denna parameter är valfri.
+Körnings-URL för backend.
+Den här parametern är valfri.
 
 ```yaml
 Type: System.String
@@ -290,7 +290,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -305,7 +305,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs. Cmdleten körs inte.
+Visar vad som skulle hända om cmdleten körs. Cmdleten körs inte.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -320,33 +320,33 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### Microsoft. Azure. commands. ApiManagement. ServiceManagement. Models. PsApiManagementContext
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsapiManagementContext
 
-### System. String
+### System.String
 
-### System. Nullable ' 1 [[system. Boolean, system. privat. CoreLib, version = 4.0.0.0, Culture = neutralt, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Nullable'1[[System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-### Microsoft. Azure. commands. ApiManagement. ServiceManagement. Models. PsApiManagementBackendCredential
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackendCredential
 
-### Microsoft. Azure. commands. ApiManagement. ServiceManagement. Models. PsApiManagementBackendProxy
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackendProxy
 
-### Microsoft. Azure. commands. ApiManagement. ServiceManagement. Models. PsApiManagementServiceFabric
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementServiceFabric
 
-### System. Management. Automation. SwitchParameter
+### System.Management.Automation.SwitchParameter
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. ApiManagement. ServiceManagement. Models. PsApiManagementBackend
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackend
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Get-AzApiManagementBackend](./Get-AzApiManagementBackend)
+[Get-AzApiManagementBackend](./Get-AzApiManagementBackend.md)
 
 [New-AzApiManagementBackend](./New-AzApiManagementBackend.md)
 
