@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzExpressRouteCircuitRouteTable.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzExpressRouteCircuitRouteTable.md
-ms.openlocfilehash: bb6ffb1537a5beb6a845bbad742b864360da55d1
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: c7b4f51e868522533756534b52fd0b0cf5c17f0c
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93918766"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100401291"
 ---
 # Get-AzExpressRouteCircuitRouteTable
 
-## Sammanfattning
-Hämtar en routningstabell från en ExpressRoute-krets.
+## SYNOPSIS
+Hämtar en routetabell från en ExpressRoute-krets.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 Get-AzExpressRouteCircuitRouteTable -ResourceGroupName <String> -ExpressRouteCircuitName <String>
@@ -26,20 +26,20 @@ Get-AzExpressRouteCircuitRouteTable -ResourceGroupName <String> -ExpressRouteCir
  [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Get-AzExpressRouteCircuitRouteTable** hämtar en detaljerad vägkälla för en ExpressRoute-krets. Routningstabellen visar alla vägar eller kan filtreras för att Visa vägar för en viss peering-typ. Du kan använda routningstabellen för att validera din konfiguration och anslutnings barhet för din peering.
+## BESKRIVNING
+Cmdleten **Get-AzExpressRouteCircuitRouteTable** hämtar en detaljerad routetabell av en ExpressRoute-krets. I tabellen Route visas alla vägar eller kan filtreras för att visa routes för en viss peeringtyp. Du kan använda routetabellen för att verifiera din peeringkonfiguration och anslutning.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: Visa routningstabellen för den primära sökvägen
+### Exempel 1: Visa routetabellen för den primära sökvägen
 ```
 Get-AzExpressRouteCircuitRouteTable -ResourceGroupName $RG -ExpressRouteCircuitName $CircuitName -DevicePath 'Primary'
 ```
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifterna, kontot, klientorganisationen och prenumerationen som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -DevicePath
-De acceptabla värdena för denna parameter är: `Primary` eller `Secondary`
+Godtagbara värden för den här parametern är: `Primary` eller `Secondary`
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.DevicePathEnum
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpressRouteCircuitName
-Namnet på den ExpressRoute-krets som unders öks.
+Namnet på ExpressRoute-kretsen som undersöks.
 
 ```yaml
 Type: System.String
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -PeeringType
-De acceptabla värdena för den här parametern är: `AzurePrivatePeering` , `AzurePublicPeering` och `MicrosoftPeering`
+De godkända värdena för den här parametern är: `AzurePrivatePeering` `AzurePublicPeering` , och `MicrosoftPeering`
 
 ```yaml
 Type: System.String
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Namnet på resurs gruppen som innehåller ExpressRoute-kretsen.
+Namnet på resursgruppen som innehåller ExpressRoute-kretsen.
 
 ```yaml
 Type: System.String
@@ -116,17 +116,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. Networks. Models. PSExpressRouteCircuitRoutesTable
+### Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuitRoutesTable
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
@@ -134,4 +134,4 @@ Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,
 
 [Get-AzExpressRouteCircuitRouteTableSummary](Get-AzExpressRouteCircuitRouteTableSummary.md)
 
-[Get-AzExpressRouteCircuitStats](Get-AzExpressRouteCircuitStats.md)
+[Get-AzExpressRouteCircuitStat](Get-AzExpressRouteCircuitStat.md)
