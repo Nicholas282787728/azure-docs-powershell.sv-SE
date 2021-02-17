@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Get-AzApiManagementApiVersionSet.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/Get-AzApiManagementApiVersionSet.md
-ms.openlocfilehash: 2b87f3b0716c95f27a78c2a0f59168f133ade015
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 01950e8f12cdefb3bb68ab98ec8e11072c30562d
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94089673"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100407751"
 ---
 # Get-AzApiManagementApiVersionSet
 
-## Sammanfattning
-Få information om API-versions uppsättningarna
+## SYNOPSIS
+Visa information om API-versionsuppsättningarna
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### ContextParameterSet (standard)
 ```
@@ -31,14 +31,14 @@ Get-AzApiManagementApiVersionSet -Context <PsApiManagementContext> [-ApiVersionS
  -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Get-AzApiManagementApiVersionSet** hämtar information om API-versions uppsättningarna som kon figurer ATS i en API-hanterings kontext.
+## BESKRIVNING
+Cmdleten **Get-AzApiManagementApiVersionSet** hämtar information om API-versionsuppsättningar som konfigurerats i ett API-hanteringssammanhang.
 
-## BESKRIVS
+## EXEMPEL
 
 ### Exempel 1
 
-### Exempel 1: Hämta alla API-versioner
+### Exempel 1: Hämta alla API-versionsuppsättningar
 ```powershell
 PS C:\>$ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
 PS C:\>Get-AzApiManagementApiVersionSet -Context $ApiMgmtContext
@@ -75,9 +75,9 @@ ResourceGroupName : Api-Default-WestUS
 ServiceName       : contoso
 ```
 
-Det här kommandot får alla API-versioner för angiven kontext.
+Med det här kommandot får du alla API-versionsuppsättningar för det angivna sammanhanget.
 
-### Exempel 2: Hämta en API-version utifrån ID
+### Exempel 2: Hämta en API-version som angetts av ID
 ```powershell
 PS C:\>$ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
 PS C:\>Get-AzApiManagementApiVersionSet -Context $ApiMgmtContext -ApiVersionSetId $ApiVersionSetId
@@ -93,13 +93,13 @@ ResourceGroupName : Api-Default-WestUS
 ServiceName       : contoso
 ```
 
-Det här kommandot får API-versionen inställd med angivet ID.
+Det här kommandot får API-versionsuppsättningen med det angivna ID:t.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -ApiVersionSetId
 API-identifierare att leta efter.
-Om det här alternativet anges kommer API: t att hämtas via ID.
+Om detta anges försöker du få API:t av Id.
 
 ```yaml
 Type: System.String
@@ -113,9 +113,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Kontext
+### -Sammanhang
 Instans av PsApiManagementContext.
-Denna parameter är obligatorisk.
+Den här parametern är obligatorisk.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Arm-resurs-ID för ApiVersionSet. Om det här alternativet är angivet försöker apiVersionSet efter ID. Denna parameter är obligatorisk.
+Arm Resource Identifier för ApiVersionSet. Om detta anges försöker du hitta apiVersionSet med identifieraren. Den här parametern är obligatorisk.
 
 ```yaml
 Type: System.String
@@ -160,24 +160,24 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### Microsoft. Azure. commands. ApiManagement. ServiceManagement. Models. PsApiManagementContext
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsapiManagementContext
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. ApiManagement. ServiceManagement. Models. PsApiManagementApiVersionSet
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsapiManagementApiVersionSet
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[New-AzApiManagementApiVersionSet](./New-AzApiManagementApiVersionSet.md)
+[New-AzapiManagementApiVersionSet](./New-AzApiManagementApiVersionSet.md)
 
-[Remove-AzApiManagementApiSet](./Remove-AzApiManagementApiVersionSet.md)
+[Remove-AzapiManagementApiSet](./Remove-AzApiManagementApiVersionSet.md)
 
-[Set-AzApiManagementApiVersionSet](./Set-AzApiManagementApiSet.md)
+[Set-AzapiManagementApiVersionSet](./Set-AzApiManagementApiVersionSet.md)
