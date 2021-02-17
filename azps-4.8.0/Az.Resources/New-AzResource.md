@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/New-AzResource.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/New-AzResource.md
-ms.openlocfilehash: 0c4f351ca224991862e6b050462270fd64fd2a33
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: eea8d72285e478f9eecb0a34f80cae5787ecec83
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94102571"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100405303"
 ---
 # New-AzResource
 
-## Sammanfattning
+## SYNOPSIS
 Skapar en resurs.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### ByResourceId (standard)
 ```
@@ -46,19 +46,19 @@ New-AzResource [-Location <String>] [-Kind <String>] [-Properties <PSObject>] [-
  [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **New-AzResource** skapar en Azure-resurs, till exempel en webbplats, en Azure SQL-databas eller en Azure SQL-databas, i en resurs grupp.
+## BESKRIVNING
+Cmdleten **New-AzResource** skapar en Azure-resurs, till exempel en webbplats, Azure SQL Database-server eller Azure SQL Database, i en resursgrupp.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: skapa en resurs
+### Exempel 1: Skapa en resurs
 ```
 PS> New-AzResource -Location "West US" -Properties @{test="test"} -ResourceName TestSite06 -ResourceType microsoft.web/sites -ResourceGroupName ResourceGroup11 -Force
 ```
 
-Det här kommandot skapar en resurs som är en webbplats i ResourceGroup11.
+Med det här kommandot skapas en resurs som är en webbplats i ResourceGroup11.
 
-### Exempel 2: skapa en resurs med splatting
+### Exempel 2: Skapa en resurs med splatting
 ```
 PS> $prop = @{
     Location          = "West US" 
@@ -72,12 +72,12 @@ PS> $prop = @{
 PS> New-AzResource @prop
 ```
 
-Det här kommandot skapar en resurs som är en webbplats i ResourceGroup11.
+Med det här kommandot skapas en resurs som är en webbplats i ResourceGroup11.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -ApiVersion
-Anger vilken version av API för Resource provider som ska användas. Om du inte anger en version använder denna cmdlet den senaste tillgängliga versionen.
+Anger vilken version av API:t för resursleverantören som ska användas. Om du inte anger en version använder den här cmdleten den senaste tillgängliga versionen.
 
 ```yaml
 Type: System.String
@@ -91,8 +91,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-Kör cmdlet i bakgrunden
+### -As Ent
+Kör cmdleten i bakgrunden
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionResourceName
-Anger namnet på en tilläggs resurs för resursen. Om du till exempel vill ange en databas använder du följande format: Server namn `/` databas namn
+Anger namnet på en tilläggsresurs för resursen. Om du till exempel vill ange en databas använder du följande format: servernamn `/` databasnamn
 
 ```yaml
 Type: System.String
@@ -137,8 +137,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionResourceType
-Anger resurs typen för en tilläggs resurs.
-Om tilläggs resursen till exempel är en databas anger du följande typ: `Microsoft.Sql/Servers/Databases`
+Anger resurstypen för en tilläggsresurs.
+Om tilläggsresursen till exempel är en databas anger du följande typ: `Microsoft.Sql/Servers/Databases`
 
 ```yaml
 Type: System.String
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Tvingar kommandot att köras utan att fråga efter bekräftelse.
+Tvingar kommandot att köras utan att användaren uppmanas att bekräfta.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsFullObject
-Anger att det objekt som parametern *Egenskaper* anger är det fullständiga objektet.
+Anger att objektet som *egenskapsparametern* anger är det fullständiga objektet.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -183,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### -Sort
-Anger resurs typen för resursen.
+Anger resursens resurs sorts.
 
 ```yaml
 Type: System.String
@@ -198,9 +198,9 @@ Accept wildcard characters: False
 ```
 
 ### -Plats
-Anger platsen för resursen.
-Ange plats för data Center, till exempel Central USA eller Sydostasien.
-Du kan lägga till en resurs på alla platser som stöder resurser av den typen. Resurs grupper kan innehålla resurser från olika platser. Om du vill ta reda på vilka platser som har stöd för varje resurs typ använder du Get-AzLocation cmdlet.
+Anger resursens plats.
+Ange datacenterplats, till exempel Centrala USA eller Sydostasien.
+Du kan placera en resurs på valfri plats som har stöd för resurser av den typen. Resursgrupper kan innehålla resurser från olika platser. Använd cmdleten för att avgöra vilka platser som stöder Get-AzLocation varje resurstyp.
 
 ```yaml
 Type: System.String
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -ODataQuery
-Anger ett filter för Open data Protocol (OData). Denna cmdlet lägger till det här värdet till begäran utöver eventuella andra filter.
+Anger ett formatfilter för Open Data Protocol (OData). Den här cmdleten lägger till det här värdet i begäran utöver eventuella andra filter.
 
 ```yaml
 Type: System.String
@@ -229,8 +229,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Planera
-En hash-tabell som representerar egenskaper för resurs plan.
+### -Abonnemang
+En hash-tabell som representerar egenskaper för resursplan.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -244,8 +244,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -För
-Visar att denna cmdlet betraktar för hands version API-versioner när den automatiskt avgör vilken version som ska användas.
+### -Pre
+Anger att denna cmdlet tar hänsyn till förhandsversioner av API-versioner när den automatiskt avgör vilken version som ska användas.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -259,8 +259,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Egenskaper
-Anger resurs egenskaper för resursen. Använd den här parametern för att ange värden för egenskaper som är specifika för en resurs typ.
+### -Properties
+Anger resursens resursegenskaper. Använd den här parametern för att ange värden för egenskaper som är specifika för en resurstyp.
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -275,7 +275,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Anger namnet på resurs gruppen där denna cmdlet skapar resursen.
+Anger namnet på den resursgrupp där den här cmdleten skapar resursen.
 
 ```yaml
 Type: System.String
@@ -290,7 +290,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Anger fullständigt resurs-ID, inklusive prenumerationen, som i följande exempel: `/subscriptions/` prenumerations-ID`/providers/Microsoft.Sql/servers/ContosoServer/databases/ContosoDatabase`
+Anger det fullständigt kvalificerade resurs-ID:t, inklusive prenumerationen, som i följande exempel: `/subscriptions/` prenumerations-ID`/providers/Microsoft.Sql/servers/ContosoServer/databases/ContosoDatabase`
 
 ```yaml
 Type: System.String
@@ -305,7 +305,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceName
-Anger namnet på resursen. Om du till exempel vill ange en databas använder du följande format: `ContosoServer/ContosoDatabase`
+Anger resursens namn. Om du till exempel vill ange en databas ska du använda följande format: `ContosoServer/ContosoDatabase`
 
 ```yaml
 Type: System.String
@@ -320,8 +320,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceType
-Anger typen av resurs.
-För en databas är exempelvis resurs typen följande: `Microsoft.Sql/Servers/Databases`
+Anger resursens typ.
+För en databas är resurstypen till exempel följande: `Microsoft.Sql/Servers/Databases`
 
 ```yaml
 Type: System.String
@@ -350,8 +350,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Tagg
-Par med nyckelord i form av en hash-tabell. Till exempel: @ {key0 = "value0"; KEY1 = $null; key2 = "värde2"}
+### -Tag
+Nyckelvärdepar i form av en hash-tabell. Exempel: @{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -366,7 +366,7 @@ Accept wildcard characters: False
 ```
 
 ### -TenantLevel
-Anger att denna cmdlet fungerar på klient nivån.
+Anger att denna cmdlet fungerar på klientorganisationsnivå.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -381,7 +381,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -396,7 +396,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs.
+Visar vad som skulle hända om cmdleten körs.
 Cmdleten körs inte.
 
 ```yaml
@@ -412,23 +412,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### System. Collections. hash
+### System.Collections.Hashtable
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### System. Management. Automation. PSObject
+### System.Management.Automation.PSObject
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Sök-AzResource](./Find-AzResource.md)
 
 [Get-AzResource](./Get-AzResource.md)
 

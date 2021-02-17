@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/ne
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzApplicationGateway.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzApplicationGateway.md
-ms.openlocfilehash: 46eb4979c62a5c1f2cb8277ddc1461ee09a339c7
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: d78daedb0d8e5b8767e596316d7da8d252b59805
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94092572"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100405184"
 ---
 # New-AzApplicationGateway
 
-## Sammanfattning
-Skapar en Programgateway.
+## SYNOPSIS
+Skapar en programgateway.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### IdentityByUserAssignedIdentityId (standard)
 ```
@@ -113,21 +113,21 @@ New-AzApplicationGateway -Name <String> -ResourceGroupName <String> -Location <S
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **New-AzApplicationGateway** skapar en Azure Application Gateway.
-En Programgateway kräver följande:
-- En resurs grupp.
+## BESKRIVNING
+Cmdleten **New-AzApplicationGateway** skapar en Azure-programgateway.
+En programgateway kräver följande:
+- En resursgrupp.
 - Ett virtuellt nätverk.
-- Backend-serverpoolen med IP-adresser till backend-servrarna.
-- Backend-inställningar för serverpoolen. Varje pool har inställningar som port, protokoll och cookie-baserad tillhörighet, som tillämpas på alla servrar i poolen.
-- Front-IP-adresser, som är de IP-adresser som öppnas på programgatewayen. En front-IP-adress kan vara en offentlig IP-adress eller en intern IP-adress.
-- Front portar, vilka är de offentliga portar som öppnas på programgatewayen. Trafik som träffar dessa portar omdirigeras till backend-servrarna.
-- En regel för anslutningsbegäran som binder lyssnaren och backend-serverpoolen. Regeln definierar vilken backend-server som trafiken ska omdirigeras till när den träffar en viss lyssnare.
-En lyssnare har frontend-port, front-end IP Address, Protocol (HTTP eller HTTPS) och SSL (Secure Sockets Layer), certifikat namn (om du konfigurerar SSL Offload).
+- En serverpool för serverbackend som innehåller IP-adresserna för backend-servrarna.
+- Serverpoolinställningar i serverbackend. Varje pool har inställningar som port, protokoll och cookiebaserad tillhörighet, som tillämpas på alla servrar i poolen.
+- FRONTEND IP-adresser, som är de IP-adresser som öppnas på programmets gateway. En IP-adress på framsidan kan vara en offentlig IP-adress eller en intern IP-adress.
+- Frontend-portar, som är de offentliga portarna som öppnas på programmets gateway. Trafik som träffar i dessa portar omdirigeras till backend-servrarna.
+- En routningsregel för begäran som binder lyssnaren och serverpoolen på serverservern. Regeln definierar vilken serverpool i serverservern som trafiken ska dirigeras till när den träffar en viss lyssnare.
+Lyssnaren har en klientport, ip-adress på klientsidan, protokoll (HTTP eller HTTPS) och ett SSL-certifikatnamn (SSL (Secure Sockets Layer) (SSL) (om SSL-offload konfigureras).
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: skapa en Programgateway
+### Exempel 1: Skapa en programgateway
 ```
 PS C:\> $ResourceGroup = New-AzResourceGroup -Name "ResourceGroup01" -Location "West US" -Tag @{Name = "Department"; Value = "Marketing"} 
 PS C:\> $Subnet = New-AzVirtualNetworkSubnetConfig -Name "Subnet01" -AddressPrefix 10.0.0.0/24
@@ -147,28 +147,28 @@ PS C:\> $Sku = New-AzApplicationGatewaySku -Name "Standard_Small" -Tier Standard
 PS C:\> $Gateway = New-AzApplicationGateway -Name "AppGateway01" -ResourceGroupName "ResourceGroup01" -Location "West US" -BackendAddressPools $Pool -BackendHttpSettingsCollection $PoolSetting -FrontendIpConfigurations $FrontEndIpConfig  -GatewayIpConfigurations $GatewayIpConfig -FrontendPorts $FrontEndPort -HttpListeners $Listener -RequestRoutingRules $Rule -Sku $Sku
 ```
 
-I följande exempel skapas en Programgateway genom att först skapa en resurs grupp och ett virtuellt nätverk:
-- Backend-serverpoolen
-- Server poolinställningarna
-- Front portar
-- Front-IP-adresser
-- En regel för en anslutningsbegäran de fyra kommandona skapar ett virtuellt nätverk.
-Det första kommandot skapar en under nätverks konfiguration.
+I följande exempel skapas en programgateway genom att först skapa en resursgrupp och ett virtuellt nätverk, samt följande:
+- En serverpool i serverbackend
+- Serverpoolinställningar i serverbackend
+- Frontend-portar
+- IP-adresser på frontend
+- En regel för routning av begäran Dessa fyra kommandon skapar ett virtuellt nätverk.
+Det första kommandot skapar en undernätskonfiguration.
 Det andra kommandot skapar ett virtuellt nätverk.
-Det tredje kommandot verifierar nät konfiguration och det fjärde kommandot verifierar att det virtuella nätverket har skapats.
-Med följande kommandon skapas programgatewayen.
-Det första kommandot skapar en IP-konfiguration med namnet GatewayIp01 för under nätet som skapades.
-Det andra kommandot skapar en backend-grupppool med namnet Pool01 med en lista över backend-IP-adresser och lagrar poolen i $Pool variabel.
-Det tredje kommandot skapar inställningarna för backend-serverpoolen och lagrar inställningarna i $PoolSetting variabeln.
-Med kommandot tillbaka skapar du en front port på port 80, namnger den FrontEndPort01 och lagrar porten i $FrontEndPort variabel.
-Det femte kommandot skapar en offentlig IP-adress genom att använda New-AzPublicIpAddress.
-Det sjätte kommandot skapar en front-IP-konfiguration med $PublicIp, namnger den FrontEndPortConfig01 och lagrar den i $FrontEndIpConfig-variabeln.
-Med det sjunde kommandot skapas en lyssnare med den tidigare skapade $FrontEndIpConfig $FrontEndPort.
-Med kommandot åtto skapas en regel för lyssnaren.
-Med det nionde kommandot anges SKU.
-Det tionde kommandot skapar en gateway med de objekt som anges med föregående kommandon.
+Det tredje kommandot verifierar undernätets konfiguration och det fjärde kommandot verifierar att det virtuella nätverket har skapats korrekt.
+Följande kommandon skapar programmets gateway.
+Det första kommandot skapar en IP-konfiguration med namnet GatewayIp01 för undernätet som skapades tidigare.
+Det andra kommandot skapar en serverpool för serverbackend med namnet Pool01 med en lista över IP-adresser i backend och lagrar poolen i $Pool variabeln.
+Det tredje kommandot skapar inställningarna för serverpoolen i backend och lagrar inställningarna i $PoolSetting variabeln.
+Det fjärde kommandot skapar en frontend-port på port 80, ger den namnet FrontEndPort01 och lagrar porten i $FrontEndPort variabeln.
+Det femte kommandot skapar en offentlig IP-adress med hjälp av New-AzPublicIpAddress.
+Det sjätte kommandot skapar en IP-konfiguration på framsidan med $PublicIp, ger den namnet FrontEndPortConfig01 och lagrar den i $FrontEndIpConfig variabeln.
+Det sjunde kommandot skapar en lyssnare med det tidigare skapade $FrontEndIpConfig $FrontEndPort.
+Det åttonde kommandot skapar en regel för lyssnaren.
+Det nionde kommandot anger SKU.
+Det tionde kommandot skapar gatewayen med objekten som ställts in med föregående kommandon.
 
-### Exempel 2: skapa en Programgateway med UserAssigned identitet
+### Exempel 2: Skapa en programgateway med UserAssigned Identity
 ```
 PS C:\> $ResourceGroup = New-AzResourceGroup -Name "ResourceGroup01" -Location "West US" -Tag @{Name = "Department"; Value = "Marketing"} 
 PS C:\> $Subnet = New-AzVirtualNetworkSubnetConfig -Name "Subnet01" -AddressPrefix 10.0.0.0/24
@@ -190,10 +190,10 @@ PS C:\> $AppgwIdentity = New-AzApplicationGatewayIdentity -UserAssignedIdentity 
 PS C:\> $Gateway = New-AzApplicationGateway -Name "AppGateway01" -ResourceGroupName "ResourceGroup01" -Location "West US" -Identity $AppgwIdentity -BackendAddressPools $Pool -BackendHttpSettingsCollection $PoolSetting -FrontendIpConfigurations $FrontEndIpConfig  -GatewayIpConfigurations $GatewayIpConfig -FrontendPorts $FrontEndPort -HttpListeners $Listener -RequestRoutingRules $Rule -Sku $Sku
 ```
 
-## MALLPARAMETRAR
+## PARAMETERS
 
-### -AsJob
-Kör cmdlet i bakgrunden
+### -As Ent fån
+Kör cmdleten i bakgrunden
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthenticationCertificates
-Anger autentiseringscertifikat för programgatewayen.
+Anger autentiseringscertifikat för programmets gateway.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayAuthenticationCertificate[]
@@ -223,7 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoscaleConfiguration
-Autoskalans konfiguration
+Konfiguration av automatisk skalning
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayAutoscaleConfiguration
@@ -238,7 +238,7 @@ Accept wildcard characters: False
 ```
 
 ### -BackendAddressPools
-Anger listan över backend-adresspooler för programgatewayen.
+Anger listan över adresspooler för backend för programgatewayen.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendAddressPool[]
@@ -253,7 +253,7 @@ Accept wildcard characters: False
 ```
 
 ### -BackendHttpSettingsCollection
-Anger listan över backend-HTTP-inställningar för programgatewayen.
+Anger listan med HTTP-inställningar för backend för programgatewayen.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendHttpSettings[]
@@ -268,7 +268,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomErrorConfiguration
-Kund fel för en Programgateway
+Kundfel av en programgateway
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayCustomError[]
@@ -283,7 +283,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifterna, kontot, klientorganisationen och prenumerationen som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -328,7 +328,7 @@ Accept wildcard characters: False
 ```
 
 ### -FirewallPolicy
-Brand Väggs konfiguration
+Brandväggskonfiguration
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayWebApplicationFirewallPolicy
@@ -358,7 +358,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Tvingar kommandot att köras utan att fråga efter bekräftelse.
+Tvingar kommandot att köras utan att användaren uppmanas att bekräfta.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -373,7 +373,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceFirewallPolicyAssociation
-Om Force firewallPolicy-associering är aktive rad.
+Om Association Force firewallPolicy är aktiverat.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -388,7 +388,7 @@ Accept wildcard characters: False
 ```
 
 ### -FrontendIPConfigurations
-Anger en lista med IP-konfigurationer för front-end för programgatewayen.
+Anger en lista över frontend IP-konfigurationer för programgatewayen.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFrontendIPConfiguration[]
@@ -403,7 +403,7 @@ Accept wildcard characters: False
 ```
 
 ### -FrontendPorts
-Anger en lista över front portar för programgatewayen.
+Anger en lista över frontend-portar för programgatewayen.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFrontendPort[]
@@ -418,7 +418,7 @@ Accept wildcard characters: False
 ```
 
 ### -GatewayIPConfigurations
-Anger en lista med IP-konfigurationer för programgatewayen.
+Anger en lista över IP-konfigurationer för programmets gateway.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayIPConfiguration[]
@@ -433,7 +433,7 @@ Accept wildcard characters: False
 ```
 
 ### -HttpListeners
-Anger en lista med HTTP-lyssnare för programgatewayen.
+Anger en lista med HTTP-lyssnare för programmets gateway.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayHttpListener[]
@@ -448,7 +448,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Application Gateway-identitet som ska kopplas till Application Gateway.
+Application Gateway-identitet som ska tilldelas till Application Gateway.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSManagedServiceIdentity
@@ -463,7 +463,7 @@ Accept wildcard characters: False
 ```
 
 ### -Plats
-Anger i vilken region du vill skapa programgatewayen.
+Anger det område där programgatewayen ska skapas.
 
 ```yaml
 Type: System.String
@@ -477,7 +477,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Namn
+### -Name
 Anger namnet på programgatewayen.
 
 ```yaml
@@ -492,8 +492,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Avsöks
-Anger Avsök för programgatewayen.
+### -Sonder
+Anger sonder för programmets gateway.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayProbe[]
@@ -508,7 +508,7 @@ Accept wildcard characters: False
 ```
 
 ### -RedirectConfigurations
-Listan med konfiguration av omdirigering
+Listan över omdirigeringskonfiguration
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRedirectConfiguration[]
@@ -523,7 +523,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequestRoutingRules
-Anger en lista över routningsregler för anslutningsbegäran för programgatewayen.
+Anger en lista över begärandedirigeringsregler för programmets gateway.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRequestRoutingRule[]
@@ -538,7 +538,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Anger namnet på den resurs grupp där Application Gateway ska skapas.
+Anger namnet på den resursgrupp där programgatewayen ska skapas.
 
 ```yaml
 Type: System.String
@@ -553,7 +553,7 @@ Accept wildcard characters: False
 ```
 
 ### -RewriteRuleSet
-Listan med RewriteRuleSet
+Listan över OmskrivningaruleSet
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRewriteRuleSet[]
@@ -568,7 +568,7 @@ Accept wildcard characters: False
 ```
 
 ### -SKU
-Anger SKU (lager behållning) för programgatewayen.
+Anger lagerhållningsenheten (SKU) för programgatewayen.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewaySku
@@ -583,7 +583,7 @@ Accept wildcard characters: False
 ```
 
 ### -SslCertificates
-Anger listan över SSL-certifikat (Secure Sockets Layer) för programgatewayen.
+Anger listan över SSL (Secure Sockets Layer) SSL-certifikat för programgatewayen.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewaySslCertificate[]
@@ -598,7 +598,7 @@ Accept wildcard characters: False
 ```
 
 ### -SslPolicy
-Anger en SSL-princip för programgatewayen.
+Anger en SSL-princip för programmets gateway.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewaySslPolicy
@@ -612,8 +612,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Tagg
-Par med nyckelord i form av en hash-tabell. Till exempel: @ {key0 = "value0"; KEY1 = $null; key2 = "värde2"}
+### -Tag
+Nyckelvärdepar i form av en hash-tabell. Exempel: @{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -628,7 +628,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrustedRootCertificate
-Listan över betrodda rot certifikat
+Listan över betrodda rotcertifikat
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayTrustedRootCertificate[]
@@ -643,7 +643,7 @@ Accept wildcard characters: False
 ```
 
 ### -UrlPathMaps
-Anger URL-sökvägar för programgatewayen.
+Anger URL-sökvägskartor för programmets gateway.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayUrlPathMap[]
@@ -658,7 +658,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserAssignedIdentityId
-ResourceId för den användare tilldelade identiteten som ska kopplas till programgatewayen.
+ResourceId för den användare som tilldelats identiteten som ska tilldelas till Application Gateway.
 
 ```yaml
 Type: System.String
@@ -673,7 +673,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplicationFirewallConfiguration
-Anger en konfiguration för webb programs brand väggen (WAF). Du kan använda Get-AzApplicationGatewayWebApplicationFirewallConfiguration cmdlet för att få en WAF.
+Anger en WAF-konfiguration (Web Application Firewall). Du kan använda cmdlet Get-AzApplicationGatewayWebApplicationFirewallConfiguration för att få en WAF-cmdlet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayWebApplicationFirewallConfiguration
@@ -688,7 +688,7 @@ Accept wildcard characters: False
 ```
 
 ### -Zone
-En lista över tillgänglighets zoner som betecknar var Application Gateway måste komma från.
+En lista med tillgänglighetszoner som anger varifrån programmets gateway måste komma.
 
 ```yaml
 Type: System.String[]
@@ -703,7 +703,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -718,7 +718,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs.
+Visar vad som skulle hända om cmdleten körs.
 Cmdleten körs inte.
 
 ```yaml
@@ -734,63 +734,62 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-### Microsoft. Azure. commands. Networks. Models. PSApplicationGatewaySku
+### Microsoft.Azure.Commands.Network.Models.PSApplicationGatewaySku
 
-### Microsoft. Azure. commands. Networks. Models. PSApplicationGatewaySslPolicy
+### Microsoft.Azure.Commands.Network.Models.PSApplicationGatewaySslPolicy
 
-### Microsoft. Azure. commands. Network. Models. PSApplicationGatewayIPConfiguration []
+### Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayIPConfiguration[]
 
-### Microsoft. Azure. commands. Network. Models. PSApplicationGatewaySslCertificate []
+### Microsoft.Azure.Commands.Network.Models.PSApplicationGatewaySslCertificate[]
 
-### Microsoft. Azure. commands. Network. Models. PSApplicationGatewayAuthenticationCertificate []
+### Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayAuthenticationCertificate[]
 
-### Microsoft. Azure. commands. Network. Models. PSApplicationGatewayTrustedRootCertificate []
+### Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayTrustedRootCertificate[]
 
-### Microsoft. Azure. commands. Network. Models. PSApplicationGatewayFrontendIPConfiguration []
+### Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFrontendIPConfiguration[]
 
-### Microsoft. Azure. commands. Network. Models. PSApplicationGatewayFrontendPort []
+### Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFrontendPort[]
 
-### Microsoft. Azure. commands. Network. Models. PSApplicationGatewayProbe []
+### Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayProbe[]
 
-### Microsoft. Azure. commands. Network. Models. PSApplicationGatewayBackendAddressPool []
+### Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendAddressPool[]
 
-### Microsoft. Azure. commands. Network. Models. PSApplicationGatewayBackendHttpSettings []
+### Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendHttpSettings[]
 
-### Microsoft. Azure. commands. Network. Models. PSApplicationGatewayHttpListener []
+### Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayHttpListener[]
 
-### Microsoft. Azure. commands. Network. Models. PSApplicationGatewayUrlPathMap []
+### Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayUrlPathMap[]
 
-### Microsoft. Azure. commands. Network. Models. PSApplicationGatewayRequestRoutingRule []
+### Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRequestRoutingRule[]
 
-### Microsoft. Azure. commands. Network. Models. PSApplicationGatewayRewriteRuleSet []
+### Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRewriteRuleSet[]
 
-### Microsoft. Azure. commands. Network. Models. PSApplicationGatewayRedirectConfiguration []
+### Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRedirectConfiguration[]
 
-### Microsoft. Azure. commands. Networks. Models. PSApplicationGatewayWebApplicationFirewallConfiguration
+### Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayWebApplicationFirewallConfiguration
 
-### Microsoft. Azure. commands. Networks. Models. PSApplicationGatewayAutoscaleConfiguration
+### Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayAutoscaleConfiguration
 
-### System. Collections. hash
+### System.Collections.Hashtable
 
-### Microsoft. Azure. commands. Networks. Models. PSManagedServiceIdentity
+### Microsoft.Azure.Commands.Network.Models.PSManagedServiceIdentity
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. Networks. Models. PSApplicationGateway
+### Microsoft.Azure.Commands.Network.Models.PSApplicationGateway
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
 [New-AzApplicationGatewayBackendAddressPool](./New-AzApplicationGatewayBackendAddressPool.md)
 
-[New-AzApplicationGatewayBackendHttpSettings](./New-AzApplicationGatewayBackendHttpSettings.md)
 
 [New-AzApplicationGatewayFrontendIPConfig](./New-AzApplicationGatewayFrontendIPConfig.md)
 

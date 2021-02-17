@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/u
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Undo-AzKeyVaultSecretRemoval.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Undo-AzKeyVaultSecretRemoval.md
-ms.openlocfilehash: 26bf7b91b330032e05f96f425cb21908fc3df55d
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 92c5166794808d08a925c458afc14fe4b6dca834
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93916198"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100402158"
 ---
 # Undo-AzKeyVaultSecretRemoval
 
-## Sammanfattning
-Återställer en borttagen hemlighet i ett nyckel valv till ett aktivt tillstånd.
+## SYNOPSIS
+Återställer en borttagna hemligt i ett nyckelvalv till ett aktivt tillstånd.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### Standard (standard)
 ```
@@ -31,12 +31,12 @@ Undo-AzKeyVaultSecretRemoval [-InputObject] <PSDeletedKeyVaultSecretIdentityItem
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Undo-AzKeyVaultSecretRemoval** återställer en tidigare borttagen hemlighet.
-Den återställda hemligheten aktive ras och kan användas för alla vanliga hemliga åtgärder.
-Den som ringer måste ha behörigheten "återfå" för att kunna utföra den här åtgärden.
+## BESKRIVNING
+**Cmdleten Undo-AzKeyVaultSecretRemoval** återställer en tidigare borttaget hemlig.
+Den återställda hemligheten är aktiv och kan användas för alla vanliga hemliga åtgärder.
+Den som ringer måste ha behörigheten Återskapa för att kunna utföra den här åtgärden.
 
-## BESKRIVS
+## EXEMPEL
 
 ### Exempel 1
 ```powershell
@@ -55,12 +55,12 @@ Content Type :
 Tags         :
 ```
 
-Det här kommandot återställer hemligheten "hemlig" som tidigare har tagits bort i ett aktivt och användbart tillstånd.
+Det här kommandot återställer det hemliga "MySecret" som tidigare togs bort till ett aktivt och användbart tillstånd.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Borttaget hemligt objekt
+Borttagna hemliga objekt
 
 ```yaml
 Type: Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultSecretIdentityItem
@@ -89,9 +89,9 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -Namn
+### -Name
 Hemligt namn.
-Cmdlet konstruerar FQDN för en hemlighet från valv namn, för närvarande valt miljö och hemligt namn.
+Cmdlet skapar FQDN för en hemlig från valv-namn, för närvarande vald miljö och hemligt namn.
 
 ```yaml
 Type: System.String
@@ -106,8 +106,8 @@ Accept wildcard characters: False
 ```
 
 ### -VaultName
-Valv namn.
-Cmdlet konstruerar FQDN för ett valv baserat på namnet och den valda miljön.
+Valvnamn.
+Cmdlet skapar FQDN för ett valv baserat på namnet och den valda miljön.
 
 ```yaml
 Type: System.String
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs.
+Visar vad som skulle hända om cmdleten körs.
 Cmdleten körs inte.
 
 ```yaml
@@ -153,22 +153,21 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
 ### Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultSecretIdentityItem
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. valv. Models. PSKeyVaultSecret
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultSecret
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
 [Remove-AzKeyVaultSecret](./Remove-AzKeyVaultSecret.md)
 
-[Add-AzKeyVaultSecret](./Add-AzKeyVaultSecret.md)
 
 [Get-AzKeyVaultSecret](./Get-AzKeyVaultSecret.md)
