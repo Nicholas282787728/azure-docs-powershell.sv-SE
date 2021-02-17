@@ -3,19 +3,19 @@ external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
 ms.assetid: B7F07494-FBCA-4A77-92BF-E0A2D7ACCD21
 online version: ''
 schema: 2.0.0
-ms.openlocfilehash: fc350cdf117ebbf72b023f64895f4c563e73566b
-ms.sourcegitcommit: 56ed085a868afa8263f8eb0f755b5822f5c29532
+ms.openlocfilehash: 35e29655e8447644b6c5449309424595e45ca187
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "94099075"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100413072"
 ---
 # Start-AzureSqlDatabaseCopy
 
-## Sammanfattning
+## SYNOPSIS
 Startar en kopiering av en Azure SQL-databas.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### ByInputObject
 ```
@@ -43,59 +43,59 @@ Start-AzureSqlDatabaseCopy -ServerName <String> -DatabaseName <String> -PartnerS
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Start-AzureSqlDatabaseCopy** startar en kopiering en gång eller en kontinuerlig kopiering av en specifik Azure SQL-databas.
-Denna cmdlet är inte transaktionell.
+## BESKRIVNING
+**Start-AzureSqlDatabaseCopy-cmdleten** startar en kopieringsåtgärd på en gång eller en kontinuerlig kopiering av en viss Azure SQL-databas.
+Den här cmdleten är inte transaktionsell.
 
-Den ursprungliga databasen är käll databasen.
-Kopian är den sekundära eller mål databasen.
-För en kontinuerlig kopiering kan käll-och mål databaserna inte finnas på samma server och servrar som är värdar för käll-och mål databaserna måste ingå i samma prenumeration.
+Den ursprungliga databasen är källdatabasen.
+Kopian är den sekundära databasen eller måldatabasen.
+För en kontinuerlig kopia får käll- och måldatabaserna inte finnas på samma server, och servrarna som är värd för käll- och måldatabaserna måste ingå i samma prenumeration.
 
-Om du inte anger parametern *ContinuousCopy* skapar denna cmdlet en en kopia av käll databasen.
-När svaret tas emot kan operationen fortfarande fortsätta.
-Du kan övervaka åtgärden med hjälp av Get-AzureSqlDatabaseCopy eller Get-AzureSqlDatabaseOperation cmdlet.
+Om du inte anger *parametern ContinuousCopy* skapas en kopia av källdatabasen med den här cmdleten.
+När svaret tas emot kan åtgärden fortfarande pågår.
+Du kan övervaka åtgärden med hjälp av cmdleten Get-AzureSqlDatabaseCopy eller Get-AzureSqlDatabaseOperation.
 
-Om du anger *ContinuousCopy* skapar denna cmdlet en kontinuerlig kopia av käll databasen.
-När svaret tas emot behandlas åtgärden.
-Du kan övervaka åtgärden genom att använda **Get-AzureSqlDatabaseCopy** eller **Get-AzureSqlDatabaseOperation**.
+Om du anger *ContinuousCopy* skapar den här cmdleten en kontinuerlig kopia av källdatabasen.
+När svaret tas emot pågår åtgärden.
+Du kan övervaka åtgärden med hjälp av **Get-AzureSqlDatabaseCopy** eller **Get-AzureSqlDatabaseOperation.**
 
-Du kan skapa en kontinuerlig kopia som en online-eller frånkopplad databas.
-Den kontinuerliga kopian online används för att konfigurera Active Geo-Replication för Azure SQL Database https://azure.microsoft.com/en-us/documentation/articles/sql-database-geo-replication-overview/ .
-Den kontinuerliga kopian offline används för att konfigurera standard Geo-Replication för Azure SQL Database https://azure.microsoft.com/en-us/documentation/articles/sql-database-business-continuity-scenarios/ .
+Du kan skapa en kontinuerlig kopia som en online- eller offlinedatabas.
+Den kontinuerliga onlinekopian används för att konfigurera Active Geo-Replication för Azure SQL https://azure.microsoft.com/en-us/documentation/articles/sql-database-geo-replication-overview/ Database.
+Den kontinuerliga offlinekopian används för att konfigurera Geo-Replication för Azure SQL https://azure.microsoft.com/en-us/documentation/articles/sql-database-business-continuity-scenarios/ Database.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: tidsplanera en kontinuerlig kopia av en databas
+### Exempel 1: Schemalägga en kontinuerlig databaskopia
 ```
 PS C:\> Start-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders" -PartnerServer "bk0b8kf65" -ContinuousCopy
 ```
 
-Det här kommandot schemalägger en kontinuerlig kopia av databasen order på den server som heter lpqd0zbr8y.
-Kommandot skapar en mål databas på den server som heter bk0b8kf658.
+Det här kommandot schemalägger en kontinuerlig kopia av databasen med namnet Orders på servern lpqd0zgav8y.
+Kommandot skapar en måldatabas på servern med namnet bk0b8kf658.
 
-### Exempel 2: skapa en enstaka kopia på samma server
+### Exempel 2: Skapa en enda kopia på samma server
 ```
 PS C:\> Start-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders" -PartnerDatabase "OrdersCopy"
 ```
 
-Det här kommandot skapar en enstaka kopia av databasen order på den server som heter lpqd0zbr8y.
-Kommandot skapar en kopia med namnet OrdersCopy på samma server.
+Det här kommandot skapar en kopia på en gång av databasen med namnet Orders på servern lpqd0z inköpsorder8y.
+Med kommandot skapas en kopia med namnet OrdersCopy på samma server.
 
-### Exempel 3: schemalägga en kontinuerlig kopia av en offlinedatabas
+### Exempel 3: Schemalägga en kontinuerlig offlinedatabaskopia
 ```
 PS C:\> Start-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders" -PartnerServer "bk0b8kf65" -ContinuousCopy -OfflineSecondary
 ```
 
-Det här kommandot schemalägger en kontinuerlig kopia av databasen order på den server som heter lpqd0zbr8y.
-Det här kommandot skapar en offlinedatabas för mål på servern med namnet bk0b8kf658.
+Det här kommandot schemalägger en kontinuerlig kopia av databasen med namnet Orders på servern lpqd0zgav8y.
+Med det här kommandot skapas en offlinemåldatabas på servern med namnet bk0b8kf658.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -ContinuousCopy
-Visar att databas kopian kommer att vara en kopia (en replik databas).
+Anger att databaskopian kommer att vara en kontinuerlig kopia (en kopia av databasen).
 Kontinuerlig kopiering stöds inte på samma server.
-Om den här parametern inte anges utförs en kopiering i taget.
-För en enstaka kopia måste käll-och partner databaserna finnas på samma server.
+Om parametern inte anges utförs en kopierad gång.
+För en enda kopia måste käll- och partnerdatabaserna finnas på samma server.
 
 ```yaml
 Type: SwitchParameter
@@ -109,9 +109,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Databas
-Anger ett objekt som representerar käll-Azure SQL-databasen.
-Den här parametern accepterar pipeline-inmatning.
+### -Database
+Anger ett objekt som representerar källan Azure SQL Database.
+Den här parametern accepterar inmatning från pipeline.
 
 ```yaml
 Type: Database
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
-Anger namnet på käll databasen.
+Anger namnet på källdatabasen.
 
 ```yaml
 Type: String
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Tvingar kommandot att köras utan att fråga efter bekräftelse.
+Tvingar kommandot att köras utan att användaren uppmanas att bekräfta.
 
 ```yaml
 Type: SwitchParameter
@@ -157,8 +157,8 @@ Accept wildcard characters: False
 
 ### -OfflineSecondary
 Anger att en kontinuerlig kopia är en passiv kopia i stället för en aktiv kopia.
-Om käll databasen är en vanlig versions databas är den här parametern obligatorisk.
-Om du anger den här parametern måste du också ange *ContinuousCopy* .
+Om källdatabasen är en standardversionsdatabas krävs den här parametern.
+Om du anger den här *parametern måste ContinuousCopy* också anges.
 
 ```yaml
 Type: SwitchParameter
@@ -173,9 +173,9 @@ Accept wildcard characters: False
 ```
 
 ### -PartnerDatabase
-Anger namnet på mål databasen.
-Om du anger parametern *ContinuousCopy* måste värdet för *PartnerDatabase* matcha namnet på käll databasen.
-Om du inte anger *ContinuousCopy* måste du ange ett namn för mål databasen, som kan skilja sig från käll databasens namn.
+Anger namnet på måldatabasen.
+Om du anger *parametern ContinuousCopy* måste värdet *för PartnerDatabase* matcha namnet på källdatabasen.
+Om du inte anger *ContinuousCopy* måste du ange ett namn för måldatabasen, som kan vara ett annat än källdatabasnamnet.
 
 ```yaml
 Type: String
@@ -202,8 +202,8 @@ Accept wildcard characters: False
 ```
 
 ### -PartnerServer
-Anger namnet på den server som är värd för mål databasen.
-Den här servern måste finnas i samma Azure-abonnemang som käll databas servern.
+Anger namnet på den server som är värd för måldatabasen.
+Servern måste vara i samma Azure-prenumeration som källdatabasservern.
 
 ```yaml
 Type: String
@@ -229,9 +229,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Profil
-Anger den Azure-profil från vilken denna cmdlet läser.
-Om du inte anger en profil läser denna cmdlet från den lokala standard profilen.
+### -Profile
+Anger den Azure-profil som cmdleten läser upp.
+Om du inte anger en profil läser den här cmdleten från den lokala standardprofilen.
 
 ```yaml
 Type: AzureSMProfile
@@ -245,8 +245,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ServerName
-Anger namnet på den server där käll databasen finns.
+### -Servernamn
+Anger namnet på den server där källdatabasen finns.
 
 ```yaml
 Type: String
@@ -261,7 +261,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: SwitchParameter
@@ -276,7 +276,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs.
+Visar vad som skulle hända om cmdleten körs.
 Cmdleten körs inte.
 
 ```yaml
@@ -292,32 +292,32 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-### Microsoft. WindowsAzure. kommandon. SqlDatabase. Services. Server. Database
+### Microsoft.WindowsAzure.Commands.sqlDatabase.Services.Server.Database
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. WindowsAzure. kommandon. SqlDatabase. Model. DatabaseCopy
+### Microsoft.WindowsAzure.Commands.sqlDatabase.Model.DatabaseCopy
 
-## ANMÄRKNINGAR
-* Verifiera: den här cmdleten kräver certifikatbaserad identifiering. Ett exempel på hur certifikatbaserad identifiering används för att ange aktuell prenumeration finns i New-AzureSqlDatabaseServerContext cmdlet.
-* Övervakning: Använd cmdleten **Get-AzureSqlDatabaseCopy** för att kontrol lera status för en eller flera kontinuerliga kopior som är aktiva på servern. Använd cmdleten **Get-AzureSqlDatabaseOperation** för att kontrol lera status för åtgärderna på både källa och mål för den kontinuerliga kopierings relationen.
+## ANTECKNINGAR
+* Autentisering: Den här cmdleten kräver certifikatbaserad autentisering. Ett exempel på hur du använder certifikatbaserad autentisering för att ange aktuell prenumeration finns i New-AzureSqlDatabaseServerContext cmdlet.
+* Övervakning: Om du vill kontrollera status för en eller flera kontinuerliga kopieringsrelationer som är aktiva på servern använder du cmdleten **Get-AzureSqlDatabaseCopy.** Använd cmdleten **Get-AzureSqlDatabaseOperation** för att verifiera status för operationerna i både källan och målet för den kontinuerliga kopieringsrelationen.
 
 ## RELATERADE LÄNKAR
 
-[Azure SQL-databas](https://azure.microsoft.com/en-us/services/sql-database/)
+[Azure SQL Database](https://azure.microsoft.com/en-us/services/sql-database/)
 
 [Åtgärder för Azure SQL-databaser](https://msdn.microsoft.com/en-us/library/azure/dn505719.aspx)
 
-[Starta databas kopiering](https://msdn.microsoft.com/en-us/library/azure/dn509576.aspx)
+[Starta databaskopia](https://msdn.microsoft.com/en-us/library/azure/dn509576.aspx)
 
-[Azure SQL-databas-cmdletar](./Azure.SQLDatabase.md)
+
 
 [Get-AzureSqlDatabaseCopy](./Get-AzureSqlDatabaseCopy.md)
 
-[Stopp-AzureSqlDatabaseCopy](./Stop-AzureSqlDatabaseCopy.md)
+[Stop-AzureSqlDatabaseCopy](./Stop-AzureSqlDatabaseCopy.md)
 
 
