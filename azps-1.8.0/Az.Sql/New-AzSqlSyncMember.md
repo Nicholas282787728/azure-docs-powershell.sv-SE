@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/new-az
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/New-AzSqlSyncMember.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/New-AzSqlSyncMember.md
-ms.openlocfilehash: 503f7be9d4d7f595ac8d337568038d7e7e724d1f
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 5846435df4921e425e12e908539849fda0bd2472
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93746591"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100399540"
 ---
 # New-AzSqlSyncMember
 
-## Sammanfattning
-Skapar en synkroniserad Azure SQL-databas.
+## SYNOPSIS
+Skapar en synkroniseringsmedlem i Azure SQL Database.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### AzureSqlDatabase (standard)
 ```
@@ -43,12 +43,12 @@ New-AzSqlSyncMember -Name <String> -MemberDatabaseType <String> -SqlServerDataba
  [-Confirm] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **New-AzSqlSyncMember** skapar en Sync-medlem för Azure SQL Database.
+## BESKRIVNING
+Cmdleten **New-AzSqlSyncMember** skapar en Azure SQL Database Sync Member.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: skapa en synkroniserad medlem för en Azure SQL-databas.
+### Exempel 1: Skapa en synkroniseringsmedlem för en Azure SQL-databas.
 ```
 PS C:\> $credential = Get-Credential
 PS C:\> New-AzSqlSyncMember -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -SyncGroupName "SyncGroup01" -Name "SyncMember01" -SyncDirection "OneWayMemberToHub"
@@ -70,9 +70,9 @@ MemberDatabasePassword      :
 SyncState                   : UnProvisioned
 ```
 
-Det här kommandot skapar en synkronisera medlem för en Azure SQL-databas.
+Med det här kommandot skapas en synkroniseringsmedlem för en Azure SQL-databas.
 
-### Exempel 2: skapa en synkroniserad medlem för en lokal SQL Server-databas
+### Exempel 2: Skapa en synkroniseringsmedlem för en lokal SQL Server-databas
 ```
 PS C:\> $credential = Get-Credential
 PS C:\> New-AzSqlSyncMember -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -SyncGroupName "SyncGroup01" -Name "SyncMember01" -SyncDirection "OneWayMemberToHub"
@@ -95,9 +95,9 @@ MemberDatabasePassword      :
 SyncState                   : UnProvisioned
 ```
 
-Det här kommandot skapar en synkronisera medlem för en lokal SQL-databas.
+Med det här kommandot skapas en synkroniseringsmedlem för en lokal SQL-databas.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DatabaseName
 Namnet på Azure SQL-databasen.
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -MemberDatabaseCredential
-Autentiseringsuppgifterna (användar namn och lösen ord) för Azure SQL-databasen.
+Autentiseringsuppgifter (användarnamn och lösenord) för Azure SQL-databasen.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -MemberDatabaseName
-Namn på medlems databasen i Azure SQL-databasen.
+Azure SQL-databasnamnet för medlemsdatabasen.
 
 ```yaml
 Type: System.String
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -MemberDatabaseType
-Databas typen för medlems databasen.
+Databastypen för medlemsdatabasen.
 
 ```yaml
 Type: System.String
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -MemberServerName
-Namn på medlems databasen för Azure SQL Server.
+Azure SQL Server Name för medlemsdatabasen.
 
 ```yaml
 Type: System.String
@@ -190,8 +190,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Namn
-Synkroniserat medlems namn.
+### -Name
+Synkroniseringsmedlemmens namn.
 
 ```yaml
 Type: System.String
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Namnet på resurs gruppen.
+Namnet på resursgruppen.
 
 ```yaml
 Type: System.String
@@ -220,7 +220,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ServerName
+### -Servernamn
 Namnet på Azure SQL Server.
 
 ```yaml
@@ -236,7 +236,7 @@ Accept wildcard characters: False
 ```
 
 ### -SqlServerDatabaseId
-ID för SQL Server-databasen som är ansluten av synkroniseringsklienten.
+ID för den SQL Server-databas som är ansluten av synkroniseringsagenten.
 
 ```yaml
 Type: System.String
@@ -251,7 +251,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncAgentName
-Namnet på synkroniseringsresursen.
+Namnet på synkroniseringsagenten.
 
 ```yaml
 Type: System.String
@@ -266,7 +266,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncAgentResourceGroupName
-Namnet på resurs gruppen där synkroniseringsresursen finns.
+Namnet på resursgruppen där synkroniseringsagenten finns.
 
 ```yaml
 Type: System.String
@@ -281,7 +281,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncAgentResourceID
-Resurs-ID för synkroniseringsresursen.
+Resurs-ID för synkroniseringsagenten.
 
 ```yaml
 Type: System.String
@@ -296,7 +296,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncAgentServerName
-Namnet på den Azure SQL-Server där synkroniseringsresursen finns.
+Namnet på Azure SQL Server där synkroniseringsagenten finns.
 
 ```yaml
 Type: System.String
@@ -311,7 +311,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncDirection
-Synkroniseringens synkroniseringsstatus.
+Synkroniseringsriktningen för den här synkroniseringsmedlemmen.
 
 ```yaml
 Type: System.String
@@ -327,7 +327,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncGroupName
-Namnet på synkroniseringsresursen.
+Synkroniseringsgruppens namn.
 
 ```yaml
 Type: System.String
@@ -342,7 +342,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -357,7 +357,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs.
+Visar vad som skulle hända om cmdleten körs.
 Cmdleten körs inte.
 
 ```yaml
@@ -373,23 +373,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. SQL. DataSync. Model. AzureSqlSyncMemberModel
+### Microsoft.Azure.Commands.sql.DataSync.Model.AzureSqlSyncMemberModel
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
 [Get-AzSqlSyncMember](./Get-AzSqlSyncMember.md)
 
-[Set-AzSqlSyncMember](./Set-AzSqlSyncMember.md)
 
 [Remove-AzSqlSyncMember](./Remove-AzSqlSyncMember.md)
 
