@@ -6,47 +6,47 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.notificati
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/NotificationHubs/NotificationHubs/help/Get-AzNotificationHub.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/NotificationHubs/NotificationHubs/help/Get-AzNotificationHub.md
-ms.openlocfilehash: f58a34c5fb5a7ca108f2f4f55c9322f1f439fbf9
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: ea16c01e5c528742702dd08f1f2bd4c14e0cebcd
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93747644"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100399948"
 ---
 # Get-AzNotificationHub
 
-## Sammanfattning
-Hämtar information om dina meddelande nav.
+## SYNOPSIS
+Hämtar information om dina aviseringshubben.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 Get-AzNotificationHub [-ResourceGroup] <String> [-Namespace] <String> [[-NotificationHub] <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Get-AzNotificationHub** hämtar information om meddelande nav i ett angivet namn område och tilldelats till en viss resurs grupp.
-Du kan till exempel få information om alla meddelande nav i namn området ContosoNamespace och tilldelat till resurs gruppen ContosoNotificationsGroup.
-Alternativt kan du använda parametern *NotificationHub* för att begränsa vilka data som returneras till information om ett specifikt meddelande nav.
-Meddelande nav används för att skicka push-meddelanden till flera klienter oavsett plattform, till exempel iOS, Android, Windows Phone 8 och Windows Store, som används av dessa klienter.
-Dessa NAV är ungefär likvärdiga med enskilda appar och alla dina program har vanligt vis sin egen meddelande hubb.
-Denna cmdlet får bara information om själva navet.
-Andra cmdlets, till exempel get-AzNotificationHubAuthorizationRules, get-AzNotificationHubListKeys och get-AzNotificationHubPNSCredentials behövs för att få information om ett NAVs auktoriseringsregler, anslutnings strängar och autentiseringsuppgifter för Platform Notification-tjänsten.
+## BESKRIVNING
+Cmdleten **Get-AzNotificationHub** hämtar information om meddelandehubben i ett angivet namnområde och tilldelas till en angiven resursgrupp.
+Du kan till exempel få information om alla meddelandehubben i namnområdet ContosoNamespace och tilldelad till resursgruppen ContosoNotificationsGroup.
+Alternativt kan du använda *NotificationHub-parametern* för att begränsa den returnerade informationen till information om ett visst meddelandenav.
+Meddelandehubben används för att skicka push-meddelanden till flera klienter oavsett plattform, till exempel iOS, Android, Windows Phone 8 och Windows Store, som används av dessa klienter.
+Dessa nav motsvarar på ungefär samma sätt enskilda appar och var och en av dina appar har vanligtvis ett eget meddelandenav.
+Den här cmdleten hämtar endast information om själva navet.
+Andra cmdlets, till exempel Get-AzNotificationHubAuthorizationRules, Get-AzNotificationHubListKeys och Get-AzNotificationHubPNSCredentials, behövs för att få information om ett navs auktoriseringsregler, anslutningssträngar och autentiseringsuppgifter för plattformsmeddelanden.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: Hämta information för alla aviserings nav i ett angivet namn område
+### Exempel 1: Hämta information för alla meddelandehubben i ett specifikt namnområde
 ```
 PS C:\>Get-AzNotificationHub -Namespace "ContosoNamespace" -ResourceGroup "ContosoNotificationsGroup"
 ```
 
-Med det här kommandot får du information för alla aviserings nav i namn området med namnet ContosoNamespace som har tilldelats till resurs gruppen ContosoNotificationsGroup.
+Det här kommandot hämtar information för alla meddelandehubben i namnområdet ContosoNamespace som har tilldelats resursgruppen ContosoNotificationsGroup.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -60,9 +60,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Namnrymd
-Anger namn området som meddelande navet tilldelats till.
-Med namn utrymmen kan du gruppera och kategorisera meddelande nav.
+### -Namespace
+Anger det namnområde som meddelandehubben är tilldelat till.
+Namnområden är ett sätt att gruppera och kategorisera meddelandehubben.
 
 ```yaml
 Type: System.String
@@ -77,8 +77,8 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationHub
-Anger namnet på meddelande navet som den här cmdleten får.
-Meddelande nav används för att skicka push-meddelanden till flera klienter oavsett vilken plattform som används av dessa klienter.
+Anger namnet på meddelandehubben som cmdleten hämtar.
+Meddelandehubben används för att skicka push-meddelanden till flera klienter oavsett vilken plattform som används av dessa klienter.
 
 ```yaml
 Type: System.String
@@ -93,8 +93,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Anger den resurs grupp som meddelande navet tilldelats till.
-Resurs grupper organiserar objekt som namn områden, aviserings nav och auktoriseringsregler på olika sätt som underlättar lager hantering och Azure-administrationen.
+Anger den resursgrupp som meddelandehubben är tilldelad till.
+Resursgrupper organiserar objekt som namnområden, meddelandehubben och auktoriseringsregler på sätt som hjälper dig med lagerhantering och Azure-administration.
 
 ```yaml
 Type: System.String
@@ -109,25 +109,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. NotificationHubs. Models. NotificationHubAttributes
+### Microsoft.Azure.Commands.NotificationHubs.Models.NotificationHubAttributes
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Get-AzNotificationHubAuthorizationRules](./Get-AzNotificationHubAuthorizationRules.md)
 
-[Get-AzNotificationHubListKeys](./Get-AzNotificationHubListKeys.md)
 
-[Get-AzNotificationHubPNSCredentials](./Get-AzNotificationHubPNSCredentials.md)
 
 [New-AzNotificationHub](./New-AzNotificationHub.md)
 
