@@ -6,31 +6,31 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzAlertHistory.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzAlertHistory.md
-ms.openlocfilehash: 559bc8183f6ac80e248099ea95bf6a957b5ea1f5
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 8c5c6f5039b143c97071e181b249591be3a69b12
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93915686"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100403144"
 ---
 # Get-AzAlertHistory
 
-## Sammanfattning
-Hämtar historiken över aviseringar.
+## SYNOPSIS
+Hämtar historiken för aviseringar.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 Get-AzAlertHistory [-ResourceId <String>] [-StartTime <DateTime>] [-EndTime <DateTime>] [-Status <String>]
  [-Caller <String>] [-DetailedOutput] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Get-AzAlertHistory** får historik över aviseringar när de är aktiverade, inaktiverade, aktiverade, lösta och så vidare.
+## BESKRIVNING
+Cmdleten **Get-AzAlertHistory** får historiken för aviseringar när de aktiveras, inaktiveras, aktiveras, åtgärdas och så vidare.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: Hämta aviserings historiken
+### Exempel 1: Hämta aviseringshistoriken
 ```
 PS C:\>Get-AzAlertHistory -StartTime 2015-02-11T11:00:00 -EndTime 2015-02-11T12:00:00 -DetailedOutput
 Authorization        : 
@@ -170,9 +170,9 @@ SubscriptionId       : b93fb07a-6f93-30be-bf3e-4f0deca15f4f
 SubStatus            :
 ```
 
-Det här kommandot får aviserings historiken för den angivna tids ramen för det aktuella abonnemanget.
+Det här kommandot hämtar aviseringshistoriken för den angivna tidsperioden för den aktuella prenumerationen.
 
-### Exempel 2: Hämta aviserings historik för en viss resurs
+### Exempel 2: Hämta aviseringshistorik för en angiven resurs
 ```
 PS C:\>Get-AzAlertHistory -StartTime 2015-02-11T11:00:00 -EndTime 2015-02-11T12:00:00 -ResourceId "/subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/providers/microsoft.insights/alertrules/checkrule3-4b135401-a30c-4224-ae21-fa53a5bd253d" -DetailedOutput
 
@@ -268,12 +268,12 @@ SubscriptionId       : b93fb07a-6f93-30be-bf3e-4f0deca15f4f
 SubStatus            :
 ```
 
-Det här kommandot får aviserings regel relaterade händelser för en viss resurs.
+Det här kommandot hämtar aviseringsregelrelaterade händelser för en angiven resurs.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
-### -Ringer
-Anger den som ringer.
+### -Uppringare
+Anger uppringaren.
 
 ```yaml
 Type: System.String
@@ -288,7 +288,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -303,7 +303,7 @@ Accept wildcard characters: False
 ```
 
 ### -DetailedOutput
-Visar alla detaljer i resultatet.
+Visar fullständig information i resultatet.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -317,9 +317,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Slut tid
-Anger slut tiden för frågan i lokal tid.
-Standardinställningen är den aktuella tiden.
+### -EndTime
+Anger sluttiden för frågan i lokal tid.
+Standardvärdet är den aktuella tiden.
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -334,7 +334,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Anger det resurs-ID som regeln är kopplad till.
+Anger det resurs-ID som regeln är associerad med.
 
 ```yaml
 Type: System.String
@@ -349,8 +349,8 @@ Accept wildcard characters: False
 ```
 
 ### -StartTime
-Anger start tiden för frågan i lokal tid.
-Standardvärdet är den aktuella lokala tiden minus en timme.
+Anger starttiden för frågan i lokal tid.
+Standardvärdet är aktuell lokal tid minus en timme.
 
 ```yaml
 Type: System.Nullable`1[System.DateTime]
@@ -365,7 +365,7 @@ Accept wildcard characters: False
 ```
 
 ### -Status
-Anger status.
+Anger statusen.
 
 ```yaml
 Type: System.String
@@ -380,25 +380,24 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-### System. Nullable ' 1 [[system. DateTime, system. Private. CoreLib, version = 4.0.0.0, Culture = neutralt, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Nullable'1[[System.DateTime, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-### System. Management. Automation. SwitchParameter
+### System.Management.Automation.SwitchParameter
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. Insights. OutputClasses. PSEventData
+### Microsoft.Azure.Commands.Insights.OutputClasses.PSEventData
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Add-AzLogAlertRule](./Add-AzLogAlertRule.md)
 
 [Add-AzMetricAlertRule](./Add-AzMetricAlertRule.md)
 

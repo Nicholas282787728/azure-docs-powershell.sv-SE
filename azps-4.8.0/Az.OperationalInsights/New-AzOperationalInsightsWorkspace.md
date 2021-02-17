@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.operationa
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/OperationalInsights/OperationalInsights/help/New-AzOperationalInsightsWorkspace.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/OperationalInsights/OperationalInsights/help/New-AzOperationalInsightsWorkspace.md
-ms.openlocfilehash: feac2aa9c5dd92c0d76090c6fc28353d56f9647c
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: 8515bf4085fcd03d87aa15c3da649fe318b94966
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94261759"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100405014"
 ---
 # New-AzOperationalInsightsWorkspace
 
-## Sammanfattning
-Skapar en arbets yta.
+## SYNOPSIS
+Skapar en arbetsyta.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 New-AzOperationalInsightsWorkspace [-ResourceGroupName] <String> [-Name] <String> [-Location] <String>
@@ -27,33 +27,33 @@ New-AzOperationalInsightsWorkspace [-ResourceGroupName] <String> [-Name] <String
  [[-PublicNetworkAccessForQuery] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **New-AzOperationalInsightsWorkspace** skapar en arbets yta i angiven resurs grupp och plats.
+## BESKRIVNING
+Cmdleten **New-AzOperationalInsightsWorkspace** skapar en arbetsyta i den angivna resursgruppen och -platsen.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: skapa en arbets yta med namn
+### Exempel 1: Skapa en arbetsyta efter namn
 ```
 PS C:\>New-AzOperationalInsightsWorkspace -ResourceGroupName "ContosoResourceGroup" -Name "MyWorkspace" -Location "East US" -Sku "Standard"
 ```
 
-Det här kommandot skapar en standard-SKU-arbetsyta med namnet min arbets yta i resurs gruppen som heter ContosoResourceGroup.
+Med det här kommandot skapas en standardarbetsyta för SKU med namnet MyWorkspace i resursgruppen ContosoResourceGroup.
 
-### Exempel 2: skapa en arbets yta och länka den till ett befintligt konto
+### Exempel 2: Skapa en arbetsyta och länka den till ett befintligt konto
 ```
 PS C:\>$OILinkTargets = Get-AzOperationalInsightsLinkTargets
 
 PS C:\>$OILinkTargets[0] | New-AzOperationalInsightsWorkspace -ResourceGroupName "ContosoResourceGroup" -Name "MyWorkspace" -Sku "Standard"
 ```
 
-I det första kommandot används cmdleten Get-AzOperationalInsightsLinkTargets för att skapa länk mål för operationella Insights och sedan lagras de i $OILinkTargets-variabeln.
-Det andra kommandot skickar det första konto länks målet i $OILinkTargets till cmdleten **New-AzOperationalInsightsWorkspace** med hjälp av pipeline-operatorn.
-Kommandot skapar en standard-SKU-arbetsyta med namnet min arbets yta som är länkad till det första kontot för drift insikter i $OILinkTargets.
+Det första kommandot använder cmdleten Get-AzOperationalInsightsLinkTargets få driftsinformationslänkmål och lagrar dem sedan i $OILinkTargets variabeln.
+Det andra kommandot skickar det första kontolänkmålet i $OILinkTargets till cmdleten **New-AzOperationalInsightsWorkspace** med hjälp av pipelineoperatorn.
+Med kommandot skapas en standardarbetsyta för SKU med namnet MyWorkspace som är kopplad till det första kontot för driftsinformation i $OILinkTargets.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Tvingar kommandot att köras utan att fråga efter bekräftelse.
+Tvingar kommandot att köras utan att användaren uppmanas att bekräfta.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -Plats
-Anger den plats där arbets ytan ska skapas, till exempel öst eller Västeuropa.
+Anger platsen där arbetsytan ska skapas, till exempel Öst- eller Västeuropa.
 
 ```yaml
 Type: System.String
@@ -97,8 +97,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Namn
-Anger namnet på arbets ytan.
+### -Name
+Anger namnet på arbetsytan.
 
 ```yaml
 Type: System.String
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicNetworkAccessForIngestion
-Nätverks åtkomst typen för att komma åt arbets ytan. Värdet ska vara Enabled eller disabled
+Nätverksåtkomsttypen för åtkomst till arbetsytan igestion. Värdet ska vara Aktiverat eller Inaktiverat
 
 ```yaml
 Type: System.String
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicNetworkAccessForQuery
-Nätverks åtkomst typen för åtkomst till arbets ytan. Värdet ska vara Enabled eller disabled
+Nätverksåtkomsttypen för åtkomst till arbetsytefråga. Värdet ska vara Aktiverat eller Inaktiverat
 
 ```yaml
 Type: System.String
@@ -143,8 +143,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Anger namnet på en Azure-adressresurs.
-Arbets ytan skapas i den här resurs gruppen.
+Anger namnet på en Azure-resursgrupp.
+Arbetsytan skapas i den här resursgruppen.
 
 ```yaml
 Type: System.String
@@ -159,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionInDays
-Arbets ytans data lagring i dagar. 730 dagar är det högsta tillåtna antalet för alla andra SKU: er
+Arbetsytans datalagring i dagar. 730 dagar är det högsta tillåtna värdet för alla andra SKU:er
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -174,14 +174,14 @@ Accept wildcard characters: False
 ```
 
 ### -SKU
-Anger arbets ytans tjänste nivå. Mer information om vilka värden som ska användas finns i https://docs.microsoft.com/en-us/azure/azure-monitor/platform/manage-cost-storage#legacy-pricing-tiers .
+Anger tjänstnivån för arbetsytan. Mer information om vilket värde du bör använda finns i https://docs.microsoft.com/en-us/azure/azure-monitor/platform/manage-cost-storage#legacy-pricing-tiers .
 Giltiga värden är:
-- gratisutdelning
+- kostnadsfritt
 - pergb2018
 - pernode
-- Beta
+- premium
 - fristående
-- standar
+- standard
 
 ```yaml
 Type: System.String
@@ -195,8 +195,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Tagg
-Resurs märkningen för arbets ytan.
+### -Tag
+Resurstaggarna för arbetsytan.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -211,7 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs.
+Visar vad som skulle hända om cmdleten körs.
 Cmdleten körs inte.
 
 ```yaml
@@ -242,30 +242,29 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-### System. Nullable ' 1 [[system. GUID, system. Private. CoreLib, version = 4.0.0.0, Culture = neutralt, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Nullable'1[[System.Guid, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-### System. Collections. hash
+### System.Collections.Hashtable
 
-### System. Nullable ' 1 [[system. Int32, system. privat. CoreLib, version = 4.0.0.0, Culture = neutralt, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Nullable'1[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. OperationalInsights. Models. PSWorkspace
+### Microsoft.Azure.Commands.OperationalInsights.Models.PSWorkspace
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
-En ny pris modell har frisläppts. Om du är en CSP som innebär att du måste använda "fristående" för SKU: n. Från kulisserna ändras SKU till pergb2018. För mer information, se följande: https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-usage-and-estimated-costs#new-pricing-model
+En ny prissättningsmodell har släppts. Om du är en CSP innebär det att du måste använda "fristående" för SKU. Bakom kulisserna ändras sKU:n till pergb2018. Mer information finns i följande avsnitt: https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-usage-and-estimated-costs#new-pricing-model
 
 ## RELATERADE LÄNKAR
 
-[Cmdlets för Azure Operational Insights](./Az.OperationalInsights.md)
+[Azure Operational Insights-cmdlets](./Az.OperationalInsights.md)
 
-[Get-AzOperationalInsightsLinkTargets](./Get-AzOperationalInsightsLinkTargets.md)
 
 

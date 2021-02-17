@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/se
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Set-AzActivityLogAlert.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Set-AzActivityLogAlert.md
-ms.openlocfilehash: 0813f91a3d82a40bc5b8d02c0a1e3f9579e0067a
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 6c7b867add359edec8379f20e630c9aca5fed00e
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93754017"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100402889"
 ---
 # Set-AzActivityLogAlert
 
-## Sammanfattning
-Skapar en ny eller anger en befintlig aktivitets loggs avisering.
+## SYNOPSIS
+Skapar en ny eller anger en befintlig aktivitetsloggavisering.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### SetByNameAndResourceGroup
 ```
@@ -51,15 +51,15 @@ Set-AzActivityLogAlert [-Scope <System.Collections.Generic.List`1[System.String]
  [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **set-AzActivityLogAlert** skapar en ny eller anger en befintlig varning för aktivitets loggen.
-För taggar, villkor och åtgärder måste objekten skapas i förväg och skickas som en kommaseparerad (se exemplet nedan).
-Denna cmdlet implementerar ShouldProcess-mönstret, dvs. den kan begära bekräftelse från användaren innan den faktiskt skapar/ändrar resursen.
-**Obs!** den här cmdleten och dess relaterade ersättare (november 2017) **AzLogAlertRule**.
+## BESKRIVNING
+Cmdleten **Set-AzActivityLogAlert** skapar en ny eller anger en befintlig aktivitetsloggavisering.
+För taggar, villkor och åtgärder måste objekten skapas i förväg och skickas som parametrar i det här samtalet som ett kommaavgränsat (se exemplet nedan).
+Den här cmdleten implementerar mönstret ShouldProcess, dvs. den kan begära bekräftelse från användaren innan den faktiskt skapar/ändrar resursen.
+**OBS!** Den här cmdleten och dess relaterade ersätter det inaktuella (november 2017) **Tillägget AzLogAlertRule.**
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: skapa en aktivitets logg varning
+### Exempel 1: Skapa en aktivitetsloggavisering
 ```
 PS C:\>$location = 'Global'
 PS C:\>$alertName = 'myAlert'
@@ -72,10 +72,10 @@ PS C:\>$actionGrp1 = New-AzActionGroup -ActionGroupId 'actiongr1' -WebhookProper
 PS C:\>Set-AzActivityLogAlert -Location $location -Name $alertName -ResourceGroupName $resourceGroupName -Scope 'scope1','scope2' -Action $actionGrp1 -Condition $condition1, $condition2
 ```
 
-De första fyra kommandona skapar ett löv villkor och en åtgärds grupp.
-Med kommandot slut skapas en aktivitets logg varning med hjälp av villkoret och åtgärds gruppen.
+De första fyra kommandona skapar villkor och åtgärdsgrupp.
+Det slutliga kommandot skapar en aktivitetsloggavisering med villkoret och åtgärdsgruppen.
 
-### Exempel 2: skapa en aktivitets logg varning inaktive rad
+### Exempel 2: Skapa en aktivitetsloggavisering inaktiverad
 ```
 PS C:\>$location = 'Global'
 PS C:\>$alertName = 'myAlert'
@@ -88,10 +88,10 @@ PS C:\>$actionGrp1 = New-AzActionGroup -ActionGroupId 'actiongr1' -WebhookProper
 PS C:\>Set-AzActivityLogAlert -Location $location -Name $alertName -ResourceGroupName $resourceGroupName -Scope 'scope1','scope2' -Action $actionGrp1 -Condition $condition1, $condition2 -DisableAlert
 ```
 
-De första fyra kommandona skapar ett löv villkor och en åtgärds grupp.
-Med kommandot slutgiltig skapar du en aktivitets logg varning med hjälp av villkoret och åtgärds gruppen, men aviseringen för inaktive ring.
+De första fyra kommandona skapar villkor och åtgärdsgrupp.
+Det slutliga kommandot skapar en aktivitetsloggavisering med villkoret och åtgärdsgruppen, men skapar aviseringen inaktiverad.
 
-### Exempel 3: Ange en aktivitets logg varning baserat på ett värde från en pipe eller en InputObject-parameter
+### Exempel 3: Ange en aktivitetsloggavisering baserat på ett värde från pipe-parametern eller InputObject-parametern
 ```
 PS C:\>Get-AzActivityLogAlert -Name $alertName -ResourceGroupName $resourceGroupName | Set-AzActivityLogAlert
 PS C:\>$alert = Get-AzActivityLogAlert -Name $alertName -ResourceGroupName $resourceGroupName
@@ -100,19 +100,19 @@ PS C:\>$alert.Enabled = $false
 PS C:\>Set-AzActivityLogAlert -InputObject $alert
 ```
 
-Det första kommandot påminner om en NOP, den ställer in en varning med samma värden som den redan innehåller resten av kommandona hämtar notifieringsregeln, ändrar beskrivningen och inaktiverar den och använder sedan parametern InputObject för att spara ändringarna
+Det första kommandot liknar en nop, ställer in aviseringen med samma värden som det redan innehöll. Resten av kommandona hämtar aviseringsregeln, ändrar beskrivningen och inaktiverar den och använder sedan parametern InputObject för att spara ändringarna
 
-### Exempel 4: Ange en aktivitets loggs varning baserat på värdet ResourceId från pipe
+### Exempel 4: Ställ in en aktivitetsloggavisering baserat på Värdet ResourceId från pipe
 ```
 PS C:\>Find-AzResource -ResourceGroupEquals "myResourceGroup" -ResourceNameEquals "myLogAlert" | Set-AzActivityLogAlert -DisableAlert
 ```
 
-Om den angivna logg varnings regeln finns i det här kommandot inaktive ras den.
+Om den givna loggaviseringsregeln finns inaktiverar det här kommandot den.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -Åtgärd
-Listan med åtgärds grupper för varningen för aktivitets loggen.
+Listan över åtgärdsgrupper för aktivitetsloggaviseringen.
 
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Management.Monitor.Management.Models.ActivityLogAlertActionGroup]
@@ -151,8 +151,8 @@ Accept wildcard characters: False
 ```
 
 ### -Villkor
-Listan med villkor för aktivitets logg varningen.
-**Obs!** i listan med villkor måste det finnas minst ett med fältet lika med "kategori". Server delen reagerar med 400 (BadRequest) om det här villkoret inte är tillgängligt.
+Listan med villkor för aktivitetsloggaviseringen.
+**OBS!** I listan över villkor måste det finnas minst ett där fältet är lika med "Kategori". Backend svarar med 400 (BadRequest) om det här villkoret inte finns.
 
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Management.Monitor.Management.Models.ActivityLogAlertLeafCondition]
@@ -191,7 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### -Beskrivning
-Beskrivning av aviserings resursen.
+Beskrivning av aviseringsresursen.
 
 ```yaml
 Type: System.String
@@ -233,7 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableAlert
-Gör det möjligt för användaren att skapa en inaktive rad aktivitets logg varning. Om det inte anges skapas notifieringar aktiverat.
+Tillåter användaren att skapa en avisering om att aktivitetsloggen är inaktiverad. Om du inte får aviseringarna aktiveras aviseringarna.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -248,7 +248,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Anger egenskapen InputObject Tags för samtalet för att extrahera namnet och resurs gruppens namn-egenskaper.
+Anger egenskapen InputObject-taggar för samtalet för att extrahera det obligatoriska namnet och namnegenskaperna för resursgruppen.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Insights.OutputClasses.PSActivityLogAlertResource
@@ -263,7 +263,7 @@ Accept wildcard characters: False
 ```
 
 ### -Plats
-Platsen där aviseringen för aktivitets loggen finns.
+Platsen där aktivitetsloggaviseringen finns.
 
 ```yaml
 Type: System.String
@@ -289,8 +289,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Namn
-Namnet på aktivitets logg varningen.
+### -Name
+Namnet på aktivitetsloggaviseringen.
 
 ```yaml
 Type: System.String
@@ -305,7 +305,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Namnet på resurs gruppen där aviserings resursen ska finnas.
+Namnet på den resursgrupp där aviseringsresursen ska finnas.
 
 ```yaml
 Type: System.String
@@ -320,7 +320,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Anger egenskapen ResourceId-taggar för samtalet för att extrahera namnet, resurs gruppens namn-egenskaper.
+Anger egenskapen ResourceId-taggar för samtalet för att extrahera obligatoriskt namn, namnegenskaper för resursgrupp.
 
 ```yaml
 Type: System.String
@@ -335,7 +335,7 @@ Accept wildcard characters: False
 ```
 
 ### -Omfattning
-Listan med omfattningar för aktivitets logg varningen.
+Listan med omfattningar för aktivitetsloggaviseringen.
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
@@ -373,8 +373,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Tagg
-Anger egenskapen Tags för aviserings resursen aktivitets logg.
+### -Tag
+Anger egenskapen taggar för aviseringsresursen för aktivitetsloggen.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[System.String,System.String]
@@ -401,7 +401,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -416,7 +416,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs. Cmdleten körs inte.
+Visar vad som skulle hända om cmdleten körs. Cmdleten körs inte.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -431,27 +431,27 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-### System. Collections. Generic. list ' 1 [[system. String, system. Private. CoreLib, version = 4.0.0.0, Culture = neutralt, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Collections.Generic.List'1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-### System. Collections. Generic. list ' 1 [[Microsoft. Azure. Management. Monitoring. Management. Models. ActivityLogAlertLeafCondition, Microsoft. Azure. PowerShell. cmdletar. Monitor, version = 1.0.0.0, Culture = neutralt, PublicKeyToken = null]]
+### System.Collections.Generic.List'1[[Microsoft.Azure.Management.Monitor.Management.Models.ActivityLogAlertLeafCondition, Microsoft.Azure.PowerShell.Cmdlets.Monitor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
 
-### System. Collections. Generic. list ' 1 [[Microsoft. Azure. Management. Monitoring. Management. Models. ActivityLogAlertActionGroup, Microsoft. Azure. PowerShell. cmdletar. Monitor, version = 1.0.0.0, Culture = neutralt, PublicKeyToken = null]]
+### System.Collections.Generic.List'1[[Microsoft.Azure.Management.Monitor.Management.Models.ActivityLogAlertActionGroup, Microsoft.Azure.PowerShell.Cmdlets.Monitor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
 
-### System. Collections. Generic. ordbok ' 2 [[system. String, system. Private. CoreLib, version = 4.0.0.0, Culture = neutralt, PublicKeyToken = 7cec85d7bea7798e], [system. String, system. Private. CoreLib, version = 4.0.0.0, Culture = neutralt, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Collections.Generic.Dictionary'2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-### Microsoft. Azure. commands. Insights. OutputClasses. PSActivityLogAlertResource
+### Microsoft.Azure.Commands.Insights.OutputClasses.PSActivityLogAlertResource
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. Insights. OutputClasses. PSActivityLogAlertResource
+### Microsoft.Azure.Commands.Insights.OutputClasses.PSActivityLogAlertResource
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
@@ -464,5 +464,3 @@ Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,
 [Remove-AzActivityLogAlert](./Remove-AzActivityLogAlert.md)
 
 [New-AzActionGroup](./New-AzActionGroup.md)
-
-[New-AzActivityLogAlertCondition](./Get-AzActivityLogAlertCondition.md)

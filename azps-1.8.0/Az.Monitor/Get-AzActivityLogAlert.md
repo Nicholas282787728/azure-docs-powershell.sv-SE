@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzActivityLogAlert.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Get-AzActivityLogAlert.md
-ms.openlocfilehash: 26a1fbcc2016de2e6eca4cff2ee2442ef0111919
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 93112c8e7518ac23b23e5b1bb6c18109481495dc
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93915681"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100403161"
 ---
 # Get-AzActivityLogAlert
 
-## Sammanfattning
-Hämtar en eller flera aktivitets logg varningar.
+## SYNOPSIS
+Får en eller flera resurser för aktivitetsloggaviseringar.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### GetByNameAndResourceGroup
 ```
@@ -32,36 +32,36 @@ Get-AzActivityLogAlert [[-ResourceGroupName] <String>] [-DefaultProfile <IAzureC
  [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Get-AzActivityLogAlert** hämtar en eller flera aviserings resurser för aktivitets loggen.
+## BESKRIVNING
+Cmdleten **Get-AzActivityLogAlert** får en eller flera aviseringsresurser i aktivitetsloggen.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: få en aktivitets loggs aviseringar efter abonnemangs-ID
+### Exempel 1: Få aviseringar om aktivitetsloggar med prenumerations-ID
 ```
 PS C:\>Get-AzActivityLogAlert
 ```
 
-Det här kommandot listar alla aktivitets loggs aviseringar för det aktuella abonnemanget.
+Det här kommandot visar alla aktivitetsloggaviseringar för den aktuella prenumerationen.
 
-### Exempel 2: Hämta aktivitets logg meddelanden för den angivna resurs gruppen
+### Exempel 2: Hämta aktivitetsloggaviseringar för den givna resursgruppen
 ```
 PS C:\>Get-AzActivityLogAlert -ResourceGroupName "Default-activityLogAlerts"
 ```
 
-Det här kommandot listar aktivitets loggnings aviseringar för den angivna resurs gruppen.
+Det här kommandot visar aktivitetsloggaviseringar för den givna resursgruppen.
 
-### Exempel 3: Hämta en aktivitets loggs avisering.
+### Exempel 3: Få en aktivitetsloggavisering.
 ```
 PS C:\>Get-AzActivityLogAlert -ResourceGroupName "Default-activityLogAlerts" -Name "alert1"
 ```
 
-Det här kommandot listar en (en lista med ett enskilt element) aktivitets logg varning.
+Med det här kommandot visas en aktivitetsloggavisering (en lista med ett enda element).
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -75,8 +75,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Namn
-Namnet på aktivitets logg varningen.
+### -Name
+Namnet på aktivitetsloggaviseringen.
 
 ```yaml
 Type: System.String
@@ -91,8 +91,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Namnet på resurs gruppen där aviserings resursen finns.
-Om Name inte är null eller tomt måste den här parametern innehålla en sträng som inte är tom.
+Namnet på resursgruppen där aviseringsresursen finns.
+Om Namn inte är null eller tomt måste den här parametern innehålla en icke tom sträng.
 
 ```yaml
 Type: System.String
@@ -119,26 +119,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. Insights. OutputClasses. PSActivityLogAlertResource
+### Microsoft.Azure.Commands.Insights.OutputClasses.PSActivityLogAlertResource
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
 [Set-AzActivityLogAlert](./Set-AzActivityLogAlert.md)
 
-[Update-AzActivityLogAlert](./Update-AzActivityLogAlert.md)
-
 [Remove-AzActivityLogAlert](./Remove-AzActivityLogAlert.md)
 
 [New-AzActionGroup](./New-AzActionGroup.md)
-
-[New-AzActivityLogAlertCondition](./Get-AzActivityLogAlertCondition.md)
