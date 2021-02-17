@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzADApplication.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzADApplication.md
-ms.openlocfilehash: 18b5f64426b0a3c458ea489d27781f1a01336b52
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 545722e48095f8b77104bb6ff24b856bd76e3312
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93747187"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100399727"
 ---
 # Get-AzADApplication
 
-## Sammanfattning
-Visar befintliga Azure Active Directory-program.
+## SYNOPSIS
+Visar en lista över befintliga Azure Active Directory-program.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### EmptyParameterSet (standard)
 ```
@@ -56,46 +56,46 @@ Get-AzADApplication -IdentifierUri <String> [-DefaultProfile <IAzureContextConta
  [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Visar befintliga Azure Active Directory-program.
-Program uppslag kan utföras av ObjectId, ApplicationId, IdentifierUri eller DisplayName.
-Om ingen parameter anges hämtar den alla program under innehavaren.
+## BESKRIVNING
+Visar en lista över befintliga Azure Active Directory-program.
+Programmets uppslag kan utföras med ObjectId, ApplicationId, IdentifierUri eller DisplayName.
+Om ingen parameter tillhandahålls hämtas alla program under klientorganisationen.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1 – Visa alla program
+### Exempel 1 : Lista alla program
 
 ```
 PS C:\> Get-AzADApplication
 ```
 
-Visar alla program under en klient organisation.
+Visar alla program som finns under en klientorganisation.
 
-### Exempel 2-lista med program som använder sid indelning
+### Exempel 2 : Lista program med sidnumrering
 
 ```
 PS C:\> Get-AzADApplication -First 100
 ```
 
-Visar de första 100-programmen under en klient organisation.
+Visar de första 100 programmen under en klientorganisation.
 
-### Exempel 3 – få program utifrån ID URI
+### Exempel 3 - Hämta program med identifierare URI
 
 ```
 PS C:\> Get-AzADApplication -IdentifierUri http://mySecretApp1
 ```
 
-Hämtar programmet med ID-URI som " http://mySecretApp1 ".
+Hämtar programmet med identifierare som " http://mySecretApp1 ".
 
-### Exempel 4 – Hämta program utifrån objekt-ID
+### Exempel 4 - Hämta program efter objekt-ID
 
 ```
 PS C:\> Get-AzADApplication -ObjectId 39e64ec6-569b-4030-8e1c-c3c519a05d69
 ```
 
-Hämtar programmet med objekt-ID ' 39e64ec6-569b-4030-8e1c-c3c519a05d69 '.
+Hämtar programmet med objekt-ID '39e64ec6-569b-4030-8e1c-c3c519a05d69'.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -ApplicationId
 Program-ID för programmet som ska hämtas.
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-Programmets visnings namn.
+Programmets visningsnamn.
 
 ```yaml
 Type: System.String
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayNameStartWith
-Hämta alla program som börjar med visnings namnet.
+Hämta alla program som börjar med visningsnamnet.
 
 ```yaml
 Type: System.String
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -IdentifierUri
-Unik ID URI för programmet som ska hämtas.
+Unik identifierare för programmet som ska hämtas.
 
 ```yaml
 Type: System.String
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeTotalCount
-Rapporterar antalet objekt i data uppsättningen. För närvarande tar den här parametern ingenting.
+Rapporterar antalet objekt i datauppsättningen. För närvarande gör den här parametern ingenting.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -202,8 +202,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Hoppa över
-Ignorerar de första N objekten och hämtar sedan återstående objekt.
+### -Skip
+Ignorerar de första N-objekten och hämtar sedan de återstående objekten.
 
 ```yaml
 Type: System.UInt64
@@ -217,8 +217,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Först
-Det maximala antalet objekt som ska returneras.
+### -First
+Maximalt antal objekt som ska returneras.
 
 ```yaml
 Type: System.UInt64
@@ -233,19 +233,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-### System. GUID
+### System.Guid
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. ActiveDirectory. PSADApplication
+### Microsoft.Azure.Commands.ActiveDirectory.PSADApplication
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
@@ -257,7 +257,6 @@ Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,
 
 [Remove-AzADApplication](./Remove-AzADApplication.md)
 
-[Set-AzADApplication](./Set-AzADApplication.md)
 
 [New-AzADApplication](./New-AzADApplication.md)
 
