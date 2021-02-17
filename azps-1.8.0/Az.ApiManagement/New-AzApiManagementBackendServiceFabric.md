@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementBackendServiceFabric.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementBackendServiceFabric.md
-ms.openlocfilehash: 193f8f64abee3514d94a0f825beb7190c8ea7fa6
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 8e78f50c7503f2fede223ba80c20474af02f84a4
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93743366"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100400917"
 ---
 # New-AzApiManagementBackendServiceFabric
 
-## Sammanfattning
+## SYNOPSIS
 Skapar ett objekt av `PsApiManagementServiceFabric`
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 New-AzApiManagementBackendServiceFabric -ManagementEndpoint <String[]> -ClientCertificateThumbprint <String>
@@ -25,13 +25,13 @@ New-AzApiManagementBackendServiceFabric -ManagementEndpoint <String[]> -ClientCe
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
+## BESKRIVNING
 
-Cmdleten **New-AzApiManagementBackendServiceFabric** skapar ett objekt som `PsApiManagementServiceFabric` ska användas i cmdlet **New-AzApiManagementBackend** och **set-AzApiManagementBackend**.
+Cmdleten **New-AzApiManagementBackendServiceFabric** skapar ett objekt som ska användas i `PsApiManagementServiceFabric` cmdleten **New-AzApiManagementBackend** och **Set-AzApiManagementBackend.**
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: skapa ett In-Memory objekt för backend-tjänsten
+### Exempel 1: Skapa ett Backend Service Fabric In-Memory-objekt
 ```powershell
 PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
 PS C:\>$ManagementEndpoints = 'https://sfbackend-01.net:443', 'https://sfbackend-02.net:443'
@@ -41,13 +41,13 @@ PS C:\>$serviceFabric = New-AzApiManagementBackendServiceFabric -ManagementEndpo
 PS C:\>$backend = New-AzApiManagementBackend -Context  $apimContext -BackendId 123 -Url 'https://contoso.com/awesomeapi' -Protocol http -ServiceFabricCluster $serviceFabric -Description "service fabric backend" -PassThru
 ```
 
-Skapar ett infrastruktur avtal för en server dels tjänst
+Skapar en backend service Fabric-kontrakt
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -ClientCertificateThumbprint
-Tumavtryck för klient certifikat för hanterings slut punkten.
-Denna parameter är obligatorisk.
+Klientcertifikat tumavtryck för hanteringsslutpunkten.
+Den här parametern är obligatorisk.
 
 ```yaml
 Type: System.String
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -77,8 +77,8 @@ Accept wildcard characters: False
 ```
 
 ### -ManagementEndpoint
-Slut punkter för hantering av Service Fabric-kluster.
-Denna parameter är obligatorisk.
+Slutpunkter för hantering av tjänstkluster.
+Den här parametern är obligatorisk.
 
 ```yaml
 Type: System.String[]
@@ -93,8 +93,8 @@ Accept wildcard characters: False
 ```
 
 ### -MaxPartitionResolutionRetry
-Maximalt antal försök när du löser en tjänst infrastruktur partition.
-Denna parameter är valfri och standardvärdet är 5.
+Maximalt antal retries när du löser en Service Fabric-partition.
+Den här parametern är valfri och standardvärdet är 5.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerCertificateThumbprint
-Tumavtryck för certifikat kluster hanterings tjänsten används för TLS-kommunikation. Denna parameter är valfri.
+Thumbprint av certifikatklusterhanteringstjänsten som används för TLS-kommunikation. Den här parametern är valfri.
 
 ```yaml
 Type: System.String[]
@@ -124,8 +124,8 @@ Accept wildcard characters: False
 ```
 
 ### -ServerX509Name
-Insamling av Server X509-certifikat namn.
-Denna parameter är valfri.
+Samling med server x509-certifikatnamn.
+Den här parametern är valfri.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -140,21 +140,21 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. ApiManagement. ServiceManagement. Models. PsApiManagementServiceFabric
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementServiceFabric
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Get-AzApiManagementBackend](./Get-AzApiManagementBackend)
+[Get-AzApiManagementBackend](./Get-AzApiManagementBackend.md)
 
 [New-AzApiManagementBackend](./New-AzApiManagementBackend.md)
 

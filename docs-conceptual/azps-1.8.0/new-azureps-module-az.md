@@ -1,17 +1,17 @@
 ---
 title: Introduktion till Azure PowerShell Az-modulen
 description: Vi introducerar den nya Azure PowerShell-modulen Az, som ersätter AzureRM-modulen.
-ms.date: 05/10/2019
+ms.date: 02/12/2021
 ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: 0856748290e2bdea79b9ef845f2c000e9fefcd62
-ms.sourcegitcommit: 2036538797dd088728aee5ac5021472454d82eb2
-ms.translationtype: HT
+ms.openlocfilehash: f6ffd66d20943541c3591d41db7c72861f44204c
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
+ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93408385"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100415469"
 ---
 # <a name="introducing-the-new-azure-powershell-az-module"></a>Introduktion till den nya Azure PowerShell Az-modulen
 
@@ -45,7 +45,7 @@ Så uppgraderar du från en befintlig AzureRM-installation:
 
 1. [Avinstallera Azure PowerShell AzureRM-modulen](/powershell/azure/uninstall-az-ps#uninstall-the-azurerm-module)
 2. [Installera Azure PowerShell Az-modulen](install-az-ps.md)
-3. **VALFRITT** : Aktivera kompatibilitetsläge för att lägga till alias för AzureRM-cmdletar med [Enable-AzureRMAlias](/powershell/module/az.accounts/enable-azurermalias) medan du bekantar dig med den nya kommandouppsättningen. Du hittar mer information i nästa avsnitt och i [Påbörja migrering från AzureRM till Az](migrate-from-azurerm-to-az.md).
+3. **VALFRITT**: Aktivera kompatibilitetsläge för att lägga till alias för AzureRM-cmdletar med [Enable-AzureRMAlias](/powershell/module/az.accounts/enable-azurermalias) medan du bekantar dig med den nya kommandouppsättningen. Du hittar mer information i nästa avsnitt och i [Påbörja migrering från AzureRM till Az](migrate-from-azurerm-to-az.md).
 
 ## <a name="migrate-existing-scripts-to-az"></a>Migrera befintliga skript till Az
 
@@ -63,6 +63,8 @@ Az-modulen har ett kompatibilitetsläge för befintliga skript medan du arbetar 
 > [!IMPORTANT]
 > Även om cmdlet-namnen har alias kan det finnas nya (eller omdöpta) parametrar och ändrade returvärden för Az-cmdletar. Tro inte att migreringen är klappad och klar bara för att du aktiverar alias! I den [fullständiga listan över icke-bakåtkompatibla ändringar](migrate-az-1.0.0.md) ser du var skripten kan kräva uppdateringar.
 
-## <a name="continued-support-for-azurerm"></a>Fortsatt stöd för AzureRM
+## <a name="support-for-azurerm"></a>Stöd för AzureRM
 
-Inga nya cmdletar eller funktioner kommer att ges ut för AzureRM, men modulen underhålls fortfarande officiellt och felkorrigeringar kommer att ges ut till och med december 2020.
+Eftersom AZ PowerShell-moduler nu har alla funktioner i AzureRM PowerShell-moduler och mer, kommer vi att dra tillbaka AzureRM PowerShell-moduler den 29 februari 2024.
+
+Om du vill undvika avbrott i tjänsten [uppdaterar du dina skript](https://aka.ms/azpsmigrate) som använder AzureRM PowerShell-moduler för att använda AZ PowerShell-moduler med 29 februari 2024. Om du vill uppdatera dina skript automatiskt följer du [snabb starts guiden](/powershell/azure/quickstart-migrate-azurerm-to-az-automatically).
