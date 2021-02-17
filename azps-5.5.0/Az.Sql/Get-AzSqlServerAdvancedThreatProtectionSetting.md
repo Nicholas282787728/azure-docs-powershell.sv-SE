@@ -6,12 +6,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-az
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlServerAdvancedThreatProtectionSetting.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlServerAdvancedThreatProtectionSetting.md
-ms.openlocfilehash: 94963c8c5d61c91e2d53cdf7b12cc333acc566a3
-ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.openlocfilehash: a9d2d82ae9b35b79701d071fa7598cf40b185cd5
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100217367"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100413208"
 ---
 # Get-AzSqlServerAdvancedThreatProtectionSetting
 
@@ -27,7 +27,7 @@ Get-AzSqlServerAdvancedThreatProtectionSetting -ServerName <String> [-ResourceGr
 
 ## BESKRIVNING
 Cmdleten **Get-AzSqlServerAdvancedThreatProtectionSetting** får de avancerade inställningarna för skydd mot hot på en Azure SQL-server.
-Om du vill använda den här cmdleten anger du parametrarna *ResourceGroupName* och *ServerName* för att identifiera servern som cmdleten hämtar inställningarna för.
+Om du vill använda den här cmdleten anger du parametrarna *ResourceGroupName* och *ServerName* för att identifiera den server som cmdleten hämtar inställningarna för.
 
 ## EXEMPEL
 
@@ -44,7 +44,7 @@ ExcludedDetectionTypes       : {}
 RetentionInDays              : 0
 ```
 
-Det här kommandot får de avancerade skyddsinställningarna för en server med namnet Server01.
+Med det här kommandot får du avancerade skyddsinställningar för en server med namnet Server01.
 Servern tilldelas resursgruppen ResourceGroup11.
 
 ## PARAMETERS
@@ -140,8 +140,7 @@ Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariab
 
 ## RELATERADE LÄNKAR
 
-[Remove-AzSqlDatabaseAdvancedThreatProtectionSetting](./Remove-AzSqlDatabaseAdvancedThreatProtectionSetting.md)
 
-[Dokumentation om SQL-databas](https://docs.microsoft.com/azure/sql-database/)
+[Dokumentation om SQL-databaser](https://docs.microsoft.com/azure/sql-database/)
 
 
