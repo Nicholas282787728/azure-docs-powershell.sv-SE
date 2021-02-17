@@ -6,48 +6,48 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/ne
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/New-AzAlertRuleWebhook.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/New-AzAlertRuleWebhook.md
-ms.openlocfilehash: 420bfd3536c9bbf8bcfe075eb7ed56320788d3b3
-ms.sourcegitcommit: 4c61442a2df1cee633ce93cad9f6bc793803baa2
+ms.openlocfilehash: 03a1ca397fb67daf4b7cf73700f54d6642dd9f2d
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "93922585"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100399370"
 ---
 # New-AzAlertRuleWebhook
 
-## Sammanfattning
-Skapar en aviserings regel med webhook.
+## SYNOPSIS
+Skapar en aviseringsregel webhook.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 New-AzAlertRuleWebhook [-ServiceUri] <String> [[-Property] <Hashtable>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **New-AzAlertRuleWebhook** skapar en notifieringsregel för aviserings regler.
+## BESKRIVNING
+Cmdleten **New-AzAlertRuleWebhook** skapar en aviseringsregelwebbhook.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: skapa en notifieringsregel för aviseringar
+### Exempel 1: Skapa en aviseringsregelwebb
 ```
 PS C:\>New-AzAlertRuleWebhook -ServiceUri "http://contoso.com"
 ```
 
-Det här kommandot skapar en aviserings regel webhook genom att bara ange tjänste-URI.
+Med det här kommandot skapas en aviseringsregel webhook genom att endast ange tjänstens URI.
 
-### Exempel 2: skapa en webhook med en egenskap
+### Exempel 2: Skapa en webhook med en egenskap
 ```
 PS C:\>$Actual = New-AzAlertRuleWebhook -ServiceUri "http://contoso.com" -Property @{prop1 = 'value1'}
 ```
 
-Det här kommandot skapar en notifieringsregel för Contoso.com med en egenskap och lagrar den sedan i $Actual variabel.
+Med det här kommandot skapas en aviseringsregel för Contoso.com som har en egenskap och sedan lagras den i $Actual variabeln.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -61,8 +61,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Egenskap
-Anger listan över egenskaper i formatet @ (property1 = ' värde1 ',....).
+### -Property
+Anger listan över egenskaper i formatet @(egenskap1 = 'värde1',....).
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceUri
-Anger tjänste-URI.
+Anger tjänstens URI.
 
 ```yaml
 Type: System.String
@@ -92,23 +92,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-### System. Collections. hash
+### System.Collections.Hashtable
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. Management. Monitoring. Management. Models. RuleWebhookAction
+### Microsoft.Azure.Management.Monitor.Management.Models.RuleWebhookAction
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Add-AzLogAlertRule](./Add-AzLogAlertRule.md)
 
 [Add-AzMetricAlertRule](./Add-AzMetricAlertRule.md)
 

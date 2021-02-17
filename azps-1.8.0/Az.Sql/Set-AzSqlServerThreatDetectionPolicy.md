@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/set-az
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Set-AzSqlServerThreatDetectionPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Set-AzSqlServerThreatDetectionPolicy.md
-ms.openlocfilehash: 8d58085aa55958e6e0fc9658d814d4bc05006fd6
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 49b484c17b595a8f676a089f8627b70a1f34c471
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93746473"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100399506"
 ---
 # Set-AzSqlServerThreatDetectionPolicy
 
-## Sammanfattning
-Ställer in en policy för hot identifiering på en server.
+## SYNOPSIS
+Anger en princip för identifiering av hot på en server.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 Set-AzSqlServerThreatDetectionPolicy [-PassThru] [-NotificationRecipientsEmails <String>]
@@ -27,24 +27,24 @@ Set-AzSqlServerThreatDetectionPolicy [-PassThru] [-NotificationRecipientsEmails 
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **set-AzSqlServerThreatDetectionPolicy** anger en policy för hot identifiering på en Azure SQL Server.
-För att aktivera hot identifiering på en server måste en gransknings princip vara aktive rad för den servern.
-Om du vill använda denna cmdlet anger du parametrarna *ResourceGroupName* och servername för att identifiera servern.
+## BESKRIVNING
+Cmdleten **Set-AzSqlServerThreatDetectionPolicy** anger en princip för identifiering av hot på en Azure SQL-server.
+För att kunna aktivera identifiering av hot på en server måste en granskningsprincip vara aktiverad på servern.
+Om du vill använda den här cmdleten anger du *parametrarna ResourceGroupName* och ServerName för att identifiera servern.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: ange principen för hot identifiering för en databas
+### Exempel 1: Ange principen för identifiering av hot för en databas
 ```
 PS C:\>Set-AzSqlServerThreatDetectionPolicy -ResourceGroupName "ResourceGroup11" -ServerName "Server01" -NotificationRecipientsEmails "admin01@contoso.com;secadmin@contoso.com" -EmailAdmins $False -ExcludedDetectionType "Sql_Injection_Vulnerability","SQL_Injection" -StorageAccountName "mystorageAccount"
 ```
 
-Det här kommandot ställer in policyn för hot identifiering för en server som heter Server01.
+Det här kommandot anger principen för identifiering av hot för en server med namnet Server01.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAdmins
-Anger om principen för hot identifiering kontaktar administratörer via e-post.
+Anger om administratörer för princip för identifiering av hot ska använda e-post.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -74,8 +74,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludedDetectionType
-Anger en matris med identifierings typer som ska undantas från principen.
-De acceptabla värdena för den här parametern är:
+Anger en matris med identifieringstyper som ska uteslutas från principen.
+De godtagbara värdena för den här parametern är:
 - Sql_Injection
 - Sql_Injection_Vulnerability
 - Access_Anomaly
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 Returnerar ett objekt som representerar det objekt som du arbetar med.
-Denna cmdlet genererar som standard inga utdata.
+Som standard genererar inte den här cmdleten några utdata.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Anger namnet på den resurs grupp som servern tillhör.
+Anger namnet på den resursgrupp som servern tillhör.
 
 ```yaml
 Type: System.String
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionInDays
-Antalet bevarande dagar för gransknings loggar
+Antalet kvarhållningsdagar för granskningsloggarna
 
 ```yaml
 Type: System.Nullable`1[System.UInt32]
@@ -154,7 +154,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ServerName
+### -Servernamn
 Anger namnet på servern.
 
 ```yaml
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountName
-Anger namnet på det lagrings konto som ska användas. Jokertecken är inte tillåtna. Denna parameter är inte obligatorisk. Om du inte anger den här parametern används det lagrings konto som har definierats tidigare som en del av principen för hot identifiering för databasen. Om det är första gången som en theat för att identifiera en databas har definierats och den här parametern inte är angiven kan cmdleten Miss lyckas.
+Anger namnet på lagringskontot som ska användas. Jokertecken tillåts inte. Den här parametern är inte obligatorisk. När den här parametern inte anges använder cmdleten det lagringskonto som definierades tidigare som en del av databasens princip för identifiering av hot. Om det är första gången en databas som identifieringsprincipen har definierats och den här parametern inte anges kommer cmdleten att misslyckas.
 
 ```yaml
 Type: System.String
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs.
+Visar vad som skulle hända om cmdleten körs.
 Cmdleten körs inte.
 
 ```yaml
@@ -216,28 +216,26 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-### System. Nullable ' 1 [[system. Boolean, system. privat. CoreLib, version = 4.0.0.0, Culture = neutralt, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Nullable'1[[System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-### Microsoft. Azure. commands. SQL. ThreatDetection. Model. DetectionType []
+### Microsoft.Azure.Commands.Sql.ThreatDetection.Model.DetectionType[]
 
-### System. Nullable ' 1 [[system. UInt32, system. privat. CoreLib, version = 4.0.0.0, Culture = neutralt, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Nullable'1[[System.UInt32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. SQL. ThreatDetection. Model. ServerThreatDetectionPolicyModel
+### Microsoft.Azure.Commands.Sql.ThreatDetection.Model.ServerThreatDetectionPolicyModel
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
 [Get-AzSqlServerThreatDetectionPolicy](./Get-AzSqlServerThreatDetectionPolicy.md)
 
-[Remove-AzSqlServerThreatDetectionPolicy](03e90cd1-6ae2-4134-bc5e-28cc080614c9)
-
-[Dokumentation för SQL-databaser](https://docs.microsoft.com/azure/sql-database/)
+[Dokumentation om SQL-databaser](https://docs.microsoft.com/azure/sql-database/)

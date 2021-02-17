@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/stop-a
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Stop-AzSqlDatabaseExecuteIndexRecommendation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Stop-AzSqlDatabaseExecuteIndexRecommendation.md
-ms.openlocfilehash: 9b21c290b2d5e5b6056297bba7d4196dd68d68d2
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 7f13b1a1a5daad4e7c97de962943bb859f6a09df
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93746461"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100399489"
 ---
 # Stop-AzSqlDatabaseExecuteIndexRecommendation
 
-## Sammanfattning
-Stoppar arbets flödet som kör en rekommenderad index åtgärd.
+## SYNOPSIS
+Stoppar arbetsflödet som kör en rekommenderad indexåtgärd.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 Stop-AzSqlDatabaseExecuteIndexRecommendation -ServerName <String> -DatabaseName <String>
@@ -26,22 +26,22 @@ Stop-AzSqlDatabaseExecuteIndexRecommendation -ServerName <String> -DatabaseName 
  [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Stop-AzSqlDatabaseExecuteIndexRecommendation** stoppar arbets flödet som kör en rekommenderad index åtgärd.
+## BESKRIVNING
+**Cmdleten Stop-AzSqlDatabaseExecuteIndexRecommendation** stoppar arbetsflödet som kör en rekommenderad indexåtgärd.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: sluta köra en index rekommendation
+### Exempel 1: Sluta köra en rekommendation för index
 ```
 PS C:\>Stop-AzSqlDatabaseExecuteIndexRecommendation -ResourceGroup "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -IndexRecommendationName "INDEX_NAME"
 ```
 
-Det här kommandot slutar använda en index rekommendation.
+Det här kommandot slutar att köra en rekommendation för index.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DatabaseName
-Anger namnet på den databas där denna cmdlet stoppar arbets flödet.
+Anger namnet på databasen som cmdleten stoppar arbetsflödet för.
 
 ```yaml
 Type: System.String
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -71,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -IndexRecommendationName
-Anger namnet på den index rekommendation som denna cmdlet slutar.
+Anger namnet på den indexrekommendationer som denna cmdlet stoppar.
 
 ```yaml
 Type: System.String
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Anger namnet på den resurs grupp som servern är tilldelad till.
+Anger namnet på den resursgrupp som servern är tilldelad till.
 
 ```yaml
 Type: System.String
@@ -100,8 +100,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ServerName
-Anger den server som är värd för den databas som den här cmdleten stoppar ett arbets flöde för.
+### -Servernamn
+Anger servern som är värd för databasen för vilken denna cmdlet stoppar ett arbetsflöde.
 
 ```yaml
 Type: System.String
@@ -116,24 +116,23 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. SQL. Model. IndexRecommendation
+### Microsoft.Azure.Commands.Sql.Model.IndexRecommendation
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Get-AzSqlDatabaseIndexRecommendations](./Get-AzSqlDatabaseIndexRecommendations.md)
 
 [Start-AzSqlDatabaseExecuteIndexRecommendation](./Start-AzSqlDatabaseExecuteIndexRecommendation.md)
 
-[Dokumentation för SQL-databaser](https://docs.microsoft.com/azure/sql-database/)
+[Dokumentation om SQL-databaser](https://docs.microsoft.com/azure/sql-database/)
 
 
