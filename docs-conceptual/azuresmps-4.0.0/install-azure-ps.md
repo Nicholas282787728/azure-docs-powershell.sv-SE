@@ -5,12 +5,12 @@ ms.devlang: powershell
 ms.topic: conceptual
 ms.date: 03/06/2017
 ms.custom: devx-track-azurepowershell
-ms.openlocfilehash: 2860d5c7642b137c1cb14a38fa13d59ec2a4123c
-ms.sourcegitcommit: 038cb42a3bd8c009bc57c8c1c252e66fa170c84b
-ms.translationtype: HT
+ms.openlocfilehash: 23ea4bcbd182cf1b063f2ae90921217de74a7044
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
+ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523214"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100401529"
 ---
 # <a name="installing-the-azure-powershell-service-management-module"></a>Installera Azure PowerShell Service Management-modulen
 
@@ -70,7 +70,7 @@ När du har loggat in på Azure skapar Azure PowerShell en kontext för den angi
 
 Azure PowerShell-modulerna uppdateras kontinuerligt. Om du märker att onlinehjälpen för cmdletar omfattar cmdletar eller parametrar som inte finns i din modul bör du hämta och installera den senaste versionen av modulen. Du kan hitta modulens version genom att skriva in: `(Get-InstalledModule Azure).Version`.
 
-Om du vill ha exempelskript som kan hjälpa dig att automatisera vissa av de vanliga uppgifterna i Azure kan du se [Windows Azure Script Center](http://www.windowsazure.com/documentation/scripts/).
+Om du vill ha exempelskript som kan hjälpa dig att automatisera vissa av de vanliga uppgifterna i Azure kan du se [Windows Azure Script Center](https://www.windowsazure.com/documentation/scripts/).
 
 Allmän information om installation, inlärning, användning och anpassning av Windows PowerShell finns i [Skript med Windows PowerShell](/powershell/scripting/learn/ps101/00-introduction).
 

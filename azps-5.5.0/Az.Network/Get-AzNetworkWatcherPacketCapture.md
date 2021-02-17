@@ -5,17 +5,17 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/ge
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzNetworkWatcherPacketCapture.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Get-AzNetworkWatcherPacketCapture.md
-ms.openlocfilehash: 1276a3c63ec4b9c4ec1c2c4c91ea792013cbacc9
-ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.openlocfilehash: e836bb8738b594e09c65568cc0f454a476db9d34
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100252433"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100412834"
 ---
 # Get-AzNetworkWatcherPacketCapture
 
 ## SYNOPSIS
-Hämtar information och egenskaper och status för ett paket fånga resurs.
+Hämtar information och egenskaper och status för ett pakets inspelningsresurs.
 
 ## SYNTAX
 
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure.
+Autentiseringsuppgifterna, kontot, klientorganisationen och prenumerationen som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -Plats
-Nätverksbevakningens plats.
+Plats för nätverksbevakningen.
 
 ```yaml
 Type: System.String
@@ -245,5 +245,5 @@ Nyckelord: azure, azurerm, arm, resource, management, manager, network, networki
 
 [Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport.md)
 
-[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor)
+[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor.md)
 
