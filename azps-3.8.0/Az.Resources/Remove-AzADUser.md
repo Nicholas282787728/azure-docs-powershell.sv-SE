@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Remove-AzADUser.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Remove-AzADUser.md
-ms.openlocfilehash: f05acfb05e9cd60616e243e36da406477e8d9d03
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: b3c59fabe648293b6ed92d23e4953cc17190e5e9
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "93926426"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100413361"
 ---
 # Remove-AzADUser
 
-## Sammanfattning
+## SYNOPSIS
 Tar bort en Active Directory-användare.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### UPNOrObjectIdParameterSet (standard)
 ```
@@ -50,39 +50,39 @@ Remove-AzADUser -InputObject <PSADUser> [-PassThru] [-Force] [-DefaultProfile <I
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Tar bort en Active Directory-användare (arbets-eller skol konto som också kallas organisations-ID).
+## BESKRIVNING
+Tar bort en Active Directory-användare (arbets- och skolkonto, som också kallas org-id).
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1 – ta bort en användare via huvud namnet för användare
+### Exempel 1 – Ta bort en användare med huvudnamnet
 
 ```
 PS C:\> Remove-AzADUser -UserPrincipalName foo@domain.com
 ```
 
-Tar bort användaren med UPN-namnet " foo@domain.com " från innehavaren.
+Tar bort användaren med huvudnamnet " foo@domain.com " från klientorganisationen.
 
-### Exempel 2 – ta bort en användare utifrån objekt-ID
+### Exempel 2 – Ta bort en användare med objekt-ID
 
 ```
 PS C:\> Remove-AzADUser -ObjectId 7a9582cf-88c4-4319-842b-7a5d60967a69
 ```
 
-Tar bort användaren med objekt-ID ' 7a9582cf-88c4-4319-842b-7a5d60967a69 ' från innehavaren.
+Tar bort användaren med objekt-ID '7a9582cf-88c4-4319-842b-7a5d60967a69' från klientorganisationen.
 
-### Exempel 3 – ta bort en användare genom rör
+### Exempel 3 – Ta bort en användare genom rörning
 
 ```
 PS C:\> Get-AzADUser -ObjectId 7a9582cf-88c4-4319-842b-7a5d60967a69 | Remove-AzADUser
 ```
 
-Hämtar användaren med objekt-ID ' 7a9582cf-88c4-4319-842b-7a5d60967a69 ' och pipes till Remove-AzADUser cmdlet för att ta bort användaren från klient organisationen.
+Hämtar användaren med objekt-ID '7a9582cf-88c4-4319-842b-7a5d60967a69' och rör som till Remove-AzADUser-cmdleten för att ta bort användaren från klientorganisationen.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-Visnings namnet på den användare som ska tas bort.
+Visningsnamnet för den användare som ska tas bort.
 
 ```yaml
 Type: System.String
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Om det anges ber vi dig bekräfta att du vill ta bort användaren.
+Om detta anges frågar du inte om du vill ta bort användaren.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### -UPNOrObjectId
-Användarens huvud namn eller objectId för den användare som ska tas bort.
+Användarens huvudnamn eller objekt-ID för den användare som ska tas bort.
 
 ```yaml
 Type: System.String
@@ -187,7 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-Användarens huvud namn för den användare som ska tas bort.
+Användarens huvudnamn som ska tas bort.
 
 ```yaml
 Type: System.String
@@ -202,7 +202,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -217,7 +217,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs.
+Visar vad som skulle hända om cmdleten körs.
 Cmdleten körs inte.
 
 ```yaml
@@ -233,19 +233,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-### Microsoft. Azure. commands. ActiveDirectory. PSADUser
+### Microsoft.Azure.Commands.ActiveDirectory.PSADUser
 
-## VÄRDEN
+## UTDATA
 
-### System. Boolean
+### System.Boolean
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
@@ -253,5 +253,4 @@ Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,
 
 [Get-AzADUser](./Get-AzADUser.md)
 
-[Set-AzADUser](./Set-AzADUser.md)
 

@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Remove-AzADApplication.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Remove-AzADApplication.md
-ms.openlocfilehash: eed437a235072972778925c0b94f2d22466399b3
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 7b66dff3f59e3ad186bfc559343aebf484ff2bc2
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93920065"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100413548"
 ---
 # Remove-AzADApplication
 
-## Sammanfattning
+## SYNOPSIS
 Tar bort Azure Active Directory-programmet.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### ObjectIdParameterSet (standard)
 ```
@@ -44,36 +44,36 @@ Remove-AzADApplication -InputObject <PSADApplication> [-PassThru] [-Force]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
+## BESKRIVNING
 Tar bort Azure Active Directory-programmet.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1 – ta bort program utifrån objekt-ID
+### Exempel 1 : Ta bort program med objekt-ID
 
 ```
 PS C:\> Remove-AzADApplication -ObjectId b4cd1619-80b3-4cfb-9f8f-9f2333425738
 ```
 
-Tar bort programmet med objekt-ID ' b4cd1619-80b3-4CFB-9f8f-9f2333425738 ' från innehavaren.
+Tar bort programmet med objekt-ID 'b4cd1619-80b3-4cfb-9f8f-9f2333425738' från klientorganisationen.
 
-### Exempel 2 – ta bort program utifrån program-ID
+### Exempel 2 : Ta bort program med program-ID
 
 ```
 PS C:\> Remove-AzADApplication -ApplicationId f9c5ea4f-28f0-401a-a491-491a037fa346
 ```
 
-Tar bort programmet med program-ID ' f9c5ea4f-28f0-401A-a491-491a037fa346 ' från innehavaren.
+Tar bort programmet med program-ID 'f9c5ea4f-28f0-401a-a491-491a037fa346' från klientorganisationen.
 
-### Exempel 3 – ta bort program från rör
+### Exempel 3 : Ta bort program genom rörning
 
 ```
 PS C:\> Get-AzADApplication -ObjectId b4cd1619-80b3-4cfb-9f8f-9f2333425738 | Remove-AzADApplication
 ```
 
-Hämtar programmet med objekt-ID ' b4cd1619-80b3-4CFB-9f8f-9f2333425738 ' och pipes till Remove-AzADApplication cmdlet för att ta bort programmet från innehavaren.
+Hämtar programmet med objekt-ID 'b4cd1619-80b3-4cfb-9f8f-9f2333425738' och rör som till Remove-AzADApplication-cmdleten för att ta bort programmet från klientorganisationen.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -ApplicationId
 Program-ID för programmet som ska tas bort.
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-Programmets visnings namn.
+Programmets visningsnamn.
 
 ```yaml
 Type: System.String
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Växla till att ta bort ett program utan bekräftelse.
+Växla till att ta bort ett program utan en bekräftelse.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Objektet som representerar programmet du vill ta bort.
+Det objekt som representerar det program som ska tas bort.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ActiveDirectory.PSADApplication
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -196,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs.
+Visar vad som skulle hända om cmdleten körs.
 Cmdleten körs inte.
 
 ```yaml
@@ -212,22 +212,22 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-### System. GUID
+### System.Guid
 
-### Microsoft. Azure. commands. ActiveDirectory. PSADApplication
+### Microsoft.Azure.Commands.ActiveDirectory.PSADApplication
 
-## VÄRDEN
+## UTDATA
 
-### System. Boolean
+### System.Boolean
 
-## ANMÄRKNINGAR
-Nyckelord: Azure, azurerm, arm, resurs, hantering, chef, resurs, grupp, Mall, distribution
+## ANTECKNINGAR
+Nyckelord: azure, azurerm, arm, resurs, hantering, chef, resurs, grupp, mall, distribution
 
 ## RELATERADE LÄNKAR
 
@@ -235,7 +235,6 @@ Nyckelord: Azure, azurerm, arm, resurs, hantering, chef, resurs, grupp, Mall, di
 
 [Get-AzADApplication](./Get-AzADApplication.md)
 
-[Set-AzADApplication](./Set-AzADApplication.md)
 
 [Remove-AzADAppCredential](./Remove-AzADAppCredential.md)
 

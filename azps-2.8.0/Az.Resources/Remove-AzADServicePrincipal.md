@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Remove-AzADServicePrincipal.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Remove-AzADServicePrincipal.md
-ms.openlocfilehash: 0fa6dde8584eb003bd479e9a73ec96176282d83c
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 2658e5ff70603cb9bbe3aa3a7ccd47713249c726
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93920062"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100413497"
 ---
 # Remove-AzADServicePrincipal
 
-## Sammanfattning
-Tar bort Azure Active Directory-huvudtjänsten.
+## SYNOPSIS
+Tar bort Azure Active Directory-tjänstens huvudnamn.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### ObjectIdParameterSet (standard)
 ```
@@ -56,55 +56,55 @@ Remove-AzADServicePrincipal -ApplicationObject <PSADApplication> [-PassThru] [-F
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Tar bort Azure Active Directory-huvudtjänsten.
+## BESKRIVNING
+Tar bort Azure Active Directory-tjänstens huvudnamn.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1 – ta bort ett tjänst huvud objekt efter objekt-ID
+### Exempel 1 – Ta bort en tjänsts huvudnamn efter objekt-ID
 
 ```
 PS C:\> Remove-AzADServicePrincipal -ObjectId 61b5d8ea-fdc6-40a2-8d5b-ad447c678d45
 ```
 
-Tar bort tjänstens huvud namn med objekt-ID ' 61b5d8ea-fdc6-40a2-8d5b-ad447c678d45 '.
+Tar bort tjänstens huvudnamn med objekt-ID '61b5d8ea-fdc6-40a2-8d5b-ad447c678d45'.
 
-### Exempel 2 – ta bort ett tjänst huvud baserat på program-ID
+### Exempel 2 – Ta bort en tjänsts huvudnamn efter program-ID
 
 ```
 PS C:\> Remove-AzADServicePrincipal -ApplicationId 9263469e-d328-4321-8646-3e3e75d20e76
 ```
 
-Tar bort tjänstens huvud namn med program-ID ' 9263469e-d328-4321-8646-3e3e75d20e76 '.
+Tar bort tjänstens huvudnamn med program-ID '9263469e-d328-4321-8646-3e3e75d20e76'.
 
-### Exempel 3 – ta bort ett tjänst huvud med SPN
+### Exempel 3 – Ta bort en tjänsts huvudnamn med SPN
 
 ```
 PS C:\> Remove-AzADServicePrincipal -ServicePrincipalName MyServicePrincipal
 ```
 
-Ta bort tjänstens huvud namn med SPN "MyServicePrincipal"
+Ta bort tjänstens huvudnamn med tjänstens huvudnamn "MyServicePrincipal"
 
-### Exempel 4 – ta bort ett tjänst huvud genom rör
+### Exempel 4 – Ta bort en tjänsts huvudnamn genom rörning
 
 ```
 PS C:\> Get-AzADServicePrincipal -ObjectId 61b5d8ea-fdc6-40a2-8d5b-ad447c678d45 | Remove-AzADServicePrincipal
 ```
 
-Hämtar tjänstens huvud namn med objekt-ID ' 61b5d8ea-fdc6-40a2-8d5b-ad447c678d45 ' och pipes till Remove-AzADServicePrincipal cmdlet för att ta bort tjänstens huvud objekt.
+Hämtar tjänstens huvudnamn med objekt-ID '61b5d8ea-fdc6-40a2-8d5b-ad447c678d45' och rör som till Remove-AzADServicePrincipal-cmdleten för att ta bort den tjänstens huvudnamn.
 
-### Exempel 5 – ta bort ett tjänst huvud genom att rikta ett program
+### Exempel 5 – Ta bort en tjänsts huvudnamn genom att pipa ett program
 
 ```
 PS C:\> Get-AzApplication -ApplicationId 9263469e-d328-4321-8646-3e3e75d20e76 | Remove-AzADServicePrincipal
 ```
 
-Hämtar programmet med program-ID ' 9263469e-d328-4321-8646-3e3e75d20e76 ' och rör till cmdleten Remove-AzADServicePrincipal för att ta bort tjänstens huvud objekt som är associerat med det programmet.
+Hämtar programmet med program-ID '9263469e-d328-4321-8646-3e3e75d20e76' och rör som till cmdleten Remove-AzADServicePrincipal för att ta bort tjänstens huvudnamn som är kopplat till programmet.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -ApplicationId
-Tjänstens huvud program-ID.
+Tjänstens huvudprogram-ID.
 
 ```yaml
 Type: System.Guid
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationObject
-Program objekt vars tjänste huvud ska tas bort.
+Det programobjekt vars huvudnamn för tjänsten tas bort.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ActiveDirectory.PSADApplication
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-Visnings namnet på tjänstens huvud konto.
+Visningsnamnet för tjänstens huvudnamn.
 
 ```yaml
 Type: System.String
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Växla till att ta bort tjänstens huvud konto utan att bekräfta.
+Växla till att ta bort tjänstens huvudnamn utan en bekräftelse.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Tjänstens huvud objekt.
+Tjänstens huvudobjekt.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ActiveDirectory.PSADServicePrincipal
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-Objekt-ID för det tjänst objekt som ska tas bort.
+Objekt-ID för den tjänsts huvudnamn som ska tas bort.
 
 ```yaml
 Type: System.String
@@ -209,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Om det anges returneras den borttagna tjänstens huvud namn.
+Om det anges returneras den borttagna tjänstens huvudnamn.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -224,7 +224,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalName
-Tjänstens huvud namn.
+Tjänstens huvudnamn.
 
 ```yaml
 Type: System.String
@@ -239,7 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -254,7 +254,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs.
+Visar vad som skulle hända om cmdleten körs.
 Cmdleten körs inte.
 
 ```yaml
@@ -270,24 +270,24 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-### System. GUID
+### System.Guid
 
-### Microsoft. Azure. commands. ActiveDirectory. PSADServicePrincipal
+### Microsoft.Azure.Commands.ActiveDirectory.PSADServicePrincipal
 
-### Microsoft. Azure. commands. ActiveDirectory. PSADApplication
+### Microsoft.Azure.Commands.ActiveDirectory.PSADApplication
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. ActiveDirectory. PSADServicePrincipal
+### Microsoft.Azure.Commands.ActiveDirectory.PSADServicePrincipal
 
-## ANMÄRKNINGAR
-Nyckelord: Azure, azurerm, arm, resurs, hantering, chef, resurs, grupp, Mall, distribution
+## ANTECKNINGAR
+Nyckelord: azure, azurerm, arm, resurs, hantering, chef, resurs, grupp, mall, distribution
 
 ## RELATERADE LÄNKAR
 
@@ -295,7 +295,6 @@ Nyckelord: Azure, azurerm, arm, resurs, hantering, chef, resurs, grupp, Mall, di
 
 [Get-AzADServicePrincipal](./Get-AzADServicePrincipal.md)
 
-[Set-AzADServicePrincipal](./Set-AzADServicePrincipal.md)
 
 [Remove-AzADApplication](./Remove-AzADApplication.md)
 

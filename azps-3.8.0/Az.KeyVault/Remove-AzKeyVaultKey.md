@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/r
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Remove-AzKeyVaultKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Remove-AzKeyVaultKey.md
-ms.openlocfilehash: bfdd237ecadadae181d9e9dd3a201580537097f0
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 75d781527a9783c81eba5bd2aacf07d237ef4f8f
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "93926818"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100412086"
 ---
 # Remove-AzKeyVaultKey
 
-## Sammanfattning
-Tar bort en nycklar i ett nyckelord.
+## SYNOPSIS
+Tar bort en nyckel i ett nyckelvalv.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### ByVaultName (standard)
 ```
@@ -32,14 +32,14 @@ Remove-AzKeyVaultKey [-InputObject] <PSKeyVaultKeyIdentityItem> [-Force] [-PassT
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Remove-AzKeyVaultKey cmdlet tar bort en nycklar i ett nyckelord.
-Om du av misstag tagit bort tangenten kan du återställa den med hjälp av Undo-AzKeyVaultKeyRemoval av en användare med speciella "Recover"-behörigheter.
-Denna cmdlet har värdet High för egenskapen **ConfirmImpact** .
+## BESKRIVNING
+Med Remove-AzKeyVaultKey cmdleten tas en nyckel i ett nyckelvalv bort.
+Om nyckeln togs bort av misstag kan du återställa nyckeln med hjälp Undo-AzKeyVaultKeyRemoval av en användare med särskild "återställningsbehörighet".
+Den här cmdleten har värdet hög för **egenskapen ConfirmImpact.**
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: ta bort en Key från ett nyckelord
+### Exempel 1: Ta bort en nyckel från ett nyckelvalv
 ```powershell
 PS C:\> Remove-AzKeyVaultKey -VaultName 'Contoso' -Name 'ITSoftware' -PassThru
 
@@ -57,37 +57,37 @@ Purge Disabled       : False
 Tags                 :
 ```
 
-Det här kommandot tar bort den ITSoftware från nyckelordet som heter Contoso.
+Det här kommandot tar bort nyckeln ITSoftware från nyckelvalvet Contoso.
 
-### Exempel 2: ta bort en nycklar utan användar bekräftelse
+### Exempel 2: Ta bort en nyckel utan användarbekräftelse
 ```powershell
 PS C:\> Remove-AzKeyVaultKey -VaultName 'Contoso' -Name 'ITSoftware' -Force
 ```
 
-Det här kommandot tar bort den ITSoftware från nyckelordet som heter Contoso.
-Kommandot anger parametern *Force* och ber därför inte dig att bekräfta.
+Det här kommandot tar bort nyckeln ITSoftware från nyckelvalvet Contoso.
+Kommandot anger *force-parametern* och därför uppmanas du inte att bekräfta i cmdleten.
 
-### Exempel 3: ta bort en borttagen Key från Key Vault permanent
+### Exempel 3: Rensa en borttagna nyckel från nyckelvalvet permanent
 ```powershell
 PS C:\> Remove-AzKeyVaultKey -VaultName 'Contoso' -Name 'ITSoftware' -InRemovedState
 ```
 
-Det här kommandot tar bort tangenten med namnet ITSoftware från nyckelordet contoso permanent.
-För att köra den här cmdleten krävs "Rensa"-behörigheten, som måste dessförinnan och uttryckligen ges till användaren för det här nyckelvärdet.
+Det här kommandot tar bort nyckeln ITSoftware från nyckelvalvet Contoso permanent.
+När du kör den här cmdleten krävs behörigheten "rensning", som måste ha beviljats tidigare och uttryckligen till användaren för det här nyckelvalvet.
 
-### Exempel 4: ta bort tangenter med pipeline-operatorn
+### Exempel 4: Ta bort nycklar med hjälp av rörledningsoperatorn
 ```powershell
 PS C:\> Get-AzKeyVaultKey -VaultName 'Contoso' | Where-Object {$_.Attributes.Enabled -eq $False} | Remove-AzKeyVaultKey
 ```
 
-Det här kommandot får alla nycklar i nyckel valvet contoso och vidarebefordrar dem till cmdleten **WHERE-objekt** med hjälp av pipeline-operatorn.
-Denna cmdlet skickar de nycklar som har värdet $False för det **aktiverade** attributet till den aktuella cmdleten.
-Dessa nycklar tas bort med denna cmdlet.
+Det här kommandot hämtar alla nycklar i nyckelvalvet Contoso och skickar dem till cmdleten **Where-Object** med hjälp av pipelineoperatorn.
+Den cmdleten skickar nycklarna som har värdet $False för **attributet Enabled** till den aktuella cmdleten.
+Den cmdleten tar bort dessa nycklar.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Tvingar kommandot att köras utan att fråga efter bekräftelse.
+Tvingar kommandot att köras utan att användaren uppmanas att bekräfta.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Paket-objekt
+KeyDle-objekt
 
 ```yaml
 Type: Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKeyIdentityItem
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -InRemovedState
-Ta bort den tidigare borttagna knappen permanent.
+Ta bort den tidigare borttagna nyckeln permanent.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -146,9 +146,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Namn
-Anger namnet på den som ska tas bort.
-Denna cmdlet konstruerar det fullständigt kvalificerade domän namnet (FQDN) för en nycklar baserat på namnet som den här parametern anger, namnet på Key-valvet och din nuvarande miljö.
+### -Name
+Anger namnet på den nyckel som ska tas bort.
+Den här cmdleten skapar det fullständigt kvalificerade domännamnet (FQDN) för en nyckel baserat på namnet som den här parametern anger, namnet på nyckelvalvet och den aktuella miljön.
 
 ```yaml
 Type: System.String
@@ -163,8 +163,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Anger att denna cmdlet returnerar ett **Microsoft. Azure.-kommandon. PSKeyVaultKey..** ..
-Denna cmdlet genererar som standard inga utdata.
+Anger att denna cmdlet returnerar ett **Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKey-objekt.**
+Som standard genererar inte den här cmdleten några utdata.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -179,8 +179,8 @@ Accept wildcard characters: False
 ```
 
 ### -VaultName
-Anger namnet på det nyckelord som du vill ta bort.
-Denna cmdlet konstruerar FQDN för ett Key valv baserat på namnet som den här parametern anger och din nuvarande miljö.
+Anger namnet på nyckelvalvet som nyckeln ska tas bort från.
+Den här cmdleten skapar FQDN för ett nyckelvalv baserat på namnet som den här parametern anger och din aktuella miljö.
 
 ```yaml
 Type: System.String
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -210,8 +210,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs.
-Cmdleten körs inte. Visar vad som händer om cmdleten körs.
+Visar vad som skulle hända om cmdleten körs.
+Cmdleten körs inte. Visar vad som skulle hända om cmdleten körs.
 Cmdleten körs inte.
 
 ```yaml
@@ -227,17 +227,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### Microsoft. Azure. commands. valv. Models. PSKeyVaultKeyIdentityItem
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKeyIdentityItem
 
-## VÄRDEN
+## UTDATA
 
 ### Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultKey
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
@@ -245,7 +245,6 @@ Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,
 
 [Get-AzKeyVaultKey](./Get-AzKeyVaultKey.md)
 
-[Set-AzKeyVaultKeyAttribute](./Set-AzKeyVaultKeyAttribute.md)
 
-[Ångra-AzKeyVaultKeyRemoval](./Undo-AzKeyVaultKeyRemoval.md)
+[Undo-AzKeyVaultKeyRemoval](./Undo-AzKeyVaultKeyRemoval.md)
 

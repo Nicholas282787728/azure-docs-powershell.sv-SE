@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.datafactor
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Remove-AzDataFactoryV2DataFlow.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/DataFactory/DataFactoryV2/help/Remove-AzDataFactoryV2DataFlow.md
-ms.openlocfilehash: 8b5b9e8cfd1909b0d91627a2c0600620f264da78
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: b441c354214775f3f6aad425513a953fbefe7810
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94088196"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100410981"
 ---
 # Remove-AzDataFactoryV2DataFlow
 
-## Sammanfattning
-Tar bort ett data flöde från data fabrik.
+## SYNOPSIS
+Tar bort ett dataflöde från Data Factory.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### ByFactoryName (standard)
 ```
@@ -38,10 +38,10 @@ Remove-AzDataFactoryV2DataFlow [-Force] [-ResourceId] <String> [-DefaultProfile 
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Remove-AzDataFactoryV2DataFlow-cmdleten tar bort ett data flöde från Azure Data Factory.
+## BESKRIVNING
+Med Remove-AzDataFactoryV2DataFlow cmdleten tas ett dataflöde bort från Azure Data Factory.
 
-## BESKRIVS
+## EXEMPEL
 
 ### Exempel 1
 ```powershell
@@ -53,12 +53,12 @@ Are you sure you want to remove data flow 'dataflow5' in data factory 'WikiADF'?
 PS C:\WINDOWS\system32>
 ```
 
-Det här kommandot tar bort data flödet med namnet dataflow5 från data fabriken med namnet WikiADF.
+Det här kommandot tar bort dataflödet med namnet dataflöde5 från data factory med namnet WikiADF.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DataFactoryName
-Namnet på data fabriken.
+Data factory-namnet.
 
 ```yaml
 Type: System.String
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Fråga inte efter bekräftelse.
+Be inte om bekräftelse.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Data flödes objekt.
+Dataflödesobjektet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataset
@@ -117,8 +117,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -Namn
-Data flödes namn.
+### -Name
+Namnet på dataflödet.
 
 ```yaml
 Type: System.String
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Resurs gruppens namn.
+Resursgruppens namn.
 
 ```yaml
 Type: System.String
@@ -148,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-ID för Azure-resursen.
+Azure-resurs-ID.
 
 ```yaml
 Type: System.String
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Om det här värdet anges skrivs sant om-operationen lyckas. Denna parameter är valfri.
+Om angiven kommer att skrivas som sant om åtgärden lyckas. Den här parametern är valfri.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -178,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -193,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs.
+Visar vad som skulle hända om cmdleten körs.
 Cmdleten körs inte.
 
 ```yaml
@@ -209,26 +209,24 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
 ### Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataset
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### System. Void
+### System.Void
 
-### System. Boolean
+### System.Boolean
 
-## ANMÄRKNINGAR
-Nyckelord: Azure, azurerm, arm, resurs, hantering, chef, data, faktorer
+## ANTECKNINGAR
+Nyckelord: azure, azurerm, arm, resource, management, manager, data, factories
 
 ## RELATERADE LÄNKAR
 
-[Get-AzDataFactoryDataFlow](./Get-AzDataFactoryDataFlow.md)
 
-[Set-AzDataFactoryDataFlow](./Set-AzDataFactoryDataFlow.md)
 

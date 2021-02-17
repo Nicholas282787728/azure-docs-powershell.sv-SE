@@ -1,17 +1,17 @@
 ---
 title: Introduktion till Azure PowerShell Az-modulen
 description: Vi introducerar den nya Azure PowerShell-modulen Az, som ersätter AzureRM-modulen.
-ms.date: 05/20/2020
+ms.date: 02/12/2021
 ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: 4bf05058f576e7a4844f693384b4fa4aea08a042
-ms.sourcegitcommit: 071b8c40c837ed4b2d65ce778339110d9e0899ab
-ms.translationtype: HT
+ms.openlocfilehash: ffcc4d1e872d1a39e55b139c3ce712bed14fa0e9
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
+ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96427046"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100410964"
 ---
 # <a name="introducing-the-new-azure-powershell-az-module"></a>Introduktion till den nya Azure PowerShell Az-modulen
 
@@ -66,6 +66,8 @@ Az-modulen har ett kompatibilitetsläge för befintliga skript medan du arbetar 
 > [!IMPORTANT]
 > Även om cmdlet-namnen har alias kan det finnas nya (eller omdöpta) parametrar och ändrade returvärden för Az-cmdletar. Tro inte att migreringen är klappad och klar bara för att du aktiverar alias! I den [fullständiga listan över icke-bakåtkompatibla ändringar](migrate-az-1.0.0.md) ser du var skripten kan kräva uppdateringar.
 
-## <a name="continued-support-for-azurerm"></a>Fortsatt stöd för AzureRM
+## <a name="support-for-azurerm"></a>Stöd för AzureRM
 
-Inga nya cmdletar eller funktioner kommer att ges ut för AzureRM, men modulen underhålls fortfarande officiellt och felkorrigeringar kommer att ges ut till och med december 2020.
+Eftersom AZ PowerShell-moduler nu har alla funktioner i AzureRM PowerShell-moduler och mer, kommer vi att dra tillbaka AzureRM PowerShell-moduler den 29 februari 2024.
+
+Om du vill undvika avbrott i tjänsten [uppdaterar du dina skript](https://aka.ms/azpsmigrate) som använder AzureRM PowerShell-moduler för att använda AZ PowerShell-moduler med 29 februari 2024. Om du vill uppdatera dina skript automatiskt följer du [snabb starts guiden](/powershell/azure/quickstart-migrate-azurerm-to-az-automatically).
