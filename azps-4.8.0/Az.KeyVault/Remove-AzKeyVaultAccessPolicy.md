@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/r
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Remove-AzKeyVaultAccessPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Remove-AzKeyVaultAccessPolicy.md
-ms.openlocfilehash: e084894c26cee1a619f418437986593fe86876bb
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: e19565aa8ae249acf61fce67f0a2b54e20143758
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94102823"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100410165"
 ---
 # Remove-AzKeyVaultAccessPolicy
 
-## Sammanfattning
-Tar bort alla behörigheter för en användare eller ett program från ett nyckelord.
+## SYNOPSIS
+Tar bort alla behörigheter för en användare eller ett program från ett nyckelvalv.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### ByUserPrincipalName (standard)
 ```
@@ -115,14 +115,14 @@ Remove-AzKeyVaultAccessPolicy [-ResourceId] <String> [-EnabledForDeployment] [-E
  [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Remove-AzKeyVaultAccessPolicy** tar bort alla behörigheter för en användare eller ett program eller för alla användare och program från ett nyckelord.
-Även om du tar bort alla behörigheter kan ägaren av Azure-prenumerationen som innehåller nyckelordet lägga till behörigheter i Key Vault.
-Observera att även om resurs gruppen är valfri för denna cmdlet bör du göra det för bättre prestanda.
+## BESKRIVNING
+Cmdleten **Remove-AzKeyVaultAccessPolicy** tar bort alla behörigheter för en användare eller ett program eller för alla användare och program från ett nyckelvalv.
+Även om du tar bort alla behörigheter kan ägaren av Den Azure-prenumeration som innehåller nyckelvalvet lägga till behörigheter till nyckelvalvet.
+Observera att även om det är valfritt att ange resursgruppen för den här cmdleten bör du göra det för bättre prestanda.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: ta bort behörigheter för en användare
+### Exempel 1: Ta bort behörigheter för en användare
 ```powershell
 PS C:\> Remove-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -UserPrincipalName 'PattiFuller@contoso.com' -PassThru
 
@@ -158,32 +158,32 @@ Network Rule Set                 :
 Tags                             :
 ```
 
-Det här kommandot tar bort alla behörigheter som en användare PattiFuller@contoso.com har i det nyckelord som heter Contoso03Vault.  Om-PassThru är angivet returneras ett valv objekt.
+Det här kommandot tar bort alla behörigheter som en användare PattiFuller@contoso.com har på nyckelvalvet Contoso03Vault.  Om -PassThru har angetts returneras KeyVault-objektet.
 
-### Exempel 2: ta bort behörigheter för ett program
+### Exempel 2: Ta bort behörigheter för ett program
 ```powershell
 PS C:\> Remove-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ServicePrincipalName 'http://payroll.contoso.com'
 ```
 
-Det här kommandot tar bort alla behörigheter som ett program har i det nyckelord som heter Contoso03Vault.
-I det här exemplet identifieras programmet med hjälp av tjänstens huvud namn som är registrerat i Azure Active Directory http://payroll.contoso.com .
+Det här kommandot tar bort alla behörigheter som ett program har på nyckelvalvet Contoso03Vault.
+I det här exemplet identifieras programmet med hjälp av tjänstens huvudnamn som registrerats i Azure Active `http://payroll.contoso.com` Directory.
 
-### Exempel 3: ta bort behörigheter för ett program med dess objekt-ID
+### Exempel 3: Ta bort behörigheter för ett program med hjälp av dess objekt-ID
 ```powershell
 PS C:\> Remove-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ObjectID 34595082-9346-41b6-8d6b-295a2808b8db
 ```
 
-Det här kommandot tar bort alla behörigheter som ett program har i det nyckelord som heter Contoso03Vault.
-I det här exemplet identifieras programmet av tjänstens objekt-ID.
+Det här kommandot tar bort alla behörigheter som ett program har på nyckelvalvet Contoso03Vault.
+I det här exemplet identifieras programmet med objekt-ID för tjänstens huvudnamn.
 
-### Exempel 4: ta bort behörigheter för Microsoft. Compute Resource Provider
+### Exempel 4: Ta bort behörigheter för Microsoft.Compute-resursleverantören
 ```powershell
 PS C:\> Remove-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ResourceGroupName 'Group14' -EnabledForDeployment
 ```
 
-Det här kommandot tar bort behörigheter för Microsoft. Compute Resource Provider för att få hemligheter från Contoso03Vault.
+Det här kommandot tar bort behörigheten för Microsoft.Compute-resursleverantören för att få hemligheter från Contoso03Vault.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -ApplicationId
 Anger ID för programmet vars behörigheter ska tas bort
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -231,7 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledForDeployment
-Om du anger det här alternativet inaktive ras hämtning av hemligheter från det här nyckelordet av Microsoft. Compute Resource Provider när den refereras i skapa resurs.
+Om det anges inaktiverar hämtningen av hemligheter från det här nyckelvalvet av Microsoft.Compute-resursleverantören när den refereras när resursen skapades.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -246,7 +246,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledForDiskEncryption
-Om det här alternativet anges inaktiverar hämtning av hemligheter från den här nyckeln för Azure Disk Encryption.
+Om det anges inaktiverar vi hämtningen av hemligheter från det här nyckelvalvet med Azure Disk Encryption.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -261,7 +261,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledForTemplateDeployment
-Om det här alternativet anges inaktiverar hämtning av hemligheter från det här nyckelordet av Azure Resource Manager när den refereras till i mallar.
+Om det anges inaktiverar vi hämtningen av hemligheter från det här viktiga valvet av Azure Resource Manager när de refereras till i mallar.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -276,7 +276,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Key valv-objekt.
+Key Vault-objekt.
 
 ```yaml
 Type: Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault
@@ -291,7 +291,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-Anger objekt-ID: t för användaren eller tjänstens huvud namn i Azure Active Directory som du vill ta bort behörigheter för.
+Anger objekt-ID för användarens eller tjänstens huvudnamn i Azure Active Directory för vilket behörigheter ska tas bort.
 
 ```yaml
 Type: System.String
@@ -307,7 +307,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 Returnerar ett objekt som representerar det objekt som du arbetar med.
-Denna cmdlet genererar som standard inga utdata.
+Som standard genererar inte den här cmdleten några utdata.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -322,8 +322,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Anger namnet på den resurs grupp som är kopplad till det huvud valv vars åtkomst princip ändras.
-Om det inte anges söker denna cmdlet efter det viktigaste valvet i den aktuella prenumerationen.
+Anger namnet på resursgruppen som är kopplad till nyckelvalvet vars åtkomstprincip ändras.
+Om den här cmdleten inte anges söker den efter nyckelvalvet i den aktuella prenumerationen.
 
 ```yaml
 Type: System.String
@@ -338,7 +338,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Resurs-ID för valv.
+KeyVault Resource Id.
 
 ```yaml
 Type: System.String
@@ -353,8 +353,8 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalName
-Anger huvud namnet på den tillämpning vars behörigheter du vill ta bort.
-Ange program-ID, som också kallas klient-ID, för programmet i Azure Active Directory.
+Anger tjänstens huvudnamn för programmet vars behörigheter du vill ta bort.
+Ange program-ID, som även kallas klient-ID, som registrerats för programmet i Azure Active Directory.
 
 ```yaml
 Type: System.String
@@ -369,7 +369,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-Anger användarens huvud namn för den användare vars åtkomst du vill ta bort.
+Anger användarens huvudnamn för den användare vars åtkomst du vill ta bort.
 
 ```yaml
 Type: System.String
@@ -384,8 +384,8 @@ Accept wildcard characters: False
 ```
 
 ### -VaultName
-Anger namnet på Key-valvet.
-Denna cmdlet tar bort behörigheter för det Key-valv som den här parametern anger.
+Anger namnet på nyckelvalvet.
+Den här cmdleten tar bort behörigheter för nyckelvalvet som den här parametern anger.
 
 ```yaml
 Type: System.String
@@ -400,7 +400,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -415,7 +415,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs.
+Visar vad som skulle hända om cmdleten körs.
 Cmdleten körs inte.
 
 ```yaml
@@ -431,19 +431,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### Microsoft. Azure. commands. valv. Models. PSKeyVault
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. valv. Models. PSKeyVault
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
