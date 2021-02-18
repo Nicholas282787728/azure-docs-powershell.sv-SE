@@ -6,12 +6,12 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/a
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Add-AzKeyVaultKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Add-AzKeyVaultKey.md
-ms.openlocfilehash: da6460bf0a1126a11345336e4d55c300728bbd66
-ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.openlocfilehash: 61125ae7d9fa78ec9f121cc9b60610258ad2c67c
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100237606"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100405405"
 ---
 # Add-AzKeyVaultKey
 
@@ -118,9 +118,9 @@ Använd den här cmdleten för att lägga till nycklar med någon av följande m
 - Importera en nyckel från en PFX-fil på datorn.
 - Importera en nyckel från en PFX-fil på datorn till maskinvarusäkerhetsmoduler (HSMs) i nyckelvalvtjänsten.
 Du kan ange nyckelattribut eller acceptera standardinställningar för de här åtgärderna.
-Om du skapar eller importerar en nyckel som har samma namn som en befintlig nyckel i nyckelvalvet uppdateras den ursprungliga nyckeln med de värden som du anger för den nya nyckeln. Du kan komma åt de tidigare värdena genom att använda den versionsspecifika URI:en för den versionen av nyckeln. Mer information om viktiga versioner och URI-strukturen finns i [dokumentationen om Om nycklar och hemligheter](http://go.microsoft.com/fwlink/?linkid=518560) i REST API-dokumentationen för nyckelvalv.
+Om du skapar eller importerar en nyckel som har samma namn som en befintlig nyckel i nyckelvalvet uppdateras den ursprungliga nyckeln med de värden som du anger för den nya nyckeln. Du kan komma åt de tidigare värdena genom att använda den versionsspecifika URI:en för den versionen av nyckeln. Mer information om viktiga versioner och URI-strukturen finns i [dokumentationen om Om nycklar](http://go.microsoft.com/fwlink/?linkid=518560) och hemligheter i REST API-dokumentationen för nyckelvalv.
 Obs! Om du vill importera en nyckel från din egen maskinvarusäkerhetsmodul måste du först generera ett BYOK-paket (en fil med filnamnstillägget .byok) med hjälp av BYOK-verktyguppsättningen för Azure-nyckelvalv. Mer information finns i Skapa [och överföra HSM-Protected nyckelnycklar för Azure Key Vault.](http://go.microsoft.com/fwlink/?LinkId=522252)
-Det är en bra metod att backa upp nyckeln efter att den har skapats eller uppdaterats, med hjälp av cmdleten Backup-AzKeyVaultKey. Det finns inga funktioner för att avdeklarera, så om du tar bort eller tar bort nyckeln av misstag och sedan ändrar dig är nyckeln inte återställningsbar om du inte har en säkerhetskopia av den som du kan återställa.
+Det är en bra metod att backa upp nyckeln efter att den har skapats eller uppdaterats, med hjälp av cmdleten Backup-AzKeyVaultKey. Det finns inga ouppklarade funktioner. Om du tar bort eller tar bort nyckeln av misstag och sedan ändrar dig är nyckeln inte återställningsbar om du inte har en säkerhetskopia av den som du kan återställa.
 
 ## EXEMPEL
 
@@ -259,7 +259,7 @@ Tags           : Name        Value
 Det första kommandot konverterar en sträng till en säker sträng med hjälp av cmdleten **ConvertTo-SecureString** och lagrar sedan strängen i $Password variabeln.
 Det andra kommandot skapar ett **DateTime-objekt** med cmdleten **Get-Date** och lagrar sedan objektet i $Expires variabeln.
 Det tredje kommandot skapar den $tags för att ange taggar för hög allvarlighetsgrad och IT.
-Det sista kommandot importerar en nyckel som en HSM-nyckel från den angivna platsen. Kommandot anger förfallotiden som lagras i $Expires och lösenord som lagras i $Password, och taggarna som lagras i $tags.
+Det sista kommandot importerar en nyckel som en HSM-nyckel från den angivna platsen. Kommandot anger förfallotiden som lagras i $Expires och lösenord som lagras i $Password, och de taggar som lagras i $tags.
 
 ### Exempel 7: Generera en BYOK-funktion (Key Exchange Key) för att "ta med din egen nyckel" (BYOK)
 
@@ -273,7 +273,7 @@ Mer information finns i https://docs.microsoft.com/en-us/azure/key-vault/keys/hs
 ## PARAMETERS
 
 ### -CurveName
-Anger kurvans namn för ellipskurvakryptografi, det här värdet är giltigt när KeyType är EC.
+Anger kurvans namn på ellipskurva med kryptografi, det här värdet är giltigt när KeyType är EC.
 
 ```yaml
 Type: System.String
@@ -572,7 +572,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-Nyckelvärdepar i form av en hash-tabell. Till exempel: @{key0="värde0";key1=$null;key2="värde2"}
+Nyckelvärdepar i form av en hash-tabell. Exempel: @{key0="value0";key1=$null;key2="value2"}
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -655,4 +655,3 @@ Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariab
 
 [Remove-AzKeyVaultKey](./Remove-AzKeyVaultKey.md)
 
-[Set-AzKeyVaultKeyAttribute](./Set-AzKeyVaultKeyAttribute.md)

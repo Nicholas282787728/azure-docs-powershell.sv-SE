@@ -3,19 +3,19 @@ external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
 ms.assetid: 02396628-5E3E-49A6-8377-3F6DC488FEF8
 online version: ''
 schema: 2.0.0
-ms.openlocfilehash: 75a083c2f892b7b4f07c37ef978d1babb1dd0cb0
-ms.sourcegitcommit: 56ed085a868afa8263f8eb0f755b5822f5c29532
+ms.openlocfilehash: ee948161f101b83a4892441286b760a044e64358
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "94093319"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100405830"
 ---
 # Get-AzureSiteRecoveryProtectionContainer
 
-## Sammanfattning
-Hämtar skydds behållare för ett återställnings valv för webbplatser.
+## SYNOPSIS
+Får skyddsbehållare för ett Site Recovery-valv.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### Standard (standard)
 ```
@@ -32,14 +32,14 @@ Get-AzureSiteRecoveryProtectionContainer -Id <String> [-Profile <AzureSMProfile>
 Get-AzureSiteRecoveryProtectionContainer -Name <String> [-Profile <AzureSMProfile>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Get-AzureSiteRecoveryProtectionContainer** får skydds behållare för det aktuella Azure Site Recovery-valvet.
-En skydds behållare är en logisk behållare för skyddade objekt, till exempel virtuella datorer.
-Skydds principer definierar replikeringsinställningar för skyddade objekt och kan associeras med en skydds behållare och tillämpas på en skyddad entitet.
+## BESKRIVNING
+Cmdleten **Get-AzureSiteRecoveryProtectionContainer** får skyddsbehållare för det aktuella Azure Site Recovery-valvet.
+En skyddsbehållare är en logisk behållare för skyddade objekt, till exempel virtuella maskiner.
+Skyddsprinciper definierar replikeringsinställningar för skyddade objekt och kan associeras med en skyddsbehållare och tillämpas på en skyddad enhet.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: skaffa skyddade behållare
+### Exempel 1: Hämta skyddade behållare
 ```
 PS C:\> Get-AzureSiteRecoveryProtectionContainer
 Name                        : PrimaryCloud
@@ -54,10 +54,10 @@ AvailableProtectionProfiles : {ab01dcbe-9da0-4c31-9564-d6904cfadfde, ad388147-83
 
 Det här kommandot hämtar de skyddade behållarna för det aktuella valvet.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
-### -ID
-Anger ID för en skyddad behållare som ska visas.
+### -Id
+Anger ID för en skyddad behållare som ska hämtas.
 
 ```yaml
 Type: String
@@ -71,8 +71,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Namn
-Anger namnet på en skydds behållare att hämta.
+### -Name
+Anger namnet på en skyddsbehållare som ska hämtas.
 
 ```yaml
 Type: String
@@ -86,9 +86,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Profil
-Anger den Azure-profil från vilken denna cmdlet läser.
-Om du inte anger en profil läser denna cmdlet från den lokala standard profilen.
+### -Profile
+Anger den Azure-profil som cmdleten läser upp.
+Om du inte anger en profil läser den här cmdleten från den lokala standardprofilen.
 
 ```yaml
 Type: AzureSMProfile
@@ -103,16 +103,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-## VÄRDEN
+## UTDATA
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Azure Site Recovery Services-cmdletar](./Azure.SiteRecoveryServices.md)
+
 
 

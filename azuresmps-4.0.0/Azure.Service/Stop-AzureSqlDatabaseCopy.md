@@ -3,19 +3,19 @@ external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
 ms.assetid: CB601E21-424D-4B09-85E5-A4B2A5068267
 online version: ''
 schema: 2.0.0
-ms.openlocfilehash: 2b7674cb5b7abc489dc6aa6d3746f499b9686312
-ms.sourcegitcommit: 56ed085a868afa8263f8eb0f755b5822f5c29532
+ms.openlocfilehash: 7716587787515221a6e016436a6e3d030c1ab0eb
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "94099633"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100405626"
 ---
 # Stop-AzureSqlDatabaseCopy
 
-## Sammanfattning
-Avbryter en kontinuerlig kopierings relation.
+## SYNOPSIS
+Avslutar en kontinuerlig kopieringsrelation.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### ByInputObject
 ```
@@ -37,45 +37,45 @@ Stop-AzureSqlDatabaseCopy -ServerName <String> -DatabaseName <String> [-PartnerS
  [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Stop-AzureSqlDatabaseCopy** avbryter en kontinuerlig kopierings relation.
-Denna cmdlet stoppar data förflyttningen mellan käll databasen och den sekundära databasen eller måltypen och ändrar sedan den sekundära databasens status till en fristående databas.
+## BESKRIVNING
+Cmdleten **Stop-AzureSqlDatabaseCopy** avslutar en kontinuerlig kopieringsrelation.
+Med den här cmdleten stoppar du dataförflyttningen mellan källdatabasen och den sekundära databasen eller måldatabasen, och ändrar sedan statusen för den sekundära databasen till en fristående onlinedatabas.
 
-Det finns två sätt att avsluta ett fort löp ande kopierings förhållande, uppsägning eller planerad uppsägning med möjlig data förlust.
-På den server som är värd för käll databasen kan du köra denna cmdlet i uppsägning eller framtvingat avslutnings läge.
-På den server som är värd för den sekundära databasen måste du använda framtvingat avslutnings läge.
+Det finns två sätt att avsluta en kontinuerlig kopieringsrelation, uppsägning eller planerad uppsägning och tvingad uppsägning med eventuell dataförlust.
+Du kan köra den här cmdleten i läget uppsägning eller tvingad uppsägning på servern som är värd för källdatabasen.
+Du måste använda tvingad uppsägningsläge på servern som är värd för den sekundära databasen.
 
-En planerad uppsägning väntar tills alla genomförda transaktioner på käll databasen, när du kör cmdleten, har repliker ATS till den sekundära databasen.
-Framtvingad uppsägning väntar inte på replikering av utestående transaktioner och kan leda till förlust av data i den sekundära databasen.
+En planerad uppsägning väntar tills alla genomfört transaktioner i källdatabasen, vid tidpunkten då du kör cmdleten, har replikerats till den sekundära databasen.
+Tvingad uppsägning väntar inte på replikering av eventuella utestående utestående transaktioner och kan orsaka eventuell dataförlust i den sekundära databasen.
 
-När replikeringsstatus är pågående kan endast tvingande uppsägning avsluta en kontinuerlig kopierings relation.
-Om replikeringsstatus är avvaktat stöds inte uppsägning som inte framtvingas.
+Medan replikeringsstatus är VÄNTANDE kan endast tvingad uppsägning avsluta en kontinuerlig kopieringsrelation.
+Om replikeringsstatusen är VÄNTANDE stöds inte uppsägning som inte tvingas.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: avsluta en kontinuerlig kopierings relation
+### Exempel 1: Avsluta en kontinuerlig kopieringsrelation
 ```
 PS C:\>Stop-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders" -PartnerServer "bk0b8kf658"
 ```
 
-Det här kommandot avbryter den kontinuerliga kopierings relationen för databasen order på den server som heter lpqd0zbr8y.
-Servern med namnet bk0b8kf658 är värd för den sekundära databasen.
+Det här kommandot avslutar den kontinuerliga kopieringsrelationen för databasen med namnet Orders på servern lpqd0zgav8y.
+Servern som heter bk0b8kf658 är värd för den sekundära databasen.
 
-### Exempel 2: tvinga fram en kontinuerlig kopierings relation
+### Exempel 2: Avbryt en kontinuerlig kopieringsrelation
 ```
 PS C:\>$DatabaseCopy = Get-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders"
 PS C:\> $DatabaseCopy | Stop-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -ForcedTermination
 ```
 
-Det första kommandot får databas kopierings relationen för databasen order på den server som heter lpqd0zbr8y.
+Det första kommandot får databasens databaskopieringsrelation med namnet Orders på servern lpqd0z inköpsorder8y.
 
-Det andra kommandot avslutar en kontinuerlig kopierings relation från den server som är värd för den sekundära databasen.
+Med det andra kommandot avbryts en kontinuerlig kopieringsrelation från servern som är värd för den sekundära databasen.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
-### -Databas
-Anger ett objekt som representerar käll-Azure SQL-databasen.
-Denna cmdlet avbryter den kontinuerliga kopierings relationen för databasen som anges av den här parametern.
+### -Database
+Anger ett objekt som representerar källan Azure SQL Database.
+Den här cmdleten avslutar den kontinuerliga kopieringsrelationen för databasen som parametern anger.
 
 ```yaml
 Type: Database
@@ -91,8 +91,8 @@ Accept wildcard characters: False
 
 ### -DatabaseCopy
 Anger ett objekt som representerar en databas.
-Denna cmdlet avbryter den kontinuerliga kopierings relationen för databasen som anges av den här parametern.
-Den här parametern accepterar pipeline-inmatning.
+Den här cmdleten avslutar den kontinuerliga kopieringsrelationen för databasen som parametern anger.
+Den här parametern accepterar inmatning från pipeline.
 
 ```yaml
 Type: DatabaseCopy
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 
 ### -DatabaseName
 Anger namnet på en databas.
-Denna cmdlet avbryter den kontinuerliga kopierings relationen för databasen som anges av den här parametern.
+Den här cmdleten avslutar den kontinuerliga kopieringsrelationen för databasen som parametern anger.
 
 ```yaml
 Type: String
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Tvingar kommandot att köras utan att fråga efter bekräftelse.
+Tvingar kommandot att köras utan att användaren uppmanas att bekräfta.
 
 ```yaml
 Type: SwitchParameter
@@ -138,10 +138,10 @@ Accept wildcard characters: False
 ```
 
 ### -ForcedTermination
-Anger att denna cmdlet orsakar tvingande uppsägning av den kontinuerliga kopierings relationen.
-Det kan orsaka förlust av data.
-Om du vill köra denna cmdlet på en server som är värd för mål databasen måste du ange den här parametern.
-Om du vill köra denna cmdlet på en server som är värd för käll databasen, om den sekundära databasen inte är tillgänglig, måste du ange den här parametern.
+Anger att denna cmdlet leder till att den kontinuerliga kopieringsrelationen avslutas.
+Tvingad uppsägning kan orsaka dataförlust.
+Om du vill köra den här cmdleten på en server som är värd för måldatabasen måste du ange den här parametern.
+Om du vill köra den här cmdleten på en server som är värd för källdatabasen måste du ange den här parametern om den sekundära databasen inte är tillgänglig.
 
 ```yaml
 Type: SwitchParameter
@@ -157,7 +157,7 @@ Accept wildcard characters: False
 
 ### -PartnerDatabase
 Anger namnet på den sekundära databasen.
-Om du anger ett namn måste det matcha käll databasens namn.
+Om du anger ett namn måste det matcha namnet på källdatabasen.
 
 ```yaml
 Type: String
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### -PartnerServer
-Anger namnet på den server som är värd för mål databasen.
+Anger namnet på den server som är värd för måldatabasen.
 
 ```yaml
 Type: String
@@ -186,9 +186,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Profil
-Anger den Azure-profil från vilken denna cmdlet läser.
-Om du inte anger en profil läser denna cmdlet från den lokala standard profilen.
+### -Profile
+Anger den Azure-profil som cmdleten läser upp.
+Om du inte anger en profil läser den här cmdleten från den lokala standardprofilen.
 
 ```yaml
 Type: AzureSMProfile
@@ -202,8 +202,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ServerName
-Anger namnet på den server där käll databasen finns.
+### -Servernamn
+Anger namnet på den server där källdatabasen finns.
 
 ```yaml
 Type: String
@@ -218,7 +218,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: SwitchParameter
@@ -233,7 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs.
+Visar vad som skulle hända om cmdleten körs.
 Cmdleten körs inte.
 
 ```yaml
@@ -249,37 +249,37 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-### Microsoft. WindowsAzure. kommandon. SqlDatabase. Model. DatabaseCopy
+### Microsoft.WindowsAzure.Commands.sqlDatabase.Model.DatabaseCopy
 
-### Microsoft. WindowsAzure. kommandon. SqlDatabase. Services. Server. Database
+### Microsoft.WindowsAzure.Commands.sqlDatabase.Services.Server.Database
 
-## VÄRDEN
+## UTDATA
 
 ### Ingen
 
-## ANMÄRKNINGAR
-* Verifiera: den här cmdleten kräver certifikatbaserad identifiering. Ett exempel på hur certifikatbaserad identifiering används för att ange aktuellt abonnemang finns i cmdleten **New-AzureSqlDatabaseServerContext** .
-* Restriktioner: på den server som är värd för den sekundära databasen kan endast tvingande uppsägning användas.
-* Konsekvenserna av uppsägningen på den tidigare sekundära databasen: efter uppsägning blir den sekundära databasen en självständig databas. Om dirigering redan har slutförts på den sekundära databasen är den här databasen öppen för fullständig åtkomst efter uppsägning. Om käll databasen är en skrivskyddad databas blir den tidigare sekundära databasen en skrivskyddad databas också.
+## ANTECKNINGAR
+* Autentisering: Den här cmdleten kräver certifikatbaserad autentisering. Ett exempel på hur du använder certifikatbaserad autentisering för att ange aktuell prenumeration finns i cmdleten **New-AzureSqlDatabaseServerContext.**
+* Begränsningar: På servern som är värd för den sekundära databasen stöds endast tvingad uppsägning.
+* Påverkan på uppsägning av den tidigare sekundära databasen: När den sekundära databasen avslutas blir den en oberoende databas. Om dirigeringen redan är klar i den sekundära databasen är den här databasen öppen för fullständig åtkomst när databasen avslutas. Om källdatabasen är en skrivskyddsdatabas blir även den tidigare sekundära databasen en skrivskyddsdatabas.
 
-  Om dirigering pågår avbryts dirigeringen och den tidigare sekundära databasen blir aldrig synlig på den server som är värd för den sekundära databasen.
+  Om start är under utveckling avbryts startningen och den tidigare sekundära databasen visas aldrig på servern som är värd för den sekundära databasen.
 
-* Du kan ange skrivskyddad käll databas. Detta garanterar att källan och sekundära databaser synkroniseras efter uppsägning och ser till att inga transaktioner bevaras under uppsägningen. När uppsägningen är klar återställer du källan till Läs-och skriv läge. Du kan också ange den tidigare sekundära databasen till Läs-och skriv läge.
-* Övervakning: Använd cmdleten **Get-AzureSqlDatabaseOperation** för att bekräfta statusen för åtgärderna på både källa och mål för den kontinuerliga kopierings relationen.
+* Källdatabasen kan ställas in i skrivskyddsläge. Detta garanterar att källdatabaser och sekundära databaser synkroniseras efter att de avslutats och att inga transaktioner genomförs vid uppsägning. När avslutningen har avslutats ställer du in källan på läs-och skrivläge igen. Om du vill kan du också ange den tidigare sekundära databasen till läs-och skrivläge.
+* Övervakning: Om du vill verifiera status för operationerna i både källan och målet för den kontinuerliga kopieringsrelationen använder du **cmdleten Get-AzureSqlDatabaseOperation.**
 
 ## RELATERADE LÄNKAR
 
-[Azure SQL-databas](https://azure.microsoft.com/en-us/services/sql-database/)
+[Azure SQL Database](https://azure.microsoft.com/en-us/services/sql-database/)
 
 [Åtgärder för Azure SQL-databaser](https://msdn.microsoft.com/en-us/library/azure/dn505719.aspx)
 
-[Stoppa databas kopiering](https://msdn.microsoft.com/en-us/library/dn509573.aspx)
+[Stoppa databaskopia](https://msdn.microsoft.com/en-us/library/dn509573.aspx)
 
-[Azure SQL-databas-cmdletar](./Azure.SQLDatabase.md)
+
 
 [Get-AzureSqlDatabaseCopy](./Get-AzureSqlDatabaseCopy.md)
 

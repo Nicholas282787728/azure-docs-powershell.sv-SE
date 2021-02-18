@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.sql/get-az
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlDatabaseAdvancedThreatProtectionSettings.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Sql/Sql/help/Get-AzSqlDatabaseAdvancedThreatProtectionSettings.md
-ms.openlocfilehash: 186ff32138bba0556b05e9674f1711e9425a20c9
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 85a45c1a5f7c4d88adaf4e9b9da35b415b7a2093
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93920425"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100405813"
 ---
 # Get-AzSqlDatabaseAdvancedThreatProtectionSettings
 
-## Sammanfattning
-Hämtar avancerade skydds inställningar för en databas.
+## SYNOPSIS
+Hämtar de avancerade inställningarna för skydd mot hot för en databas.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 Get-AzSqlDatabaseAdvancedThreatProtectionSettings [-ServerName] <String> [-DatabaseName] <String>
@@ -26,13 +26,13 @@ Get-AzSqlDatabaseAdvancedThreatProtectionSettings [-ServerName] <String> [-Datab
  [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Get-AzSqlDatabaseAdvancedThreatProtectionSettings** får avancerade skydds inställningar för en Azure SQL-databas.
-Använd den här cmdleten genom att ange parametrarna *ResourceGroupName* , *servername* och *databasename* för att identifiera den databas som den här cmdleten får inställningar för.
+## BESKRIVNING
+Cmdleten **Get-AzSqlDatabaseAdvancedThreatProtectionSettings** får de avancerade inställningarna för skydd mot hot i en Azure SQL-databas.
+Om du vill använda den här cmdleten anger du parametrarna *ResourceGroupName,* *ServerName* och *DatabaseName* för att identifiera den databas som cmdleten hämtar inställningarna för.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: Hämta avancerade skydds inställningar för en databas
+### Exempel 1: Hämta avancerade inställningar för skydd mot hot för en databas
 ```
 PS C:\>Get-AzSqlDatabaseAdvancedThreatProtectionSettings -ResourceGroupName "ResourceGroup11" -ServerName "Server01" -DatabaseName "Database01"
 DatabaseName                 : Database01
@@ -46,10 +46,10 @@ ExcludedDetectionTypes       : {}
 RetentionInDays              : 0
 ```
 
-Det här kommandot får avancerade inställningar för skydd mot en databas som heter Database01.
-Databasen finns på den server som heter Server01, vilken är tilldelad till resurs gruppen ResourceGroup11.
+Med det här kommandot får du avancerade skyddsinställningar för en databas med namnet Databas01.
+Databasen finns på servern med namnet Server01, som är tilldelad resursgruppen ResourceGroup11.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DatabaseName
 Anger namnet på en databas.
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Anger namnet på den resurs grupp som servern är tilldelad till.
+Anger namnet på den resursgrupp som servern är tilldelad till.
 
 ```yaml
 Type: System.String
@@ -96,7 +96,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ServerName
+### -Servernamn
 Anger namnet på en server.
 
 ```yaml
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs.
+Visar vad som skulle hända om cmdleten körs.
 Cmdleten körs inte.
 
 ```yaml
@@ -143,21 +143,20 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. SQL. ThreatDetection. Model. DatabaseAdvancedThreatProtectionSettingsModel
+### Microsoft.Azure.Commands.Sql.ThreatDetection.Model.DatabaseAdvancedThreatProtectionSettingsModel
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Remove-AzSqlDatabaseAdvancedThreatProtectionSettings](./Remove-AzSqlDatabaseAdvancedThreatProtectionSettings.md)
 
 
 

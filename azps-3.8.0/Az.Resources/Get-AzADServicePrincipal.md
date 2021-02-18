@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.resources/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzADServicePrincipal.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Resources/Resources/help/Get-AzADServicePrincipal.md
-ms.openlocfilehash: c51740ef111c0efe2f05c71d55ab5d3f076ac9d2
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 45f355b0317d8db8f9f24b40d5161e38888c4bb3
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94089582"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100405592"
 ---
 # Get-AzADServicePrincipal
 
-## Sammanfattning
-Filtrerar Active Directory-tjänstens huvud objekt.
+## SYNOPSIS
+Filtrerar Active Directory-tjänstens huvudnamn.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### EmptyParameterSet (standard)
 ```
@@ -62,55 +62,55 @@ Get-AzADServicePrincipal -ServicePrincipalName <String> [-DefaultProfile <IAzure
  [-IncludeTotalCount] [-Skip <UInt64>] [-First <UInt64>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Filtrerar Active Directory-tjänstens huvud objekt.
+## BESKRIVNING
+Filtrerar Active Directory-tjänstens huvudnamn.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1 – Visa AD-huvudtjänstens huvud namn
+### Exempel 1 – Lista AD-tjänstens huvudnamn
 
 ```
 PS C:\> Get-AzADServicePrincipal
 ```
 
-Visar alla AD-huvudtjänstens huvud namn i en klient organisation.
+Visar alla AD-tjänstens huvudnamn i en klientorganisation.
 
-### Exempel 2 – Visa AD-huvudtjänstens huvud objekt med sid indelning
+### Exempel 2 – Lista AD-tjänstens huvudnamn med hjälp av sidnumrering
 
 ```
 PS C:\> Get-AzADServicePrincipal -First 100
 ```
 
-Visar de första 100 i AD-tjänsten i en klient organisation.
+Visar de första 100 AD-tjänsthuvudnamnen i en klientorganisation.
 
-### Exempel 3-Visa tjänstens huvud namn efter SPN
+### Exempel 3 – Listtjänsthuvudnamn efter SPN
 
 ```
 PS C:\> Get-AzADServicePrincipal -ServicePrincipalName 36f81fc3-b00f-48cd-8218-3879f51ff39f
 ```
 
-Visar tjänstens huvud namn med SPN ' 36f81fc3-b00f-48cd-8218-3879f51ff39f '.
+Listar tjänstens huvudnamn med SPN '36f81fc3-b00f-48cd-8218-3879f51ff39f'.
 
-### Exempel 4-lista tjänst säkerhets objekt efter Sök sträng
+### Exempel 4 - Listtjänsthuvudnamn efter söksträng
 
 ```
 PS C:\> Get-AzADServicePrincipal -SearchString "Web"
 ```
 
-Visar alla AD-huvudobjekt vars visnings namn börjar med "webben".
+Här listas alla AD-tjänstens huvudnamn vars visningsnamn börjar med "webb".
 
-### Exempel 5 – Visa tjänst huvud objekt efter ledning
+### Exempel 5 – Listtjänsthuvudnamn genom rörning
 
 ```
 PS C:\> Get-AzADApplication -ObjectId 39e64ec6-569b-4030-8e1c-c3c519a05d69 | Get-AzADServicePrincipal
 ```
 
-Hämtar AD-programmet med objekt-ID ' 39e64ec6-569b-4030-8e1c-c3c519a05d69 ' och kopplas till Get-AzADServicePrincipal cmdlet för att visa alla tjänstens huvud namn för det programmet.
+Hämtar AD-programmet med objekt-ID '39e64ec6-569b-4030-8e1c-c3c519a05d69' och rör den till cmdleten Get-AzADServicePrincipal för att lista alla tjänsthuvudnamn för programmet.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -ApplicationId
-Tjänstens huvud program-ID.
+Tjänstens huvudprogram-ID.
 
 ```yaml
 Type: System.Guid
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationObject
-Program objekt vars tjänste huvud hämtas.
+Det programobjekt vars huvudnamn för tjänsten hämtas.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ActiveDirectory.PSADApplication
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-Tjänstens huvud visnings namn.
+Tjänstens huvudvisningsnamn.
 
 ```yaml
 Type: System.String
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayNameBeginsWith
-Sök strängen för tjänstens huvud.
+Söksträngen för tjänstens huvudnamn.
 
 ```yaml
 Type: System.String
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-Objekt-ID för tjänstens huvud namn.
+Objekt-ID för tjänstens huvudnamn.
 
 ```yaml
 Type: System.String
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalName
-Tjänstens SPN.
+SPN för tjänsten.
 
 ```yaml
 Type: System.String
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeTotalCount
-Rapporterar antalet objekt i data uppsättningen. För närvarande tar den här parametern ingenting.
+Rapporterar antalet objekt i datauppsättningen. För närvarande gör den här parametern ingenting.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -229,8 +229,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Hoppa över
-Ignorerar de första N objekten och hämtar sedan återstående objekt.
+### -Skip
+Ignorerar de första N-objekten och hämtar sedan de återstående objekten.
 
 ```yaml
 Type: System.UInt64
@@ -244,8 +244,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Först
-Det maximala antalet objekt som ska returneras.
+### -First
+Maximalt antal objekt som ska returneras.
 
 ```yaml
 Type: System.UInt64
@@ -260,27 +260,26 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-### System. GUID
+### System.Guid
 
-### Microsoft. Azure. commands. ActiveDirectory. PSADApplication
+### Microsoft.Azure.Commands.ActiveDirectory.PSADApplication
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. ActiveDirectory. PSADServicePrincipal
+### Microsoft.Azure.Commands.ActiveDirectory.PSADServicePrincipal
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
 [New-AzADServicePrincipal](./New-AzADServicePrincipal.md)
 
-[Set-AzADServicePrincipal](./Set-AzADServicePrincipal.md)
 
 [Remove-AzADServicePrincipal](./Remove-AzADServicePrincipal.md)
 
