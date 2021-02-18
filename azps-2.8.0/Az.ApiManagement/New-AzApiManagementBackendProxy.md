@@ -5,31 +5,31 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementBackendProxy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementBackendProxy.md
-ms.openlocfilehash: 2ce3863a546af0f8c9da3c37a75b540d2a859da1
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 2230785968fd0e2d84587914641390306948bef4
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93745786"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100410658"
 ---
 # New-AzApiManagementBackendProxy
 
-## Sammanfattning
-Skapar ett nytt Server dels proxyobjekt.
+## SYNOPSIS
+Skapar ett nytt backend-proxyobjekt.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 New-AzApiManagementBackendProxy -Url <String> [-ProxyCredential <PSCredential>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Skapar ett nytt backend-proxyobjekt som kan vara piped när du skapar en ny backend-enhet.
+## BESKRIVNING
+Skapar ett nytt backend-proxyobjekt som kan pipas när en ny backend-enhet skapas.
 
-## BESKRIVS
+## EXEMPEL
 
-### Skapa ett In-Memory objekt i en del av Server delen
+### Skapa en backend-proxy In-Memory objekt
 ```powershell
 PS C:\>$secpassword = ConvertTo-SecureString "PlainTextPassword" -AsPlainText -Force
 PS C:\>$proxyCreds = New-Object System.Management.Automation.PSCredential ("foo", $secpassword)
@@ -40,12 +40,12 @@ PS C:\>$apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default
 PS C:\>$backend = New-AzApiManagementBackend -Context  $apimContext -BackendId 123 -Url 'https://contoso.com/awesomeapi' -Protocol http -Title "first backend" -SkipCertificateChainValidation $true -Proxy $credential -Description "backend with proxy server"
 ```
 
-Skapar ett dataservers-proxyobjekt och konfigurerar Server delen
+Skapar ett backend-proxyobjekt och uppsättningar backend
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifterna, kontot, klientorganisationen och prenumerationen som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyCredential
-Autentiseringsuppgifter som används för att ansluta till backend-proxyservern. Denna parameter är valfri.
+Autentiseringsuppgifter som används för att ansluta till backend-proxy. Den här parametern är valfri.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -75,8 +75,8 @@ Accept wildcard characters: False
 ```
 
 ### -URL
-URL-adressen till den proxyserver som ska användas vid vidarekoppling av samtal till Server delen.
-Denna parameter är obligatorisk.
+URL-adressen för proxyservern som ska användas när samtal vidares till Backend.
+Den här parametern är obligatorisk.
 
 ```yaml
 Type: System.String
@@ -91,21 +91,21 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](https://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
 ### Ingen
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. ApiManagement. ServiceManagement. Models. PsApiManagementBackendProxy
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementBackendProxy
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Get-AzApiManagementBackend](./Get-AzApiManagementBackend)
+[Get-AzApiManagementBackend](./Get-AzApiManagementBackend.md)
 
 [New-AzApiManagementBackend](./New-AzApiManagementBackend.md)
 

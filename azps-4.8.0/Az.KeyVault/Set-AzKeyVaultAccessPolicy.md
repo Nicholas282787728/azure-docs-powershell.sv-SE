@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.keyvault/s
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Set-AzKeyVaultAccessPolicy.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/KeyVault/KeyVault/help/Set-AzKeyVaultAccessPolicy.md
-ms.openlocfilehash: 4ef8c131e0094928808e6479b2c5ffe40090c5d0
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: 5f47237088808fe8966d239f9a0de7c892301db0
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94259435"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100410726"
 ---
 # Set-AzKeyVaultAccessPolicy
 
-## Sammanfattning
-Tilldelar eller ändrar befintliga behörigheter för en användare, program eller säkerhets grupp för att utföra operationer med ett Key-valv.
+## SYNOPSIS
+Beviljar eller ändrar befintliga behörigheter för en användare, ett program eller en säkerhetsgrupp för att utföra åtgärder med ett nyckelvalv.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### ByUserPrincipalName (standard)
 ```
@@ -135,26 +135,26 @@ Set-AzKeyVaultAccessPolicy [-ResourceId] <String> [-EnabledForDeployment] [-Enab
  [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **set-AzKeyVaultAccessPolicy** beviljar eller ändrar befintliga behörigheter för en användare, program eller säkerhets grupp för att utföra de angivna åtgärderna med ett Key-valv. De behörigheter som andra användare, program eller säkerhets grupper har i Key-valvet ändras inte.
-Om du anger behörigheter för en säkerhets grupp påverkar den här åtgärden endast användare i den säkerhets gruppen.
-Följande kataloger måste vara samma Azure-katalog: 
-- Standard katalogen för Azure-abonnemanget som Key-valvet finns i.
-- Den Azure-katalog som innehåller den användare eller program grupp som du beviljar behörigheter till.
-Exempel på scenarier om dessa villkor inte uppfylls och denna cmdlet inte fungerar: 
-- Att auktorisera en användare från en annan organisation för att hantera ditt nyckeltal.
-Varje organisation har sin egen katalog. 
+## BESKRIVNING
+Cmdleten **Set-AzKeyVaultAccessPolicy** beviljar eller ändrar befintliga behörigheter för en användare, ett program eller en säkerhetsgrupp för att utföra de angivna åtgärderna med ett nyckelvalv. Den ändrar inte de behörigheter som andra användare, program eller säkerhetsgrupper har på nyckelvalvet.
+Om du anger behörigheter för en säkerhetsgrupp påverkar den här åtgärden endast användare i den säkerhetsgruppen.
+Följande kataloger måste alla vara samma Azure-katalog:
+- Standardkatalogen för den Azure-prenumeration där nyckelvalvet finns.
+- Azure-katalogen som innehåller den användare eller programgrupp som du beviljar behörigheter till.
+Exempel på scenarier när dessa villkor inte uppfylls och den här cmdleten inte fungerar är:
+- Auktoriserar en användare från en annan organisation att hantera ditt nyckelvalv.
+Varje organisation har en egen katalog.
 - Ditt Azure-konto har flera kataloger.
-Om du registrerar ett program i en annan katalog än standard katalogen kan du inte auktorisera att programmet kan använda ditt nyckeltal.
-Programmet måste finnas i standard katalogen.
-Observera att även om resurs gruppen är valfri för denna cmdlet bör du göra det för bättre prestanda.
+Om du registrerar ett program i en annan katalog än standardkatalogen kan du inte auktorisera det programmet att använda ditt nyckelvalv.
+Programmet måste finnas i standardkatalogen.
+Observera att även om det är valfritt att ange resursgruppen för den här cmdleten bör du göra det för bättre prestanda.
 
 > [!NOTE]
-> När du använder tjänstens huvud namn för att bevilja behörigheter för åtkomst principer måste du använda `-BypassObjectIdValidation` parametern.
+> När du använder ett tjänsthuvudnamn för att tilldela behörighetsprincipbehörigheter måste du använda `-BypassObjectIdValidation` parametern.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: bevilja behörigheter till en användare för ett nyckeltal och ändra behörigheterna
+### Exempel 1: Bevilja behörigheter till en användare för ett nyckelvalv och ändra behörigheterna
 ```powershell
 PS C:\> Set-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -UserPrincipalName 'PattiFuller@contoso.com' -PermissionsToKeys create,import,delete,list -PermissionsToSecrets set,delete -PassThru
 
@@ -235,60 +235,61 @@ Access Policies                  :
 Tags                             :
 ```
 
-Det första kommandot tilldelar behörigheter för en användare i din Azure Active Directory, PattiFuller@contoso.com för att utföra operationer på nycklar och hemligheter med en nyckel valv med namnet Contoso03Vault. Parametern *Passthru* ger det uppdaterade objektet som returneras av cmdleten.
-Det andra kommandot ändrar de behörigheter som beviljats PattiFuller@contoso.com i det första kommandot för att nu tillåta att hemligheter läggs till för att lägga till och ta bort dem. Behörigheten för viktiga operationer är oförändrad efter det här kommandot.
-Med kommandot slut ändrar du ytterligare behörigheter för PattiFuller@contoso.com att ta bort alla behörigheter för viktiga operationer. Behörigheterna till hemliga funktioner ändras inte efter det här kommandot. 
+Det första kommandot beviljar behörigheter för en användare i Azure Active Directory, för att utföra åtgärder på nycklar och hemligheter med ett nyckelvalv med namnet PattiFuller@contoso.com Contoso03Vault. Parametern *PassThru* resulterar i att det uppdaterade objektet returneras av cmdleten.
+Det andra kommandot ändrar behörigheterna som beviljades i det första kommandot, så att det nu går att hämta hemligheter utöver att PattiFuller@contoso.com ange och ta bort dem. Behörigheterna till nyckelåtgärder ändras inte efter det här kommandot.
+Det slutliga kommandot ändrar ytterligare de befintliga behörigheterna för att PattiFuller@contoso.com ta bort alla behörigheter till nyckelåtgärder. Behörigheterna till hemliga åtgärder ändras inte efter det här kommandot.
 
-### Exempel 2: bevilja behörigheter för en program tjänst för att läsa och skriva hemligheter
+### Exempel 2: Bevilja behörigheter för ett programtjänsts huvudnamn att läsa och skriva hemligheter
 ```powershell
 PS C:\> Set-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ServicePrincipalName 'http://payroll.contoso.com' -PermissionsToSecrets Get,Set
 ```
 
-Det här kommandot ger behörighet till ett program för ett nyckeltal med namnet Contoso03Vault. Parametern *servicePrincipalName* anger programmet. Programmet måste vara registrerat i din Azure Active Directory. Värdet för parametern *servicePrincipalName* måste vara antingen tjänstens huvud namn eller GUID för programmets ID.
-I det här exemplet anges tjänstens huvud namn http://payroll.contoso.com och kommandot ger behörighet att läsa och skriva hemligheter.
+Det här kommandot beviljar behörigheter för ett program för ett nyckelvalv med namnet Contoso03Vault.
+Parametern *ServicePrincipalName* anger programmet. Programmet måste vara registrerat i din Azure Active Directory. Värdet på parametern *ServicePrincipalName* måste vara antingen programmets huvudnamn eller programmets ID GUID.
+Det här exemplet anger tjänstens `http://payroll.contoso.com` huvudnamn och kommandot beviljar programbehörigheter att läsa och skriva hemligheter.
 
-### Exempel 3: bevilja behörigheter för ett program med dess objekt-ID
+### Exempel 3: Bevilja behörigheter för ett program med objekt-ID
 ```powershell
 PS C:\> Set-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ObjectId 34595082-9346-41b6-8d6b-295a2808b8db -PermissionsToSecrets Get,Set
 ```
 
-Det här kommandot ger behörighet att läsa och skriva hemligheter.
-I det här exemplet anges programmet med objekt-ID för tjänstens huvud program.
+Det här kommandot beviljar programbehörigheter till att läsa och skrivahemligheter.
+Det här exemplet anger programmet med objekt-ID för programmets huvudnamn.
 
-### Exempel 4: bevilja behörigheter för ett huvud namn för användare
+### Exempel 4: Bevilja behörigheter för ett huvudnamn
 ```powershell
 PS C:\> Set-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -UserPrincipalName 'PattiFuller@contoso.com' -PermissionsToSecrets Get,List,Set
 ```
 
-Det här kommandot tilldelar behörigheterna get, list och Set för det angivna UPN-namnet för åtkomst till hemligheter.
+Det här kommandot beviljar behörigheter för att hämta, lista och ange behörigheter för det angivna huvudnamnet för åtkomst till hemligheter.
 
-### Exempel 5: Aktivera att hemligheter kan hämtas från ett nyckelord till Microsoft. Compute Resource Provider
+### Exempel 5: Aktivera att hemligheter hämtas från ett nyckelvalv av resursleverantören Microsoft.Compute
 ```powershell
 PS C:\> Set-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ResourceGroupName 'Group14' -EnabledForDeployment
 ```
 
-Det här kommandot ger behörighet att hämta hemligheter från Contoso03Vault Key Vault av Microsoft. Compute Resource Provider.
+Det här kommandot beviljar behörigheterna för hemligheter som ska hämtas från nyckelvalvet Contoso03Vault av Microsoft.Compute-resursleverantören.
 
-### Exempel 6: bevilja behörigheter till en säkerhets grupp
+### Exempel 6: Bevilja behörigheter till en säkerhetsgrupp
 ```powershell
 PS C:\> Get-AzADGroup
 PS C:\> Set-AzKeyVaultAccessPolicy -VaultName 'myownvault' -ObjectId (Get-AzADGroup -SearchString 'group2')[0].Id -PermissionsToKeys get, set -PermissionsToSecrets get, set
 ```
 
-I det första kommandot används cmdleten Get-AzADGroup för att hämta alla Active Directory-grupper. Från utdata ser du 3 grupper som returneras, med namnet **Grupp1** , **group2** och **Group3**. Flera grupper kan ha samma namn men alltid har ett unikt ObjectId. Om fler än en grupp med samma namn returneras använder du ObjectId i utdata för att identifiera den du vill använda.
-Du kan sedan använda kommandots utdata med Set-AzKeyVaultAccessPolicy om du vill ge behörighet till group2 för ditt nyckeltal, med namnet **myownvault**. I det här exemplet räknas grupperna ' group2 ' in i samma kommando rad.
-Det kan finnas flera grupper i den returnerade listan som heter ' group2 '.
-I det här exemplet plockas den första, som anges med index \[ 0 \] i den returnerade listan.
+Det första kommandot använder cmdletGet-AzADGroup för att få alla Active Directory-grupper. I resultatet ser du tre grupper som returneras, med namnet **grupp1,** **grupp2** och **grupp3.** Flera grupper kan ha samma namn men har alltid ett unikt objekt-ID. När fler än en grupp med samma namn returneras använder du objekt-ID:t i utdata för att identifiera den du vill använda.
+Du använder sedan utdata för det här kommandot Set-AzKeyVaultAccessPolicy bevilja behörighet till grupp2 för ditt nyckelvalv, med namnet **myownvault.** I det här exemplet räknas grupperna med namnet "grupp2" infogade på samma kommandorad.
+Det kan finnas flera grupper i den returnerade listan som heter "grupp2".
+I det här exemplet väljer du den första, som anges med index \[ 0 \] i den returnerade listan.
 
-### Exempel 7: bevilja åtkomst för Azure information Protection till kund hanterad klient organisation (BYOK)
+### Exempel 7: Bevilja Azure Information Protection åtkomst till den kund hanterade klientnyckeln (BYOK)
 ```powershell
 PS C:\> Set-AzKeyVaultAccessPolicy -VaultName 'Contoso04Vault' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
 ```
 
-Det här kommandot auktoriserar Azure information Protection att använda en kundhanterad knapp (skapa en egen-eller "BYOK"-scenario) som klient organisations-knappen för Azure information Protection.
-När du kör det här kommandot ska du ange ditt eget namn på Key Vault, men du måste ange parametern *servicePrincipalName* med GUID **00000012-0000-0000-C000-000000000000** och ange behörigheterna i exemplet.
+Det här kommandot godkänner Azure Information Protection att använda en kund hanterad nyckel (scenariot ta med din egen nyckel, eller "BYOK") som Azure Information Protection-klientnyckel.
+När du kör det här kommandot anger du ditt eget namn på nyckelvalvet men du måste ange *parametern ServicePrincipalName* med GUID **00000012-0000-0000-c000-000000000000** och ange behörigheterna i exemplet.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -ApplicationId
 För framtida användning.
@@ -306,8 +307,8 @@ Accept wildcard characters: False
 ```
 
 ### -BypassObjectIdValidation
-Gör det möjligt att ange ett objekt-ID utan att verifiera att objektet finns i Azure Active Directory.
-Använd endast den här parametern om du vill bevilja åtkomst till ditt nyckeltal till ett objekt-ID som refererar till en delegerad säkerhets grupp från en annan Azure-klient.
+Du kan ange ett objekt-ID utan att verifiera att objektet finns i Azure Active Directory.
+Använd bara den här parametern om du vill ge åtkomst till ditt nyckelvalv till ett objekt-ID som refererar till en delegerad säkerhetsgrupp från en annan Azure-klientorganisation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -322,7 +323,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -337,8 +338,8 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAddress
-Anger användarens e-postadress för den användare som ska bevilja behörigheter.
-Den här e-postadressen måste finnas i katalogen som är kopplad till det aktuella abonnemanget och vara unik.
+Anger användarens e-postadress för den användare som behörigheten ska tilldelas.
+Den här e-postadressen måste finnas i katalogen som är kopplad till den aktuella prenumerationen och vara unik.
 
 ```yaml
 Type: System.String
@@ -353,7 +354,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledForDeployment
-Gör det möjligt för Microsoft. Compute Resource-leverantören att hämta hemligheter från det här nyckelvärdet när det här nyckelvärdet refereras i resurs skapande, till exempel när du skapar en virtuell dator.
+Gör det möjligt för Microsoft.Compute-resursleverantören att hämta hemligheter från det här nyckelvalvet när det här nyckelvalvet refereras till i resursskapande, till exempel när du skapar en virtuell dator.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -368,7 +369,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledForDiskEncryption
-Aktiverar tjänsten Azure Disk Encryption för att få hemligheter och unwrap-nycklar från det här nyckel valvet.
+Gör att azure-tjänsten för diskkryptering kan hämta hemligheter och ta fram nycklar från det här nyckelvalvet.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -383,7 +384,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledForTemplateDeployment
-Gör det möjligt för Azure Resource Manager att få hemligheter från detta viktiga valv när det här nyckelvärdet refereras till i en mall.
+Gör att Azure Resource Manager kan få hemligheter från det här nyckelvalvet när det här nyckelvalvet refereras till i en malldistribution.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -398,7 +399,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Key valv-objekt
+Key Vault-objekt
 
 ```yaml
 Type: Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultIdentityItem
@@ -413,7 +414,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-Anger objekt-ID: t för användaren eller tjänstens huvud namn i Azure Active Directory för vilket behörigheter ska beviljas.
+Anger objekt-ID för den användare eller tjänsts huvudnamn i Azure Active Directory som behörigheter ska tilldelas till.
 
 ```yaml
 Type: System.String
@@ -429,7 +430,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 Returnerar ett objekt som representerar det objekt som du arbetar med.
-Denna cmdlet genererar som standard inga utdata.
+Som standard genererar inte den här cmdleten några utdata.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -444,13 +445,13 @@ Accept wildcard characters: False
 ```
 
 ### -PermissionsToCertificates
-Anger en matris med certifikat behörigheter som ska beviljas till en användare eller tjänstens huvud konto.
-De acceptabla värdena för den här parametern:
-- Lära
-- Förteckning
+Anger en matris med certifikatbehörigheter som ska tilldelas en användare eller tjänsts huvudnamn.
+Godtagbara värden för den här parametern:
+- Skaffa
+- Lista
 - Ta bort
-- Göra
-- Importeras
+- Skapa
+- Importera
 - Uppdatera
 - Managecontacts
 - Getissuers
@@ -458,10 +459,10 @@ De acceptabla värdena för den här parametern:
 - Setissuers
 - Deleteissuers
 - Manageissuers
-- Ã
-- Reservdomänkontrollant
-- Terställa
-- Tömning
+- Återställ
+- Säkerhetskopiering
+- Återställ
+- Rensa
 
 ```yaml
 Type: System.String[]
@@ -477,24 +478,24 @@ Accept wildcard characters: False
 ```
 
 ### -PermissionsToKeys
-Anger en matris med viktiga behörigheter för att bevilja en användare eller tjänstens huvud konto.
-De acceptabla värdena för den här parametern:
+Anger en matris med nyckelåtgärdsbehörigheter som ska tilldelas en användares eller en tjänsts huvudnamn.
+Godtagbara värden för den här parametern:
 - Dekryptera
-- Inträffade
+- Kryptera
 - UnwrapKey
 - WrapKey
-- Kontroll
-- Logga in
-- Lära
-- Förteckning
+- Verifiera
+- Signera
+- Skaffa
+- Lista
 - Uppdatera
-- Göra
-- Importeras
+- Skapa
+- Importera
 - Ta bort
-- Reservdomänkontrollant
-- Terställa
-- Ã
-- Tömning
+- Säkerhetskopiering
+- Återställ
+- Återställ
+- Rensa
 
 ```yaml
 Type: System.String[]
@@ -510,16 +511,16 @@ Accept wildcard characters: False
 ```
 
 ### -PermissionsToSecrets
-Anger en matris med hemliga åtgärds behörigheter som ska beviljas till en användare eller tjänstens huvud konto.
-De acceptabla värdena för den här parametern:
-- Lära
-- Förteckning
-- Ge
+Anger en matris med behörigheter för hemlig åtgärd som ska tilldelas en användare eller tjänsts huvudnamn.
+Godtagbara värden för den här parametern:
+- Skaffa
+- Lista
+- Ange
 - Ta bort
-- Reservdomänkontrollant
-- Terställa
-- Ã
-- Tömning
+- Säkerhetskopiering
+- Återställ
+- Återställ
+- Rensa
 
 ```yaml
 Type: System.String[]
@@ -535,7 +536,7 @@ Accept wildcard characters: False
 ```
 
 ### -PermissionsToStorage
-Anger hanterat lagrings konto och behörigheter för säkerhets associationer för att bevilja användare eller tjänstens huvud namn.
+Anger behörigheter för hanterat lagringskonto och SaS-definition för att bevilja en användare eller tjänsts huvudnamn.
 
 ```yaml
 Type: System.String[]
@@ -551,7 +552,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Anger namnet på en resurs grupp.
+Anger namnet på en resursgrupp.
 
 ```yaml
 Type: System.String
@@ -566,7 +567,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Resurs-ID för valv
+Nyckel-ID för valvresurs
 
 ```yaml
 Type: System.String
@@ -581,8 +582,8 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalName
-Anger tjänstens huvud namn för det program som ska bevilja behörigheter.
-Ange program-ID, som också kallas klient-ID, som är registrerat i AzureActive-katalogen. Programmet med SPN-namnet som den här parametern anger måste vara registrerat i Azure-katalogen som innehåller ditt nuvarande abonnemang.
+Anger tjänstens huvudnamn för programmet som behörigheten ska tilldelas till.
+Ange program-ID, som även kallas klient-ID, som registrerats för programmet i AzureActive Directory. Programmet med tjänstens huvudnamn som den här parametern anger måste vara registrerat i den Azure-katalog som innehåller din nuvarande prenumeration.
 
 ```yaml
 Type: System.String
@@ -597,8 +598,8 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-Anger användarens huvud namn för den användare som ska bevilja behörigheter.
-Det här UPN-namnet måste finnas i katalogen som är kopplad till det aktuella abonnemanget.
+Anger användarens huvudnamn för den användare som ska tilldela behörigheter.
+Det här huvudnamnet måste finnas i katalogen som är kopplad till den aktuella prenumerationen.
 
 ```yaml
 Type: System.String
@@ -613,8 +614,8 @@ Accept wildcard characters: False
 ```
 
 ### -VaultName
-Anger namnet på ett nyckelord.
-Denna cmdlet ändrar åtkomst principen för det Key-valv som den här parametern anger.
+Anger namnet på ett nyckelvalv.
+Den här cmdleten ändrar åtkomstprincipen för nyckelvalvet som den här parametern anger.
 
 ```yaml
 Type: System.String
@@ -629,7 +630,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -644,7 +645,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs. Cmdleten körs inte.
+Visar vad som skulle hända om cmdleten körs. Cmdleten körs inte.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -659,19 +660,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### Microsoft. Azure. commands. valv. Models. PSKeyVaultIdentityItem
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultIdentityItem
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. valv. Models. PSKeyVault
+### Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
