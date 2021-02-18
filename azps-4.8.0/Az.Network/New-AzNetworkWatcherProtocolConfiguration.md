@@ -5,31 +5,31 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/ne
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzNetworkWatcherProtocolConfiguration.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/New-AzNetworkWatcherProtocolConfiguration.md
-ms.openlocfilehash: 7f974d9be1faaaf4d78a2527250cdec1775ae49f
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: bd9b0064dd83d05b0250ab2bf7c3e5a0ef380f7f
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94262545"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100415622"
 ---
 # New-AzNetworkWatcherProtocolConfiguration
 
-## Sammanfattning
-Skapar ett nytt protokoll konfigurations objekt.
+## SYNOPSIS
+Skapar ett nytt protokollkonfigurationsobjekt.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 New-AzNetworkWatcherProtocolConfiguration -Protocol <String> [-Method <String>] [-Header <IDictionary>]
  [-ValidStatusCode <Int32[]>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-New-AzNetworkWatcherProtocolConfiguration cmdlet skapar ett nytt protokoll konfigurations objekt. Det här objektet används för att begränsa protokoll konfigurationen under en anslutnings kontroll med de angivna villkoren. 
+## BESKRIVNING
+Med New-AzNetworkWatcherProtocolConfiguration-cmdleten skapas ett nytt protokollkonfigurationsobjekt. Det här objektet används för att begränsa protokollkonfigurationen under en anslutningskontrollsession med de angivna villkoren. 
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: testa nätverks övervakaren anslutning från en virtuell dator till en webbplats med protokoll konfiguration
+### Exempel 1: Testa nätverkets watcher-anslutning från en VM till en webbplats med protokollkonfiguration
 ```
 $config = New-AzNetworkWatcherProtocolConfiguration -Protocol Http -Method Get -Headers @{"accept"="application/json"} -ValidStatusCodes @(200,202,204)
 
@@ -64,12 +64,12 @@ Hops             : [
                    ]
 ```
 
-I det här exemplet testar vi anslutningen från en VM i Azure till www.bing.com.
+I det här exemplet testar vi anslutning från en VM i Azure till www.bing.com.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -83,8 +83,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Rubrik
-lista över HTTP-rubriker
+### -Header
+lista med HTTP-rubriker
 
 ```yaml
 Type: System.Collections.IDictionary
@@ -113,8 +113,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Protokoll
-Protokoll typ
+### -Protocol
+Protokolltyp
 
 ```yaml
 Type: System.String
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -ValidStatusCode
-giltiga status koder
+giltiga statuskoder
 
 ```yaml
 Type: System.Int32[]
@@ -144,18 +144,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
 ### Ingen
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. Networks. Models. PSNetworkWatcherProtocolConfiguration
+### Microsoft.Azure.Commands.Network.Models.PSNetworkWatcherProtocolConfiguration
 
-## ANMÄRKNINGAR
-Nyckelord: Azure, azurerm, arm, resurs, hantering, chef, nätverk, nätverk, Watcher, paket, Capture, trafik, filter
+## ANTECKNINGAR
+Nyckelord: azure, azurerm, arm, resource, management, manager, network, networking, watcher, packet, capture, traffic, filter
 
 ## RELATERADE LÄNKAR
 
@@ -181,7 +181,7 @@ Nyckelord: Azure, azurerm, arm, resurs, hantering, chef, nätverk, nätverk, Wat
 
 [Remove-AzNetworkWatcherPacketCapture](./Remove-AzNetworkWatcherPacketCapture.md)
 
-[Stopp-AzNetworkWatcherPacketCapture](./Stop-AzNetworkWatcherPacketCapture.md)
+[Stop-AzNetworkWatcherPacketCapture](./Stop-AzNetworkWatcherPacketCapture.md)
 
 [New-AzNetworkWatcherProtocolConfiguration](./New-AzNetworkWatcherProtocolConfiguration.md)
 
@@ -189,7 +189,7 @@ Nyckelord: Azure, azurerm, arm, resurs, hantering, chef, nätverk, nätverk, Wat
 
 [Test-AzNetworkWatcherConnectivity](./Test-AzNetworkWatcherConnectivity.md)
 
-[Stopp-AzNetworkWatcherConnectionMonitor](./Stop-AzNetworkWatcherConnectionMonitor.md)
+[Stop-AzNetworkWatcherConnectionMonitor](./Stop-AzNetworkWatcherConnectionMonitor.md)
 
 [Start-AzNetworkWatcherConnectionMonitor](./Start-AzNetworkWatcherConnectionMonitor.md)
 
@@ -211,4 +211,4 @@ Nyckelord: Azure, azurerm, arm, resurs, hantering, chef, nätverk, nätverk, Wat
 
 [Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport.md)
 
-[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor)
+[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor.md)

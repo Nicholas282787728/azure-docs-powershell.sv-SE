@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.network/in
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Invoke-AzNetworkWatcherNetworkConfigurationDiagnostic.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Network/Network/help/Invoke-AzNetworkWatcherNetworkConfigurationDiagnostic.md
-ms.openlocfilehash: 5a1500554c1026b591faea63074ca9c12fef1b10
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: f9aa604cead73807d0a49a5e19be3193c21dce78
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94261853"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100415639"
 ---
 # Invoke-AzNetworkWatcherNetworkConfigurationDiagnostic
 
-## Sammanfattning
-Starta diagnostiksessionen för nätverks konfiguration för angivna nätverks profiler på mål resursen.
+## SYNOPSIS
+Anropar diagnostiksession för nätverkskonfiguration för angivna nätverksprofiler på målresursen.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### SetByResource (standard)
 ```
@@ -51,12 +51,12 @@ Invoke-AzNetworkWatcherNetworkConfigurationDiagnostic -ResourceId <String> -Targ
  [-AsJob] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Invoke-AzNetworkWatcherNetworkConfigurationDiagnostic cmdlet anropar diagnostiksessionen för nätverks konfiguration för angivna nätverks profiler på mål resursen.
+## BESKRIVNING
+Den Invoke-AzNetworkWatcherNetworkConfigurationDiagnostic cmdleten anropar diagnostik för nätverkskonfiguration för angivna nätverksprofiler på målresursen.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: starta Nätverksdiagnostik för virtuell dator och angiven nätverks profil
+### Exempel 1: Anropa nätverkskonfigurationsdiagnostiksession för VM och angiven nätverksprofil
 ```
 PS C:\> $profile = New-AzNetworkWatcherNetworkConfigurationDiagnosticProfile -Direction Inbound -Protocol Tcp -Source 10.1.1.4 -Destination * -DestinationPort 50
 PS C:\> Invoke-AzNetworkWatcherNetworkConfigurationDiagnostic -Location eastus -TargetResourceId /subscriptions/61cc8a98-a8be-4bfe-a04e-0b461f93fe35/resourceGroups/NwRgEastUS/providers/Microsoft.Compute/virtualMachines/vm1 -Profile $profile
@@ -91,10 +91,10 @@ Results : [
                       },
 ```
 
-## MALLPARAMETRAR
+## PARAMETERS
 
-### -AsJob
-Kör cmdlet i bakgrunden
+### -As Ent fån
+Kör cmdleten i bakgrunden
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -Plats
-Nätverks Bevakningens plats.
+Plats för nätverksbevakningen.
 
 ```yaml
 Type: System.String
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkWatcher
-Nätverks bevaknings resursen.
+Nätverksbevakningsresursen.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher
@@ -154,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkWatcherName
-Nätverks Bevakningens namn.
+Namnet på nätverksbevakningen.
 
 ```yaml
 Type: System.String
@@ -168,8 +168,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Profil
-Lista över profiler för nätverks konfiguration.
+### -Profile
+Lista över diagnostikprofiler för nätverkskonfiguration.
 
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSNetworkConfigurationDiagnosticProfile]
@@ -184,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Namnet på nätverks bevaknings resurs gruppen.
+Namnet på resursgruppen för nätverksbevakning.
 
 ```yaml
 Type: System.String
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetResourceId
-ID: t för mål resursen för att utföra Nätverksdiagnostik för nätverks konfiguration.
+ID för målresursen som ska utföra nätverkskonfigurationsdiagnostik.
 Giltiga alternativ är VM, NetworkInterface, VMSS/NetworkInterface och Application Gateway.
 
 ```yaml
@@ -230,8 +230,8 @@ Accept wildcard characters: False
 ```
 
 ### -VerbosityLevel
-Utförlig nivå.
-Godkända värden är "normal", "minimum", "full".
+Utförlighetsnivå.
+Godkända värden är "Normal", "Minimum", "Fullständig".
 
 ```yaml
 Type: System.String
@@ -246,20 +246,20 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( http://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-### Microsoft. Azure. commands. Networks. Models. PSNetworkWatcher
+### Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. Networks. Models. PSNetworkConfigurationDiagnosticResponse
+### Microsoft.Azure.Commands.Network.Models.PSNetworkConfigurationDiagnosticResponse
 
-## ANMÄRKNINGAR
-Nyckelord: Azure, azurerm, arm, resurs, hantering, chef, nätverk, nätverk, Watcher, diagnostik, profil
+## ANTECKNINGAR
+Nyckelord: azure, azurerm, arm, resurs, hantering, chef, nätverk, nätverk, watcher, diagnostik, profil
 
 ## RELATERADE LÄNKAR
 
@@ -285,7 +285,7 @@ Nyckelord: Azure, azurerm, arm, resurs, hantering, chef, nätverk, nätverk, Wat
 
 [Remove-AzNetworkWatcherPacketCapture](./Remove-AzNetworkWatcherPacketCapture.md)
 
-[Stopp-AzNetworkWatcherPacketCapture](./Stop-AzNetworkWatcherPacketCapture.md)
+[Stop-AzNetworkWatcherPacketCapture](./Stop-AzNetworkWatcherPacketCapture.md)
 
 [New-AzNetworkWatcherProtocolConfiguration](./New-AzNetworkWatcherProtocolConfiguration.md)
 
@@ -293,7 +293,7 @@ Nyckelord: Azure, azurerm, arm, resurs, hantering, chef, nätverk, nätverk, Wat
 
 [Test-AzNetworkWatcherConnectivity](./Test-AzNetworkWatcherConnectivity.md)
 
-[Stopp-AzNetworkWatcherConnectionMonitor](./Stop-AzNetworkWatcherConnectionMonitor.md)
+[Stop-AzNetworkWatcherConnectionMonitor](./Stop-AzNetworkWatcherConnectionMonitor.md)
 
 [Start-AzNetworkWatcherConnectionMonitor](./Start-AzNetworkWatcherConnectionMonitor.md)
 
@@ -315,4 +315,4 @@ Nyckelord: Azure, azurerm, arm, resurs, hantering, chef, nätverk, nätverk, Wat
 
 [Get-AzNetworkWatcherConnectionMonitorReport](./Get-AzNetworkWatcherConnectionMonitorReport.md)
 
-[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor)
+[Get-AzNetworkWatcherConnectionMonitor](./Get-AzNetworkWatcherConnectionMonitor.md)
