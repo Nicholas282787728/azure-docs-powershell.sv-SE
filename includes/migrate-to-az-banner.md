@@ -1,12 +1,14 @@
 ---
 ms.topic: include
-ms.date: 09/03/2020
-ms.openlocfilehash: 7d25bfbc7b7efbb2a96209f6e485c07c2be2bd57
-ms.sourcegitcommit: 6071038ed955107220a01156550a541bf68d0266
-ms.translationtype: HT
+ms.date: 02/12/2021
+ms.openlocfilehash: 78920c064b776c4b2bc219a6d02810d34d64ae4f
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
+ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "89497637"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100515176"
 ---
 > [!IMPORTANT]
-> Du har nått en webbsida för en inaktuell version av Azure PowerShell. Alla versioner av AzureRM PowerShell-modulen är inaktuella, men stöds fortfarande. Az PowerShell-modulen är nu den rekommenderade PowerShell-modulen för att interagera med Azure. För att komma igång med Az PowerShell kan du läsa artikeln om att [_installera Azure PowerShell_](https://docs.microsoft.com/powershell/azure/install-az-ps). Information om hur du migrerar till Az PowerShell-modulen finns i artikeln om att [_migrera Azure PowerShell från AzureRM till Az_](https://aka.ms/azpsmigrate).
+> Eftersom Az PowerShell-moduler nu har alla funktioner som AzureRM PowerShell-moduler med mera, drar vi tillbaka AzureRM PowerShell-modulerna den 29 februari 2024.
+
+> Du kan undvika [](https://aka.ms/azpsmigrate) avbrott i tjänsten genom att uppdatera skript som använder AzureRM PowerShell-moduler för att använda Az PowerShell-moduler senast den 29 februari 2024. Följ snabbstartsguiden om du vill [uppdatera skripten automatiskt.](/powershell/azure/quickstart-migrate-azurerm-to-az-automatically)
