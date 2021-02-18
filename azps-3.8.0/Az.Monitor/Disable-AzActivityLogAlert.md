@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/di
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Disable-AzActivityLogAlert.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Disable-AzActivityLogAlert.md
-ms.openlocfilehash: 3ed174a27d718f677311322a8ed5e89d0f8e8614
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 4ce3bc8c0efd5acd4e39d61c083c82bff960066e
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94092735"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100409230"
 ---
 # Disable-AzActivityLogAlert
 
-## Sammanfattning
-Inaktiverar en aktivitets loggs varning och anger dess taggar.
+## SYNOPSIS
+Inaktiverar en aktivitetsloggavisering och ställer in dess taggar.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### DisableByNameAndResourceGroup
 ```
@@ -38,39 +38,39 @@ Disable-AzActivityLogAlert -ResourceId <String> [-DefaultProfile <IAzureContextC
  [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **disable-AzActivityLogAlert** inaktive ras och aktivitetens loggning gör det möjligt att ange dess taggar.
-Denna cmdlet implementerar ShouldProcess-mönstret, dvs. den kan begära bekräftelse från användaren innan han eller hon korrigerar resursen.
+## BESKRIVNING
+Cmdleten **Disable-AzActivityLogAlert** inaktiverar och aktivitetsloggaviseringar och tillåter inställning av taggarna.
+Den här cmdleten implementerar mönstret ShouldProcess, dvs. den kan begära bekräftelse från användaren innan den korrigerar resursen.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: inaktivera en aktivitets logg varning
+### Exempel 1: Inaktivera en aktivitetsloggavisering
 ```
 PS C:\>Disable-AzActivityLogAlert -Name "alert1" -ResourceGroupName "Default-ActivityLogsAlerts"
 ```
 
-Det här kommandot inaktiverar aktivitets logg varningen med namnet alert1 i resurs gruppen standard-ActivityLogsAlerts.
-Det här kommandot ändrar egenskapen taggar för aviseringen för aktivitets loggen med namnet alert1 och inaktiverar den.
+Det här kommandot inaktiverar aktivitetsloggaviseringen med namnet avisering1 i resursgruppen Default-ActivityLogsAlerts.
+Med det här kommandot ändras egenskapen taggar för aktivitetsloggaviseringen med namnet avisering1 och inaktiverar den.
 
-### Exempel 2: inaktivera en aktivitets logg varning med ett PSActivityLogAlertResource-objekt som inmatning
+### Exempel 2: Inaktivera en aktivitetsloggavisering med hjälp av ett PSActivityLogAlertResource-objekt som indata
 ```
 PS C:\>$obj = Get-AzActivityLogAlert -ResourceGroup "Default-activityLogAlerts" -Name "alert1"
 PS C:\>Disable-AzActivityLogAlert -InputObject $obj
 ```
 
-Det här kommandot inaktiverar en aktivitets loggs avisering med namnet alert1. För den här funktionen används ett PSActivityLogAlertResource-objekt som indataargument.
+Det här kommandot inaktiverar en aktivitetsloggavisering som kallas avisering1. För detta används ett PSActivityLogAlertResource-objekt som indataargument.
 
-### Exempel 3: inaktivera ActivityLogAlert med parametern ResourceId
+### Exempel 3: Inaktivera ActivityLogAlert med parametern ResourceId
 ```
 PS C:\>Get-AzResource -ResourceGroupName "myResourceGroup" -Name "myLogAlert" | Disable-AzActivityLogAlert
 ```
 
-Det här kommandot inaktiverar ActivityLogAlert med hjälp av parametern ResourceId från pipe.
+Det här kommandot inaktiverar ActivityLogAlert med parametern ResourceId från pipe.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Anger egenskapen InputObject Tags för samtalet för att extrahera obligatoriskt namn, resurs grupp namn och valfria Taggegenskaper.
+Anger egenskapen InputObject-taggar för samtalet för att extrahera det obligatoriska namnet, resursgruppens namn och de valfria taggegenskaperna.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Insights.OutputClasses.PSActivityLogAlertResource
@@ -99,8 +99,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -Namn
-Namnet på aktivitets logg varningen.
+### -Name
+Namnet på aktivitetsloggaviseringen.
 
 ```yaml
 Type: System.String
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-Namnet på resurs gruppen där aviserings resursen ska finnas.
+Namnet på den resursgrupp där aviseringsresursen ska finnas.
 
 ```yaml
 Type: System.String
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Anger egenskapen ResourceId-taggar för samtalet för att extrahera namnet, resurs gruppens namn-egenskaper.
+Anger egenskapen ResourceId-taggar för samtalet för att extrahera obligatoriskt namn, namnegenskaper för resursgrupp.
 
 ```yaml
 Type: System.String
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs. Cmdleten körs inte.
+Visar vad som skulle hända om cmdleten körs. Cmdleten körs inte.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -175,19 +175,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-### Microsoft. Azure. commands. Insights. OutputClasses. PSActivityLogAlertResource
+### Microsoft.Azure.Commands.Insights.OutputClasses.PSActivityLogAlertResource
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. Insights. OutputClasses. PSActivityLogAlertResource
+### Microsoft.Azure.Commands.Insights.OutputClasses.PSActivityLogAlertResource
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
@@ -199,6 +199,6 @@ Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,
 
 [New-AzActionGroup](./New-AzActionGroup.md)
 
-[New-AzActivityLogAlertCondition](./Get-AzActivityLogAlertCondition.md)
+
 
 [Enable-AzActivityLogAlert](./Enable-AzActivityLogAlert.md)

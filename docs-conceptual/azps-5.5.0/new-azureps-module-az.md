@@ -1,17 +1,17 @@
 ---
 title: Introduktion till Azure Az PowerShell-modulen
 description: Vi presenterar Az PowerShell-modulen. Modulen ersätter AzureRM PowerShell-modulen och rekommenderas för interaktion med Azure.
-ms.date: 12/1/2020
+ms.date: 02/12/2021
 ms.devlang: powershell
 ms.topic: conceptual
 ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
-ms.openlocfilehash: 9021a1d8fdc73aedb87b17631f8e67cb8ef79166
-ms.sourcegitcommit: c05d3d669b5631e526841f47b22513d78495350b
+ms.openlocfilehash: b52b6995fb50a6ce502d42e7df588ca72340a1e7
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100012794"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100409485"
 ---
 # <a name="introducing-the-azure-az-powershell-module"></a>Introduktion till Azure Az PowerShell-modulen
 
@@ -78,7 +78,9 @@ Om dina skript fortfarande baseras på AzureRM-modulen har vi flera resurser som
 
 Az är den mest aktuella PowerShell-modulen för Azure. Problem eller önskemål om funktioner kan loggas direkt på [GitHub-lagringsplatsen](https://github.com/Azure/azure-powershell) eller via Microsofts support om du har ett supportavtal. Nya efterfrågade funktioner implementeras i den senaste versionen av Az. Korrigeringar av kritiska problem implementeras i de två senaste versionerna av Az.
 
-Inga nya cmdletar eller funktioner kommer att ges ut för AzureRM, Officiellt underhålls AzureRM-modulen fortfarande och kritiska korrigeringar erbjuds till slutet av februari 2021.
+Eftersom AZ PowerShell-moduler nu har alla funktioner i AzureRM PowerShell-moduler och mer, kommer vi att dra tillbaka AzureRM PowerShell-moduler den 29 februari 2024.
+
+Om du vill undvika avbrott i tjänsten [uppdaterar du dina skript](https://aka.ms/azpsmigrate) som använder AzureRM PowerShell-moduler för att använda AZ PowerShell-moduler med 29 februari 2024. Om du vill uppdatera dina skript automatiskt följer du [snabb starts guiden](/powershell/azure/quickstart-migrate-azurerm-to-az-automatically).
 
 ## <a name="data-collection"></a>Datainsamling
 

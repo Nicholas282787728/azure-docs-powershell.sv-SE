@@ -6,19 +6,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.monitor/se
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Set-AzDiagnosticSetting.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Monitor/Monitor/help/Set-AzDiagnosticSetting.md
-ms.openlocfilehash: 554a754d8d7e6000556b2141807d2b6fe86cc230
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: a1ccbf6ee912c26bc4ecbe3b58a9db12dac112e6
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "93925666"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100409723"
 ---
 # Set-AzDiagnosticSetting
 
-## Sammanfattning
-Ange inställningar för loggar och mått för resursen.
+## SYNOPSIS
+Anger inställningar för loggar och mått för resursen.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### OldSetDiagnosticSetting (standard)
 ```
@@ -37,28 +37,28 @@ Set-AzDiagnosticSetting -InputObject <PSServiceDiagnosticSettings> [-DefaultProf
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **set-AzDiagnosticSetting** aktiverar eller inaktiverar varje tidpunkt och log-kategori för den aktuella resursen.
-Loggar och mått lagras i angivet lagrings konto.
-Denna cmdlet implementerar ShouldProcess-mönstret, t. ex. det kan begära bekräftelse från användaren innan de skapar, ändrar eller tar bort resursen.
+## BESKRIVNING
+Cmdleten **Set-AzDiagnosticSetting** aktiverar eller inaktiverar varje tids grain- och loggkategori för en viss resurs.
+Loggarna och måtten lagras i det angivna lagringskontot.
+Den här cmdleten implementerar mönstret ShouldProcess, dvs. den kan begära bekräftelse från användaren innan den faktiskt skapar, ändrar eller tar bort resursen.
 
-## BESKRIVS
+## EXEMPEL
 
 ### Exempel 1: Aktivera alla mått och loggar för en resurs
 ```
 PS C:\>Set-AzDiagnosticSetting -ResourceId "Resource01" -Enabled $True
 ```
 
-Det här kommandot aktiverar alla tillgängliga mått och loggar för Resource01.
+Med det här kommandot aktiveras alla tillgängliga mått och loggar för Resource01.
 
-### Exempel 2: inaktivera alla mått och loggar
+### Exempel 2: Inaktivera alla mätvärden och loggar
 ```
 PS C:\>Set-AzDiagnosticSetting -ResourceId "Resource01" -Enabled $False
 ```
 
-Det här kommandot inaktiverar alla tillgängliga mått och loggar för resursens Resource01.
+Med det här kommandot inaktiveras alla tillgängliga mått och loggar för resursen Resource01.
 
-### Exempel 3: Aktivera/inaktivera flera mått kategorier
+### Exempel 3: Aktivera/inaktivera flera måttkategorier
 ```
 PS C:\>Set-AzDiagnosticSetting -ResourceId "Resource01" -Enabled $False -MetricCategory MetricCategory1,MetricCategory2
 StorageAccountId   : <storageAccountId>
@@ -84,10 +84,10 @@ Logs
    Category : Category4
 ```
 
-Det här kommandot inaktiverar mått kategorierna Category1 och Category2.
+Det här kommandot inaktiverar mätetriska kategorier som kallas Kategori1 och Kategori2.
 Alla andra kategorier förblir desamma.
 
-### Exempel 4: Aktivera/inaktivera flera kategorier av typer
+### Exempel 4: Aktivera/inaktivera flera loggkategorier
 ```
 PS C:\>Set-AzDiagnosticSetting -ResourceId "Resource01" -Enabled $True -Category Category1,Category2
 StorageAccountId   : <storageAccountId>
@@ -113,29 +113,29 @@ Logs
    Category : Category4
 ```
 
-Det här kommandot aktiverar Category1 och Category2.
-Alla de andra måtten och loggarna är oförändrade.
+Med det här kommandot aktiveras Kategori1 och Kategori2.
+Alla andra mått och loggar förblir oförändrade.
 
-### Exempel 4: Aktivera tids kornig het och flera kategorier
+### Exempel 4: Aktivera ett tidskorn och flera kategorier
 ```
 PS C:\>Set-AzDiagnosticSetting -ResourceId "Resource01" -Enabled $True -Category Category1,Category2 -Timegrain PT1M
 ```
 
-Det här kommandot aktiverar endast Category1, Category2 och Time grain PT1M.
-Alla andra tidsenheter och kategorier är oförändrade.
+Det här kommandot aktiverar endast PT1M, kategori2 och tidskornig PT1M.
+Alla andra tidskorn och kategorier ändras inte.
 
-### Exempel 5: använda pipeline
+### Exempel 5: Använda pipeline
 ```
 PS C:\>Get-AzDiagnosticSetting -ResourceId "Resource01" | Set-AzDiagnosticSetting -Enabled $True -Category Category1,Category2
 ```
 
-Det här kommandot använder PowerShell-pipeline för att ange (ingen ändring har gjorts).
+Det här kommandot använder PowerShell-pipelinen för att ange (ingen ändring har gjorts) en diagnostikinställning.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -Kategori
-Anger listan över loggnings kategorier som ska aktive ras eller inaktive ras enligt värdet för *aktive rad*.
-Om ingen kategori anges fungerar det här kommandot i alla kategorier som stöds. 
+Anger listan med loggkategorier som ska aktiveras eller inaktiveras, enligt värdet för *Aktiverad.*
+Om ingen kategori anges används det här kommandot på alla kategorier som stöds.
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -164,9 +164,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Aktiverad
-Anger om diagnostik ska aktive ras.
-Ange $True för att aktivera diagnostik eller $False för att inaktivera diagnostik.
+### -Enabled
+Anger om diagnostik ska aktiveras.
+Ange $True för att aktivera diagnostik eller $False inaktivera diagnostik.
 
 ```yaml
 Type: System.Boolean
@@ -180,8 +180,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -EventHubAuthorizationRuleId
-ID för auktoriseringsregeln för händelsehubben
+### -EventHubauthorizationRuleId
+Auktoriseringsregel-ID för händelsehubben
 
 ```yaml
 Type: System.String
@@ -196,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventHubName
-Namn på händelsehubben
+Händelsehubbens namn
 
 ```yaml
 Type: System.String
@@ -211,9 +211,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExportToResourceSpecific
-Flagga som anger att exportera till LA måste göras till en specifik tabell, a.k.a. dedikerad eller fast schema tabell, i stället för den dynamiska **standard** schema tabellen som heter **AzureDiagnostics**.
+Flagga som anger att exporten till LA måste göras till en resursspecifik tabell, t.ex. dedikerat eller fast schematabell, i motsats till **den dynamiska standardtabellen** **för AzureDiagnostics.**
 
-Det här argumentet är bara effektivt när argumentet **-workspaceId** också ges.
+Det här argumentet är endast effektivt när även **argumentet -workspaceId** anges.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -228,7 +228,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Indatavärdet (möjligt från pipelinen.) Namnet och resourceId extraheras från det här objektet.
+Inmatningsobjektet (möjligt från pipelinen.) Namnet och resurs-ID:t extraheras från det här objektet.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Insights.OutputClasses.PSServiceDiagnosticSettings
@@ -243,7 +243,8 @@ Accept wildcard characters: False
 ```
 
 ### -MetricCategory
-Listan med mått kategorier. Om ingen kategori anges fungerar det här kommandot i alla kategorier som stöds. 
+Listan med metriska kategorier.
+Om ingen kategori anges används det här kommandot på alla kategorier som stöds.
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
@@ -257,8 +258,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Namn
-Namnet på diagnos inställningen. Standardvärdet är **service**.
+### -Name
+Namnet på diagnostikinställningen. Standardvärdet är **tjänsten.**
 
 ```yaml
 Type: System.String
@@ -273,7 +274,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Anger ID för resursen.
+Anger resursens ID.
 
 ```yaml
 Type: System.String
@@ -288,7 +289,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionEnabled
-Anger om att diagnostikinformation är aktive rad.
+Anger om bevarande av diagnostikinformation är aktiverat.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
@@ -303,7 +304,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionInDays
-Anger bevarande principen i dagar.
+Anger bevarandeprincipen i dagar.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]
@@ -318,7 +319,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceBusRuleId
-ID för Service Bus-regel.
+Service bus rule id.
 
 ```yaml
 Type: System.String
@@ -333,7 +334,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageAccountId
-Anger ID för det lagrings konto där du vill spara data.
+Anger ID för lagringskontot för vilket data ska sparas.
 
 ```yaml
 Type: System.String
@@ -348,8 +349,8 @@ Accept wildcard characters: False
 ```
 
 ### -Timegrain
-Anger hur lång tid som ska aktive ras eller inaktive ras för mått enligt värdet för *aktive rad*.
-Om du inte anger en tids kornig het kan det här kommandot användas för alla tillgängliga tidsenheter.
+Anger vilka tidskorn som ska aktiveras eller inaktiveras för mätvärden, enligt värdet för *Aktiverad.*
+Om du inte anger ett tidskorn fungerar det här kommandot på alla tillgängliga tidskorn.
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
@@ -364,7 +365,7 @@ Accept wildcard characters: False
 ```
 
 ### -WorkspaceId
-ID för arbets ytan
+Resurs-ID för arbetsytan Logganalys som loggar/mätvärden ska skickas till
 
 ```yaml
 Type: System.String
@@ -379,7 +380,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -394,7 +395,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs. Cmdleten körs inte.
+Visar vad som skulle hända om cmdleten körs. Cmdleten körs inte.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -409,27 +410,27 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### Microsoft. Azure. commands. Insights. OutputClasses. PSServiceDiagnosticSettings
+### Microsoft.Azure.Commands.Insights.OutputClasses.PSServiceDiagnosticSettings
 
-### System. String
+### System.String
 
-### System. Boolean
+### System.Boolean
 
-### System. Collections. Generic. list ' 1 [[system. String, system. Private. CoreLib, version = 4.0.0.0, Culture = neutralt, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Collections.Generic.List'1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-### System. Nullable ' 1 [[system. Boolean, system. privat. CoreLib, version = 4.0.0.0, Culture = neutralt, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Nullable'1[[System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-### System. Nullable ' 1 [[system. Int32, system. privat. CoreLib, version = 4.0.0.0, Culture = neutralt, PublicKeyToken = 7cec85d7bea7798e]]
+### System.Nullable'1[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. Insights. OutputClasses. PSServiceDiagnosticSettings
+### Microsoft.Azure.Commands.Insights.OutputClasses.PSServiceDiagnosticSettings
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
