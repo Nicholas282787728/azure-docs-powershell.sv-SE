@@ -6,84 +6,83 @@ Help Version: ''
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Azure.Storage.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/preview/src/Storage/Commands.Storage/help/Azure.Storage.md
-gitcommit: https://github.com/Azure/azure-powershell/blob/89262bc4144696c69376c3fb654c881de55b6450
-ms.openlocfilehash: 7579023c82863b943080553d2c741244b9ae9c0f
-ms.sourcegitcommit: 43f4bdf2a59dd82fd881512aa9761bf72eb5703c
+ms.openlocfilehash: 864398d8af8ac05d7bfad93c195bf0ecb2c5ba1a
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "93571091"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100410386"
 ---
-# Modul för Azure. Storage
-## Problembeskrivning
-I det här avsnittet visas hjälp avsnitt för Azure Storage-cmdletar.
+# Azure.Storage Module
+## Beskrivning
+I det här avsnittet visas hjälpavsnitt för Azure Storage Cmdlets.
 
-## Azure. Storage-cmdletar
+## Azure.Storage Cmdlets
 ### [Get-AzureStorageBlob](Get-AzureStorageBlob.md)
 Visar blobbar i en behållare.
 
 ### [Get-AzureStorageBlobContent](Get-AzureStorageBlobContent.md)
-Laddar ner en lagrings-blob.
+Laddar ned en blob för lagring.
 
 ### [Get-AzureStorageBlobCopyState](Get-AzureStorageBlobCopyState.md)
-Hämtar kopierings statusen för en Azure Storage-blob.
+Får kopieringsstatus för en Azure Storage-blob.
 
 ### [Get-AzureStorageContainer](Get-AzureStorageContainer.md)
-Visar lagrings behållarna.
+Visar lagringsbehållarna.
 
 ### [Get-AzureStorageContainerStoredAccessPolicy](Get-AzureStorageContainerStoredAccessPolicy.md)
-Hämtar den lagrade åtkomst principen eller principer för en Azure Storage-behållare.
+Hämtar principen eller principerna för lagrad åtkomst för en Azure-lagringsplats.
 
 ### [Get-AzureStorageCORSRule](Get-AzureStorageCORSRule.md)
-Hämtar CORS-regler för en lagrings tjänst typ.
+Hämtar KORS-regler för en lagringstjänsttyp.
 
 ### [Get-AzureStorageFile](Get-AzureStorageFile.md)
-Visar en lista över kataloger och filer för en sökväg.
+Listar kataloger och filer för en sökväg.
 
 ### [Get-AzureStorageFileContent](Get-AzureStorageFileContent.md)
 Laddar ned innehållet i en fil.
 
 ### [Get-AzureStorageFileCopyState](Get-AzureStorageFileCopyState.md)
-Hämtar tillståndet för en kopiering.
+Hämtar status för en kopieringsåtgärd.
 
 ### [Get-AzureStorageQueue](Get-AzureStorageQueue.md)
-Visar lagrings köer.
+Visar lagringsköer.
 
 ### [Get-AzureStorageQueueStoredAccessPolicy](Get-AzureStorageQueueStoredAccessPolicy.md)
-Hämtar den lagrade åtkomst principen för en Azure Storage-kö.
+Hämtar principen eller principerna för lagrad åtkomst för en Azure-lagringskö.
 
 ### [Get-AzureStorageServiceLoggingProperty](Get-AzureStorageServiceLoggingProperty.md)
-Hämtar loggnings egenskaper för Azure Storage-tjänsterna.
+Hämtar loggningsegenskaper för Azure Storage-tjänster.
 
 ### [Get-AzureStorageServiceMetricsProperty](Get-AzureStorageServiceMetricsProperty.md)
-Hämtar mått för Azure Storage-tjänsten.
+Hämtar mätvärdesegenskaper för Azure Storage-tjänsten.
 
 ### [Get-AzureStorageShare](Get-AzureStorageShare.md)
-Hämtar en lista över fil resurser.
+Hämtar en lista över filresurser.
 
 ### [Get-AzureStorageShareStoredAccessPolicy](Get-AzureStorageShareStoredAccessPolicy.md)
-Hämtar lagrade åtkomst principer för en lagrings resurs.
+Hämtar principer för lagrad åtkomst för en lagringsresurs.
 
 ### [Get-AzureStorageTable](Get-AzureStorageTable.md)
-Visar lagrings tabellerna.
+Visar lagringstabellerna.
 
 ### [Get-AzureStorageTableStoredAccessPolicy](Get-AzureStorageTableStoredAccessPolicy.md)
-Hämtar den lagrade åtkomst principen för en Azure Storage-tabell.
+Hämtar principen eller principerna för lagrad åtkomst för en Azure-lagringstabell.
 
 ### [New-AzureStorageAccountSASToken](New-AzureStorageAccountSASToken.md)
-Skapar en SAS-token på konto nivå.
+Skapar en SAS-token på kontonivå.
 
 ### [New-AzureStorageBlobSASToken](New-AzureStorageBlobSASToken.md)
-Skapar en SAS-token för en Azure Storage blob.
+Genererar en SAS-token för en Azure Storage-blob.
 
 ### [New-AzureStorageContainer](New-AzureStorageContainer.md)
-Skapar en Azure Storage-behållare.
+Skapar en Azure-lagringsplats.
 
 ### [New-AzureStorageContainerSASToken](New-AzureStorageContainerSASToken.md)
-Skapar en SAS-token för en Azure Storage-behållare.
+Genererar en SAS-token för en Azure-lagringsbehållare.
 
 ### [New-AzureStorageContainerStoredAccessPolicy](New-AzureStorageContainerStoredAccessPolicy.md)
-Skapar en lagrad åtkomst princip för en Azure Storage-behållare.
+Skapar en princip för lagrad åtkomst för en Azure-lagringsbehållare.
 
 ### [New-AzureStorageContext](New-AzureStorageContext.md)
 Skapar en Azure Storage-kontext.
@@ -92,46 +91,46 @@ Skapar en Azure Storage-kontext.
 Skapar en katalog.
 
 ### [New-AzureStorageFileSASToken](New-AzureStorageFileSASToken.md)
-Genererar en signatur för en delad åtkomsttoken för en lagrings fil.
+Genererar en signaturtoken för delad åtkomst för en lagringsfil.
 
 ### [New-AzureStorageQueue](New-AzureStorageQueue.md)
-Skapar en lagrings kö.
+Skapar en lagringskö.
 
 ### [New-AzureStorageQueueSASToken](New-AzureStorageQueueSASToken.md)
-Skapar ett signatur-token för delad åtkomst för en Azure Storage-kö.
+Genererar en signaturtoken för delad åtkomst för en Azure-lagringskö.
 
 ### [New-AzureStorageQueueStoredAccessPolicy](New-AzureStorageQueueStoredAccessPolicy.md)
-Skapar en lagrad åtkomst princip för en Azure Storage-kö.
+Skapar en lagrad åtkomstprincip för en Azure-lagringskö.
 
 ### [New-AzureStorageShare](New-AzureStorageShare.md)
-Skapar en fil resurs.
+Skapar en filresurs.
 
 ### [New-AzureStorageShareSASToken](New-AzureStorageShareSASToken.md)
-Generera signatur för delad åtkomst för Azure Storage Share.
+Generera signaturtoken för delad åtkomst för Azure Storage-delning.
 
 ### [New-AzureStorageShareStoredAccessPolicy](New-AzureStorageShareStoredAccessPolicy.md)
-Skapar en lagrad åtkomst princip på en lagrings plats.
+Skapar en princip för lagrad åtkomst på en lagringsresurs.
 
 ### [New-AzureStorageTable](New-AzureStorageTable.md)
-Skapar en lagrings tabell.
+Skapar en lagringstabell.
 
 ### [New-AzureStorageTableSASToken](New-AzureStorageTableSASToken.md)
-Skapar en SAS-token för en Azure Storage-tabell.
+Genererar en SAS-token för en Azure Storage-tabell.
 
 ### [New-AzureStorageTableStoredAccessPolicy](New-AzureStorageTableStoredAccessPolicy.md)
-Skapar en lagrad åtkomst princip för en Azure Storage-tabell.
+Skapar en princip för lagrad åtkomst för en Azure-lagringstabell.
 
 ### [Remove-AzureStorageBlob](Remove-AzureStorageBlob.md)
-Tar bort angiven lagrings-blob.
+Tar bort den angivna blobben för lagringsutrymme.
 
 ### [Remove-AzureStorageContainer](Remove-AzureStorageContainer.md)
-Tar bort den angivna lagrings behållaren.
+Tar bort den angivna lagringsbehållaren.
 
 ### [Remove-AzureStorageContainerStoredAccessPolicy](Remove-AzureStorageContainerStoredAccessPolicy.md)
-Tar bort en lagrad åtkomst princip från en Azure Storage-behållare.
+Tar bort en lagrad åtkomstprincip från en Azure-lagringsbehållare.
 
 ### [Remove-AzureStorageCORSRule](Remove-AzureStorageCORSRule.md)
-Tar bort CORS för en lagrings tjänst.
+Tar bort CORS för en lagringstjänst.
 
 ### [Remove-AzureStorageDirectory](Remove-AzureStorageDirectory.md)
 Tar bort en katalog.
@@ -140,68 +139,68 @@ Tar bort en katalog.
 Tar bort en fil.
 
 ### [Remove-AzureStorageQueue](Remove-AzureStorageQueue.md)
-Tar bort en lagrings kö.
+Tar bort en lagringskö.
 
 ### [Remove-AzureStorageQueueStoredAccessPolicy](Remove-AzureStorageQueueStoredAccessPolicy.md)
-Tar bort en lagrad åtkomst princip från en Azure Storage-kö.
+Tar bort en lagrad åtkomstprincip från en Azure-lagringskö.
 
 ### [Remove-AzureStorageShare](Remove-AzureStorageShare.md)
-Tar bort en fil resurs.
+Tar bort en filresurs.
 
 ### [Remove-AzureStorageShareStoredAccessPolicy](Remove-AzureStorageShareStoredAccessPolicy.md)
-Tar bort en lagrad åtkomst princip från en lagrings plats.
+Tar bort en princip för lagrad åtkomst från en lagringsresurs.
 
 ### [Remove-AzureStorageTable](Remove-AzureStorageTable.md)
-Tar bort en lagrings tabell.
+Tar bort en lagringstabell.
 
 ### [Remove-AzureStorageTableStoredAccessPolicy](Remove-AzureStorageTableStoredAccessPolicy.md)
-Tar bort en lagrad åtkomst princip från en Azure Storage-tabell.
+Tar bort en lagrad åtkomstprincip från en Azure-lagringstabell.
 
 ### [Set-AzureStorageBlobContent](Set-AzureStorageBlobContent.md)
-Laddar upp en lokal fil till en Azure-lagrings-blob.
+Laddar upp en lokal fil till en Blob för Azure-lagring.
 
 ### [Set-AzureStorageContainerAcl](Set-AzureStorageContainerAcl.md)
-Ställer in offentlig åtkomst till en lagrings behållare.
+Anger den offentliga åtkomstbehörigheten för en lagringsbehållare.
 
 ### [Set-AzureStorageContainerStoredAccessPolicy](Set-AzureStorageContainerStoredAccessPolicy.md)
-Anger en lagrad åtkomst princip för en Azure Storage-behållare.
+Anger en princip för lagrad åtkomst för en Azure-lagringsbehållare.
 
 ### [Set-AzureStorageCORSRule](Set-AzureStorageCORSRule.md)
-Anger CORS-regler för en typ av lagrings tjänst.
+Ställer in CORS-reglerna för en typ av lagringstjänst.
 
 ### [Set-AzureStorageFileContent](Set-AzureStorageFileContent.md)
-Överför innehållet i en fil.
+Laddar upp innehållet i en fil.
 
 ### [Set-AzureStorageQueueStoredAccessPolicy](Set-AzureStorageQueueStoredAccessPolicy.md)
-Ställer in en lagrad åtkomst policy för en Azure Storage-kö.
+Anger en lagrad åtkomstprincip för en Azure-lagringskö.
 
 ### [Set-AzureStorageServiceLoggingProperty](Set-AzureStorageServiceLoggingProperty.md)
-Ändrar loggning för Azure Storage-tjänsterna.
+Ändrar loggning för Azure Storage-tjänster.
 
 ### [Set-AzureStorageServiceMetricsProperty](Set-AzureStorageServiceMetricsProperty.md)
-Ändrar mått för Azure Storage-tjänsten.
+Ändrar mätvärdesegenskaper för Azure Storage-tjänsten.
 
 ### [Set-AzureStorageShareQuota](Set-AzureStorageShareQuota.md)
-Anger lagrings kapaciteten för en resurs.
+Anger lagringskapaciteten för en resurs.
 
 ### [Set-AzureStorageShareStoredAccessPolicy](Set-AzureStorageShareStoredAccessPolicy.md)
-Uppdaterar en lagrad åtkomst princip på en lagrings plats.
+Uppdaterar en princip för lagrad åtkomst på en lagringsresurs.
 
 ### [Set-AzureStorageTableStoredAccessPolicy](Set-AzureStorageTableStoredAccessPolicy.md)
-Anger den lagrade åtkomst principen för en Azure Storage-tabell.
+Anger principen för lagrad åtkomst för en Azure-lagringstabell.
 
 ### [Start-AzureStorageBlobCopy](Start-AzureStorageBlobCopy.md)
-Startar för att kopiera en blob.
+Börjar kopiera en blob.
 
 ### [Start-AzureStorageBlobIncrementalCopy](Start-AzureStorageBlobIncrementalCopy.md)
-Starta en stegvis kopiering från en sid-BLOB-ögonblicksbild till den angivna mål sid-blob.
+Starta en stegvis kopieringsåtgärd från en blob-ögonblicksbild av en sida till den angivna blob-filen för målsidan.
 
 ### [Start-AzureStorageFileCopy](Start-AzureStorageFileCopy.md)
-Kopierar en källfil.
+Börjar kopiera en källfil.
 
-### [Stopp-AzureStorageBlobCopy](Stop-AzureStorageBlobCopy.md)
-Avbryter en kopierings åtgärd.
+### [Stop-AzureStorageBlobCopy](Stop-AzureStorageBlobCopy.md)
+Stoppar en kopieringsåtgärd.
 
-### [Stopp-AzureStorageFileCopy](Stop-AzureStorageFileCopy.md)
-Stoppar en kopierings åtgärd till angiven målfil.
+### [Stop-AzureStorageFileCopy](Stop-AzureStorageFileCopy.md)
+Stoppar en kopiering till den angivna målfilen.
 

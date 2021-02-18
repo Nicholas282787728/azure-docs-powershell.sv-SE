@@ -6,62 +6,62 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.notificati
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/NotificationHubs/NotificationHubs/help/Get-AzNotificationHubsNamespace.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/NotificationHubs/NotificationHubs/help/Get-AzNotificationHubsNamespace.md
-ms.openlocfilehash: dbb475402ef4068f893cd7d444b5357bf1707578
-ms.sourcegitcommit: 4d2c178cd6df9151877b08d54c1f4a228dbec9d1
+ms.openlocfilehash: 5c5517faa5dbd65cc6a76a02209cb2b8c429300a
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "93919406"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100410488"
 ---
 # Get-AzNotificationHubsNamespace
 
-## Sammanfattning
-Hämtar information om ett namn område för aviseringar.
+## SYNOPSIS
+Hämtar information om namnområdet för ett meddelandehubben.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 Get-AzNotificationHubsNamespace [[-ResourceGroup] <String>] [[-Namespace] <String>]
  [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Cmdleten **Get-AzNotificationHubsNamespace** hämtar information om namn rymder för aviseringar.
-Med den här cmdleten kan du hämta information för alla dina namn områden, information om de namn områden som har tilldelats till en viss resurs grupp; eller för att returnera information om ett specifikt namn område.
-Namn utrymmen är logiska behållare som hjälper dig att organisera och hantera dina meddelande nav.
-Du måste ha minst en namnrymd för aviserings navet: alla aviserings NAV måste kopplas till ett namn område.
-Ett enda namn område kan House flera nav, vilket innebär att du kanske bara behöver ett namn område i organisationen.
-Men du kan också ha flera namn områden för att bättre organisera dina nav, eller ge specifika enskilda personer tillstånd att hantera en viss delmängd av NAV.
-Cmdleten **Get-AzNotificationHubsNamespace** returnerar grundläggande information om själva namn området.
-Om du vill ha information om de auktoriseringsregler som är associerade med ett namn område använder du get-AzNotificationHubsNamespaceAuthorizationRules.
+## BESKRIVNING
+**Cmdleten Get-AzNotificationHubsNamespace** hämtar information om namnområden för meddelandehubben.
+Med den här cmdleten kan du välja att hämta information för alla dina namnområden, information om de namnområden som tilldelats en viss resursgrupp. eller för att returnera information om ett visst namnområde.
+Namnområden är logiska behållare som hjälper dig att organisera och hantera dina meddelandehubben.
+Du måste ha minst ett namnområde för meddelandehubben: alla meddelandenav måste kopplas till ett namnområde.
+Ett enda namnområde kan ha flera nav, vilket innebär att du kanske bara behöver ett namnområde i organisationen.
+Men du kan också ha flera namnområden för att ordna dina nav bättre, eller ge specifika personer behörighet att hantera en markerad delmängd nav.
+Cmdleten **Get-AzNotificationHubsNamespace** returnerar grundläggande information om själva namnområdet.
+Om du vill ha information om auktoriseringsregler som är kopplade till ett namnområde använder du Hämta-AzNotificationHubsNamespaceAuthorizationRules.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: Hämta information för alla namn områden för aviseringar
+### Exempel 1: Hämta information för alla namnområden för meddelandehubben
 ```
 PS C:\>Get-AzNotificationHubsNamespace
 ```
 
-Det här kommandot returnerar information för alla dina namn områden i meddelande navet.
+Med det här kommandot returneras information för alla namnområden i meddelandehubben.
 
-### Exempel 2: Hämta information om ett namn område för en enskild avisering
+### Exempel 2: Hämta information för ett enda meddelandehubbens namnområde
 ```
 PS C:\>Get-AzNotificationHubsNamespace -Namespace "ContosoNamespace"
 ```
 
-Det här kommandot får information om ett namn område för en enskild aviserings hubb: ContosoNamespace.
+Det här kommandot hämtar information för ett enda meddelandehubbens namnområde: ContosoNamespace.
 
-### Exempel 3: Hämta information om alla aviserings nav som har tilldelats till ett visst namn område
+### Exempel 3: Hämta information för alla meddelandehubben som är tilldelade till ett visst namnområde
 ```
 PS C:\>Get-AzNotificationHubsNamespace -ResourceGroup "ContosoNotificationsGroup"
 ```
 
-Med det här kommandot får du information för alla namn rymder för aviseringar som tilldelats resurs gruppen ContosoNotificationsGroup.
+Det här kommandot hämtar information för alla namnområden för meddelandehubben som tilldelats resursgruppen ContosoNotificationsGroup.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -75,9 +75,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Namnrymd
-Anger ett unikt namn för namn området.
-Med namn utrymmen kan du gruppera och kategorisera meddelande nav.
+### -Namespace
+Anger ett unikt namn för namnområdet.
+Namnområden är ett sätt att gruppera och kategorisera meddelandehubben.
 
 ```yaml
 Type: System.String
@@ -92,8 +92,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-Anger den resurs grupp som namn området tilldelats till.
-Resurs grupper organiserar objekt som namn områden, aviserings nav och auktoriseringsregler på olika sätt som underlättar lager hantering och Azure-administrationen.
+Anger den resursgrupp som namnområdet är tilldelat till.
+Resursgrupper organiserar objekt som namnområden, meddelandehubben och auktoriseringsregler på sätt som hjälper dig med lagerhantering och Azure-administration.
 
 ```yaml
 Type: System.String
@@ -108,21 +108,20 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i about_CommonParameters ( https://go.microsoft.com/fwlink/?LinkID=113216) .
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. NotificationHubs. Models. NamespaceAttributes
+### Microsoft.Azure.Commands.NotificationHubs.Models.NamespaceAttributes
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Get-AzNotificationHubsNamespaceAuthorizationRules](./Get-AzNotificationHubsNamespaceAuthorizationRules.md)
 
 [New-AzNotificationHubsNamespace](./New-AzNotificationHubsNamespace.md)
 
