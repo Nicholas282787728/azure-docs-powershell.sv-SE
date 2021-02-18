@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.accounts/a
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Accounts/Accounts/help/Add-AzEnvironment.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/Accounts/Accounts/help/Add-AzEnvironment.md
-ms.openlocfilehash: ba5a398e21543bc4b19c09309884ceb11fed3197
-ms.sourcegitcommit: 1de2b6c3c99197958fa2101bc37680e7507f91ac
+ms.openlocfilehash: 2db2e90dc1292bdfe67907e5a180b08a09a54718
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "94261495"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100406017"
 ---
 # Add-AzEnvironment
 
-## Sammanfattning
-Lägger till slut punkter och metadata för en instans av Azure Resource Manager.
+## SYNOPSIS
+Lägger till slutpunkter och metadata för en instans av Azure Resource Manager.
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ### Namn (standard)
 ```
@@ -51,19 +51,19 @@ Add-AzEnvironment [-Name] <String> [[-StorageEndpoint] <String>] [-ARMEndpoint] 
  [<CommonParameters>]
 ```
 
-### Identifierings
+### Upptäckt
 ```
 Add-AzEnvironment -AutoDiscover [-Uri <Uri>] [-Scope {Process | CurrentUser}]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
-Add-AzEnvironment cmdlet lägger till slut punkter och metadata för att aktivera Azure Resource Manager-cmdlets för att ansluta till en ny instans av Azure Resource Manager.
-De inbyggda miljöerna AzureCloud och AzureChinaCloud är befintliga offentliga instanser av Azure Resource Manager.
+## BESKRIVNING
+Med Add-AzEnvironment-cmdleten läggs slutpunkter och metadata till för att aktivera Azure Resource Manager-cmdlets så att du kan ansluta med en ny instans av Azure Resource Manager.
+De inbyggda miljöerna AzureCloud och AzureChinaCloud riktar sig mot befintliga offentliga instanser av Azure Resource Manager.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: skapa och ändra en ny miljö
+### Exempel 1: Skapa och ändra en ny miljö
 ```
 PS C:\> Add-AzEnvironment -Name TestEnvironment `
         -ActiveDirectoryEndpoint TestADEndpoint `
@@ -113,9 +113,9 @@ ExtendedProperties                                : {}
 BatchEndpointResourceId                           :
 ```
 
-I det här exemplet skapar vi en ny Azure-miljö med exempel slut punkter med Add-AzEnvironment och sedan ändrar vi värdet för attributen ActiveDirectoryEndpoint och GraphEndpoint för den skapade miljön med cmdlet Set-AzEnvironment.
+I det här exemplet skapar vi en ny Azure-miljö med exempelslutpunkter med tillägget AzEnvironment, och sedan ändrar vi värdet för ActiveDirectoryEndpoint- och GraphEndpoint-attributen för den skapade miljön med cmdlet set-AzEnvironment.
 
-### Exempel 2: upptäcka en ny miljö via URI
+### Exempel 2: Upptäcka en ny miljö via Uri
 ```
 <#
 Uri https://configuredmetadata.net returns an array of environment metadata. The following example contains a payload for the AzureCloud default environment.
@@ -162,12 +162,12 @@ Name            Resource Manager Url ActiveDirectory Authority
 TestEnvironment TestRMEndpoint       TestADEndpoint/
 ```
 
-I det här exemplet upptäcker vi att en ny Azure-miljö från https://configuredmetadata.net URI: n.
+I det här exemplet identifierar vi en ny Azure-miljö från `https://configuredmetadata.net` Uri.
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -ActiveDirectoryEndpoint
-Anger bas auktoritet för Azure Active Directory-verifikation.
+Anger basutfärdaren för Azure Active Directory-autentisering.
 
 ```yaml
 Type: System.String
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -ActiveDirectoryServiceEndpointResourceId
-Anger mål gruppen för tokens som autentiserar förfrågningar till slut punkter för Azure Resource Manager eller tjänste hantering (RDFE).
+Anger målgruppen för tokens som autentiserar förfrågningar till Azure Resource Manager eller tjänsthanteringsslutpunkter (RDFE).
 
 ```yaml
 Type: System.String
@@ -197,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdTenant
-Anger standard klient organisation för Active Directory.
+Anger Active Directory-standardklientorganisationen.
 
 ```yaml
 Type: System.String
@@ -212,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### -ARMEndpoint
-Azure Resource Manager slut punkt
+Slutpunkten för Azure Resource Manager
 
 ```yaml
 Type: System.String
@@ -226,8 +226,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Upptäck automatiskt
-Upptäck miljöer via standard eller konfigurerad slut punkt.
+### -AutoDiscover
+Identifierar miljöer via standard eller konfigurerad slutpunkt.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -242,7 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### -AzureAnalysisServicesEndpointResourceId
-Resurs-ID för Azure Analysis Services-resursen.
+Resursidentifieraren för Azure Analysis Services-resursen.
 
 ```yaml
 Type: System.String
@@ -257,7 +257,7 @@ Accept wildcard characters: False
 ```
 
 ### -AzureAnalysisServicesEndpointSuffix
-Slut punkten som används vid kommunikation med Azure Log Analytics API.
+Slutpunkten som ska användas vid kommunikation med Azure Log Analytics API.
 
 ```yaml
 Type: System.String
@@ -272,7 +272,7 @@ Accept wildcard characters: False
 ```
 
 ### -AzureAttestationServiceEndpointResourceId
-Resurs-ID för Azure attestering-tjänsten som är mottagaren av den begärda token.
+Resursidentifieraren för Azure-tjänsten som är mottagare av den begärda tokenen.
 
 ```yaml
 Type: System.String
@@ -287,7 +287,7 @@ Accept wildcard characters: False
 ```
 
 ### -AzureAttestationServiceEndpointSuffix
-DNS-suffix för Azure attestering-tjänsten.
+Dns-suffix för Azure-tjänsten För attestation.
 
 ```yaml
 Type: System.String
@@ -301,8 +301,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -AzureDataLakeAnalyticsCatalogAndJobEndpointSuffix
-DNS-suffix för Azure Data Lake Analytics-jobb och katalog tjänster
+### -AzureDataLakeAnalyticsCatalogAnd DendpointSuffix
+Dns-suffix för jobbet och katalogtjänsterna i Azure Data Lake Analytics
 
 ```yaml
 Type: System.String
@@ -317,7 +317,7 @@ Accept wildcard characters: False
 ```
 
 ### -AzureDataLakeStoreFileSystemEndpointSuffix
-DNS-suffix för Azure Data Lake Store-filsystem. Exempel: azuredatalake.net
+Dns-suffixet för Azure Data Lake Store FileSystem. Exempel: azuredatalake.net
 
 ```yaml
 Type: System.String
@@ -332,7 +332,7 @@ Accept wildcard characters: False
 ```
 
 ### -AzureKeyVaultDnsSuffix
-DNS-suffix för Azure Key valv-tjänsten. Exempel är vault-int.azure-int.net
+Dns-suffix för Azure-nyckelvalvtjänsten. Exempel är vault-int.azure-int.net
 
 ```yaml
 Type: System.String
@@ -347,7 +347,7 @@ Accept wildcard characters: False
 ```
 
 ### -AzureKeyVaultServiceEndpointResourceId
-Resurs-ID för Azure Key Vault data-tjänsten som är mottagaren av den begärda token.
+Resursidentifierare för Datatjänsten för Azure-nyckelvalv som är mottagaren av den begärda tokenen.
 
 ```yaml
 Type: System.String
@@ -362,7 +362,7 @@ Accept wildcard characters: False
 ```
 
 ### -AzureOperationalInsightsEndpoint
-Slut punkten som används vid kommunikation med Azure Log Analytics API.
+Slutpunkten som ska användas vid kommunikation med Azure Log Analytics API.
 
 ```yaml
 Type: System.String
@@ -377,7 +377,7 @@ Accept wildcard characters: False
 ```
 
 ### -AzureOperationalInsightsEndpointResourceId
-Mål gruppen för tokens som autentiserar med Azure logganalys-API: t.
+Målgruppen för tokens som autentiserar med AZURE Log Analytics API.
 
 ```yaml
 Type: System.String
@@ -392,7 +392,7 @@ Accept wildcard characters: False
 ```
 
 ### -AzureSynapseAnalyticsEndpointResourceId
-Resurs-ID för Azure Synapse Analytics som är mottagaren av den begärda token.
+Resursidentifieraren för Azure Synapse-analys som är mottagaren av den begärda tokenen.
 
 ```yaml
 Type: System.String
@@ -407,7 +407,7 @@ Accept wildcard characters: False
 ```
 
 ### -AzureSynapseAnalyticsEndpointSuffix
-DNS-suffix för Azure Synapse Analytics.
+Dns-suffix för Azure Synapse-analys.
 
 ```yaml
 Type: System.String
@@ -422,7 +422,7 @@ Accept wildcard characters: False
 ```
 
 ### -BatchEndpointResourceId
-Resurs-ID för Azure Batch-tjänsten som är mottagaren av den begärda token
+Resursidentifieraren för Azure Batch-tjänsten som är mottagaren av den begärda token
 
 ```yaml
 Type: System.String
@@ -437,7 +437,7 @@ Accept wildcard characters: False
 ```
 
 ### -DataLakeAudience
-Mål gruppen för tokens som autentiserar med slut punkten för AD Lake-tjänsterna.
+Målgruppen för token som autentiserar med slutpunkten för AD Data Lake-tjänster.
 
 ```yaml
 Type: System.String
@@ -452,7 +452,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, klient organisation och abonnemang som används för kommunikation med Azure
+Autentiseringsuppgifter, klientorganisation och prenumeration som används för kommunikation med azure
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -467,7 +467,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAdfsAuthentication
-Anger att Active Directory Federation Services (AD FS) on-plats tillåts.
+Anger att lokal autentisering med Active Directory Federation Services (ADFS) är tillåten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -482,7 +482,7 @@ Accept wildcard characters: False
 ```
 
 ### -GalleryEndpoint
-Anger slut punkten för Azure Resource Manager-galleriet med mallar för distribuering.
+Anger slutpunkten för Azure Resource Manager-galleriet för distributionsmallar.
 
 ```yaml
 Type: System.String
@@ -497,7 +497,7 @@ Accept wildcard characters: False
 ```
 
 ### -GraphAudience
-Mål gruppen för tokens som autentiseras med slut punkten för annons diagrammet.
+Målgruppen för tokens som autentiserar med AD Graph-slutpunkten.
 
 ```yaml
 Type: System.String
@@ -512,7 +512,7 @@ Accept wildcard characters: False
 ```
 
 ### -GraphEndpoint
-Anger URL-adressen för diagrammet (Active Directory-metadata).
+Anger URL-adressen för Graph-begäranden (Active Directory-metadata).
 
 ```yaml
 Type: System.String
@@ -527,7 +527,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagementPortalUrl
-Anger URL-adressen för hanterings portalen.
+Anger URL-adressen för hanteringsportalen.
 
 ```yaml
 Type: System.String
@@ -541,8 +541,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Namn
-Anger namnet på den miljö som ska läggas till.
+### -Name
+Anger namnet på miljön som ska läggas till.
 
 ```yaml
 Type: System.String
@@ -557,7 +557,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublishSettingsFileUrl
-Anger URL-adressen dit. publishsettings-filer kan hämtas.
+Anger URL-adressen som .publishsettings-filer kan hämtas från.
 
 ```yaml
 Type: System.String
@@ -587,7 +587,7 @@ Accept wildcard characters: False
 ```
 
 ### -Omfattning
-Avgör omfattningen av kontext ändringar, till exempel om ändringar endast gäller för den aktuella processen eller för alla sessioner som användaren startar.
+Avgör omfattningen av kontextändringar, till exempel om ändringar bara gäller den aktuella processen eller för alla sessioner som startas av användaren.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Profile.Common.ContextModificationScope
@@ -603,7 +603,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceEndpoint
-Anger sändnings begär Anden för tjänste hantering (RDFE).
+Anger slutpunkten för TJÄNSThanteringsbegäranden (RDFE).
 
 ```yaml
 Type: System.String
@@ -618,7 +618,7 @@ Accept wildcard characters: False
 ```
 
 ### -SqlDatabaseDnsSuffix
-Anger domänsuffix för domän namn för Azure SQL Database-servrar.
+Anger domännamnssuffixet för Azure SQL Database-servrar.
 
 ```yaml
 Type: System.String
@@ -633,7 +633,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageEndpoint
-Anger slut punkt för lagring (BLOB, tabell, kö och fil).
+Anger slutpunkten för åtkomst till lagring (blob, tabell, kö och fil).
 
 ```yaml
 Type: System.String
@@ -648,7 +648,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrafficManagerDnsSuffix
-Anger domänsuffix för Azure Traffic Manager-tjänster.
+Anger domännamnssuffixet för Azure Traffic Manager-tjänster.
 
 ```yaml
 Type: System.String
@@ -662,8 +662,8 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -URI
-Anger URI för Internet resursen för att hämta miljöer.
+### -Uri
+Anger URI för internetresursen som ska hämtas i miljöer.
 
 ```yaml
 Type: System.Uri
@@ -678,7 +678,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -693,7 +693,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs. Cmdleten körs inte.
+Visar vad som skulle hända om cmdleten körs. Cmdleten körs inte.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -708,19 +708,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### System. String
+### System.String
 
-### System. Management. Automation. SwitchParameter
+### System.Management.Automation.SwitchParameter
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. Profile. Models. PSAzureEnvironment
+### Microsoft.Azure.Commands.Profile.Models.PSAzureEnvironment
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
