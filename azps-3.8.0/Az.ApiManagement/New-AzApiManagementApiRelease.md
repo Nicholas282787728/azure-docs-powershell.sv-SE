@@ -5,19 +5,19 @@ online version: https://docs.microsoft.com/en-us/powershell/module/az.apimanagem
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementApiRelease.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/master/src/ApiManagement/ApiManagement/help/New-AzApiManagementApiRelease.md
-ms.openlocfilehash: 9b2b94fbd6a308f9d927483e78e060a273354738
-ms.sourcegitcommit: 6a91b4c545350d316d3cf8c62f384478e3f3ba24
+ms.openlocfilehash: 263e54adc39103a704dc4ea0bd30f396b5d00fc9
+ms.sourcegitcommit: 0c61b7f42dec507e576c92e0a516c6655e9f50fc
 ms.translationtype: MT
 ms.contentlocale: sv-SE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "94092724"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100413616"
 ---
 # New-AzApiManagementApiRelease
 
-## Sammanfattning
-Skapar en API-version av en API-revision
+## SYNOPSIS
+Skapar en API-version av en API-revidering
 
-## FRÅGESYNTAXEN
+## SYNTAX
 
 ```
 New-AzApiManagementApiRelease -Context <PsApiManagementContext> -ApiId <String> -ApiRevision <String>
@@ -25,13 +25,13 @@ New-AzApiManagementApiRelease -Context <PsApiManagementContext> -ApiId <String> 
  [<CommonParameters>]
 ```
 
-## PROBLEMBESKRIVNING
+## BESKRIVNING
 
-Cmdleten **New-AzApiManagementApiRelease** skapar en API-version för en API-revision i API-hanteringskonsolen. En version används för att göra API-revisionen som aktuell ändring.
+Cmdleten **New-AzApiManagementApiRelease** skapar en API-version för en API-revision i API-hanteringskontext. En version används för att göra API-revideringen som aktuell revision.
 
-## BESKRIVS
+## EXEMPEL
 
-### Exempel 1: skapa en API-utgåva för en API-revision
+### Exempel 1: Skapa en API-version för en API-revidering
 ```powershell
 PS C:\>$ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
 PS C:\>New-AzApiManagementApiRelease -Context $context  -ApiId 5adf6fbf0faadf3ad8558065 -ApiRevision 6 -Note "Releasing version 6"
@@ -49,9 +49,9 @@ ResourceGroupName : Api-Default-WestUS
 ServiceName       : contoso
 ```
 
-Det här kommandot skapar en API-version av en revidering `2` av `echo-api` .
+Det här kommandot skapar en API-version av `2` revisionen av `echo-api` .
 
-## MALLPARAMETRAR
+## PARAMETERS
 
 ### -ApiId
 Identifierare för nytt API.
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApiRevision
-ID för API-revision.
+Identifierare för Api-revideringen.
 
 ```yaml
 Type: System.String
@@ -83,9 +83,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Kontext
+### -Sammanhang
 Instans av PsApiManagementContext.
-Denna parameter är obligatorisk.
+Den här parametern är obligatorisk.
 
 ```yaml
 Type: Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-Autentiseringsuppgifter, konto, klient organisation och abonnemang som används för kommunikation med Azure.
+Autentiseringsuppgifter, konto, klientorganisation och prenumeration som används för kommunikation med Azure.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
@@ -114,8 +114,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Obs!
-API-versions anteckningar. Den här parametern är valfri
+### -Note
+Information om API-versionen. Den här parametern är valfri
 
 ```yaml
 Type: System.String
@@ -131,8 +131,8 @@ Accept wildcard characters: False
 
 ### -ReleaseId
 Identifierare för API-versionen.
-Denna parameter är valfri.
-Om du inte anger ett angivet ID.
+Den här parametern är valfri.
+Om den inte anges kommer identifieraren att skapas.
 
 ```yaml
 Type: System.String
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -Bekräfta
-Du uppmanas att bekräfta innan du kör cmdleten.
+Frågar dig om bekräftelse innan du kör cmdleten.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Visar vad som händer om cmdleten körs. Cmdleten körs inte.
+Visar vad som skulle hända om cmdleten körs. Cmdleten körs inte.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -177,24 +177,24 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-Den här cmdleten har stöd för de gemensamma parametrarna:-debug,-ErrorAction,-ErrorVariable,-InformationAction,-InformationVariable,-disvariable,-utbuffer,-PipelineVariable,-verbose,-WarningAction och-WarningVariable. Mer information finns i [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+Den här cmdleten stöder vanliga parametrar: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction och -WarningVariable. Mer information finns i [about_CommonParameters.](http://go.microsoft.com/fwlink/?LinkID=113216)
 
-## KOSTNADS
+## INDATA
 
-### Microsoft. Azure. commands. ApiManagement. ServiceManagement. Models. PsApiManagementContext
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsapiManagementContext
 
-### System. String
+### System.String
 
-## VÄRDEN
+## UTDATA
 
-### Microsoft. Azure. commands. ApiManagement. ServiceManagement. Models. PsApiManagementApiRelease
+### Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsapiManagementApiRelease
 
-## ANMÄRKNINGAR
+## ANTECKNINGAR
 
 ## RELATERADE LÄNKAR
 
-[Get-AzApiManagementApiRelease](./Get-AzApiManagementApiRelease.md)
+[Get-AzapiManagementApiRelease](./Get-AzApiManagementApiRelease.md)
 
-[Remove-AzApiManagementApiRelease](./Remove-AzApiManagementApiRelease.md)
+[Remove-AzapiManagementApiRelease](./Remove-AzApiManagementApiRelease.md)
 
-[Set-AzApiManagementApiRelease](./Set-AzApiManagementApiRelease.md)
+[Update-AzapiManagementApiRelease](./Update-AzApiManagementApiRelease.md)
